@@ -17,7 +17,7 @@ from datetime import datetime, timedelta, timezone
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data.json")
 UA = "Mozilla/5.0 (compatible; RadarBot/1.0)"
-MAX_ITEMS = 200
+MAX_ITEMS = 260
 MAX_AGE_DAYS = 14
 PER_CHANNEL = 6
 
@@ -38,7 +38,29 @@ CHANNELS = [
     ("@aiexplained-official", "AI Explained", "creator"),
     ("@drfiras_ai", "Dr Firas", "creator"),
     ("@ElzeroWebSchool", "Elzero Web School", "creator"),
+    # architecture / BIM / AEC
+    ("@ArchDaily", "ArchDaily", "arch"),
+    ("@dezeen", "Dezeen", "arch"),
+    ("@TheB1M", "The B1M", "arch"),
+    ("@BalkanArchitect", "Balkan Architect", "arch"),
+    ("@ParametricArchitecture", "Parametric Architecture", "arch"),
+    ("@archicad", "Archicad", "arch"),
+    ("@AutodeskAEC", "Autodesk AEC", "arch"),
+    ("@AECmagazine", "AEC Magazine", "arch"),
+    ("@McNeelTV", "Rhino / McNeel", "arch"),
 ]
+
+# (url, display name). Architecture and AEC news feeds.
+RSS_FEEDS = [
+    ("https://feeds.feedburner.com/Archdaily", "ArchDaily"),
+    ("https://www.dezeen.com/feed/", "Dezeen"),
+    ("https://architosh.com/feed/", "Architosh"),
+    ("https://aecmag.com/feed/", "AEC Magazine"),
+    ("https://archinect.com/feed/1/news", "Archinect"),
+]
+
+HN_ARCH_QUERIES = ["Revit", "BIM", "CAD", "generative design", "architecture AI", "construction AI"]
+GH_ARCH_TOPICS = ["bim", "ifc", "revit", "grasshopper", "dynamo", "building-information-modeling"]
 
 HN_QUERIES = ["LLM", "Claude", "AI agent", "OpenAI", "Gemini", "coding assistant"]
 
@@ -146,6 +168,8 @@ def collect_youtube(known_ids, cutoff):
                 cat = "reels"
             elif kind == "co":
                 cat = "co"
+            elif kind == "arch":
+                cat = "arch"
             else:
                 cat = "long"
             items.append({
@@ -163,7 +187,7 @@ def collect_youtube(known_ids, cutoff):
 
 # ---------- Hacker News ----------
 
-def parse_hn(json_text, cutoff):
+def parse_hn(json_text, cutoff, cat="code"):
     out = []
     for h in json.loads(json_text).get("hits", []):
         oid = h.get("objectID")
@@ -176,7 +200,7 @@ def parse_hn(json_text, cutoff):
         url = h.get("url") or ("https://news.ycombinator.com/item?id=" + oid)
         out.append({
             "id": "hn-" + oid,
-            "cat": "code",
+            "cat": cat,
             "src": "Hacker News",
             "ts": iso(ts),
             "t": title,
@@ -190,11 +214,12 @@ def parse_hn(json_text, cutoff):
 def collect_hn(known_ids, cutoff):
     items, seen = [], set()
     since = int(cutoff.timestamp())
-    for q in HN_QUERIES:
+    jobs = [(q, "code", 80) for q in HN_QUERIES] + [(q, "arch", 12) for q in HN_ARCH_QUERIES]
+    for q, cat, pts in jobs:
         url = ("https://hn.algolia.com/api/v1/search_by_date?tags=story&hitsPerPage=20&numericFilters="
-               + urllib.parse.quote("points>80,created_at_i>%d" % since) + "&query=" + urllib.parse.quote(q))
+               + urllib.parse.quote("points>%d,created_at_i>%d" % (pts, since)) + "&query=" + urllib.parse.quote(q))
         try:
-            found = parse_hn(get(url), cutoff)
+            found = parse_hn(get(url), cutoff, cat)
         except Exception as ex:
             log("hn: failed", q, ex)
             continue
@@ -208,18 +233,18 @@ def collect_hn(known_ids, cutoff):
 
 # ---------- GitHub ----------
 
-def parse_github(json_text):
+def parse_github(json_text, cat="code", tag="مشروع جديد"):
     out = []
     for r in json.loads(json_text).get("items", []):
         created = parse_ts(r["created_at"])
         out.append({
             "id": "gh-%s" % r["id"],
-            "cat": "code",
+            "cat": cat,
             "src": "GitHub",
             "ts": iso(created),
             "t": r["full_name"] + (": " + clip(r.get("description"), 90) if r.get("description") else ""),
             "s": "%s نجمة، لغة %s" % (r.get("stargazers_count", 0), r.get("language") or "غير محددة"),
-            "tags": ["مشروع جديد"],
+            "tags": [tag],
             "url": r["html_url"],
         })
     return out
@@ -237,7 +262,95 @@ def collect_github(known_ids, cutoff):
     except Exception as ex:
         log("github: failed", ex)
         return []
-    return [it for it in found if it["id"] not in known_ids]
+    out = [it for it in found if it["id"] not in known_ids]
+    seen = {it["id"] for it in out}
+    week = (datetime.now(timezone.utc) - timedelta(days=30)).strftime("%Y-%m-%d")
+    for topic in GH_ARCH_TOPICS:
+        q2 = "topic:%s pushed:>%s stars:>25" % (topic, week)
+        u2 = "https://api.github.com/search/repositories?sort=updated&order=desc&per_page=5&q=" + urllib.parse.quote(q2)
+        try:
+            more = parse_github(get(u2, headers), "arch", "أداة مفتوحة المصدر")
+        except Exception as ex:
+            log("github arch: failed", topic, ex)
+            continue
+        for it in more:
+            if it["id"] not in known_ids and it["id"] not in seen:
+                seen.add(it["id"])
+                out.append(it)
+    return out
+
+
+# ---------- RSS (architecture news) ----------
+
+def strip_html(t):
+    t = re.sub(r"<[^>]+>", " ", t or "")
+    return re.sub(r"&[a-z#0-9]+;", " ", t)
+
+
+def collect_rss(known_ids, cutoff):
+    from email.utils import parsedate_to_datetime
+    items = []
+    for url, name in RSS_FEEDS:
+        try:
+            root = ET.fromstring(get(url))
+        except Exception as ex:
+            log("rss: failed", name, ex)
+            continue
+        count = 0
+        for e in root.iter("item"):
+            link = (e.findtext("link") or "").strip()
+            title = (e.findtext("title") or "").strip()
+            pub = e.findtext("pubDate")
+            if not (link and title and pub):
+                continue
+            try:
+                ts = parsedate_to_datetime(pub).astimezone(timezone.utc)
+            except Exception:
+                continue
+            if ts < cutoff:
+                continue
+            item_id = "rss-" + re.sub(r"\W+", "", link)[-60:]
+            if item_id in known_ids:
+                continue
+            items.append({
+                "id": item_id, "cat": "arch", "src": name, "ts": iso(ts), "t": title,
+                "s": clip(strip_html(e.findtext("description")), 160), "tags": ["أخبار"], "url": link,
+            })
+            count += 1
+            if count >= 8:
+                break
+    return items
+
+
+# ---------- translation (free Google endpoint, no key) ----------
+
+def has_arabic(t):
+    return bool(re.search(r"[\u0600-\u06FF]", t or ""))
+
+
+def translate(text):
+    url = ("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ar&dt=t&q="
+           + urllib.parse.quote(text[:300]))
+    data = json.loads(get(url, timeout=20))
+    return "".join(seg[0] for seg in data[0] if seg and seg[0]).strip()
+
+
+def add_translations(items, limit=150):
+    import time
+    done = 0
+    for it in items:
+        if done >= limit:
+            break
+        if it.get("ta") or has_arabic(it.get("t")):
+            continue
+        try:
+            it["ta"] = translate(it["t"])
+            done += 1
+            time.sleep(0.15)
+        except Exception as ex:
+            log("translate failed:", ex)
+            break
+    return done
 
 
 # ---------- merge ----------
@@ -266,7 +379,7 @@ def main():
     known = {it["id"] for it in existing}
 
     new = []
-    for name, fn in (("youtube", collect_youtube), ("hn", collect_hn), ("github", collect_github)):
+    for name, fn in (("youtube", collect_youtube), ("hn", collect_hn), ("github", collect_github), ("rss", collect_rss)):
         try:
             got = fn(known, cutoff)
         except Exception as ex:
@@ -276,10 +389,12 @@ def main():
         new.extend(got)
 
     items = merge(existing, new)
+    tr = add_translations(items)
+    log("translated:", tr)
     if not items:
         log("nothing to write")
         return 0
-    if [i["id"] for i in items] == [i["id"] for i in existing] and not new:
+    if [i["id"] for i in items] == [i["id"] for i in existing] and not new and not tr:
         log("no changes")
         return 0
     out = {"updated": iso(now), "demo": False, "items": items}
