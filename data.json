@@ -1,5 +1,1590 @@
 {
-  "updated": "2026-11-16T20:00:00Z",
-  "demo": true,
-  "items": []
+ "updated": "2026-11-16T19:39:24Z",
+ "demo": false,
+ "items": [
+  {
+   "id": "yt-vVVdxMwPBuA",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-16T16:55:56Z",
+   "t": "How Check Point speeds up vulnerability research with Daybreak | OpenAI for Cybersecurity",
+   "s": "Check Point CTO Jonathan Zanger explains how his team uses OpenAI Daybreak to analyze vulnerabilities and turn findings into protections for customer…",
+   "tags": [
+    "OpenAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=vVVdxMwPBuA"
+  },
+  {
+   "id": "yt-9fVixvNaNPI",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-16T16:00:28Z",
+   "t": "What Is NOD? The AI Agent That Builds n8n Workflows for You!",
+   "s": "🚀 Discover NOD, the new AI agent from the n8n team! In this complete beginner-friendly tutorial, I'll show you what NOD is, how it works, and how to…",
+   "tags": [
+    "Dr Firas"
+   ],
+   "url": "https://www.youtube.com/watch?v=9fVixvNaNPI"
+  },
+  {
+   "id": "yt-83NRvB_Gusk",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-16T14:48:43Z",
+   "t": "My AI Agents Write Code Faster Than I Can Verify It",
+   "s": "76% of developers and engineering managers in Sonar's 2027 State of Code report say they generate AI code faster than they can verify it! And I'm rig…",
+   "tags": [
+    "Cole Medin"
+   ],
+   "url": "https://www.youtube.com/shorts/83NRvB_Gusk"
+  },
+  {
+   "id": "yt-VpHYPfvfy0o",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-16T13:23:40Z",
+   "t": "Building Jarvis: JPMC’s Agent Building Assembly Line",
+   "s": "David Odomirok, Tony Wu, and Jane Xue of JPMorgan Chase explain Jarvis, which they describe not as a single agent but as an agent-building assembly l…",
+   "tags": [
+    "LangChain"
+   ],
+   "url": "https://www.youtube.com/watch?v=VpHYPfvfy0o"
+  },
+  {
+   "id": "yt-ZpsxNdHMCzI",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-16T11:00:58Z",
+   "t": "ChatGPT's secret travel codes don't exist: create your own 5",
+   "s": "ChatGPT's secret travel codes don't exist. But you can create your own, just once, in its custom instructions. /phrases, /scams, /photo, /budget, /da…",
+   "tags": [
+    "Dr Firas"
+   ],
+   "url": "https://www.youtube.com/shorts/ZpsxNdHMCzI"
+  },
+  {
+   "id": "yt-2f6yeG78xFA",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-16T10:00:40Z",
+   "t": "Nod, the n8n AI agent that builds your workflows (NOD)",
+   "s": "I sent a single message on Telegram. Nod built me a 13-node n8n workflow, already tested. Nod is the new AI agent from the n8n team: free, open sourc…",
+   "tags": [
+    "Dr Firas"
+   ],
+   "url": "https://www.youtube.com/shorts/2f6yeG78xFA"
+  },
+  {
+   "id": "hn-50514470",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-16T05:50:37Z",
+   "t": "How to make almost anything",
+   "s": "767 نقطة، 128 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://pub.cba.mit.edu/863.26/site/"
+  },
+  {
+   "id": "yt-ETw45WHQ6Z4",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-16T05:35:39Z",
+   "t": "3D Printing Entire Buildings is So Wild To Me",
+   "s": "Sharing the latest news and advancements in AI Discover More: 🛠️ Explore AI Tools & News: https://futuretools.io/ 📰 Weekly Newsletter: https://future…",
+   "tags": [
+    "Matt Wolfe"
+   ],
+   "url": "https://www.youtube.com/shorts/ETw45WHQ6Z4"
+  },
+  {
+   "id": "yt-soNLXvgUqNY",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-16T05:00:26Z",
+   "t": "La Cousinade",
+   "s": "Une cousinade avec 63 cousins. Un site créé avec ChatGPT.",
+   "tags": [
+    "OpenAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=soNLXvgUqNY"
+  },
+  {
+   "id": "hn-50513451",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-16T02:53:30Z",
+   "t": "Tell HN: HN is being scraped for emails to scam",
+   "s": "119 نقطة، 41 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50513451"
+  },
+  {
+   "id": "yt-dwbtj3-8xcM",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-15T18:01:10Z",
+   "t": "5 Claude agent recipes: stop building one giant agent that does everything",
+   "s": "One giant Claude agent that does everything? Anthropic says the opposite: start simple. The 5 recipes: chain, routing, parallel, reviewer, orchestrat…",
+   "tags": [
+    "Dr Firas"
+   ],
+   "url": "https://www.youtube.com/shorts/dwbtj3-8xcM"
+  },
+  {
+   "id": "gh-1459020341",
+   "cat": "code",
+   "src": "GitHub",
+   "ts": "2026-11-15T16:48:18Z",
+   "t": "YellowLaborerMarket/Gemini-Config-Checker-: Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (s…",
+   "s": "474 نجمة، لغة Makefile",
+   "tags": [
+    "مشروع جديد"
+   ],
+   "url": "https://github.com/YellowLaborerMarket/Gemini-Config-Checker-"
+  },
+  {
+   "id": "gh-1459020291",
+   "cat": "code",
+   "src": "GitHub",
+   "ts": "2026-11-15T16:48:15Z",
+   "t": "WireProvostPucker/Gemini-Config-Checker-: Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (s…",
+   "s": "473 نجمة، لغة Makefile",
+   "tags": [
+    "مشروع جديد"
+   ],
+   "url": "https://github.com/WireProvostPucker/Gemini-Config-Checker-"
+  },
+  {
+   "id": "gh-1459019359",
+   "cat": "code",
+   "src": "GitHub",
+   "ts": "2026-11-15T16:47:17Z",
+   "t": "WinnerSpecialist/Gemini-Config-Checker-: Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (s…",
+   "s": "473 نجمة، لغة Makefile",
+   "tags": [
+    "مشروع جديد"
+   ],
+   "url": "https://github.com/WinnerSpecialist/Gemini-Config-Checker-"
+  },
+  {
+   "id": "gh-1459018163",
+   "cat": "code",
+   "src": "GitHub",
+   "ts": "2026-11-15T16:46:05Z",
+   "t": "Visionbeyondtrack/Gemini-Config-Checker-: Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (s…",
+   "s": "473 نجمة، لغة Makefile",
+   "tags": [
+    "مشروع جديد"
+   ],
+   "url": "https://github.com/Visionbeyondtrack/Gemini-Config-Checker-"
+  },
+  {
+   "id": "gh-1459018150",
+   "cat": "code",
+   "src": "GitHub",
+   "ts": "2026-11-15T16:46:04Z",
+   "t": "Violetnyudress/Gemini-Config-Checker-: Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (s…",
+   "s": "473 نجمة، لغة Go",
+   "tags": [
+    "مشروع جديد"
+   ],
+   "url": "https://github.com/Violetnyudress/Gemini-Config-Checker-"
+  },
+  {
+   "id": "yt-CQSV2l4QSoU",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-15T16:00:23Z",
+   "t": "Claude AI Explained in 1 Hour (Complete Guide)",
+   "s": "👉 Blotato : https://blotato.com/?ref=firas Claude for Business, the full course: learn to use Claude as a new employee for your small business, from…",
+   "tags": [
+    "Dr Firas"
+   ],
+   "url": "https://www.youtube.com/watch?v=CQSV2l4QSoU"
+  },
+  {
+   "id": "yt-BAcHqbZbpAE",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-15T15:11:31Z",
+   "t": "VoiceStudio: the free ElevenLabs alternative on your PC (and its trap)",
+   "s": "The voice in this video is my clone, and I pay a subscription to have it. VoiceStudio does it for free, on your computer. Clone a voice, invent one w…",
+   "tags": [
+    "Dr Firas"
+   ],
+   "url": "https://www.youtube.com/shorts/BAcHqbZbpAE"
+  },
+  {
+   "id": "hn-50506376",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-15T12:14:06Z",
+   "t": "Understanding Positional Embeddings in Modern LLMs",
+   "s": "240 نقطة، 27 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings"
+  },
+  {
+   "id": "yt-X3r-mZtPfP8",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-15T07:12:15Z",
+   "t": "The Self-Driving Car With Balls",
+   "s": "Sharing the latest news and advancements in AI Discover More: 🛠️ Explore AI Tools & News: https://futuretools.io/ 📰 Weekly Newsletter: https://future…",
+   "tags": [
+    "Matt Wolfe"
+   ],
+   "url": "https://www.youtube.com/shorts/X3r-mZtPfP8"
+  },
+  {
+   "id": "hn-50503588",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-15T03:05:54Z",
+   "t": "The Single Router in Southern Arkansas That Ground Air Travel to a Halt",
+   "s": "89 نقطة، 60 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.wsj.com/business/airlines/the-single-router-in-southern-arkansas-that-ground-air-travel-to-a-halt-eedc326c"
+  },
+  {
+   "id": "hn-50497155",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-14T14:09:25Z",
+   "t": "Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLLM",
+   "s": "148 نقطة، 71 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/"
+  },
+  {
+   "id": "hn-50497132",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-14T14:05:54Z",
+   "t": "Show HN: A terminal-native idle factory game, written in Rust with ratatui",
+   "s": "170 نقطة، 44 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://gitlab.com/snipedbywifi/terminactory"
+  },
+  {
+   "id": "hn-50496921",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-14T13:36:17Z",
+   "t": "The Claude Delusion",
+   "s": "152 نقطة، 201 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.netmeister.org/blog/claude-delusion.html"
+  },
+  {
+   "id": "yt-x7iwI6WfWS0",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-14T08:40:55Z",
+   "t": "AI Can Do Everything…Except This",
+   "s": "After finishing this song, it took me 3 months to gather the courage to stand in front of the camera to record it. Hope you Fellow Scholars enjoy it!…",
+   "tags": [
+    "Two Minute Papers"
+   ],
+   "url": "https://www.youtube.com/watch?v=x7iwI6WfWS0"
+  },
+  {
+   "id": "hn-50494696",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-14T06:56:42Z",
+   "t": "Ask HN: What are the most useful, concrete AI skills to independently learn?",
+   "s": "90 نقطة، 53 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50494696"
+  },
+  {
+   "id": "hn-50492141",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-14T00:28:11Z",
+   "t": "Anthropic upgrades Claude Code Projects to run parallel AI workers",
+   "s": "100 نقطة، 96 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://claude.com/resources/articles/projects-redesigned"
+  },
+  {
+   "id": "yt-gExSgO0QE8s",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-13T23:21:30Z",
+   "t": "We opened an 8 Ball and put text-to-speech in it",
+   "s": "We opened an 8 Ball and put text-to-speech in it to see what would happen. Subscribe to see the full build on Monday! #Shorts",
+   "tags": [
+    "AssemblyAI"
+   ],
+   "url": "https://www.youtube.com/shorts/gExSgO0QE8s"
+  },
+  {
+   "id": "hn-50491097",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-13T22:39:15Z",
+   "t": "Claude Meetings",
+   "s": "113 نقطة، 88 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://claude.com/resources/articles/claude-meetings"
+  },
+  {
+   "id": "yt-ErOVIC-MGVA",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-13T18:15:41Z",
+   "t": "6 Underrated Ways to Use ChatGPT",
+   "s": "We asked 6 people for their most underrated way to use ChatGPT. Their answers covered personal style, everyday logistics, and stopping random subscri…",
+   "tags": [
+    "OpenAI"
+   ],
+   "url": "https://www.youtube.com/shorts/ErOVIC-MGVA"
+  },
+  {
+   "id": "hn-50487184",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-13T17:55:23Z",
+   "t": "OpenAI disbands its robotics team as its general models start running robots",
+   "s": "179 نقطة، 73 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/"
+  },
+  {
+   "id": "yt-ijinE_RBmYc",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-13T17:40:39Z",
+   "t": "Watch This Before You Consider Freelancing in Tech",
+   "s": "Join my free live masterclass on freelancing: https://go.datalumina.com/ZiTGfcK 🎙️ Get one free month of Glaido Pro: https://get.glaido.com/dave 📘 Bu…",
+   "tags": [
+    "Dave Ebbelaar"
+   ],
+   "url": "https://www.youtube.com/watch?v=ijinE_RBmYc"
+  },
+  {
+   "id": "yt-G_Jrexy_5Bg",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-13T17:21:49Z",
+   "t": "AI News: Things Will Never Be The Same",
+   "s": "Try @OpenAI Decisions API here: https://developers.openai.com/api/docs/guides/decisions Here's the AI news from one of the wildest weeks we've ever s…",
+   "tags": [
+    "Matt Wolfe"
+   ],
+   "url": "https://www.youtube.com/watch?v=G_Jrexy_5Bg"
+  },
+  {
+   "id": "yt-PkAmyub12K8",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-13T16:56:45Z",
+   "t": "How Mozilla uses GPT-6 Cyber to find and fix Firefox vulnerabilities",
+   "s": "Mozilla is combining decades of security engineering with AI agents to strengthen Firefox’s defenses. Brian Grinstead joins OpenAI’s Clint Gibler to…",
+   "tags": [
+    "OpenAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=PkAmyub12K8"
+  },
+  {
+   "id": "yt-pfbfZKxUEDQ",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-13T16:38:23Z",
+   "t": "How Mozilla strengthens Firefox security with GPT-6 Cyber",
+   "s": "Mozilla’s Brian Grinstead shares how early testing with GPT-6 Cyber identified new vulnerabilities and opportunities to strengthen Firefox’s defenses…",
+   "tags": [
+    "OpenAI"
+   ],
+   "url": "https://www.youtube.com/shorts/pfbfZKxUEDQ"
+  },
+  {
+   "id": "yt-NeV6MSN6zEE",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-13T16:31:35Z",
+   "t": "LangSmith: The platform to run, improve, and govern agents",
+   "s": "LangChain has raised $300 million in a Series C at a $3 billion valuation, and we're launching the new LangSmith, which puts what we've learned from…",
+   "tags": [
+    "LangChain"
+   ],
+   "url": "https://www.youtube.com/watch?v=NeV6MSN6zEE"
+  },
+  {
+   "id": "yt-mAlsfafDW-U",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-13T14:42:41Z",
+   "t": "I Trust My AI Agents to Merge Code… But NOT Ship It",
+   "s": "I trust my agents to merge code all night, but I definitely don't trust them to ship straight to production. Tests and reviews only tell you the code…",
+   "tags": [
+    "Cole Medin"
+   ],
+   "url": "https://www.youtube.com/shorts/mAlsfafDW-U"
+  },
+  {
+   "id": "hn-50482279",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-13T12:00:18Z",
+   "t": "Show HN: Carton Clock – A working pendulum clock made from empty drink cartons",
+   "s": "86 نقطة، 2 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.niklasroy.com/carton-clock/"
+  },
+  {
+   "id": "hn-50481220",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-13T10:20:09Z",
+   "t": "Claude Is Down",
+   "s": "200 نقطة، 179 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://status.claude.com/history"
+  },
+  {
+   "id": "hn-50481187",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-13T10:18:13Z",
+   "t": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+   "s": "493 نقطة، 392 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://status.claude.com/incidents/nn11wk485zfn"
+  },
+  {
+   "id": "yt-YmxpxJZvm4M",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-12T22:37:14Z",
+   "t": "Cyber at the Frontier: Introducing Daybreak Red Team & Daybreak Defense Factory",
+   "s": "Greg Brockman, Nancy Wang, Fouad Matin, Clint Gibler, Alexander Thiemann, and Matt Boyle took the stage at Cyber at the Frontier, where OpenAI introd…",
+   "tags": [
+    "OpenAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=YmxpxJZvm4M"
+  },
+  {
+   "id": "yt-SOwUWPtXQ9I",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-12T21:17:10Z",
+   "t": "Jensen Huang just pulled out of Nvidia...",
+   "s": "Manufact is the easiest way to build and deploy your MCP. Get $100 in free credits: https://manufact.com/fireship Jensen Huang just resigned as Nvidi…",
+   "tags": [
+    "Fireship"
+   ],
+   "url": "https://www.youtube.com/watch?v=SOwUWPtXQ9I"
+  },
+  {
+   "id": "yt-iTe0IB5Ugf8",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-12T20:32:27Z",
+   "t": "MASSIVE AI Shake-Up That Changes Everything",
+   "s": "Sharing the latest news and advancements in AI Discover More: 🛠️ Explore AI Tools & News: https://futuretools.io/ 📰 Weekly Newsletter: https://future…",
+   "tags": [
+    "Matt Wolfe"
+   ],
+   "url": "https://www.youtube.com/shorts/iTe0IB5Ugf8"
+  },
+  {
+   "id": "yt-tqgthjS7Ym4",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-12T19:48:38Z",
+   "t": "LangChain Academy New Course: Building and Deploying Managed Agents",
+   "s": "Getting an agent working on your laptop takes hours, but putting it in front of real users can take weeks of infrastructure work around the agent its…",
+   "tags": [
+    "LangChain"
+   ],
+   "url": "https://www.youtube.com/watch?v=tqgthjS7Ym4"
+  },
+  {
+   "id": "yt-Bg_LdTeSaO0",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-12T19:01:51Z",
+   "t": "Who is Medical Mode built for?",
+   "s": "We hopped on a huddle with Britney, one of our PMs, to talk Medical Mode and Vet Mode: who they're for, and how to tell if they're right for your aud…",
+   "tags": [
+    "AssemblyAI"
+   ],
+   "url": "https://www.youtube.com/shorts/Bg_LdTeSaO0"
+  },
+  {
+   "id": "hn-50472260",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-12T18:52:01Z",
+   "t": "Gemini 4 Hydrogen and Orchestrator",
+   "s": "506 نقطة، 165 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/"
+  },
+  {
+   "id": "hn-50471650",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-12T18:15:48Z",
+   "t": "Show HN: AgentRun – open-source, Self-improving Managed Agents",
+   "s": "138 نقطة، 40 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/Parcha-ai/agentrun/blob/main/README.md"
+  },
+  {
+   "id": "hn-50471431",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-12T18:01:48Z",
+   "t": "Gemini 4 Hydrogen",
+   "s": "572 نقطة، 353 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+  },
+  {
+   "id": "yt-IehCboBcYsA",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-12T17:20:42Z",
+   "t": "How to automate your photo library",
+   "s": "Learn more about the decision model: https://developers.openai.com/api/docs/guides/decisions https://platform.openai.com/decisions Discover More: 🛠️…",
+   "tags": [
+    "Matt Wolfe"
+   ],
+   "url": "https://www.youtube.com/shorts/IehCboBcYsA"
+  },
+  {
+   "id": "yt-1M8vagUOdJM",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-12T15:26:12Z",
+   "t": "Fireside Chat with Erik Bernhardsson, Modal",
+   "s": "Erik Bernhardsson, CEO and Co-Founder of Modal, explains what drove demand for Modal's sandboxes (vibe coding apps, background agents, and reinforcem…",
+   "tags": [
+    "LangChain"
+   ],
+   "url": "https://www.youtube.com/watch?v=1M8vagUOdJM"
+  },
+  {
+   "id": "hn-50468888",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-12T15:23:10Z",
+   "t": "I'm making LLMs work on small and old devices",
+   "s": "482 نقطة، 180 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/hyperionaidev/smolmaxxing/"
+  },
+  {
+   "id": "gh-1455416555",
+   "cat": "code",
+   "src": "GitHub",
+   "ts": "2026-11-12T14:32:15Z",
+   "t": "hitkeeen/blender-ai-mcp-addon: AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows.…",
+   "s": "2121 نجمة، لغة غير محددة",
+   "tags": [
+    "مشروع جديد"
+   ],
+   "url": "https://github.com/hitkeeen/blender-ai-mcp-addon"
+  },
+  {
+   "id": "yt-rBUb_OA-73o",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-12T14:20:07Z",
+   "t": "Your Coding Agent Has a MASSIVE Blind Spot (You Need to Fix It)",
+   "s": "I've had agents break hundreds of times in production (sometimes in very embarrassing ways), and almost all the time it comes down to the blind spots…",
+   "tags": [
+    "Cole Medin"
+   ],
+   "url": "https://www.youtube.com/shorts/rBUb_OA-73o"
+  },
+  {
+   "id": "hn-50467087",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-12T13:52:29Z",
+   "t": "Jensen Huang resigns",
+   "s": "4054 نقطة، 3469 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f"
+  },
+  {
+   "id": "yt-gPNiuyYirfw",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-12T13:41:41Z",
+   "t": "DeepMind’s AI Just Did The Impossible",
+   "s": "❤️ Check out Lambda here and sign up for their GPU Cloud: https://lambda.com/papers 📝 The DeepMind paper AlphaProof Code is available here: https://d…",
+   "tags": [
+    "Two Minute Papers"
+   ],
+   "url": "https://www.youtube.com/watch?v=gPNiuyYirfw"
+  },
+  {
+   "id": "hn-50463399",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-12T05:29:24Z",
+   "t": "Claude Code and Codex reverse engineered my 1994 Jeep's ECU over a $3 Arduino [video]",
+   "s": "444 نقطة، 230 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.youtube.com/watch?v=WPj3aQ-xxpI"
+  },
+  {
+   "id": "yt-fLjGgbW0Ki8",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-12T04:24:26Z",
+   "t": "Your Complete Guide to Fable 5.2 (When to Use It, Effort Levels, Prompting)",
+   "s": "Fable 5.2 is the smartest model you can use in Claude Code right now, and it's also the fastest way to burn through your rate limits. So this is my g…",
+   "tags": [
+    "Cole Medin"
+   ],
+   "url": "https://www.youtube.com/watch?v=fLjGgbW0Ki8"
+  },
+  {
+   "id": "yt-nDwhxbJiNEg",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-12T01:33:46Z",
+   "t": "WE ❤️ PETS HERE AT ASSEMBLYAI: Vet Mode transcription",
+   "s": "WE ❤️ PETS HERE AT ASSEMBLYAI, which is why we just released Vet Mode transcription Check it out here → https://www.assemblyai.com/solutions/veterina…",
+   "tags": [
+    "AssemblyAI"
+   ],
+   "url": "https://www.youtube.com/shorts/nDwhxbJiNEg"
+  },
+  {
+   "id": "hn-50458900",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-11T21:24:35Z",
+   "t": "United Airlines bans AI agents from booking flights on behalf of travelers",
+   "s": "681 نقطة، 710 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/"
+  },
+  {
+   "id": "hn-50456791",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-11T18:32:42Z",
+   "t": "Gemini Decisions API",
+   "s": "569 نقطة، 161 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+  },
+  {
+   "id": "hn-50456631",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-11T18:21:38Z",
+   "t": "AWS emulator",
+   "s": "992 نقطة، 266 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/aws/aws-emulator"
+  },
+  {
+   "id": "yt-uND6iY2qp_c",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-11T18:00:31Z",
+   "t": "AlphaGenome 2: Teaching AI to read the entire human genome",
+   "s": "98% of human DNA doesn't build proteins—it controls how our cells work, and holds vital clues to why diseases happen and why 90% of new drugs fail in…",
+   "tags": [
+    "Google DeepMind"
+   ],
+   "url": "https://www.youtube.com/watch?v=uND6iY2qp_c"
+  },
+  {
+   "id": "hn-50455394",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-11T16:38:44Z",
+   "t": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+   "s": "588 نقطة، 276 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/"
+  },
+  {
+   "id": "hn-50454951",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-11T16:00:50Z",
+   "t": "Show HN: Klad, a paint app your coding agent can drive (source-available)",
+   "s": "84 نقطة، 34 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/klad-app/klad"
+  },
+  {
+   "id": "yt-pvl3z_GyU2Y",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-11T16:00:07Z",
+   "t": "How To Build An AI Operating System For Your Life",
+   "s": "What if you could use AI agents to manage your emails, organize your schedule, create content, and help run your entire business? I sat down with Pet…",
+   "tags": [
+    "Matt Wolfe"
+   ],
+   "url": "https://www.youtube.com/watch?v=pvl3z_GyU2Y"
+  },
+  {
+   "id": "hn-50454625",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-11T15:33:06Z",
+   "t": "Show HN: Yogurt – Free, private, open-source alternative to Granola",
+   "s": "305 نقطة، 116 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/FrigadeHQ/yogurt"
+  },
+  {
+   "id": "yt-OSnAd5SuT_k",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-11T14:47:14Z",
+   "t": "Learn Local AI in 30 Minutes - Run LLMs locally for FREE",
+   "s": "Build your freelance career with me: https://go.datalumina.com/yCHk1GX 📘 Guide to follow along: https://learn.datalumina.com/docs/local-chat 🔗 Code f…",
+   "tags": [
+    "Dave Ebbelaar"
+   ],
+   "url": "https://www.youtube.com/watch?v=OSnAd5SuT_k"
+  },
+  {
+   "id": "hn-50452455",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-11T12:05:22Z",
+   "t": "My AI agents found an unmapped Maya site?",
+   "s": "1036 نقطة، 392 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://pietromiotti.com/latest/maya-site"
+  },
+  {
+   "id": "hn-50449891",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-11T04:56:47Z",
+   "t": "Show HN: Black Ops II statically recompiled to native ARM64 macOS",
+   "s": "153 نقطة، 67 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/adrbn/bo2-mac"
+  },
+  {
+   "id": "hn-50448340",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-11T00:37:05Z",
+   "t": "LLMs Play Zachtronics' TIS-100",
+   "s": "96 نقطة، 23 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://tis-100.wincon.dev/"
+  },
+  {
+   "id": "yt-583ThJIqQ7k",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-10T23:11:36Z",
+   "t": "Fable 5.2: The Self-Improvement Loop Keeps Loopin’ … (plus Gemini Carbon)",
+   "s": "I’ve read the full Fable 5.2 report at 264 pages, the 30 page METR RSI report, and tested Gemini Carbon and Fable 5.2 hundreds of times. There’s too…",
+   "tags": [
+    "AI Explained"
+   ],
+   "url": "https://www.youtube.com/watch?v=583ThJIqQ7k"
+  },
+  {
+   "id": "yt-hMEQ4rdaOLw",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-10T22:57:03Z",
+   "t": "11 More Tiny Coding Agent Fixes With A Stupid Amount Of Payoff (Learn These Now)",
+   "s": "Coding agents keep hitting the same problems for you: saying the work is done when it isn't, tests that pass while the app is still broken, ignoring…",
+   "tags": [
+    "Cole Medin"
+   ],
+   "url": "https://www.youtube.com/watch?v=hMEQ4rdaOLw"
+  },
+  {
+   "id": "yt-P-u5iEmt9Mg",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-10T21:39:58Z",
+   "t": "Can Medical Mode get all 23 of these medical terms right?",
+   "s": "Levetiracetam, sugammadex, esophagogastroduodenoscopy: 23 of the hardest terms in medicine, read rapid fire into the AssemblyAI playground with Medic…",
+   "tags": [
+    "AssemblyAI"
+   ],
+   "url": "https://www.youtube.com/shorts/P-u5iEmt9Mg"
+  },
+  {
+   "id": "yt-1FurWDiK9A4",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-10T18:19:55Z",
+   "t": "Did Anthropic just save its $1 trillion IPO?",
+   "s": "Mux is the video API that translates audio and answers questions about your video. Get $50 in free credits: https://mux.com/fireship Anthropic just d…",
+   "tags": [
+    "Fireship"
+   ],
+   "url": "https://www.youtube.com/watch?v=1FurWDiK9A4"
+  },
+  {
+   "id": "hn-50443812",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-10T18:01:15Z",
+   "t": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
+   "s": "448 نقطة، 146 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/GoogleChrome/modern-web-guidance"
+  },
+  {
+   "id": "hn-50443716",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-10T17:55:07Z",
+   "t": "Claude Whiteboards, Claude Sheets, and Claude Data",
+   "s": "298 نقطة، 218 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://claude.com/resources/articles/sheets-whiteboards-data"
+  },
+  {
+   "id": "hn-50443587",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-10T17:44:44Z",
+   "t": "Life on Claude Nine",
+   "s": "138 نقطة، 90 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://babuschk.in/posts/2026-01-25-life-on-claude-nine.html"
+  },
+  {
+   "id": "hn-50443331",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-10T17:21:48Z",
+   "t": "A rare glimpse inside the high-risk, high-reward Hormuz trade",
+   "s": "106 نقطة، 108 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.lloydslist.com/LL1158922/A-rare-glimpse-inside-the-highrisk-highreward-Hormuz-trade"
+  },
+  {
+   "id": "yt-xM_BhmEyKAY",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-10T16:36:54Z",
+   "t": "How Workday Builds Agent Prototypes in Under a Day with LangChain",
+   "s": "Alex Gatto, Senior Machine Learning Engineer at Workday, explains how his team built an internal agent platform on LangChain's Agent Server and LangS…",
+   "tags": [
+    "LangChain"
+   ],
+   "url": "https://www.youtube.com/watch?v=xM_BhmEyKAY"
+  },
+  {
+   "id": "hn-50442303",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-10T16:07:15Z",
+   "t": "Gemini 4 Carbon is now available",
+   "s": "295 نقطة، 165 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+  },
+  {
+   "id": "hn-50441350",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-10T15:01:19Z",
+   "t": "Show HN: Aircad – Professional drafting and 3D modeling in the browser",
+   "s": "95 نقطة، 47 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://aircad.com"
+  },
+  {
+   "id": "yt-vug73goPJaM",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-10T10:15:57Z",
+   "t": "Is Software Over?",
+   "s": "❤️ Check out Lambda here and sign up for their GPU Cloud: https://lambda.com/papers 📝 The papers and sources are available here: MirrorCode: https://…",
+   "tags": [
+    "Two Minute Papers"
+   ],
+   "url": "https://www.youtube.com/watch?v=vug73goPJaM"
+  },
+  {
+   "id": "hn-50435660",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-10T03:20:06Z",
+   "t": "CoreWeave bond yield tops 16% as AI credit stress rises",
+   "s": "196 نقطة، 193 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html"
+  },
+  {
+   "id": "yt-YAU-_oLS2es",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-10T02:30:49Z",
+   "t": "2 tips to start hacking hardware as a beginner",
+   "s": "Two of my six tips for getting into hardware hacking. All six in the full video: https://www.youtube.com/watch?v=uY4-ZMDV8s8&utm_medium=owned&utm_cam…",
+   "tags": [
+    "AssemblyAI"
+   ],
+   "url": "https://www.youtube.com/shorts/YAU-_oLS2es"
+  },
+  {
+   "id": "hn-50433079",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-09T22:19:12Z",
+   "t": "A year after the 100% AI mandate nobody understands our code",
+   "s": "163 نقطة، 200 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.reddit.com/r/ClaudeCode/comments/1xq2n3t/a_year_after_the_100_ai_mandate_nobody/"
+  },
+  {
+   "id": "yt-pf5tXJZM1Rw",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-09T21:04:16Z",
+   "t": "OpenAI spent $1.2 million hacking Linux... and it was a bargain",
+   "s": "Greptile is the only AI code reviewer that actually runs your code. Try it for free: https://greptile.com/go/fireship A model you're not allowed to u…",
+   "tags": [
+    "Fireship"
+   ],
+   "url": "https://www.youtube.com/watch?v=pf5tXJZM1Rw"
+  },
+  {
+   "id": "hn-50431144",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-09T20:04:55Z",
+   "t": "Claude Fable 5.2 scores 65 on Artificial Analysis, highest so far",
+   "s": "380 نقطة، 280 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://artificialanalysis.ai/models/claude-fable-5-2"
+  },
+  {
+   "id": "hn-50429906",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-09T18:56:29Z",
+   "t": "Claude Fable 5.2 and Mythos 5.2",
+   "s": "1000 نقطة، 8 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  {
+   "id": "hn-50429636",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-09T18:39:22Z",
+   "t": "Show HN: MeowDisplay Is iPhone Mirroring, but in Reverse",
+   "s": "121 نقطة، 45 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://meowdisplay.app/"
+  },
+  {
+   "id": "hn-50429426",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-09T18:24:38Z",
+   "t": "Google Gemini routes personal Drive files and emails to human annotators",
+   "s": "739 نقطة، 148 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/thisisme6598/gemini_files/"
+  },
+  {
+   "id": "hn-50429068",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-09T18:01:10Z",
+   "t": "Claude Fable 5.2 and Mythos 5.2",
+   "s": "925 نقطة، 1054 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  {
+   "id": "gh-1451662178",
+   "cat": "code",
+   "src": "GitHub",
+   "ts": "2026-11-09T17:18:59Z",
+   "t": "Dodaios/ste80-humanizer: STE80 Humanizer: agent skill that removes AI tells and rewrites text 80% of the way to AS…",
+   "s": "736 نجمة، لغة Python",
+   "tags": [
+    "مشروع جديد"
+   ],
+   "url": "https://github.com/Dodaios/ste80-humanizer"
+  },
+  {
+   "id": "hn-50427934",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-09T16:36:38Z",
+   "t": "Show HN: DBDelve – Open-Source DB Client Made with Rust and GPUI",
+   "s": "125 نقطة، 50 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50427934"
+  },
+  {
+   "id": "yt-kmPF75rTgh8",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-09T15:12:17Z",
+   "t": "Should Agents Say \"I Don't Know\"? | AirBnB at Interrupt 26",
+   "s": "Pedro Rodriguez, Director of Engineering, ML at Airbnb, explains why his team lets agents answer abstain when they aren't sure and sends those cases…",
+   "tags": [
+    "LangChain"
+   ],
+   "url": "https://www.youtube.com/shorts/kmPF75rTgh8"
+  },
+  {
+   "id": "hn-50422628",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-09T08:17:49Z",
+   "t": "ChatGPT Desktop forwards your SSH agent to remote machines",
+   "s": "221 نقطة، 80 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50422628"
+  },
+  {
+   "id": "gh-1450794567",
+   "cat": "code",
+   "src": "GitHub",
+   "ts": "2026-11-09T00:50:28Z",
+   "t": "agentes-chat/agentes-chat: Open-source, self-hosted Slack alternative where your team and AI agents work together in…",
+   "s": "1613 نجمة، لغة TypeScript",
+   "tags": [
+    "مشروع جديد"
+   ],
+   "url": "https://github.com/agentes-chat/agentes-chat"
+  },
+  {
+   "id": "hn-50415817",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-08T18:43:07Z",
+   "t": "Silicon Valley Promises AI Will Cure Disease. Drugmaker CEOs Aren't Buying It",
+   "s": "98 نقطة، 128 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.wsj.com/tech/ai/silicon-valley-promises-ai-will-cure-disease-drugmaker-ceos-arent-buying-it-5218511c"
+  },
+  {
+   "id": "hn-50415628",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-08T18:16:07Z",
+   "t": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+   "s": "905 نقطة، 497 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers"
+  },
+  {
+   "id": "hn-50413822",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-08T14:49:23Z",
+   "t": "OpenAI raises $11B at a $1.25T valuation",
+   "s": "190 نقطة، 218 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought/"
+  },
+  {
+   "id": "hn-50412591",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-08T12:14:10Z",
+   "t": "Why I will not be using LLMs in my coding",
+   "s": "119 نقطة، 245 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.polso.info/why-i-will-not-be-using-llms-coding"
+  },
+  {
+   "id": "hn-50410107",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-08T03:11:48Z",
+   "t": "Goodbye Claude, hello Pi",
+   "s": "832 نقطة، 493 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://caleb.software/posts/claude-to-pi.html"
+  },
+  {
+   "id": "yt-GJ6PMUm5oTA",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-07T16:24:47Z",
+   "t": "OpenAI's Astra Just Opened The Black Box Of AI",
+   "s": "❤️ Check out Lambda here and sign up for their GPU Cloud: https://lambda.com/papers 📝 The Weight Space Programming work is available here: https://ri…",
+   "tags": [
+    "Two Minute Papers"
+   ],
+   "url": "https://www.youtube.com/watch?v=GJ6PMUm5oTA"
+  },
+  {
+   "id": "hn-50403153",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-07T10:01:48Z",
+   "t": "Ask HN: How do you manage your AI agents' context across clients and projects?",
+   "s": "102 نقطة، 71 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50403153"
+  },
+  {
+   "id": "yt-uY4-ZMDV8s8",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-06T23:42:05Z",
+   "t": "Hacking on hardware: 6 tips to get started",
+   "s": "Six tips for getting into hardware hacking as a beginner, from a software person who's just started: starter kits, saving money on parts, the fundame…",
+   "tags": [
+    "AssemblyAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=uY4-ZMDV8s8"
+  },
+  {
+   "id": "hn-50399569",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-06T22:50:43Z",
+   "t": "ChatGPT silently passes data between connectors and the bounty wants an ID card",
+   "s": "94 نقطة، 40 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053"
+  },
+  {
+   "id": "hn-50397429",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-06T19:48:51Z",
+   "t": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+   "s": "603 نقطة، 156 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://hightouch.com/blog/llm-judges-identity-resolution"
+  },
+  {
+   "id": "hn-50395919",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-06T18:03:33Z",
+   "t": "Memorilla: Latent Semantic Memory for LLMs",
+   "s": "125 نقطة، 13 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://arxiv.org/abs/2610.21375"
+  },
+  {
+   "id": "yt-iw9SZgyahqg",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-06T16:42:38Z",
+   "t": "The one thing holding theoretical CS together just broke... kinda",
+   "s": "Warp Factories is open infrastructure to build self-improving software factories. Get early access: https://warp.dev/fireship An unnamed OpenAI model…",
+   "tags": [
+    "Fireship"
+   ],
+   "url": "https://www.youtube.com/watch?v=iw9SZgyahqg"
+  },
+  {
+   "id": "yt-EMIRXv2iE_Q",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-06T15:15:48Z",
+   "t": "Your Coding Agent Knows Your Code, But Not Your Actual App (Here's the Fix)",
+   "s": "Your coding agent can read every file in your repo and still not really know your app - how the data connects, what depends on what, where it's deplo…",
+   "tags": [
+    "Cole Medin"
+   ],
+   "url": "https://www.youtube.com/shorts/EMIRXv2iE_Q"
+  },
+  {
+   "id": "hn-50392118",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-06T13:35:27Z",
+   "t": "Gemini Omni 1.2 Flash",
+   "s": "369 نقطة، 256 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+  },
+  {
+   "id": "hn-50390525",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-06T10:21:15Z",
+   "t": "Living beyond the limits of survival: wood ants trapped in a gigantic pitfall (2016)",
+   "s": "183 نقطة، 60 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://jhr.pensoft.net/articles.php?id=9096"
+  },
+  {
+   "id": "yt-XgC1QTs6A2U",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-06T07:27:02Z",
+   "t": "The Future of AI Is Absolutely Incredible (Spencer Huang)",
+   "s": "❤️ Check out Lambda here and sign up for their GPU Cloud: https://lambda.ai/papers Chapters: 00:00 Intro 02:40 Why Robots Are Hard 08:16 The Perfect…",
+   "tags": [
+    "Two Minute Papers"
+   ],
+   "url": "https://www.youtube.com/watch?v=XgC1QTs6A2U"
+  },
+  {
+   "id": "hn-50381687",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-05T17:17:42Z",
+   "t": "Launch HN: Rivet (YC W23) – Scale and Orchestrate Agents on S3",
+   "s": "123 نقطة، 59 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/rivet-dev/rivet"
+  },
+  {
+   "id": "hn-50379221",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-05T14:06:31Z",
+   "t": "Show HN: Waymark – A workflow engine that compiles jobs instead of replaying",
+   "s": "88 نقطة، 48 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/piercefreeman/waymark"
+  },
+  {
+   "id": "hn-50376313",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-05T07:44:30Z",
+   "t": "GPT-6 Astra covertly underperforms on safety research",
+   "s": "342 نقطة، 196 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/"
+  },
+  {
+   "id": "hn-50372945",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-04T23:35:44Z",
+   "t": "Images 2.6",
+   "s": "384 نقطة، 238 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://openai.com/index/introducing-images-2-6/"
+  },
+  {
+   "id": "hn-50372929",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-04T23:33:14Z",
+   "t": "A thousand fewer paths to root",
+   "s": "491 نقطة، 367 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/"
+  },
+  {
+   "id": "hn-50369146",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-04T17:55:29Z",
+   "t": "BYD doubles its Brazil market share to 9.7% a year after opening its local plant",
+   "s": "131 نقطة، 148 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.bloomberg.com/news/articles/2026-11-03/china-s-byd-doubles-market-share-in-brazil-with-new-plant-eyed"
+  },
+  {
+   "id": "hn-50368804",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-04T17:31:53Z",
+   "t": "Launch HN: Kino AI (YC S23) – AI media manager and video editor",
+   "s": "112 نقطة، 37 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50368804"
+  },
+  {
+   "id": "hn-50366971",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-04T15:28:31Z",
+   "t": "YC's Garry Tan uses AI agents so much, he spends up to $200K a year on tokens",
+   "s": "112 نقطة، 179 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/"
+  },
+  {
+   "id": "hn-50366863",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-04T15:21:21Z",
+   "t": "OpenAI to acquire Pierre Computer Company",
+   "s": "265 نقطة، 94 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://openai.com/index/openai-to-acquire-pierre/"
+  },
+  {
+   "id": "hn-50366117",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-04T14:37:22Z",
+   "t": "Ask HN: What's your current AI agentic setup?",
+   "s": "573 نقطة، 717 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50366117"
+  },
+  {
+   "id": "hn-50363461",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-04T10:10:27Z",
+   "t": "Tell HN: Gemini trains on chat history, even for subscribers (personal accounts)",
+   "s": "737 نقطة، 201 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50363461"
+  },
+  {
+   "id": "gh-1445286453",
+   "cat": "code",
+   "src": "GitHub",
+   "ts": "2026-11-04T07:09:41Z",
+   "t": "hyperionaidev/smolmaxxing: maxxing the ability to run different LLMs on the smallest devices possible",
+   "s": "844 نجمة، لغة C",
+   "tags": [
+    "مشروع جديد"
+   ],
+   "url": "https://github.com/hyperionaidev/smolmaxxing"
+  },
+  {
+   "id": "hn-50358314",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-03T21:16:48Z",
+   "t": "Show HN: Kairos – Open-source risk and fraud decisioning platform",
+   "s": "107 نقطة، 37 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/finic-ai/kairos"
+  },
+  {
+   "id": "yt-k2ruCf_z75I",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-03T19:47:10Z",
+   "t": "The worst week in cybersecurity history... so far",
+   "s": "Start a free 14-day CodeRabbit Secure trial, no credit card required: https://coderabbit.link/fireship-011 Cursor shipped a backdoor, Polymarket got…",
+   "tags": [
+    "Fireship"
+   ],
+   "url": "https://www.youtube.com/watch?v=k2ruCf_z75I"
+  },
+  {
+   "id": "hn-50356994",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-03T19:32:13Z",
+   "t": "Preparing for the Flipper One Kickstarter and opening pre-orders",
+   "s": "235 نقطة، 106 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://flipper.net/pages/flipper-one"
+  },
+  {
+   "id": "hn-50354336",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-03T16:45:49Z",
+   "t": "Gitbook Breached",
+   "s": "165 نقطة، 45 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50354336"
+  },
+  {
+   "id": "hn-50352757",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-03T14:53:41Z",
+   "t": "OpenAI seems to be silently re-enabling model training on Codex chats",
+   "s": "536 نقطة، 163 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50352757"
+  },
+  {
+   "id": "hn-50352641",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-03T14:45:47Z",
+   "t": "There is no posttraining data commons",
+   "s": "128 نقطة، 30 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://openathena.ai/blog/there-is-no-posttraining-data-commons/"
+  },
+  {
+   "id": "gh-1444005452",
+   "cat": "code",
+   "src": "GitHub",
+   "ts": "2026-11-03T08:23:03Z",
+   "t": "Sandflow-ai/sand3d: 3D modeling in Python, built for LLMs.",
+   "s": "2075 نجمة، لغة HTML",
+   "tags": [
+    "مشروع جديد"
+   ],
+   "url": "https://github.com/Sandflow-ai/sand3d"
+  },
+  {
+   "id": "hn-50345924",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-02T23:47:56Z",
+   "t": "Scaling Git at OpenAI",
+   "s": "272 نقطة، 182 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://openai.com/index/scaling-git-at-openai/"
+  }
+ ]
 }
