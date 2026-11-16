@@ -59,7 +59,29 @@ RSS_FEEDS = [
     ("https://archinect.com/feed/1/news", "Archinect"),
 ]
 
-HN_ARCH_QUERIES = ["Revit", "BIM", "CAD", "generative design", "architecture AI", "construction AI"]
+HN_ARCH_QUERIES = ["Revit", "BIM", "Autodesk", "Grasshopper", "generative design", "AI architecture", "AI construction", "AI CAD"]
+
+# Google News searches (free RSS). Focus: AI and computational tools in architecture, BIM, AEC.
+NEWS_QUERIES = [
+    "AI architecture BIM",
+    "Revit AI",
+    "Autodesk AI Forma",
+    "generative design architecture AI",
+    "Rhino Grasshopper AI",
+    "Archicad AI",
+    "Snaptrude OR Hypar OR TestFit OR Arkio",
+    "AI construction BIM",
+    "Midjourney architecture visualization",
+    "digital twin building AI",
+]
+
+# Feed and video items in the architecture section must mention AI, BIM or computational tools.
+ARCH_KW = re.compile(
+    r"\bAI\b|artificial intelligence|machine learning|generative|BIM|Revit|Archicad|Rhino|Grasshopper|Dynamo|"
+    r"parametric|computational|digital twin|Autodesk|Forma|Navisworks|ChatGPT|Claude|Midjourney|diffusion|"
+    r"automation|algorithm|robot|3D print|\bIFC\b|openBIM|Speckle|Enscape|Twinmotion|Lumion|\bCAD\b",
+    re.I,
+)
 GH_ARCH_TOPICS = ["bim", "ifc", "revit", "grasshopper", "dynamo", "building-information-modeling"]
 
 HN_QUERIES = ["LLM", "Claude", "AI agent", "OpenAI", "Gemini", "coding assistant"]
@@ -162,6 +184,8 @@ def collect_youtube(known_ids, cutoff):
                 continue
             item_id = "yt-" + en["vid"]
             if item_id in known_ids:
+                continue
+            if kind == "arch" and not ARCH_KW.search(en["title"] + " " + en["desc"][:300]):
                 continue
             short = is_short(en["vid"])
             if short:
@@ -309,15 +333,54 @@ def collect_rss(known_ids, cutoff):
                 continue
             if ts < cutoff:
                 continue
+            if not ARCH_KW.search(title + " " + strip_html(e.findtext("description"))):
+                continue
             item_id = "rss-" + re.sub(r"\W+", "", link)[-60:]
             if item_id in known_ids:
                 continue
             items.append({
                 "id": item_id, "cat": "arch", "src": name, "ts": iso(ts), "t": title,
-                "s": clip(strip_html(e.findtext("description")), 160), "tags": ["أخبار"], "url": link,
+                "s": clip(strip_html(e.findtext("description")), 160), "tags": ["AEC"], "url": link,
             })
             count += 1
             if count >= 8:
+                break
+    return items
+
+
+def collect_news(known_ids, cutoff):
+    from email.utils import parsedate_to_datetime
+    items, seen = [], set()
+    for q in NEWS_QUERIES:
+        url = "https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=" + urllib.parse.quote(q + " when:14d")
+        try:
+            root = ET.fromstring(get(url))
+        except Exception as ex:
+            log("news: failed", q, ex)
+            continue
+        n = 0
+        for e in root.iter("item"):
+            link = (e.findtext("link") or "").strip()
+            title = (e.findtext("title") or "").strip()
+            pub = e.findtext("pubDate")
+            src_el = e.find("source")
+            src = (src_el.text if src_el is not None and src_el.text else "News").strip()
+            if title.endswith(" - " + src):
+                title = title[: -len(src) - 3]
+            if not (link and title and pub):
+                continue
+            try:
+                ts = parsedate_to_datetime(pub).astimezone(timezone.utc)
+            except Exception:
+                continue
+            item_id = "gn-" + re.sub(r"\W+", "", title.lower())[:60]
+            if ts < cutoff or item_id in known_ids or item_id in seen:
+                continue
+            seen.add(item_id)
+            items.append({"id": item_id, "cat": "arch", "src": src, "ts": iso(ts), "t": title,
+                          "s": "", "tags": ["AI + AEC"], "url": link})
+            n += 1
+            if n >= 6:
                 break
     return items
 
@@ -379,7 +442,7 @@ def main():
     known = {it["id"] for it in existing}
 
     new = []
-    for name, fn in (("youtube", collect_youtube), ("hn", collect_hn), ("github", collect_github), ("rss", collect_rss)):
+    for name, fn in (("youtube", collect_youtube), ("hn", collect_hn), ("github", collect_github), ("rss", collect_rss), ("news", collect_news)):
         try:
             got = fn(known, cutoff)
         except Exception as ex:
