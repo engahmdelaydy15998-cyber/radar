@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>رادار</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: one narrow phone-first column; sticky top bar, add-link box, section chips, then a feed of link cards. Single dark theme by choice. */
+:root {
+  --bg: #050505;
+  --surface: #0f0f10;
+  --surface-2: #17171a;
+  --line: #262629;
+  --text: #f1f1f2;
+  --muted: #8d8d94;
+  --accent: #ff7a3d;
+  --c-reels: #ff6b81;
+  --c-long: #6ea8ff;
+  --c-co: #b794f6;
+  --c-code: #5fd3a0;
+  --c-creative: #f5c451;
+  --font-body: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-body); }
+body { min-height: 100%; -webkit-text-size-adjust: 100%; }
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.wrap { max-width: 640px; margin: 0 auto; padding: 0 16px 48px; }
+
+header {
+  position: sticky; top: 0; z-index: 5;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(10px);
+  padding: 14px 0 10px;
+  border-bottom: 1px solid var(--line);
+}
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(255,122,61,.18); }
+.tools { display: flex; gap: 8px; }
+.icon-btn {
+  min-width: 40px; height: 40px; padding: 0 10px; display: inline-flex; gap: 6px; align-items: center; justify-content: center;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+}
+.icon-btn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #111; }
+.icon-btn .n { font-family: var(--font-mono); font-size: 12px; }
+.icon-btn svg { width: 20px; height: 20px; }
+
+.panel { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+.panel[hidden] { display: none; }
+.field {
+  width: 100%; height: 44px; padding: 0 14px;
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--line); border-radius: 12px; font-size: 15px;
+}
+.field::placeholder { color: var(--muted); }
+.field.ltr { direction: ltr; text-align: left; }
+.panel .two { display: flex; gap: 8px; }
+.panel select.field { flex: 1; }
+.btn-main { height: 44px; padding: 0 18px; border: 0; border-radius: 12px; background: var(--accent); color: #111; font-weight: 700; }
+.hint { font-size: 12px; color: var(--muted); line-height: 1.8; margin: 0; }
+.err { color: #ff9a8a; font-size: 13px; margin: 0; }
+
+.chips { display: flex; gap: 8px; overflow-x: auto; padding: 12px 0 2px; scrollbar-width: none; }
+.chips::-webkit-scrollbar { display: none; }
+.chip {
+  flex: 0 0 auto; display: flex; align-items: center; gap: 8px;
+  padding: 8px 14px; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--line); font-size: 14px; font-weight: 500;
+}
+.chip .count { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+.chip .sw { width: 8px; height: 8px; border-radius: 50%; background: var(--c, var(--muted)); }
+.chip[aria-pressed="true"] { background: var(--text); color: #0a0a0a; border-color: var(--text); }
+.chip[aria-pressed="true"] .count { color: #444; }
+
+.row2 { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 14px 0 6px; font-size: 13px; color: var(--muted); }
+.row2 .pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.pill { padding: 5px 11px; border-radius: 999px; border: 1px solid var(--line); background: transparent; font-size: 13px; color: var(--muted); }
+.pill[aria-pressed="true"] { color: var(--text); border-color: var(--muted); background: var(--surface-2); }
+
+.notice {
+  margin: 12px 0 4px; padding: 10px 12px; border-radius: 12px;
+  background: rgba(255,122,61,.08); border: 1px dashed rgba(255,122,61,.45);
+  color: #ffb998; font-size: 13px; line-height: 1.7;
+}
+
+.feed { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+.card {
+  background: var(--surface); border: 1px solid var(--line);
+  border-inline-start: 3px solid var(--c); border-radius: 14px; padding: 14px;
+}
+.meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 12px; color: var(--muted); }
+.meta .src { font-family: var(--font-mono); direction: ltr; }
+.meta .cat { color: var(--c); font-weight: 600; }
+.badge { padding: 1px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; }
+.badge-new { background: var(--accent); color: #111; }
+.badge-mine { background: var(--surface-2); color: var(--text); border: 1px solid var(--line); }
+.card h3 { margin: 8px 0 6px; font-size: 17px; line-height: 1.55; font-weight: 600; text-wrap: balance; overflow-wrap: anywhere; }
+.card p { margin: 0; font-size: 14px; line-height: 1.8; color: #c6c6cb; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.tag { font-size: 12px; padding: 2px 9px; border-radius: 8px; background: var(--surface-2); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 12px; align-items: center; }
+.act { height: 38px; padding: 0 14px; display: inline-flex; align-items: center; gap: 6px; border-radius: 10px; border: 1px solid var(--line); background: transparent; font-size: 13px; color: var(--text); text-decoration: none; }
+.act svg { width: 16px; height: 16px; }
+.act.open { background: var(--text); color: #0a0a0a; border-color: var(--text); font-weight: 600; }
+.act.open[disabled] { background: transparent; color: var(--muted); border-color: var(--line); cursor: default; font-weight: 400; }
+.act[aria-pressed="true"] { background: var(--surface-2); color: var(--accent); border-color: var(--accent); }
+.act.del { color: #ff9a8a; }
+.spacer { flex: 1; }
+
+.toast { position: fixed; inset-inline: 16px; bottom: 24px; max-width: 420px; margin: 0 auto; padding: 12px 16px; border-radius: 12px; background: var(--text); color: #0a0a0a; font-weight: 600; font-size: 14px; text-align: center; z-index: 20; }
+.toast[hidden] { display: none; }
+.empty { text-align: center; color: var(--muted); padding: 48px 12px; font-size: 15px; line-height: 1.9; }
+footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 12px; line-height: 1.9; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="bar">
+      <div class="brand"><span class="dot"></span><span>رادار</span></div>
+      <div class="tools">
+        <button class="icon-btn" id="btnAdd" aria-label="إضافة رابط" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <button class="icon-btn" id="btnSearch" aria-label="بحث" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        </button>
+        <button class="icon-btn" id="btnSaved" aria-label="المحفوظات" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+          <span class="n" id="savedN" style="display:none"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="panel" id="addBox" hidden>
+      <input id="linkIn" class="field ltr" type="url" inputmode="url" placeholder="الصق رابط ريل أو فيديو أو بوست" autocomplete="off">
+      <input id="noteIn" class="field" type="text" placeholder="ملاحظة قصيرة (اختياري)" autocomplete="off">
+      <div class="two">
+        <select id="catIn" class="field" aria-label="القسم"></select>
+        <button class="btn-main" id="addGo">إضافة</button>
+      </div>
+      <p class="err" id="addErr" hidden></p>
+      <p class="hint">من أي تطبيق: اضغط مشاركة ثم نسخ الرابط، وارجع هنا والصقه. الرابط بيتصنف حسب المنصة، وتقدر تغيّر القسم.</p>
+    </div>
+
+    <div class="panel" id="searchBox" hidden>
+      <input id="q" class="field" type="search" placeholder="ابحث عن أداة أو شركة أو كلمة" autocomplete="off">
+    </div>
+
+    <div class="chips" id="chips" role="group" aria-label="الأقسام"></div>
+  </header>
+
+  <div class="notice" id="demoNote">البوستات اللي عليها "مثال" أمثلة مؤقتة للشكل. أي رابط تضيفه أنت بيبان "رابطك" وبيفتح التطبيق الأصلي لما تدوس عليه.</div>
+
+  <div class="row2">
+    <div class="pills" id="srcPills" role="group" aria-label="المنصة"></div>
+    <button class="pill" id="btnNew" aria-pressed="false">جديد اليوم</button>
+  </div>
+
+  <main class="feed" id="feed"></main>
+  <div id="toast" class="toast" role="status" hidden></div>
+
+  <footer id="foot">الروابط محفوظة على الجهاز ده بس.</footer>
+</div>
+
+<script>
+var CATS = [
+  { id: "all", name: "الكل" },
+  { id: "reels", name: "ريلز", color: "var(--c-reels)" },
+  { id: "long", name: "فيديوهات طويلة", color: "var(--c-long)" },
+  { id: "co", name: "شركات AI", color: "var(--c-co)" },
+  { id: "code", name: "كود", color: "var(--c-code)" },
+  { id: "creative", name: "إبداع", color: "var(--c-creative)" }
+];
+var SRCS = ["الكل", "Instagram", "YouTube", "X", "Facebook", "LinkedIn", "GitHub"];
+
+var DEMO = [
+  { demo: true, id: "d1", cat: "reels", src: "Instagram", when: "منذ ساعة", isNew: true, t: "ريل من حساب شركة ذكاء اصطناعي: ميزة جديدة في 30 ثانية", s: "عرض سريع لميزة اتضافت النهاردة، من حساب الشركة الرسمي.", tags: ["شركة", "ميزة"] },
+  { demo: true, id: "d2", cat: "reels", src: "YouTube", when: "منذ 3 ساعات", isNew: true, t: "شورتس: خدعة برمجية بتوفر وقتك", s: "مقطع قصير بيشرح اختصار بسيط في كتابة الكود.", tags: ["كود", "نصيحة"] },
+  { demo: true, id: "d3", cat: "co", src: "X", when: "منذ 4 ساعات", isNew: true, t: "إعلان من شركة نماذج لغة: إصدار جديد وتحسينات في السرعة", s: "تغريدة رسمية فيها ملخص التحديثات ورابط للتفاصيل.", tags: ["إصدار", "رسمي"] },
+  { demo: true, id: "d4", cat: "long", src: "YouTube", when: "منذ 5 ساعات", isNew: true, t: "فيديو طويل: بناء مشروع كامل بالذكاء الاصطناعي من الصفر", s: "شرح ساعة كاملة بخطوات واضحة من الفكرة للنشر.", tags: ["شرح", "مشروع"] },
+  { demo: true, id: "d5", cat: "code", src: "GitHub", when: "أمس", isNew: false, t: "مشروع رائج: أداة بتلخص تغييرات الكود تلقائيًا", s: "أداة مفتوحة المصدر بتقرا الفروق وتكتب ملخص.", tags: ["أداة", "مفتوح المصدر"] },
+  { demo: true, id: "d6", cat: "creative", src: "Instagram", when: "أمس", isNew: false, t: "ريل إبداعي: دمج الرسم اليدوي مع الصور المولدة", s: "شغل قصير بيوضح طريقة عمل مختلفة عن الشكل المعتاد.", tags: ["تصميم", "تجربة"] },
+  { demo: true, id: "d7", cat: "co", src: "LinkedIn", when: "منذ يومين", isNew: false, t: "بوست من مؤسس شركة ناشئة: دروس من أول سنة مع الوكلاء الأذكياء", s: "تجربة عملية مختصرة فيها أخطاء شائعة ونصائح.", tags: ["تجربة", "وكلاء"] }
+];
+
+var PLATFORMS = [
+  { name: "Instagram", hosts: ["instagram.com"] },
+  { name: "YouTube", hosts: ["youtube.com", "youtu.be", "m.youtube.com"] },
+  { name: "X", hosts: ["x.com", "twitter.com", "mobile.twitter.com"] },
+  { name: "Facebook", hosts: ["facebook.com", "fb.watch", "m.facebook.com"] },
+  { name: "LinkedIn", hosts: ["linkedin.com"] },
+  { name: "GitHub", hosts: ["github.com"] }
+];
+
+function parseUrl(raw) {
+  var s = (raw || "").trim();
+  if (!s) return null;
+  if (!/^https?:\/\//i.test(s)) s = "https://" + s;
+  try { var u = new URL(s); if (u.hostname.indexOf(".") === -1) return null; return u; } catch (e) { return null; }
+}
+function detectPlatform(u) {
+  var h = u.hostname.replace(/^www\./, "");
+  for (var i = 0; i < PLATFORMS.length; i++) {
+    for (var j = 0; j < PLATFORMS[i].hosts.length; j++) {
+      if (h === PLATFORMS[i].hosts[j] || h.slice(-PLATFORMS[i].hosts[j].length - 1) === "." + PLATFORMS[i].hosts[j]) return PLATFORMS[i].name;
+    }
+  }
+  return h;
+}
+function guessCat(u, platform) {
+  var p = u.pathname.toLowerCase();
+  if (platform === "Instagram") return /\/(reel|reels)\//.test(p) ? "reels" : "creative";
+  if (platform === "YouTube") return /\/shorts\//.test(p) ? "reels" : "long";
+  if (platform === "GitHub") return "code";
+  if (platform === "X" || platform === "LinkedIn") return "co";
+  if (platform === "Facebook") return /\/reel|\/reels|fb\.watch/.test(u.href.toLowerCase()) ? "reels" : "creative";
+  return "creative";
+}
+
+var state = { cat: "all", src: "الكل", onlyNew: false, onlySaved: false, q: "" };
+var saved = {};
+var mine = [];
+try { saved = JSON.parse(localStorage.getItem("radar-saved") || "{}"); } catch (e) { saved = {}; }
+try { mine = JSON.parse(localStorage.getItem("radar-mine") || "[]"); } catch (e) { mine = []; }
+if (!Array.isArray(mine)) mine = [];
+function persist() {
+  try { localStorage.setItem("radar-saved", JSON.stringify(saved)); } catch (e) {}
+  try { localStorage.setItem("radar-mine", JSON.stringify(mine)); } catch (e) {}
+}
+
+var feed = DEMO;
+function allItems() { return mine.concat(feed); }
+function catById(id) { return CATS.filter(function (c) { return c.id === id; })[0] || CATS[1]; }
+
+function matches(it, ignoreCat) {
+  if (!ignoreCat && state.cat !== "all" && it.cat !== state.cat) return false;
+  if (state.src !== "الكل" && it.src !== state.src) return false;
+  if (state.onlyNew && !it.isNew) return false;
+  if (state.onlySaved && !saved[it.id]) return false;
+  if (state.q) {
+    var hay = ((it.t || "") + " " + (it.s || "") + " " + (it.tags || []).join(" ") + " " + (it.src || "")).toLowerCase();
+    if (hay.indexOf(state.q.toLowerCase()) === -1) return false;
+  }
+  return true;
+}
+
+function renderChips() {
+  var el = document.getElementById("chips");
+  el.innerHTML = "";
+  CATS.forEach(function (c) {
+    var n = allItems().filter(function (it) { return (c.id === "all" || it.cat === c.id) && matches(it, true); }).length;
+    var b = document.createElement("button");
+    b.className = "chip";
+    b.setAttribute("aria-pressed", String(state.cat === c.id));
+    if (c.color) b.style.setProperty("--c", c.color);
+    b.innerHTML = (c.color ? '<span class="sw"></span>' : "") + "<span>" + c.name + '</span><span class="count">' + n + "</span>";
+    b.onclick = function () { state.cat = c.id; render(); };
+    el.appendChild(b);
+  });
+}
+
+function renderSrc() {
+  var el = document.getElementById("srcPills");
+  el.innerHTML = "";
+  SRCS.forEach(function (s) {
+    var b = document.createElement("button");
+    b.className = "pill";
+    b.textContent = s;
+    b.setAttribute("aria-pressed", String(state.src === s));
+    b.onclick = function () { state.src = s; render(); };
+    el.appendChild(b);
+  });
+}
+
+var ICON_OPEN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
+
+function renderFeed() {
+  var el = document.getElementById("feed");
+  var list = allItems().filter(function (it) { return matches(it, false); });
+  el.innerHTML = "";
+  if (!list.length) {
+    var e = document.createElement("div");
+    e.className = "empty";
+    e.textContent = state.onlySaved ? "لسه محفوظتش حاجة. دوس على علامة الحفظ في أي كارت." : "مفيش نتايج بالفلاتر دي. جرّب تشيل فلتر، أو دوس + وأضف رابط.";
+    el.appendChild(e);
+    return;
+  }
+  list.forEach(function (it) {
+    var c = catById(it.cat);
+    var a = document.createElement("article");
+    a.className = "card";
+    a.style.setProperty("--c", c.color);
+    var isSaved = !!saved[it.id];
+    var isMine = it.mine === true;
+    var hasUrl = !!it.url;
+    a.innerHTML =
+      '<div class="meta">' +
+        '<span class="cat">' + c.name + "</span>" +
+        '<span>·</span><span class="src"></span>' +
+        '<span>·</span><span class="when"></span>' +
+        (isMine ? '<span class="badge badge-mine">رابطك</span>' : (it.demo ? '<span class="badge badge-mine">مثال</span>' : '')) +
+        (it.isNew ? '<span class="badge badge-new">جديد</span>' : "") +
+      "</div>" +
+      "<h3></h3><p hidden></p>" +
+      '<div class="tags"></div>' +
+      '<div class="actions"></div>';
+    a.querySelector(".src").textContent = it.src;
+    a.querySelector(".when").textContent = it.when;
+    a.querySelector("h3").textContent = it.t;
+    if (it.s) { var p = a.querySelector("p"); p.hidden = false; p.textContent = it.s; }
+    var tg = a.querySelector(".tags");
+    (it.tags || []).forEach(function (t) { var s = document.createElement("span"); s.className = "tag"; s.textContent = t; tg.appendChild(s); });
+    if (!(it.tags || []).length) tg.remove();
+
+    var act = a.querySelector(".actions");
+    var open;
+    if (hasUrl) {
+      open = document.createElement("a");
+      open.className = "act open";
+      open.href = it.url;
+      open.target = "_blank";
+      open.rel = "noopener noreferrer";
+      open.innerHTML = ICON_OPEN + "<span>افتح في " + it.src + "</span>";
+    } else {
+      open = document.createElement("button");
+      open.className = "act open";
+      open.disabled = true;
+      open.innerHTML = ICON_OPEN + "<span>رابط حقيقي بعد ربط المصادر</span>";
+    }
+    act.appendChild(open);
+    var sp = document.createElement("span"); sp.className = "spacer"; act.appendChild(sp);
+
+    var sv = document.createElement("button");
+    sv.className = "act";
+    sv.setAttribute("aria-pressed", String(isSaved));
+    sv.setAttribute("aria-label", "حفظ");
+    sv.innerHTML = '<svg viewBox="0 0 24 24" fill="' + (isSaved ? "currentColor" : "none") + '" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4z"/></svg>';
+    sv.onclick = function () { if (saved[it.id]) delete saved[it.id]; else saved[it.id] = 1; persist(); render(); };
+    act.appendChild(sv);
+
+    if (isMine) {
+      var del = document.createElement("button");
+      del.className = "act del";
+      del.setAttribute("aria-label", "حذف");
+      del.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>';
+      del.onclick = function () {
+        mine = mine.filter(function (m) { return m.id !== it.id; });
+        delete saved[it.id];
+        persist(); render();
+      };
+      act.appendChild(del);
+    }
+    el.appendChild(a);
+  });
+}
+
+function renderTop() {
+  var n = Object.keys(saved).length;
+  var sn = document.getElementById("savedN");
+  sn.style.display = n ? "inline" : "none";
+  sn.textContent = String(n);
+  document.getElementById("btnSaved").setAttribute("aria-pressed", String(state.onlySaved));
+  document.getElementById("btnNew").setAttribute("aria-pressed", String(state.onlyNew));
+}
+
+function render() { renderChips(); renderSrc(); renderFeed(); renderTop(); }
+
+/* add-link panel */
+var catIn = document.getElementById("catIn");
+CATS.slice(1).forEach(function (c) { var o = document.createElement("option"); o.value = c.id; o.textContent = c.name; catIn.appendChild(o); });
+var linkIn = document.getElementById("linkIn");
+var addErr = document.getElementById("addErr");
+function showErr(msg) { addErr.textContent = msg; addErr.hidden = !msg; }
+linkIn.oninput = function () {
+  showErr("");
+  var u = parseUrl(linkIn.value);
+  if (u) catIn.value = guessCat(u, detectPlatform(u));
+};
+function addLink(u, cat, note) {
+  var href = u.href;
+  if (mine.some(function (m) { return m.url === href; })) return "dup";
+  var platform = detectPlatform(u);
+  mine.unshift({
+    mine: true,
+    id: "m" + Date.now(),
+    cat: cat,
+    src: platform,
+    when: "الآن",
+    isNew: true,
+    url: href,
+    t: note || ("رابط من " + platform),
+    s: "",
+    tags: []
+  });
+  persist();
+  state.cat = "all"; state.src = "الكل"; state.onlySaved = false;
+  render();
+  return "ok";
+}
+document.getElementById("addGo").onclick = function () {
+  var u = parseUrl(linkIn.value);
+  if (!u) { showErr("الرابط مش مفهوم. انسخه كامل من زرار المشاركة وجرب تاني."); return; }
+  var r = addLink(u, catIn.value, document.getElementById("noteIn").value.trim());
+  if (r === "dup") { showErr("الرابط ده مضاف قبل كده."); return; }
+  linkIn.value = ""; document.getElementById("noteIn").value = ""; showErr("");
+};
+
+/* toast */
+function toast(msg) {
+  var t = document.getElementById("toast");
+  t.textContent = msg; t.hidden = false;
+  clearTimeout(toast._t);
+  toast._t = setTimeout(function () { t.hidden = true; }, 3200);
+}
+
+/* Android share target: Share -> رادار arrives as ?title=&text=&url= */
+function handleShare() {
+  var q;
+  try { q = new URLSearchParams(location.search); } catch (e) { return; }
+  var raw = q.get("url") || "";
+  var text = q.get("text") || "";
+  var title = (q.get("title") || "").trim();
+  if (!raw) {
+    var m = text.match(/https?:\/\/[^\s]+/i);
+    if (m) raw = m[0];
+  }
+  if (!raw && !text && !title) return;
+  var u = parseUrl(raw);
+  try { history.replaceState(null, "", location.pathname); } catch (e) {}
+  if (!u) { toast("المشاركة مفيهاش رابط مفهوم."); return; }
+  var note = title || text.replace(/https?:\/\/[^\s]+/gi, "").trim();
+  if (note.length > 90) note = note.slice(0, 90) + "...";
+  var r = addLink(u, guessCat(u, detectPlatform(u)), note);
+  toast(r === "dup" ? "الرابط ده مضاف قبل كده." : "اتضاف الرابط.");
+}
+
+document.getElementById("btnAdd").onclick = function () {
+  var box = document.getElementById("addBox");
+  box.hidden = !box.hidden;
+  this.setAttribute("aria-pressed", String(!box.hidden));
+  if (!box.hidden) linkIn.focus();
+};
+document.getElementById("btnSearch").onclick = function () {
+  var box = document.getElementById("searchBox");
+  box.hidden = !box.hidden;
+  this.setAttribute("aria-pressed", String(!box.hidden));
+  if (!box.hidden) document.getElementById("q").focus();
+  else { state.q = ""; document.getElementById("q").value = ""; render(); }
+};
+document.getElementById("q").oninput = function () { state.q = this.value.trim(); render(); };
+document.getElementById("btnSaved").onclick = function () { state.onlySaved = !state.onlySaved; render(); };
+document.getElementById("btnNew").onclick = function () { state.onlyNew = !state.onlyNew; render(); };
+
+render();
+
+/* real feed written by the daily job; falls back to the examples above */
+try {
+  fetch("data.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+    if (d && Array.isArray(d.items) && d.items.length) {
+      feed = d.items;
+      document.getElementById("demoNote").hidden = true;
+      render();
+    }
+  }).catch(function () {});
+} catch (e) {}
+
+handleShare();
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function () {}); });
+}
+</script>
+</body>
+</html>
