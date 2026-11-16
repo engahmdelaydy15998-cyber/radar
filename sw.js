@@ -1,5 +1,5 @@
-// رادار service worker: app shell from cache, data.json network-first.
-var CACHE = "radar-v1";
+// رادار service worker: pages network-first (so updates show), assets cache-first, data.json network-first.
+var CACHE = "radar-v2";
 var SHELL = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", function (e) {
@@ -14,25 +14,30 @@ self.addEventListener("activate", function (e) {
   );
 });
 
+function networkFirst(req, key) {
+  return fetch(req).then(function (res) {
+    var copy = res.clone();
+    caches.open(CACHE).then(function (c) { c.put(key || req, copy); });
+    return res;
+  }).catch(function () { return caches.match(key || req, { ignoreSearch: true }); });
+}
+
 self.addEventListener("fetch", function (e) {
   var req = e.request;
   if (req.method !== "GET") return;
   var url = new URL(req.url);
   if (url.origin !== location.origin) return;
 
-  // The feed: try the network first so new items show up, fall back to cache offline.
-  if (url.pathname.slice(-9) === "data.json") {
-    e.respondWith(
-      fetch(req).then(function (res) {
-        var copy = res.clone();
-        caches.open(CACHE).then(function (c) { c.put(req, copy); });
-        return res;
-      }).catch(function () { return caches.match(req); })
-    );
+  var isPage = req.mode === "navigate" || url.pathname.slice(-1) === "/" || url.pathname.slice(-5) === ".html";
+  if (isPage) {
+    // A share-target visit carries ?url=...; cache the shell under a clean key so it is not stored per link.
+    e.respondWith(networkFirst(req, new Request(url.origin + url.pathname)));
     return;
   }
-
-  // Everything else: cache first, then network. A share-target visit (?url=...) still gets the shell.
+  if (url.pathname.slice(-9) === "data.json") {
+    e.respondWith(networkFirst(req));
+    return;
+  }
   e.respondWith(
     caches.match(req, { ignoreSearch: true }).then(function (hit) {
       return hit || fetch(req).then(function (res) {
