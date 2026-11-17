@@ -1,7 +1,176 @@
 {
- "updated": "2026-11-16T20:03:13Z",
+ "updated": "2026-11-17T04:59:18Z",
  "demo": false,
  "items": [
+  {
+   "id": "gn-aiinarchitectureengineeringandconstructionprofessionalrespon",
+   "cat": "arch",
+   "src": "JD Supra",
+   "ts": "2026-11-17T02:39:57Z",
+   "t": "AI in Architecture, Engineering, and Construction - Professional Responsibility and the Standard of Care",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQcVNOemxIVWllZkNkRHZXNlR6ZTZtUXJrNE9LOGc4d04yaFJVVmZWSGt4cmowMEVLeXJuaVdFcjNPdWVHX05mUU5lUkh2ald6ZlVoRm1mQmh1dWZadVlKOE9PcnFhM2FLVWNGVmw5OS1oOEpaSTJzb0JJc2U2V19YcU1JRQ?oc=5",
+   "ta": "الذكاء الاصطناعي في الهندسة المعمارية والهندسة والبناء - المسؤولية المهنية ومعيار الرعاية"
+  },
+  {
+   "id": "hn-50526361",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-17T01:48:52Z",
+   "t": "Meta would 'consider' pulling services from Canada if lawful access bill passes",
+   "s": "13 نقطة، 7 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.cbc.ca/lite/story/9.7424473",
+   "ta": "سوف \"تفكر\" شركة Meta في سحب الخدمات من كندا إذا تم إقرار قانون الوصول القانوني"
+  },
+  {
+   "id": "hn-50526019",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-17T01:02:48Z",
+   "t": "Meta faces sanctions bid over withheld evidence in teen mental health cases",
+   "s": "13 نقطة، 1 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.reuters.com/legal/litigation/meta-faces-sanctions-bid-over-withheld-evidence-teen-mental-health-cases-2026-11-16/",
+   "ta": "تواجه ميتا محاولة فرض عقوبات بسبب حجب الأدلة في قضايا الصحة العقلية للمراهقين"
+  },
+  {
+   "id": "yt-FiFU66g5B7Q",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-16T23:58:56Z",
+   "t": "I built a Magic 8 Ball that listens and talks back",
+   "s": "I hacked a Magic 8 Ball so it actually listens: AssemblyAI speech-to-text hears your question, an LLM through LLM gateway writes a mystical answer, a…",
+   "tags": [
+    "AssemblyAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=FiFU66g5B7Q",
+   "ta": "لقد قمت ببناء Magic 8 Ball التي تستمع وتتحدث"
+  },
+  {
+   "id": "yt-r5iPi8RL7A8",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-16T23:51:15Z",
+   "t": "5 Types of AI Software Factories Clearly Explained",
+   "s": "AI software factories are all the rage right now, but there's a lot of confusion about what they actually are. Here are the five most common types wi…",
+   "tags": [
+    "Cole Medin"
+   ],
+   "url": "https://www.youtube.com/watch?v=r5iPi8RL7A8",
+   "ta": "5 أنواع من مصانع برمجيات الذكاء الاصطناعي موضحة بوضوح"
+  },
+  {
+   "id": "yt-Mq6Qjv8lShc",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-16T23:11:22Z",
+   "t": "Smartland Villa Community, Oppenheim Architecture",
+   "s": "Connected design needs connected coordination. For Smartland Villa Community, Oppenheim Architecture linked architecture and interior models in Archi…",
+   "tags": [
+    "Archicad"
+   ],
+   "url": "https://www.youtube.com/shorts/Mq6Qjv8lShc",
+   "ta": "مجتمع فيلا سمارتلاند، هندسة أوبنهايم"
+  },
+  {
+   "id": "yt-btjS7OaffpM",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-16T22:27:42Z",
+   "t": "This had never been done before!",
+   "s": "Sharing the latest news and advancements in AI Discover More: 🛠️ Explore AI Tools & News: https://futuretools.io/ 📰 Weekly Newsletter: https://future…",
+   "tags": [
+    "Matt Wolfe"
+   ],
+   "url": "https://www.youtube.com/shorts/btjS7OaffpM",
+   "ta": "هذا لم يتم القيام به من قبل!"
+  },
+  {
+   "id": "hn-50523838",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-16T21:51:24Z",
+   "t": "California sues OpenAI over AI models' cyberattacks on Hugging Face",
+   "s": "16 نقطة، 2 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.reuters.com/business/california-sues-openai-over-ai-models-cyberattacks-hugging-face-other-companies-2026-11-16/",
+   "ta": "كاليفورنيا ترفع دعوى قضائية ضد OpenAI بسبب الهجمات الإلكترونية لنماذج الذكاء الاصطناعي على Hugging Face"
+  },
+  {
+   "id": "hn-50523377",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-16T21:14:39Z",
+   "t": "Show HN: Open-source, real-time object tracking for live video feeds",
+   "s": "17 نقطة، 2 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/aryamandarda/tamserve",
+   "ta": "Show HN: تتبع كائن مفتوح المصدر في الوقت الفعلي لخلاصات الفيديو المباشرة"
+  },
+  {
+   "id": "hn-50523022",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-16T20:47:53Z",
+   "t": "Caltech professor no longer grades homework's because everyone uses AI",
+   "s": "47 نقطة، 57 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.businessinsider.com/ai-math-class-university-homework-caltech-careers-2026-11",
+   "ta": "لم يعد أستاذ معهد كاليفورنيا للتكنولوجيا يقوم بتقييم الواجبات المنزلية لأن الجميع يستخدم الذكاء الاصطناعي"
+  },
+  {
+   "id": "hn-50522776",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-16T20:29:48Z",
+   "t": "Launch HN: Axonnic (YC F26) – Sleeves that track fingers and estimate force",
+   "s": "35 نقطة، 13 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50522776",
+   "ta": "Launch HN: Axonnic (YC F26) - أكمام لتتبع الأصابع وتقدير القوة"
+  },
+  {
+   "id": "yt-Zbv70lLBHgo",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-16T20:23:56Z",
+   "t": "How Check Point speeds up vulnerability research with Daybreak | OpenAI for Cybersecurity",
+   "s": "Check Point CTO Jonathan Zanger explains how his team uses OpenAI Daybreak to analyze vulnerabilities and turn findings into protections for customer…",
+   "tags": [
+    "OpenAI"
+   ],
+   "url": "https://www.youtube.com/shorts/Zbv70lLBHgo",
+   "ta": "كيف تعمل Check Point على تسريع أبحاث الثغرات الأمنية باستخدام Daybreak | OpenAI للأمن السيبراني"
+  },
+  {
+   "id": "yt-ytmawkPTP24",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-16T20:18:59Z",
+   "t": "Why Microsoft couldn’t fix its own servers for 36 hours...",
+   "s": "OpenRouter gives you one API for every AI model that routes and governs every request, so your AI is better, faster, and cheaper. Try it free: https:…",
+   "tags": [
+    "Fireship"
+   ],
+   "url": "https://www.youtube.com/watch?v=ytmawkPTP24",
+   "ta": "لماذا لم تتمكن مايكروسوفت من إصلاح خوادمها الخاصة لمدة 36 ساعة..."
+  },
   {
    "id": "hn-50520825",
    "cat": "arch",
@@ -14,6 +183,19 @@
    ],
    "url": "https://blog.rhett.info/duolingo-screen-time-uninstall/",
    "ta": "يستخدم Duolingo إذن وقت الشاشة لمنع إلغاء التثبيت"
+  },
+  {
+   "id": "hn-50520804",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-16T18:12:48Z",
+   "t": "Strengthening the fight against online child sexual abuse",
+   "s": "110 نقطة، 257 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://openai.com/index/strengthening-online-child-safety/",
+   "ta": "تعزيز مكافحة الاعتداء الجنسي على الأطفال عبر الإنترنت"
   },
   {
    "id": "hn-50520741",
@@ -68,6 +250,19 @@
    "ta": "اسأل HN: إذا كانت أدوات الذكاء الاصطناعي جيدة جدًا، فلماذا لا يكون تراكم الأخطاء لديك فارغًا؟"
   },
   {
+   "id": "hn-50520027",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-16T17:16:55Z",
+   "t": "USA: RSF Urges Congress to Impeach FCC Chairman Brendan Carr",
+   "s": "14 نقطة، 0 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://rsf.org/en/usa-rsf-urges-congress-impeach-fcc-chairman-brendan-carr",
+   "ta": "الولايات المتحدة الأمريكية: مراسلون بلا حدود تحث الكونجرس على عزل رئيس لجنة الاتصالات الفيدرالية بريندان كار"
+  },
+  {
    "id": "yt-vVVdxMwPBuA",
    "cat": "co",
    "src": "YouTube",
@@ -94,17 +289,17 @@
    "ta": "ما هو NOD؟ وكيل الذكاء الاصطناعي الذي يبني سير عمل n8n لك!"
   },
   {
-   "id": "gn-littlerockdistricttestednewstoplogsystematozarklock",
+   "id": "gn-thealgorithmiccriticcanartificialintelligencelearntojudgearc",
    "cat": "arch",
-   "src": "Army.mil",
-   "ts": "2026-11-16T15:26:00Z",
-   "t": "Little Rock District tested new stoplog system at Ozark Lock",
+   "src": "Parametric Architecture",
+   "ts": "2026-11-16T16:00:00Z",
+   "t": "The Algorithmic Critic: Can Artificial Intelligence Learn to Judge Architecture?",
    "s": "",
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPbVU0bXRGVXdYRGc4MnRGd0U2eVNpMjhlVFBKQnVFLS1fUzBlLXJQdFRibkJYNEx1WDRPSURsZGdOc0tmNDhDc0RLM2lnODNkQzdrT05BY2VKOWt0eU5OWTY5OS1EWG82bkktWnRuMTJQWllOT0oyUVg5dXRTOHdRSlhWNlBLVTVxQWxreVpMa21KcHNMNzEwanRCbHHSAaIBQVVfeXFMTk9GekU1RHA2d3hUZUZFbnJLMVBTNk9pZUdtaDRlaGhMcGQ3c2t0UWY4NUhNclVPZ3FZcXY4VjJaOEtrOUN4eDhCbmVYSUEwMGNqSE9hT0pkbjdYNnYtNDA1eXdqUjdFRE9fWHlLMnlSSGw5eWtTSk9rTVZvRnJmSTgwNDFYcC0taXBnU1JHemh0VDNvNks3bnlkaHZCOHZQeExn?oc=5",
-   "ta": "اختبرت منطقة Little Rock نظام Stoplog الجديد في Ozark Lock"
+   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBGTjBEMHk0SU9KUWZRN0hpaHFvdG1ReUtJZ2t6YnZ1T3dKYlBaV0xGSEpWa2ZfYnd5YjdsOXM1MGJKVW9jMWh4UjZ6cUo3c3RJQmpGXzVqQ2lPc3g0dWZYcHJhZ0VKcHl2MzZXLURmNWFNR3h6dzc3amhsbm8?oc=5",
+   "ta": "الناقد الخوارزمي: هل يمكن للذكاء الاصطناعي أن يتعلم الحكم على الهندسة المعمارية؟"
   },
   {
    "id": "gn-nemetscheksdesignslumpiscyclicalnotanaicasualtydeutschebanka",
@@ -144,19 +339,6 @@
    ],
    "url": "https://artemlegotin.com/golden-board/",
    "ta": "رسالة ثنائية بحجم 512 كيلو بايت لتعليم الشطرنج بدون لغة مشتركة"
-  },
-  {
-   "id": "gn-nemetschekgroupwinsatconstructioncomputingawards",
-   "cat": "arch",
-   "src": "Nemetschek",
-   "ts": "2026-11-16T14:19:29Z",
-   "t": "Nemetschek Group Wins at Construction Computing Awards",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNT3V6dGVsNUc4U3NXYTFQSkhabnB4aVJLWHdrcXBPWGJwMHdWRVRaYi1GZEt3eVNMUmR5ZUVwM3FxRzZOLUVQRS1SOF9lR3Y2R1NEc3NOblVidkhnbW82aWNKQV9MdnFtS3psTnJyNGJUX0xGZGhNWXRhbWl1QkxiV2xtQ2hiems4RnpLYUJpMEI3Nzg?oc=5",
-   "ta": "مجموعة Nemetschek تفوز بجوائز حوسبة البناء"
   },
   {
    "id": "hn-50517803",
@@ -209,6 +391,32 @@
    ],
    "url": "https://www.youtube.com/shorts/ZpsxNdHMCzI",
    "ta": "رموز السفر السرية الخاصة بـ ChatGPT غير موجودة: أنشئ رموزك الخاصة 5"
+  },
+  {
+   "id": "gn-originalvoiceslaunchestwineo20fordigitaltwins",
+   "cat": "arch",
+   "src": "IT Brief UK",
+   "ts": "2026-11-16T10:42:00Z",
+   "t": "OriginalVoices launches Twineo 2.0 for digital twins",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOUHV5QkVyZEQxTmFOUzlydnJodDRvUWpmclpDT3lIZU1iUmlaTVdvSVZXdm9IUnpRSm1DNXM5RFZabmFzczk2T3R5d3ctd19lSl9yOWZKNWhMZVJRUmZzQl9KdFNSZWVUSFRNeFZYM0NXc2FoOU50cktFMW1JQmU3cGJwMjRfUWc?oc=5",
+   "ta": "تطلق OriginalVoices برنامج Twineo 2.0 للتوائم الرقمية"
+  },
+  {
+   "id": "rss-contentbeyondbimfromengineeringdatatoengineeringintelligence",
+   "cat": "arch",
+   "src": "AEC Magazine",
+   "ts": "2026-11-16T10:22:33Z",
+   "t": "Beyond BIM: From Engineering Data to Engineering Intelligence",
+   "s": "BIM provided the structured data foundation on which next-gen engineering workflows can be built The post Beyond BIM: From Engineering Data to Engineering Inte…",
+   "tags": [
+    "AEC"
+   ],
+   "url": "https://aecmag.com/sponsored-content/beyond-bim-from-engineering-data-to-engineering-intelligence/",
+   "ta": "ما وراء BIM: من البيانات الهندسية إلى الذكاء الهندسي"
   },
   {
    "id": "yt-2f6yeG78xFA",
@@ -718,19 +926,6 @@
    "ta": "طلب كلود إعادة ترقيم الصفحات، فحذف منهج الأستاذ وسنة الملاحظات"
   },
   {
-   "id": "gn-youtubersfullsize3dprintedf1carpassesitsv12testfit",
-   "cat": "arch",
-   "src": "Motorsport.com",
-   "ts": "2026-11-14T16:59:07Z",
-   "t": "YouTuber's full-size 3D-printed F1 car passes its V12 test fit",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQMEtVR0x0ZG9jMlNOOVp0czhZSmFxV2I4aWhXelVKOGdtZkdBNmttWFFXdmVYYkVZWnVEY0V3UHd2TXl1R0xwczQ3UVBHS2NIRXVfSXZmX2tiR0NfTjJCV1RkWENhSzlrbG5teTNUTm9JeVlUVXNLYmRGczJPMFp2QlJJOUtFdjZNVnNickZnSmxBTXVrbXdqeGl4RGE4eUVibnFBanJzOFNUbDc3Y0tsUQ?oc=5",
-   "ta": "اجتازت سيارة F1 كاملة الحجم المطبوعة ثلاثية الأبعاد من مستخدمي YouTube اختبار V12"
-  },
-  {
    "id": "hn-50498051",
    "cat": "arch",
    "src": "Hacker News",
@@ -991,19 +1186,6 @@
    "ta": "LangSmith: النظام الأساسي لتشغيل الوكلاء وتحسينهم وإدارتهم"
   },
   {
-   "id": "gn-aimakesscannedbuildingssearchable",
-   "cat": "arch",
-   "src": "AEC Magazine",
-   "ts": "2026-11-13T15:45:16Z",
-   "t": "AI makes scanned buildings searchable",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5fWmcyT05hd19UX3pNLVZjMFJJN0R4aEdzMEZLbFpaazBqRjFSR2RkSEtNOWY1WGM0emhvclFWMGdiT0dRWE91bXJ5TXVCTGxwUU5adEZrZ3Q1Ynl5ZkdrNVFsZ08ta1lGRUFPMmVCUQ?oc=5",
-   "ta": "الذكاء الاصطناعي يجعل المباني الممسوحة ضوئيًا قابلة للبحث"
-  },
-  {
    "id": "rss-dezeencom20261113formafantasmaferrarinewyorkgonzalezhaaseaas",
    "cat": "arch",
    "src": "Dezeen",
@@ -1196,6 +1378,19 @@
     "AEC"
    ],
    "url": "https://aecmag.com/bim/sketchup-add-on-brings-bim-to-smaller-practices/",
+   "ta": "تعمل الوظيفة الإضافية SketchUp على جلب BIM إلى الممارسات الأصغر"
+  },
+  {
+   "id": "gn-sketchupaddonbringsbimtosmallerpractices",
+   "cat": "arch",
+   "src": "AEC Magazine",
+   "ts": "2026-11-13T09:45:34Z",
+   "t": "SketchUp add-on brings BIM to smaller practices",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE12WGltNVJZcDlyc05Vd1NWNTVHalg0eElqODZBT0pyTnUzWmxSdU1oRm1sX0hMWTYzR2tVRkdnUk1IQlNiakxYckFVRTVvSHdEVU92R2poMmFOSTRpaVFMMVhkaGFvSnV4RmdBOUl2dlBXcnRmNHo0bGlfUQ?oc=5",
    "ta": "تعمل الوظيفة الإضافية SketchUp على جلب BIM إلى الممارسات الأصغر"
   },
   {
@@ -1433,6 +1628,19 @@
    "ta": "لدى وكيل الترميز الخاص بك نقطة عمياء هائلة (تحتاج إلى إصلاحها)"
   },
   {
+   "id": "hn-50467539",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-12T14:15:28Z",
+   "t": "20 Years of Pyrolog",
+   "s": "82 نقطة، 4 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://pypy.org/posts/2026/11/20-years-of-pyrolog.html",
+   "ta": "20 عامًا من البيرولوج"
+  },
+  {
    "id": "hn-50467087",
    "cat": "code",
    "src": "Hacker News",
@@ -1457,6 +1665,19 @@
    ],
    "url": "https://www.youtube.com/watch?v=gPNiuyYirfw",
    "ta": "الذكاء الاصطناعي الخاص بـ DeepMind فعل المستحيل"
+  },
+  {
+   "id": "gn-rhinoworld2026mcneelletsaiin",
+   "cat": "arch",
+   "src": "AEC Magazine",
+   "ts": "2026-11-12T09:59:49Z",
+   "t": "Rhino World 2026: McNeel lets AI in",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBJY2U4dVg5bHFjZGhJTUt3NmQ2dHk4RllzVkFQV0ZFWjFQRkxlSFZlMzExQmhrR1BqVnJhLVFyWm5Hazk1YTJiZGJjdmxoWnY2SExGVi1WWnpwSW5TSlBwMU93SzVLMUVZR0E?oc=5",
+   "ta": "عالم وحيد القرن 2026: ماكنيل يسمح للذكاء الاصطناعي بالدخول"
   },
   {
    "id": "rss-httpsaecmagcomcadrhinoworld2026mcneelletsaiin",
@@ -1667,19 +1888,6 @@
    "ta": "تعلم الذكاء الاصطناعي المحلي في 30 دقيقة - قم بتشغيل LLMs محليًا مجانًا"
   },
   {
-   "id": "gn-ayoutuber3dprintedafullsizef1carnowamercedesv12fitsinsideit",
-   "cat": "arch",
-   "src": "MotorBiscuit",
-   "ts": "2026-11-11T14:08:45Z",
-   "t": "A YouTuber 3D-Printed a Full-Size F1 Car. Now a Mercedes V12 Fits Inside It",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNOHRxRjVhLXBVdGhpejQzWkFjLU1DdGFjRlhUWXhEZnFoQWtWbHJ0M0MxS3hwRy00WG5maTRreW1Oc3BycnpYUWN4d2pJVXhKV3Q4QjhYUUUteU1pSzBjeE1mVWc1NjRQUGlkOThIWFVnWjNLVVBYTHhCeDZ5T19ZLWdEWXZoNUwybVd2VEZOczNPcWFiYXpGbFhFYVJ2Q0k2VWFMdGYxSQ?oc=5",
-   "ta": "أحد مستخدمي YouTube قام بطباعة سيارة F1 كاملة الحجم باستخدام تقنية الطباعة ثلاثية الأبعاد. الآن تناسبها سيارة مرسيدس V12 بداخلها"
-  },
-  {
    "id": "gn-aiwalksintoanarchitecturefirm",
    "cat": "arch",
    "src": "Common Edge",
@@ -1745,6 +1953,19 @@
    "ta": "عرض HN: Aq – قائمة انتظار TUI لـ Claude Code"
   },
   {
+   "id": "gn-autodesknasdaqgsadskstockforecastanalystpredictions",
+   "cat": "arch",
+   "src": "Simply Wall St",
+   "ts": "2026-11-11T08:00:00Z",
+   "t": "Autodesk (NasdaqGS:ADSK) Stock Forecast & Analyst Predictions",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFA0WGgtNGdPVk8tZmQ1a1hoUmUwWHRRVFBTM0ljV3czaEdWZzhBdDdHS2ZKWXRVWHVfTWdWc3p6RUsxWkFNUTYyTXZPbzJSRFhoZUVQdzNZeFJvbGFhVkxsR1U4TjdQeERTRHVEU2ZkTWNXWExNbmhV?oc=5",
+   "ta": "أوتوديسك (NasdaqGS:ADSK) توقعات الأسهم وتوقعات المحللين"
+  },
+  {
    "id": "rss-261111caaporaarquitecturajeromehaferdstudiobombodromoecuador",
    "cat": "arch",
    "src": "Dezeen",
@@ -1769,19 +1990,6 @@
    ],
    "url": "https://github.com/adrbn/bo2-mac",
    "ta": "عرض HN: Black Ops II تمت إعادة ترجمته بشكل ثابت إلى ARM64 macOS الأصلي"
-  },
-  {
-   "id": "gn-trimbleexpandsdesignandconstructabilityworkflowswithnewsketc",
-   "cat": "arch",
-   "src": "The American Surveyor",
-   "ts": "2026-11-11T04:01:27Z",
-   "t": "Trimble Expands Design and Constructability Workflows With New SketchUp Capabilities",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPUWJ2V1Q1QmpQeWZNbTVqZHpHRUFNOG9vX1dXYUhWNXRRZHVaa1FyeEJFUGdKVGJLcVg0WUdqdHhoaWZ3ZFRJSHJWOVdndFUxbVJkXzZzUUxESVdxZ1pYa2paOUtTZ3pKVTMxeHBwRUtjVnNGdXMzaHNtLVdnbzJWUV9ha3JBRWZhUGZDU2xCX2RyQ0xtQ1VkbzloOWRPdDlSZ0hyS1NKZm1WNnE0RnhiUVNLc3VLeU5kbFBBWg?oc=5",
-   "ta": "تعمل Trimble على توسيع سير عمل التصميم وقابلية الإنشاء من خلال إمكانات SketchUp الجديدة"
   },
   {
    "id": "gn-ailaunchesfashionmobiletechengineeringconstructionvideogener",
@@ -1860,19 +2068,6 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOdmZMaDltVGdPaFVfMXRvWFQyQmp6VWR5R3JMdnlFNFFmWXEwOWZlSlA4dVo5SmZtV1FRQm4xTlIwTFItbjh6ZW42SDhTVURjN2VqZFEzc1huZmF6ZmgxaTc3a2Q3cVp3MlFrUkFFbzczZF9kSHNWQklfNkJuNFBKOHVJcmtMRi1Ma2c?oc=5",
    "ta": "3 أدوات لهندسة الذكاء الاصطناعي تعيد التفكير في سير العمل"
-  },
-  {
-   "id": "gn-theimportanceofhumanjudgmentinaidrivendesign",
-   "cat": "arch",
-   "src": "Autodesk",
-   "ts": "2026-11-10T18:53:19Z",
-   "t": "The Importance of Human Judgment in AI-Driven Design",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPM05JTnhRWTMzN3ptQVVCYW5kQTloYzJYNmRZaXB1Rk5sX29MZUcwbWhjbDlUdDBhbzVIRmdHYS1JRU16cEF4cjhuU193UmFpOG12UzRrSk1zV2dLV1dsM29VQ1F4MlFyWHU2QzBrOWRubnkwX29FVnlDU3M1SnZaSzJUVnItTUt6RUhtTEp0OVVwLTh3NlBHWXJXaE40OVVLaU5Fcnp6RnJrTGhodGpDMmVCZnM2dzF4Ym0yeUJRYTY1NWRTUEVlVktnRnl0cnd5VW42d3JWUnNoa1pZM2Uwcl9nWjh6ZnJJWTFxa3E5MW1vbWkxQkdLY25rNVNUb2oxUXR6a3lGZnh6dEE?oc=5",
-   "ta": "أهمية الحكم البشري في التصميم القائم على الذكاء الاصطناعي"
   },
   {
    "id": "hn-50444380",
@@ -1962,19 +2157,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://www.lloydslist.com/LL1158922/A-rare-glimpse-inside-the-highrisk-highreward-Hormuz-trade"
-  },
-  {
-   "id": "gn-autonomousbuildingsarefastapproachingpassivelogicaichief",
-   "cat": "arch",
-   "src": "Facilities Dive",
-   "ts": "2026-11-10T17:14:06Z",
-   "t": "Autonomous buildings are fast approaching: PassiveLogic AI chief",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQeDdHdzhqeEEtbnZENUF5OURyeFl0eHJzZFowSndrYjdkUnRmQm1qMU9RM1Jub184amtMT2JGME1WY19jRTNjS0VJUzY2V1c5TFk0cmozOVBBRWFoVHFVSzU5VmZVXzlqRThBdjRXSWg4eW81QVB6OVdZWUNMNThXZUpDT1ZIcHMtR3JkczVGOVNmVGd3S2gwV3RwTjRESmsyWFBSUDlpWnBhRUk?oc=5"
+   "url": "https://www.lloydslist.com/LL1158922/A-rare-glimpse-inside-the-highrisk-highreward-Hormuz-trade",
+   "ta": "لمحة نادرة داخل تجارة هرمز عالية المخاطر والعائد المرتفع"
   },
   {
    "id": "gn-whatsnewinrevit20273and20274promptdrivenautomationwithautode",
@@ -1986,7 +2170,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOVNzLWVmbDR0MjZUUWs4eWpDQWJmYy1VOWppM01UWDhLdmxJbGZEOGpnbHR4OUUtNm51UWlWZ2tkbEVyMEtrVF9KZmVGTXVtNFJ3alluakJ5ZzNKOEVITlUzV3JYbnIwSXc2TWpYTnVMV1lPTEsya1RCRnRuRmNrNnZYLXcwcUVJVEdB?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOVNzLWVmbDR0MjZUUWs4eWpDQWJmYy1VOWppM01UWDhLdmxJbGZEOGpnbHR4OUUtNm51UWlWZ2tkbEVyMEtrVF9KZmVGTXVtNFJ3alluakJ5ZzNKOEVITlUzV3JYbnIwSXc2TWpYTnVMV1lPTEsya1RCRnRuRmNrNnZYLXcwcUVJVEdB?oc=5",
+   "ta": "ما الجديد في Revit 2027.3 و2027.4: التشغيل الآلي الفوري مع مساعد Autodesk وتصميم المواقع المتصلة"
   },
   {
    "id": "yt-xM_BhmEyKAY",
@@ -1998,7 +2183,8 @@
    "tags": [
     "LangChain"
    ],
-   "url": "https://www.youtube.com/watch?v=xM_BhmEyKAY"
+   "url": "https://www.youtube.com/watch?v=xM_BhmEyKAY",
+   "ta": "كيف تقوم Workday ببناء نماذج أولية للوكلاء في أقل من يوم باستخدام LangChain"
   },
   {
    "id": "hn-50442303",
@@ -2010,7 +2196,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+   "ta": "الجوزاء 4 الكربون متوفر الآن"
   },
   {
    "id": "yt-Ebn1Ju6fjEo",
@@ -2022,7 +2209,8 @@
    "tags": [
     "Dezeen"
    ],
-   "url": "https://www.youtube.com/watch?v=Ebn1Ju6fjEo"
+   "url": "https://www.youtube.com/watch?v=Ebn1Ju6fjEo",
+   "ta": "الروبوت المنزلي Mori AI \"يشبه مصباح طاولة معاصر\""
   },
   {
    "id": "hn-50441350",
@@ -2034,7 +2222,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://aircad.com"
+   "url": "https://aircad.com",
+   "ta": "إظهار HN: Aircad – صياغة احترافية ونمذجة ثلاثية الأبعاد في المتصفح"
   },
   {
    "id": "yt-E-NropeDnYc",
@@ -2046,7 +2235,8 @@
    "tags": [
     "Balkan Architect"
    ],
-   "url": "https://www.youtube.com/watch?v=E-NropeDnYc"
+   "url": "https://www.youtube.com/watch?v=E-NropeDnYc",
+   "ta": "هل تريد أن تتعلم الريفيت؟ شاهد هذا قبل الجمعة السوداء!"
   },
   {
    "id": "rss-httpswwwdezeencom20261110okaqmoriaihomerobotlamp",
@@ -2058,7 +2248,8 @@
    "tags": [
     "AEC"
    ],
-   "url": "https://www.dezeen.com/2026/11/10/okaq-mori-ai-home-robot-lamp/"
+   "url": "https://www.dezeen.com/2026/11/10/okaq-mori-ai-home-robot-lamp/",
+   "ta": "الروبوت المنزلي Mori AI \"يشبه مصباح طاولة معاصر\""
   },
   {
    "id": "rss-httpsaecmagcomprojectmanagementageirolaunchesarkwatcher",
@@ -2070,7 +2261,21 @@
    "tags": [
     "AEC"
    ],
-   "url": "https://aecmag.com/project-management/ageiro-launches-ark-watcher/"
+   "url": "https://aecmag.com/project-management/ageiro-launches-ark-watcher/",
+   "ta": "Ageiro يطلق Ark Watcher"
+  },
+  {
+   "id": "gn-trimbleannouncesnewaiintrimbleconnectcde",
+   "cat": "arch",
+   "src": "Architosh",
+   "ts": "2026-11-10T12:50:39Z",
+   "t": "Trimble announces new AI in Trimble Connect CDE",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOcXhmckJ4WURab0Jfc1RuRm43RmEwdzByR0RudlU4QTNJVTFLaXl1c21BVzlGekF4ZDZ5M3NUS0JTMHJpUU1Ta0RpUHZlVlJsSmRzQlZ4b2VUdmxPME0yRkNNUTgwU0p4d2pNNGE5cFJyU0RWVUo0ellxQTRjMmJVQzlzZ0s?oc=5",
+   "ta": "تعلن شركة Trimble عن الذكاء الاصطناعي الجديد في Trimble Connect CDE"
   },
   {
    "id": "rss-psarchitoshcom202611trimbleannouncesnewaiintrimbleconnectcde",
@@ -2082,7 +2287,8 @@
    "tags": [
     "AEC"
    ],
-   "url": "https://architosh.com/2026/11/trimble-announces-new-ai-in-trimble-connect-cde/"
+   "url": "https://architosh.com/2026/11/trimble-announces-new-ai-in-trimble-connect-cde/",
+   "ta": "تعلن شركة Trimble عن الذكاء الاصطناعي الجديد في Trimble Connect CDE"
   },
   {
    "id": "yt-IZsL5jsHIO4",
@@ -2094,7 +2300,8 @@
    "tags": [
     "Parametric Architecture"
    ],
-   "url": "https://www.youtube.com/watch?v=IZsL5jsHIO4"
+   "url": "https://www.youtube.com/watch?v=IZsL5jsHIO4",
+   "ta": "#78 – سيباستيان أنديا يتحدث عن الذكاء الاصطناعي والإبداع ومستقبل الهندسة المعمارية"
   },
   {
    "id": "gn-whyyougovsapproachtodigitaltwinsisfundamentallydifferentandb",
@@ -2106,7 +2313,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5nZEZPWXJTb1hTWnYyMndZZFoxWEV0eVprWGdrUHVjT1hjMlRqUUlySWVtVkRTYlpKaHRPaDdLQU9IUzZLdHRuXzYzaHBLX1VGeUJvVXpRWTdKeHBoMWpKbFBXdXVPZzFQQThDanBmeEEwU1hJUnZHTVZCYw?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5nZEZPWXJTb1hTWnYyMndZZFoxWEV0eVprWGdrUHVjT1hjMlRqUUlySWVtVkRTYlpKaHRPaDdLQU9IUzZLdHRuXzYzaHBLX1VGeUJvVXpRWTdKeHBoMWpKbFBXdXVPZzFQQThDanBmeEEwU1hJUnZHTVZCYw?oc=5",
+   "ta": "لماذا يختلف نهج YouGov في التعامل مع التوائم الرقمية اختلافًا جذريًا - وأفضل؟"
   },
   {
    "id": "yt-vug73goPJaM",
@@ -2118,7 +2326,8 @@
    "tags": [
     "Two Minute Papers"
    ],
-   "url": "https://www.youtube.com/watch?v=vug73goPJaM"
+   "url": "https://www.youtube.com/watch?v=vug73goPJaM",
+   "ta": "هل انتهت البرمجيات؟"
   },
   {
    "id": "gn-peoplebeforeplatformshowgamudamadechangestickwithautodeskfor",
@@ -2130,7 +2339,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOa05lNmtXRlRpTUdXVUpibDhHR3lzZ3JpekJaV1Nhc1VGOU1rVHgzR3RtTERWbEpuTGVVUHhaNmtPTzhxODVCcHFFMWV0TDBUSWhjRVlJWXZTei1OY010WFI2LWdldWpNcDNxTXJxakhrRmxsSVd1eGpSR1ZmTjZZQjEya2tKU25US2RIaXlTSGgxYkNremFMOWZKejNnM01VTTNFcTA5cEVEZW5OZzdDem9QSjM2MElqLU0yRS1yS0g1bDBhd0FqeEwySQ?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOa05lNmtXRlRpTUdXVUpibDhHR3lzZ3JpekJaV1Nhc1VGOU1rVHgzR3RtTERWbEpuTGVVUHhaNmtPTzhxODVCcHFFMWV0TDBUSWhjRVlJWXZTei1OY010WFI2LWdldWpNcDNxTXJxakhrRmxsSVd1eGpSR1ZmTjZZQjEya2tKU25US2RIaXlTSGgxYkNremFMOWZKejNnM01VTTNFcTA5cEVEZW5OZzdDem9QSjM2MElqLU0yRS1yS0g1bDBhd0FqeEwySQ?oc=5",
+   "ta": "الناس قبل المنصات: كيف قامت جامودا بإجراء التغيير باستخدام Autodesk Forma"
   },
   {
    "id": "yt-DWSTbeNpMlY",
@@ -2142,7 +2352,8 @@
    "tags": [
     "Archicad"
    ],
-   "url": "https://www.youtube.com/watch?v=DWSTbeNpMlY"
+   "url": "https://www.youtube.com/watch?v=DWSTbeNpMlY",
+   "ta": "مخطط رئيسي حضري معقد مع BIM – تطوير شاطئ فلوري التابع لشركة أوبنهايم للهندسة المعمارية"
   },
   {
    "id": "rss-httpsaecmagcomcollaborationtrimbleembedsaiacrossaeco",
@@ -2154,7 +2365,21 @@
    "tags": [
     "AEC"
    ],
-   "url": "https://aecmag.com/collaboration/trimble-embeds-ai-across-aeco/"
+   "url": "https://aecmag.com/collaboration/trimble-embeds-ai-across-aeco/",
+   "ta": "يقوم Trimble بدمج الذكاء الاصطناعي عبر AECO"
+  },
+  {
+   "id": "gn-trimbleembedsaiacrossaeco",
+   "cat": "arch",
+   "src": "AEC Magazine",
+   "ts": "2026-11-10T09:19:34Z",
+   "t": "Trimble embeds AI across AECO",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE80RFMwR0pCV2RRUHJSTU9fYlZWYUZQMHNicjB4TVFVZVlrd19Pa0lsd29TY3JSb0xJN29LUnlIS3hBOGZ0TldvbVVFbzdGZjhQRjlXa0EtZGdJYmlxanRVTkdHM19NSlVJODNfY29pRW0?oc=5",
+   "ta": "يقوم Trimble بدمج الذكاء الاصطناعي عبر AECO"
   },
   {
    "id": "rss-httpsaecmagcomworkstationsg2digitallaunchesquadgpu2userver",
@@ -2166,7 +2391,8 @@
    "tags": [
     "AEC"
    ],
-   "url": "https://aecmag.com/workstations/g2-digital-launches-quad-gpu-2u-server/"
+   "url": "https://aecmag.com/workstations/g2-digital-launches-quad-gpu-2u-server/",
+   "ta": "تطلق G2 Digital خادمًا رباعيًا GPU 2U"
   },
   {
    "id": "hn-50436636",
@@ -2178,7 +2404,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://news.ycombinator.com/item?id=50436636"
+   "url": "https://news.ycombinator.com/item?id=50436636",
+   "ta": "أخبر HN: تم الكشف عن جلسات دردشة Notion AI عبر اختراق Fireworks AI"
   },
   {
    "id": "gn-restructuringyourconstructiondataforthefuture",
@@ -2190,7 +2417,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMWFrRGhNd3JlQWttVkRGekdQNVVzVW1sdVBHMjI0X3AycnVhbms4WDRwYmFsTjNzRTlvNjdYM3ZteVdGQ2RTTHB0TUVEM2VieXpoYTdJdFhiQ2hOM0ozWnFIVnFFbGY0UlFwb2p3Tnl4dGs2ZGNVQjBPbmd4WXF4R2taeGtseHNKaDNWNk5UbzFPN3c0UXhRVmtrZWlDekMzVHNHN1dqYXU5akVKUGQxT2NuMThpdw?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMWFrRGhNd3JlQWttVkRGekdQNVVzVW1sdVBHMjI0X3AycnVhbms4WDRwYmFsTjNzRTlvNjdYM3ZteVdGQ2RTTHB0TUVEM2VieXpoYTdJdFhiQ2hOM0ozWnFIVnFFbGY0UlFwb2p3Tnl4dGs2ZGNVQjBPbmd4WXF4R2taeGtseHNKaDNWNk5UbzFPN3c0UXhRVmtrZWlDekMzVHNHN1dqYXU5akVKUGQxT2NuMThpdw?oc=5",
+   "ta": "إعادة هيكلة بيانات البناء الخاصة بك للمستقبل"
   },
   {
    "id": "hn-50435660",
@@ -2202,7 +2430,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html"
+   "url": "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html",
+   "ta": "يصل عائد سندات CoreWeave إلى 16٪ مع ارتفاع الضغط الائتماني للذكاء الاصطناعي"
   },
   {
    "id": "yt-YAU-_oLS2es",
@@ -2214,7 +2443,8 @@
    "tags": [
     "AssemblyAI"
    ],
-   "url": "https://www.youtube.com/shorts/YAU-_oLS2es"
+   "url": "https://www.youtube.com/shorts/YAU-_oLS2es",
+   "ta": "2 نصائح لبدء اختراق الأجهزة كمبتدئ"
   },
   {
    "id": "hn-50433079",
@@ -2226,7 +2456,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://www.reddit.com/r/ClaudeCode/comments/1xq2n3t/a_year_after_the_100_ai_mandate_nobody/"
+   "url": "https://www.reddit.com/r/ClaudeCode/comments/1xq2n3t/a_year_after_the_100_ai_mandate_nobody/",
+   "ta": "بعد مرور عام على تفويض الذكاء الاصطناعي بنسبة 100%، لم يفهم أحد الكود الخاص بنا"
   },
   {
    "id": "yt-pf5tXJZM1Rw",
@@ -2238,7 +2469,8 @@
    "tags": [
     "Fireship"
    ],
-   "url": "https://www.youtube.com/watch?v=pf5tXJZM1Rw"
+   "url": "https://www.youtube.com/watch?v=pf5tXJZM1Rw",
+   "ta": "أنفقت شركة OpenAI 1.2 مليون دولار لاختراق نظام Linux... وكانت هذه صفقة رابحة"
   },
   {
    "id": "hn-50431144",
@@ -2250,7 +2482,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://artificialanalysis.ai/models/claude-fable-5-2"
+   "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
+   "ta": "حصل كلود فابل 5.2 على 65 درجة في التحليل الاصطناعي، وهي أعلى درجة حتى الآن"
   },
   {
    "id": "hn-50429906",
@@ -2262,7 +2495,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+   "ta": "كلود فابل 5.2 و ميثوس 5.2"
   },
   {
    "id": "hn-50429636",
@@ -2274,7 +2508,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://meowdisplay.app/"
+   "url": "https://meowdisplay.app/",
+   "ta": "Show HN: MeowDisplay هو نسخة متطابقة من iPhone، ولكن في الاتجاه المعاكس"
   },
   {
    "id": "hn-50429426",
@@ -2286,7 +2521,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://github.com/thisisme6598/gemini_files/"
+   "url": "https://github.com/thisisme6598/gemini_files/",
+   "ta": "يقوم Google Gemini بتوجيه ملفات Drive الشخصية ورسائل البريد الإلكتروني إلى المعلقين البشريين"
   },
   {
    "id": "hn-50429068",
@@ -2298,7 +2534,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+   "ta": "كلود فابل 5.2 و ميثوس 5.2"
   },
   {
    "id": "gh-1451662178",
@@ -2310,7 +2547,8 @@
    "tags": [
     "مشروع جديد"
    ],
-   "url": "https://github.com/Dodaios/ste80-humanizer"
+   "url": "https://github.com/Dodaios/ste80-humanizer",
+   "ta": "Dodaios/ste80-humanizer: STE80 Humanizer: مهارة العميل التي تزيل الذكاء الاصطناعي، تخبر النص وتعيد كتابته بنسبة 80% من الطريق إلى AS..."
   },
   {
    "id": "hn-50427934",
@@ -2322,7 +2560,21 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://news.ycombinator.com/item?id=50427934"
+   "url": "https://news.ycombinator.com/item?id=50427934",
+   "ta": "إظهار HN: DBelve – عميل قاعدة بيانات مفتوح المصدر مصنوع من الصدأ وGPUI"
+  },
+  {
+   "id": "gn-geminuslandsbapcoenergiesbackingforbahrainenergydigitaltwin",
+   "cat": "arch",
+   "src": "Dealroom",
+   "ts": "2026-11-09T15:50:36Z",
+   "t": "Geminus lands Bapco Energies backing for Bahrain energy digital twin",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOc2hNTGlKSmRhSnlmcjNYRHJpVFlmaEdyOU4xZzd3bll2am5zVVlxaUdZWm55MmhRbm5Yd0lqSzdmWFZSaXFsdnViU0p6MEJ2UktuX2pNMzdid2VSTHc0VEdGWjZhYnRXTFdfdGx1NjRHd0U0SXE4akk4YVJoanhjNzd1aUFRSV93X3Z0Nm9pQk1GVVhPS05rSWJYZ25PLWRYaEZMVg?oc=5",
+   "ta": "جيمينوس تحصل على دعم بابكو للطاقة لمشروع التوأم الرقمي للطاقة في البحرين"
   },
   {
    "id": "yt-kmPF75rTgh8",
@@ -2334,19 +2586,34 @@
    "tags": [
     "LangChain"
    ],
-   "url": "https://www.youtube.com/shorts/kmPF75rTgh8"
+   "url": "https://www.youtube.com/shorts/kmPF75rTgh8",
+   "ta": "هل يجب على الوكلاء أن يقولوا \"لا أعرف\"؟ | AirBnB في المقاطعة 26"
   },
   {
-   "id": "gn-4waystheconstructionindustryisusingtechtoimproveefficiencyan",
+   "id": "gn-aicompaniesareofferingarchitectssixfiguresforcadfileshaveyou",
    "cat": "arch",
-   "src": "Crain's New York Business",
-   "ts": "2026-11-09T10:00:00Z",
-   "t": "4 ways the construction industry is using tech to improve efficiency and safety",
+   "src": "Archinect",
+   "ts": "2026-11-09T14:22:00Z",
+   "t": "AI companies are offering architects six figures for CAD files; have you been approached?",
    "s": "",
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNVmc3bU9aempHLXdyOUp0dzd1U2o1dmcxaUN6RU1mcERveWFWSnVrdU45T01ua01ocGMtb1pzWGhRZ0N6cDdiU1Y0RG43ZFE0Ykt2S1ZRRFdrWWdpM1VQc3E1QTJUX0pnLW11OVRhbDhkU2ljUDFSSW9nOHFlcTRVMlZCZVRqYzFjWWVjS3J6TEx0Q2NJT3V5RURWQzk3YUdZWkVmTkNzZ1htclp5dUdCRmRn?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPdndSdDNtcURJOE00WjhLQTcwTElyV1dFaFBLNFFfMXlyRzBIQ2dILUlNaFVScjF5TTE1T2NHamRfaVNYM3BpdWZwZ0FnZWVxd0ZRVmotME0yNElQSUVBN3dhNk9sdm1WR01yZExfeXpONnVnYTZrbnFTazl4dFUwWU5qQ0l3VDhDZ1BMZWF6aHlhNmx3Z09xajVJb3BOTkJXX3liT2lSOEstTlB5WE01NTVvYWV2T2FzZWFmZUtwV04wVXRTaW0yZTdKVTM?oc=5",
+   "ta": "تقدم شركات الذكاء الاصطناعي للمهندسين المعماريين ستة أرقام لملفات CAD؛ هل تم الاتصال بك؟"
+  },
+  {
+   "id": "gn-seehowpraxisaishumanfirstdigitaltwinsinsidecanvastakethe2amq",
+   "cat": "arch",
+   "src": "Instructure",
+   "ts": "2026-11-09T11:45:53Z",
+   "t": "See how Praxis AI’s Human-First Digital Twins™ inside Canvas take the 2 am questions off your faculty’s plate.",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQelBFSFJrdldiaG1SUnFsMXFOMi01ZE9fZnJLNl9SZFZ4d0tEc2ZmX2Y4WTVtRFVlc0tuVk93RW01dm83M3RmQ1NXR09QdXBfOWtCcldrYWNLX09zNV9kOHFNWVRGNkZHTkNXeHp1YnV5NzB5MXpqczFJVDZOdEFtaFJhRFN2SzczQWRpb0Y3bV9EQmNiRUI5bkFFZ3A?oc=5",
+   "ta": "شاهد كيف يقوم برنامج Praxis AI’s Human-First Digital Twins™ داخل Canvas بطرح أسئلة الساعة الثانية صباحًا من لوحة أعضاء هيئة التدريس لديك."
   },
   {
    "id": "hn-50422628",
@@ -2358,7 +2625,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://news.ycombinator.com/item?id=50422628"
+   "url": "https://news.ycombinator.com/item?id=50422628",
+   "ta": "يقوم ChatGPT Desktop بإعادة توجيه وكيل SSH الخاص بك إلى الأجهزة البعيدة"
   },
   {
    "id": "gh-1450794567",
@@ -2370,7 +2638,21 @@
    "tags": [
     "مشروع جديد"
    ],
-   "url": "https://github.com/agentes-chat/agentes-chat"
+   "url": "https://github.com/agentes-chat/agentes-chat",
+   "ta": "gentes-chat/agentes-chat: بديل Slack مفتوح المصدر ومستضاف ذاتيًا، حيث يعمل فريقك ووكلاء الذكاء الاصطناعي معًا في..."
+  },
+  {
+   "id": "gn-architecturalintelligenceeditorialproposesaidrivenactiveheal",
+   "cat": "arch",
+   "src": "Bioengineer.org",
+   "ts": "2026-11-08T18:44:07Z",
+   "t": "Architectural Intelligence Editorial Proposes AI-Driven Active Health Framework",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNYVZCWU1tcW51Tk9qdXhaRFhfanNjd3llQlZ0VFFSdXlieElRVEttQjdmTEpvRDh1VjRuc3NucjF3elNRYjQtajg1X193ZlIwQld2RTV3ZUw0OVMyS1NlT2NTd0JVR2xKRU5vWllFMThnQWJBM21vWVFQaUZKTmJSbzNTdVI5b2VCU3I0VEpqMW1abDlvSTRrcmtmS09qTC1JSFZKVzVZQQ?oc=5",
+   "ta": "تقترح افتتاحية الذكاء المعماري إطارًا صحيًا نشطًا يعتمد على الذكاء الاصطناعي"
   },
   {
    "id": "hn-50415817",
@@ -2382,7 +2664,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://www.wsj.com/tech/ai/silicon-valley-promises-ai-will-cure-disease-drugmaker-ceos-arent-buying-it-5218511c"
+   "url": "https://www.wsj.com/tech/ai/silicon-valley-promises-ai-will-cure-disease-drugmaker-ceos-arent-buying-it-5218511c",
+   "ta": "يعد وادي السيليكون بأن الذكاء الاصطناعي سيعالج الأمراض. الرؤساء التنفيذيون لصناعة الأدوية لا يشترونها"
   },
   {
    "id": "hn-50415628",
@@ -2394,7 +2677,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers"
+   "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+   "ta": "يقوم بنك جولدمان ساكس بسحب كلود كود من المصرفيين والمتداولين لديه"
   },
   {
    "id": "hn-50413822",
@@ -2406,7 +2690,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought/"
+   "url": "https://247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought/",
+   "ta": "تجمع OpenAI 11 مليار دولار بتقييم 1.25 تريليون دولار"
   },
   {
    "id": "hn-50413266",
@@ -2418,7 +2703,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://github.com/rochus-keller/Micron"
+   "url": "https://github.com/rochus-keller/Micron",
+   "ta": "عرض HN: ميكرون - أوبيرون بقوة C"
   },
   {
    "id": "hn-50412591",
@@ -2430,7 +2716,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://www.polso.info/why-i-will-not-be-using-llms-coding"
+   "url": "https://www.polso.info/why-i-will-not-be-using-llms-coding",
+   "ta": "لماذا لن أستخدم LLMs في الترميز الخاص بي"
   },
   {
    "id": "hn-50410107",
@@ -2442,7 +2729,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://caleb.software/posts/claude-to-pi.html"
+   "url": "https://caleb.software/posts/claude-to-pi.html",
+   "ta": "وداعا كلود، مرحبا بي"
   },
   {
    "id": "hn-50409289",
@@ -2454,7 +2742,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://tedium.co/2026/09/14/usenet-rewind-archive-revival-website/"
+   "url": "https://tedium.co/2026/09/14/usenet-rewind-archive-revival-website/",
+   "ta": "عودة يوزنت يا عزيزي (هذه المرة، البحث يعمل)"
   },
   {
    "id": "yt-GJ6PMUm5oTA",
@@ -2466,7 +2755,8 @@
    "tags": [
     "Two Minute Papers"
    ],
-   "url": "https://www.youtube.com/watch?v=GJ6PMUm5oTA"
+   "url": "https://www.youtube.com/watch?v=GJ6PMUm5oTA",
+   "ta": "افتتحت Astra من OpenAI للتو الصندوق الأسود للذكاء الاصطناعي"
   },
   {
    "id": "hn-50403153",
@@ -2478,7 +2768,21 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://news.ycombinator.com/item?id=50403153"
+   "url": "https://news.ycombinator.com/item?id=50403153",
+   "ta": "اسأل HN: كيف يمكنك إدارة سياق وكلاء الذكاء الاصطناعي لديك عبر العملاء والمشاريع؟"
+  },
+  {
+   "id": "gn-howengineersusedigitaltwinstotestrealworldsystemsvirtually",
+   "cat": "arch",
+   "src": "Interesting Engineering",
+   "ts": "2026-11-07T08:00:00Z",
+   "t": "How engineers use digital twins to test real-world systems virtually",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOb0tGdE5fNV9RU0hGNW1qcGNtV255a2FoeXpXOG11ckg4YnZBZjZQakI0a042S0xLTEt2WmN2YlVpSWtCWUdyb3pGTWRPbDdpRnd3MkxscmQwSEttVjJJUEY3U3I4RzV5STZuS2pJTFJ6ZzhfaFRvcVlScDhOa3ozei0zRlVwQmJQU2pkNmFWOA?oc=5",
+   "ta": "كيف يستخدم المهندسون التوائم الرقمية لاختبار أنظمة العالم الحقيقي افتراضيًا"
   },
   {
    "id": "yt-uY4-ZMDV8s8",
@@ -2490,7 +2794,8 @@
    "tags": [
     "AssemblyAI"
    ],
-   "url": "https://www.youtube.com/watch?v=uY4-ZMDV8s8"
+   "url": "https://www.youtube.com/watch?v=uY4-ZMDV8s8",
+   "ta": "اختراق الأجهزة: 6 نصائح للبدء"
   },
   {
    "id": "hn-50399569",
@@ -2502,7 +2807,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053"
+   "url": "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053",
+   "ta": "يقوم ChatGPT بتمرير البيانات بصمت بين الموصلات ويريد المكافأة بطاقة هوية"
   },
   {
    "id": "gh-1448726998",
@@ -2514,7 +2820,8 @@
    "tags": [
     "أداة مفتوحة المصدر"
    ],
-   "url": "https://github.com/Leno27-Adr/autodesk-revit-2026-standalone"
+   "url": "https://github.com/Leno27-Adr/autodesk-revit-2026-standalone",
+   "ta": "Leno27-Adr/autodesk-revit-2026-standalone: ​​برنامج Autodesk Revit 2026 الكامل للإعداد المستقل لسطح المكتب"
   },
   {
    "id": "hn-50397429",
@@ -2526,7 +2833,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://hightouch.com/blog/llm-judges-identity-resolution"
+   "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+   "ta": "إن Jev الذي يمكنه طلب المساعدة من Opus يمنح دقة Opus بتكلفة أقل بمقدار 4 مرات"
   },
   {
    "id": "hn-50395919",
@@ -2538,7 +2846,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://arxiv.org/abs/2610.21375"
+   "url": "https://arxiv.org/abs/2610.21375",
+   "ta": "Memorilla: الذاكرة الدلالية الكامنة للماجستير في القانون"
   },
   {
    "id": "gn-turningdataintoastrategicadvantageinaec",
@@ -2550,7 +2859,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxObnozUjhhcVR0SG13QlhOOG5pcmVVNjl2Q050NUZXeFJySUl1d1BXY2pyVUhCcWVUeUNxSUN5cnoyV1NXOTRrTGVrZW11aFhESjJLZXByaUI0NlFwbFZsOExxWVpncjBfRkJwYmZnTGM0YW42LW9LNm5kTTFvaXFmeFVrVmN4RTJwSC1Yb25tZlBRSFYzYld5LS1oRWwySmtuSVNBag?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxObnozUjhhcVR0SG13QlhOOG5pcmVVNjl2Q050NUZXeFJySUl1d1BXY2pyVUhCcWVUeUNxSUN5cnoyV1NXOTRrTGVrZW11aFhESjJLZXByaUI0NlFwbFZsOExxWVpncjBfRkJwYmZnTGM0YW42LW9LNm5kTTFvaXFmeFVrVmN4RTJwSC1Yb25tZlBRSFYzYld5LS1oRWwySmtuSVNBag?oc=5",
+   "ta": "تحويل البيانات إلى ميزة استراتيجية في AEC"
   },
   {
    "id": "yt-iw9SZgyahqg",
@@ -2562,7 +2872,8 @@
    "tags": [
     "Fireship"
    ],
-   "url": "https://www.youtube.com/watch?v=iw9SZgyahqg"
+   "url": "https://www.youtube.com/watch?v=iw9SZgyahqg",
+   "ta": "الشيء الوحيد الذي يربط علوم الكمبيوتر النظرية ببعضها قد انكسر للتو... نوعاً ما"
   },
   {
    "id": "yt-EMIRXv2iE_Q",
@@ -2574,7 +2885,8 @@
    "tags": [
     "Cole Medin"
    ],
-   "url": "https://www.youtube.com/shorts/EMIRXv2iE_Q"
+   "url": "https://www.youtube.com/shorts/EMIRXv2iE_Q",
+   "ta": "وكيل البرمجة الخاص بك يعرف الكود الخاص بك، ولكن ليس تطبيقك الفعلي (إليك الحل)"
   },
   {
    "id": "hn-50392118",
@@ -2586,7 +2898,34 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+   "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+   "ta": "الجوزاء أومني 1.2 فلاش"
+  },
+  {
+   "id": "rss-saecmagcomvisualisationchaosbringsaideeperintovraycollection",
+   "cat": "arch",
+   "src": "AEC Magazine",
+   "ts": "2026-11-06T12:08:04Z",
+   "t": "Chaos brings AI deeper into V-Ray Collection",
+   "s": "Features include in-product AI guidance, MCP support and 3D asset generation The post Chaos brings AI deeper into V-Ray Collection appeared first on AEC Magazi…",
+   "tags": [
+    "AEC"
+   ],
+   "url": "https://aecmag.com/visualisation/chaos-brings-ai-deeper-into-v-ray-collection/",
+   "ta": "الفوضى تجعل الذكاء الاصطناعي أعمق في مجموعة V-Ray"
+  },
+  {
+   "id": "rss-magcomvisualisationchaosbringsaidesignexplorationintoenscape",
+   "cat": "arch",
+   "src": "AEC Magazine",
+   "ts": "2026-11-06T10:53:04Z",
+   "t": "Chaos brings AI design exploration into Enscape",
+   "s": "Enscape 4.22 integrates Veras 2.0 more closely into the visualisation workflow The post Chaos brings AI design exploration into Enscape appeared first on AEC M…",
+   "tags": [
+    "AEC"
+   ],
+   "url": "https://aecmag.com/visualisation/chaos-brings-ai-design-exploration-into-enscape/",
+   "ta": "الفوضى تجلب استكشاف تصميم الذكاء الاصطناعي إلى Enscape"
   },
   {
    "id": "hn-50390525",
@@ -2598,19 +2937,34 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://jhr.pensoft.net/articles.php?id=9096"
+   "url": "https://jhr.pensoft.net/articles.php?id=9096",
+   "ta": "العيش خارج حدود البقاء: نمل الخشب محاصر في مأزق هائل (2016)"
   },
   {
-   "id": "gn-aiincadstatisticsbymarketsizeandtools2026",
+   "id": "gn-chaosbringsaidesignexplorationintoenscape",
    "cat": "arch",
-   "src": "Sci-Tech Today",
+   "src": "AEC Magazine",
    "ts": "2026-11-06T08:00:00Z",
-   "t": "AI In CAD Statistics By Market Size And Tools (2026)",
+   "t": "Chaos brings AI design exploration into Enscape",
    "s": "",
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1vMnpVeC01bXQ1VUQtQjlhS2JMU0RaTTgyenhUWXlXNDZfcG5vM3l1enNUcFdfQkJMOXBwQXhMeDhBZ1ZSQ3hPYWcteG9paEJfcEdYRE5RTjMzWnlLUmVSaUdQLUNHdU16Tmc?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNdWxrX0dTYW5OdlBqZVZvUVBKSXl4ZGtDZmlyblNOeXhsRkU4ZUFya0dRa2NtUWhJNHZOLXNvSzBxUTVKNkxsZDUtenlHUzgyLWV4RU5FQWNaRE1RQVcyeXZzT2pfSFNmTFlqeGdFLTNOaGk0aTFhMDFJUV9KTkhfR0FYVXJVSGhX?oc=5",
+   "ta": "الفوضى تجلب استكشاف تصميم الذكاء الاصطناعي إلى Enscape"
+  },
+  {
+   "id": "gn-boxlaunchesarchitectanaipoweredworkflowbuilder",
+   "cat": "arch",
+   "src": "Computerworld",
+   "ts": "2026-11-06T08:00:00Z",
+   "t": "Box launches Architect, an AI-powered workflow builder",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQeE1EU24yT3dhVy1SX1ZEY3VVSVRTT240czBHNTRjaVI2TktQZXVvV0dxQXh3b095Yk80UkljRlVkRGZ0cENuN09wNGt6Z09ieUtYWmhMcjVZeVQ4WWR5YXRDeV9YdlJ2RC0zWURVRDFma0pOTVg0MzhFcjV5TS1KcUdHc1FESHVBU3F6cXg2VVV2TTJXNEJibzYwOUZnNUlSMjRrYVdRemZVS2pHcXN6Y2ZqenpsY1p2UDZUc3pCTUJPZw?oc=5",
+   "ta": "يُطلق Box برنامج Architect، وهو منشئ سير العمل المدعوم بالذكاء الاصطناعي"
   },
   {
    "id": "yt-XgC1QTs6A2U",
@@ -2622,7 +2976,8 @@
    "tags": [
     "Two Minute Papers"
    ],
-   "url": "https://www.youtube.com/watch?v=XgC1QTs6A2U"
+   "url": "https://www.youtube.com/watch?v=XgC1QTs6A2U",
+   "ta": "مستقبل الذكاء الاصطناعي لا يصدق على الاطلاق (سبنسر هوانغ)"
   },
   {
    "id": "hn-50387483",
@@ -2634,7 +2989,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://news.ycombinator.com/item?id=50387483"
+   "url": "https://news.ycombinator.com/item?id=50387483",
+   "ta": "اسأل HN: ما هي المواضيع المنسية في مجال الحوسبة والتي تستحق إعادة النظر فيها مرة أخرى؟"
   },
   {
    "id": "hn-50381687",
@@ -2646,7 +3002,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://github.com/rivet-dev/rivet"
+   "url": "https://github.com/rivet-dev/rivet",
+   "ta": "إطلاق HN: Rivet (YC W23) - قياس الوكلاء وتنسيقهم على S3"
   },
   {
    "id": "hn-50379221",
@@ -2658,7 +3015,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://github.com/piercefreeman/waymark"
+   "url": "https://github.com/piercefreeman/waymark",
+   "ta": "Show HN: Waymark – محرك سير عمل يجمع المهام بدلاً من إعادة تشغيلها"
   },
   {
    "id": "gn-qonicailaunchesinsidebimplatform",
@@ -2670,7 +3028,21 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1ST0M2WVp2OXdSN1p3V0NwWUhRX0lXZTFvY3FIcWhFdGt3eS1MUEJvTjQyNzFuUjhpQkpSMEZNcGl6blNWMnVPRm5sR0lXZmhBa3dKQVViTHY1NkpBTElFbl84MGtOM2pDS2d1U0RR?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1ST0M2WVp2OXdSN1p3V0NwWUhRX0lXZTFvY3FIcWhFdGt3eS1MUEJvTjQyNzFuUjhpQkpSMEZNcGl6blNWMnVPRm5sR0lXZmhBa3dKQVViTHY1NkpBTElFbl84MGtOM2pDS2d1U0RR?oc=5",
+   "ta": "إطلاق Qonic AI داخل منصة BIM"
+  },
+  {
+   "id": "rss-httpsaecmagcombimqonicailaunchesinsidebimplatform",
+   "cat": "arch",
+   "src": "AEC Magazine",
+   "ts": "2026-11-05T09:34:32Z",
+   "t": "Qonic AI launches inside BIM platform",
+   "s": "AI agents work directly inside the model, letting users find, check, fix and create BIM data using plain language The post Qonic AI launches inside BIM platfor…",
+   "tags": [
+    "AEC"
+   ],
+   "url": "https://aecmag.com/bim/qonic-ai-launches-inside-bim-platform/",
+   "ta": "إطلاق Qonic AI داخل منصة BIM"
   },
   {
    "id": "gn-howtofindavailabledemandandcriticalwellsinsecondswithautodes",
@@ -2682,7 +3054,21 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQV01RbWdHSnZPM1JsLTBWZE04N1hfRnRSdzFIWjFCLXpSMnpVQ0FDSnFtUk1WaU9UWUhma2xxbDdtZElwclcyZnVESkx6RHJTMUllQ3pEMkljUUFrb1lnc3hGbWhJTVFWTlNtRU5TSTB5UGNzQVFOOHcyVzUwbnVaTzZST2hvd21OV25SbHJ1VldiY2JaSFAza1dRMERSRVVON3FWeFh1aw?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQV01RbWdHSnZPM1JsLTBWZE04N1hfRnRSdzFIWjFCLXpSMnpVQ0FDSnFtUk1WaU9UWUhma2xxbDdtZElwclcyZnVESkx6RHJTMUllQ3pEMkljUUFrb1lnc3hGbWhJTVFWTlNtRU5TSTB5UGNzQVFOOHcyVzUwbnVaTzZST2hvd21OV25SbHJ1VldiY2JaSFAza1dRMERSRVVON3FWeFh1aw?oc=5",
+   "ta": "كيفية العثور على الطلب المتاح والآبار الحرجة في ثوانٍ باستخدام Autodesk Assistant في InfoWater Pro"
+  },
+  {
+   "id": "gn-whatairevealsaboutarchitecturethatwasneverbuilt",
+   "cat": "arch",
+   "src": "ArchDaily",
+   "ts": "2026-11-05T08:00:00Z",
+   "t": "What AI Reveals About Architecture That Was Never Built",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQVnIzX3A2c2ZjNnVRNGFZR2czMVZ2ZDh1RndzSUl4ejhhTGVTRGE4LUxmU3NmdDJjTXVjSUhOZXJGNWhicmRleWdLbDRBMUhHQVhhdDJDMk9BSExJVnRVNVBsME5jZzQ4enhiMVU3M2NZZnZlRmQxX0VWcTVIamZYX1lvQTUybWttaFQteGpKSldWOE0?oc=5",
+   "ta": "ما يكشفه الذكاء الاصطناعي عن الهندسة المعمارية التي لم يتم بناؤها أبدًا"
   },
   {
    "id": "hn-50376313",
@@ -2694,7 +3080,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/"
+   "url": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/",
+   "ta": "أداء GPT-6 Astra ضعيف في أبحاث السلامة"
   },
   {
    "id": "hn-50372945",
@@ -2706,7 +3093,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://openai.com/index/introducing-images-2-6/"
+   "url": "https://openai.com/index/introducing-images-2-6/",
+   "ta": "الصور 2.6"
   },
   {
    "id": "hn-50372929",
@@ -2718,7 +3106,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/"
+   "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
+   "ta": "ألف مسارات أقل للتجذير"
   },
   {
    "id": "hn-50369146",
@@ -2730,7 +3119,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://www.bloomberg.com/news/articles/2026-11-03/china-s-byd-doubles-market-share-in-brazil-with-new-plant-eyed"
+   "url": "https://www.bloomberg.com/news/articles/2026-11-03/china-s-byd-doubles-market-share-in-brazil-with-new-plant-eyed",
+   "ta": "تضاعف BYD حصتها في السوق البرازيلية إلى 9.7% سنويًا بعد افتتاح مصنعها المحلي"
   },
   {
    "id": "hn-50368804",
@@ -2742,19 +3132,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://news.ycombinator.com/item?id=50368804"
-  },
-  {
-   "id": "gn-whatiheardatauwhyconnectedbidmanagementbecameabiggerconversa",
-   "cat": "arch",
-   "src": "Autodesk",
-   "ts": "2026-11-04T17:21:33Z",
-   "t": "What I Heard at AU: Why Connected Bid Management Became a Bigger Conversation",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQNDdvZ0czU2pnejZtdzBaNHhPdHRjcDQzd0JGa2w5VkRaS3c5a08zUnhyXzhDZVp3ZG5wdXlMWnVobFhCWEJwLURMbUd5OVRyZjh6WU8yQ0JZTkkySXRic0V3UDB1dmNKTkR2TUw0NDNfUzZmczExcVlOUzUyYjdBWUtVcWpGd3Nvd2NSU3pxMFNOUF9uQnc3TzhoVDI3RXR1d1QtQW9LLTJiSlBlaDZJZnVURks0bUZRVXlPa0J3?oc=5"
+   "url": "https://news.ycombinator.com/item?id=50368804",
+   "ta": "إطلاق HN: Kino AI (YC S23) - مدير وسائط ومحرر فيديو يعمل بالذكاء الاصطناعي"
   },
   {
    "id": "hn-50368208",
@@ -2766,7 +3145,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://www.linum.ai/field-notes/pjit-21k"
+   "url": "https://www.linum.ai/field-notes/pjit-21k",
+   "ta": "إظهار HN: نموذج لائق لتحويل النص إلى صورة تم تدريبه مقابل 20 ألف دولار تقريبًا (Apache 2.0 Weights)"
   },
   {
    "id": "hn-50366971",
@@ -2778,7 +3158,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/"
+   "url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
+   "ta": "يستخدم غاري تان من YC عملاء الذكاء الاصطناعي كثيرًا، وينفق ما يصل إلى 200 ألف دولار سنويًا على الرموز المميزة"
   },
   {
    "id": "hn-50366863",
@@ -2790,7 +3171,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://openai.com/index/openai-to-acquire-pierre/"
+   "url": "https://openai.com/index/openai-to-acquire-pierre/",
+   "ta": "OpenAI تستحوذ على شركة Pierre Computer"
   },
   {
    "id": "yt-dDPIVNc1TQ0",
@@ -2802,7 +3184,8 @@
    "tags": [
     "Balkan Architect"
    ],
-   "url": "https://www.youtube.com/watch?v=dDPIVNc1TQ0"
+   "url": "https://www.youtube.com/watch?v=dDPIVNc1TQ0",
+   "ta": "كيفية حفظ ملف Revit إلى إصدار أقدم (خطوة بخطوة)"
   },
   {
    "id": "hn-50366117",
@@ -2814,7 +3197,34 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://news.ycombinator.com/item?id=50366117"
+   "url": "https://news.ycombinator.com/item?id=50366117",
+   "ta": "اسأل HN: ما هو إعداد وكيل الذكاء الاصطناعي الحالي لديك؟"
+  },
+  {
+   "id": "rss-civilengineeringmach9addsaeriallidarandphotogrammetrysupport",
+   "cat": "arch",
+   "src": "AEC Magazine",
+   "ts": "2026-11-04T14:00:11Z",
+   "t": "Mach9 adds aerial LiDAR and photogrammetry support",
+   "s": "AI CAD software combines feature extraction, point cloud editing and surface modelling for aerial survey workflows The post Mach9 adds aerial LiDAR and photogr…",
+   "tags": [
+    "AEC"
+   ],
+   "url": "https://aecmag.com/civil-engineering/mach9-adds-aerial-lidar-and-photogrammetry-support/",
+   "ta": "يضيف Mach9 دعم LiDAR الجوي والمسح التصويري"
+  },
+  {
+   "id": "gh-1445663842",
+   "cat": "code",
+   "src": "GitHub",
+   "ts": "2026-11-04T12:58:50Z",
+   "t": "TIGER-AI-Lab/WebsiteBench: Can AI agents rebuild websites through browser exploration?",
+   "s": "485 نجمة، لغة Python",
+   "tags": [
+    "مشروع جديد"
+   ],
+   "url": "https://github.com/TIGER-AI-Lab/WebsiteBench",
+   "ta": "TIGER-AI-Lab/WebsiteBench: هل يستطيع وكلاء الذكاء الاصطناعي إعادة بناء مواقع الويب من خلال استكشاف المتصفح؟"
   },
   {
    "id": "hn-50363461",
@@ -2826,7 +3236,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://news.ycombinator.com/item?id=50363461"
+   "url": "https://news.ycombinator.com/item?id=50363461",
+   "ta": "أخبر HN: الجوزاء يتدرب على سجل الدردشة، حتى للمشتركين (الحسابات الشخصية)"
   },
   {
    "id": "gn-nemetschekexpandsaicapabilitiesacrossdesignengineeringandcon",
@@ -2838,7 +3249,21 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQbGFXVnRYV2dpT1BPdVRJMktxVjhpbjBINUpzbTAwYl9VS1hveEkxdThKX3hOc3FQRjk2V2dRWDBiUUF2NXQxVmRVZ1gxUHpPZnhTa1pod21LUEo2TnpXdDNvYTRfUDdnVDdMM0plS1JnSW9CY0pXWVVRQUFxLVBuSTNrM05zT2FGQm9YNzNDNkhsVnkyRU9QeFptaXFZSXF6UmFHRnh2SUNHaVpiQ2U2U2g1VGNNVlVETWotS3FXWm84Y3hVLUk0MFNVN0xWZEpmQlE?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQbGFXVnRYV2dpT1BPdVRJMktxVjhpbjBINUpzbTAwYl9VS1hveEkxdThKX3hOc3FQRjk2V2dRWDBiUUF2NXQxVmRVZ1gxUHpPZnhTa1pod21LUEo2TnpXdDNvYTRfUDdnVDdMM0plS1JnSW9CY0pXWVVRQUFxLVBuSTNrM05zT2FGQm9YNzNDNkhsVnkyRU9QeFptaXFZSXF6UmFHRnh2SUNHaVpiQ2U2U2g1VGNNVlVETWotS3FXWm84Y3hVLUk0MFNVN0xWZEpmQlE?oc=5",
+   "ta": "تقوم Nemetschek بتوسيع قدرات الذكاء الاصطناعي عبر التصميم والهندسة والبناء"
+  },
+  {
+   "id": "gn-whybimstilldoesntknowwhatyourbuildingismadeof",
+   "cat": "arch",
+   "src": "ArchDaily",
+   "ts": "2026-11-04T08:00:00Z",
+   "t": "Why BIM Still Doesn't Know What Your Building Is Made Of",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNR2NPak5KU29rdDBhaDZhSkZudGJ1NTQ2a181TjhhSEVzQ01qNGtXNFdhUmJoQmNoS04wQm5DcjdDdThvbGZxVEQ0UnVtdnhtLVdTaTFWOXMyemVOanBGbFZtS3JnSENwYTJDbGNaTFlMRVZUdWV6QWtRbE04TVRxYWpPUmYtVjlRZDUyQXNReW9XVDg?oc=5",
+   "ta": "لماذا لا تزال BIM لا تعرف مما يتكون المبنى الخاص بك؟"
   },
   {
    "id": "gh-1445286453",
@@ -2850,7 +3275,8 @@
    "tags": [
     "مشروع جديد"
    ],
-   "url": "https://github.com/hyperionaidev/smolmaxxing"
+   "url": "https://github.com/hyperionaidev/smolmaxxing",
+   "ta": "Hyperionaidev/smolmaxxing: زيادة القدرة على تشغيل LLMs مختلفة على أصغر الأجهزة الممكنة"
   },
   {
    "id": "hn-50358352",
@@ -2862,7 +3288,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://uncracked.city"
+   "url": "https://uncracked.city",
+   "ta": "Show HN: Uncracked City، لعبة بوليسية حيث تستجوب LLM المشتبه بهم الذين يكذبون"
   },
   {
    "id": "hn-50358314",
@@ -2874,7 +3301,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://github.com/finic-ai/kairos"
+   "url": "https://github.com/finic-ai/kairos",
+   "ta": "Show HN: Kairos - منصة مفتوحة المصدر لاتخاذ القرار بشأن المخاطر والاحتيال"
   },
   {
    "id": "yt-k2ruCf_z75I",
@@ -2886,7 +3314,8 @@
    "tags": [
     "Fireship"
    ],
-   "url": "https://www.youtube.com/watch?v=k2ruCf_z75I"
+   "url": "https://www.youtube.com/watch?v=k2ruCf_z75I",
+   "ta": "أسوأ أسبوع في تاريخ الأمن السيبراني... حتى الآن"
   },
   {
    "id": "hn-50356994",
@@ -2898,7 +3327,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://flipper.net/pages/flipper-one"
+   "url": "https://flipper.net/pages/flipper-one",
+   "ta": "التحضير لـ Flipper One Kickstarter وفتح الطلبات المسبقة"
   },
   {
    "id": "hn-50354336",
@@ -2910,7 +3340,34 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://news.ycombinator.com/item?id=50354336"
+   "url": "https://news.ycombinator.com/item?id=50354336",
+   "ta": "خرق Gitbook"
+  },
+  {
+   "id": "rss-tpsaecmagcomautomationautom8labslaunchesaecskillsforaiagents",
+   "cat": "arch",
+   "src": "AEC Magazine",
+   "ts": "2026-11-03T15:38:49Z",
+   "t": "Autom8Labs launches AEC skills for AI agents",
+   "s": "Guides AI agent through tasks in Revit, AutoCAD, Grasshopper, 3ds Max and more The post Autom8Labs launches AEC skills for AI agents appeared first on AEC Maga…",
+   "tags": [
+    "AEC"
+   ],
+   "url": "https://aecmag.com/automation/autom8labs-launches-aec-skills-for-ai-agents/",
+   "ta": "تطلق Autom8Labs مهارات AEC لعملاء الذكاء الاصطناعي"
+  },
+  {
+   "id": "rss-httpsaecmagcomautomationncircletechlaunchesnvibeaiappbuilder",
+   "cat": "arch",
+   "src": "AEC Magazine",
+   "ts": "2026-11-03T15:00:54Z",
+   "t": "nCircle Tech launches nVibe AI app builder",
+   "s": "AEC professionals describe the workflow and AI application platform builds the app The post nCircle Tech launches nVibe AI app builder appeared first on AEC Ma…",
+   "tags": [
+    "AEC"
+   ],
+   "url": "https://aecmag.com/automation/ncircletech-launches-nvibe-ai-app-builder/",
+   "ta": "تطلق nCircle Tech أداة إنشاء تطبيقات nVibe AI"
   },
   {
    "id": "hn-50352757",
@@ -2922,343 +3379,8 @@
    "tags": [
     "نقاش"
    ],
-   "url": "https://news.ycombinator.com/item?id=50352757"
-  },
-  {
-   "id": "hn-50352641",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-03T14:45:47Z",
-   "t": "There is no posttraining data commons",
-   "s": "128 نقطة، 30 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://openathena.ai/blog/there-is-no-posttraining-data-commons/"
-  },
-  {
-   "id": "gh-1444005452",
-   "cat": "code",
-   "src": "GitHub",
-   "ts": "2026-11-03T08:23:03Z",
-   "t": "Sandflow-ai/sand3d: 3D modeling in Python, built for LLMs.",
-   "s": "2075 نجمة، لغة HTML",
-   "tags": [
-    "مشروع جديد"
-   ],
-   "url": "https://github.com/Sandflow-ai/sand3d"
-  },
-  {
-   "id": "gn-autom8labslaunchesaecskillsforaiagents",
-   "cat": "arch",
-   "src": "AEC Magazine",
-   "ts": "2026-11-03T08:00:00Z",
-   "t": "Autom8Labs launches AEC skills for AI agents",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNTlhDN1RZWklCQm84R0lZSFhEU2J3R202WUZMc3dzanNDaU90bF9peDhZc1BsZ3h6NkZrZ2d4aTltNHVOWnNEdnFqNDFUdGpEZEFQSS0yRWxOeHJKcWxjVVZ2bU1UOHFZbTFJVTlyUEJwQ3JEaEppcmxsdXRabURTUQ?oc=5"
-  },
-  {
-   "id": "gn-ncircletechlaunchesnvibeaiappbuilder",
-   "cat": "arch",
-   "src": "AEC Magazine",
-   "ts": "2026-11-03T08:00:00Z",
-   "t": "nCircle Tech launches nVibe AI app builder",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5rS3pXWUhqRmlFa1NHcVEwcDZrcGdtU0JVV1BVU05MblVyRTIzUkUtVmFwQ3otUzJMOW5DajRuTXR1SGFOXzFrbDlxRTBTcjF4MjNoRm83YlZMWGRVYnFyQjdQa3B3N3JzRFFDekJvUkpJZ29XQmhhc3hVblA?oc=5"
-  },
-  {
-   "id": "gn-autodeskinventor20272whatsnew",
-   "cat": "arch",
-   "src": "Autodesk",
-   "ts": "2026-11-03T08:00:00Z",
-   "t": "Autodesk Inventor 2027.2 what’s new",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxORmVKZU4wdHV0Rlo0R2tyaXhERDRVdHg2SWFqUWtDVk5QTENUX01SUk1aZVBNRkJGZ05mcHhjUTg5M0hGc0tQVFZOVjJ3YWdmZnhyUkp2V25kZEs4TWFWSXhxQ1dYMlpUbVc3NWpHc3ZfMkFrcVhzWmhkQU1iOG9XWFNoZUdBMWRlY3BDZXBUazgzczRPYXc?oc=5"
-  },
-  {
-   "id": "gn-nemetscheklaunchesaipoweredmaxsolutionsforaecindustry",
-   "cat": "arch",
-   "src": "Construction World",
-   "ts": "2026-11-03T08:00:00Z",
-   "t": "Nemetschek Launches AI-Powered Max Solutions for AEC Industry",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQOE9jWF9WTmx4VjUxWVNZNXhETm1iTFJTcERBemRJdFV6a2VSTVA3SWJQS3ZJcnU1VkVCb2NhYTN2VjQ1cXo4MTdIcU16U09HeGVJaDhfcjRQOTdvUVdmWVdVd01TVzhFa2FuMW9VdEpCSG12cGNSUHItbGswNkFWQ0ZnaFNfZy04QjJFNjh1QjlTUHJPZDkzZUFDVkZsMGZSQkFGT1FaSjNBNGtCOVlSVkFwUDhjbnp1aWJjRkV5NzhvTFpzd3pqTzJLLTlJUQ?oc=5"
-  },
-  {
-   "id": "gn-ecowavepowercompletesfirstphaseofaipowereddigitaltwin",
-   "cat": "arch",
-   "src": "Energy Global",
-   "ts": "2026-11-03T08:00:00Z",
-   "t": "Eco Wave Power completes first phase of AI-powered digital twin",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQYk9rOXc1ckRIUjdZRUdxc0FTUnV1OGhBRkxjSUtua1A0RE9WMl85RHluWWVxTU02aG93VVlTRE5CUDVQNzYtdFlETGxTVU1oLW1zcWhmRHd2U2x5d3ZmVHF4TEFfMi1VZ1M5MlNpYTlZYUFnX2FhYUZsTmhVREYxQ1NzRXdyNlR0NFJ5LTV2dVU3OHB0UXdfVzZNWGNtS0I3a3hPMlpJaGdxWnRwR1oxd3E0VHgyRkdBeV9v?oc=5"
-  },
-  {
-   "id": "hn-50345924",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-02T23:47:56Z",
-   "t": "Scaling Git at OpenAI",
-   "s": "272 نقطة، 182 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://openai.com/index/scaling-git-at-openai/"
-  },
-  {
-   "id": "gh-1319826567",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2026-08-02T04:47:24Z",
-   "t": "HorizunGroup/horizun-revit-mcp: Open-source MCP for Autodesk Revit 2023–2027. Downloadable Windows installer with runtime…",
-   "s": "89 نجمة، لغة C#",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/HorizunGroup/horizun-revit-mcp"
-  },
-  {
-   "id": "gh-1199643986",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2026-04-02T14:59:02Z",
-   "t": "datadrivenconstruction/OpenConstructionERP: Open-source construction ERP - BOQ, PDF/CAD/BIM takeoff, AI cost matching, 293 guided cas…",
-   "s": "1419 نجمة، لغة TypeScript",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/datadrivenconstruction/OpenConstructionERP"
-  },
-  {
-   "id": "gh-1147545446",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2026-02-01T22:47:42Z",
-   "t": "andymai/brepjs: CAD in TypeScript with exact solids (B-Rep). AI agents can write parts with it and check…",
-   "s": "142 نجمة، لغة TypeScript",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/andymai/brepjs"
-  },
-  {
-   "id": "gh-1139846739",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2026-01-22T13:50:30Z",
-   "t": "OpenAEC-Foundation/open-pdf-studio: An open source PDF viewer/editor with it's own blazing fast rust engine",
-   "s": "1289 نجمة، لغة JavaScript",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio"
-  },
-  {
-   "id": "gh-1131742715",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2026-01-10T16:00:00Z",
-   "t": "LTplus-AG/ifc-lite: Parse, view, query, edit, validate and export building models. Browser-first WebGPU viewe…",
-   "s": "474 نجمة، لغة TypeScript",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/LTplus-AG/ifc-lite"
-  },
-  {
-   "id": "gh-1130269053",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2026-01-08T09:11:51Z",
-   "t": "matrixhub-ai/matrixhub: An Open-source, self-hosted AI model hub with Hugging Face compatibility, accelerating vL…",
-   "s": "367 نجمة، لغة Go",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/matrixhub-ai/matrixhub"
-  },
-  {
-   "id": "gh-824092223",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2024-07-04T10:49:26Z",
-   "t": "specklesystems/speckle-sharp-connectors: Speckle's .NET Connectors",
-   "s": "72 نجمة، لغة C#",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/specklesystems/speckle-sharp-connectors"
-  },
-  {
-   "id": "gh-516402997",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2022-07-21T14:24:14Z",
-   "t": "Nice3point/RevitToolkit: Toolkit for Revit plugin development",
-   "s": "183 نجمة، لغة C#",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/Nice3point/RevitToolkit"
-  },
-  {
-   "id": "gh-278780552",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2020-07-11T03:31:51Z",
-   "t": "arpastrana/compas_cem: The Combinatorial Equilibrium Method for COMPAS",
-   "s": "44 نجمة، لغة Python",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/arpastrana/compas_cem"
-  },
-  {
-   "id": "gh-263960939",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2020-05-14T16:00:55Z",
-   "t": "iTwin/viewer-components-react: Components built on iTwin.js for usability in an iTwin.js based Viewer.",
-   "s": "31 نجمة، لغة TypeScript",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/iTwin/viewer-components-react"
-  },
-  {
-   "id": "gh-220737687",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2019-11-10T03:46:14Z",
-   "t": "nodepen/nodes: same nodes, new digs",
-   "s": "183 نجمة، لغة TypeScript",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/nodepen/nodes"
-  },
-  {
-   "id": "gh-219575320",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2019-11-04T19:01:18Z",
-   "t": "mcneel/rhino.inside-revit: This is the open-source repository for Rhino.Inside®.Revit",
-   "s": "345 نجمة، لغة C#",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/mcneel/rhino.inside-revit"
-  },
-  {
-   "id": "gh-202560799",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2019-08-15T14:55:50Z",
-   "t": "DynamoDS/TuneUp: A profiler for Dynamo graphs",
-   "s": "33 نجمة، لغة C#",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/DynamoDS/TuneUp"
-  },
-  {
-   "id": "gh-152842728",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2018-10-13T06:31:30Z",
-   "t": "iTwin/itwinjs-core: Monorepo for iTwin.js Library",
-   "s": "744 نجمة، لغة TypeScript",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/iTwin/itwinjs-core"
-  },
-  {
-   "id": "gh-110972295",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2017-11-16T13:04:06Z",
-   "t": "andydandy74/Journalysis: Revit journal and worksharing log analysis package for the Dynamo visual programming envi…",
-   "s": "60 نجمة، لغة Python",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/andydandy74/Journalysis"
-  },
-  {
-   "id": "gh-40846170",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2015-08-16T22:54:16Z",
-   "t": "pyrevitlabs/pyRevit: Rapid Application Development (RAD) Environment for Autodesk Revit®",
-   "s": "2046 نجمة، لغة Python",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/pyrevitlabs/pyRevit"
-  },
-  {
-   "id": "gh-22768182",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2014-08-08T18:52:34Z",
-   "t": "DynamoDS/DynamoRevit: Dynamo Libraries for Revit",
-   "s": "465 نجمة، لغة C#",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/DynamoDS/DynamoRevit"
-  },
-  {
-   "id": "gh-6899875",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2012-11-28T09:59:11Z",
-   "t": "opf/openproject: OpenProject is the leading open source project management software for product, project a…",
-   "s": "17438 نجمة، لغة Ruby",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/opf/openproject"
-  },
-  {
-   "id": "gh-5736080",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2012-09-09T08:25:02Z",
-   "t": "FreeCAD/FreeCAD: Official source code of FreeCAD, a free and opensource multiplatform 3D parametric modele…",
-   "s": "35508 نجمة، لغة C++",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/FreeCAD/FreeCAD"
-  },
-  {
-   "id": "gh-3395179",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2012-02-09T07:35:33Z",
-   "t": "DynamoDS/Dynamo: Open Source Graphical Programming for Computational Design and Automation",
-   "s": "2054 نجمة، لغة HTML",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/DynamoDS/Dynamo"
+   "url": "https://news.ycombinator.com/item?id=50352757",
+   "ta": "يبدو أن OpenAI تعمل بصمت على إعادة تمكين التدريب النموذجي على محادثات Codex"
   }
  ]
 }
