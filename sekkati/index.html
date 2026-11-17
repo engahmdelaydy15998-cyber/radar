@@ -94,12 +94,13 @@ body.nav{overflow:hidden;padding:0;max-width:none}
 body.nav #stage{position:fixed;inset:0;height:100%;min-height:0;border-radius:0;z-index:1}
 body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,body.nav #sheet{display:none}
 #nav[hidden]{display:none}
-#nbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:#0f766e;color:#fff;display:flex;align-items:center;gap:14px;padding:calc(env(safe-area-inset-top) + 10px) 16px 12px}
-#narrow{font-size:54px;line-height:1;min-width:64px;text-align:center}
+#nbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--card);color:var(--ink);border-bottom:1px solid var(--line);
+  display:flex;align-items:center;gap:14px;padding:calc(env(safe-area-inset-top) + 10px) 16px 12px}
+#narrow{font-size:54px;line-height:1;min-width:64px;text-align:center;color:var(--acc)}
 #ndist{font-size:30px;font-weight:700}
-#ntext{font-size:17px}
-#nrad{position:fixed;top:112px;right:12px;z-index:1000;background:#7c3aed;color:#fff;border-radius:999px;padding:6px 14px;font-weight:700}
-#nrad.warn{background:#b91c1c}
+#ntext{font-size:17px;color:var(--mut)}
+#nrad{position:fixed;top:calc(env(safe-area-inset-top) + 86px);right:12px;z-index:1000;background:var(--acc);color:#050505;border-radius:999px;padding:6px 14px;font-weight:700;box-shadow:0 4px 10px rgba(0,0,0,.4)}
+#nrad.warn{background:var(--bad);color:#fff}
 #nrad[hidden]{display:none}
 #nbot{position:fixed;bottom:0;left:0;right:0;z-index:1000;background:var(--card);border-top:1px solid var(--line);padding:10px 12px calc(env(safe-area-inset-bottom) + 10px)}
 #nstats{display:flex;justify-content:space-around;margin-bottom:8px}
@@ -683,17 +684,6 @@ function why(x, k){
     parts.push(`${dk > 0.2 ? 'أطول ' + dk.toFixed(1) + ' كم لكن ' : ''}متوقع يكون أسهل وأسرع فعلياً من الطريق "الأقصر"`); }
   return parts.join(' · ');
 }
-function gmapsUrl(rt, withWp){
-  const C = rt.r.coords, o = C[0], d = C[C.length - 1];
-  let url = `https://www.google.com/maps/dir/?api=1&origin=${o[1]},${o[0]}&destination=${d[1]},${d[0]}&travelmode=driving&dir_action=navigate`;
-  if (withWp){                                      // نمرّر جوجل على نقاط من طريقنا عشان يمشي بيه
-    const cum = [0]; for (let i = 1; i < C.length; i++) cum.push(cum[i-1] + hav({lat:C[i-1][1], lon:C[i-1][0]}, {lat:C[i][1], lon:C[i][0]}));
-    const n = Math.min(8, Math.max(0, Math.floor(cum[cum.length-1] / 4000))), wp = [];
-    for (let k = 1; k <= n; k++){ const t = cum[cum.length-1] * k / (n + 1); let i = cum.findIndex(c => c >= t); if (i < 0) i = C.length - 1; wp.push(C[i][1].toFixed(5) + ',' + C[i][0].toFixed(5)); }
-    if (wp.length) url += '&waypoints=' + wp.join('%7C');
-  }
-  return url;
-}
 function showRoutes(sel){
   selIdx = sel;
   drawRoutes(results.map((x, k) => ({coords:x.r.coords, c:k === sel ? '#4285f4' : '#8d8d94', w:k === sel ? 8 : 5})).sort((a, b) => (a.w - b.w)));
@@ -704,12 +694,9 @@ function showRoutes(sel){
     <div class="via">${x.r.via ? 'عن طريق ' + esc(x.r.via) : ''} <span class="k">· ${arab(s.dist/1000)} كم</span></div>
     <div class="m">وقفات متوقعة ≈ ${s.expStops.toFixed(1)} · ${s.info ? s.info.turns + ' لفة، ' + s.info.inter + ' تقاطع' : ''}${s.pois.filter(p => p.kind === 'radar').length ? ' · 📷 ' + s.pois.filter(p => p.kind === 'radar').length : ''}${s.tolls ? ' · 💳 ' + s.tolls : ''}${s.uturns ? ' · ↩️ ' + s.uturns : ''}${s.checks ? ' · 🚓 ' + s.checks : ''}${s.jams ? ' · 🚗 بلاغ زحمة' : ''}</div>
     <div class="m">${why(x, k)}</div></div>`; }).join('') +
-    '<button class="big" id="startNav" style="margin-top:10px;background:var(--ok);color:#050505">▶ ابدأ القيادة</button>' +
-    '<div class="row"><button class="sec" id="gm1">جوجل مابس بطريقنا</button><button class="sec" id="gm2">جوجل مابس بطريقه</button></div>';
+    '<button class="big" id="startNav" style="margin-top:10px;background:var(--ok);color:#050505">▶ ابدأ القيادة</button>';
   $('res').querySelectorAll('.rt').forEach(d => d.onclick = () => showRoutes(+d.dataset.k));
   $('startNav').onclick = () => startNav(sel);
-  $('gm1').onclick = () => window.open(gmapsUrl(results[sel], true), '_blank');
-  $('gm2').onclick = () => window.open(gmapsUrl(results[sel], false), '_blank');
 }
 
 /* الصوت: نطق وتعرّف */
@@ -947,9 +934,13 @@ async function askClaude(q){
     $('clout').textContent = out; speak(out);
   } catch(e){ $('clout').textContent = 'مقدرتش أوصل لـ Claude: ' + (e.message || e); }
 }
+const hasAkey = () => { try { return !!localStorage.getItem('sekkati-akey'); } catch(e){ return false; } };
 $('clgo').onclick = () => { const q = $('clin').value.trim(); if (q){ $('clin').value = ''; askClaude(q); } };
 $('clin').addEventListener('keydown', e => { if (e.key === 'Enter') $('clgo').click(); });
-$('clmic').onclick = async () => { $('clout').textContent = '...سامعك'; const t = await listen(8000); if (t) askClaude(t); else $('clout').textContent = 'ما سمعتش حاجة.'; };
+$('clmic').onclick = async () => {
+  if (!hasAkey()){ $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول عشان السماعة تشتغل.'; return; }
+  $('clout').textContent = '...سامعك'; const t = await listen(8000); if (t) askClaude(t); else $('clout').textContent = 'ما سمعتش حاجة.';
+};
 
 /* التسجيل */
 let watchId = null, pts = [], tick = null, wl = null, t0 = 0;
