@@ -1,7 +1,87 @@
 {
- "updated": "2026-11-17T14:34:08Z",
+ "updated": "2026-11-17T15:57:12Z",
  "demo": false,
  "items": [
+  {
+   "id": "yt-7F2oYREhfG4",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-17T15:33:41Z",
+   "t": "What are Deep Agents? What's a Sandbox? Our Top Workshop Questions Answered",
+   "s": "LangChain Education Engineer Ishaan Lal answers two commonly asked questions during the Interrupt NYC workshops. What is an Agent vs. Deep Agent vs.…",
+   "tags": [
+    "LangChain"
+   ],
+   "url": "https://www.youtube.com/shorts/7F2oYREhfG4",
+   "ta": "ما هي الوكلاء العميقين؟ ما هو رمل؟ تمت الإجابة على أهم الأسئلة المتعلقة بورشة العمل",
+   "sa": "يجيب إيشان لال، مهندس التعليم في LangChain، على سؤالين شائعين خلال ورش عمل Interrupt NYC. ما هو الوكيل مقابل الوكيل العميق مقابل ..."
+  },
+  {
+   "id": "yt-9WVmt-vg8d0",
+   "cat": "arch",
+   "src": "YouTube",
+   "ts": "2026-11-17T15:00:10Z",
+   "t": "Top 5 Mistakes in Revit Beginners Make | Correct way to work in Revit Tutorial",
+   "s": "Get 30% OFF all Balkan Architect courses, templates, and subscription packages with code BF26 at https://balkanarchitect.com/p/black-friday-26?utm_so…",
+   "tags": [
+    "Balkan Architect"
+   ],
+   "url": "https://www.youtube.com/watch?v=9WVmt-vg8d0",
+   "ta": "أهم 5 أخطاء يرتكبها المبتدئون في برنامج الريفيت | الطريقة الصحيحة للعمل في برنامج الريفيت",
+   "sa": "احصل على خصم 30% على جميع الدورات والقوالب وحزم الاشتراك الخاصة بـ Balkan Architect باستخدام الكود BF26 على https://balkanarchitect.com/p/black-friday-26?utm_so…"
+  },
+  {
+   "id": "gn-googlewarnshackersareusingaiagentstolaunchcyberattacksatmach",
+   "cat": "agents",
+   "src": "The American Bazaar",
+   "ts": "2026-11-17T14:52:17Z",
+   "t": "Google warns hackers are using AI agents to launch cyberattacks at machine speed",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPMHRiYVB5X1RIRnJVZlZZclBxS1RSM0xkVXdldEd4aUZvNkE5T1J6MFFVXzE1ekNIRTg0LWtRV2VldnFKM0ZfbnVwTzU5YjFkQ3FpQWZRa1Vnd2VzVjlGbWl0QlJ3dE1uRlZfNmwyTmNvbERvcFk5UWZ0TUJsejhvZEx2SHJFdEZOMzd3TWRQX0ZwbzIwZndsT0NDclB0c1BrYzd5YUZZQ1JtbHQzV2xjYnFydV92WWZLbUptb1oza1NCelE?oc=5",
+   "ta": "تحذر Google من أن المتسللين يستخدمون عملاء الذكاء الاصطناعي لشن هجمات إلكترونية بسرعة الآلة"
+  },
+  {
+   "id": "yt-EPopZq-vJjA",
+   "cat": "agents",
+   "src": "YouTube",
+   "ts": "2026-11-17T14:28:32Z",
+   "t": "8 AI Predictions for GTA 6 — Will Jason or Lucia Die?",
+   "s": "8 AI Predictions for GTA VI — Will Jason or Lucia Die? Get early access: https://www.siktintelligence.com/ 🐦‍⬛ Tomorrow’s headlines, before they happ…",
+   "tags": [
+    "All About AI"
+   ],
+   "url": "https://www.youtube.com/watch?v=EPopZq-vJjA"
+  },
+  {
+   "id": "af-comments1xylrupeveryones_hyped_about_chatgpt_dots_and_claude",
+   "cat": "agents",
+   "src": "r/LocalLLaMA",
+   "ts": "2026-11-17T14:26:03Z",
+   "t": "everyone's hyped about ChatGPT Dots and Claude Duet. I'm a local guy, so I built an open source one that runs on my GPU",
+   "s": "",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xylrup/everyones_hyped_about_chatgpt_dots_and_claude/",
+   "ta": "الجميع مهتمون بـ ChatGPT Dots وClaude Duet. أنا رجل محلي، لذلك قمت ببناء مصدر مفتوح يعمل على وحدة معالجة الرسومات الخاصة بي"
+  },
+  {
+   "id": "hn-50531751",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-17T14:19:59Z",
+   "t": "Baidu, Xiaomi CEOs warn of growing gap between AI hype and returns",
+   "s": "109 نقطة، 107 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.scmp.com/tech/big-tech/article/3374774/baidu-xiaomi-ceos-warn-growing-gap-between-ai-hype-and-returns",
+   "url2": "https://news.ycombinator.com/item?id=50531751",
+   "ta": "بايدو والرؤساء التنفيذيون لشركة Xiaomi يحذرون من اتساع الفجوة بين ضجيج الذكاء الاصطناعي والعائدات"
+  },
   {
    "id": "af-nts1xykw4lharness_adapters_fine_tune_qwen3827b_for_pi_agents",
    "cat": "agents",
@@ -989,6 +1069,19 @@
    "sa": "يشرح Check Point CTO جوناثان زانجر كيف يستخدم فريقه OpenAI Daybreak لتحليل نقاط الضعف وتحويل النتائج إلى حماية للعملاء..."
   },
   {
+   "id": "gn-agenticaiframeworkspushhackingthreattoinflectionpointgooglew",
+   "cat": "agents",
+   "src": "Cybersecurity Dive",
+   "ts": "2026-11-16T16:43:41Z",
+   "t": "Agentic AI frameworks push hacking threat to ‘inflection point,’ Google warns",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNN3V2WUd5TFN5eTU4SnRFVldnVXpiMk5jWTBPb1d0Z1ItNjVEbDBSUG04ZFg5c2lWUVA4YUdpUWJoRi1MU3pWR21fUGZncDMyWndHWnFFZEtzTVY2MjQ0VzlpTTM4OVBfUWNQU1NIUFRhVEVEaS1xNmJqQkZmRnVadTNJUlZpLW9Na2VscHlB?oc=5",
+   "ta": "تحذر Google من أن أطر عمل الذكاء الاصطناعي الوكيل تدفع تهديد القرصنة إلى \"نقطة انعطاف\""
+  },
+  {
    "id": "gn-googlerevealshowhackersareusingaiagentstoautomaterealworldcy",
    "cat": "agents",
    "src": "CyberSecurityNews",
@@ -1873,6 +1966,19 @@
    ],
    "url": "https://github.com/Violetnyudress/Gemini-Config-Checker-",
    "ta": "Violetnyudress/Gemini-Config-Checker-: ماسح منطقة السلسلة: ابحث عن تكوينات الوكيل التي تنقلك إلى Google AI Studio وGemini (s..."
+  },
+  {
+   "id": "gh-1459018153",
+   "cat": "code",
+   "src": "GitHub",
+   "ts": "2026-11-15T16:46:04Z",
+   "t": "TypeTyrantScheme/Gemini-Config-Checker-: Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (s…",
+   "s": "473 نجمة، لغة Makefile",
+   "tags": [
+    "مشروع جديد"
+   ],
+   "url": "https://github.com/TypeTyrantScheme/Gemini-Config-Checker-",
+   "ta": "TypeTyrantScheme/Gemini-Config-Checker-: ماسح منطقة السلسلة: ابحث عن تكوينات الوكيل التي تنقلك إلى Google AI Studio وGemini (s..."
   },
   {
    "id": "hn-50507989",
@@ -3296,6 +3402,19 @@
    "sa": "يستغرق الحصول على وكيل يعمل على الكمبيوتر المحمول الخاص بك ساعات، ولكن وضعه أمام المستخدمين الحقيقيين يمكن أن يستغرق أسابيع من أعمال البنية التحتية حول الوكيل..."
   },
   {
+   "id": "gh-1455751043",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-12T19:39:54Z",
+   "t": "zovulrira1974/blender-ai-copilot-assets: An asset-savvy AI copilot for Blender—search Poly Haven, Sketchfab and Poly Pizza mid-con…",
+   "s": "510 نجمة، لغة غير محددة",
+   "tags": [
+    "جديد كلياً"
+   ],
+   "url": "https://github.com/zovulrira1974/blender-ai-copilot-assets",
+   "ta": "zovulrira1974/blender-ai-copilot-assets: مساعد طيار متمكن من الذكاء الاصطناعي لـ Blender - ابحث في Poly Haven وSketchfab وPoly Pizza في منتصف الخدع..."
+  },
+  {
    "id": "gh-1455750092",
    "cat": "agents",
    "src": "GitHub",
@@ -3466,6 +3585,19 @@
    "url": "https://www.youtube.com/shorts/IehCboBcYsA",
    "ta": "كيفية أتمتة مكتبة الصور الخاصة بك",
    "sa": "تعرف على المزيد حول نموذج القرار: https://developers.openai.com/api/docs/guides/decisions https://platform.openai.com/decisions اكتشف المزيد: 🛠️…"
+  },
+  {
+   "id": "gn-aecdatamodelapiswhatcustomersshouldknowaboutaccessvalueandpr",
+   "cat": "arch",
+   "src": "Autodesk News",
+   "ts": "2026-11-12T17:00:19Z",
+   "t": "AEC Data Model APIs: What customers should know about access, value and pricing",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tWHJ6QUhVTVpuOGlTUVlRLXhaRVA1QldMN1piVmI3UjJXQ3doX3NweUlfQkNfZ0hFVjRjakhQdVJycC1DaDZRYXhiX0FlZnBnUUJkXy1NRTV6OUI3aENIUktyNnAxYTFzZC16RDl0U3NldkVs?oc=5",
+   "ta": "واجهات برمجة التطبيقات لنموذج بيانات شركة AEC: ما يجب أن يعرفه العملاء حول الوصول والقيمة والتسعير"
   },
   {
    "id": "gn-attentiveaimakesfirstacquisitionbuystakeoffmonkeyasbeamaipow",
@@ -4114,137 +4246,6 @@
    ],
    "url": "https://simonwillison.net/2026/Nov/11/llm/",
    "ta": "م 0.37.2"
-  },
-  {
-   "id": "gn-understandingollamahardwaremodelsandsecurityrisks",
-   "cat": "agents",
-   "src": "Spiceworks",
-   "ts": "2026-11-11T17:16:16Z",
-   "t": "Understanding Ollama hardware, models, and security risks",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOdU05TmZCWlhIR1o4MVFLTl9ES2FGUkZ6M3ExVlpXSWtMWTZobjZoUWUyRGFGUmdFODBvOVZzNHFxUzg0cXZYb2YxNmxDRU90ZzhWWFJZa3BXSXhja0pMVVJzZ1Nna1ZWaUVBWjctR0RpZmw2aFFNdHRieXFPWDlLRlpxdWJRVXdOYlZDbHlJVGNwZGVGeTlV?oc=5",
-   "ta": "فهم أجهزة ونماذج Olma والمخاطر الأمنية"
-  },
-  {
-   "id": "hn-50455811",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-11T17:11:56Z",
-   "t": "Launch HN: Pomerado (YC F26) – Turn any website into an MCP for agents",
-   "s": "64 نقطة، 49 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://news.ycombinator.com/item?id=50455811",
-   "ta": "إطلاق HN: Pomerado (YC F26) – تحويل أي موقع ويب إلى MCP للوكلاء"
-  },
-  {
-   "id": "hn-50455394",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-11T16:38:44Z",
-   "t": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
-   "s": "588 نقطة، 276 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
-   "ta": "كاد إنذار الدخان الكاذب أن يغرق مركز البيانات الوحيد في مدينة جين ستريت في مدينة نيويورك"
-  },
-  {
-   "id": "gh-1454221776",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-11T16:28:54Z",
-   "t": "op7418/guizang-game-skill: 歸藏 Game Skill：让 AI 从零做出能在浏览器里玩的 3D 动作游戏，附可玩演示《雾锁山门》。Agent skill for Claude Code / Codex t…",
-   "s": "384 نجمة، لغة JavaScript",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/op7418/guizang-game-skill",
-   "ta": "op7418/guizang-game-skill: مهارة اللعبة المخفية: اسمح للذكاء الاصطناعي بإنشاء لعبة حركة ثلاثية الأبعاد من الصفر يمكن لعبها في المتصفح، مع عرض توضيحي قابل للتشغيل لـ \"Fog Lock Mountain Gate\". مهارة الوكيل لكلود كود / كوديكس ر ..."
-  },
-  {
-   "id": "gn-awsdetailsuaefforcrossframeworkaiagentevaluation",
-   "cat": "agents",
-   "src": "Unite.AI",
-   "ts": "2026-11-11T16:12:02Z",
-   "t": "AWS Details UAEF for Cross-Framework AI Agent Evaluation",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUzFsQ25ZZVo0MDBNa0dJWGRBZUkxUDhPY29salZNZTh4RzZQNmZYcGJ5b2hQNjZCWmttcTRZbzB3SDhucmhvRWtOcV9OSnhaZ3FNd09GZUk3MlJEdTN1U3FEbV9qc0JaaUgxRzIyVVl6S2s5ZkdISjFwZmhHYjdBd0lJLVo?oc=5",
-   "ta": "تفاصيل AWS UAEF لتقييم وكيل الذكاء الاصطناعي عبر الإطار"
-  },
-  {
-   "id": "hn-50454951",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-11T16:00:50Z",
-   "t": "Show HN: Klad, a paint app your coding agent can drive (source-available)",
-   "s": "84 نقطة، 34 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://github.com/klad-app/klad",
-   "ta": "إظهار HN: Klad، وهو تطبيق طلاء يمكن لوكيل البرمجة لديك تشغيله (المصدر متاح)"
-  },
-  {
-   "id": "yt-pvl3z_GyU2Y",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-11T16:00:07Z",
-   "t": "How To Build An AI Operating System For Your Life",
-   "s": "What if you could use AI agents to manage your emails, organize your schedule, create content, and help run your entire business? I sat down with Pet…",
-   "tags": [
-    "Matt Wolfe"
-   ],
-   "url": "https://www.youtube.com/watch?v=pvl3z_GyU2Y",
-   "ta": "كيفية بناء نظام تشغيل الذكاء الاصطناعي لحياتك",
-   "sa": "ماذا لو كان بإمكانك استخدام وكلاء الذكاء الاصطناعي لإدارة رسائل البريد الإلكتروني الخاصة بك وتنظيم جدولك الزمني وإنشاء المحتوى والمساعدة في إدارة عملك بالكامل؟ جلست مع الحيوانات الأليفة ..."
-  },
-  {
-   "id": "gn-uaefaframeworkagnosticsystemforclosedloopevaluationofaiagent",
-   "cat": "agents",
-   "src": "Amazon Web Services (AWS)",
-   "ts": "2026-11-11T15:50:55Z",
-   "t": "UAEF: A framework-agnostic system for closed-loop evaluation of AI agents | Amazon Web Services",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZEU3VlRYbFhiV19EMVZaQWFqTmc4V09xLWpvM0NVVTJjOE9jMFNmckUzYXJrRTVETDExaXNnbHNoU3c3ODR0d19mXzhwVjVLMWVKd3huSl9EV1AwUkZkMGtBUDJ3enZnVmEzY0tpQVRpaW8yQ0ZZN0VwMlJyN2pqek9waUdMX2huTWcweXlYQk5YOExlYjFFOWxfWVNIVnllZ0FTRHZNeTNMQ2xVMWNsNllFWk5lLTA0cm1r?oc=5",
-   "ta": "UAEF: نظام غير إطاري لتقييم الحلقة المغلقة لوكلاء الذكاء الاصطناعي | خدمات ويب أمازون"
-  },
-  {
-   "id": "hn-50454625",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-11T15:33:06Z",
-   "t": "Show HN: Yogurt – Free, private, open-source alternative to Granola",
-   "s": "305 نقطة، 116 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://github.com/FrigadeHQ/yogurt",
-   "ta": "Show HN: Yogurt - بديل مجاني وخاص ومفتوح المصدر للجرانولا"
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov11anthropiciporoadshow",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-11T15:11:59Z",
-   "t": "Anthropic's IPO roadshow video",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
-   "ta": "فيديو الحملة الترويجية للاكتتاب العام لشركة Anthropic"
   }
  ]
 }
