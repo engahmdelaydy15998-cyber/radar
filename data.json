@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T05:24:09Z",
+ "updated": "2026-11-17T05:26:42Z",
  "demo": false,
  "items": [
   {
@@ -240,6 +240,19 @@
    "url": "https://www.youtube.com/shorts/Zbv70lLBHgo",
    "ta": "كيف تعمل Check Point على تسريع أبحاث الثغرات الأمنية باستخدام Daybreak | OpenAI للأمن السيبراني",
    "sa": "يشرح Check Point CTO جوناثان زانجر كيف يستخدم فريقه OpenAI Daybreak لتحليل نقاط الضعف وتحويل النتائج إلى حماية للعملاء..."
+  },
+  {
+   "id": "gn-attackersusedaiagentstoautomatecybercrimeatindustrialscalefb",
+   "cat": "agents",
+   "src": "news.lavx.hu",
+   "ts": "2026-11-16T20:23:46Z",
+   "t": "Attackers used AI agents to automate cybercrime at 'industrial scale,' FBI and AWS warn",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOODZYRnF1djg0WVotTTNFcmtuc0prRE02V3gzbVFENWV2NkFneVBTTXhLU2ktSkNqZXNMZzU0SkwtRk9mRnhoY2FCN3lwV0FKU1hmQTR5ZldaUzF6U1hhY0E2UnpSU2JMVV95ekpITDd6SmdBOUF1ZlpCTGh6b2Qyb0pZTldfME85aGx5LTRuUkNtODdrYXNIb003ZS1aWUQtRkVLN1BqaEh3Y1ZwTWFsV2QtMA?oc=5",
+   "ta": "استخدم المهاجمون عملاء الذكاء الاصطناعي لأتمتة الجرائم الإلكترونية على \"النطاق الصناعي\"، حسبما حذر مكتب التحقيقات الفيدرالي وAWS"
   },
   {
    "id": "hn-50522639",
@@ -545,6 +558,19 @@
    ],
    "url": "https://artemlegotin.com/golden-board/",
    "ta": "رسالة ثنائية بحجم 512 كيلو بايت لتعليم الشطرنج بدون لغة مشتركة"
+  },
+  {
+   "id": "gn-googleaiagentturnedasecuritypatchintoaworkingexploitwithouth",
+   "cat": "agents",
+   "src": "news.lavx.hu",
+   "ts": "2026-11-16T14:19:04Z",
+   "t": "Google: AI agent turned a security patch into a working exploit without human help",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNT20xRmU5cklTRVlxSERzTkwzMUNPaWg2Znlhb2tiZm9UUVZkV2h2N25RcnZTNUdDYlhoTFd5TkhwdWtROFV1c1dWWXlpZFljbDN4NFl0R3VQQWhkdDNyTHdlRExoODFDeXhsZVFZWGUxaGlQZERzSEU2MDFhd3J1SGlXZmlZOHFCc1dOdWFmdWJWbzQ2ejBvZ2MtcVh0Sks4NTl1TEhaNExFODM1aVNJ?oc=5",
+   "ta": "Google: قام عميل الذكاء الاصطناعي بتحويل التصحيح الأمني ​​إلى ثغرة فعالة دون مساعدة بشرية"
   },
   {
    "id": "af-ocalLLaMAcomments1xxqfqrstop_worrying_about_qwen_4s_aa_index",
@@ -1548,6 +1574,19 @@
    ],
    "url": "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax",
    "ta": "أظهر HN: DeepSeek V3 في حوالي 200 سطر من Jax النقي"
+  },
+  {
+   "id": "gn-fbiissuesflashalertonartextheaiagentframeworkautomatingnetwo",
+   "cat": "agents",
+   "src": "Glitchwire",
+   "ts": "2026-11-14T14:55:23Z",
+   "t": "FBI Issues FLASH Alert on ARTEX, the AI Agent Framework Automating Network Intrusions",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPZmYzRDFXUnQ4YnFCZkl4SjMxVFlYaVhtcXpIWFdNMjVlWlQzRjhBM0dHci1WeGoweTFVZEF3N0pLem9wVUhaV3Vpb3EwZzl1WTMxZDdBbVRIWG1aOTlPeG1GMHhNYTdraFBiZ0V1emtheC1WeUduNmFfRGdEY1dpajJ5QzF5cFg3RG5tazVBZHZHV3JQRWhMQVlmM0dub2t0RUhGelJ3RDhPN1dFclE?oc=5",
+   "ta": "يُصدر مكتب التحقيقات الفيدرالي (FBI) تنبيهًا سريعًا بشأن ARTEX، وهو إطار عمل وكيل الذكاء الاصطناعي الذي يعمل على أتمتة عمليات اختراق الشبكة"
   },
   {
    "id": "hn-50497155",
@@ -2663,19 +2702,6 @@
    "url": "https://www.youtube.com/shorts/IehCboBcYsA",
    "ta": "كيفية أتمتة مكتبة الصور الخاصة بك",
    "sa": "تعرف على المزيد حول نموذج القرار: https://developers.openai.com/api/docs/guides/decisions https://platform.openai.com/decisions اكتشف المزيد: 🛠️…"
-  },
-  {
-   "id": "gn-aecdatamodelapiswhatcustomersshouldknowaboutaccessvalueandpr",
-   "cat": "arch",
-   "src": "Autodesk News",
-   "ts": "2026-11-12T17:00:19Z",
-   "t": "AEC Data Model APIs: What customers should know about access, value and pricing",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tWHJ6QUhVTVpuOGlTUVlRLXhaRVA1QldMN1piVmI3UjJXQ3doX3NweUlfQkNfZ0hFVjRjakhQdVJycC1DaDZRYXhiX0FlZnBnUUJkXy1NRTV6OUI3aENIUktyNnAxYTFzZC16RDl0U3NldkVs?oc=5",
-   "ta": "واجهات برمجة التطبيقات لنموذج بيانات شركة AEC: ما يجب أن يعرفه العملاء حول الوصول والقيمة والتسعير"
   },
   {
    "id": "gn-attentiveaimakesfirstacquisitionbuystakeoffmonkeyasbeamaipow",
@@ -4215,32 +4241,6 @@
    ],
    "url": "https://simonwillison.net/2026/Nov/10/muse-ember/",
    "ta": "نقدم لكم نموذجنا الأصغر والأكثر كفاءة: Muse Ember"
-  },
-  {
-   "id": "hn-50436636",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-10T06:00:48Z",
-   "t": "Tell HN: Notion AI chat sessions have been exposed via Fireworks AI hack",
-   "s": "19 نقطة، 1 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://news.ycombinator.com/item?id=50436636",
-   "ta": "أخبر HN: تم الكشف عن جلسات دردشة Notion AI عبر اختراق Fireworks AI"
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov10promptingclaudefable52",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-10T05:34:14Z",
-   "t": "Quoting Prompting Claude Fable 5.2",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
-   "ta": "نقلا عن مطالبة كلود الخرافة 5.2"
   }
  ]
 }
