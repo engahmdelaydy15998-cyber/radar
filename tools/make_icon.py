@@ -180,15 +180,9 @@ def build(name, pal):
     # architecture: simple bold mud-brick dome + vault + arched door (Hassan Fathy spirit); melts into the radar
     ax,ay=pos(54,0.325); AW=N*0.108; Rc=AW*1.15
     echo(ax,ay,Rc,pal['arch_echo'],0.325,54,0.4)
-    gl=layer(); ImageDraw.Draw(gl).ellipse([ax-AW*1.0,ay-AW*0.9,ax+AW*1.0,ay+AW*0.9],fill=pal['arch_echo']+(34,))
-    over(base,gl.filter(ImageFilter.GaussianBlur(AW*0.35)))
-    # circular badge backing, same lit-tile + rim treatment as the other marks
-    arch_lit=lit_amount(54)
-    tile=lit_tile(Rc,pal['arch_echo'],ax,ay); tsz=tile.size[0]
-    cm=Image.new("L",(tsz,tsz),0); ImageDraw.Draw(cm).ellipse([0,0,tsz-1,tsz-1],fill=255)
-    tl=layer(); tl.paste(tile,(int(ax-tsz/2),int(ay-tsz/2)),cm); over(base,tl)
-    rim=layer(); ImageDraw.Draw(rim).ellipse([ax-Rc,ay-Rc,ax+Rc,ay+Rc],outline=pal['arch_echo']+(int(150+90*arch_lit),),width=max(2,int(S*1.8)))
-    over(base,rim)
+    # soft black fade behind the mark instead of a visible disc: no hard edge, just a feathered shadow
+    bgf=layer(); ImageDraw.Draw(bgf).ellipse([ax-Rc*1.1,ay-Rc*1.1,ax+Rc*1.1,ay+Rc*1.1],fill=(4,3,9,185))
+    over(base,bgf.filter(ImageFilter.GaussianBlur(Rc*0.55)))
     sz=int(AW*2.6); G=Image.new("L",(sz,sz),0); gd_=ImageDraw.Draw(G)
     u=AW*0.62; ox,oy=sz/2,sz/2+0.15*u
     def Q(p): return (ox+p[0]*u, oy+p[1]*u)
@@ -203,9 +197,11 @@ def build(name, pal):
         gd_.rectangle([*Q((cx-w_,top+w_)),*Q((cx+w_,bot))],fill=0)
         gd_.polygon([Q((cx+w_*math.cos(math.pi*k/30),top+w_-w_*math.sin(math.pi*k/30))) for k in range(31)],fill=0)
     cut(0,0.50,0.15,0.90); cut(-1.32,0.74,0.07,0.90); cut(1.32,0.74,0.07,0.90)
-    # clip to the badge circle so the dome sits cleanly inside it
-    circ=Image.new("L",(sz,sz),0); ImageDraw.Draw(circ).ellipse([sz/2-Rc,sz/2-Rc,sz/2+Rc,sz/2+Rc],fill=255)
-    G=ImageChops.multiply(G,circ).filter(ImageFilter.GaussianBlur(0.7*S))
+    # fade toward the edges so it dissolves into the soft backdrop, no hard edge
+    fade=Image.new("L",(sz,sz)); fp=ImageDraw.Draw(fade)
+    for y in range(sz):
+        t=(y-(oy-0.9*u))/(1.8*u); fp.line([(0,y),(sz,y)],fill=int(255*max(0.82,min(1,1.5-t*0.6))))
+    G=ImageChops.multiply(G,fade).filter(ImageFilter.GaussianBlur(0.7*S))
     col=Image.new("RGB",(sz,sz)); cp_=ImageDraw.Draw(col)
     for x in range(sz): cp_.line([(x,0),(x,sz)],fill=lerp(pal['wall'][0],pal['wall'][1],x/sz))
     sh2=layer(); sh2.paste((0,0,0,170),(int(ax-sz/2),int(ay-sz/2)+int(S*4)),G.filter(ImageFilter.GaussianBlur(5*S))); over(base,sh2)
