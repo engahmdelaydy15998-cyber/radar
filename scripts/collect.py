@@ -288,6 +288,7 @@ def parse_hn(json_text, cutoff, cat="code"):
             "s": "%s نقطة، %s تعليق" % (h.get("points", 0), h.get("num_comments", 0)),
             "tags": ["نقاش"],
             "url": url,
+            "url2": "https://news.ycombinator.com/item?id=" + oid if h.get("url") else "",
         })
     return out
 
@@ -511,17 +512,21 @@ def add_translations(items, limit=150):
     import time
     done = 0
     for it in items:
-        if done >= limit:
-            break
-        if it.get("ta") or has_arabic(it.get("t")):
-            continue
-        try:
-            it["ta"] = translate(it["t"])
-            done += 1
-            time.sleep(0.15)
-        except Exception as ex:
-            log("translate failed:", ex)
-            break
+        for src_key, dst_key in (("t", "ta"), ("s", "sa")):
+            text = it.get(src_key) or ""
+            if done >= limit:
+                return done
+            if it.get(dst_key) or not text or has_arabic(text) or re.match(r"^\d+ ", text):
+                continue
+            if src_key == "s" and len(text) < 25:
+                continue
+            try:
+                it[dst_key] = translate(text)
+                done += 1
+                time.sleep(0.15)
+            except Exception as ex:
+                log("translate failed:", ex)
+                return done
     return done
 
 
