@@ -163,7 +163,9 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
   <div class="card">
     <h2>رحلاتي <span id="cnt"></span></h2>
     <div id="list"></div>
-    <div class="row"><button class="sec" id="exp">تصدير</button><button class="sec" id="imp">استيراد</button></div>
+    <div class="row"><button class="sec" id="exp">⬇️ نزّل نسخة احتياطية</button><button class="sec" id="impf">📂 ارجع نسخة من ملف</button></div>
+    <div class="row" style="margin-top:6px"><button class="sec" id="exp2">تصدير كنص</button><button class="sec" id="imp">استيراد من النص</button></div>
+    <input id="iof" type="file" accept="application/json" hidden>
     <textarea id="io" hidden style="margin-top:8px;min-height:90px;direction:ltr;font-size:12px" placeholder="الصق بيانات التصدير هنا واضغط استيراد."></textarea>
   </div>
 
@@ -970,16 +972,35 @@ function renderTrips(){
     trips = trips.filter(t => t.id !== +b.dataset.del); save(); renderTrips();
   });
 }
-$('exp').onclick = () => { const io = $('io'); io.hidden = false; io.value = JSON.stringify({trips, blocks, pois:myPois}); io.select(); };
+const backupData = () => ({trips, blocks, pois:myPois, jams, exportedAt:Date.now()});
+function mergeBackup(d){
+  const add = Array.isArray(d) ? d : (d.trips || []), have = new Set(trips.map(t => t.id));
+  add.forEach(t => { if (t && t.id && t.pts && !have.has(t.id)) trips.push(t); });
+  (d.pois || []).forEach(p => { if (!myPois.some(x => x.kind === p.kind && hav(x, p) < 40)) myPois.push(p); });
+  (d.blocks || []).forEach(b => { if (b.until > Date.now() && !blocks.some(x => hav(x, b) < 40)) blocks.push(b); });
+  (d.jams || []).forEach(j => { if (j.until > Date.now() && !jams.some(x => x.kind === j.kind && hav(x, j) < 60)) jams.push(j); });
+  trips.sort((a, b) => b.start - a.start); save(); renderTrips(); drawMarks();
+}
+$('exp').onclick = () => {
+  const blob = new Blob([JSON.stringify(backupData())], {type:'application/json'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+  a.download = 'sekkati-' + new Date().toISOString().slice(0, 10) + '.json';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+};
+$('impf').onclick = () => $('iof').click();
+$('iof').onchange = () => {
+  const f = $('iof').files[0]; if (!f) return;
+  const r = new FileReader();
+  r.onload = () => { try { mergeBackup(JSON.parse(r.result)); } catch(e){ $('msg').textContent = 'الملف مش سليم.'; } };
+  r.readAsText(f); $('iof').value = '';
+};
+$('exp2').onclick = () => { const io = $('io'); io.hidden = false; io.value = JSON.stringify(backupData()); io.select(); };
 $('imp').onclick = () => {
   const io = $('io');
   if (io.hidden || !io.value.trim()){ io.hidden = false; io.value = ''; return; }
-  try {
-    const d = JSON.parse(io.value), add = Array.isArray(d) ? d : (d.trips || []), have = new Set(trips.map(t => t.id));
-    add.forEach(t => { if (t && t.id && t.pts && !have.has(t.id)) trips.push(t); });
-    (d.pois || []).forEach(p => { if (!myPois.some(x => x.kind === p.kind && hav(x, p) < 40)) myPois.push(p); });
-    trips.sort((a, b) => b.start - a.start); save(); renderTrips(); drawMarks(); io.value = ''; io.hidden = true;
-  } catch(e){ $('msg').textContent = 'البيانات مش سليمة.'; }
+  try { mergeBackup(JSON.parse(io.value)); io.value = ''; io.hidden = true; }
+  catch(e){ $('msg').textContent = 'البيانات مش سليمة.'; }
 };
 renderTrips(); drawMarks();
 try { const p = JSON.parse(localStorage.getItem('plan') || 'null'); if (p && p.length && p[0].s && p[0].s.pois){ results = p; setTimeout(() => showRoutes(0), 800); } } catch(e){}
