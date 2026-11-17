@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T07:22:04Z",
+ "updated": "2026-11-17T07:23:36Z",
  "demo": false,
  "items": [
   {
@@ -2837,6 +2837,19 @@
    "sa": "تعرف على المزيد حول نموذج القرار: https://developers.openai.com/api/docs/guides/decisions https://platform.openai.com/decisions اكتشف المزيد: 🛠️…"
   },
   {
+   "id": "gn-aecdatamodelapiswhatcustomersshouldknowaboutaccessvalueandpr",
+   "cat": "arch",
+   "src": "Autodesk News",
+   "ts": "2026-11-12T17:00:19Z",
+   "t": "AEC Data Model APIs: What customers should know about access, value and pricing",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tWHJ6QUhVTVpuOGlTUVlRLXhaRVA1QldMN1piVmI3UjJXQ3doX3NweUlfQkNfZ0hFVjRjakhQdVJycC1DaDZRYXhiX0FlZnBnUUJkXy1NRTV6OUI3aENIUktyNnAxYTFzZC16RDl0U3NldkVs?oc=5",
+   "ta": "واجهات برمجة التطبيقات لنموذج بيانات شركة AEC: ما يجب أن يعرفه العملاء حول الوصول والقيمة والتسعير"
+  },
+  {
    "id": "gn-attentiveaimakesfirstacquisitionbuystakeoffmonkeyasbeamaipow",
    "cat": "arch",
    "src": "Business Wire",
@@ -4228,19 +4241,6 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPTDRrb21ub3VqdFBDMlNwOTI3WjgyYzNuV01RMWttQWFuQ2J3QkFnOGxOZ1VxZ2xRSVlRc0VoRTRnUDNITTN6YmM1RUF6dXZwS2llRlVkOTNBWWV5T3BJYWlteU1HaU5fbU5jdGNvcFBpUmJja0g0RHJONjNjd20xeDItTVZfUQ?oc=5",
    "ta": "عندما يكون الذكاء الاصطناعي الهجين منطقيًا لوكلاء الترميز"
-  },
-  {
-   "id": "gn-peoplebeforeplatformshowgamudamadechangestickwithautodeskfor",
-   "cat": "arch",
-   "src": "Autodesk",
-   "ts": "2026-11-10T10:06:39Z",
-   "t": "People Before Platforms: How Gamuda Made Change Stick with Autodesk Forma",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOa05lNmtXRlRpTUdXVUpibDhHR3lzZ3JpekJaV1Nhc1VGOU1rVHgzR3RtTERWbEpuTGVVUHhaNmtPTzhxODVCcHFFMWV0TDBUSWhjRVlJWXZTei1OY010WFI2LWdldWpNcDNxTXJxakhrRmxsSVd1eGpSR1ZmTjZZQjEya2tKU25US2RIaXlTSGgxYkNremFMOWZKejNnM01VTTNFcTA5cEVEZW5OZzdDem9QSjM2MElqLU0yRS1yS0g1bDBhd0FqeEwySQ?oc=5",
-   "ta": "الناس قبل المنصات: كيف قامت جامودا بإجراء التغيير باستخدام Autodesk Forma"
   }
  ]
 }
