@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T07:16:02Z",
+ "updated": "2026-11-17T07:17:23Z",
  "demo": false,
  "items": [
   {
@@ -14,6 +14,19 @@
    ],
    "url": "https://www.youtube.com/shorts/3UnQ3Wt5NF0",
    "sa": "أطلقت Anthropic للتو تطبيق Claude Meetings، في الإصدار التجريبي: ينضم Claude إلى مكالمتك على Google Meet. إنه يظهر نفسه، يبني، يبحث، يتذكر. الخطوة…"
+  },
+  {
+   "id": "gn-asusrampsupnvidiaverarubinnvl72shipmentsinq4amidstrongdemand",
+   "cat": "arch",
+   "src": "TradingView",
+   "ts": "2026-11-17T06:30:00Z",
+   "t": "ASUS Ramps Up NVIDIA Vera Rubin NVL72 Shipments in Q4 Amid Strong Demand, Showcasing AI Factory Reference Architecture at SC26",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNdEZpNHROcHgycm1jN0c0YmZQYlcwU2swd0g3cUF6YWFmY0NFRG15a0FHTkdoeU1rUmlvcXAxcWhVV1JhU0p4TjMyeWJXdnZYdGk1dzVKMkJmMW8yOFhIZ3dqMzVCWFBleGNXV2pWa3JyZ0o1T3k2a0ZDODgwSGlvaUhIVTVhUmdrUE9OZF91S0F0al9iakJKRGJMNTZEcWNXaVJLN21wRjY1RW1lMno4WWlMWXgxVnY5aFhRODJBT0J2UW9tWWh5U3doQmdpeEFJTTRrbEdtZ1Jfd1RnbFcyU1ozaEpyS0VZdUZhVWsxRjlxRnk0TldIRy1YeWRENHFPQTM4TnVUSXVlbFhGc19mblhEcTI?oc=5",
+   "ta": "ASUS تزيد من شحنات NVIDIA Vera Rubin NVL72 في الربع الرابع وسط الطلب القوي، وتعرض البنية المرجعية لمصنع الذكاء الاصطناعي في SC26"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov17goproverbs",
@@ -2089,19 +2102,6 @@
    "url": "https://www.youtube.com/watch?v=G_Jrexy_5Bg",
    "ta": "أخبار الذكاء الاصطناعي: الأمور لن تعود كما كانت أبدًا",
    "sa": "جرب @OpenAI Decisions API هنا: https://developers.openai.com/api/docs/guides/decisions إليك أخبار الذكاء الاصطناعي من أحد أعنف الأسابيع التي شهدناها على الإطلاق..."
-  },
-  {
-   "id": "gn-telgeplansarchitectureledentrybeforedetailingwork",
-   "cat": "arch",
-   "src": "Multibagg AI",
-   "ts": "2026-11-13T17:08:18Z",
-   "t": "Telge plans architecture-led entry before detailing work",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSHpxd2MweDJtcFowODJVMkt5YV9abTJ2eDk2YWRBX3Y3encxQ2NaMzdCeEdfeGZ0VmxmX2xkbWFJekxlYmZkbVVybFdXdG1EOVVsZDFtYXVwRjd5NTY4V1JuRk1kRHdNSTV4UEJjRVJ3LW5USXhCa1hjbnZyYnBZNFB2aDNxWnhtOGFrNklXYWNrWkdPOV9tZjBZWDZmdlNURWQxQmRoRllxaHNyOFBJLV9IaWFVQQ?oc=5",
-   "ta": "تخطط Telge للدخول القائم على الهندسة المعمارية قبل تفاصيل العمل"
   },
   {
    "id": "yt-PkAmyub12K8",
