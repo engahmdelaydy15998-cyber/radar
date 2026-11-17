@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T07:30:40Z",
+ "updated": "2026-11-17T07:48:40Z",
  "demo": false,
  "items": [
   {
@@ -213,6 +213,19 @@
    "url": "https://www.youtube.com/shorts/Mq6Qjv8lShc",
    "ta": "مجتمع فيلا سمارتلاند، هندسة أوبنهايم",
    "sa": "يحتاج التصميم المتصل إلى تنسيق متصل. بالنسبة لمجتمع Smartland Villa، قامت شركة Oppenheim Architecture بربط الهندسة المعمارية والنماذج الداخلية في Archi ..."
+  },
+  {
+   "id": "hn-50524880",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-16T23:08:42Z",
+   "t": "Lastbook – Everything you need to survive and rebuild society",
+   "s": "13 نقطة، 0 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://lastbook.org/",
+   "url2": "https://news.ycombinator.com/item?id=50524880"
   },
   {
    "id": "hn-50524736",
@@ -2895,18 +2908,6 @@
    "url": "https://www.youtube.com/shorts/IehCboBcYsA",
    "ta": "كيفية أتمتة مكتبة الصور الخاصة بك",
    "sa": "تعرف على المزيد حول نموذج القرار: https://developers.openai.com/api/docs/guides/decisions https://platform.openai.com/decisions اكتشف المزيد: 🛠️…"
-  },
-  {
-   "id": "gn-aecdatamodelapiswhatcustomersshouldknowaboutaccessvalueandpr",
-   "cat": "arch",
-   "src": "Autodesk News",
-   "ts": "2026-11-12T17:00:19Z",
-   "t": "AEC Data Model APIs: What customers should know about access, value and pricing",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tWHJ6QUhVTVpuOGlTUVlRLXhaRVA1QldMN1piVmI3UjJXQ3doX3NweUlfQkNfZ0hFVjRjakhQdVJycC1DaDZRYXhiX0FlZnBnUUJkXy1NRTV6OUI3aENIUktyNnAxYTFzZC16RDl0U3NldkVs?oc=5"
   },
   {
    "id": "gn-attentiveaimakesfirstacquisitionbuystakeoffmonkeyasbeamaipow",
