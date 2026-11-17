@@ -672,20 +672,37 @@ function showRoutes(sel){
 }
 
 /* الصوت: نطق وتعرّف */
+let arVoice = null;
+function pickArVoice(){
+  if (!('speechSynthesis' in window)) return;
+  const vs = speechSynthesis.getVoices(); if (!vs.length) return;
+  arVoice = vs.find(v => v.lang === 'ar-EG') || vs.find(v => v.lang && v.lang.toLowerCase().startsWith('ar')) || null;
+}
+if ('speechSynthesis' in window){ pickArVoice(); speechSynthesis.onvoiceschanged = pickArVoice; }
 function speak(t, done){
   if (!voiceOn || !('speechSynthesis' in window)){ if (done) setTimeout(done, 200); return; }
-  try { const u = new SpeechSynthesisUtterance(t); u.lang = 'ar-EG'; if (done){ u.onend = done; u.onerror = done; } speechSynthesis.cancel(); speechSynthesis.speak(u); }
-  catch(e){ if (done) done(); }
+  try {
+    const u = new SpeechSynthesisUtterance(t); u.lang = arVoice ? arVoice.lang : 'ar-EG';
+    if (arVoice) u.voice = arVoice;                 // جهاز ما فيهوش صوت ar-EG بالاسم بالظبط بيستخدم أقرب لهجة عربية موجودة
+    if (done){ u.onend = done; u.onerror = done; } speechSynthesis.cancel(); speechSynthesis.speak(u);
+  } catch(e){ if (done) done(); }
 }
-function listen(ms){
+function listen(ms, lang){
   return new Promise(res => {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SR) return res(null);
-    let done = false, rec;
+    let done = false, rec, triedAlt = false;
     const fin = v => { if (!done){ done = true; try { rec.stop(); } catch(e){} res(v); } };
-    try { rec = new SR(); rec.lang = 'ar-EG'; rec.interimResults = false; rec.maxAlternatives = 1;
-      rec.onresult = e => fin(e.results[0][0].transcript); rec.onerror = () => fin(null); rec.onend = () => fin(null); rec.start(); setTimeout(() => fin(null), ms || 7000); }
-    catch(e){ fin(null); }
+    const run = l => {
+      let mine = true;
+      try { rec = new SR(); rec.lang = l; rec.interimResults = false; rec.maxAlternatives = 1;
+        rec.onresult = e => fin(e.results[0][0].transcript);
+        rec.onerror = ev => { mine = false; if (!triedAlt && l === 'ar-EG' && ev.error === 'language-not-supported'){ triedAlt = true; run('ar-SA'); } else fin(null); };
+        rec.onend = () => { if (mine) fin(null); };               // جهاز ما فيهوش ar-EG في التعرّف الصوتي بيجرّب ar-SA
+        rec.start(); }
+      catch(e){ fin(null); }
+    };
+    run(lang || 'ar-EG'); setTimeout(() => fin(null), ms || 7000);
   });
 }
 
