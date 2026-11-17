@@ -142,11 +142,11 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
   <div id="sheet">
     <div class="handle"></div>
     <div id="res"></div>
-    <div id="msg"></div>
   </div>
 </div>
 
 <div id="below">
+  <div id="msg"></div>
   <div class="card">
     <h2>تسجيل رحلة</h2>
     <input id="name" type="text" placeholder="اسم الرحلة (اختياري)">
@@ -551,12 +551,11 @@ map.on('click', e => {
 });
 
 const sheetObs = new MutationObserver(() => {
-  const open = !!($('res').textContent.trim() || $('msg').textContent.trim());
+  const open = !!$('res').textContent.trim();
   $('sheet').classList.toggle('open', open);
   $('stage').classList.toggle('sheet-open', open);
 });
 sheetObs.observe($('res'), {childList:true, characterData:true, subtree:true});
-sheetObs.observe($('msg'), {childList:true, characterData:true, subtree:true});
 
 /* الاقتراح: رادارات وكارتات OSM + المسارات + التقييم */
 const allPois = () => myPois.map(p => ({...p, src:'me'})).concat(osmPois);
@@ -619,17 +618,14 @@ function dedupeRoutes(routes){                // بديلين شبه بعض (ت�
 async function computeRoutes(a, b){
   const base = 'https://router.project-osrm.org/route/v1/driving';
   const u = `${base}/${a.lon},${a.lat};${b.lon},${b.lat}?alternatives=3&overview=full&geometries=geojson&steps=true`;
-  const j = await (await fetch(u)).json();
-  if (!j.routes || !j.routes.length) throw new Error('no route');
-  let routes = j.routes.slice();
   const via = pickHistoricalVia(a, b);        // تأكيد ظهور طريق مشيته فعلاً حتى لو OSRM ما رشّحوش
-  if (via){
-    try {
-      const u2 = `${base}/${a.lon},${a.lat};${via.lon},${via.lat};${b.lon},${b.lat}?overview=full&geometries=geojson&steps=true`;
-      const j2 = await (await fetch(u2)).json();
-      (j2.routes || []).forEach(r => routes.push(r));
-    } catch(e){}
-  }
+  const u2 = via ? `${base}/${a.lon},${a.lat};${via.lon},${via.lat};${b.lon},${b.lat}?overview=full&geometries=geojson&steps=true` : null;
+  const [j, j2] = await Promise.all([
+    (async () => (await fetch(u)).json())(),
+    u2 ? (async () => { try { return await (await fetch(u2)).json(); } catch(e){ return null; } })() : Promise.resolve(null)
+  ]);
+  if (!j.routes || !j.routes.length) throw new Error('no route');
+  let routes = j.routes.slice().concat((j2 && j2.routes) || []);
   routes = dedupeRoutes(routes);
   const all = routes.flatMap(r => r.geometry.coordinates);
   const bb = {s:Math.min(...all.map(c => c[1])) - 0.001, n:Math.max(...all.map(c => c[1])) + 0.001, w:Math.min(...all.map(c => c[0])) - 0.001, e:Math.max(...all.map(c => c[0])) + 0.001};
