@@ -30,6 +30,7 @@ input:focus{outline:none;border-color:var(--acc)}
 .tagline{font-size:11px;color:var(--mut);padding-inline-start:20px}
 #stage{position:relative;height:64vh;min-height:430px;border-radius:16px;overflow:hidden;background:#111}
 #map{position:absolute;inset:0;direction:ltr}
+#map.dark-tiles .maplibregl-canvas{filter:invert(1) hue-rotate(180deg) brightness(.92) contrast(1.05) saturate(.9)}
 #panel{position:absolute;top:8px;left:8px;right:8px;z-index:5;background:rgba(15,15,16,.96);border:1px solid var(--line);border-radius:14px;padding:8px}
 .ft{display:flex;gap:8px;align-items:stretch}
 .rail{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;width:14px}
@@ -187,6 +188,7 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
   <div class="card">
     <h2>📖 دليل الاستخدام</h2>
     <div class="note">
+      <b>🗺 شكل:</b> بيبدّل بين 4 أشكال للخريطة: عادي (فيكتور)، أسود، خرائط OSM، وقمر صناعي.<br><br>
       <b>من/إلى:</b> اكتب أو اضغط "موقعي"، أو اضغط على الخريطة واختار بداية/وجهة. الطرق بتتحسب تلقائي وتظهر تحت كخريطة منبثقة (sheet) فوق الخريطة.<br><br>
       <b>كروت الطرق:</b> الدقايق هي التقدير الكلي. "تقدير" يعني محسوب من OSRM + وقفات متوقعة + رادارات/كارتات/لجان؛ لو مكتوب إنه "مشيته قبل كده" فده زمن حقيقي من رحلاتك المسجلة. ★ هو الطريق المرشّح كأفضل اختيار.<br><br>
       <b>أزرار التعليم</b> (📷 رادار، 💳 كارتة، ⛔ مقفول، ↩️ يوتيرن، 🚓 لجنة): اضغط الزرار وبعدين اضغط مكانه على الخريطة. ضغطة تانية على نفس المكان بتشيله.<br><br>
@@ -411,12 +413,14 @@ const unpack = a => a.map(r => ({t:r[0], lat:r[1], lon:r[2], acc:r[3]}));
 /* الخريطة: MapLibre مع OpenFreeMap (ثلاثية الأبعاد)، وبديل OSM لو حصلت مشكلة */
 const STYLES = {
   vec: 'https://tiles.openfreemap.org/styles/liberty',
+  dark: {version:8, sources:{o:{type:'raster', tiles:['https://tile.openstreetmap.org/{z}/{x}/{y}.png'], tileSize:256, maxzoom:19, attribution:'© OpenStreetMap'}}, layers:[{id:'o', type:'raster', source:'o'}]},
   osm: {version:8, sources:{o:{type:'raster', tiles:['https://tile.openstreetmap.org/{z}/{x}/{y}.png'], tileSize:256, maxzoom:19, attribution:'© OpenStreetMap'}}, layers:[{id:'o', type:'raster', source:'o'}]},
   sat: {version:8, sources:{s:{type:'raster', tiles:['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'], tileSize:256, maxzoom:19, attribution:'Esri'}}, layers:[{id:'s', type:'raster', source:'s'}]}
 };
-const ORDER = ['vec', 'osm', 'sat']; let styleKey = 'vec';
+const ORDER = ['vec', 'dark', 'osm', 'sat']; let styleKey = 'vec';
 const nop = new Proxy(function(){}, {get:(t, k) => k === Symbol.toPrimitive ? () => '' : nop, apply:() => nop, construct:() => nop});
 let ML = typeof maplibregl === 'undefined' ? nop : maplibregl, map;
+try { ML.setRTLTextPlugin('https://unpkg.com/@mapbox/mapbox-gl-rtl-text@0.3.0/mapbox-gl-rtl-text.js', null, true); } catch(e){}  // شكل حروف العربي في لابلات الخريطة صح بدل ما تيجي مفصولة
 try { map = new ML.Map({container:'map', style:STYLES.vec, center:[31.2357, 30.0444], zoom:11, attributionControl:{compact:true}}); }
 catch(e){ map = nop; ML = nop; $('map').innerHTML = '<div class="note" style="padding:70px 14px 14px">الخريطة محتاجة نت وWebGL. التسجيل والقيادة بيشتغلوا من غيرها.</div>'; }
 let routeGeo = {type:'FeatureCollection', features:[]};
@@ -433,7 +437,7 @@ map.on('error', e => {                           // لو ستايل الفيكت
   const u = e && e.error && e.error.message || '';
   if (!fell && styleKey === 'vec' && /style|openfreemap|Failed to fetch|NetworkError/i.test(u + ((e.error && e.error.url) || ''))){ fell = true; setStyle('osm'); }
 });
-function setStyle(k){ styleKey = k; try { map.setStyle(STYLES[k]); } catch(e){} }
+function setStyle(k){ styleKey = k; try { map.setStyle(STYLES[k]); } catch(e){} $('map').classList.toggle('dark-tiles', k === 'dark'); }
 $('tiles').onclick = () => { fell = true; setStyle(ORDER[(ORDER.indexOf(styleKey) + 1) % ORDER.length]); };
 function drawRoutes(list){ routeGeo = {type:'FeatureCollection', features:list.map(r => ({type:'Feature', properties:{c:r.c, w:r.w}, geometry:{type:'LineString', coordinates:r.coords}}))};
   try { const s = map.getSource('routes'); if (s) s.setData(routeGeo); else ensureLayers(); } catch(e){} }
@@ -909,7 +913,7 @@ $('altNo').onclick = () => { $('alt').hidden = true; };
 $('akey').value = (() => { try { return localStorage.getItem('sekkati-akey') || ''; } catch(e){ return ''; } })();
 $('akeySave').onclick = () => { try { localStorage.setItem('sekkati-akey', $('akey').value.trim()); $('msg').textContent = ''; } catch(e){} };
 $('akeyClear').onclick = () => { try { localStorage.removeItem('sekkati-akey'); } catch(e){} $('akey').value = ''; };
-const APP_GUIDE = 'سكّتي تطبيق ملاحة: اكتب من/إلى وهيحسب طرق ويرتبهم بالأفضل. أزرار التعليم 📷 رادار / 💳 كارتة / ⛔ مقفول / ↩️ يوتيرن / 🚓 لجنة: اضغط الزرار وبعدين مكانه على الخريطة. 🧭 جوجل + سجّل بيفتح جوجل مابس ويسجّل الرحلة بصمت. ▶ ابدأ القيادة شاشة ملء شاشة بتنطق التعليمات والتنبيهات. تسجيل رحلة بيتعلّم من طرقك. فيه نسخة احتياطية (ملف .json) من كارت الرحلات.';
+const APP_GUIDE = 'سكّتي تطبيق ملاحة: اكتب من/إلى وهيحسب طرق ويرتبهم بالأفضل. 🗺 شكل بيبدّل بين 4 أشكال للخريطة (فيكتور/أسود/OSM/قمر صناعي). أزرار التعليم 📷 رادار / 💳 كارتة / ⛔ مقفول / ↩️ يوتيرن / 🚓 لجنة: اضغط الزرار وبعدين مكانه على الخريطة. 🧭 جوجل + سجّل بيفتح جوجل مابس ويسجّل الرحلة بصمت. ▶ ابدأ القيادة شاشة ملء شاشة بتنطق التعليمات والتنبيهات. تسجيل رحلة بيتعلّم من طرقك. فيه نسخة احتياطية (ملف .json) من كارت الرحلات.';
 function openAsk(){ hideSheets(); $('cl').hidden = false; if (!$('akey').value.trim()) $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; }
 $('nclaude').onclick = () => { const h = $('cl').hidden; hideSheets(); $('cl').hidden = !h; if (!$('akey').value.trim() && !h === false) $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; };
 $('askgen').onclick = openAsk;
