@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T07:17:23Z",
+ "updated": "2026-11-17T07:22:04Z",
  "demo": false,
  "items": [
   {
@@ -2837,19 +2837,6 @@
    "sa": "تعرف على المزيد حول نموذج القرار: https://developers.openai.com/api/docs/guides/decisions https://platform.openai.com/decisions اكتشف المزيد: 🛠️…"
   },
   {
-   "id": "gn-aecdatamodelapiswhatcustomersshouldknowaboutaccessvalueandpr",
-   "cat": "arch",
-   "src": "Autodesk News",
-   "ts": "2026-11-12T17:00:19Z",
-   "t": "AEC Data Model APIs: What customers should know about access, value and pricing",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tWHJ6QUhVTVpuOGlTUVlRLXhaRVA1QldMN1piVmI3UjJXQ3doX3NweUlfQkNfZ0hFVjRjakhQdVJycC1DaDZRYXhiX0FlZnBnUUJkXy1NRTV6OUI3aENIUktyNnAxYTFzZC16RDl0U3NldkVs?oc=5",
-   "ta": "واجهات برمجة التطبيقات لنموذج بيانات شركة AEC: ما يجب أن يعرفه العملاء حول الوصول والقيمة والتسعير"
-  },
-  {
    "id": "gn-attentiveaimakesfirstacquisitionbuystakeoffmonkeyasbeamaipow",
    "cat": "arch",
    "src": "Business Wire",
@@ -2981,6 +2968,19 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNa1FiQzZXbzJ6OXJublpwT2NJSFJKdmUyU3pTakNCbi0wcUMtaVdKV2VWVU52NmREb3YyaUc0VW9YZU1JakVhcGZXNWhJZWg4LXYtTXZzVFVfQzBtOS1nLVpfLWxzZGg3Tzg4TGdEY2RJb00tcWkwRnFfS21CM0Q3WEgxT2JfSTBpSXlUQzFuUzU4RGJKd1ZESTNBSFp1VElQMVBSSVRVc2I4MkdJd1AyeHJnU0ZnSVphaHc?oc=5",
    "ta": "يحذر ThreatDown من ارتفاع مخاطر الأمن السيبراني من أسراب عملاء الذكاء الاصطناعي المستقلين"
+  },
+  {
+   "id": "gn-sketchup2027addsnewmodelingandrevitimporttools",
+   "cat": "arch",
+   "src": "Engineering.com",
+   "ts": "2026-11-12T11:31:20Z",
+   "t": "SketchUp 2027 adds new modeling and Revit import tools",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQWHB1U0JkOGFPQ0NqNTVuelRMMktlOFI1a1hka1MxaGR2S1ZMNzJ5MElzVDEwZDlienV0WUxpTHBLZ3hTN2pWb1F0aG5RUXNTRUJQUlhBMWJrdmlQVDY0RDZuY2Jfb3dpWVhScW93ZWhZM2RMSkNycUpaUlVxT3JZWGRUdFFxb2hsa3k0?oc=5",
+   "ta": "يضيف SketchUp 2027 أدوات جديدة للنمذجة واستيراد Revit"
   },
   {
    "id": "gn-awslaunchescloudemulatorbuiltentirelybyaiagents",
