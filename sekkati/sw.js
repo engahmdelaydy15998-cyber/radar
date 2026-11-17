@@ -1,7 +1,7 @@
 // سكّتي service worker: الصفحة network-first (عشان التحديثات تظهر)، والأصول cache-first.
-var CACHE = "sekkati-v1";
+var CACHE = "sekkati-v2";
 var SHELL = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png",
-  "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css", "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"];
+  "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css", "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"];
 self.addEventListener("install", function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) {
     return Promise.all(SHELL.map(function (u) { return c.add(u).catch(function () {}); }));
@@ -17,7 +17,7 @@ self.addEventListener("fetch", function (e) {
   if (req.method !== "GET") return;
   var u = new URL(req.url);
   // الطرق والبحث والرادارات لازم تكون طازجة، وصور الخريطة يتولاها المتصفح
-  if (/osrm|nominatim|photon|overpass|tile\.openstreetmap|cartocdn|fonts\./.test(u.hostname)) return;
+  if (/osrm|nominatim|photon|overpass|tile\.openstreetmap|cartocdn|openfreemap|arcgisonline|anthropic|fonts\./.test(u.hostname)) return;
   var isPage = req.mode === "navigate" || u.pathname.slice(-1) === "/" || u.pathname.slice(-5) === ".html";
   e.respondWith(caches.open(CACHE).then(function (c) {
     if (isPage) {
