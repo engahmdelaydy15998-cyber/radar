@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T07:53:27Z",
+ "updated": "2026-11-17T08:07:37Z",
  "demo": false,
  "items": [
   {
@@ -13,6 +13,18 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPc2MtV3RpN0VXOW5DZEU3NUNjUkpkWXlqTHl1MjBhZHdJSXJ6RlF3RFpyRkpOcWdvcGd6SXktZVFHbUx4VlZ1cVV1dmQ3Q3A0ei1ibWRLRVZhdEpUeWZnTGZrSFpCR1l4Q1dVeG9naGRLdFFnamswRjJVblRuVTd1ZkM1bV9jcFVMeWhXaHYwUFpscFE3bUUtbTR6TkNEX1hHVmdSV091QlhLby1RWFNMQ9IBtgFBVV95cUxQLUFzbFIxQWRFMkl5am01WkdlWGQzN1l4U2N6T0VWY3JnTFYtdlZicWNuWEVXYkttZ1RmVngzaGN1YW9ydjZySXpVaWRUekZ4blpBWVJZN1NxZXdoSmNFNFR6Ynk2ZFB5QkNkZ3RIZHZlSjJuZ2VPR3djTUdmMllBRGt2SWJhaFVoQlFKNFJXd3BYZlB5Z3BSUVlrQjBCNTljZG52NWVKYzFOeHQ2Y1hWRFMySFJrZw?oc=5"
+  },
+  {
+   "id": "gn-drsandeepmarwahandaaftlaunchtheiraidigitaltwinsontwincafe",
+   "cat": "arch",
+   "src": "CXOToday.com",
+   "ts": "2026-11-17T07:18:13Z",
+   "t": "Dr Sandeep Marwah and AAFT Launch Their AI Digital Twins on TwinCafe",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNaHluSmhaRUlGU3hINmpxMWFmbTBCS21uaHN6bkxNeU1zc2g0TEFVQjlTV2FnZEVDVEdiVk5iWF9BcGF1RW8xdGFTZHJxQWpTcDctcnY2eEtoT2MtVXUtTU5YeXVrVUI2RlBkY0l4Vlg3Z0xIdjJlVElBLUw4UjhtMnIyeHN0TGtubEctVDJPRmtqdkRNVWpaOS1KdWM5M0tWTUxLM2Q0U0c?oc=5"
   },
   {
    "id": "yt-3UnQ3Wt5NF0",
@@ -1073,6 +1085,19 @@
    "ta": "Qwen4-ماكس"
   },
   {
+   "id": "hn-50512779",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-16T01:05:22Z",
+   "t": "Nimony: A New Compiler for Nim",
+   "s": "18 نقطة، 2 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://nimony.org/",
+   "url2": "https://news.ycombinator.com/item?id=50512779"
+  },
+  {
    "id": "hn-50512576",
    "cat": "arch",
    "src": "Hacker News",
@@ -1508,6 +1533,18 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOaE5HcWFIX09WbTE5SFZjUjZFMWsxOE4zd25jVWdFNzNsNFFETm9Ha0VTT1Y5TklQc2VEZDRTbktLaGI5b1gzNExuLW9EZHZHbVdndl9YSUdGQlppSy1Td19DNTNXZlhzZjZ5NWpYMWVJWGlIY20wWnlIai1TQS1Ka29uZzMyekJUMnFiYXQtMUtwVVVnSGZoNVdadi1XdTBvaU5WbzA4T0ZpQnFzUk9rSDVESFh5SWs?oc=5",
    "ta": "شركة \"بابكو للطاقة\" BeVentures تستثمر في شركة Geminus لمنصة التوأم الرقمي - الأخبار والإحصائيات"
+  },
+  {
+   "id": "gn-lawmajorshipsiphoneappin13dayswithclaudecode",
+   "cat": "agents",
+   "src": "shattered.io",
+   "ts": "2026-11-15T07:49:24Z",
+   "t": "Law Major Ships iPhone App in 13 Days With Claude Code",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNcGZpdzFaZENrMTFSOS1ZUFJveU5CT1l4MWt5ZUU5cy1KRV82SlItV3A3bjJWR0lDR0kzX1l5ZHRDZ0M3TkFPNXp0anl0bFh4X3QtSmxsc3BvMHFqMzRqVHhZQXplMW9qWjM2SkJmcm5PLVdtUk5VM1RXWndWaVlrR2xnd1M2VzRD?oc=5"
   },
   {
    "id": "rss-ainstprogramtheproductiveambiguityofcontemporaryarchitecture",
@@ -2084,6 +2121,18 @@
    "ta": "Perplexity Decider v1.3: حالات التدريب والتقييم والاستخدام"
   },
   {
+   "id": "gn-improvingrevitmodelhealthandperformancefindwhatsslowingyoudo",
+   "cat": "arch",
+   "src": "Autodesk",
+   "ts": "2026-11-13T19:18:14Z",
+   "t": "Improving Revit Model Health and Performance: Find What’s Slowing You Down",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPVFRDR3FtMmJNZnhZTmRRT2J5RHZRVkRQNzVOazFKMWMzQl85bVhubndFdzRwZVY2cEN6UTVlQmFlTFFVQU9maE9XRVA1ajVZRXI0UjZoejljaEZGREVTOW1NcVZ5ZXpJQ2hldUQtOWVkR09oNElVV19jSDlzcFRLZUN2MlkxY0lVYmM5elNPTDdLS0wxMFE?oc=5"
+  },
+  {
    "id": "yt-ErOVIC-MGVA",
    "cat": "reels",
    "src": "YouTube",
@@ -2163,6 +2212,18 @@
    "url": "https://www.youtube.com/watch?v=G_Jrexy_5Bg",
    "ta": "أخبار الذكاء الاصطناعي: الأمور لن تعود كما كانت أبدًا",
    "sa": "جرب @OpenAI Decisions API هنا: https://developers.openai.com/api/docs/guides/decisions إليك أخبار الذكاء الاصطناعي من أحد أعنف الأسابيع التي شهدناها على الإطلاق..."
+  },
+  {
+   "id": "gn-telgeplansarchitectureledentrybeforedetailingwork",
+   "cat": "arch",
+   "src": "Multibagg AI",
+   "ts": "2026-11-13T17:08:18Z",
+   "t": "Telge plans architecture-led entry before detailing work",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSHpxd2MweDJtcFowODJVMkt5YV9abTJ2eDk2YWRBX3Y3encxQ2NaMzdCeEdfeGZ0VmxmX2xkbWFJekxlYmZkbVVybFdXdG1EOVVsZDFtYXVwRjd5NTY4V1JuRk1kRHdNSTV4UEJjRVJ3LW5USXhCa1hjbnZyYnBZNFB2aDNxWnhtOGFrNklXYWNrWkdPOV9tZjBZWDZmdlNURWQxQmRoRllxaHNyOFBJLV9IaWFVQQ?oc=5"
   },
   {
    "id": "yt-PkAmyub12K8",
@@ -2870,6 +2931,18 @@
    "sa": "انضم إلى رسالتي الإخبارية للحصول على تحديثات منتظمة للذكاء الاصطناعي 👇🏼 https://forwardfuture.com روابطي 🔗 👉🏻 X: https://x.com/matthewberman 👉🏻 Forward Future X: https://x.co..."
   },
   {
+   "id": "gh-1455649908",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-12T17:56:19Z",
+   "t": "punit2911/Hirepanel: Multi-agent resume screener where every score needs a verified quote from the resume. Run…",
+   "s": "60 نجمة، لغة Python",
+   "tags": [
+    "جديد كلياً"
+   ],
+   "url": "https://github.com/punit2911/Hirepanel"
+  },
+  {
    "id": "hn-50471281",
    "cat": "agents",
    "src": "Hacker News",
@@ -2908,6 +2981,18 @@
    "url": "https://www.youtube.com/shorts/IehCboBcYsA",
    "ta": "كيفية أتمتة مكتبة الصور الخاصة بك",
    "sa": "تعرف على المزيد حول نموذج القرار: https://developers.openai.com/api/docs/guides/decisions https://platform.openai.com/decisions اكتشف المزيد: 🛠️…"
+  },
+  {
+   "id": "gn-aecdatamodelapiswhatcustomersshouldknowaboutaccessvalueandpr",
+   "cat": "arch",
+   "src": "Autodesk News",
+   "ts": "2026-11-12T17:00:19Z",
+   "t": "AEC Data Model APIs: What customers should know about access, value and pricing",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tWHJ6QUhVTVpuOGlTUVlRLXhaRVA1QldMN1piVmI3UjJXQ3doX3NweUlfQkNfZ0hFVjRjakhQdVJycC1DaDZRYXhiX0FlZnBnUUJkXy1NRTV6OUI3aENIUktyNnAxYTFzZC16RDl0U3NldkVs?oc=5"
   },
   {
    "id": "gn-attentiveaimakesfirstacquisitionbuystakeoffmonkeyasbeamaipow",
@@ -3028,6 +3113,18 @@
    "url": "https://www.youtube.com/watch?v=gPNiuyYirfw",
    "ta": "الذكاء الاصطناعي الخاص بـ DeepMind فعل المستحيل",
    "sa": "❤️ تحقق من Lambda هنا وقم بالتسجيل في GPU Cloud الخاصة بهم: https://lambda.com/papers 📝 رمز AlphaProof الخاص بورق DeepMind متاح هنا: https://d..."
+  },
+  {
+   "id": "gn-secureaigeneratedcodeinclaudecodeandcursorwithcortexcloud",
+   "cat": "agents",
+   "src": "Palo Alto Networks",
+   "ts": "2026-11-12T12:59:31Z",
+   "t": "Secure AI-Generated Code in Claude Code and Cursor with Cortex Cloud",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWU5SN1kwaTdZSzBSNmNYVXVNWEUtNG85OHRLTG5iWXdJZ1dFTC10WmFDYjdvSXl3UnMyeUlrS280R2ZyMGpVazdISjJHcWMzRkxFb0NJUm5EZnVncW92VHlJaUVKOWt2LURxOXI0RWtsVDBIZ1NGdFo1dEQ4X2s3X2s5WTJudHNqZWVaLXV4bDJMd0RCLUs4RFRIVkRqUzJ4N2E5cERvME5sWFpyS21F?oc=5"
   },
   {
    "id": "gn-threatdownwarnsofrisingcybersecurityrisksfromautonomousaiage",
@@ -3264,6 +3361,18 @@
    ],
    "url": "https://www.newyorker.com/magazine/2026/11/16/john-berger-a-life-tom-overton-book-review",
    "ta": "التأثير الدائم لجون بيرغر"
+  },
+  {
+   "id": "gn-autodeskanswerdayreturnsdecember8withaecspecialistsontheboar",
+   "cat": "arch",
+   "src": "Autodesk",
+   "ts": "2026-11-12T03:22:43Z",
+   "t": "Autodesk Answer Day Returns December 8 with AEC Specialists on the Boards for 24 Hours",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9DbW0yNlRkVElMZDZITDJyTl9Dbnp5UlU2dW14bFRjMkxkbExoWDFDSWhDbFhyaEptdEVDV1FMV1FIMDlnU2NIQmFIYll3NzNrZnRoWGktTmxtV28ycVJyQ0RoSHkzWWZSREx3NjZHdU52Ri1yLUJrS1Zn?oc=5"
   },
   {
    "id": "yt-nDwhxbJiNEg",
@@ -3754,6 +3863,18 @@
    "ta": "عرض HN: Aq – قائمة انتظار TUI لـ Claude Code"
   },
   {
+   "id": "gn-evenintheaiagearchitectshumanwaywithnumbersmatters",
+   "cat": "arch",
+   "src": "RIBA Journal",
+   "ts": "2026-11-11T08:51:58Z",
+   "t": "Even in the AI age, architects’ human way with numbers matters",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPR1RLbFNtTmZ2Z1Y3ampUZE41LTdYMV9NdE5JVUZpcXRGNlNfandpX2JsQTN4VzZ4R24ydUc3dzdUZm9RLXN3YnBuSmhJN0xYTUdBQlB4Q1poM3hOdmNQdXliSXB2bjZDZldyYjVhQkdRYWJnUDNzOHJSQ3FTNWVzQU1yOUN3cmFKQWpiRS1zSE1ibGs?oc=5"
+  },
+  {
    "id": "gn-buildinganaireadyconstructionindustrythedevilisinthedata",
    "cat": "arch",
    "src": "Planning, Building & Construction Today",
@@ -4097,140 +4218,6 @@
    ],
    "url": "https://www.lloydslist.com/LL1158922/A-rare-glimpse-inside-the-highrisk-highreward-Hormuz-trade",
    "ta": "لمحة نادرة داخل تجارة هرمز عالية المخاطر والعائد المرتفع"
-  },
-  {
-   "id": "gn-whatsnewinrevit20273and20274promptdrivenautomationwithautode",
-   "cat": "arch",
-   "src": "Autodesk",
-   "ts": "2026-11-10T17:01:06Z",
-   "t": "What's New in Revit 2027.3 and 2027.4: Prompt-driven Automation with Autodesk Assistant and Connected Site Design",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOVNzLWVmbDR0MjZUUWs4eWpDQWJmYy1VOWppM01UWDhLdmxJbGZEOGpnbHR4OUUtNm51UWlWZ2tkbEVyMEtrVF9KZmVGTXVtNFJ3alluakJ5ZzNKOEVITlUzV3JYbnIwSXc2TWpYTnVMV1lPTEsya1RCRnRuRmNrNnZYLXcwcUVJVEdB?oc=5",
-   "ta": "ما الجديد في Revit 2027.3 و2027.4: التشغيل الآلي الفوري مع مساعد Autodesk وتصميم المواقع المتصلة"
-  },
-  {
-   "id": "yt-xM_BhmEyKAY",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-10T16:36:54Z",
-   "t": "How Workday Builds Agent Prototypes in Under a Day with LangChain",
-   "s": "Alex Gatto, Senior Machine Learning Engineer at Workday, explains how his team built an internal agent platform on LangChain's Agent Server and LangS…",
-   "tags": [
-    "LangChain"
-   ],
-   "url": "https://www.youtube.com/watch?v=xM_BhmEyKAY",
-   "ta": "كيف تقوم Workday ببناء نماذج أولية للوكلاء في أقل من يوم باستخدام LangChain",
-   "sa": "يشرح Alex Gatto، كبير مهندسي التعلم الآلي في Workday، كيف قام فريقه ببناء منصة وكيل داخلية على خادم وكيل LangChain وLangS..."
-  },
-  {
-   "id": "hn-50442303",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-10T16:07:15Z",
-   "t": "Gemini 4 Carbon is now available",
-   "s": "295 نقطة، 165 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
-   "ta": "الجوزاء 4 الكربون متوفر الآن"
-  },
-  {
-   "id": "yt-Ebn1Ju6fjEo",
-   "cat": "arch",
-   "src": "YouTube",
-   "ts": "2026-11-10T15:49:37Z",
-   "t": "Mori AI home robot “resembles a contemporary table lamp”",
-   "s": "Robotics startup OKA has released a lamp-shaped artificial intelligence robot designed to offer companionship by greeting people, dancing to music an…",
-   "tags": [
-    "Dezeen"
-   ],
-   "url": "https://www.youtube.com/watch?v=Ebn1Ju6fjEo",
-   "ta": "الروبوت المنزلي Mori AI \"يشبه مصباح طاولة معاصر\"",
-   "sa": "أطلقت شركة OKA الناشئة في مجال الروبوتات روبوتًا يعمل بالذكاء الاصطناعي على شكل مصباح، مصمم لتقديم الرفقة من خلال تحية الناس والرقص على الموسيقى..."
-  },
-  {
-   "id": "gn-agentsubstrateadvancingkubernetesforagentsatscalenvidiatechn",
-   "cat": "agents",
-   "src": "NVIDIA Developer",
-   "ts": "2026-11-10T15:14:46Z",
-   "t": "Agent Substrate: Advancing Kubernetes for Agents at Scale | NVIDIA Technical Blog",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTkxoc2xfQkZDalg4QjU3TUJDNmRiLVFGVTVZOGkxZ05yN0d1RkVya3RqYkV2bTdPUmM3UW5FTGp2SUJvQURGN0pTa3ZwT1lBcDlaYWZmYUgyOHdtdUFhcGFEbk9hZk9lU2JPR1NqRFE3VGNsZ1hfUExZbHAzazdpNjZaS3luSjFZUWpITEFUUnVYZWxQTHc?oc=5",
-   "ta": "ركيزة الوكيل: تطوير Kubernetes للوكلاء على نطاق واسع | مدونة نفيديا التقنية"
-  },
-  {
-   "id": "hn-50441350",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-10T15:01:19Z",
-   "t": "Show HN: Aircad – Professional drafting and 3D modeling in the browser",
-   "s": "95 نقطة، 47 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://aircad.com",
-   "ta": "إظهار HN: Aircad – صياغة احترافية ونمذجة ثلاثية الأبعاد في المتصفح"
-  },
-  {
-   "id": "yt-E-NropeDnYc",
-   "cat": "arch",
-   "src": "YouTube",
-   "ts": "2026-11-10T15:00:11Z",
-   "t": "Want to Learn Revit? Watch This Before Black Friday!",
-   "s": "Learn more about the offer: https://balkanarchitect.com/p/black-friday-26 Get all Revit Courses: https://balkanarchitect.com/ My Revit project files:…",
-   "tags": [
-    "Balkan Architect"
-   ],
-   "url": "https://www.youtube.com/watch?v=E-NropeDnYc",
-   "ta": "هل تريد أن تتعلم الريفيت؟ شاهد هذا قبل الجمعة السوداء!",
-   "sa": "تعرف على المزيد حول العرض: https://balkanarchitect.com/p/black-friday-26 احصل على جميع دورات Revit: https://balkanarchitect.com/ ملفات مشروع Revit الخاصة بي:…"
-  },
-  {
-   "id": "rss-httpswwwdezeencom20261110okaqmoriaihomerobotlamp",
-   "cat": "arch",
-   "src": "Dezeen",
-   "ts": "2026-11-10T15:00:00Z",
-   "t": "Mori AI home robot \"resembles a contemporary table lamp\"",
-   "s": "Robotics start-up OKA has released a lamp-shaped artificial intelligence robot designed to offer companionship by greeting people returning home, dancing to mu…",
-   "tags": [
-    "AEC"
-   ],
-   "url": "https://www.dezeen.com/2026/11/10/okaq-mori-ai-home-robot-lamp/",
-   "ta": "الروبوت المنزلي Mori AI \"يشبه مصباح طاولة معاصر\"",
-   "sa": "أطلقت شركة OKA الناشئة في مجال الروبوتات، روبوتًا يعمل بالذكاء الاصطناعي على شكل مصباح، مصمم لتقديم الرفقة من خلال تحية الأشخاص العائدين إلى منازلهم، والرقص على أنغام الموسيقى."
-  },
-  {
-   "id": "rss-httpsaecmagcomprojectmanagementageirolaunchesarkwatcher",
-   "cat": "arch",
-   "src": "AEC Magazine",
-   "ts": "2026-11-10T13:48:30Z",
-   "t": "Ageiro launches Ark Watcher",
-   "s": "Continuously monitors project information across Autodesk Forma, Aconex, Procore and more The post Ageiro launches Ark Watcher appeared first on AEC Magazine .",
-   "tags": [
-    "AEC"
-   ],
-   "url": "https://aecmag.com/project-management/ageiro-launches-ark-watcher/",
-   "ta": "Ageiro يطلق Ark Watcher",
-   "sa": "يراقب باستمرار معلومات المشروع عبر Autodesk Forma وAconex وProcore والمزيد. ظهر المنشور الذي أطلقه Ageiro Ark Watcher لأول مرة على مجلة AEC."
-  },
-  {
-   "id": "yt-1kPiaDNS6Gk",
-   "cat": "arch",
-   "src": "YouTube",
-   "ts": "2026-11-10T13:00:29Z",
-   "t": "What Is the Rhino Studio Series? Teaching Architecture with Rhino",
-   "s": "What is the Rhino Studio Series? Why we built it, what each season teaches, how every episode is produced, and where AI fits into a very human proces…",
-   "tags": [
-    "Rhino / McNeel"
-   ],
-   "url": "https://www.youtube.com/watch?v=1kPiaDNS6Gk"
   }
  ]
 }
