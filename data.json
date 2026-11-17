@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T05:07:01Z",
+ "updated": "2026-11-17T05:13:12Z",
  "demo": false,
  "items": [
   {
@@ -666,6 +666,19 @@
    "sa": "قدمت BIM أساس البيانات المنظمة التي يمكن من خلالها بناء مسارات العمل الهندسية من الجيل التالي. المقال ما بعد BIM: من البيانات الهندسية إلى التكامل الهندسي ..."
   },
   {
+   "id": "gn-beyondbimfromengineeringdatatoengineeringintelligence",
+   "cat": "arch",
+   "src": "AEC Magazine",
+   "ts": "2026-11-16T10:22:33Z",
+   "t": "Beyond BIM: From Engineering Data to Engineering Intelligence",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNalNDWGNFNVB4WVFYRzFETTU2X003S1FJeWU4c2I0Y1VTUVZtOHQxU1lrSVBjak9RRDBhUWZpemx4N2FZYk4wdzVTc3h2UHdpZ0VNdXEzWjRSSDhEUVZlVHFENURXNGsxN18wbm01U0VpbUZVTEdyZ29qSHplV0RldTItUjhBNk5jVENSV2lHaDdnN21yeFl4Z3VJSG5fSGM?oc=5",
+   "ta": "ما وراء BIM: من البيانات الهندسية إلى الذكاء الهندسي"
+  },
+  {
    "id": "yt-2f6yeG78xFA",
    "cat": "reels",
    "src": "YouTube",
@@ -734,6 +747,18 @@
    "sa": "مشاركة آخر الأخبار والتطورات في مجال الذكاء الاصطناعي اكتشف المزيد: 🛠️ اكتشف أدوات وأخبار الذكاء الاصطناعي: https://futuretools.io/ 📰 النشرة الإخبارية الأسبوعية: https://future…"
   },
   {
+   "id": "gn-7waysclaudecodecanhelpyourunasmallbusinesswithoutwritingasin",
+   "cat": "agents",
+   "src": "Tom's Guide",
+   "ts": "2026-11-16T05:15:00Z",
+   "t": "7 ways Claude Code can help you run a small business — without writing a single line of code",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNRm0tSTBlYjAtOEFBSjYtMG56NTI2MUtFZnRXV0VZdjZhY0pzcjlOSXlnSC1qTVRNeVo4X2dUV0VzU0NOUUtMWnBja3lOV1RXVDlpc00xQTB6OWpiRTR3S3B5bi1GUEIwblJHRUhqTExhSHIxVWR1TzNXZ2g2U194dzZvT0t5aGVTUjJXYks1Ym1TQUtvdTRYdnJVU2hMZGpUVmFkUnp1R0paNGxxZ2lKdmhZYkdLeTRFR0Y2aFhNSXB1Zmww?oc=5"
+  },
+  {
    "id": "yt-soNLXvgUqNY",
    "cat": "co",
    "src": "YouTube",
@@ -785,6 +810,19 @@
    ],
    "url": "https://news.ycombinator.com/item?id=50513451",
    "ta": "أخبر HN: يتم استخلاص HN من رسائل البريد الإلكتروني للاحتيال"
+  },
+  {
+   "id": "gn-verceluisdkbehaviorsaiagentbridge",
+   "cat": "agents",
+   "src": "CASRAI",
+   "ts": "2026-11-16T02:28:47Z",
+   "t": "Vercel UI SDK: Behaviors & AI Agent Bridge",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9vaUtzd1hpeDdmdy0wV1Q3clRPRE1iXzhmRWhPTnAxcWVFbGJqOC1QTGg2M2pMSnBPaUxyNHAtQXBGQVN6eU8xM1dwZXVIZFlKcVNzdEJ4OHB6ZlZhV0ZvWEF3dFRDb1NLVmRrbE5QZHZBZmhfOG5mTA?oc=5",
+   "ta": "Vercel UI SDK: السلوكيات وجسر وكيل الذكاء الاصطناعي"
   },
   {
    "id": "hn-50513215",
@@ -996,6 +1034,19 @@
    ],
    "url": "https://www.nytimes.com/2026/11/15/science/birdbrain-crows-birds-research-decision.html",
    "ta": "الغربان تتخذ القرارات بشكل أسرع منا"
+  },
+  {
+   "id": "gn-howisafelyrunmyopenclawaiagent247onamacwithclaudecodestandin",
+   "cat": "agents",
+   "src": "ZDNET",
+   "ts": "2026-11-15T17:05:00Z",
+   "t": "How I safely run my OpenClaw AI agent 24/7 on a Mac – with Claude Code standing guard",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE16NTdZTDZ3c0d3WWRGbkwxSGZjM00xREszeEVBNENVN2M0RlljbU1hSzFWbHY4TWdjaTBhTXYydHZReV9UQTI0SG9ZMVVncjZqZ2hQa3pHYjB1NnlzbHhDZ2hRU0llcTNMcjlyUjBiQjMzWTNlYUdQNFZKdHY0ZDg?oc=5",
+   "ta": "كيف يمكنني تشغيل وكيل OpenClaw AI بأمان على مدار 24 ساعة طوال أيام الأسبوع على جهاز Mac - مع وجود Claude Code كحارس"
   },
   {
    "id": "gh-1459020341",
@@ -1329,6 +1380,19 @@
    "ta": "carla-foster/dynamo-for-revit-desktop: حزمة Dynamo for Revit 2026 المستقلة مع محرر الرسم البياني للعقدة ومكتبة الحزم المجمعة و..."
   },
   {
+   "id": "gn-awsintroducesuaefframeworkagnosticsystemforclosedloopaiagent",
+   "cat": "agents",
+   "src": "CASRAI",
+   "ts": "2026-11-14T20:23:23Z",
+   "t": "AWS Introduces UAEF Framework-Agnostic System for Closed-Loop AI Agent Evaluation",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOM1NOREExY09zT0x3b2xka05tdUlGUkpNTF90bHpNcWNMRHdUX21LMzQ2UnlKNTIxTDFlMnJRVUprcTRmTDNfa1lNVFZGbE5jUndKOTAzTFViSEt0TXJURVNvLTVhbkhwakhPY0RfdnNNVUJqdGwyZE55ZTI3a1ZhWjJn?oc=5",
+   "ta": "تقدم AWS نظام UAEF Framework-Agnostic لتقييم وكيل الذكاء الاصطناعي ذو الحلقة المغلقة"
+  },
+  {
    "id": "gh-1458091044",
    "cat": "agents",
    "src": "GitHub",
@@ -1457,6 +1521,19 @@
    ],
    "url": "https://www.netmeister.org/blog/claude-delusion.html",
    "ta": "الوهم كلود"
+  },
+  {
+   "id": "gn-llamacppvsollamav100vs20cloudtier2026",
+   "cat": "agents",
+   "src": "shattered.io",
+   "ts": "2026-11-14T12:54:52Z",
+   "t": "llama.cpp vs Ollama: v1.0, $0 vs $20 Cloud Tier [2026]",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1vTWZkMzQzWHpvTkxBdzRTb3Q5STNqYzFzM2pxeE9XRkpSWWRyNFhzbGV6WE1mRTNqX3NzZmxuLWdWdFdYX3lqUUlnaGlCd0poczhfckwzTnVxaWtZME94VUNSb01EY1p1QnBGYkJmZWIxUnZQRjVqY21xSFVGZw?oc=5",
+   "ta": "llama.cpp vs Ollama: الإصدار 1.0، $0 مقابل $20 Cloud Tier [2026]"
   },
   {
    "id": "hn-50495325",
@@ -1669,6 +1746,19 @@
    "ta": "إدارة الطيران الفيدرالية تصدر توقفًا على مستوى البلاد بسبب \"ظروف استثنائية\""
   },
   {
+   "id": "gn-amazonthreatintelligenceobservesthreatactorsrunningcybercrim",
+   "cat": "agents",
+   "src": "Amazon Web Services (AWS)",
+   "ts": "2026-11-13T20:26:42Z",
+   "t": "Amazon Threat Intelligence observes threat actors running cybercrime campaigns with ARTEX AI agents",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQME01UzVZbGlaOHczRl94ZE1sVmdtM1FfRjI5ZHdYWHNHaWFyMkMtT1EtN0tZYzhvUXp4aFpmSFpnZDhETUFfcjVUMHNmYlItdWpnQU1xeERfbDIxMW5PV3RFTXRnRXZxYTRFTDNnN21mai1zNkJQaTNSQXRPencxY1FLOHUwQmlXZWtQME5ONVQ3RTYxYzZmSDQxdFhBa1d3U2JhTmZMTDVHY1hlcHNBeUVZSERkTUFjOUxBZkNLQksyLWxsN3NmdEhfRFZpODhCaVU4OQ?oc=5",
+   "ta": "تراقب Amazon Threat Intelligence الجهات الفاعلة في مجال التهديد التي تدير حملات الجرائم الإلكترونية مع عملاء ARTEX AI"
+  },
+  {
    "id": "hn-50488464",
    "cat": "arch",
    "src": "Hacker News",
@@ -1761,6 +1851,19 @@
    "url": "https://www.youtube.com/watch?v=G_Jrexy_5Bg",
    "ta": "أخبار الذكاء الاصطناعي: الأمور لن تعود كما كانت أبدًا",
    "sa": "جرب @OpenAI Decisions API هنا: https://developers.openai.com/api/docs/guides/decisions إليك أخبار الذكاء الاصطناعي من أحد أعنف الأسابيع التي شهدناها على الإطلاق..."
+  },
+  {
+   "id": "gn-telgeplansarchitectureledentrybeforedetailingwork",
+   "cat": "arch",
+   "src": "Multibagg AI",
+   "ts": "2026-11-13T17:08:18Z",
+   "t": "Telge plans architecture-led entry before detailing work",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSHpxd2MweDJtcFowODJVMkt5YV9abTJ2eDk2YWRBX3Y3encxQ2NaMzdCeEdfeGZ0VmxmX2xkbWFJekxlYmZkbVVybFdXdG1EOVVsZDFtYXVwRjd5NTY4V1JuRk1kRHdNSTV4UEJjRVJ3LW5USXhCa1hjbnZyYnBZNFB2aDNxWnhtOGFrNklXYWNrWkdPOV9tZjBZWDZmdlNURWQxQmRoRllxaHNyOFBJLV9IaWFVQQ?oc=5",
+   "ta": "تخطط Telge للدخول القائم على الهندسة المعمارية قبل تفاصيل العمل"
   },
   {
    "id": "yt-PkAmyub12K8",
@@ -2069,6 +2172,32 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1OMVVYdjlTQWNCRFM0elFCdWNIOU5pTm5KQUNOWGc4RjlqbUlHU2J3NjhiQk96UTNZYTJWSVFYUEU4bDhNU1ZRSnc0VnlTQjVQVXVKdA?oc=5",
    "ta": "ما هي تكلفة الذكاء الاصطناعي في عام 2026؟ مقارنة الأسعار الكاملة"
+  },
+  {
+   "id": "gn-cursorpricing2026xsubscriptiontiersandusagelimits",
+   "cat": "agents",
+   "src": "Fello AI",
+   "ts": "2026-11-13T08:00:00Z",
+   "t": "Cursor Pricing 2026: X Subscription Tiers and Usage Limits",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE8tWko5QzJxdV94d1BiUG9hdzcxOFZHelEwTEZkdlJCbXl2V1FCQ3Z5Q2JrWXZDZVpQUThxWDZsNGpRbDNPZGRIRVFZbw?oc=5",
+   "ta": "تسعير المؤشر 2026: مستويات الاشتراك X وحدود الاستخدام"
+  },
+  {
+   "id": "gn-bestaiagentsin202630toolstestedandcompared",
+   "cat": "agents",
+   "src": "Fello AI",
+   "ts": "2026-11-13T08:00:00Z",
+   "t": "Best AI Agents in 2026: 30 Tools Tested and Compared",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBJWEF6NXdfZVZqYkVIdlF4cTBKdThTUFdvS3RHc0o1cnlRcEJ4MVFyem5jeXQ2bi13aWVDM0FyX05HaXl6UklNOVVqZw?oc=5",
+   "ta": "أفضل وكلاء الذكاء الاصطناعي في عام 2026: 30 أداة تم اختبارها ومقارنتها"
   },
   {
    "id": "gn-vscode1146addsaiagentinboxmodelcomparisonsandchatwindows",
@@ -2457,6 +2586,19 @@
    "ta": "واجهات برمجة التطبيقات لنموذج بيانات شركة AEC: ما يجب أن يعرفه العملاء حول الوصول والقيمة والتسعير"
   },
   {
+   "id": "gn-attentiveaimakesfirstacquisitionbuystakeoffmonkeyasbeamaipow",
+   "cat": "arch",
+   "src": "Business Wire",
+   "ts": "2026-11-12T17:00:00Z",
+   "t": "Attentive.ai Makes First Acquisition, Buys Takeoff Monkey as Beam AI Powers $500 Billion in Construction Bids",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNSllIVlFRUVgwU1NHV2Exc01JSWFPeUtONWM0bEhSa1BXU0FQZUNBb1hyMEJGcmtIUlU2d1lWaEtBWkFnMmxpRHZOSDVXZ3dqT3hIbmFwMHZiS1JjWlNtc2xIRW1IQ0xDMkk4NkVHYXdNd01VS2lqdlFjREp0ZWFoSDhwSS1qY0RrY1FCZE40ekNaTDkybnhCeFFnOS1kY01YQ1Y1WkFweExfa19mQ01qTWtxQ2hrTHhJZFRKeVBIbWdpUDV0bkZhY3ZVWENCMGhROFdmZ2hIOFVoQVFhWURDcWZFVkNQazhfVUZYRG1xbnhtX3NuNFFacWhnbw?oc=5",
+   "ta": "شركة Attentive.ai تقوم بأول عملية استحواذ، وتشتري Takeoff Monkey بينما تعمل Beam AI على توفير 500 مليار دولار في عطاءات البناء"
+  },
+  {
    "id": "yt-1M8vagUOdJM",
    "cat": "co",
    "src": "YouTube",
@@ -2710,6 +2852,19 @@
    "sa": "Fable 5.2 هو أذكى نموذج يمكنك استخدامه في Claude Code حاليًا، كما أنه أسرع طريقة لتجاوز حدود المعدلات الخاصة بك. لذلك هذا هو بلدي ..."
   },
   {
+   "id": "gn-howtolearnclaudeandclaudecodein2026afreebeginnersguide",
+   "cat": "agents",
+   "src": "Fello AI",
+   "ts": "2026-11-12T04:17:11Z",
+   "t": "How to Learn Claude and Claude Code in 2026: A Free Beginner’s Guide",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0tcTVUOGozc1ZYbkpHN3ZGX2lZZ3pGS00xNFBXamc4T0VFaEFObzJrNzVFUXJ6MmYtdmZsZHZ6U2ZXZjc0VTBTWHBsTDMxU2V3UXc?oc=5",
+   "ta": "كيفية تعلم كود كلود وكلود في عام 2026: دليل مجاني للمبتدئين"
+  },
+  {
    "id": "gh-1454806476",
    "cat": "agents",
    "src": "GitHub",
@@ -2801,6 +2956,19 @@
    "url": "https://www.youtube.com/watch?v=LFzBzzHZESE",
    "ta": "AMA معي ومع الفريق!",
    "sa": "انضم إلى رسالتي الإخبارية للحصول على تحديثات منتظمة للذكاء الاصطناعي 👇🏼 https://forwardfuture.com روابطي 🔗 👉🏻 X: https://x.com/matthewberman 👉🏻 Forward Future X: https://x.co..."
+  },
+  {
+   "id": "gn-maerskengineerdmitrybuykinsaysaiagentsmadecodecheapandmainte",
+   "cat": "agents",
+   "src": "BigGo Finance",
+   "ts": "2026-11-11T22:08:00Z",
+   "t": "Maersk Engineer Dmitry Buykin Says AI Agents Made Code Cheap — and Maintenance More Expensive",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1uQTNtbkxsU0lyQ3A0ZWVQQ2dmVEpYb0FiT1pkeVR5b1NjTlhPS0pRSkwyYWtteFBCTFZPcUE2NktuU0hXTzI5SXozMkNna0NJMzZqbm5ReFdVdDg?oc=5",
+   "ta": "يقول ديمتري بويكين، مهندس شركة ميرسك، إن وكلاء الذكاء الاصطناعي جعلوا البرمجة رخيصة الثمن - والصيانة أكثر تكلفة"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov11geminidecisionsapi",
@@ -3026,6 +3194,19 @@
    "ta": "op7418/guizang-game-skill: مهارة اللعبة المخفية: اسمح للذكاء الاصطناعي بإنشاء لعبة حركة ثلاثية الأبعاد من الصفر يمكن لعبها في المتصفح، مع عرض توضيحي قابل للتشغيل لـ \"Fog Lock Mountain Gate\". مهارة الوكيل لكلود كود / كوديكس ر ..."
   },
   {
+   "id": "gn-awsdetailsuaefforcrossframeworkaiagentevaluation",
+   "cat": "agents",
+   "src": "Unite.AI",
+   "ts": "2026-11-11T16:12:02Z",
+   "t": "AWS Details UAEF for Cross-Framework AI Agent Evaluation",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUzFsQ25ZZVo0MDBNa0dJWGRBZUkxUDhPY29salZNZTh4RzZQNmZYcGJ5b2hQNjZCWmttcTRZbzB3SDhucmhvRWtOcV9OSnhaZ3FNd09GZUk3MlJEdTN1U3FEbV9qc0JaaUgxRzIyVVl6S2s5ZkdISjFwZmhHYjdBd0lJLVo?oc=5",
+   "ta": "تفاصيل AWS UAEF لتقييم وكيل الذكاء الاصطناعي عبر الإطار"
+  },
+  {
    "id": "hn-50454951",
    "cat": "code",
    "src": "Hacker News",
@@ -3211,6 +3392,19 @@
    "ta": "أوتوديسك (NasdaqGS:ADSK) توقعات الأسهم وتوقعات المحللين"
   },
   {
+   "id": "gn-cursorvsclaudecodewhichoneshouldyoupayforonamac",
+   "cat": "agents",
+   "src": "Fello AI",
+   "ts": "2026-11-11T08:00:00Z",
+   "t": "Cursor vs Claude Code: Which One Should You Pay For on a Mac?",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBuOHlBTmZMdW55VzhoZUhndEJUM3FGVTdmemkxZGQ4ME5UN0xsVTRXLVpyR3dybDVRQy1Ea1BwVDRzY2VuTVcza1NGalRPdGtWYlZtZQ?oc=5",
+   "ta": "Cursor vs Claude Code: أيهما يجب أن تدفع ثمنه على جهاز Mac؟"
+  },
+  {
    "id": "gn-hanyangcyberuniversitytrainsaibimsmartconstructionadvisors",
    "cat": "arch",
    "src": "Chosunbiz",
@@ -3356,6 +3550,19 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOdmZMaDltVGdPaFVfMXRvWFQyQmp6VWR5R3JMdnlFNFFmWXEwOWZlSlA4dVo5SmZtV1FRQm4xTlIwTFItbjh6ZW42SDhTVURjN2VqZFEzc1huZmF6ZmgxaTc3a2Q3cVp3MlFrUkFFbzczZF9kSHNWQklfNkJuNFBKOHVJcmtMRi1Ma2c?oc=5",
    "ta": "3 أدوات لهندسة الذكاء الاصطناعي تعيد التفكير في سير العمل"
+  },
+  {
+   "id": "af-httpssimonwillisonnet2026Nov10llmgemini",
+   "cat": "agents",
+   "src": "Simon Willison",
+   "ts": "2026-11-10T20:09:44Z",
+   "t": "llm-gemini 0.36",
+   "s": "",
+   "tags": [
+    "مدونة"
+   ],
+   "url": "https://simonwillison.net/2026/Nov/10/llm-gemini/",
+   "ta": "الجوزاء 0.36"
   },
   {
    "id": "gh-1453132706",
@@ -3734,6 +3941,19 @@
    "sa": "اقرأ قصة نجاح العميل هنا: https://www.graphisoft.com/case-studies/oppenheim-architecture-bim-workflows-for-urban-masterplans أسسها تشا..."
   },
   {
+   "id": "gn-trimblelaunchesnewtrimbleconnectplatformaicapabilitiesaimeda",
+   "cat": "arch",
+   "src": "Planning, Building & Construction Today",
+   "ts": "2026-11-10T09:24:31Z",
+   "t": "Trimble launches new Trimble Connect Platform AI capabilities aimed at de-risking construction",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQSVlWU2dIN3pNMDh1b3c2MGcwY2pScU1hdVNmWS1fTUJzaWptOFljdFc0N2psMlgxc3F6cXBFNUxsWHRDVk9Ib3pYSDBvTlVVYWg1bzY2c28zOHROTXo2RXg0N0tUSGNBN2c5LXV1eHl3YS01akh2UGJBank0VmVrQ2VxWEJ3R3Y3RlUxd1RZZ1FaLXJ5WlE5aWJHYnpmSHZTaHZybTNzT2tZdkFOYnVfelExR05IMWEwSEFKTElGOEoxeDlfVkc5aGt3eS01MkNld2Izb3NNMHFnNzQycWM4c2h2ZnNGTEZ4ZnRIOGJuT1BLNjFwVDAyM3lTX3dadw?oc=5",
+   "ta": "تطلق شركة Trimble إمكانات جديدة لمنصة Trimble Connect للذكاء الاصطناعي تهدف إلى إزالة مخاطر البناء"
+  },
+  {
    "id": "rss-httpsaecmagcomcollaborationtrimbleembedsaiacrossaeco",
    "cat": "arch",
    "src": "AEC Magazine",
@@ -3840,6 +4060,19 @@
    "sa": "تقدم شركة 2U Q-Power المصنعة في المملكة المتحدة للشركات بديلاً لخدمات الذكاء الاصطناعي السحابية المتميزة."
   },
   {
+   "id": "af-httpssimonwillisonnet2026Nov10museember",
+   "cat": "agents",
+   "src": "Simon Willison",
+   "ts": "2026-11-10T07:28:21Z",
+   "t": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+   "s": "",
+   "tags": [
+    "مدونة"
+   ],
+   "url": "https://simonwillison.net/2026/Nov/10/muse-ember/",
+   "ta": "نقدم لكم نموذجنا الأصغر والأكثر كفاءة: Muse Ember"
+  },
+  {
    "id": "hn-50436636",
    "cat": "arch",
    "src": "Hacker News",
@@ -3853,17 +4086,30 @@
    "ta": "أخبر HN: تم الكشف عن جلسات دردشة Notion AI عبر اختراق Fireworks AI"
   },
   {
-   "id": "gn-restructuringyourconstructiondataforthefuture",
-   "cat": "arch",
-   "src": "Autodesk",
-   "ts": "2026-11-10T05:00:09Z",
-   "t": "Restructuring Your Construction Data for the Future",
+   "id": "af-httpssimonwillisonnet2026Nov10promptingclaudefable52",
+   "cat": "agents",
+   "src": "Simon Willison",
+   "ts": "2026-11-10T05:34:14Z",
+   "t": "Quoting Prompting Claude Fable 5.2",
    "s": "",
    "tags": [
-    "AI + AEC"
+    "مدونة"
    ],
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMWFrRGhNd3JlQWttVkRGekdQNVVzVW1sdVBHMjI0X3AycnVhbms4WDRwYmFsTjNzRTlvNjdYM3ZteVdGQ2RTTHB0TUVEM2VieXpoYTdJdFhiQ2hOM0ozWnFIVnFFbGY0UlFwb2p3Tnl4dGs2ZGNVQjBPbmd4WXF4R2taeGtseHNKaDNWNk5UbzFPN3c0UXhRVmtrZWlDekMzVHNHN1dqYXU5akVKUGQxT2NuMThpdw?oc=5",
-   "ta": "إعادة هيكلة بيانات البناء الخاصة بك للمستقبل"
+   "url": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
+   "ta": "نقلا عن مطالبة كلود الخرافة 5.2"
+  },
+  {
+   "id": "af-httpssimonwillisonnet2026Nov10yonkersrises",
+   "cat": "agents",
+   "src": "Simon Willison",
+   "ts": "2026-11-10T03:53:04Z",
+   "t": "Yonkers Rises",
+   "s": "",
+   "tags": [
+    "مدونة"
+   ],
+   "url": "https://simonwillison.net/2026/Nov/10/yonkers-rises/",
+   "ta": "يونكرز يرتفع"
   },
   {
    "id": "gh-1452175380",
@@ -3971,279 +4217,30 @@
    "ta": "Muse Ember: Meta تكشف عن أصغر نموذج لها حتى الآن مع سياق 1M-token للوكلاء الأرخص"
   },
   {
-   "id": "hn-50433079",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-09T22:19:12Z",
-   "t": "A year after the 100% AI mandate nobody understands our code",
-   "s": "163 نقطة، 200 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.reddit.com/r/ClaudeCode/comments/1xq2n3t/a_year_after_the_100_ai_mandate_nobody/",
-   "ta": "بعد مرور عام على تفويض الذكاء الاصطناعي بنسبة 100%، لم يفهم أحد الكود الخاص بنا"
-  },
-  {
-   "id": "yt-pf5tXJZM1Rw",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-09T21:04:16Z",
-   "t": "OpenAI spent $1.2 million hacking Linux... and it was a bargain",
-   "s": "Greptile is the only AI code reviewer that actually runs your code. Try it for free: https://greptile.com/go/fireship A model you're not allowed to u…",
-   "tags": [
-    "Fireship"
-   ],
-   "url": "https://www.youtube.com/watch?v=pf5tXJZM1Rw",
-   "ta": "أنفقت شركة OpenAI 1.2 مليون دولار لاختراق نظام Linux... وكانت هذه صفقة رابحة",
-   "sa": "Greptile هو مراجع أكواد الذكاء الاصطناعي الوحيد الذي يقوم بالفعل بتشغيل التعليمات البرمجية الخاصة بك. جربه مجانًا: https://greptile.com/go/fireship نموذج غير مسموح لك ..."
-  },
-  {
-   "id": "hn-50431144",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-09T20:04:55Z",
-   "t": "Claude Fable 5.2 scores 65 on Artificial Analysis, highest so far",
-   "s": "380 نقطة، 280 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
-   "ta": "حصل كلود فابل 5.2 على 65 درجة في التحليل الاصطناعي، وهي أعلى درجة حتى الآن"
-  },
-  {
-   "id": "gh-1451775929",
+   "id": "af-httpssimonwillisonnet2026Nov9llmanthropic",
    "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-09T19:13:52Z",
-   "t": "alexeyw/lot-map: A live map beside the chat that shows what Claude Code is doing: tool calls, model steps,…",
-   "s": "948 نجمة، لغة TypeScript",
+   "src": "Simon Willison",
+   "ts": "2026-11-09T23:58:46Z",
+   "t": "llm-anthropic 0.31",
+   "s": "",
    "tags": [
-    "جديد كلياً"
+    "مدونة"
    ],
-   "url": "https://github.com/alexeyw/lot-map",
-   "ta": "alexeyw/lot-map: خريطة حية بجانب الدردشة توضح ما يفعله كلود كود: استدعاءات الأدوات، خطوات النموذج،..."
+   "url": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
+   "ta": "إل إم أنثروبيك 0.31"
   },
   {
-   "id": "hn-50429906",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-09T18:56:29Z",
-   "t": "Claude Fable 5.2 and Mythos 5.2",
-   "s": "1000 نقطة، 8 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
-   "ta": "كلود فابل 5.2 و ميثوس 5.2"
-  },
-  {
-   "id": "gn-introducingclaudefable52andclaudemythos52",
+   "id": "af-httpssimonwillisonnet2026Nov9mysteriousbeeps",
    "cat": "agents",
-   "src": "Anthropic",
-   "ts": "2026-11-09T18:56:17Z",
-   "t": "Introducing Claude Fable 5.2 and Claude Mythos 5.2",
+   "src": "Simon Willison",
+   "ts": "2026-11-09T23:57:21Z",
+   "t": "Locating the source of a mysterious beep with Claude",
    "s": "",
    "tags": [
-    "Agents"
+    "مدونة"
    ],
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBvemRsWlN1U1g0NDQ5VUdhajBhZVVfd3J1eGRGV1lubnZQc3J6UVA1STMwdmlUM0k3a2c0SkN3VmdxYkplTnp4TWlheWV0NHlUUzFTYTU1b3Vmbmh1ZjVBakVlcw?oc=5",
-   "ta": "تقديم كلود فابل 5.2 وكلود ميثوس 5.2"
-  },
-  {
-   "id": "hn-50429636",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-09T18:39:22Z",
-   "t": "Show HN: MeowDisplay Is iPhone Mirroring, but in Reverse",
-   "s": "121 نقطة، 45 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://meowdisplay.app/",
-   "ta": "Show HN: MeowDisplay هو نسخة متطابقة من iPhone، ولكن في الاتجاه المعاكس"
-  },
-  {
-   "id": "hn-50429426",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-09T18:24:38Z",
-   "t": "Google Gemini routes personal Drive files and emails to human annotators",
-   "s": "739 نقطة، 148 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://github.com/thisisme6598/gemini_files/",
-   "ta": "يقوم Google Gemini بتوجيه ملفات Drive الشخصية ورسائل البريد الإلكتروني إلى المعلقين البشريين"
-  },
-  {
-   "id": "hn-50429068",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-09T18:01:10Z",
-   "t": "Claude Fable 5.2 and Mythos 5.2",
-   "s": "925 نقطة، 1054 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
-   "ta": "كلود فابل 5.2 و ميثوس 5.2"
-  },
-  {
-   "id": "gn-anaiagenttriedtosellmugstosaveitselfwhythatmattersforemploye",
-   "cat": "agents",
-   "src": "Human Resources Director",
-   "ts": "2026-11-09T17:39:20Z",
-   "t": "An AI agent tried to sell mugs to save itself. Why that matters for employers",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxON0xyT3dVTm5xZVNkSkpRZzY2Z05EU3FDb0xRcUdXSktEQ3hob2lGTXhQc2U5bUpEdHB4MFAyZW12TExxQU4xU25SRDkxMElreE8ycjM5TnZGTGN3VGNRUWJ2azg3dVl2d1piOU5fQjF1R21aSEJocFhhcXBFaTVJS1ZwUVdPVzZnV3BWRjU3dXpidVUtOE9SOVRhc1lLODV0ZmVlY0VRUGtiaTJhUWk0bHQxMi04X1FRZFhzNzF2VnlodVU3dU9jb0dVMmpndTk4dFp5ellB?oc=5",
-   "ta": "حاول أحد عملاء الذكاء الاصطناعي بيع الأكواب لإنقاذ نفسه. لماذا هذا مهم لأصحاب العمل"
-  },
-  {
-   "id": "gh-1451662178",
-   "cat": "code",
-   "src": "GitHub",
-   "ts": "2026-11-09T17:18:59Z",
-   "t": "Dodaios/ste80-humanizer: STE80 Humanizer: agent skill that removes AI tells and rewrites text 80% of the way to AS…",
-   "s": "736 نجمة، لغة Python",
-   "tags": [
-    "مشروع جديد"
-   ],
-   "url": "https://github.com/Dodaios/ste80-humanizer",
-   "ta": "Dodaios/ste80-humanizer: STE80 Humanizer: مهارة العميل التي تزيل الذكاء الاصطناعي، تخبر النص وتعيد كتابته بنسبة 80% من الطريق إلى AS..."
-  },
-  {
-   "id": "hn-50427934",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-09T16:36:38Z",
-   "t": "Show HN: DBDelve – Open-Source DB Client Made with Rust and GPUI",
-   "s": "125 نقطة، 50 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://news.ycombinator.com/item?id=50427934",
-   "ta": "إظهار HN: DBelve – عميل قاعدة بيانات مفتوح المصدر مصنوع من الصدأ وGPUI"
-  },
-  {
-   "id": "gn-geminuslandsbapcoenergiesbackingforbahrainenergydigitaltwin",
-   "cat": "arch",
-   "src": "Dealroom",
-   "ts": "2026-11-09T15:50:36Z",
-   "t": "Geminus lands Bapco Energies backing for Bahrain energy digital twin",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOc2hNTGlKSmRhSnlmcjNYRHJpVFlmaEdyOU4xZzd3bll2am5zVVlxaUdZWm55MmhRbm5Yd0lqSzdmWFZSaXFsdnViU0p6MEJ2UktuX2pNMzdid2VSTHc0VEdGWjZhYnRXTFdfdGx1NjRHd0U0SXE4akk4YVJoanhjNzd1aUFRSV93X3Z0Nm9pQk1GVVhPS05rSWJYZ25PLWRYaEZMVg?oc=5",
-   "ta": "جيمينوس تحصل على دعم بابكو للطاقة لمشروع التوأم الرقمي للطاقة في البحرين"
-  },
-  {
-   "id": "yt-kmPF75rTgh8",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-09T15:12:17Z",
-   "t": "Should Agents Say \"I Don't Know\"? | AirBnB at Interrupt 26",
-   "s": "Pedro Rodriguez, Director of Engineering, ML at Airbnb, explains why his team lets agents answer abstain when they aren't sure and sends those cases…",
-   "tags": [
-    "LangChain"
-   ],
-   "url": "https://www.youtube.com/shorts/kmPF75rTgh8",
-   "ta": "هل يجب على الوكلاء أن يقولوا \"لا أعرف\"؟ | AirBnB في المقاطعة 26",
-   "sa": "يشرح بيدرو رودريغيز، مدير الهندسة، تعلم الآلة في Airbnb، سبب سماح فريقه للعملاء بالامتناع عن التصويت عندما لا يكونون متأكدين ويرسل تلك الحالات..."
-  },
-  {
-   "id": "gn-aicompaniesareofferingarchitectssixfiguresforcadfileshaveyou",
-   "cat": "arch",
-   "src": "Archinect",
-   "ts": "2026-11-09T14:22:00Z",
-   "t": "AI companies are offering architects six figures for CAD files; have you been approached?",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPdndSdDNtcURJOE00WjhLQTcwTElyV1dFaFBLNFFfMXlyRzBIQ2dILUlNaFVScjF5TTE1T2NHamRfaVNYM3BpdWZwZ0FnZWVxd0ZRVmotME0yNElQSUVBN3dhNk9sdm1WR01yZExfeXpONnVnYTZrbnFTazl4dFUwWU5qQ0l3VDhDZ1BMZWF6aHlhNmx3Z09xajVJb3BOTkJXX3liT2lSOEstTlB5WE01NTVvYWV2T2FzZWFmZUtwV04wVXRTaW0yZTdKVTM?oc=5",
-   "ta": "تقدم شركات الذكاء الاصطناعي للمهندسين المعماريين ستة أرقام لملفات CAD؛ هل تم الاتصال بك؟"
-  },
-  {
-   "id": "gn-railtownaiexpandsappledeveloperecosystemwithopensourceswiftf",
-   "cat": "agents",
-   "src": "Yahoo Finance",
-   "ts": "2026-11-09T13:00:00Z",
-   "t": "Railtown AI Expands Apple Developer Ecosystem with Open-Source Swift Framework for Private On-Device AI Agents and Local Knowledge Bases",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcGl2UVNTdEt2U2stYzZ5MGgwaHdabGZISHRCaFhSX3JjYm5va1hyZ1N6dGFVbUMtWGRtdF9XMGE2dVBXVFV4UFREa1RBaWF2THpPeXhicEgxNDRtWklaLV94Y0F0SXZtT2NrZldoMzlGSzVGcEhVTnB2UThXRmZScldpYUtiVi1JZWd1cXZXZjlGdzJQdzlfdWw0U3Z2Y2dW?oc=5",
-   "ta": "تعمل شركة Railtown AI على توسيع النظام البيئي لمطوري Apple من خلال إطار عمل Swift مفتوح المصدر لوكلاء الذكاء الاصطناعي الخاصين على الأجهزة وقواعد المعرفة المحلية"
-  },
-  {
-   "id": "gn-seehowpraxisaishumanfirstdigitaltwinsinsidecanvastakethe2amq",
-   "cat": "arch",
-   "src": "Instructure",
-   "ts": "2026-11-09T11:45:53Z",
-   "t": "See how Praxis AI’s Human-First Digital Twins™ inside Canvas take the 2 am questions off your faculty’s plate.",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQelBFSFJrdldiaG1SUnFsMXFOMi01ZE9fZnJLNl9SZFZ4d0tEc2ZmX2Y4WTVtRFVlc0tuVk93RW01dm83M3RmQ1NXR09QdXBfOWtCcldrYWNLX09zNV9kOHFNWVRGNkZHTkNXeHp1YnV5NzB5MXpqczFJVDZOdEFtaFJhRFN2SzczQWRpb0Y3bV9EQmNiRUI5bkFFZ3A?oc=5",
-   "ta": "شاهد كيف يقوم برنامج Praxis AI’s Human-First Digital Twins™ داخل Canvas بطرح أسئلة الساعة الثانية صباحًا من لوحة أعضاء هيئة التدريس لديك."
-  },
-  {
-   "id": "gn-yaleledprojectusesaicodingagentstoteachrobotscomplextasks",
-   "cat": "agents",
-   "src": "Yale Daily News",
-   "ts": "2026-11-09T08:20:19Z",
-   "t": "Yale-led project uses AI coding agents to teach robots complex tasks",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPU0UtTzNhbnJMYzZLYml0NDU3QzlsOFZoN0x2Unk1bGd3TUp5dmdPUlBDQzNZZmlaaG5ybzA2eEs2STdKV1ZkNTl3TDFUUTRWWmRCY1pEaGNsTjBkN01GVVU0UnQ4Vk9jeE1pdHV1cFlsbFpFY3JBVVF1cDlJUnpNUkFYejA3dTltcWVpMm9jVkVtV3hJTWVvV1hnc3JOTjR2SmxBZEhB?oc=5",
-   "ta": "يستخدم المشروع الذي تقوده جامعة ييل عوامل ترميز الذكاء الاصطناعي لتعليم الروبوتات المهام المعقدة"
-  },
-  {
-   "id": "hn-50422628",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-09T08:17:49Z",
-   "t": "ChatGPT Desktop forwards your SSH agent to remote machines",
-   "s": "221 نقطة، 80 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://news.ycombinator.com/item?id=50422628",
-   "ta": "يقوم ChatGPT Desktop بإعادة توجيه وكيل SSH الخاص بك إلى الأجهزة البعيدة"
-  },
-  {
-   "id": "gn-top8opensourceaicodingagentsbenchmarkcompliance",
-   "cat": "agents",
-   "src": "AIMultiple",
-   "ts": "2026-11-09T08:00:00Z",
-   "t": "Top 8 Open Source AI Coding Agents: Benchmark & Compliance",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9SOVhYWW5EV1lpWUNsZVRaT0ZicDdOTzJWb3laWUFvd1BWRmNDLTRjOVQ1c0VlbjhnbmpVNXlTYnJ6ZWYzWmhsbGQtMEdZMnVMMW5HNHYwSQ?oc=5",
-   "ta": "أفضل 8 وكلاء ترميز للذكاء الاصطناعي مفتوح المصدر: المعيار والامتثال"
-  },
-  {
-   "id": "gh-1451084291",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-09T07:58:11Z",
-   "t": "Moh4696/cinematic-skill: Agent skill for narrated cinematic films built entirely from code: one continuous camera…",
-   "s": "661 نجمة، لغة Python",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/Moh4696/cinematic-skill",
-   "ta": "Moh4696/cinema-skill: مهارة الوكيل للأفلام السينمائية المروية المبنية بالكامل من الكود: كاميرا واحدة متصلة..."
+   "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+   "ta": "تحديد مصدر صوت تنبيه غامض مع كلود"
   }
  ]
 }
