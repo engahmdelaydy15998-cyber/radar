@@ -143,6 +143,7 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
     <button class="chip" data-mode="uturn">↩️ يوتيرن</button>
     <button class="chip" data-mode="checkpoint">🚓 لجنة</button>
     <button class="chip" id="tiles">🗺 شكل</button>
+    <button class="chip" id="gfollow" style="background:#4285f4;color:#fff;border-color:#4285f4">🧭 جوجل + سجّل</button>
   </div>
   <div id="sheet">
     <div class="handle"></div>
@@ -443,6 +444,11 @@ function setMode(m){
   try { map.getCanvas().style.cursor = mode ? 'crosshair' : ''; } catch(e){}
 }
 document.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => setMode(b.dataset.mode));
+$('gfollow').onclick = () => {                     // لحد ما جودة طرقنا تتحسن: جوجل بيدّي الاتجاهات، وإحنا بنسجّل الرحلة بصمت
+  if (!start || !dest){ $('msg').textContent = 'محتاج من وإلى الأول عشان أفتحلك جوجل مابس.'; return; }
+  window.open(`https://www.google.com/maps/dir/?api=1&origin=${start.lat},${start.lon}&destination=${dest.lat},${dest.lon}&travelmode=driving&dir_action=navigate`, '_blank');
+  if (watchId === null){ if (!$('name').value.trim()) $('name').value = 'متابعة جوجل إلى ' + (dest.name || 'الوجهة'); startRec(); }
+};
 function setPlace(which, p, label){
   const o = {lat:p.lat, lon:p.lon, name:label || p.name || 'نقطة على الخريطة'};
   if (which === 'a'){ start = o; startCur = false; $('qa').value = o.name;
