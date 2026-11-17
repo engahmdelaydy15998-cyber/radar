@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>سكّتي</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{color-scheme:dark;--bg:#050505;--card:#0f0f10;--ink:#f1f1f2;--mut:#8d8d94;--line:#262629;--ok:#5fd3a0;--bad:#ff6b81;--acc:#f5c451}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "IBM Plex Sans Arabic",system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;padding:12px;max-width:600px;margin-inline:auto}
+h1{font-size:22px;margin:2px 0 12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--acc)}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:var(--acc)}
+h2{font-size:15px;margin:0 0 8px;color:var(--mut);font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:12px}
+#map{height:320px;border-radius:10px;direction:ltr}
+button{font:inherit;border:0;border-radius:10px;padding:10px 14px;background:var(--ink);color:var(--bg);cursor:pointer}
+button.sec{background:transparent;color:var(--ink);border:1px solid var(--line)}
+button.on{background:var(--acc);color:#050505;border-color:var(--acc)}
+button.red{background:var(--bad);color:#fff}
+button.big{width:100%;font-size:17px;padding:13px}
+input[type=text],textarea{font:inherit;width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+textarea{min-height:90px;direction:ltr;font-size:12px}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}
+.row>*{flex:1}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.stat{background:var(--bg);border-radius:10px;padding:8px 4px;text-align:center}
+.stat b{display:block;font-size:19px;font-variant-numeric:tabular-nums}
+.stat span{font-size:11px;color:var(--mut)}
+.note{font-size:13px;color:var(--mut)}
+#msg{font-size:13px;color:var(--bad);min-height:18px}
+.rt{border:2px solid var(--line);border-radius:12px;padding:10px;margin-top:8px;cursor:pointer}
+.rt.sel{border-color:var(--acc)}
+.rt .h{display:flex;justify-content:space-between;gap:8px;font-weight:700}
+.rt .best{color:var(--ok)}
+.rt .m{font-size:13px;color:var(--mut);margin-top:4px}
+.rt .bad{color:var(--bad)}
+.trip{display:flex;gap:10px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}
+.trip:first-of-type{border-top:0}
+.trip .t{flex:1;min-width:0}
+.trip .t div{font-size:12px;color:var(--mut)}
+body.nav{padding:0;overflow:hidden}
+body.nav h1,body.nav .card{display:none}
+body.nav .card.mapcard{display:block;padding:0;border:0;background:none;margin:0}
+body.nav .mapcard>*:not(#map){display:none}
+body.nav #map{position:fixed!important;inset:0;height:100%!important;border-radius:0;z-index:1}
+#nav[hidden]{display:none}
+#nbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:#0f766e;color:#fff;display:flex;align-items:center;gap:14px;padding:calc(env(safe-area-inset-top) + 10px) 16px 12px}
+#narrow{font-size:54px;line-height:1;min-width:64px;text-align:center}
+#ndist{font-size:30px;font-weight:700}
+#ntext{font-size:17px}
+#nbot{position:fixed;bottom:0;left:0;right:0;z-index:1000;background:var(--card);border-top:1px solid var(--line);display:flex;gap:8px;align-items:center;justify-content:space-around;padding:10px 12px calc(env(safe-area-inset-bottom) + 10px)}
+.nb{text-align:center}.nb b{display:block;font-size:22px;font-variant-numeric:tabular-nums}.nb span{font-size:12px;color:var(--mut)}
+.rad{font-size:20px;line-height:26px;text-align:center;filter:drop-shadow(0 0 2px #fff)}
+.rad.osm{opacity:.65}
+#nrad{position:fixed;top:104px;right:12px;z-index:1000;background:#7c3aed;color:#fff;border-radius:999px;padding:6px 14px;font-weight:700}
+#nrad.warn{background:#b91c1c}
+#nrad[hidden]{display:none}
+</style>
+</head>
+<body>
+<h1 class="brand"><span class="dot"></span>سكّتي</h1>
+
+<div class="card mapcard">
+  <div class="row" style="margin-top:0">
+    <input type="text" id="q" placeholder="ابحث عن وجهة (أو اضغط على الخريطة)" style="flex:3">
+    <button id="go" style="flex:1">بحث</button>
+  </div>
+  <div class="row">
+    <button class="sec on" data-mode="dest">📍 وجهة</button>
+    <button class="sec" data-mode="start">🔵 بداية</button>
+    <button class="sec" data-mode="block">⛔ مقفول</button>
+    <button class="sec" data-mode="radar">📷 رادار</button>
+    <button class="sec" id="tiles">🗺 شكل</button>
+  </div>
+  <div id="sr"></div>
+  <div id="map"></div>
+  <div class="note" style="margin-top:6px" id="modeHint">اضغط على الخريطة لتحديد الوجهة. البداية هي موقعك الحالي لو سمحت بالموقع.</div>
+  <div style="height:8px"></div>
+  <button class="big" id="plan">اقترح لي الطريق</button>
+  <div id="res"></div>
+  <div id="msg"></div>
+</div>
+
+<div class="card">
+  <h2>تسجيل رحلة</h2>
+  <input type="text" id="name" placeholder="اسم الرحلة (اختياري)">
+  <div style="height:8px"></div>
+  <div class="grid">
+    <div class="stat"><b id="lt">00:00</b><span>الوقت</span></div>
+    <div class="stat"><b id="ld">0.0</b><span>كم</span></div>
+    <div class="stat"><b id="ls">0</b><span>وقفات</span></div>
+    <div class="stat"><b id="lv">0</b><span>كم/س</span></div>
+  </div>
+  <div style="height:8px"></div>
+  <button class="big" id="rec">▶ ابدأ التسجيل</button>
+  <div class="note">الوقفة = وقوف 8 ثواني أو أكتر. سجّل رحلاتك الفعلية، وكل رحلة بتخلي الاقتراحات أدق.</div>
+</div>
+
+<div class="card">
+  <h2>رحلاتي <span id="cnt"></span></h2>
+  <div id="list"></div>
+  <div class="row">
+    <button class="sec" id="exp">تصدير</button>
+    <button class="sec" id="imp">استيراد</button>
+  </div>
+  <textarea id="io" hidden placeholder="الصق بيانات التصدير هنا واضغط استيراد."></textarea>
+</div>
+
+<div id="nav" hidden>
+  <div id="nrad" hidden></div>
+  <div id="nbar"><div id="narrow">↑</div><div><div id="ndist">—</div><div id="ntext">—</div></div></div>
+  <div id="nbot">
+    <div class="nb"><b id="nspd">٠</b><span>كم/س</span></div>
+    <div class="nb"><b id="neta">--:--</b><span>الوصول</span></div>
+    <div class="nb"><b id="nrem">-- د</b><span id="nremkm">-- كم</span></div>
+    <button class="sec" id="nmute">🔊</button>
+    <button class="red" id="nexit">خروج</button>
+  </div>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+/*CORE_START*/
+const STOP_V = 1.5;     // م/ث: أقل من كده = واقف
+const STOP_MIN = 8;     // ثواني لازم تعدي عشان تتحسب وقفة
+const FF = 1.3;         // معامل تقريبي لتحويل زمن OSRM (طريق فاضي) لزمن واقعي
+const PRIOR = 0.4;      // وقفات متوقعة لكل كم لو معنديش معلومات عن التقاطعات
+const INT_STOP = 0.03;  // احتمال وقفة عند كل تقاطع في جزء ما مشيتوش
+const CELL = 0.0002;    // حجم خلية الفهرس (~22م)
+
+function hav(a, b){
+  const R = 6371000, r = Math.PI / 180;
+  const dLa = (b.lat - a.lat) * r, dLo = (b.lon - a.lon) * r;
+  const x = Math.sin(dLa/2)**2 + Math.cos(a.lat*r) * Math.cos(b.lat*r) * Math.sin(dLo/2)**2;
+  return 2 * R * Math.asin(Math.sqrt(x));
+}
+function analyze(all){
+  const pts = all.filter(p => !p.acc || p.acc <= 50);
+  const z = {dist:0, dur:0, stops:0, stopTime:0, move:0, avg:0, moveAvg:0, max:0, stopList:[]};
+  if (pts.length < 2) return z;
+  let dist = 0, max = 0, stops = 0, stopTime = 0, move = 0, run = 0, runPt = null;
+  const stopList = [];
+  const flush = () => {
+    if (run >= STOP_MIN){ stops++; stopTime += run; stopList.push({lat:runPt.lat, lon:runPt.lon, dur:run}); }
+    run = 0; runPt = null;
+  };
+  for (let i = 1; i < pts.length; i++){
+    const a = pts[i-1], b = pts[i], dt = (b.t - a.t) / 1000;
+    if (dt <= 0) continue;
+    if (dt > 60){ flush(); continue; }
+    let d = hav(a, b); if (d < 3) d = 0;
+    const v = d / dt;
+    if (v > 70) continue;
+    dist += d; if (v > max) max = v;
+    if (v < STOP_V){ if (!run) runPt = a; run += dt; } else { flush(); move += dt; }
+  }
+  flush();
+  const dur = (pts[pts.length-1].t - pts[0].t) / 1000;
+  return {dist, dur, stops, stopTime, move, max, stopList,
+          avg: dur ? dist / dur * 3.6 : 0, moveAvg: move ? dist / move * 3.6 : 0};
+}
+
+/* فهرس مكاني: أي رحلات عدّت جنب أي نقطة */
+const cellKey = (la, lo) => Math.round(la/CELL) + ',' + Math.round(lo/CELL);
+function buildIndex(T){
+  const g = new Map();
+  T.forEach(t => t.pts.forEach(p => {
+    const k = cellKey(p.lat, p.lon); let s = g.get(k);
+    if (!s){ s = new Set(); g.set(k, s); } s.add(t.id);
+  }));
+  return g;
+}
+function near(g, la, lo){
+  const r = new Set(), a = Math.round(la/CELL), b = Math.round(lo/CELL);
+  for (let i = -1; i <= 1; i++) for (let j = -1; j <= 1; j++){
+    const s = g.get((a+i) + ',' + (b+j)); if (s) s.forEach(x => r.add(x));
+  }
+  return r;
+}
+/* مواقع الوقفات المتكررة، ونسبة المرات اللي وقفت فيها لما عدّيت */
+function makeCtx(T, blocks, nowMs, radars){
+  const grid = buildIndex(T), cl = [], allDurs = [];
+  T.forEach(t => (t.res.stopList || []).forEach(s => {
+    allDurs.push(s.dur);
+    let c = cl.find(c => hav(c, s) < 35);
+    if (!c){ c = {lat:s.lat, lon:s.lon, trips:new Set(), durs:[]}; cl.push(c); }
+    c.trips.add(t.id); c.durs.push(s.dur);
+  }));
+  const clusters = cl.map(c => {
+    const passes = Math.max(near(grid, c.lat, c.lon).size, c.trips.size);
+    return {lat:c.lat, lon:c.lon, ratio:c.trips.size / passes, dur:c.durs.reduce((a,b)=>a+b,0)/c.durs.length};
+  });
+  const avgStop = allDurs.length ? allDurs.reduce((a,b)=>a+b,0)/allDurs.length : 25;
+  return {T, grid, clusters, avgStop, blocks:(blocks||[]).filter(b => b.until > nowMs), nowMs, radars:radars || []};
+}
+function densify(C, step){
+  const o = [C[0]];
+  for (let i = 1; i < C.length; i++){
+    const a = C[i-1], b = C[i], n = Math.max(1, Math.ceil(hav(a, b) / step));
+    for (let k = 1; k <= n; k++) o.push({lat:a.lat+(b.lat-a.lat)*k/n, lon:a.lon+(b.lon-a.lon)*k/n});
+  }
+  return o;
+}
+function minutesOfDay(ms){ const d = new Date(ms); return d.getHours()*60 + d.getMinutes(); }
+function scoreRoute(r, ctx){
+  const C0 = r.coords.map(([lo, la]) => ({lat:la, lon:lo}));
+  const D = densify(C0, 20);
+  let total = 0, covered = 0;
+  const per = new Map(), cumD = [0];
+  for (let i = 1; i < D.length; i++){
+    const d = hav(D[i-1], D[i]); total += d; cumD.push(total);
+    const ids = near(ctx.grid, D[i].lat, D[i].lon);
+    if (ids.size) covered += d;
+    ids.forEach(id => per.set(id, (per.get(id)||0) + d));
+  }
+  const first = D[0], last = D[D.length-1];
+  let full = ctx.T.filter(t => total && (per.get(t.id)||0)/total >= 0.85 &&
+    hav(t.pts[0], first) < 150 && hav(t.pts[t.pts.length-1], last) < 150);
+  const nowM = minutesOfDay(ctx.nowMs);
+  const sameTime = full.filter(t => { const dm = Math.abs(minutesOfDay(t.start) - nowM); return Math.min(dm, 1440-dm) <= 90; });
+  const used = sameTime.length ? sameTime : full;
+  const mean = f => used.reduce((s,t)=>s+f(t),0) / used.length;
+  // وقفات متوقعة من الأماكن المعروفة على الطريق
+  const onRoute = ctx.clusters.filter(c => D.some(p => hav(p, c) < 40));
+  let expStops = onRoute.reduce((s,c)=>s+c.ratio, 0);
+  let stopSec = onRoute.reduce((s,c)=>s+c.ratio*c.dur, 0);
+  // أول مرة: نقدّر الوقفات من عدد التقاطعات، والتعب من عدد اللفات (الشمال والـ U-turn أصعب)
+  const info = r.info, uncM = Math.max(0, total - covered);
+  const unc = info && total ? info.inter * INT_STOP * (uncM / total) : uncM / 1000 * PRIOR;
+  expStops += unc; stopSec += unc * ctx.avgStop;
+  const turnSec = info ? info.turns * 6 + info.left * 8 + info.uturn * 30 : 0;
+  const blocked = ctx.blocks.some(b => D.some(p => hav(p, b) < 40));
+  // الرادارات اللي على الطريق (أقل من 25م من خط الطريق) وبُعدها من البداية
+  let radars = [];
+  (ctx.radars || []).forEach(rd => {
+    let bi = -1, bd = 25;
+    for (let i = 0; i < D.length; i++){ const d = hav(D[i], rd); if (d < bd){ bd = d; bi = i; } }
+    if (bi >= 0) radars.push({at:cumD[bi], lat:rd.lat, lon:rd.lon, max:rd.max || 0, src:rd.src || ''});
+  });
+  radars.sort((a, b) => a.at - b.at);
+  radars = radars.filter((r, i) => i === 0 || r.at - radars[i-1].at > 60);   // نفس الرادار من مصدرين
+  let adj, observed = false;
+  if (used.length){
+    observed = true; adj = mean(t => t.res.dur); expStops = mean(t => t.res.stops);
+  } else adj = r.duration * FF + stopSec + turnSec;
+  return {adj, osrm:r.duration, dist:total, info:info || null, radars, coverage:total ? covered/total : 0, expStops,
+          observed, nTrips:used.length, sameTime:sameTime.length > 0, blocked,
+          rank:adj + (blocked ? 1e6 : 0)};
+}
+/*CORE_END*/
+
+const $ = id => document.getElementById(id);
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmtT = s => { s = Math.round(s); const h = Math.floor(s/3600), m = Math.floor(s%3600/60), x = s%60;
+  const p = n => String(n).padStart(2,'0'); return h ? `${h}:${p(m)}:${p(x)}` : `${p(m)}:${p(x)}`; };
+const km = m => (m/1000).toFixed(1);
+const mins = s => Math.max(1, Math.round(s/60));
+
+/* التخزين */
+function load(k){ try { return JSON.parse(localStorage.getItem(k) || '[]'); } catch(e){ return []; } }
+let trips = load('trips'), blocks = load('blocks'), myRadars = load('radars'), osmCams = load('osmcams');
+function save(){ try { localStorage.setItem('trips', JSON.stringify(trips)); localStorage.setItem('blocks', JSON.stringify(blocks)); localStorage.setItem('radars', JSON.stringify(myRadars)); }
+  catch(e){ $('msg').textContent = 'تعذّر الحفظ على الجهاز. استخدم التصدير.'; } }
+const pack = pts => pts.map(p => [p.t, +p.lat.toFixed(5), +p.lon.toFixed(5), Math.round(p.acc||0)]);
+const unpack = a => a.map(r => ({t:r[0], lat:r[1], lon:r[2], acc:r[3]}));
+
+/* لو مفيش نت وقت الفتح، مكتبة الخريطة مش بتتحمل: التسجيل لازم يفضل شغال */
+const mapOffline = typeof L === 'undefined';
+if (mapOffline){
+  const nop = new Proxy(function(){}, {get:(t, k) => k === Symbol.toPrimitive ? () => '' : nop, apply:() => nop});
+  window.L = nop;
+  document.getElementById('map').innerHTML = '<div class="note" style="padding:14px">الخريطة محتاجة نت. افتح الصفحة مرة وانت متصل، والتسجيل بيشتغل من غير نت.</div>';
+}
+/* الخريطة */
+const map = L.map('map').setView([30.0444, 31.2357], 12);
+const baseLayers = [
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {subdomains:'abcd', maxZoom:19, attribution:'© OpenStreetMap © CARTO'}),
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:19, attribution:'© OpenStreetMap'})];
+let baseIdx = 0; baseLayers[0].addTo(map);
+$('tiles').onclick = () => { baseLayers[baseIdx].remove(); baseIdx = 1 - baseIdx; baseLayers[baseIdx].addTo(map); };
+let mode = 'dest', start = null, dest = null, startAuto = true, destName = '';
+let mStart = null, mDest = null, mMe = null, blockLayer = L.layerGroup().addTo(map), radarLayer = L.layerGroup().addTo(map), routeLayer = L.layerGroup().addTo(map);
+const hints = {dest:'اضغط على الخريطة لتحديد الوجهة.', start:'اضغط على الخريطة لتحديد نقطة البداية.',
+  block:'اضغط على مكان مقفول لتعليمه (بيفضل أسبوع). اضغط عليه تاني لإلغائه.',
+  radar:'اضغط على مكان الرادار لتعليمه. اضغط عليه تاني لإلغائه. الرادارات المعروفة من OpenStreetMap بتتحمل لوحدها وقت اقتراح الطريق.'};
+document.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => {
+  mode = b.dataset.mode;
+  document.querySelectorAll('[data-mode]').forEach(x => x.classList.toggle('on', x === b));
+  $('modeHint').textContent = hints[mode];
+});
+function setStart(ll, auto){
+  start = {lat:ll.lat, lon:ll.lng ?? ll.lon}; startAuto = !!auto;
+  if (mStart) mStart.setLatLng([start.lat, start.lon]); else mStart = L.circleMarker([start.lat, start.lon], {radius:9, color:'#2563eb', fillOpacity:.9}).addTo(map);
+}
+function setDest(ll){
+  dest = {lat:ll.lat, lon:ll.lng ?? ll.lon};
+  if (mDest) mDest.setLatLng([dest.lat, dest.lon]); else mDest = L.circleMarker([dest.lat, dest.lon], {radius:10, color:'#ff6b81', fillColor:'#ff6b81', fillOpacity:.9}).addTo(map);
+}
+function drawBlocks(){
+  blockLayer.clearLayers();
+  blocks = blocks.filter(b => b.until > Date.now());
+  blocks.forEach(b => L.circle([b.lat, b.lon], {radius:40, color:'#b91c1c', fillOpacity:.35}).addTo(blockLayer));
+}
+map.on('click', e => {
+  if (mode === 'dest'){ destName = ''; setDest(e.latlng); }
+  else if (mode === 'start') setStart(e.latlng, false);
+  else if (mode === 'block'){
+    const p = {lat:e.latlng.lat, lon:e.latlng.lng}, i = blocks.findIndex(b => hav(b, p) < 40);
+    if (i >= 0) blocks.splice(i, 1); else blocks.push({...p, until: Date.now() + 7*864e5});
+    save(); drawBlocks();
+  } else {
+    const p = {lat:e.latlng.lat, lon:e.latlng.lng}, i = myRadars.findIndex(b => hav(b, p) < 40);
+    if (i >= 0) myRadars.splice(i, 1); else myRadars.push(p);
+    save(); drawRadars();
+  }
+});
+drawBlocks();
+function drawRadars(){
+  radarLayer.clearLayers();
+  const add = (r, cls) => L.marker([r.lat, r.lon], {icon:L.divIcon({html:'📷', className:'rad ' + cls, iconSize:[26, 26]}), interactive:false}).addTo(radarLayer);
+  osmCams.forEach(r => add(r, 'osm')); myRadars.forEach(r => add(r, ''));
+}
+drawRadars();
+if (navigator.geolocation) navigator.geolocation.getCurrentPosition(p => {
+  if (startAuto){ setStart({lat:p.coords.latitude, lng:p.coords.longitude}, true); map.setView([start.lat, start.lon], 14); }
+}, () => {}, {timeout:8000});
+
+/* البحث: Photon أولاً (أحسن مع الكتابة الناقصة ويفضّل القريب من الخريطة)، وNominatim احتياطي */
+async function geocode(q){
+  const c = map.getCenter ? map.getCenter() : {lat:30.0444, lng:31.2357};
+  try {
+    const j = await (await fetch(`https://photon.komoot.io/api/?limit=6&lat=${c.lat}&lon=${c.lng}&q=${encodeURIComponent(q)}`)).json();
+    const r = (j.features || []).map(f => { const p = f.properties || {};
+      return {lat:f.geometry.coordinates[1], lon:f.geometry.coordinates[0],
+        name:[p.name, p.street, p.district || p.suburb, p.city || p.county, p.state].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join('، ')}; });
+    if (r.length) return r;
+  } catch(e){}
+  const j = await (await fetch('https://nominatim.openstreetmap.org/search?format=json&limit=6&accept-language=ar&q=' + encodeURIComponent(q))).json();
+  return j.map(x => ({lat:+x.lat, lon:+x.lon, name:x.display_name}));
+}
+/* اقتراحات وانت بتكتب + آخر الأماكن اللي بحثت عنها + البعد عنك، زي جوجل مابس */
+const recents = () => load('recents');
+function pickPlace(x){
+  setDest({lat:x.lat, lng:x.lon}); destName = (x.name || '').split('،')[0]; map.setView([x.lat, x.lon], 15); $('sr').innerHTML = '';
+  const r = recents().filter(y => !(Math.abs(y.lat - x.lat) < 1e-4 && Math.abs(y.lon - x.lon) < 1e-4));
+  r.unshift({lat:x.lat, lon:x.lon, name:x.name});
+  try { localStorage.setItem('recents', JSON.stringify(r.slice(0, 8))); } catch(e){}
+}
+function showPlaces(list, icon){
+  const ref = start || (map.getCenter ? {lat:map.getCenter().lat, lon:map.getCenter().lng} : null);
+  $('sr').innerHTML = list.map((x, i) => `<div class="rt" data-i="${i}" style="padding:8px;font-size:14px;display:flex;justify-content:space-between;gap:8px"><span>${icon} ${esc(x.name)}</span><span class="note" style="white-space:nowrap">${ref ? Math.round(hav(ref, x)/1000) + ' كم' : ''}</span></div>`).join('');
+  $('sr').querySelectorAll('[data-i]').forEach(d => d.onclick = () => pickPlace(list[+d.dataset.i]));
+}
+let qTimer = 0, qSeq = 0;
+async function doSearch(){
+  const q = $('q').value.trim(); $('msg').textContent = '';
+  if (!q){ const r = recents(); if (r.length) showPlaces(r, '🕘'); else $('sr').innerHTML = ''; return; }
+  const my = ++qSeq;
+  try {
+    const r = await geocode(q); if (my !== qSeq) return;
+    if (!r.length){ $('sr').innerHTML = ''; $('msg').textContent = 'ما لقيتش المكان ده. جرّب اسم تاني أو اضغط على الخريطة.'; return; }
+    showPlaces(r, '📍');
+  } catch(e){ if (my === qSeq) $('msg').textContent = 'البحث محتاج إنترنت.'; }
+}
+$('go').onclick = doSearch;
+$('q').addEventListener('input', () => { clearTimeout(qTimer); qTimer = setTimeout(() => { const n = $('q').value.trim().length; if (n >= 2 || n === 0) doSearch(); }, 400); });
+$('q').addEventListener('focus', () => { if (!$('q').value.trim()) doSearch(); });
+$('q').addEventListener('keydown', e => { if (e.key === 'Enter') $('go').click(); });
+
+/* اقتراح الطرق */
+let results = [];
+$('plan').onclick = async () => {
+  $('msg').textContent = ''; $('res').innerHTML = ''; $('sr').innerHTML = '';
+  if (!start){ $('msg').textContent = 'حدد نقطة البداية (زرار 🔵 بداية ثم اضغط على الخريطة).'; return; }
+  if (!dest){ $('msg').textContent = 'حدد الوجهة الأول.'; return; }
+  $('plan').textContent = '...بدور على الطرق';
+  try {
+    results = await computeRoutes(start, dest);
+    try { localStorage.setItem('plan', JSON.stringify(results)); } catch(e){}
+    showRoutes(0);
+  } catch(e){ $('msg').textContent = 'مقدرتش أجيب الطرق. اتأكد من الإنترنت وجرّب تاني.'; }
+  $('plan').textContent = 'اقترح لي الطريق';
+};
+async function fetchCams(bb){
+  const q = `[out:json][timeout:20];node["highway"="speed_camera"](${bb.s},${bb.w},${bb.n},${bb.e});out;`;
+  const j = await (await fetch('https://overpass-api.de/api/interpreter', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:'data=' + encodeURIComponent(q)})).json();
+  const have = new Set(osmCams.map(c => c.lat + ',' + c.lon));
+  (j.elements || []).forEach(e => { if (!have.has(e.lat + ',' + e.lon)) osmCams.push({lat:e.lat, lon:e.lon, max:parseInt(e.tags && e.tags.maxspeed) || 0, src:'osm'}); });
+  try { localStorage.setItem('osmcams', JSON.stringify(osmCams)); } catch(e){}
+  drawRadars();
+}
+async function computeRoutes(a, b){
+  const u = `https://router.project-osrm.org/route/v1/driving/${a.lon},${a.lat};${b.lon},${b.lat}?alternatives=3&overview=full&geometries=geojson&steps=true`;
+  const j = await (await fetch(u)).json();
+  if (!j.routes || !j.routes.length) throw new Error('no route');
+  const T = trips.map(t => { const pts = unpack(t.pts); return {id:t.id, start:t.start, pts, res:analyze(pts)}; });
+  // رادارات OpenStreetMap على نطاق الطرق (لو النت بطيء نكمل بالمخزّن عندنا)
+  const all = j.routes.flatMap(r => r.geometry.coordinates);
+  const bb = {s:Math.min(...all.map(c => c[1])) - 0.001, n:Math.max(...all.map(c => c[1])) + 0.001, w:Math.min(...all.map(c => c[0])) - 0.001, e:Math.max(...all.map(c => c[0])) + 0.001};
+  try { await Promise.race([fetchCams(bb), new Promise((_, no) => setTimeout(no, 5000))]); } catch(e){}
+  const ctx = makeCtx(T, blocks, Date.now(), myRadars.map(r => ({...r, src:'me'})).concat(osmCams));
+  return j.routes.map((r, i) => {
+    const rr = {coords:r.geometry.coordinates, duration:r.duration, info:routeInfo(r), steps:routeSteps(r)};
+    return {i, r:rr, s:scoreRoute(rr, ctx)};
+  }).sort((a, b) => a.s.rank - b.s.rank);
+}
+function routeSteps(route){
+  const o = [];
+  (route.legs || []).forEach(l => (l.steps || []).forEach(s => {
+    const m = s.maneuver || {}; if (!m.location) return;
+    o.push({lat:m.location[1], lon:m.location[0], type:m.type, mod:m.modifier || '', name:s.name || '', exit:m.exit || 0});
+  }));
+  return o;
+}
+/* عدد اللفات والتقاطعات من خطوات OSRM */
+function routeInfo(route){
+  let turns = 0, left = 0, uturn = 0, inter = 0;
+  (route.legs || []).forEach(l => (l.steps || []).forEach(s => {
+    inter += (s.intersections || []).length;
+    const m = s.maneuver || {}, mod = m.modifier || '';
+    if (['depart', 'arrive', 'continue', 'new name'].includes(m.type) || mod === 'straight') return;
+    turns++;
+    if (mod === 'uturn') uturn++;
+    else if (mod.includes('left') && !mod.includes('slight')) left++;
+  }));
+  return {turns, left, uturn, inter};
+}
+function why(x, k){
+  const s = x.s, fastestOsrm = results.reduce((a,b) => b.s.osrm < a.s.osrm ? b : a);
+  if (s.blocked) return '<span class="bad">⚠ فيه مكان إنت معلّمه مقفول</span>';
+  const parts = [];
+  if (s.observed) parts.push(`مشيته ${s.nTrips} ${s.nTrips > 2 ? 'مرات' : 'مرة'}${s.sameTime ? ' في نفس الوقت تقريباً' : ''}، والزمن من رحلاتك الفعلية`);
+  else if (s.coverage > 0.3) parts.push(`مشيت حوالي ${Math.round(s.coverage*100)}% منه`);
+  else parts.push('جديد عليك، التقدير تقريبي');
+  if (s.info) parts.push(`${s.info.turns} لفة${s.info.left ? ' (منها ' + s.info.left + ' شمال)' : ''}${s.info.uturn ? ' + ' + s.info.uturn + ' يوتيرن' : ''}، ${s.info.inter} تقاطع`);
+  if (k === 0 && x !== fastestOsrm){
+    const dk = (x.s.dist - fastestOsrm.s.dist) / 1000;
+    parts.push(`${dk > 0.2 ? 'أطول ' + dk.toFixed(1) + ' كم لكن ' : ''}متوقع يكون أسهل وأسرع فعلياً من الطريق "الأقصر"`);
+  }
+  return parts.join(' · ');
+}
+let selIdx = 0;
+function showRoutes(sel){
+  selIdx = sel; routeLayer.clearLayers();
+  results.forEach((x, k) => {
+    const ll = x.r.coords.map(([lo, la]) => [la, lo]);
+    L.polyline(ll, {color: k === sel ? (k === 0 ? '#15803d' : '#2563eb') : '#9ca3af', weight: k === sel ? 7 : 4, opacity: k === sel ? 1 : .7}).addTo(routeLayer);
+  });
+  const ll = results[sel].r.coords.map(([lo, la]) => [la, lo]);
+  map.fitBounds(L.latLngBounds(ll), {padding:[20, 20]});
+  $('res').innerHTML = results.map((x, k) => `<div class="rt ${k === sel ? 'sel' : ''}" data-k="${k}">
+    <div class="h"><span>${k === 0 ? '<span class="best">★ الأفضل ليك</span>' : 'بديل ' + k}</span><span>${mins(x.s.adj)} دقيقة${x.s.observed ? '' : ' (تقدير)'}</span></div>
+    <div class="m">${km(x.s.dist)} كم · وقفات متوقعة ≈ ${x.s.expStops.toFixed(1)} · وقت OSRM ${mins(x.s.osrm)} د${(x.s.radars || []).length ? ' · 📷 ' + x.s.radars.length + ' رادار' : ''}</div>
+    <div class="m">${why(x, k)}</div></div>`).join('') +
+    '<button class="big" id="startNav" style="margin-top:10px;background:var(--ok);color:#050505">▶ ابدأ القيادة</button>';
+  $('res').querySelectorAll('.rt').forEach(d => d.onclick = () => showRoutes(+d.dataset.k));
+  $('startNav').onclick = () => startNav(sel);
+}
+
+/* القيادة: نفس فكرة جوجل مابس. سهم اللفة، المسافة، السرعة، الوصول، وإعادة الحساب */
+let navOn = false, nav = null, navStartedRec = false, voiceOn = true;
+const arab = n => Math.round(n).toLocaleString('ar-EG');
+const fmtD = m => m >= 1000 ? (m/1000).toLocaleString('ar-EG', {maximumFractionDigits:1}) + ' كم' : arab(Math.max(10, Math.round(m/10)*10)) + ' م';
+function arrowOf(st){
+  if (st.type === 'arrive') return '⚑';
+  if (st.type === 'roundabout' || st.type === 'rotary') return '⟳';
+  return ({left:'←', right:'→', 'slight left':'↖', 'slight right':'↗', 'sharp left':'↙', 'sharp right':'↘', straight:'↑', uturn:'↶'})[st.mod] || '↑';
+}
+function instrOf(st){
+  if (st.type === 'arrive') return 'وصلت لوجهتك';
+  const on = st.name ? ' على ' + st.name : '';
+  if (st.type === 'depart') return 'ابدأ السير' + on;
+  if (st.type === 'roundabout' || st.type === 'rotary') return 'ادخل الدوار وخد المخرج ' + arab(st.exit || 1) + on;
+  const dir = st.mod.includes('left') ? 'شمال' : 'يمين';
+  if (st.mod === 'uturn') return 'اعمل يوتيرن' + on;
+  if (st.mod === 'straight' || !st.mod) return 'كمّل مستقيم' + on;
+  if (st.mod.includes('slight')) return 'خد ميلة ' + dir + on;
+  if (st.mod.includes('sharp')) return 'لف ' + dir + ' بحدة' + on;
+  return 'لف ' + dir + on;
+}
+function speak(t){
+  if (!voiceOn || !('speechSynthesis' in window)) return;
+  try { const u = new SpeechSynthesisUtterance(t); u.lang = 'ar-EG'; speechSynthesis.cancel(); speechSynthesis.speak(u); } catch(e){}
+}
+function setupNavRoute(rt){
+  const C = rt.r.coords.map(([lo, la]) => ({lat:la, lon:lo}));
+  const D = densify(C, 20), cum = [0];
+  for (let i = 1; i < D.length; i++) cum.push(cum[i-1] + hav(D[i-1], D[i]));
+  const steps = rt.r.steps.map(s => ({...s}));
+  let from = 0;
+  steps.forEach(st => {                      // مكان كل لفة على الطريق (بالمتر من البداية)
+    let best = from, bd = 1e12;
+    for (let i = from; i < D.length; i++){
+      const d = hav(D[i], st);
+      if (d < bd){ bd = d; best = i; }
+      if (bd < 15 && d > bd + 60) break;
+    }
+    st.at = cum[best]; from = best;
+  });
+  return {D, cum, steps, radars:(rt.s.radars || []).map(r => ({...r})), total:cum[cum.length-1], adj:rt.s.adj, last:0, off:0, spoken:{}, rerouting:0, lastRe:0, arrived:false};
+}
+function drawNavLine(rt){
+  routeLayer.clearLayers();
+  L.polyline(rt.r.coords.map(([lo, la]) => [la, lo]), {color:'#2563eb', weight:9, opacity:.9}).addTo(routeLayer);
+}
+async function startNav(sel){
+  const rt = results[sel];
+  if (!rt || !rt.r.steps || !rt.r.steps.length){ $('msg').textContent = 'اطلب الطرق من جديد الأول عشان تبدأ القيادة.'; return; }
+  nav = setupNavRoute(rt); navOn = true;
+  document.body.classList.add('nav'); $('nav').hidden = false; map.invalidateSize();
+  drawNavLine(rt);
+  if (watchId === null){ if (!$('name').value.trim()) $('name').value = 'إلى ' + (destName || 'الوجهة'); await startRec(); navStartedRec = true; }
+  speak(instrOf(nav.steps[0]));
+  navRender(0);
+}
+function navUpdate(p){
+  if (!nav) return;
+  const me = {lat:p.coords.latitude, lon:p.coords.longitude}, D = nav.D;
+  let bi = -1, bd = 1e12;
+  const scan = (a, b) => { for (let i = a; i <= b; i++){ const d = hav(D[i], me); if (d < bd){ bd = d; bi = i; } } };
+  scan(Math.max(0, nav.last - 10), Math.min(D.length - 1, nav.last + 150));
+  if (bd > 60) scan(0, D.length - 1);          // ابعدنا عن آخر مكان: نفتش الطريق كله
+  const speed = p.coords.speed != null && !isNaN(p.coords.speed) ? p.coords.speed * 3.6 : 0;
+  if (bd > 50){ nav.off++; if (nav.off >= 3) reroute(me); navRender(speed, true); return; }
+  nav.off = 0; nav.last = bi;
+  navRender(speed);
+  map.setView([me.lat, me.lon], 17);
+}
+function navRender(speed, off){
+  const n = nav, here = n.cum[n.last], rem = Math.max(0, n.total - here);
+  let k = n.steps.findIndex(s => s.at > here + 8); if (k < 0) k = n.steps.length - 1;
+  const st = n.steps[k], dNext = Math.max(0, st.at - here);
+  $('narrow').textContent = off ? '⟲' : arrowOf(st);
+  $('ndist').textContent = off ? '' : fmtD(dNext);
+  $('ntext').textContent = off ? 'جاري إعادة حساب الطريق...' : instrOf(st);
+  $('nspd').textContent = arab(speed || 0);
+  const remSec = n.adj * (n.total ? rem / n.total : 0), eta = new Date(Date.now() + remSec * 1000);
+  $('neta').textContent = eta.toLocaleTimeString('ar-EG', {hour:'2-digit', minute:'2-digit'});
+  $('nrem').textContent = arab(Math.max(1, Math.round(remSec / 60))) + ' د';
+  $('nremkm').textContent = fmtD(rem);
+  const nr = n.radars.find(r => r.at > here), dr = nr ? nr.at - here : 0;
+  const over = nr && nr.max && speed > nr.max + 3;
+  $('nrad').hidden = !(nr && dr <= 2000);
+  if (nr && dr <= 2000){ $('nrad').textContent = '📷 رادار بعد ' + fmtD(dr) + (nr.max ? ' · الحد ' + arab(nr.max) : ''); $('nrad').classList.toggle('warn', !!over); }
+  if (off) return;
+  if (nr) [500, 150].forEach(th => {                       // تنبيه الرادار
+    const key = 'r' + Math.round(nr.at) + ':' + th;
+    if (dr <= th && !n.spoken[key]){ n.spoken[key] = 1; if (dr > th * 0.6) speak('رادار بعد ' + (th === 500 ? 'خمسمية' : 'ميت وخمسين') + ' متر' + (nr.max ? '، الحد ' + arab(nr.max) : '')); }
+  });
+  if (over && dr < 300 && !n.spoken['o' + Math.round(nr.at)]){ n.spoken['o' + Math.round(nr.at)] = 1; speak('هدّي السرعة'); }
+  [500, 100].forEach(th => {                     // تنبيه صوتي مرة عند 500م ومرة عند 100م
+    const key = k + ':' + th;
+    if (dNext <= th && !n.spoken[key]){ n.spoken[key] = 1; if (dNext > th * 0.6 && st.type !== 'arrive') speak('بعد ' + (th === 500 ? 'خمسمية' : 'مية') + ' متر ' + instrOf(st)); }
+  });
+  if (!n.arrived && rem < 30){ n.arrived = true; speak('وصلت لوجهتك'); setTimeout(exitNav, 5000); }
+}
+async function reroute(me){
+  const old = nav;
+  if (!old || old.rerouting || Date.now() - old.lastRe < 15000) return;
+  old.rerouting = 1; old.lastRe = Date.now();
+  try {
+    const rt = (await computeRoutes(me, dest))[0];
+    if (nav !== old) return;
+    nav = setupNavRoute(rt); nav.lastRe = old.lastRe;
+    drawNavLine(rt); speak('تم إعادة حساب الطريق');
+  } catch(e){}
+  if (nav === old) old.rerouting = 0;
+}
+function exitNav(){
+  if (!navOn) return;
+  navOn = false; nav = null;
+  document.body.classList.remove('nav'); $('nav').hidden = true; $('nrad').hidden = true; map.invalidateSize();
+  try { speechSynthesis.cancel(); } catch(e){}
+  if (navStartedRec && watchId !== null) stopRec();
+  navStartedRec = false;
+  if (results.length) showRoutes(Math.min(selIdx, results.length - 1));
+}
+$('nexit').onclick = exitNav;
+$('nmute').onclick = () => { voiceOn = !voiceOn; $('nmute').textContent = voiceOn ? '🔊' : '🔇'; if (!voiceOn){ try { speechSynthesis.cancel(); } catch(e){} } };
+
+/* التسجيل */
+let watchId = null, pts = [], tick = null, wl = null, t0 = 0;
+async function startRec(){
+  if (!('geolocation' in navigator)){ $('msg').textContent = 'المتصفح ده مش بيدعم GPS.'; return; }
+  $('msg').textContent = ''; pts = []; t0 = Date.now();
+  try { wl = await navigator.wakeLock.request('screen'); } catch(e){}
+  watchId = navigator.geolocation.watchPosition(p => {
+    pts.push({t:p.timestamp, lat:p.coords.latitude, lon:p.coords.longitude, acc:p.coords.accuracy, v:p.coords.speed});
+    const ll = [p.coords.latitude, p.coords.longitude];
+    if (mMe) mMe.setLatLng(ll); else mMe = L.circleMarker(ll, {radius:8, color:'#ea580c', fillOpacity:1}).addTo(map);
+    if (navOn) navUpdate(p); else map.panTo(ll);
+  }, e => { $('msg').textContent = e.code === 1 ? 'لازم تسمح للموقع من إعدادات المتصفح، والصفحة لازم تتفتح عبر https.' : 'مشكلة في الـGPS: ' + e.message; },
+  {enableHighAccuracy:true, maximumAge:0, timeout:20000});
+  tick = setInterval(live, 1000);
+  $('rec').textContent = '■ إيقاف وحفظ'; $('rec').classList.add('red');
+}
+function live(){
+  const r = analyze(pts), last = pts[pts.length-1];
+  $('lt').textContent = fmtT((Date.now() - t0)/1000); $('ld').textContent = km(r.dist); $('ls').textContent = r.stops;
+  $('lv').textContent = last && last.v != null ? Math.round(last.v * 3.6) : 0;
+}
+function stopRec(){
+  navigator.geolocation.clearWatch(watchId); clearInterval(tick);
+  try { wl && wl.release(); } catch(e){}
+  $('rec').textContent = '▶ ابدأ التسجيل'; $('rec').classList.remove('red'); watchId = null;
+  if (pts.length < 5){ $('msg').textContent = 'التسجيل قصير جداً، اتلغى.'; return; }
+  const name = $('name').value.trim() || 'رحلة ' + new Date().toLocaleDateString('ar-EG');
+  trips.unshift({id:Date.now(), name, start:pts[0].t, pts:pack(pts)});
+  save(); $('name').value = ''; renderTrips();
+}
+$('rec').onclick = () => watchId === null ? startRec() : stopRec();
+
+/* قائمة الرحلات */
+function renderTrips(){
+  $('cnt').textContent = trips.length ? `(${trips.length})` : '';
+  $('list').innerHTML = trips.map(t => {
+    const r = analyze(unpack(t.pts)), d = new Date(t.start);
+    const when = d.toLocaleDateString('ar-EG', {weekday:'short', day:'numeric', month:'short'}) + ' ' + d.toLocaleTimeString('ar-EG', {hour:'2-digit', minute:'2-digit'});
+    return `<div class="trip"><div class="t"><b>${esc(t.name)}</b><div>${when} · ${fmtT(r.dur)} · ${km(r.dist)} كم · ${r.stops} وقفات</div></div>
+      <button class="sec" data-del="${t.id}">حذف</button></div>`;
+  }).join('') || '<div class="note">مفيش رحلات لسه. كل ما تسجل أكتر، الاقتراحات بتبقى أدق.</div>';
+  $('list').querySelectorAll('[data-del]').forEach(b => b.onclick = () => {
+    if (b.dataset.sure !== '1'){ b.dataset.sure = '1'; b.textContent = 'متأكد؟'; return; }
+    trips = trips.filter(t => t.id !== +b.dataset.del); save(); renderTrips();
+  });
+}
+$('exp').onclick = () => { const io = $('io'); io.hidden = false; io.value = JSON.stringify({trips, blocks}); io.select(); };
+$('imp').onclick = () => {
+  const io = $('io');
+  if (io.hidden || !io.value.trim()){ io.hidden = false; io.value = ''; return; }
+  try {
+    const d = JSON.parse(io.value), add = Array.isArray(d) ? d : (d.trips || []), have = new Set(trips.map(t => t.id));
+    add.forEach(t => { if (t && t.id && t.pts && !have.has(t.id)) trips.push(t); });
+    trips.sort((a, b) => b.start - a.start); save(); renderTrips(); io.value = ''; io.hidden = true;
+  } catch(e){ $('msg').textContent = 'البيانات مش سليمة.'; }
+};
+renderTrips();
+/* آخر خطة اتحسبت بتفضل ظاهرة حتى لو فتحت الصفحة من غير نت */
+try { const p = JSON.parse(localStorage.getItem('plan') || 'null'); if (p && p.length){ results = p; showRoutes(0); } } catch(e){}
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+</script>
+</body>
+</html>
