@@ -169,7 +169,7 @@ def build(name, pal):
         td.polygon([(cx-k*0.55,cy-k),(cx-k*0.55,cy+k),(cx+k,cy)],fill=(255,255,255,255)); over(base,tl)
     blip(318,0.35,0.050,(236,52,52),playg,solid=(236,52,52))
     # architecture: simple bold mud-brick dome + vault + arched door (Hassan Fathy spirit); melts into the radar
-    ax,ay=pos(54,0.325); AW=N*0.165
+    ax,ay=pos(54,0.325); AW=N*0.108
     echo(ax,ay,AW*0.30,pal['arch_echo'],0.325,54,0.4)
     gl=layer(); ImageDraw.Draw(gl).ellipse([ax-AW*1.0,ay-AW*0.9,ax+AW*1.0,ay+AW*0.9],fill=pal['arch_echo']+(34,))
     over(base,gl.filter(ImageFilter.GaussianBlur(AW*0.35)))
