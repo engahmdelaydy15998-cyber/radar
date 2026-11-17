@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T05:18:53Z",
+ "updated": "2026-11-17T05:21:25Z",
  "demo": false,
  "items": [
   {
@@ -242,6 +242,20 @@
    "sa": "يشرح Check Point CTO جوناثان زانجر كيف يستخدم فريقه OpenAI Daybreak لتحليل نقاط الضعف وتحويل النتائج إلى حماية للعملاء..."
   },
   {
+   "id": "hn-50522639",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-16T20:21:58Z",
+   "t": "Ask HN: Are iPhone Duo Customers Happy?",
+   "s": "13 نقطة، 8 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50522639",
+   "url2": "",
+   "ta": "اسأل HN: هل عملاء iPhone Duo سعداء؟"
+  },
+  {
    "id": "yt-ytmawkPTP24",
    "cat": "long",
    "src": "YouTube",
@@ -411,6 +425,19 @@
    ],
    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xxuzgg/amd_loom_fun_added_radeon_9700_support_over_the/",
    "ta": "AMD Loom Fun: تمت إضافة دعم Radeon 9700 خلال عطلة نهاية الأسبوع. تم قياس 48 طرازًا بمتوسط ​​سرعة 42% عبر llama.cpp."
+  },
+  {
+   "id": "gn-googlefindsexploit_agenttheaithatturnspatchesintoexploitsuna",
+   "cat": "agents",
+   "src": "Pasquale Pillitteri",
+   "ts": "2026-11-16T17:05:07Z",
+   "t": "Google finds exploit_agent, the AI that turns patches into exploits unaided",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOODI0VkhnSkg3eTdVSi1lS09wb01tcHExNlR2djhBeTJEbW1jT2xkb1JzcEpES2hkbjRIeVk5ZEg3bTNoS255RmVsS1VhamszelItQlRwS2kwT3MxQkdyVThneXFIZWhGaHRLcXRyN0VRNmhzS1FSXzlnWFhYTTQ2NXBmandNa0R1SDhqaFd6eDhLUF9hZTdPc210S1I?oc=5",
+   "ta": "تعثر Google على Exploit_agent، وهو الذكاء الاصطناعي الذي يحول التصحيحات إلى برامج استغلال دون مساعدة"
   },
   {
    "id": "yt-vVVdxMwPBuA",
@@ -610,6 +637,19 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNamtYZzZRWkppY0o2ZlF5QndRckh2ZUFrWHY0eWJnajdqblBYZEdiQUdPanNVNTBYMm5rWF9xUmxCUUlodWdyNWNSZXUxaHZHTW1tUWlqWjJZNmsyZ3pISGFvYUJ0N0xmdWYxS08zQ0MwZXU4dENTWnAwR1RhYjNGeTR1Y0t0Mm52SDlUV3B4VEJfRVNjVmx4ZWM5bw?oc=5",
    "ta": "وكلاء الذكاء الاصطناعي مفتوح المصدر للأمن السيبراني: الفحص ثم الثقة"
+  },
+  {
+   "id": "gn-nvidiaskillevaluatorchecksandevaluationsforaiagentskills",
+   "cat": "agents",
+   "src": "news.lavx.hu",
+   "ts": "2026-11-16T11:07:39Z",
+   "t": "NVIDIA/SkillEvaluator: Checks and evaluations for AI agent skills",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQ1ZQdzl0WU5hS3NGWC00SEdkanlmXzY0UTI3TDZCaEdZYTR2QzE3dzRURDZRTjJkOFN2czJMMGxuZU9CM2lNWkF5TTVQVVhsU05qeG1SUVZpbFFISkFrUklGTExMZV96MFpVSXBocXpvN1ZEekswQVQzNWd2Y042WTloMUtHQXlFbkgtb1paTm40cXNCcnFJTFJKS2pCRkNBTnRhT2NDMA?oc=5",
+   "ta": "NVIDIA/SkillEvaluator: عمليات التحقق والتقييم لمهارات وكيل الذكاء الاصطناعي"
   },
   {
    "id": "yt-ZpsxNdHMCzI",
@@ -1879,6 +1919,19 @@
    "sa": "جرب @OpenAI Decisions API هنا: https://developers.openai.com/api/docs/guides/decisions إليك أخبار الذكاء الاصطناعي من أحد أعنف الأسابيع التي شهدناها على الإطلاق..."
   },
   {
+   "id": "gn-telgeplansarchitectureledentrybeforedetailingwork",
+   "cat": "arch",
+   "src": "Multibagg AI",
+   "ts": "2026-11-13T17:08:18Z",
+   "t": "Telge plans architecture-led entry before detailing work",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSHpxd2MweDJtcFowODJVMkt5YV9abTJ2eDk2YWRBX3Y3encxQ2NaMzdCeEdfeGZ0VmxmX2xkbWFJekxlYmZkbVVybFdXdG1EOVVsZDFtYXVwRjd5NTY4V1JuRk1kRHdNSTV4UEJjRVJ3LW5USXhCa1hjbnZyYnBZNFB2aDNxWnhtOGFrNklXYWNrWkdPOV9tZjBZWDZmdlNURWQxQmRoRllxaHNyOFBJLV9IaWFVQQ?oc=5",
+   "ta": "تخطط Telge للدخول القائم على الهندسة المعمارية قبل تفاصيل العمل"
+  },
+  {
    "id": "yt-PkAmyub12K8",
    "cat": "co",
    "src": "YouTube",
@@ -2851,6 +2904,19 @@
    "ta": "إطار عمل تقييم وكيل الذكاء الاصطناعي مفتوح المصدر من AWS الذي يعمل على تقوية أداة تصنيف الذكاء الاصطناعي الخاصة به ضد الحقن الفوري"
   },
   {
+   "id": "gn-buildlocalaicodingworkflowwithopensourcemodels",
+   "cat": "agents",
+   "src": "TechGig",
+   "ts": "2026-11-12T05:44:35Z",
+   "t": "Build local AI coding workflow with open-source models",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVk10R0NrdkkwbFpOUWpvMlp3VkQxY3lOczB4aW1QZWZqeXlrWkl6dGktbEJScGZMbGt3eGtTQ0RPal9URUtSQmZOci16OFl6UVBtYkJYZmVtWGRpRUJ2azVuX2FwS1M1UXlxOEpkQmFXUHFldWVJVlE4bFVqUTJVNjN2b2k5WEg0ZHRoSWliZGZ6VzY3RXlN0gGcAUFVX3lxTE5LZjRLcGRYcFdZT1VkaEo3anVkOXQwN0VGYmFTM3lOdFBpVnlyUjA5bXBuSTVROE9vRU5obWIzcWxKMXhKNDZPU3lROG9ZcHBQQ1ByTWFvM29hQlFQQkZxMXpaOEU3WkY1R2g5X0JNZC1kWDFvM0lfcDBjYmZGdFdyR1FsdWdydjVMSDB1RThIdmYtZDNpSUtkSmFkRw?oc=5",
+   "ta": "أنشئ سير عمل ترميز الذكاء الاصطناعي المحلي باستخدام نماذج مفتوحة المصدر"
+  },
+  {
    "id": "hn-50463399",
    "cat": "code",
    "src": "Hacker News",
@@ -3139,6 +3205,19 @@
    "url": "https://www.youtube.com/watch?v=uND6iY2qp_c",
    "ta": "AlphaGenome 2: تعليم الذكاء الاصطناعي لقراءة الجينوم البشري بأكمله",
    "sa": "98% من الحمض النووي البشري لا يقوم ببناء البروتينات، بل يتحكم في كيفية عمل خلايانا، ويحمل أدلة حيوية حول سبب حدوث الأمراض ولماذا تفشل 90% من الأدوية الجديدة في..."
+  },
+  {
+   "id": "gn-howwebuilttheagentsthatbuiltawsemulator",
+   "cat": "agents",
+   "src": "About Amazon",
+   "ts": "2026-11-11T17:25:18Z",
+   "t": "How we built the agents that built AWS Emulator",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWjlFckw4Vk4yZDlaOU5oeE9hWmM5OU5wQk80SzBJQjhYZkRnY3hCU1hZSGhteUhFeFlBYk01S1BPM3FoXzZnLUExakFzRm1IRU5JTHphSEJOTUxuVDZZTE9LTnJFR3hienJ2ZzR4T0w0ZFZaaGVPeDFwMklGVVNfMUw2cG9qUUE?oc=5",
+   "ta": "كيف قمنا ببناء الوكلاء الذين قاموا ببناء AWS Emulator"
   },
   {
    "id": "yt-m1NtVno-y7Q",
@@ -4098,6 +4177,19 @@
    "ta": "تسعير كود كلود 2026: الخطط والتكاليف ودليل المستوى المجاني"
   },
   {
+   "id": "gn-whatishermesagentdefinitionfeaturesandhowitworks",
+   "cat": "agents",
+   "src": "Hostinger",
+   "ts": "2026-11-10T08:00:00Z",
+   "t": "What is Hermes Agent? Definition, features, and how it works",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1aazE2d0NyX0F4SDg2eHZZVDlmRGpia05nV3p5Y2xUVVBUdE5uclBjcE90QkxRWm9nM3VIYVV2eWpocFo4UzNnUi16MlZEX0ZzalVFSHY2ck95SGR1dFR0YlgyeXlpMExFZWFLVw?oc=5",
+   "ta": "ما هو وكيل هيرميس؟ التعريف والميزات وطريقة العمل"
+  },
+  {
    "id": "rss-httpsaecmagcomworkstationsg2digitallaunchesquadgpu2userver",
    "cat": "arch",
    "src": "AEC Magazine",
@@ -4149,98 +4241,6 @@
    ],
    "url": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
    "ta": "نقلا عن مطالبة كلود الخرافة 5.2"
-  },
-  {
-   "id": "gn-restructuringyourconstructiondataforthefuture",
-   "cat": "arch",
-   "src": "Autodesk",
-   "ts": "2026-11-10T05:00:09Z",
-   "t": "Restructuring Your Construction Data for the Future",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMWFrRGhNd3JlQWttVkRGekdQNVVzVW1sdVBHMjI0X3AycnVhbms4WDRwYmFsTjNzRTlvNjdYM3ZteVdGQ2RTTHB0TUVEM2VieXpoYTdJdFhiQ2hOM0ozWnFIVnFFbGY0UlFwb2p3Tnl4dGs2ZGNVQjBPbmd4WXF4R2taeGtseHNKaDNWNk5UbzFPN3c0UXhRVmtrZWlDekMzVHNHN1dqYXU5akVKUGQxT2NuMThpdw?oc=5",
-   "ta": "إعادة هيكلة بيانات البناء الخاصة بك للمستقبل"
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov10yonkersrises",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-10T03:53:04Z",
-   "t": "Yonkers Rises",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/10/yonkers-rises/",
-   "ta": "يونكرز يرتفع"
-  },
-  {
-   "id": "gh-1452175380",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-10T03:50:38Z",
-   "t": "simplexai-labs/linger: Linger is An Open-Source Personal Agent That Runs Fully on Your PC. We aim to break Big T…",
-   "s": "411 نجمة، لغة TypeScript",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/simplexai-labs/linger",
-   "ta": "simplexai-labs/linger: Linger هو وكيل شخصي مفتوح المصدر يعمل بالكامل على جهاز الكمبيوتر الخاص بك. نحن نهدف إلى كسر Big T ..."
-  },
-  {
-   "id": "hn-50435660",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-10T03:20:06Z",
-   "t": "CoreWeave bond yield tops 16% as AI credit stress rises",
-   "s": "196 نقطة، 193 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html",
-   "ta": "يصل عائد سندات CoreWeave إلى 16٪ مع ارتفاع الضغط الائتماني للذكاء الاصطناعي"
-  },
-  {
-   "id": "yt-YAU-_oLS2es",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-10T02:30:49Z",
-   "t": "2 tips to start hacking hardware as a beginner",
-   "s": "Two of my six tips for getting into hardware hacking. All six in the full video: https://www.youtube.com/watch?v=uY4-ZMDV8s8&utm_medium=owned&utm_cam…",
-   "tags": [
-    "AssemblyAI"
-   ],
-   "url": "https://www.youtube.com/shorts/YAU-_oLS2es",
-   "ta": "2 نصائح لبدء اختراق الأجهزة كمبتدئ",
-   "sa": "اثنتان من نصائحي الستة للدخول في مجال اختراق الأجهزة. الستة في الفيديو الكامل: https://www.youtube.com/watch?v=uY4-ZMDV8s8&utm_medium=OWN&utm_cam…"
-  },
-  {
-   "id": "gn-lotsofcompaniesarebuildingdigitaltwinsalmostnonearemarkingth",
-   "cat": "arch",
-   "src": "Mediaweek",
-   "ts": "2026-11-10T02:25:21Z",
-   "t": "Lots of companies are building Digital Twins. Almost none are marking them.",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQbmZCaS1EMmFwc2piaGlsTjN5bHNWeUtmZ0x0OWFuejlNcG8tQ2pKUjJSdmQySEFCQXFSdGZwSkRnUUlrUFNNOGozc090RTNSZXEwaEcxSi1uTEg1QjNvZUk1Z21MSi1SVGYyaDNERXlVTVpJSFFIUGdVN2NESTkwQVlFRHVKWmk5Q2ZiZzVYOUhDQTBzZGJ2bG45bm1WNHpKUFdKbg?oc=5",
-   "ta": "تقوم الكثير من الشركات ببناء التوائم الرقمية. لا أحد تقريبًا يضع علامة عليها."
-  },
-  {
-   "id": "gn-jacobsreleasesdigitaltwinsolutionforaidatacenters",
-   "cat": "arch",
-   "src": "PR Newswire Canada",
-   "ts": "2026-11-10T02:08:13Z",
-   "t": "Jacobs releases digital twin solution for AI data centers",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNakYzck5od18tbnpCQzVmaE13U0p0VlRvQ3lSd2UtbWZmai1EVDhBWTVOQmVqWEg1QUlobndtaUZxcmFUZ0VMMGNxR0RLRGg5aEZTRUVJa1BuclpNNHRSVHlxbjFvMjBUWVk3c0FsUEtJdXAwQ2xGQjFLMDBCS2JoWFFnUTg4dHNFTENaNTBHY1UtX05ScFBxaTY1MndSTWpNajZTcXN4QW9NYWVyR1VBUk9sRQ?oc=5",
-   "ta": "جاكوبس تطلق حلاً رقميًا مزدوجًا لمراكز بيانات الذكاء الاصطناعي"
   }
  ]
 }
