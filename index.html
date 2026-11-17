@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>رادار</title>
+<title>رادار AI</title>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#050505">
 <link rel="icon" href="icon-192.png">
@@ -27,6 +27,7 @@
   --c-code: #5fd3a0;
   --c-creative: #f5c451;
   --c-arch: #4dd0e1;
+  --c-agents: #a3e635;
   --font-body: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   color-scheme: dark;
@@ -70,6 +71,16 @@ header {
 .field.ltr { direction: ltr; text-align: left; }
 .panel .two { display: flex; gap: 8px; }
 .panel select.field { flex: 1; }
+.seg { display: flex; gap: 6px; }
+.seg .pill[aria-pressed="true"] { color: var(--text); border-color: var(--text); }
+.srow { display: flex; gap: 8px; }
+.srow .field { flex: 1; }
+.rcard { border: 1px solid var(--line); border-radius: 14px; padding: 12px; background: var(--surface); display: flex; flex-direction: column; gap: 6px; }
+.rcard b { font-size: 15px; overflow-wrap: anywhere; direction: auto; }
+.rcard small { color: var(--muted); font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; direction: auto; }
+.rcard .ra { display: flex; gap: 8px; margin-top: 4px; }
+.rcard .ra a, .rcard .ra button { padding: 6px 12px; border-radius: 10px; border: 1px solid var(--line); background: transparent; color: var(--text); font-size: 13px; text-decoration: none; }
+.rcard .ra .go { background: var(--accent); color: #111; border-color: var(--accent); font-weight: 700; }
 .btn-main { height: 44px; padding: 0 18px; border: 0; border-radius: 12px; background: var(--accent); color: #111; font-weight: 700; }
 .hint { font-size: 12px; color: var(--muted); line-height: 1.8; margin: 0; }
 .err { color: #ff9a8a; font-size: 13px; margin: 0; }
@@ -145,7 +156,7 @@ footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 1
 <div class="wrap">
   <header>
     <div class="bar">
-      <div class="brand"><span class="dot"></span><span>رادار</span></div>
+      <div class="brand"><span class="dot"></span><span>رادار <span style="color:var(--accent)">AI</span></span></div>
       <div class="tools">
         <button class="icon-btn" id="btnAdd" aria-label="إضافة رابط" aria-pressed="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
@@ -172,7 +183,25 @@ footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 1
     </div>
 
     <div class="panel" id="searchBox" hidden>
-      <input id="q" class="field" type="search" placeholder="ابحث عن أداة أو شركة أو كلمة" autocomplete="off">
+      <div class="seg" id="scope" role="group" aria-label="مكان البحث">
+        <button class="pill" data-s="radar" aria-pressed="true">الرادار</button>
+        <button class="pill" data-s="github" aria-pressed="false">GitHub</button>
+        <button class="pill" data-s="youtube" aria-pressed="false">YouTube</button>
+      </div>
+      <div class="srow">
+        <input id="q" class="field" type="search" placeholder="ابحث في الرادار" autocomplete="off" enterkeyhint="search">
+        <button class="btn-main" id="qGo" hidden>بحث</button>
+      </div>
+      <div class="two" id="kindRow" hidden>
+        <select id="chanKind" class="field" aria-label="قسم القناة">
+          <option value="creator">Videos</option>
+          <option value="agents">Agents</option>
+          <option value="arch">BIM AI</option>
+          <option value="co">AI Labs</option>
+        </select>
+      </div>
+      <p class="hint" id="sHint" hidden></p>
+      <div class="panel" id="sres"></div>
     </div>
 
   </header>
@@ -196,6 +225,7 @@ footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 1
 var CATS = [
   { id: "all", name: "All", icon: '<rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/>' },
   { id: "arch", name: "BIM AI", color: "var(--c-arch)", icon: '<path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6M9 11h2M13 11h2"/>' },
+  { id: "agents", name: "Agents", color: "var(--c-agents)", icon: '<rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9.5 16.5h5"/>' },
   { id: "reels", name: "Reels", color: "var(--c-reels)", icon: '<rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 10l3 2-3 2z"/>' },
   { id: "long", name: "Videos", color: "var(--c-long)", icon: '<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M10 9.5v5l4.5-2.5z"/>' },
   { id: "co", name: "AI Labs", color: "var(--c-co)", icon: '<path d="M4 21V5l8-2v18M12 9h8v12M7 8h2M7 12h2M7 16h2M15 13h2M15 17h2"/>' },
@@ -497,9 +527,109 @@ document.getElementById("btnSearch").onclick = function () {
   box.hidden = !box.hidden;
   this.setAttribute("aria-pressed", String(!box.hidden));
   if (!box.hidden) document.getElementById("q").focus();
-  else { state.q = ""; document.getElementById("q").value = ""; render(); }
+  else { document.getElementById("q").value = ""; setScope("radar"); }
 };
-document.getElementById("q").oninput = function () { state.q = this.value.trim(); render(); };
+/* search: radar (local filter), GitHub (in-app results), YouTube (in-app with a key, otherwise opens YouTube) */
+var REPO = "engahmdelaydy15998-cyber/radar";
+var scope = "radar";
+var qEl = document.getElementById("q"), qGo = document.getElementById("qGo"), sres = document.getElementById("sres"), sHint = document.getElementById("sHint");
+function lsGet(k) { try { return localStorage.getItem(k) || ""; } catch (e) { return ""; } }
+function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+function setScope(sc) {
+  scope = sc;
+  Array.prototype.forEach.call(document.querySelectorAll("#scope .pill"), function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-s") === sc)); });
+  qEl.placeholder = sc === "radar" ? "ابحث في الرادار" : sc === "github" ? "ابحث في GitHub عن أداة أو مشروع" : "ابحث في يوتيوب أو الصق @قناة أو رابطها";
+  qGo.hidden = sc === "radar";
+  document.getElementById("kindRow").hidden = sc !== "youtube";
+  sres.innerHTML = ""; sHint.hidden = true;
+  state.q = sc === "radar" ? qEl.value.trim() : "";
+  render();
+}
+Array.prototype.forEach.call(document.querySelectorAll("#scope .pill"), function (b) { b.onclick = function () { setScope(b.getAttribute("data-s")); }; });
+qEl.oninput = function () { if (scope === "radar") { state.q = this.value.trim(); render(); } };
+qEl.onkeydown = function (e) { if (e.key === "Enter" && scope !== "radar") { e.preventDefault(); runSearch(); } };
+qGo.onclick = runSearch;
+
+function saveFound(o) {
+  if (mine.some(function (m) { return m.url === o.url; })) { toast("مضاف قبل كده"); return; }
+  mine.unshift({ mine: true, id: "m" + Date.now(), cat: o.cat, src: o.src, when: "الآن", isNew: true, url: o.url, t: o.t, s: "", tags: o.tags || [] });
+  persist(); render(); toast("اتضاف للرادار");
+}
+function addChannelToRadar(ref, name) {
+  var kind = document.getElementById("chanKind").value;
+  var body = (ref.charAt(0) === "@" ? "handle: " : "id: ") + ref + "\nname: " + name + "\nkind: " + kind;
+  var url = "https://github.com/" + REPO + "/issues/new?title=" + encodeURIComponent("add-channel: " + name) + "&body=" + encodeURIComponent(body);
+  window.open(url, "_blank", "noopener");
+  toast("اضغط Submit في صفحة GitHub وهتتضاف القناة خلال دقايق");
+}
+function rcard(title, sub, openUrl, actions) {
+  var d = document.createElement("div"); d.className = "rcard";
+  var b = document.createElement("b"); b.textContent = title; d.appendChild(b);
+  if (sub) { var sm = document.createElement("small"); sm.textContent = sub; d.appendChild(sm); }
+  var r = document.createElement("div"); r.className = "ra";
+  var a = document.createElement("a"); a.href = openUrl; a.target = "_blank"; a.rel = "noopener noreferrer"; a.textContent = "افتح"; r.appendChild(a);
+  actions.forEach(function (x) { var bt = document.createElement("button"); bt.textContent = x.label; if (x.go) bt.className = "go"; bt.onclick = x.fn; r.appendChild(bt); });
+  d.appendChild(r); return d;
+}
+function hint(t) { sHint.textContent = t; sHint.hidden = !t; }
+function runSearch() {
+  var v = qEl.value.trim();
+  if (!v) return;
+  sres.innerHTML = ""; hint("بدور...");
+  if (scope === "github") {
+    fetch("https://api.github.com/search/repositories?sort=stars&order=desc&per_page=10&q=" + encodeURIComponent(v))
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (d) {
+        hint((d.items || []).length ? "" : "مفيش نتائج");
+        (d.items || []).forEach(function (r) {
+          var sub = (r.description || "") + "  ★ " + r.stargazers_count + (r.language ? "  ·  " + r.language : "");
+          sres.appendChild(rcard(r.full_name, sub, r.html_url, [{ label: "للرادار", go: true, fn: function () {
+            saveFound({ cat: "code", src: "GitHub", t: r.full_name + (r.description ? ": " + r.description : ""), url: r.html_url, tags: ["★ " + r.stargazers_count] });
+          } }]));
+        });
+      }).catch(function () { hint("البحث في GitHub وقف مؤقتاً (حد الطلبات). جرب بعد دقيقة."); });
+    return;
+  }
+  /* youtube */
+  var m = v.match(/youtube\.com\/(@[\w.\-]+|channel\/(UC[\w-]{22}))/i) || v.match(/^(@[\w.\-]{2,40})$/);
+  if (m) {
+    var ref = m[2] || m[1];
+    hint("");
+    sres.appendChild(rcard(ref, "قناة يوتيوب", m[2] ? "https://www.youtube.com/channel/" + ref : "https://www.youtube.com/" + ref, [{ label: "＋ قناة للرادار", go: true, fn: function () { addChannelToRadar(ref, ref); } }]));
+    return;
+  }
+  var key = lsGet("radar-ytkey");
+  var ytUrl = "https://www.youtube.com/results?search_query=" + encodeURIComponent(v);
+  if (!key) {
+    hint("البحث جوه التطبيق على يوتيوب محتاج مفتاح مجاني من جوجل. من غيره: افتح نتائج يوتيوب، وانسخ رابط القناة أو @اسمها والصقه هنا عشان تضيفها.");
+    sres.appendChild(rcard("ابحث عن «" + v + "» في يوتيوب", "", ytUrl, []));
+    var kb = document.createElement("div"); kb.className = "srow";
+    var ki = document.createElement("input"); ki.className = "field ltr"; ki.placeholder = "YouTube API key (اختياري)";
+    var kg = document.createElement("button"); kg.className = "btn-main"; kg.textContent = "حفظ";
+    kg.onclick = function () { if (ki.value.trim()) { lsSet("radar-ytkey", ki.value.trim()); toast("اتحفظ. ابحث تاني"); runSearch(); } };
+    kb.appendChild(ki); kb.appendChild(kg); sres.appendChild(kb);
+    return;
+  }
+  fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&type=video,channel&q=" + encodeURIComponent(v) + "&key=" + encodeURIComponent(key))
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      hint((d.items || []).length ? "" : "مفيش نتائج");
+      (d.items || []).forEach(function (it) {
+        var sn = it.snippet || {};
+        if (it.id.kind === "youtube#channel") {
+          var cid = it.id.channelId;
+          sres.appendChild(rcard(sn.title, "قناة · " + (sn.description || ""), "https://www.youtube.com/channel/" + cid, [{ label: "＋ قناة للرادار", go: true, fn: function () { addChannelToRadar(cid, sn.title); } }]));
+        } else {
+          var vu = "https://www.youtube.com/watch?v=" + it.id.videoId;
+          sres.appendChild(rcard(sn.title, sn.channelTitle, vu, [{ label: "للرادار", go: true, fn: function () { saveFound({ cat: "long", src: "YouTube", t: sn.title, url: vu, tags: [sn.channelTitle] }); } }]));
+        }
+      });
+    }).catch(function () {
+      hint("المفتاح مش شغال أو الحصة خلصت. تقدر تمسحه وتجرب تاني.");
+      var cb = document.createElement("button"); cb.className = "pill"; cb.textContent = "مسح المفتاح"; cb.onclick = function () { lsSet("radar-ytkey", ""); hint(""); sres.innerHTML = ""; };
+      sres.appendChild(cb);
+    });
+}
 document.getElementById("btnSaved").onclick = function () { state.onlySaved = !state.onlySaved; render(); };
 document.getElementById("btnNew").onclick = function () { state.onlyNew = !state.onlyNew; render(); };
 

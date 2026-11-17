@@ -1,0 +1,40 @@
+name: add-channel
+
+# The app opens a pre-filled issue; only the repo owner's issues are honoured.
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
+jobs:
+  add:
+    if: github.event.issue.user.login == github.repository_owner && startsWith(github.event.issue.title, 'add-channel')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Add the channel
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python scripts/add_channel.py
+      - name: Commit and refresh the feed
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUM: ${{ github.event.issue.number }}
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "radar-bot@users.noreply.github.com"
+          if [ -n "$(git status --porcelain channels.json)" ]; then
+            git add channels.json
+            git commit -m "Add channel from app"
+            git pull --rebase -q origin main || true
+            git push
+            gh workflow run update.yml
+          fi
+          gh issue close "$NUM" --comment "تمت إضافة القناة للرادار. هتظهر فيديوهاتها في التحديث الجاي (بعد دقائق)."

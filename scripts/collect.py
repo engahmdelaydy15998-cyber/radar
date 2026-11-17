@@ -17,7 +17,7 @@ from datetime import datetime, timedelta, timezone
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data.json")
 UA = "Mozilla/5.0 (compatible; RadarBot/1.0)"
-MAX_ITEMS = 260
+MAX_ITEMS = 320
 MAX_AGE_DAYS = 14
 PER_CHANNEL = 6
 
@@ -49,6 +49,40 @@ CHANNELS = [
     ("@AECmagazine", "AEC Magazine", "arch"),
     ("@McNeelTV", "Rhino / McNeel", "arch"),
 ]
+
+# Agents section: local agents, Claude Code, cheaper alternatives, new tools.
+CHANNELS += [
+    ("@AllAboutAI", "All About AI", "agents"),
+    ("@matthew_berman", "Matthew Berman", "agents"),
+    ("@AIJasonZ", "AI Jason", "agents"),
+    ("@1littlecoder", "1littlecoder", "agents"),
+    ("@WorldofAI", "WorldofAI", "agents"),
+    ("@NetworkChuck", "NetworkChuck", "agents"),
+]
+
+# Extra channels added from the app live in channels.json: {"channels":[{"handle"|"id","name","kind"}]}
+EXTRA = os.path.join(ROOT, "channels.json")
+
+AGENT_RSS = [
+    ("https://simonwillison.net/atom/everything/", "Simon Willison"),
+    ("https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day", "r/LocalLLaMA"),
+    ("https://www.reddit.com/r/ClaudeAI/top/.rss?t=day", "r/ClaudeAI"),
+    ("https://www.reddit.com/r/ClaudeCode/top/.rss?t=day", "r/ClaudeCode"),
+]
+HN_AGENT_QUERIES = ["Claude Code", "Ollama", "local LLM", "MCP server", "DeepSeek", "Qwen", "Kimi", "llama.cpp",
+                    "coding agent", "Claude alternative", "open source agent"]
+GH_AGENT_TOPICS = ["claude-code", "mcp", "ollama", "ai-agents", "local-llm", "llama-cpp", "coding-agent"]
+AGENT_NEWS = [
+    "Claude Code alternative",
+    "local AI coding agent",
+    "Ollama new model",
+    "cheaper AI coding subscription",
+    "Claude Code usage limits tips",
+    "open source AI agent framework",
+]
+AGENT_KW = re.compile(
+    r"agent|Claude|Ollama|local LLM|MCP|DeepSeek|Qwen|Kimi|llama|Codex|Cursor|Gemini CLI|OpenCode|Aider|Cline|"
+    r"open[- ]source model|subscription|pricing|token|self-hosted|on-device", re.I)
 
 # (url, display name). Architecture and AEC news feeds.
 RSS_FEEDS = [
@@ -174,11 +208,24 @@ def is_short(vid):
         return None
 
 
+def all_channels():
+    out = [(h, n, k) for h, n, k in CHANNELS]
+    try:
+        with open(EXTRA, encoding="utf-8") as f:
+            for c in json.load(f).get("channels", []):
+                ref = c.get("id") or c.get("handle")
+                if ref:
+                    out.append((ref, c.get("name") or ref, c.get("kind") or "creator"))
+    except Exception:
+        pass
+    return out
+
+
 def collect_youtube(known_ids, cutoff):
     items = []
-    for handle, name, kind in CHANNELS:
+    for handle, name, kind in all_channels():
         try:
-            cid = channel_id(handle)
+            cid = handle if re.fullmatch(r"UC[\w-]{22}", handle) else channel_id(handle)
             if not cid:
                 log("youtube: no channel id for", handle)
                 continue
@@ -202,6 +249,8 @@ def collect_youtube(known_ids, cutoff):
                 cat = "co"
             elif kind == "arch":
                 cat = "arch"
+            elif kind == "agents":
+                cat = "agents"
             else:
                 cat = "long"
             items.append({
@@ -246,7 +295,7 @@ def parse_hn(json_text, cutoff, cat="code"):
 def collect_hn(known_ids, cutoff):
     items, seen = [], set()
     since = int(cutoff.timestamp())
-    jobs = [(q, "code", 80) for q in HN_QUERIES] + [(q, "arch", 12) for q in HN_ARCH_QUERIES]
+    jobs = [(q, "code", 80) for q in HN_QUERIES] + [(q, "arch", 12) for q in HN_ARCH_QUERIES] + [(q, "agents", 25) for q in HN_AGENT_QUERIES]
     for q, cat, pts in jobs:
         url = ("https://hn.algolia.com/api/v1/search_by_date?tags=story&hitsPerPage=20&numericFilters="
                + urllib.parse.quote("points>%d,created_at_i>%d" % (pts, since)) + "&query=" + urllib.parse.quote(q))
@@ -309,6 +358,19 @@ def collect_github(known_ids, cutoff):
             if it["id"] not in known_ids and it["id"] not in seen:
                 seen.add(it["id"])
                 out.append(it)
+    fresh = (datetime.now(timezone.utc) - timedelta(days=10)).strftime("%Y-%m-%d")
+    for topic in GH_AGENT_TOPICS:
+        q3 = "topic:%s created:>%s stars:>30" % (topic, fresh)
+        u3 = "https://api.github.com/search/repositories?sort=stars&order=desc&per_page=6&q=" + urllib.parse.quote(q3)
+        try:
+            more = parse_github(get(u3, headers), "agents", "جديد كلياً")
+        except Exception as ex:
+            log("github agents: failed", topic, ex)
+            continue
+        for it in more:
+            if it["id"] not in known_ids and it["id"] not in seen:
+                seen.add(it["id"])
+                out.append(it)
     return out
 
 
@@ -359,7 +421,8 @@ def collect_rss(known_ids, cutoff):
 def collect_news(known_ids, cutoff):
     from email.utils import parsedate_to_datetime
     items, seen = [], set()
-    for q in NEWS_QUERIES:
+    jobs = [(q, "arch") for q in NEWS_QUERIES] + [(q, "agents") for q in AGENT_NEWS]
+    for q, cat in jobs:
         url = "https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=" + urllib.parse.quote(q + " when:14d")
         try:
             root = ET.fromstring(get(url))
@@ -384,13 +447,49 @@ def collect_news(known_ids, cutoff):
             item_id = "gn-" + re.sub(r"\W+", "", title.lower())[:60]
             if ts < cutoff or item_id in known_ids or item_id in seen:
                 continue
-            if not (AEC_KW.search(title) and ARCH_KW.search(title + " " + src)):
+            if cat == "arch" and not (AEC_KW.search(title) and ARCH_KW.search(title + " " + src)):
+                continue
+            if cat == "agents" and not AGENT_KW.search(title):
                 continue
             seen.add(item_id)
-            items.append({"id": item_id, "cat": "arch", "src": src, "ts": iso(ts), "t": title,
-                          "s": "", "tags": ["AI + AEC"], "url": link})
+            items.append({"id": item_id, "cat": cat, "src": src, "ts": iso(ts), "t": title,
+                          "s": "", "tags": ["AI + AEC" if cat == "arch" else "Agents"], "url": link})
             n += 1
             if n >= 6:
+                break
+    return items
+
+
+def collect_agent_feeds(known_ids, cutoff):
+    items = []
+    A = "{http://www.w3.org/2005/Atom}"
+    for url, name in AGENT_RSS:
+        try:
+            root = ET.fromstring(get(url))
+        except Exception as ex:
+            log("agent feed: failed", name, ex)
+            continue
+        n = 0
+        for e in root.iter(A + "entry"):
+            title = (e.findtext(A + "title") or "").strip()
+            link_el = e.find(A + "link")
+            link = link_el.get("href") if link_el is not None else ""
+            pub = e.findtext(A + "updated") or e.findtext(A + "published")
+            if not (title and link and pub):
+                continue
+            try:
+                ts = parse_ts(pub)
+            except Exception:
+                continue
+            item_id = "af-" + re.sub(r"\W+", "", link)[-60:]
+            if ts < cutoff or item_id in known_ids:
+                continue
+            if name.startswith("r/") and not AGENT_KW.search(title):
+                continue
+            items.append({"id": item_id, "cat": "agents", "src": name, "ts": iso(ts), "t": title,
+                          "s": "", "tags": ["نقاش" if name.startswith("r/") else "مدونة"], "url": link})
+            n += 1
+            if n >= 8:
                 break
     return items
 
@@ -449,11 +548,11 @@ def main():
     now = datetime.now(timezone.utc)
     cutoff = now - timedelta(days=MAX_AGE_DAYS)
     existing = [it for it in load_existing()
-                if not (it["id"].startswith("gn-") and not (AEC_KW.search(it["t"]) and ARCH_KW.search(it["t"])))]
+                if not (it["id"].startswith("gn-") and it.get("cat") == "arch" and not (AEC_KW.search(it["t"]) and ARCH_KW.search(it["t"])))]
     known = {it["id"] for it in existing}
 
     new = []
-    for name, fn in (("youtube", collect_youtube), ("hn", collect_hn), ("github", collect_github), ("rss", collect_rss), ("news", collect_news)):
+    for name, fn in (("youtube", collect_youtube), ("hn", collect_hn), ("github", collect_github), ("rss", collect_rss), ("news", collect_news), ("agent_feeds", collect_agent_feeds)):
         try:
             got = fn(known, cutoff)
         except Exception as ex:

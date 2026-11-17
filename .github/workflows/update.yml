@@ -2,7 +2,7 @@ name: update-feed
 
 on:
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "17 */3 * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -35,6 +35,7 @@ jobs:
           if [ -n "$(git status --porcelain data.json)" ]; then
             git add data.json
             git commit -m "Update feed"
+            git pull --rebase -q origin main || true
             git push
           fi
 
