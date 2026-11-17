@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T06:32:47Z",
+ "updated": "2026-11-17T06:45:09Z",
  "demo": false,
  "items": [
   {
@@ -2048,19 +2048,6 @@
    "url": "https://www.youtube.com/watch?v=G_Jrexy_5Bg",
    "ta": "أخبار الذكاء الاصطناعي: الأمور لن تعود كما كانت أبدًا",
    "sa": "جرب @OpenAI Decisions API هنا: https://developers.openai.com/api/docs/guides/decisions إليك أخبار الذكاء الاصطناعي من أحد أعنف الأسابيع التي شهدناها على الإطلاق..."
-  },
-  {
-   "id": "gn-telgeplansarchitectureledentrybeforedetailingwork",
-   "cat": "arch",
-   "src": "Multibagg AI",
-   "ts": "2026-11-13T17:08:18Z",
-   "t": "Telge plans architecture-led entry before detailing work",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSHpxd2MweDJtcFowODJVMkt5YV9abTJ2eDk2YWRBX3Y3encxQ2NaMzdCeEdfeGZ0VmxmX2xkbWFJekxlYmZkbVVybFdXdG1EOVVsZDFtYXVwRjd5NTY4V1JuRk1kRHdNSTV4UEJjRVJ3LW5USXhCa1hjbnZyYnBZNFB2aDNxWnhtOGFrNklXYWNrWkdPOV9tZjBZWDZmdlNURWQxQmRoRllxaHNyOFBJLV9IaWFVQQ?oc=5",
-   "ta": "تخطط Telge للدخول القائم على الهندسة المعمارية قبل تفاصيل العمل"
   },
   {
    "id": "yt-PkAmyub12K8",
@@ -4241,6 +4228,18 @@
    ],
    "url": "https://github.com/huawei-csl/MACaQ",
    "ta": "huawei-csl/MACaQ: تكميم نموذج SOTA لـ GGUF والاستدلال المحلي وما بعده. تكميم وتشغيل ر…"
+  },
+  {
+   "id": "gn-icomparedopenaicodexandclaudecodesusagelimitsandtheresacatch",
+   "cat": "agents",
+   "src": "Tom's Guide",
+   "ts": "2026-11-10T08:15:00Z",
+   "t": "I compared OpenAI Codex and Claude Code's usage limits — and there's a catch with both $20 plans",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdXRaV0syMXFQTTZwcks5OU5JRlNwVEUzNi1ETGxYVUxZYVlfQzFzTVZ0aGtrcE5vUUZZYW9hN2xtQ0JZNUdleXYxT21Md2FkWU45amstU1lMX3BWaFV6czh0NzBGeUhnUVQzZWNrQnJDZFNra21YcEY3bXJJMVNVZktsZFV2SjdsY1RKa29LUHpSSnRvVFhyZEpuaWR0TnNGR0VUZzltLVA0TnFncDV1bDlYV2ZNVFJTeFIwRHhfcmw?oc=5"
   }
  ]
 }
