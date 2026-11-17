@@ -1,7 +1,20 @@
 {
- "updated": "2026-11-17T06:58:30Z",
+ "updated": "2026-11-17T07:16:02Z",
  "demo": false,
  "items": [
+  {
+   "id": "yt-3UnQ3Wt5NF0",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-17T07:00:37Z",
+   "t": "4 powers of Claude in your video call: it joins Google Meet and takes the notes",
+   "s": "Anthropic just launched Claude Meetings, in beta: Claude joins your Google Meet call. It shows itself, it builds, it searches, it remembers. The step…",
+   "tags": [
+    "Dr Firas"
+   ],
+   "url": "https://www.youtube.com/shorts/3UnQ3Wt5NF0",
+   "sa": "أطلقت Anthropic للتو تطبيق Claude Meetings، في الإصدار التجريبي: ينضم Claude إلى مكالمتك على Google Meet. إنه يظهر نفسه، يبني، يبحث، يتذكر. الخطوة…"
+  },
   {
    "id": "af-httpssimonwillisonnet2026Nov17goproverbs",
    "cat": "agents",
@@ -14,6 +27,20 @@
    ],
    "url": "https://simonwillison.net/2026/Nov/17/go-proverbs/",
    "ta": "نقلا عن الأمثال الذهاب"
+  },
+  {
+   "id": "hn-50527905",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-17T05:50:41Z",
+   "t": "Tech leaders are convinced that Jensen Huang's exit was a plot against him",
+   "s": "14 نقطة، 5 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.theverge.com/tech/1035027/tech-leaders-nvidia-jensen-huang-theories",
+   "url2": "https://news.ycombinator.com/item?id=50527905",
+   "ta": "قادة التكنولوجيا مقتنعون بأن خروج جنسن هوانغ كان مؤامرة ضده"
   },
   {
    "id": "af-omments1xyb7jwclover_2_dense_278b_base_7_lora_experts_routed",
@@ -994,6 +1021,20 @@
    ],
    "url": "https://qwen.ai/blog?id=qwen4-max",
    "ta": "Qwen4-ماكس"
+  },
+  {
+   "id": "hn-50512576",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-16T00:38:12Z",
+   "t": "The Fossils That Haunted Lovecraft",
+   "s": "14 نقطة، 2 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://paleonerdish.wordpress.com/2026/10/30/halloween-special-xiv-the-fossils-that-haunted-lovecraft/",
+   "url2": "https://news.ycombinator.com/item?id=50512576",
+   "ta": "الحفريات التي طاردت لوفكرافت"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov15datasettemaplibre",
@@ -2050,6 +2091,19 @@
    "sa": "جرب @OpenAI Decisions API هنا: https://developers.openai.com/api/docs/guides/decisions إليك أخبار الذكاء الاصطناعي من أحد أعنف الأسابيع التي شهدناها على الإطلاق..."
   },
   {
+   "id": "gn-telgeplansarchitectureledentrybeforedetailingwork",
+   "cat": "arch",
+   "src": "Multibagg AI",
+   "ts": "2026-11-13T17:08:18Z",
+   "t": "Telge plans architecture-led entry before detailing work",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSHpxd2MweDJtcFowODJVMkt5YV9abTJ2eDk2YWRBX3Y3encxQ2NaMzdCeEdfeGZ0VmxmX2xkbWFJekxlYmZkbVVybFdXdG1EOVVsZDFtYXVwRjd5NTY4V1JuRk1kRHdNSTV4UEJjRVJ3LW5USXhCa1hjbnZyYnBZNFB2aDNxWnhtOGFrNklXYWNrWkdPOV9tZjBZWDZmdlNURWQxQmRoRllxaHNyOFBJLV9IaWFVQQ?oc=5",
+   "ta": "تخطط Telge للدخول القائم على الهندسة المعمارية قبل تفاصيل العمل"
+  },
+  {
    "id": "yt-PkAmyub12K8",
    "cat": "co",
    "src": "YouTube",
@@ -2781,6 +2835,19 @@
    "url": "https://www.youtube.com/shorts/IehCboBcYsA",
    "ta": "كيفية أتمتة مكتبة الصور الخاصة بك",
    "sa": "تعرف على المزيد حول نموذج القرار: https://developers.openai.com/api/docs/guides/decisions https://platform.openai.com/decisions اكتشف المزيد: 🛠️…"
+  },
+  {
+   "id": "gn-aecdatamodelapiswhatcustomersshouldknowaboutaccessvalueandpr",
+   "cat": "arch",
+   "src": "Autodesk News",
+   "ts": "2026-11-12T17:00:19Z",
+   "t": "AEC Data Model APIs: What customers should know about access, value and pricing",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tWHJ6QUhVTVpuOGlTUVlRLXhaRVA1QldMN1piVmI3UjJXQ3doX3NweUlfQkNfZ0hFVjRjakhQdVJycC1DaDZRYXhiX0FlZnBnUUJkXy1NRTV6OUI3aENIUktyNnAxYTFzZC16RDl0U3NldkVs?oc=5",
+   "ta": "واجهات برمجة التطبيقات لنموذج بيانات شركة AEC: ما يجب أن يعرفه العملاء حول الوصول والقيمة والتسعير"
   },
   {
    "id": "gn-attentiveaimakesfirstacquisitionbuystakeoffmonkeyasbeamaipow",
@@ -4174,73 +4241,6 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOa05lNmtXRlRpTUdXVUpibDhHR3lzZ3JpekJaV1Nhc1VGOU1rVHgzR3RtTERWbEpuTGVVUHhaNmtPTzhxODVCcHFFMWV0TDBUSWhjRVlJWXZTei1OY010WFI2LWdldWpNcDNxTXJxakhrRmxsSVd1eGpSR1ZmTjZZQjEya2tKU25US2RIaXlTSGgxYkNremFMOWZKejNnM01VTTNFcTA5cEVEZW5OZzdDem9QSjM2MElqLU0yRS1yS0g1bDBhd0FqeEwySQ?oc=5",
    "ta": "الناس قبل المنصات: كيف قامت جامودا بإجراء التغيير باستخدام Autodesk Forma"
-  },
-  {
-   "id": "yt-DWSTbeNpMlY",
-   "cat": "arch",
-   "src": "YouTube",
-   "ts": "2026-11-10T09:52:38Z",
-   "t": "A Complex Urban Masterplan With BIM – Oppenheim Architecture's Vlorë Beach Development",
-   "s": "Read the client success story here: https://www.graphisoft.com/case-studies/oppenheim-architecture-bim-workflows-for-urban-masterplans Founded by Cha…",
-   "tags": [
-    "Archicad"
-   ],
-   "url": "https://www.youtube.com/watch?v=DWSTbeNpMlY",
-   "ta": "مخطط رئيسي حضري معقد مع BIM – تطوير شاطئ فلوري التابع لشركة أوبنهايم للهندسة المعمارية",
-   "sa": "اقرأ قصة نجاح العميل هنا: https://www.graphisoft.com/case-studies/oppenheim-architecture-bim-workflows-for-urban-masterplans أسسها تشا..."
-  },
-  {
-   "id": "gn-trimblelaunchesnewtrimbleconnectplatformaicapabilitiesaimeda",
-   "cat": "arch",
-   "src": "Planning, Building & Construction Today",
-   "ts": "2026-11-10T09:24:31Z",
-   "t": "Trimble launches new Trimble Connect Platform AI capabilities aimed at de-risking construction",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQSVlWU2dIN3pNMDh1b3c2MGcwY2pScU1hdVNmWS1fTUJzaWptOFljdFc0N2psMlgxc3F6cXBFNUxsWHRDVk9Ib3pYSDBvTlVVYWg1bzY2c28zOHROTXo2RXg0N0tUSGNBN2c5LXV1eHl3YS01akh2UGJBank0VmVrQ2VxWEJ3R3Y3RlUxd1RZZ1FaLXJ5WlE5aWJHYnpmSHZTaHZybTNzT2tZdkFOYnVfelExR05IMWEwSEFKTElGOEoxeDlfVkc5aGt3eS01MkNld2Izb3NNMHFnNzQycWM4c2h2ZnNGTEZ4ZnRIOGJuT1BLNjFwVDAyM3lTX3dadw?oc=5",
-   "ta": "تطلق شركة Trimble إمكانات جديدة لمنصة Trimble Connect للذكاء الاصطناعي تهدف إلى إزالة مخاطر البناء"
-  },
-  {
-   "id": "rss-httpsaecmagcomcollaborationtrimbleembedsaiacrossaeco",
-   "cat": "arch",
-   "src": "AEC Magazine",
-   "ts": "2026-11-10T09:19:34Z",
-   "t": "Trimble embeds AI across AECO",
-   "s": "Trimble Connect platform introduces AI agents and automation to improve project coordination, manage risk and streamline workflows The post Trimble embeds AI a…",
-   "tags": [
-    "AEC"
-   ],
-   "url": "https://aecmag.com/collaboration/trimble-embeds-ai-across-aeco/",
-   "ta": "يقوم Trimble بدمج الذكاء الاصطناعي عبر AECO",
-   "sa": "تقدم منصة Trimble Connect وكلاء الذكاء الاصطناعي والأتمتة لتحسين تنسيق المشروع وإدارة المخاطر وتبسيط سير العمل."
-  },
-  {
-   "id": "gn-trimbleembedsaiacrossaeco",
-   "cat": "arch",
-   "src": "AEC Magazine",
-   "ts": "2026-11-10T09:19:34Z",
-   "t": "Trimble embeds AI across AECO",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE80RFMwR0pCV2RRUHJSTU9fYlZWYUZQMHNicjB4TVFVZVlrd19Pa0lsd29TY3JSb0xJN29LUnlIS3hBOGZ0TldvbVVFbzdGZjhQRjlXa0EtZGdJYmlxanRVTkdHM19NSlVJODNfY29pRW0?oc=5",
-   "ta": "يقوم Trimble بدمج الذكاء الاصطناعي عبر AECO"
-  },
-  {
-   "id": "gh-1452417816",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-10T08:52:22Z",
-   "t": "huawei-csl/MACaQ: SOTA model-agnostic quantization for GGUF, local inference and beyond. Quantize and run t…",
-   "s": "345 نجمة، لغة C++",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/huawei-csl/MACaQ",
-   "ta": "huawei-csl/MACaQ: تكميم نموذج SOTA لـ GGUF والاستدلال المحلي وما بعده. تكميم وتشغيل ر…"
   }
  ]
 }
