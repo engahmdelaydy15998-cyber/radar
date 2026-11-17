@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T06:48:46Z",
+ "updated": "2026-11-17T06:55:44Z",
  "demo": false,
  "items": [
   {
@@ -2822,6 +2822,19 @@
    "ta": "شركة Attentive.ai تقوم بأول عملية استحواذ، وتشتري Takeoff Monkey بينما تعمل Beam AI على توفير 500 مليار دولار في عطاءات البناء"
   },
   {
+   "id": "gn-twin1aiadds5millionseedextensionledbycurqltoexpandaipoweredd",
+   "cat": "arch",
+   "src": "Yahoo Finance",
+   "ts": "2026-11-12T17:00:00Z",
+   "t": "Twin1 AI Adds $5 Million Seed Extension Led by Curql to Expand AI-Powered Digital Twins Across Regulated Industries and Enterprises",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNckdvTjMxX1FhTlB1ZFRfUXdRZW5yNHhvMVBFdThKd3Y2TGdUcVBwSldxcTJ5bHFmQ1BJT2phSUhIUC02QUN6ejkyU3l2N3VzNGVhS1J3a0FHT093TVBRVWE4OW1fZEVGSVNaZ1NxOWhSdmk0MDFxbGdUNW12N254SWc4cE9jZzJDaFVTaVJ3VF8?oc=5",
+   "ta": "Twin1 AI تضيف امتدادًا أوليًا بقيمة 5 ملايين دولار بقيادة Curql لتوسيع التوائم الرقمية المدعومة بالذكاء الاصطناعي عبر الصناعات والمؤسسات المنظمة"
+  },
+  {
    "id": "yt-1M8vagUOdJM",
    "cat": "co",
    "src": "YouTube",
@@ -4228,19 +4241,6 @@
    "url": "https://aecmag.com/collaboration/trimble-embeds-ai-across-aeco/",
    "ta": "يقوم Trimble بدمج الذكاء الاصطناعي عبر AECO",
    "sa": "تقدم منصة Trimble Connect وكلاء الذكاء الاصطناعي والأتمتة لتحسين تنسيق المشروع وإدارة المخاطر وتبسيط سير العمل."
-  },
-  {
-   "id": "gn-trimbleembedsaiacrossaeco",
-   "cat": "arch",
-   "src": "AEC Magazine",
-   "ts": "2026-11-10T09:19:34Z",
-   "t": "Trimble embeds AI across AECO",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE80RFMwR0pCV2RRUHJSTU9fYlZWYUZQMHNicjB4TVFVZVlrd19Pa0lsd29TY3JSb0xJN29LUnlIS3hBOGZ0TldvbVVFbzdGZjhQRjlXa0EtZGdJYmlxanRVTkdHM19NSlVJODNfY29pRW0?oc=5",
-   "ta": "يقوم Trimble بدمج الذكاء الاصطناعي عبر AECO"
   }
  ]
 }
