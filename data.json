@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T05:13:12Z",
+ "updated": "2026-11-17T05:16:34Z",
  "demo": false,
  "items": [
   {
@@ -2200,6 +2200,19 @@
    "ta": "أفضل وكلاء الذكاء الاصطناعي في عام 2026: 30 أداة تم اختبارها ومقارنتها"
   },
   {
+   "id": "gn-claudevschatgptwhichaiisactuallybetterin2026",
+   "cat": "agents",
+   "src": "Fello AI",
+   "ts": "2026-11-13T08:00:00Z",
+   "t": "Claude vs ChatGPT: Which AI Is Actually Better in 2026?",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8tSHQtWTJjYXdKd1B0cFFWR19rWmFQdlM1d001Yk8yeDJiQlctVFk5TGFkUFZTN1Q3NHlTNHFfeVRVY2kzcnpEaVk1NEZmOGc?oc=5",
+   "ta": "Claude vs ChatGPT: أي الذكاء الاصطناعي هو الأفضل فعليًا في عام 2026؟"
+  },
+  {
    "id": "gn-vscode1146addsaiagentinboxmodelcomparisonsandchatwindows",
    "cat": "agents",
    "src": "Visual Studio Magazine",
@@ -4099,6 +4112,19 @@
    "ta": "نقلا عن مطالبة كلود الخرافة 5.2"
   },
   {
+   "id": "gn-restructuringyourconstructiondataforthefuture",
+   "cat": "arch",
+   "src": "Autodesk",
+   "ts": "2026-11-10T05:00:09Z",
+   "t": "Restructuring Your Construction Data for the Future",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMWFrRGhNd3JlQWttVkRGekdQNVVzVW1sdVBHMjI0X3AycnVhbms4WDRwYmFsTjNzRTlvNjdYM3ZteVdGQ2RTTHB0TUVEM2VieXpoYTdJdFhiQ2hOM0ozWnFIVnFFbGY0UlFwb2p3Tnl4dGs2ZGNVQjBPbmd4WXF4R2taeGtseHNKaDNWNk5UbzFPN3c0UXhRVmtrZWlDekMzVHNHN1dqYXU5akVKUGQxT2NuMThpdw?oc=5",
+   "ta": "إعادة هيكلة بيانات البناء الخاصة بك للمستقبل"
+  },
+  {
    "id": "af-httpssimonwillisonnet2026Nov10yonkersrises",
    "cat": "agents",
    "src": "Simon Willison",
@@ -4215,32 +4241,6 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTk1RNkRBZEx0Rjc1Qkw2RHEwWVUwV1hVVUpVTzA5SnZZNWg1MTgzNXN6ajEwR2FUeUwxSC12aThwZmlNQ09BVWhHX3dLUElmWDNhUmpHVUM5dDc0dE9uSHJqaHdZTVlieWhLeHZGNkJiUWZGb1Zpb3dGYVIyQWkzZXZFSEVSUlVybFAtNUpFRjQ?oc=5",
    "ta": "Muse Ember: Meta تكشف عن أصغر نموذج لها حتى الآن مع سياق 1M-token للوكلاء الأرخص"
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov9llmanthropic",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-09T23:58:46Z",
-   "t": "llm-anthropic 0.31",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
-   "ta": "إل إم أنثروبيك 0.31"
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov9mysteriousbeeps",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-09T23:57:21Z",
-   "t": "Locating the source of a mysterious beep with Claude",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
-   "ta": "تحديد مصدر صوت تنبيه غامض مع كلود"
   }
  ]
 }
