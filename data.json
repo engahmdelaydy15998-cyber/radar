@@ -1,7 +1,20 @@
 {
- "updated": "2026-11-17T13:15:39Z",
+ "updated": "2026-11-17T14:08:19Z",
  "demo": false,
  "items": [
+  {
+   "id": "af-omments1xykjuythe_upcoming_open_weight_small_qwen_models_are",
+   "cat": "agents",
+   "src": "r/LocalLLaMA",
+   "ts": "2026-11-17T13:33:05Z",
+   "t": "The upcoming open weight small Qwen models are likely going to lack training data related to offensive cyber capabilities.",
+   "s": "",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xykjuy/the_upcoming_open_weight_small_qwen_models_are/",
+   "ta": "من المرجح أن تفتقر نماذج Qwen الصغيرة ذات الوزن المفتوح القادمة إلى بيانات التدريب المتعلقة بالقدرات السيبرانية الهجومية."
+  },
   {
    "id": "yt-NjMbxgcKjXQ",
    "cat": "reels",
@@ -311,6 +324,19 @@
    "ta": "ASUS تزيد من شحنات NVIDIA Vera Rubin NVL72 في الربع الرابع وسط الطلب القوي، وتعرض البنية المرجعية لمصنع الذكاء الاصطناعي في SC26"
   },
   {
+   "id": "gn-googlewarnshackersareusingautonomousaiagentstoexploitvulnera",
+   "cat": "agents",
+   "src": "GBHackers News",
+   "ts": "2026-11-17T06:22:48Z",
+   "t": "Google Warns Hackers Are Using Autonomous AI Agents to Exploit Vulnerabilities Without Human Intervention",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1mdUNISklScGwyd3NuTVJ4bGRBRzRvT3h0UDczNXRnNzNHTE4yNzllR05KczN6bUhOd3NXOFV3U2RndUd0UlJwSzg4MUg3QkJwdnNwY09YMmZxM2RWdGNvXzdfOHNoQkFuNVYwY01xcEdEaUxhY2NGR1RiajNzSGvSAYQBQVVfeXFMTlF4dUdkZGM4SWllVnNEaE54VVM4QTBPVTVWdExNc2d5MlQ0THhhRmRVdHZTT2ZoeFV4bnozU3hSTWxlc3ZxcXpnd2J1enFDbU54dWJnQXNhSGloTUlLaGx1Zl91ek1YYmpucEp2NWFmNG9sclZMOHJRaHNNMnVraFNVRk1O?oc=5",
+   "ta": "جوجل تحذر من أن المتسللين يستخدمون وكلاء الذكاء الاصطناعي المستقلين لاستغلال نقاط الضعف دون تدخل بشري"
+  },
+  {
    "id": "af-httpssimonwillisonnet2026Nov17goproverbs",
    "cat": "agents",
    "src": "Simon Willison",
@@ -578,6 +604,19 @@
    ],
    "url": "https://github.com/aryamandarda/tamserve",
    "ta": "Show HN: تتبع كائن مفتوح المصدر في الوقت الفعلي لخلاصات الفيديو المباشرة"
+  },
+  {
+   "id": "gn-googlegtigwarnsaiagentsautomateexploitsstealcredentialsandsc",
+   "cat": "agents",
+   "src": "Security Affairs",
+   "ts": "2026-11-16T21:00:46Z",
+   "t": "Google GTIG Warns AI Agents Automate Exploits, Steal Credentials and Scale Cybercrime",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPNmQ0UzlkYWVLSkIwM2FfMlRTVklVbGh3QmVObEcxXzJDc2dseEVEV01jczJPNWEza2VQNHgzVF91SlNVb29SQkJoa3RYQnB6eTFZYzAxUDdkYjBTUnViTlpnSExVNW9Ga2hvNmNISVUwaWhFZmh4Rk5mYUNVaHBIak1tRlN0MVA1V0xvemJqRjFZUTZWVGNnbkFHbzhLZlhIaDVTaXE2RWdXX0FiU2NGeXljTmtkV25ESGFBN0hWMEtnVHlwd2I0TWRsZWbSAdIBQVVfeXFMTXdRMmtRVjM2d1VtamdhekFXRU03b2dlODc2ZzVmWG9PaTRuNkJjRjBscVVmdWFlWmY2RXNlMlNYYXg1Y2xwRTBNNm5JLUhjR2hoeHNZeGliYXRiUkRMWjlzRWFBdGpMOUJ6QV9YUFBMaXdxZGp2VDRLQkQ0YmV3TkJock4xVDhBS1ZlckxKUEdYNlY4djlhSzk4V0RpNmNmc3VqNXp5TUhqS3dGMFRucTZvS0VfTmZfMlFJcWFtZGw5YVNsQ2JqNFFJQ2VfSVJsbDRB?oc=5",
+   "ta": "تحذر Google GTIG وكلاء الذكاء الاصطناعي من أتمتة عمليات الاستغلال وسرقة بيانات الاعتماد وتوسيع نطاق الجرائم الإلكترونية"
   },
   {
    "id": "hn-50523022",
@@ -1001,6 +1040,19 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNdlQtb3d5T0haTDU3VlZTeW16d3VaVkFjQzBDZm0zMEtxd3FHaWt5M1BMMkMwa056MlBKdnEzaGZEbHFKekUwQVZjeEdkeTg0b1Z6WFk2WDZ2a05mZHJObllXd3NUTFBHRktxWmQ5d19KUnA2Z1RHTG5fZ1BCZ3JjSmZSSDFGYVNfUFRweWxvVURweUkzeG4tODluMkZQMVUzYXNadTBndkM1bk9LYUFGZmZ3NWF2YWdUSHJKUDdoZ1labGtqZ1ZEZGx5VVUzeHhRNU1fYWJ1N3RzTFhKYlpndWNDcw?oc=5",
    "ta": "تراجع تصميم نيميتشيك هو أمر دوري، وليس ضحية للذكاء الاصطناعي، كما يقول دويتشه بنك"
+  },
+  {
+   "id": "gh-1460180740",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-16T15:09:46Z",
+   "t": "boringmarketer/boring-marketing-skills: 31 free marketing skills for your AI agent: research, positioning, copy, pages, SEO, AI s…",
+   "s": "390 نجمة، لغة Python",
+   "tags": [
+    "جديد كلياً"
+   ],
+   "url": "https://github.com/boringmarketer/boring-marketing-skills",
+   "ta": "مهارات تسويقية مملة/تسويقية مملة: 31 مهارات تسويقية مجانية لوكيل الذكاء الاصطناعي الخاص بك: البحث وتحديد المواقع والنسخ والصفحات وتحسين محركات البحث والذكاء الاصطناعي..."
   },
   {
    "id": "yt-83NRvB_Gusk",
@@ -1601,6 +1653,19 @@
    "sa": "الهندسة المعمارية لا تنتهي أبدًا، تعلم كيفية إعادة تصور ما هو موجود بالفعل. انضم إلى كارلوس بانون (المؤسس المشارك ورئيس قسم التصميم والذكاء الاصطناعي في FORMAS.AI)..."
   },
   {
+   "id": "gh-1459227651",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-15T20:46:03Z",
+   "t": "Peshiemaina21/telegram-news-autopilot: Telegram Autopilot: Community-Driven, Feature-Rich Bot for Discord and Telegram",
+   "s": "47 نجمة، لغة TypeScript",
+   "tags": [
+    "جديد كلياً"
+   ],
+   "url": "https://github.com/Peshiemaina21/telegram-news-autopilot",
+   "ta": "Peshiemaina21/telegram-news-autopilot: Telegram Autopilot: روبوت مدفوع بالمجتمع وغني بالميزات لـ Discord وTelegram"
+  },
+  {
    "id": "hn-50510296",
    "cat": "arch",
    "src": "Hacker News",
@@ -1625,6 +1690,19 @@
    ],
    "url": "https://news.ycombinator.com/item?id=50510042",
    "ta": "اسأل HN: لقد أغلقتنا شركة Stripe بعد فاتورة بقيمة 1500 دولار ولم تطلب أبدًا أي دليل"
+  },
+  {
+   "id": "gh-1459167449",
+   "cat": "arch",
+   "src": "GitHub",
+   "ts": "2026-11-15T19:31:25Z",
+   "t": "darmank3254-png/autodesk-revit: Autodesk Revit: Building Information Modeling for Architecture and Engineering",
+   "s": "47 نجمة، لغة TypeScript",
+   "tags": [
+    "أداة مفتوحة المصدر"
+   ],
+   "url": "https://github.com/darmank3254-png/autodesk-revit",
+   "ta": "darmank3254-png/autodesk-revit: Autodesk Revit: نمذجة معلومات البناء للهندسة المعمارية والهندسة"
   },
   {
    "id": "hn-50509779",
@@ -2602,19 +2680,6 @@
    "url": "https://www.youtube.com/watch?v=G_Jrexy_5Bg",
    "ta": "أخبار الذكاء الاصطناعي: الأمور لن تعود كما كانت أبدًا",
    "sa": "جرب @OpenAI Decisions API هنا: https://developers.openai.com/api/docs/guides/decisions إليك أخبار الذكاء الاصطناعي من أحد أعنف الأسابيع التي شهدناها على الإطلاق..."
-  },
-  {
-   "id": "gn-telgeplansarchitectureledentrybeforedetailingwork",
-   "cat": "arch",
-   "src": "Multibagg AI",
-   "ts": "2026-11-13T17:08:18Z",
-   "t": "Telge plans architecture-led entry before detailing work",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSHpxd2MweDJtcFowODJVMkt5YV9abTJ2eDk2YWRBX3Y3encxQ2NaMzdCeEdfeGZ0VmxmX2xkbWFJekxlYmZkbVVybFdXdG1EOVVsZDFtYXVwRjd5NTY4V1JuRk1kRHdNSTV4UEJjRVJ3LW5USXhCa1hjbnZyYnBZNFB2aDNxWnhtOGFrNklXYWNrWkdPOV9tZjBZWDZmdlNURWQxQmRoRllxaHNyOFBJLV9IaWFVQQ?oc=5",
-   "ta": "تخطط Telge للدخول القائم على الهندسة المعمارية قبل تفاصيل العمل"
   },
   {
    "id": "yt-PkAmyub12K8",
@@ -4180,73 +4245,6 @@
    ],
    "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
    "ta": "فيديو الحملة الترويجية للاكتتاب العام لشركة Anthropic"
-  },
-  {
-   "id": "yt-OSnAd5SuT_k",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-11T14:47:14Z",
-   "t": "Learn Local AI in 30 Minutes - Run LLMs locally for FREE",
-   "s": "Build your freelance career with me: https://go.datalumina.com/yCHk1GX 📘 Guide to follow along: https://learn.datalumina.com/docs/local-chat 🔗 Code f…",
-   "tags": [
-    "Dave Ebbelaar"
-   ],
-   "url": "https://www.youtube.com/watch?v=OSnAd5SuT_k",
-   "ta": "تعلم الذكاء الاصطناعي المحلي في 30 دقيقة - قم بتشغيل LLMs محليًا مجانًا",
-   "sa": "قم ببناء حياتك المهنية في العمل الحر معي: https://go.datalumina.com/yCHk1GX 📘 الدليل للمتابعة: https://learn.datalumina.com/docs/local-chat 🔗 الكود f…"
-  },
-  {
-   "id": "gn-aiwalksintoanarchitecturefirm",
-   "cat": "arch",
-   "src": "Common Edge",
-   "ts": "2026-11-11T14:08:32Z",
-   "t": "AI Walks Into an Architecture Firm…",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE8tZ2EydmxWZmRBTHNOQklPMWFEUVA3ZkFuOXJTYVF6NWNXR2M1VF9nQ1oycFFKazBCNUxGUEd0SFE0dDZaVFVLejdOSnoyelVsR2xKUmNJckwwSlFYQnpDaHNTeTZ1QldaR1E?oc=5",
-   "ta": "الذكاء الاصطناعي يدخل إلى شركة معمارية..."
-  },
-  {
-   "id": "hn-50452464",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-11T12:06:22Z",
-   "t": "Nvidia Vera CPU Review: 2TB/S Memory Bandwidth, a Real x86 Rival",
-   "s": "14 نقطة، 3 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.storagereview.com/review/nvidia-vera-cpu-review",
-   "ta": "مراجعة وحدة المعالجة المركزية Nvidia Vera: عرض النطاق الترددي للذاكرة 2 تيرابايت/ثانية، منافس حقيقي لـ x86"
-  },
-  {
-   "id": "hn-50452455",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-11T12:05:22Z",
-   "t": "My AI agents found an unmapped Maya site?",
-   "s": "1036 نقطة، 392 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://pietromiotti.com/latest/maya-site",
-   "ta": "هل عثر عملاء الذكاء الاصطناعي على موقع مايا غير معين؟"
-  },
-  {
-   "id": "rss-amanagementarchiboostlooksbeyondconstructiondocumentchecking",
-   "cat": "arch",
-   "src": "AEC Magazine",
-   "ts": "2026-11-11T11:56:35Z",
-   "t": "Archiboost looks beyond construction document checking",
-   "s": "Company secures $6.2m to develop a connected model of building information and advance its AI AECO platform The post Archiboost looks beyond construction docum…",
-   "tags": [
-    "AEC"
-   ],
-   "url": "https://aecmag.com/data-management/archiboost-looks-beyond-construction-document-checking/",
-   "ta": "يتطلع Archiboost إلى ما هو أبعد من فحص مستندات البناء",
-   "sa": "حصلت الشركة على 6.2 مليون دولار أمريكي لتطوير نموذج متصل لمعلومات البناء وتطوير منصة AI AECO الخاصة بها."
   }
  ]
 }
