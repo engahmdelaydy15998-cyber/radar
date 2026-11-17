@@ -35,7 +35,12 @@ jobs:
           if [ -n "$(git status --porcelain data.json)" ]; then
             git add data.json
             git commit -m "Update feed"
-            git pull --rebase -q origin main || true
+            git fetch -q origin main
+            if ! git merge -q -X ours --no-edit origin/main; then
+              git checkout --ours data.json
+              git add data.json
+              git commit -q -m "Merge feed"
+            fi
             git push
           fi
 

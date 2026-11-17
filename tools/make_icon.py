@@ -101,6 +101,15 @@ def build(name, pal):
     y0=C+top*N*LS; y1=C+bot*N*LS
     for y in range(N):
         t=min(1,max(0,(y-y0)/(y1-y0))); gp.line([(0,y),(N,y)],fill=lerp(pal['grad'][0],pal['grad'][1],t))
+    # faint world-map dots, only shows up where it falls inside the letters
+    bx0,by0=C-0.21*N*LS,C-0.14*N*LS; bw,bh=0.42*N*LS,0.28*N*LS
+    land=[(0.04,0.50),(0.10,0.36),(0.16,0.26),(0.22,0.20),(0.27,0.18),(0.31,0.28),(0.34,0.42),(0.37,0.58),(0.40,0.72),
+          (0.50,0.26),(0.55,0.40),(0.58,0.55),(0.61,0.68),
+          (0.60,0.20),(0.66,0.14),(0.72,0.16),(0.80,0.22),(0.87,0.30),(0.93,0.40)]
+    rdot=bw*0.032
+    for fx,fy in land:
+        x=bx0+fx*bw; y=by0+fy*bh
+        gp.ellipse([x-rdot,y-rdot,x+rdot,y+rdot],fill=lerp(pal['grad'][0],(8,5,18),0.42))
     face=Image.new("RGBA",(N,N),(0,0,0,0)); face.paste(gr,(0,0),mask); over(base,face)
     import numpy as np
     def pos(a,rr): a=math.radians(a); return C+math.cos(a)*N*rr, C-math.sin(a)*N*rr
@@ -169,10 +178,11 @@ def build(name, pal):
         td.polygon([(cx-k*0.55,cy-k),(cx-k*0.55,cy+k),(cx+k,cy)],fill=(255,255,255,255)); over(base,tl)
     blip(318,0.35,0.050,(236,52,52),playg,solid=(236,52,52))
     # architecture: simple bold mud-brick dome + vault + arched door (Hassan Fathy spirit); melts into the radar
-    ax,ay=pos(54,0.325); AW=N*0.165
-    echo(ax,ay,AW*0.30,pal['arch_echo'],0.325,54,0.4)
-    gl=layer(); ImageDraw.Draw(gl).ellipse([ax-AW*1.0,ay-AW*0.9,ax+AW*1.0,ay+AW*0.9],fill=pal['arch_echo']+(34,))
-    over(base,gl.filter(ImageFilter.GaussianBlur(AW*0.35)))
+    ax,ay=pos(54,0.325); AW=N*0.108; Rc=AW*1.15
+    echo(ax,ay,Rc,pal['arch_echo'],0.325,54,0.4)
+    # soft black fade behind the mark instead of a visible disc: no hard edge, just a feathered shadow
+    bgf=layer(); ImageDraw.Draw(bgf).ellipse([ax-Rc*1.1,ay-Rc*1.1,ax+Rc*1.1,ay+Rc*1.1],fill=(4,3,9,185))
+    over(base,bgf.filter(ImageFilter.GaussianBlur(Rc*0.55)))
     sz=int(AW*2.6); G=Image.new("L",(sz,sz),0); gd_=ImageDraw.Draw(G)
     u=AW*0.62; ox,oy=sz/2,sz/2+0.15*u
     def Q(p): return (ox+p[0]*u, oy+p[1]*u)
@@ -187,10 +197,10 @@ def build(name, pal):
         gd_.rectangle([*Q((cx-w_,top+w_)),*Q((cx+w_,bot))],fill=0)
         gd_.polygon([Q((cx+w_*math.cos(math.pi*k/30),top+w_-w_*math.sin(math.pi*k/30))) for k in range(31)],fill=0)
     cut(0,0.50,0.15,0.90); cut(-1.32,0.74,0.07,0.90); cut(1.32,0.74,0.07,0.90)
-    # fade toward the bottom so it dissolves into the radar
+    # fade toward the edges so it dissolves into the soft backdrop, no hard edge
     fade=Image.new("L",(sz,sz)); fp=ImageDraw.Draw(fade)
     for y in range(sz):
-        t=(y-(oy-0.9*u))/(1.8*u); fp.line([(0,y),(sz,y)],fill=int(255*max(0.85,min(1,1.5-t*0.6))))
+        t=(y-(oy-0.9*u))/(1.8*u); fp.line([(0,y),(sz,y)],fill=int(255*max(0.82,min(1,1.5-t*0.6))))
     G=ImageChops.multiply(G,fade).filter(ImageFilter.GaussianBlur(0.7*S))
     col=Image.new("RGB",(sz,sz)); cp_=ImageDraw.Draw(col)
     for x in range(sz): cp_.line([(x,0),(x,sz)],fill=lerp(pal['wall'][0],pal['wall'][1],x/sz))

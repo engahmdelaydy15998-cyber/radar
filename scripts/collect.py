@@ -46,8 +46,7 @@ CHANNELS = [
     ("@ParametricArchitecture", "Parametric Architecture", "arch"),
     ("@archicad", "Archicad", "arch"),
     ("@AutodeskAEC", "Autodesk AEC", "arch"),
-    ("@AECmagazine", "AEC Magazine", "arch"),
-    ("@McNeelTV", "Rhino / McNeel", "arch"),
+    ("@rhinoceros3d", "Rhino / McNeel", "arch"),
 ]
 
 # Agents section: local agents, Claude Code, cheaper alternatives, new tools.
@@ -56,7 +55,7 @@ CHANNELS += [
     ("@matthew_berman", "Matthew Berman", "agents"),
     ("@AIJasonZ", "AI Jason", "agents"),
     ("@1littlecoder", "1littlecoder", "agents"),
-    ("@WorldofAI", "WorldofAI", "agents"),
+    ("@intheworldofai", "WorldofAI", "agents"),
     ("@NetworkChuck", "NetworkChuck", "agents"),
 ]
 

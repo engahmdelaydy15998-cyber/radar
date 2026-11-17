@@ -1,7 +1,19 @@
 {
- "updated": "2026-11-17T07:23:36Z",
+ "updated": "2026-11-17T07:53:27Z",
  "demo": false,
  "items": [
+  {
+   "id": "gn-googlewarnshackersareusingaiagentstoautomatecyberattacks",
+   "cat": "agents",
+   "src": "Firstpost",
+   "ts": "2026-11-17T07:21:35Z",
+   "t": "Google warns hackers are using AI agents to automate cyber attacks",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPc2MtV3RpN0VXOW5DZEU3NUNjUkpkWXlqTHl1MjBhZHdJSXJ6RlF3RFpyRkpOcWdvcGd6SXktZVFHbUx4VlZ1cVV1dmQ3Q3A0ei1ibWRLRVZhdEpUeWZnTGZrSFpCR1l4Q1dVeG9naGRLdFFnamswRjJVblRuVTd1ZkM1bV9jcFVMeWhXaHYwUFpscFE3bUUtbTR6TkNEX1hHVmdSV091QlhLby1RWFNMQ9IBtgFBVV95cUxQLUFzbFIxQWRFMkl5am01WkdlWGQzN1l4U2N6T0VWY3JnTFYtdlZicWNuWEVXYkttZ1RmVngzaGN1YW9ydjZySXpVaWRUekZ4blpBWVJZN1NxZXdoSmNFNFR6Ynk2ZFB5QkNkZ3RIZHZlSjJuZ2VPR3djTUdmMllBRGt2SWJhaFVoQlFKNFJXd3BYZlB5Z3BSUVlrQjBCNTljZG52NWVKYzFOeHQ2Y1hWRFMySFJrZw?oc=5"
+  },
   {
    "id": "yt-3UnQ3Wt5NF0",
    "cat": "reels",
@@ -201,6 +213,19 @@
    "url": "https://www.youtube.com/shorts/Mq6Qjv8lShc",
    "ta": "مجتمع فيلا سمارتلاند، هندسة أوبنهايم",
    "sa": "يحتاج التصميم المتصل إلى تنسيق متصل. بالنسبة لمجتمع Smartland Villa، قامت شركة Oppenheim Architecture بربط الهندسة المعمارية والنماذج الداخلية في Archi ..."
+  },
+  {
+   "id": "hn-50524880",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-16T23:08:42Z",
+   "t": "Lastbook – Everything you need to survive and rebuild society",
+   "s": "13 نقطة، 0 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://lastbook.org/",
+   "url2": "https://news.ycombinator.com/item?id=50524880"
   },
   {
    "id": "hn-50524736",
@@ -918,6 +943,18 @@
    "sa": "أكمل هينينج لارسن ورامبول تحويل منشرة سترومسبو التاريخية في أريندال، النرويج، إلى مكان عمل جديد لشركة التأمين البحري جارد."
   },
   {
+   "id": "yt-5vPXJiy83Sg",
+   "cat": "agents",
+   "src": "YouTube",
+   "ts": "2026-11-16T05:59:39Z",
+   "t": "Qwen 4 Max IS OUT! BEST Chinese AI Model EVER?! (Fully Tested)",
+   "s": "Build 3D games and apps with Astra and Opus 5.5 on Abacus AI SuperComputer!: https://supercomputer.abacus.ai/ Alibaba has officially released Qwen4-M…",
+   "tags": [
+    "WorldofAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=5vPXJiy83Sg"
+  },
+  {
    "id": "hn-50514470",
    "cat": "code",
    "src": "Hacker News",
@@ -1487,6 +1524,18 @@
    "sa": "هذه المقالة هي جزء من قسم الرأي الجديد لدينا، وهو تنسيق للمقالات المبنية على الحجج حول الأسئلة الحرجة التي تشكل مجالنا."
   },
   {
+   "id": "yt-iXvttGCoc1g",
+   "cat": "agents",
+   "src": "YouTube",
+   "ts": "2026-11-15T07:13:16Z",
+   "t": "Gemini 4 Krypton BEATS FABLE 5.2!?, GPT-6.2 Preview, GLM-5.5 LEAKED & Claude Code UPDATE! AI NEWS",
+   "s": "Your whole AI workflow in one place, from $10/month: Mammouth → https://mammouth.ai Google is moving at an INSANE pace! 🚀 A new Gemini 4 Krypton chec…",
+   "tags": [
+    "WorldofAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=iXvttGCoc1g"
+  },
+  {
    "id": "yt-X3r-mZtPfP8",
    "cat": "reels",
    "src": "YouTube",
@@ -1785,6 +1834,18 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1vTWZkMzQzWHpvTkxBdzRTb3Q5STNqYzFzM2pxeE9XRkpSWWRyNFhzbGV6WE1mRTNqX3NzZmxuLWdWdFdYX3lqUUlnaGlCd0poczhfckwzTnVxaWtZME94VUNSb01EY1p1QnBGYkJmZWIxUnZQRjVqY21xSFVGZw?oc=5",
    "ta": "llama.cpp vs Ollama: الإصدار 1.0، $0 مقابل $20 Cloud Tier [2026]"
+  },
+  {
+   "id": "yt-tAy1IZf_4kg",
+   "cat": "agents",
+   "src": "YouTube",
+   "ts": "2026-11-14T10:55:50Z",
+   "t": "Claude Fable 5.2 Can Now Build INSANE Games!",
+   "s": "🔥 Black Friday Sale, get up to 60% off Higgsfield plans 👉 https://higgsfield.ai/s/claude-fable-5-2-yt-intheworldofai-IhvnDD Sponsored by Higgsfield.…",
+   "tags": [
+    "WorldofAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=tAy1IZf_4kg"
   },
   {
    "id": "hn-50495325",
@@ -2399,6 +2460,18 @@
    "ta": "تعمل الوظيفة الإضافية SketchUp على جلب BIM إلى الممارسات الأصغر"
   },
   {
+   "id": "yt-1KtXDpSYedo",
+   "cat": "agents",
+   "src": "YouTube",
+   "ts": "2026-11-13T08:20:18Z",
+   "t": "Anthropic SLOWING DOWN!?, Gemini 4 HYDROGEN IS INSANE, OpenAI's NEW Model, & NVIDIA FIRES Jensen!",
+   "s": "Build 3D games and apps with Astra and Opus 5.5 on Abacus AI SuperComputer!: https://supercomputer.abacus.ai/ Anthropic is willing to SLOW DOWN AI de…",
+   "tags": [
+    "WorldofAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=1KtXDpSYedo"
+  },
+  {
    "id": "gn-howmuchdoesaicostin2026thecompletepricingcomparison",
    "cat": "agents",
    "src": "Fello AI",
@@ -2837,19 +2910,6 @@
    "sa": "تعرف على المزيد حول نموذج القرار: https://developers.openai.com/api/docs/guides/decisions https://platform.openai.com/decisions اكتشف المزيد: 🛠️…"
   },
   {
-   "id": "gn-aecdatamodelapiswhatcustomersshouldknowaboutaccessvalueandpr",
-   "cat": "arch",
-   "src": "Autodesk News",
-   "ts": "2026-11-12T17:00:19Z",
-   "t": "AEC Data Model APIs: What customers should know about access, value and pricing",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tWHJ6QUhVTVpuOGlTUVlRLXhaRVA1QldMN1piVmI3UjJXQ3doX3NweUlfQkNfZ0hFVjRjakhQdVJycC1DaDZRYXhiX0FlZnBnUUJkXy1NRTV6OUI3aENIUktyNnAxYTFzZC16RDl0U3NldkVs?oc=5",
-   "ta": "واجهات برمجة التطبيقات لنموذج بيانات شركة AEC: ما يجب أن يعرفه العملاء حول الوصول والقيمة والتسعير"
-  },
-  {
    "id": "gn-attentiveaimakesfirstacquisitionbuystakeoffmonkeyasbeamaipow",
    "cat": "arch",
    "src": "Business Wire",
@@ -3047,6 +3107,18 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBTZnAyaFZLMG53NFVfaFFsNEk2Y2t3LWJVbUtHWmlmXzRya3JEMFh6cHF4SVB2MklZTkxKbGdLYmkzdzBNdVRUaXExTk1qM25HeVJDQ3hWcGdEZS1hY1BmY3NlSXI0LU1GSDR2MzVyYnhDcVlDQ1FrNE9rVEg?oc=5",
    "ta": "AWS Emulator: أداة مفتوحة المصدر لاختبار تطبيقات AWS محليًا، تم إنشاؤها بواسطة وكلاء الذكاء الاصطناعي المستقلين"
+  },
+  {
+   "id": "yt-lhCad7WDyHw",
+   "cat": "agents",
+   "src": "YouTube",
+   "ts": "2026-11-12T08:43:37Z",
+   "t": "Google's Gemini 4 KRYPTON Is INSANE! Carbon 4, Grok 4.8, GPT-6.2 Release LEAKED, Qwen 4 Max! AI NEWS",
+   "s": "Every top AI model in one place, from $10/month: Mammouth → https://mammouth.ai Google is making a MASSIVE comeback in the AI race! Gemini 4 Carbon i…",
+   "tags": [
+    "WorldofAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=lhCad7WDyHw"
   },
   {
    "id": "gn-claudecodeisntjustforcodingitcanfindwhatsslowingdownyourpc",
@@ -4149,98 +4221,16 @@
    "sa": "يراقب باستمرار معلومات المشروع عبر Autodesk Forma وAconex وProcore والمزيد. ظهر المنشور الذي أطلقه Ageiro Ark Watcher لأول مرة على مجلة AEC."
   },
   {
-   "id": "gn-trimbleannouncesnewaiintrimbleconnectcde",
-   "cat": "arch",
-   "src": "Architosh",
-   "ts": "2026-11-10T12:50:39Z",
-   "t": "Trimble announces new AI in Trimble Connect CDE",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOcXhmckJ4WURab0Jfc1RuRm43RmEwdzByR0RudlU4QTNJVTFLaXl1c21BVzlGekF4ZDZ5M3NUS0JTMHJpUU1Ta0RpUHZlVlJsSmRzQlZ4b2VUdmxPME0yRkNNUTgwU0p4d2pNNGE5cFJyU0RWVUo0ellxQTRjMmJVQzlzZ0s?oc=5",
-   "ta": "تعلن شركة Trimble عن الذكاء الاصطناعي الجديد في Trimble Connect CDE"
-  },
-  {
-   "id": "rss-psarchitoshcom202611trimbleannouncesnewaiintrimbleconnectcde",
-   "cat": "arch",
-   "src": "Architosh",
-   "ts": "2026-11-10T12:46:32Z",
-   "t": "Trimble announces new AI in Trimble Connect CDE",
-   "s": "The AI powered and expanded Trimble Connect CDE closes operational gaps and turns industry risks into confidence, powering the construction workflow forward Th…",
-   "tags": [
-    "AEC"
-   ],
-   "url": "https://architosh.com/2026/11/trimble-announces-new-ai-in-trimble-connect-cde/",
-   "ta": "تعلن شركة Trimble عن الذكاء الاصطناعي الجديد في Trimble Connect CDE",
-   "sa": "يعمل نظام Trimble Connect CDE المدعوم بالذكاء الاصطناعي والموسع على سد الفجوات التشغيلية وتحويل مخاطر الصناعة إلى ثقة، مما يعزز سير عمل البناء إلى الأمام."
-  },
-  {
-   "id": "yt-IZsL5jsHIO4",
+   "id": "yt-1kPiaDNS6Gk",
    "cat": "arch",
    "src": "YouTube",
-   "ts": "2026-11-10T12:39:39Z",
-   "t": "#78 – Sebastián Andia on AI, Creativity, and the Future of Architecture",
-   "s": "What was it really like to work with Zaha Hadid? And is artificial intelligence changing architecture for the better, or threatening the creativity t…",
+   "ts": "2026-11-10T13:00:29Z",
+   "t": "What Is the Rhino Studio Series? Teaching Architecture with Rhino",
+   "s": "What is the Rhino Studio Series? Why we built it, what each season teaches, how every episode is produced, and where AI fits into a very human proces…",
    "tags": [
-    "Parametric Architecture"
+    "Rhino / McNeel"
    ],
-   "url": "https://www.youtube.com/watch?v=IZsL5jsHIO4",
-   "ta": "#78 – سيباستيان أنديا يتحدث عن الذكاء الاصطناعي والإبداع ومستقبل الهندسة المعمارية",
-   "sa": "كيف كان العمل مع زها حديد؟ وهل الذكاء الاصطناعي يغير الهندسة المعمارية نحو الأفضل، أم يهدد الإبداع؟"
-  },
-  {
-   "id": "gh-1452548035",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-10T11:03:39Z",
-   "t": "Veloresearch/kinetic: The open engine for running AI on your own computer. Fast, exact, open source.",
-   "s": "90 نجمة، لغة Rust",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/Veloresearch/kinetic",
-   "ta": "Veloresearch/kinetic: المحرك المفتوح لتشغيل الذكاء الاصطناعي على جهاز الكمبيوتر الخاص بك. سريعة ودقيقة ومفتوحة المصدر."
-  },
-  {
-   "id": "gn-whyyougovsapproachtodigitaltwinsisfundamentallydifferentandb",
-   "cat": "arch",
-   "src": "YouGov",
-   "ts": "2026-11-10T10:18:12Z",
-   "t": "Why YouGov’s approach to digital twins is fundamentally different – and better",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5nZEZPWXJTb1hTWnYyMndZZFoxWEV0eVprWGdrUHVjT1hjMlRqUUlySWVtVkRTYlpKaHRPaDdLQU9IUzZLdHRuXzYzaHBLX1VGeUJvVXpRWTdKeHBoMWpKbFBXdXVPZzFQQThDanBmeEEwU1hJUnZHTVZCYw?oc=5",
-   "ta": "لماذا يختلف نهج YouGov في التعامل مع التوائم الرقمية اختلافًا جذريًا - وأفضل؟"
-  },
-  {
-   "id": "yt-vug73goPJaM",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-10T10:15:57Z",
-   "t": "Is Software Over?",
-   "s": "❤️ Check out Lambda here and sign up for their GPU Cloud: https://lambda.com/papers 📝 The papers and sources are available here: MirrorCode: https://…",
-   "tags": [
-    "Two Minute Papers"
-   ],
-   "url": "https://www.youtube.com/watch?v=vug73goPJaM",
-   "ta": "هل انتهت البرمجيات؟",
-   "sa": "❤️ تحقق من Lambda هنا وقم بالتسجيل في GPU Cloud الخاصة بهم: https://lambda.com/papers 📝 الأوراق والمصادر متاحة هنا: MirrorCode: https://…"
-  },
-  {
-   "id": "gn-whenhybridaimakessenseforcodingagents",
-   "cat": "agents",
-   "src": "Dataconomy",
-   "ts": "2026-11-10T10:13:27Z",
-   "t": "When Hybrid AI Makes Sense For Coding Agents",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPTDRrb21ub3VqdFBDMlNwOTI3WjgyYzNuV01RMWttQWFuQ2J3QkFnOGxOZ1VxZ2xRSVlRc0VoRTRnUDNITTN6YmM1RUF6dXZwS2llRlVkOTNBWWV5T3BJYWlteU1HaU5fbU5jdGNvcFBpUmJja0g0RHJONjNjd20xeDItTVZfUQ?oc=5",
-   "ta": "عندما يكون الذكاء الاصطناعي الهجين منطقيًا لوكلاء الترميز"
+   "url": "https://www.youtube.com/watch?v=1kPiaDNS6Gk"
   }
  ]
 }
