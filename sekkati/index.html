@@ -73,6 +73,7 @@ h2{font-size:15px;margin:0 0 8px;color:var(--mut);font-weight:500}
 .mk.poi{width:30px;height:30px;border-radius:50%;background:rgba(5,5,5,.88);border:2px solid #7c3aed;font-size:16px}
 .mk.poi.toll{border-color:var(--acc)}
 .mk.poi.uturn{border-color:var(--org)}
+.mk.poi.checkpoint{border-color:var(--bad)}
 .mk.poi.osm{opacity:.75}
 .mk.blk{width:30px;height:30px;border-radius:50%;background:rgba(255,107,129,.9);font-size:16px}
 .mk.st{width:18px;height:18px;border-radius:50%;background:var(--ok);border:4px solid #050505;box-shadow:0 0 0 2px var(--ok)}
@@ -128,6 +129,7 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint{dis
     <button class="chip" data-mode="toll">💳 كارتة</button>
     <button class="chip" data-mode="block">⛔ مقفول</button>
     <button class="chip" data-mode="uturn">↩️ يوتيرن</button>
+    <button class="chip" data-mode="checkpoint">🚓 لجنة</button>
     <button class="chip" id="tiles">🗺 شكل</button>
   </div>
 </div>
@@ -207,6 +209,7 @@ const PRIOR = 0.4;      // وقفات متوقعة لكل كم لو معنديش
 const INT_STOP = 0.03;  // احتمال وقفة عند كل تقاطع في جزء ما مشيتوش
 const CELL = 0.0002;    // حجم خلية الفهرس (~22م)
 const TOLL_SEC = 30;    // وقت تقديري للكارتة
+const CHECK_SEC = 60;   // وقت تقديري للجنة/الكمين
 const JAM_SEC = 420, ACC_SEC = 600;
 
 function hav(a, b){
@@ -318,14 +321,15 @@ function scoreRoute(r, ctx){
   pois = pois.filter((p, i) => !pois.slice(0, i).some(q => q.kind === p.kind && Math.abs(p.at - q.at) < 60));
   const tolls = pois.filter(p => p.kind === 'toll').length;
   const myUturns = pois.filter(p => p.kind === 'uturn').length;   // ملفات علّمها السواق بنفسه، فوق اللي OSRM شايفها
+  const checks = pois.filter(p => p.kind === 'checkpoint').length;
   // بلاغات زحمة وحوادث قريبة من الطريق
   const jamHit = ctx.jams.filter(j => D.some(p => hav(p, j) < 60));
   const jamSec = jamHit.reduce((s, j) => s + (j.kind === 'accident' ? ACC_SEC : JAM_SEC), 0);
   let adj, observed = false;
   if (used.length){
     observed = true; adj = mean(t => t.res.dur) + jamSec; expStops = mean(t => t.res.stops);
-  } else adj = r.duration * FF + stopSec + turnSec + myUturns * 30 + tolls * TOLL_SEC + jamSec;
-  return {adj, osrm:r.duration, dist:total, info:info || null, pois, tolls, uturns:myUturns, jams:jamHit.length,
+  } else adj = r.duration * FF + stopSec + turnSec + myUturns * 30 + tolls * TOLL_SEC + checks * CHECK_SEC + jamSec;
+  return {adj, osrm:r.duration, dist:total, info:info || null, pois, tolls, uturns:myUturns, checks, jams:jamHit.length,
           coverage:total ? covered/total : 0, expStops, observed, nTrips:used.length,
           sameTime:sameTime.length > 0, blocked, rank:adj + (blocked ? 1e6 : 0)};
 }
@@ -335,6 +339,7 @@ function parseReport(t){
   if (/كارت|رسوم|بوابه|بوابة|تحصيل/.test(t)) return 'toll';
   if (/حاد|تصادم|اتخبط|خبط/.test(t)) return 'accident';
   if (/مقفول|اتقفل|مسدود|قافل/.test(t)) return 'block';
+  if (/لجن[هة]|كمين|عسكري|حاجز/.test(t)) return 'checkpoint';
   if (/رادار|كاميرا/.test(t)) return 'radar';
   if (/زحم|واقف|مش بيتحرك|مرور|ازدحام/.test(t)) return 'jam';
   return null;
@@ -413,6 +418,7 @@ let start = null, dest = null, startCur = true, mode = null, mStart = null, mDes
 const poiMarkers = [], blockMarkers = [];
 const hints = {radar:'اضغط على مكان الرادار لتعليمه. اضغط عليه تاني لإلغائه.', toll:'اضغط على مكان الكارتة لتعليمها. اضغط عليها تاني لإلغائها.',
   block:'اضغط على مكان مقفول لتعليمه (24 ساعة). اضغط عليه تاني لإلغائه.', uturn:'اضغط على مكان الملف (يوتيرن) اللي محتاجه فعلياً في الطريق. اضغط عليه تاني لإلغائه.',
+  checkpoint:'اضغط على مكان اللجنة/الكمين. اضغط عليه تاني لإلغائه.',
   a:'اضغط على الخريطة لتحديد البداية.', b:'اضغط على الخريطة لتحديد الوجهة.'};
 function setMode(m){
   mode = (mode === m) ? null : m;
@@ -509,7 +515,7 @@ function drawMarks(){
   poiMarkers.splice(0).forEach(m => m.remove()); blockMarkers.splice(0).forEach(m => m.remove());
   const shown = new Set();
   const add = (p, own) => { const k = p.kind + p.lat.toFixed(4) + p.lon.toFixed(4); if (shown.has(k)) return; shown.add(k);
-    poiMarkers.push(addMk(mkEl(POI_IC[p.kind] || '📷', 'poi ' + (p.kind === 'toll' ? 'toll ' : '') + (p.kind === 'uturn' ? 'uturn ' : '') + (own ? '' : 'osm')), p.lon, p.lat)); };
+    poiMarkers.push(addMk(mkEl(POI_IC[p.kind] || '📷', 'poi ' + p.kind + ' ' + (own ? '' : 'osm')), p.lon, p.lat)); };
   myPois.forEach(p => add(p, true));
   const sel = results[selIdx];                       // رادارات وكارتات OSM اللي على الطريق المختار بس
   if (sel) sel.s.pois.filter(p => p.src === 'osm').forEach(p => add(p, false));
@@ -518,7 +524,7 @@ function drawMarks(){
 }
 map.on('click', e => {
   const p = {lat:e.lngLat.lat, lon:e.lngLat.lng};
-  if (mode === 'radar' || mode === 'toll' || mode === 'uturn'){
+  if (mode === 'radar' || mode === 'toll' || mode === 'uturn' || mode === 'checkpoint'){
     const i = myPois.findIndex(x => x.kind === mode && hav(x, p) < 40);
     if (i >= 0) myPois.splice(i, 1); else myPois.push({...p, kind:mode});
     save(); drawMarks();
@@ -655,7 +661,7 @@ function showRoutes(sel){
     return `<div class="rt ${k === sel ? 'sel' : ''}" data-k="${k}">
     <div class="h"><span class="t">${arab(mins(s.adj))} د${s.observed ? '' : ' <span class="k">(تقدير)</span>'}</span><span>${k === 0 ? '<span class="tag">★ الأفضل ليك</span>' : '<span class="k">بديل ' + k + '</span>'}</span></div>
     <div class="via">${x.r.via ? 'عن طريق ' + esc(x.r.via) : ''} <span class="k">· ${arab(s.dist/1000)} كم</span></div>
-    <div class="m">وقفات متوقعة ≈ ${s.expStops.toFixed(1)} · ${s.info ? s.info.turns + ' لفة، ' + s.info.inter + ' تقاطع' : ''}${s.pois.filter(p => p.kind === 'radar').length ? ' · 📷 ' + s.pois.filter(p => p.kind === 'radar').length : ''}${s.tolls ? ' · 💳 ' + s.tolls : ''}${s.uturns ? ' · ↩️ ' + s.uturns : ''}${s.jams ? ' · 🚗 بلاغ زحمة' : ''}</div>
+    <div class="m">وقفات متوقعة ≈ ${s.expStops.toFixed(1)} · ${s.info ? s.info.turns + ' لفة، ' + s.info.inter + ' تقاطع' : ''}${s.pois.filter(p => p.kind === 'radar').length ? ' · 📷 ' + s.pois.filter(p => p.kind === 'radar').length : ''}${s.tolls ? ' · 💳 ' + s.tolls : ''}${s.uturns ? ' · ↩️ ' + s.uturns : ''}${s.checks ? ' · 🚓 ' + s.checks : ''}${s.jams ? ' · 🚗 بلاغ زحمة' : ''}</div>
     <div class="m">${why(x, k)}</div></div>`; }).join('') +
     '<button class="big" id="startNav" style="margin-top:10px;background:var(--ok);color:#050505">▶ ابدأ القيادة</button>' +
     '<div class="row"><button class="sec" id="gm1">جوجل مابس بطريقنا</button><button class="sec" id="gm2">جوجل مابس بطريقه</button></div>';
@@ -702,7 +708,7 @@ function instrOf(st){
   if (st.mod.includes('sharp')) return 'لف ' + dir + ' بحدة' + on;
   return 'لف ' + dir + on;
 }
-const POI_AR = {radar:'رادار', toll:'كارتة', uturn:'يوتيرن'}, POI_IC = {radar:'📷', toll:'💳', uturn:'↩️'};
+const POI_AR = {radar:'رادار', toll:'كارتة', uturn:'يوتيرن', checkpoint:'لجنة'}, POI_IC = {radar:'📷', toll:'💳', uturn:'↩️', checkpoint:'🚓'};
 function setupNavRoute(rt){
   const C = rt.r.coords.map(([lo, la]) => ({lat:la, lon:lo}));
   const D = densify(C, 20), cum = [0];
@@ -803,7 +809,7 @@ $('nexit').onclick = exitNav;
 $('nmute').onclick = () => { voiceOn = !voiceOn; $('nmute').textContent = voiceOn ? '🔊' : '🔇'; if (!voiceOn){ try { speechSynthesis.cancel(); } catch(e){} } };
 
 /* البلاغات أثناء القيادة */
-const REPORTS = [['toll', '💳 كارتة'], ['jam', '🚗 زحمة'], ['accident', '💥 حادثة'], ['block', '⛔ مقفول'], ['radar', '📷 رادار'], ['alt', '🔀 طريق تاني']];
+const REPORTS = [['toll', '💳 كارتة'], ['jam', '🚗 زحمة'], ['accident', '💥 حادثة'], ['block', '⛔ مقفول'], ['radar', '📷 رادار'], ['checkpoint', '🚓 لجنة'], ['alt', '🔀 طريق تاني']];
 function fillSheet(id, withMic){
   $(id).innerHTML = REPORTS.map(([k, l]) => `<button data-r="${k}">${l}</button>`).join('') + (withMic ? '<button data-r="mic">🎤 قول</button>' : '') + (id === 'askg' ? '<button data-r="none">مفيش حاجة</button>' : '');
   $(id).querySelectorAll('[data-r]').forEach(b => b.onclick = () => {
@@ -818,7 +824,7 @@ function hideSheets(){ ['ask', 'rpt', 'cl'].forEach(i => $(i).hidden = true); }
 $('nreport').onclick = () => { const h = $('rpt').hidden; hideSheets(); $('rpt').hidden = !h; };
 function askWhy(){
   nav.lastAsk = Date.now(); hideSheets(); $('ask').hidden = false;
-  speak('واقفين ليه؟ قول كارتة أو زحمة أو حادثة', () => voiceReport());
+  speak('واقفين ليه؟ قول كارتة أو لجنة أو زحمة أو حادثة', () => voiceReport());
   setTimeout(() => { if (nav) $('ask').hidden = true; }, 20000);
 }
 async function voiceReport(){
@@ -829,7 +835,7 @@ function handleReport(kind){
   hideSheets();
   if (kind === 'none' || !lastPos) return;
   const p = {lat:lastPos.lat, lon:lastPos.lon};
-  if (kind === 'toll' || kind === 'radar'){ myPois.push({...p, kind}); save(); drawMarks(); speak('تمام، سجلت ' + POI_AR[kind] + ' هنا'); }
+  if (kind === 'toll' || kind === 'radar' || kind === 'checkpoint'){ myPois.push({...p, kind}); save(); drawMarks(); speak('تمام، سجلت ' + POI_AR[kind] + ' هنا'); }
   else if (kind === 'jam' || kind === 'accident'){ jams.push({...p, kind, until:Date.now() + 2 * 3600e3}); save(); speak('تمام، سجلت البلاغ'); suggestAlt(false); }
   else if (kind === 'block'){ blocks.push({...p, until:Date.now() + 864e5}); save(); drawMarks(); speak('تمام، سجلت إن الطريق مقفول'); suggestAlt(false); }
 }
