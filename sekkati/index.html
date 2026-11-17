@@ -179,7 +179,21 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
     <h2>مساعد Claude (اختياري)</h2>
     <input id="akey" type="password" placeholder="مفتاح Anthropic API (sk-ant-...)" autocomplete="off" style="direction:ltr">
     <div class="row"><button class="sec" id="akeySave">حفظ المفتاح</button><button class="sec" id="akeyClear">مسح</button></div>
-    <div class="note" style="margin-top:6px">بيتخزن على موبايلك بس. المساعد بيرد عليك وانت في القيادة بالصوت. مفيش عنده زحمة حية، بيعتمد على بلاغاتك وبدائل الطرق وخبرتك.</div>
+    <div style="margin-top:8px"><button class="big" id="askgen">🤖 اسأل Claude عن التطبيق أو الطريق</button></div>
+    <div class="note" style="margin-top:6px">بيتخزن على موبايلك بس. اسأله عن استخدام سكّتي أو عن طريقك وهو في القيادة بالصوت. مفيش عنده زحمة حية، بيعتمد على بلاغاتك وبدائل الطرق وخبرتك.</div>
+  </div>
+
+  <div class="card">
+    <h2>📖 دليل الاستخدام</h2>
+    <div class="note">
+      <b>من/إلى:</b> اكتب أو اضغط "موقعي"، أو اضغط على الخريطة واختار بداية/وجهة. الطرق بتتحسب تلقائي وتظهر تحت كخريطة منبثقة (sheet) فوق الخريطة.<br><br>
+      <b>كروت الطرق:</b> الدقايق هي التقدير الكلي. "تقدير" يعني محسوب من OSRM + وقفات متوقعة + رادارات/كارتات/لجان؛ لو مكتوب إنه "مشيته قبل كده" فده زمن حقيقي من رحلاتك المسجلة. ★ هو الطريق المرشّح كأفضل اختيار.<br><br>
+      <b>أزرار التعليم</b> (📷 رادار، 💳 كارتة، ⛔ مقفول، ↩️ يوتيرن، 🚓 لجنة): اضغط الزرار وبعدين اضغط مكانه على الخريطة. ضغطة تانية على نفس المكان بتشيله.<br><br>
+      <b>🧭 جوجل + سجّل:</b> يفتحلك جوجل مابس بنفس من/إلى (اتجاهاته أفضل من اتجاهاتنا دلوقتي)، وفي نفس الوقت يبدأ يسجّل رحلتك بصمت عشان نبني بيانات حقيقية بمرور الوقت.<br><br>
+      <b>▶ ابدأ القيادة:</b> شاشة ملء الشاشة فيها كل التعليمات، وتنبيهات صوتية للرادارات والكارتات واللجان قبل ما توصلها، وبيسألك لو وقفت كتير "واقفين ليه؟".<br><br>
+      <b>تسجيل رحلة:</b> منفصل عن القيادة، بيسجّل مسارك وبيحسب وقفاتك عشان التطبيق يتعلّم طرقك. كل رحلة بتخلي الاقتراحات أدق.<br><br>
+      <b>النسخ الاحتياطي:</b> نزّل ملف .json من وقت للتاني عشان لو الموبايل مسح بيانات المتصفح متفقدش رحلاتك.
+    </div>
   </div>
 </div>
 
@@ -197,10 +211,6 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
   <div id="rpt" class="sheet" hidden>
     <div class="g" id="rptg"></div>
   </div>
-  <div id="cl" class="sheet" hidden>
-    <div id="clout" style="font-size:15px;min-height:40px;margin-bottom:8px"></div>
-    <div class="row" style="margin-top:0"><input id="clin" type="text" placeholder="اسأل Claude عن الطريق"><button id="clgo" style="flex:0 0 auto">اسأل</button><button class="sec" id="clmic" style="flex:0 0 auto">🎤</button></div>
-  </div>
   <div id="nbot">
     <div id="nstats">
       <div class="nb"><b id="nspd">٠</b><span>كم/س</span></div>
@@ -214,6 +224,11 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
       <button class="red" id="nexit">خروج</button>
     </div>
   </div>
+</div>
+
+<div id="cl" class="sheet" hidden>
+  <div id="clout" style="font-size:15px;min-height:40px;margin-bottom:8px"></div>
+  <div class="row" style="margin-top:0"><input id="clin" type="text" placeholder="اسأل Claude عن الطريق أو عن استخدام التطبيق"><button id="clgo" style="flex:0 0 auto">اسأل</button><button class="sec" id="clmic" style="flex:0 0 auto">🎤</button></div>
 </div>
 
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
@@ -907,7 +922,10 @@ $('altNo').onclick = () => { $('alt').hidden = true; };
 $('akey').value = (() => { try { return localStorage.getItem('sekkati-akey') || ''; } catch(e){ return ''; } })();
 $('akeySave').onclick = () => { try { localStorage.setItem('sekkati-akey', $('akey').value.trim()); $('msg').textContent = ''; } catch(e){} };
 $('akeyClear').onclick = () => { try { localStorage.removeItem('sekkati-akey'); } catch(e){} $('akey').value = ''; };
+const APP_GUIDE = 'سكّتي تطبيق ملاحة: اكتب من/إلى وهيحسب طرق ويرتبهم بالأفضل. أزرار التعليم 📷 رادار / 💳 كارتة / ⛔ مقفول / ↩️ يوتيرن / 🚓 لجنة: اضغط الزرار وبعدين مكانه على الخريطة. 🧭 جوجل + سجّل بيفتح جوجل مابس ويسجّل الرحلة بصمت. ▶ ابدأ القيادة شاشة ملء شاشة بتنطق التعليمات والتنبيهات. تسجيل رحلة بيتعلّم من طرقك. فيه نسخة احتياطية (ملف .json) من كارت الرحلات.';
+function openAsk(){ hideSheets(); $('cl').hidden = false; if (!$('akey').value.trim()) $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; }
 $('nclaude').onclick = () => { const h = $('cl').hidden; hideSheets(); $('cl').hidden = !h; if (!$('akey').value.trim() && !h === false) $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; };
+$('askgen').onclick = openAsk;
 async function askClaude(q){
   const key = (() => { try { return localStorage.getItem('sekkati-akey') || ''; } catch(e){ return ''; } })();
   if (!key){ $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; return; }
@@ -921,7 +939,7 @@ async function askClaude(q){
     const r = await fetch('https://api.anthropic.com/v1/messages', {method:'POST',
       headers:{'content-type':'application/json', 'x-api-key':key, 'anthropic-version':'2023-06-01', 'anthropic-dangerous-direct-browser-access':'true'},
       body:JSON.stringify({model:'claude-haiku-5-5', max_tokens:300,
-        system:'إنت مساعد ملاحة بالمصري جنب السواق في تطبيق سكّتي. ردك جملة أو اتنين قصار وعمليين. مفيش عندك بيانات زحمة حية، فاعتمد على اللي اتبعتلك بس وقول لو مش متأكد. السلامة الأول، ومتشجعش على تجاوز السرعة.',
+        system:'إنت مساعد تطبيق سكّتي، بترد بالمصري على سؤالين: (1) استخدام التطبيق نفسه - ودليلك هو: ' + APP_GUIDE + ' (2) سؤال عن الطريق وانت السواق في القيادة. ردك جملة أو اتنين قصار وعمليين. مفيش عندك بيانات زحمة حية، فاعتمد على اللي اتبعتلك بس وقول لو مش متأكد. السلامة الأول، ومتشجعش على تجاوز السرعة.',
         messages:[{role:'user', content:ctx + '\n\nسؤال السواق: ' + q}]})});
     const j = await r.json();
     if (!r.ok) throw new Error((j.error && j.error.message) || r.status);
