@@ -566,15 +566,47 @@ function viaOf(steps){                              // "عن طريق ..." زي 
   const by = new Map(); steps.forEach(s => { if (s.name) by.set(s.name, (by.get(s.name) || 0) + s.dist); });
   return [...by.entries()].sort((a, b) => b[1] - a[1]).slice(0, 2).map(x => x[0]).join(' ثم ');
 }
+function pickHistoricalVia(a, b){          // نقطة من رحلة فعلية بدأت قريب من a وخلصت قريب من b، عشان نضمن ظهورها كبديل
+  let best = null, bestD = 3000 + 3000;
+  trips.forEach(t => {
+    const pts = unpack(t.pts); if (pts.length < 2) return;
+    const d0 = hav(pts[0], a), d1 = hav(pts[pts.length-1], b), d = d0 + d1;
+    if (d0 < 3000 && d1 < 3000 && d < bestD){ bestD = d; best = pts; }
+  });
+  if (!best) return null;
+  let total = 0; const cum = [0];
+  for (let i = 1; i < best.length; i++){ total += hav(best[i-1], best[i]); cum.push(total); }
+  const k = cum.findIndex(c => c >= total * 0.5);
+  return best[k < 0 ? best.length - 1 : k];
+}
+function dedupeRoutes(routes){                // بديلين شبه بعض (تشابه > 85%) بياخدوا واحد بس
+  const kept = [];
+  routes.forEach(r => {
+    const C = r.geometry.coordinates.map(([lo, la]) => ({lat:la, lon:lo}));
+    if (!kept.some(k => overlap(C, k.C) > 0.85 || overlap(k.C, C) > 0.85)) kept.push({r, C});
+  });
+  return kept.map(k => k.r);
+}
 async function computeRoutes(a, b){
-  const u = `https://router.project-osrm.org/route/v1/driving/${a.lon},${a.lat};${b.lon},${b.lat}?alternatives=3&overview=full&geometries=geojson&steps=true`;
+  const base = 'https://router.project-osrm.org/route/v1/driving';
+  const u = `${base}/${a.lon},${a.lat};${b.lon},${b.lat}?alternatives=3&overview=full&geometries=geojson&steps=true`;
   const j = await (await fetch(u)).json();
   if (!j.routes || !j.routes.length) throw new Error('no route');
-  const all = j.routes.flatMap(r => r.geometry.coordinates);
+  let routes = j.routes.slice();
+  const via = pickHistoricalVia(a, b);        // تأكيد ظهور طريق مشيته فعلاً حتى لو OSRM ما رشّحوش
+  if (via){
+    try {
+      const u2 = `${base}/${a.lon},${a.lat};${via.lon},${via.lat};${b.lon},${b.lat}?overview=full&geometries=geojson&steps=true`;
+      const j2 = await (await fetch(u2)).json();
+      (j2.routes || []).forEach(r => routes.push(r));
+    } catch(e){}
+  }
+  routes = dedupeRoutes(routes);
+  const all = routes.flatMap(r => r.geometry.coordinates);
   const bb = {s:Math.min(...all.map(c => c[1])) - 0.001, n:Math.max(...all.map(c => c[1])) + 0.001, w:Math.min(...all.map(c => c[0])) - 0.001, e:Math.max(...all.map(c => c[0])) + 0.001};
   try { await Promise.race([fetchPois(bb), new Promise((_, no) => setTimeout(no, 5000))]); } catch(e){}
   const ctx = buildCtx();
-  return j.routes.map((r, i) => {
+  return routes.map((r, i) => {
     const steps = routeSteps(r), rr = {coords:r.geometry.coordinates, duration:r.duration, info:routeInfo(r), steps, via:viaOf(steps)};
     return {i, r:rr, s:scoreRoute(rr, ctx)};
   }).sort((a, b) => a.s.rank - b.s.rank);
