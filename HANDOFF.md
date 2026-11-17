@@ -1,0 +1,58 @@
+# رادار AI: ملخص الجلسة للتسليم لجلسة تانية
+
+آخر تحديث: 2026-11-17. اللغة بين المستخدم وClaude: عربي مصري (المستخدم معماري، بيشتغل من موبايل أندرويد، مفيش عنده كمبيوتر في الجلسة).
+
+## الفكرة
+تطبيق PWA خاص بالمستخدم، اسمه "رادار AI"، بيجمع أخبار ومحتوى جديد في مجالاته ويعرضه كروت زي تطبيق RadioBIM (تطبيق BIM وAI لقاه المستخدم على لينكدإن). اللينكات بتفتح التطبيق الأصلي (مفيش تحميل فيديو). أسود/داكن. بيتثبت من كروم (Add to Home screen) ويستقبل Share من التطبيقات.
+
+## المكان
+- Repo: https://github.com/engahmdelaydy15998-cyber/radar (branch main، عام). Claude GitHub App متثبت عليه وبيعمل push.
+- الموقع: GitHub Pages، Source = GitHub Actions. الرابط عادة https://engahmdelaydy15998-cyber.github.io/radar/
+- مفيش backend ولا مفاتيح. كل حاجة مجانية.
+
+## الملفات
+- `index.html`: التطبيق كله (CSS وJS داخلي). الأقسام (CATS): All, BIM AI (id arch), Agents, Reels, Videos (long), AI Labs (co), Code, Creative. كروت زي RadioBIM: أيقونة القسم، عنوان إنجليزي وتحته ترجمة عربي (`ta`)، علامة New، زرار ⓘ بيفتح الوصف والتاجات (`sa`/`s`)، زرار فتح الأصل باسم المنصة، مشاركة، Website (لـ HN: `url2` نقاش و`url` المقال)، حفظ. "فتح الكل" و"جديد اليوم". عدّاد الجديد على كل أيقونة قسم والإجمالي تحت الاسم. بحث بـ3 نطاقات: الرادار (فلتر محلي)، GitHub (نتائج جوه التطبيق مع زرار "للرادار")، YouTube (جوه التطبيق لو فيه API key في localStorage باسم `radar-ytkey`، وإلا بيفتح بحث يوتيوب). لصق @قناة أو رابطها في بحث YouTube بيظهر زرار "＋ قناة للرادار" بيفتح GitHub issue جاهز.
+- `sw.js`: service worker (network-first للصفحات وdata.json، cache-first للأصول). اسم الكاش `radar-vNN` بيتزود مع كل تغيير في الأصول (حاليا v15).
+- `manifest.webmanifest`: اسم "رادار AI"، share_target GET (title,text,url)، أيقونات 192/512/maskable.
+- `data.json`: الخلاصة اللي بيكتبها الـ collector (مش بتتعدل يدوي).
+- `channels.json`: قنوات يوتيوب إضافية بتتضاف من التطبيق (`{"channels":[{"id"|"handle","name","kind"}]}`).
+- `scripts/collect.py`: الـ collector (Python stdlib بس).
+- `scripts/add_channel.py`: بيضيف قناة من نص issue.
+- `.github/workflows/update.yml`: كل 3 ساعات (cron `17 */3 * * *`) + يدوي + عند push: job collect (يكتب data.json ويعمل commit) وjob deploy (Pages بالـ Actions).
+- `.github/workflows/add-channel.yml`: عند فتح issue عنوانه يبدأ بـ `add-channel` من صاحب الـ repo بس: يضيف القناة لـ channels.json، يشغل update.yml، ويقفل الـ issue.
+- أيقونات: icon-192.png, icon-512.png, icon-maskable-512.png, apple-touch-icon.png.
+
+## مصادر الـ collector
+- YouTube RSS لكل قناة (handle يتحول لـ channel id بسكرابينج صفحة القناة؛ Shorts بيتعرف بـ HEAD على /shorts/ID). قنوات AI/كود/عمارة/Agents في قايمة `CHANNELS`، ومعاها `channels.json`. بعض القنوات أسماءها تخمين وممكن تفشل: الفاشل بيتخطى وبيتسجل في الـ log.
+- Hacker News (Algolia): استعلامات كود، عمارة (Revit, BIM, Autodesk, Grasshopper...)، Agents (Claude Code, Ollama, local LLM, MCP, DeepSeek, Qwen, Kimi...).
+- GitHub search API: topic llm، مواضيع عمارة (bim, ifc, revit, grasshopper, dynamo)، ومواضيع Agents (claude-code, mcp, ollama, ai-agents, local-llm...) بمشاريع جديدة في آخر 10 أيام.
+- RSS: ArchDaily, Dezeen, Architosh, AEC Magazine, Archinect (بفلتر كلمات `ARCH_KW`)، وAtom: Simon Willison، Reddit (LocalLLaMA/ClaudeAI/ClaudeCode: ممكن Reddit يرفض سيرفرات GitHub).
+- Google News RSS: 10 استعلامات عمارة+AI (بفلتر `AEC_KW` و`ARCH_KW`) و6 استعلامات Agents (بفلتر `AGENT_KW`).
+- الترجمة: endpoint جوجل غير الرسمي (translate.googleapis.com، من غير مفتاح) للعناوين (`ta`) والأوصاف (`sa`)، حد 150 طلب في التشغيل.
+- إنستجرام وفيسبوك وX ولينكدإن: مفيش جمع تلقائي (مفيش API مفتوح ومخالف للشروط). بتتضاف بالمشاركة أو اللصق وبتتخزن في localStorage (`radar-mine`, `radar-saved`) على الجهاز بس.
+
+## قرارات ومعلومات مهمة
+- قسم Creative فاضي: مفيش مصدر تلقائي. لازم المستخدم يحدد نوع المحتوى.
+- بحث يوتيوب جوه التطبيق محتاج YouTube Data API key مجاني (الحصة اليومية 10000 وحدة، البحث بـ100). المستخدم لسه معملهوش.
+- الأخبار من Google News والترجمة من جوجل: غير مسموح تجاريًا. لو التطبيق هيتباع لازم مصادر مرخصة ومفتاح ترجمة.
+- فكرة "مجاني لفترة وبعدين بفلوس": مينفعش بـ GitHub لوحده (Pages ثابت وعام). محتاج سيرش بسيط (Cloudflare Workers) وأكواد اشتراك (Gumroad/Lemon Squeezy). ما اتبنتش.
+- فكرة اختيارية: سطر "جرّب النهاردة" بالذكاء الاصطناعي تحت كل خبر معماري (تكلفة تقريبية سنتين في اليوم بـ Claude Haiku). محتاجة API key. ما اتبنتش.
+- لما يتغير أي أصل (أيقونة/HTML) بنزود `CACHE` في sw.js، والمستخدم بيمسح التطبيق ويثبته تاني عشان الأيقونة تتغير.
+- شعارات الشركات (Claude, Python, YouTube, GitHub) مبنرسمهاش. الأيقونة بتستخدم حروف C#/Py/JS ورموز عامة ونجمة AI، ومثلث تشغيل أحمر.
+- المشاكل القديمة اللي اتحلت: Pages كان بيعرض بيانات تجريبية لأن commits الـ GITHUB_TOKEN مش بتشغل بناء Pages؛ اتحل بـ job deploy بالـ Actions.
+- ترجمة كروم التلقائية بتبوظ الكود لو اتلصق في محرر GitHub. دايمًا نشتغل بـ push من Claude مش لصق.
+
+## الأيقونة الحالية (v10)
+خلفية سوداء بتدرج بنفسجي، 5 حلقات رادار بنفسجية بتخف مع البعد (عمق)، مسح رادار خافت، ضوء أفقي. حروف AI مجسمة بتدرج بنفسجي فاتح إلى وردي ومعاها نجمة. رموز من غير دواير: C# وPy وJS و{ } و>_ ونجمة (كلود/AI) على الشمال، مثلث أحمر (فيديو)، RSS (أخبار)، وصورة مبسطة لمركز حيدر علييف في باكو (زها حديد) للعمارة.
+سكريبت الرسم: PIL، موجود عند Claude في /tmp/icons/v10.py (مش محفوظ في الـ repo).
+
+## اللي لسه
+1. المستخدم يتأكد إن البيانات الحقيقية والترجمة والأقسام الجديدة شغالة على موبايله (يبعت سكرين شوت لو في مشكلة، ويفتح github.com/engahmdelaydy15998-cyber/radar/actions للأخطاء).
+2. مراجعة log أول تشغيلات: قنوات يوتيوب مش بتتلقى، Reddit محجوب؟، ضبط الفلاتر لو دخل محتوى مش مفيد.
+3. قسم Creative: يحتاج مصدر.
+4. بحث يوتيوب جوه التطبيق: مفتاح API.
+5. مشاركة من إنستجرام/يوتيوب (Share → رادار) لسه ما اتجربتش على موبايله.
+6. وظائف (jobs): اتذكرت وأُجلت.
+
+## أسلوب الشغل مع المستخدم
+ردود قصيرة وواضحة بالمصري، خطوات بسيطة، من غير ما نزحم الشاشة. هو بيشتغل من موبايل: مفيش رفع ملفات يدوي (Claude بيعمل push مباشرة). كل تغيير في الأيقونة أو الشكل يتبعت له كصورة يختار منها.
