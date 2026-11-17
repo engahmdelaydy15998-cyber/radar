@@ -1,7 +1,33 @@
 {
- "updated": "2026-11-17T05:26:42Z",
+ "updated": "2026-11-17T06:32:47Z",
  "demo": false,
  "items": [
+  {
+   "id": "af-httpssimonwillisonnet2026Nov17goproverbs",
+   "cat": "agents",
+   "src": "Simon Willison",
+   "ts": "2026-11-17T06:16:26Z",
+   "t": "Quoting Go Proverbs",
+   "s": "",
+   "tags": [
+    "مدونة"
+   ],
+   "url": "https://simonwillison.net/2026/Nov/17/go-proverbs/",
+   "ta": "نقلا عن الأمثال الذهاب"
+  },
+  {
+   "id": "af-omments1xyb7jwclover_2_dense_278b_base_7_lora_experts_routed",
+   "cat": "agents",
+   "src": "r/LocalLLaMA",
+   "ts": "2026-11-17T04:35:28Z",
+   "t": "Clover 2: dense 27.8B base + 7 LoRA experts routed per token, not a static merge, weights public",
+   "s": "",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xyb7jw/clover_2_dense_278b_base_7_lora_experts_routed/",
+   "ta": "Clover 2: قاعدة كثيفة تبلغ 27.8B + 7 خبراء LoRA يتم توجيههم لكل رمز مميز، وليس دمجًا ثابتًا، والأوزان عامة"
+  },
   {
    "id": "gn-onetechnologyjapanbuys75ofvietnamsnexconstructtoboostbimai",
    "cat": "arch",
@@ -66,6 +92,20 @@
    ],
    "url": "https://www.reuters.com/legal/litigation/meta-faces-sanctions-bid-over-withheld-evidence-teen-mental-health-cases-2026-11-16/",
    "ta": "تواجه ميتا محاولة فرض عقوبات بسبب حجب الأدلة في قضايا الصحة العقلية للمراهقين"
+  },
+  {
+   "id": "rss-ycom1187950haloplazahangzhouvankemixedusecomplexnikkensekkei",
+   "cat": "arch",
+   "src": "ArchDaily",
+   "ts": "2026-11-17T00:00:00Z",
+   "t": "HaloPlaza Hangzhou Vanke Mixed-use Complex / Nikken Sekkei",
+   "s": "By revitalizing a neglected canal, we created a fresh and vibrant urban environment and planned a continuous and open public space along the waterfront. Above…",
+   "tags": [
+    "AEC"
+   ],
+   "url": "https://www.archdaily.com/1187950/haloplaza-hangzhou-vanke-mixed-use-complex-nikken-sekkei",
+   "ta": "مجمع HaloPlaza Hangzhou Vanke متعدد الاستخدامات / Nikken Sekkei",
+   "sa": "ومن خلال تنشيط قناة مهملة، أنشأنا بيئة حضرية جديدة ونابضة بالحياة وخططنا لمساحة عامة مستمرة ومفتوحة على طول الواجهة البحرية. فوق…"
   },
   {
    "id": "yt-FiFU66g5B7Q",
@@ -283,6 +323,19 @@
    "sa": "يوفر لك OpenRouter واجهة برمجة تطبيقات واحدة لكل نموذج من نماذج الذكاء الاصطناعي التي توجه كل طلب وتحكمه، بحيث يكون الذكاء الاصطناعي الخاص بك أفضل وأسرع وأرخص. جربه مجانًا: https:…"
   },
   {
+   "id": "gn-amazonuncoversaiagentcampaignsstealingmodelcredentialsandtar",
+   "cat": "agents",
+   "src": "SSBCrack",
+   "ts": "2026-11-16T20:18:22Z",
+   "t": "Amazon Uncovers AI Agent Campaigns Stealing Model Credentials and Targeting Crypto Exchanges with Deepfakes",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNQXFJN2cyOFZUbmJRNmVMSWl3Q2Nocy05ZjBCVC1mY0dhbThQWHkzZ0w2OVh0OWtpTmt0NmdjSlJZaUltdzVicVEwRTYxSXZfTE5MV1NybFhEWUZBM3hKTE9IRlNYSVdjTU5MWnFabWZDMjJOR0VGd1IxcHczcVdBcGJrUS1rd0g4amYtS2M5clVjQnRyS1RIeUZXSHhfeFlLSDBWc0pCclhtWllBMjl0ZElsQ2J3WmFNVDJ1Y3RFaWRxYUhzbll0VnBaajlLWmM?oc=5",
+   "ta": "أمازون تكشف عن حملات عملاء الذكاء الاصطناعي لسرقة بيانات اعتماد النماذج واستهداف بورصات العملات المشفرة باستخدام التزييف العميق"
+  },
+  {
    "id": "af-ocalLLaMAcomments1xxy7ebmihoyo_gamer_a_generalist_game_agent",
    "cat": "agents",
    "src": "r/LocalLLaMA",
@@ -465,6 +518,19 @@
    "url": "https://www.youtube.com/watch?v=vVVdxMwPBuA",
    "ta": "كيف تعمل Check Point على تسريع أبحاث الثغرات الأمنية باستخدام Daybreak | OpenAI للأمن السيبراني",
    "sa": "يشرح Check Point CTO جوناثان زانجر كيف يستخدم فريقه OpenAI Daybreak لتحليل نقاط الضعف وتحويل النتائج إلى حماية للعملاء..."
+  },
+  {
+   "id": "gn-googlerevealshowhackersareusingaiagentstoautomaterealworldcy",
+   "cat": "agents",
+   "src": "CyberSecurityNews",
+   "ts": "2026-11-16T16:00:52Z",
+   "t": "Google Reveals How Hackers Are Using AI Agents to Automate Real-World Cyberattacks",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBDMkFxZmtFOWNSS2xhS1BWVm5WS2VvU3JlR2hVM3F4X3YxOUs4S1BUbU5CdnI2ME1VbE8yVDBGOFZrckhpRC1pbXNycndpMnA4eDZtZWJtellRVC1Qbjh0TGJKU29nbHMt0gFuQVVfeXFMTm1nRFJwZk51TnA0bFNzaXFjLVNtV0ZFemljTWVxdzB3Zk1sUDh3MjZVU1cwVDhFVDJrWENwQTgwRWtfWVU4cm9hVXFlNVk5bnR6RFdRUjUxYXdyTVpFN1F4blRHdVgtTDBwQWgzY2c?oc=5",
+   "ta": "تكشف Google كيف يستخدم المتسللون عملاء الذكاء الاصطناعي لأتمتة الهجمات الإلكترونية في العالم الحقيقي"
   },
   {
    "id": "yt-9fVixvNaNPI",
@@ -1022,6 +1088,19 @@
    "ta": "إظهار HN: Rbit – Git Forge المستضاف ذاتيًا في Rust"
   },
   {
+   "id": "gn-uberbuildsframeworktogovernautonomousaiagentsacrosstheirlife",
+   "cat": "agents",
+   "src": "news.lavx.hu",
+   "ts": "2026-11-15T21:15:28Z",
+   "t": "Uber Builds Framework to Govern Autonomous AI Agents Across Their Lifecycle",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNS1J1bEJBRWF3VUNsODgyNG1FN0pSemJzcXZGV2xIZkF1UllrZFYxZ2VzbjR4YUVqSnpqSEpxUUs5UVUyZU5heVBXdmp5d3NNbTZIWjMzVG5IdjRwUEw3aFFrcHhXam9ZZGJaSEtYSURtTEljS0NaVE5FVnhwUzNiTVRxN0VvclQzZ0VzelNCU2dMUU9OVHdab2Fid2hPWWUwNmMzRjh5UQ?oc=5",
+   "ta": "تقوم أوبر ببناء إطار عمل لإدارة وكلاء الذكاء الاصطناعي المستقلين عبر دورة حياتهم"
+  },
+  {
    "id": "hn-50510827",
    "cat": "arch",
    "src": "Hacker News",
@@ -1178,6 +1257,19 @@
    ],
    "url": "https://github.com/WinnerSpecialist/Gemini-Config-Checker-",
    "ta": "winnerSpecialist/Gemini-Config-Checker-: ماسح منطقة السلسلة: ابحث عن تكوينات الوكيل التي تنقلك إلى Google AI Studio وGemini (s..."
+  },
+  {
+   "id": "gh-1459019357",
+   "cat": "code",
+   "src": "GitHub",
+   "ts": "2026-11-15T16:47:17Z",
+   "t": "WindGatorRise37/Gemini-Config-Checker-: Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (s…",
+   "s": "473 نجمة، لغة Makefile",
+   "tags": [
+    "مشروع جديد"
+   ],
+   "url": "https://github.com/WindGatorRise37/Gemini-Config-Checker-",
+   "ta": "WindGatorRise37/Gemini-Config-Checker-: ماسح منطقة السلسلة: ابحث عن تكوينات الوكيل التي تنقلك إلى Google AI Studio وGemini (s..."
   },
   {
    "id": "gh-1459018163",
@@ -4149,98 +4241,6 @@
    ],
    "url": "https://github.com/huawei-csl/MACaQ",
    "ta": "huawei-csl/MACaQ: تكميم نموذج SOTA لـ GGUF والاستدلال المحلي وما بعده. تكميم وتشغيل ر…"
-  },
-  {
-   "id": "gn-icomparedopenaicodexandclaudecodesusagelimitsandtheresacatch",
-   "cat": "agents",
-   "src": "Tom's Guide",
-   "ts": "2026-11-10T08:15:00Z",
-   "t": "I compared OpenAI Codex and Claude Code's usage limits — and there's a catch with both $20 plans",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdXRaV0syMXFQTTZwcks5OU5JRlNwVEUzNi1ETGxYVUxZYVlfQzFzTVZ0aGtrcE5vUUZZYW9hN2xtQ0JZNUdleXYxT21Md2FkWU45amstU1lMX3BWaFV6czh0NzBGeUhnUVQzZWNrQnJDZFNra21YcEY3bXJJMVNVZktsZFV2SjdsY1RKa29LUHpSSnRvVFhyZEpuaWR0TnNGR0VUZzltLVA0TnFncDV1bDlYV2ZNVFJTeFIwRHhfcmw?oc=5",
-   "ta": "لقد قارنت حدود استخدام OpenAI Codex وClaude Code، وهناك مشكلة في كلا الخطتين بقيمة 20 دولارًا"
-  },
-  {
-   "id": "gn-claudeusagelimitssessionweeklyandmessagecaps",
-   "cat": "agents",
-   "src": "Fello AI",
-   "ts": "2026-11-10T08:00:00Z",
-   "t": "Claude Usage Limits: Session, Weekly and Message Caps",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBuRU1sWDNJbzV5dlhaUGZDRXRzUzN1eFRhVmpORFJ5TlVMREpENHRXNFVBSGpPMTJGRk9famxhWmxLd1dIS3ZncTJ2b1BoWlQ3U1E?oc=5",
-   "ta": "حدود استخدام Claude: الحد الأقصى للجلسة والأسبوعية والرسائل"
-  },
-  {
-   "id": "gn-claudeprovsmaxwhichplanyouactuallyneed",
-   "cat": "agents",
-   "src": "Fello AI",
-   "ts": "2026-11-10T08:00:00Z",
-   "t": "Claude Pro vs Max: Which Plan You Actually Need",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE05OURBdXlWMDlOMW1jNFJ0SnFZbHNKVWRFcXI2WU5ibDlsUVFITTA2ZllWcGxoMnY2ZmFpRWthZ3FIN1YteXZ1dnl2MldKNGM?oc=5",
-   "ta": "Claude Pro vs Max: ما هي الخطة التي تحتاجها بالفعل؟"
-  },
-  {
-   "id": "gn-claudecodepricing2026planscostsfreetierguide",
-   "cat": "agents",
-   "src": "Fello AI",
-   "ts": "2026-11-10T08:00:00Z",
-   "t": "Claude Code Pricing 2026: Plans, Costs & Free Tier Guide",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5WR0owTHpSUVJuU2dpS3JZUzZuTm5UTG9LZWxERU5lV3ZOVVNIdncxU29LZ2VvTGJtd3p6aUZWbDNRbGpFNjkxVHJ5c0gxd3FZZmc?oc=5",
-   "ta": "تسعير كود كلود 2026: الخطط والتكاليف ودليل المستوى المجاني"
-  },
-  {
-   "id": "gn-whatishermesagentdefinitionfeaturesandhowitworks",
-   "cat": "agents",
-   "src": "Hostinger",
-   "ts": "2026-11-10T08:00:00Z",
-   "t": "What is Hermes Agent? Definition, features, and how it works",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1aazE2d0NyX0F4SDg2eHZZVDlmRGpia05nV3p5Y2xUVVBUdE5uclBjcE90QkxRWm9nM3VIYVV2eWpocFo4UzNnUi16MlZEX0ZzalVFSHY2ck95SGR1dFR0YlgyeXlpMExFZWFLVw?oc=5",
-   "ta": "ما هو وكيل هيرميس؟ التعريف والميزات وطريقة العمل"
-  },
-  {
-   "id": "rss-httpsaecmagcomworkstationsg2digitallaunchesquadgpu2userver",
-   "cat": "arch",
-   "src": "AEC Magazine",
-   "ts": "2026-11-10T07:50:27Z",
-   "t": "G2 Digital launches quad-GPU 2U server",
-   "s": "UK-manufactured 2U Q-Power offers firms an alternative to premium cloud AI services The post G2 Digital launches quad-GPU 2U server appeared first on AEC Magaz…",
-   "tags": [
-    "AEC"
-   ],
-   "url": "https://aecmag.com/workstations/g2-digital-launches-quad-gpu-2u-server/",
-   "ta": "تطلق G2 Digital خادمًا رباعيًا GPU 2U",
-   "sa": "تقدم شركة 2U Q-Power المصنعة في المملكة المتحدة للشركات بديلاً لخدمات الذكاء الاصطناعي السحابية المتميزة."
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov10museember",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-10T07:28:21Z",
-   "t": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/10/muse-ember/",
-   "ta": "نقدم لكم نموذجنا الأصغر والأكثر كفاءة: Muse Ember"
   }
  ]
 }
