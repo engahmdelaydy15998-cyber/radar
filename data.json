@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T08:07:37Z",
+ "updated": "2026-11-17T08:08:57Z",
  "demo": false,
  "items": [
   {
@@ -2214,18 +2214,6 @@
    "sa": "جرب @OpenAI Decisions API هنا: https://developers.openai.com/api/docs/guides/decisions إليك أخبار الذكاء الاصطناعي من أحد أعنف الأسابيع التي شهدناها على الإطلاق..."
   },
   {
-   "id": "gn-telgeplansarchitectureledentrybeforedetailingwork",
-   "cat": "arch",
-   "src": "Multibagg AI",
-   "ts": "2026-11-13T17:08:18Z",
-   "t": "Telge plans architecture-led entry before detailing work",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSHpxd2MweDJtcFowODJVMkt5YV9abTJ2eDk2YWRBX3Y3encxQ2NaMzdCeEdfeGZ0VmxmX2xkbWFJekxlYmZkbVVybFdXdG1EOVVsZDFtYXVwRjd5NTY4V1JuRk1kRHdNSTV4UEJjRVJ3LW5USXhCa1hjbnZyYnBZNFB2aDNxWnhtOGFrNklXYWNrWkdPOV9tZjBZWDZmdlNURWQxQmRoRllxaHNyOFBJLV9IaWFVQQ?oc=5"
-  },
-  {
    "id": "yt-PkAmyub12K8",
    "cat": "co",
    "src": "YouTube",
@@ -2981,18 +2969,6 @@
    "url": "https://www.youtube.com/shorts/IehCboBcYsA",
    "ta": "كيفية أتمتة مكتبة الصور الخاصة بك",
    "sa": "تعرف على المزيد حول نموذج القرار: https://developers.openai.com/api/docs/guides/decisions https://platform.openai.com/decisions اكتشف المزيد: 🛠️…"
-  },
-  {
-   "id": "gn-aecdatamodelapiswhatcustomersshouldknowaboutaccessvalueandpr",
-   "cat": "arch",
-   "src": "Autodesk News",
-   "ts": "2026-11-12T17:00:19Z",
-   "t": "AEC Data Model APIs: What customers should know about access, value and pricing",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tWHJ6QUhVTVpuOGlTUVlRLXhaRVA1QldMN1piVmI3UjJXQ3doX3NweUlfQkNfZ0hFVjRjakhQdVJycC1DaDZRYXhiX0FlZnBnUUJkXy1NRTV6OUI3aENIUktyNnAxYTFzZC16RDl0U3NldkVs?oc=5"
   },
   {
    "id": "gn-attentiveaimakesfirstacquisitionbuystakeoffmonkeyasbeamaipow",
@@ -4218,6 +4194,30 @@
    ],
    "url": "https://www.lloydslist.com/LL1158922/A-rare-glimpse-inside-the-highrisk-highreward-Hormuz-trade",
    "ta": "لمحة نادرة داخل تجارة هرمز عالية المخاطر والعائد المرتفع"
+  },
+  {
+   "id": "gn-whatsnewinrevit20273and20274promptdrivenautomationwithautode",
+   "cat": "arch",
+   "src": "Autodesk",
+   "ts": "2026-11-10T17:01:06Z",
+   "t": "What's New in Revit 2027.3 and 2027.4: Prompt-driven Automation with Autodesk Assistant and Connected Site Design",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOVNzLWVmbDR0MjZUUWs4eWpDQWJmYy1VOWppM01UWDhLdmxJbGZEOGpnbHR4OUUtNm51UWlWZ2tkbEVyMEtrVF9KZmVGTXVtNFJ3alluakJ5ZzNKOEVITlUzV3JYbnIwSXc2TWpYTnVMV1lPTEsya1RCRnRuRmNrNnZYLXcwcUVJVEdB?oc=5"
+  },
+  {
+   "id": "yt-xM_BhmEyKAY",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-10T16:36:54Z",
+   "t": "How Workday Builds Agent Prototypes in Under a Day with LangChain",
+   "s": "Alex Gatto, Senior Machine Learning Engineer at Workday, explains how his team built an internal agent platform on LangChain's Agent Server and LangS…",
+   "tags": [
+    "LangChain"
+   ],
+   "url": "https://www.youtube.com/watch?v=xM_BhmEyKAY"
   }
  ]
 }
