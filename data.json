@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T06:55:44Z",
+ "updated": "2026-11-17T06:58:30Z",
  "demo": false,
  "items": [
   {
@@ -2050,19 +2050,6 @@
    "sa": "جرب @OpenAI Decisions API هنا: https://developers.openai.com/api/docs/guides/decisions إليك أخبار الذكاء الاصطناعي من أحد أعنف الأسابيع التي شهدناها على الإطلاق..."
   },
   {
-   "id": "gn-telgeplansarchitectureledentrybeforedetailingwork",
-   "cat": "arch",
-   "src": "Multibagg AI",
-   "ts": "2026-11-13T17:08:18Z",
-   "t": "Telge plans architecture-led entry before detailing work",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSHpxd2MweDJtcFowODJVMkt5YV9abTJ2eDk2YWRBX3Y3encxQ2NaMzdCeEdfeGZ0VmxmX2xkbWFJekxlYmZkbVVybFdXdG1EOVVsZDFtYXVwRjd5NTY4V1JuRk1kRHdNSTV4UEJjRVJ3LW5USXhCa1hjbnZyYnBZNFB2aDNxWnhtOGFrNklXYWNrWkdPOV9tZjBZWDZmdlNURWQxQmRoRllxaHNyOFBJLV9IaWFVQQ?oc=5",
-   "ta": "تخطط Telge للدخول القائم على الهندسة المعمارية قبل تفاصيل العمل"
-  },
-  {
    "id": "yt-PkAmyub12K8",
    "cat": "co",
    "src": "YouTube",
@@ -2794,19 +2781,6 @@
    "url": "https://www.youtube.com/shorts/IehCboBcYsA",
    "ta": "كيفية أتمتة مكتبة الصور الخاصة بك",
    "sa": "تعرف على المزيد حول نموذج القرار: https://developers.openai.com/api/docs/guides/decisions https://platform.openai.com/decisions اكتشف المزيد: 🛠️…"
-  },
-  {
-   "id": "gn-aecdatamodelapiswhatcustomersshouldknowaboutaccessvalueandpr",
-   "cat": "arch",
-   "src": "Autodesk News",
-   "ts": "2026-11-12T17:00:19Z",
-   "t": "AEC Data Model APIs: What customers should know about access, value and pricing",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tWHJ6QUhVTVpuOGlTUVlRLXhaRVA1QldMN1piVmI3UjJXQ3doX3NweUlfQkNfZ0hFVjRjakhQdVJycC1DaDZRYXhiX0FlZnBnUUJkXy1NRTV6OUI3aENIUktyNnAxYTFzZC16RDl0U3NldkVs?oc=5",
-   "ta": "واجهات برمجة التطبيقات لنموذج بيانات شركة AEC: ما يجب أن يعرفه العملاء حول الوصول والقيمة والتسعير"
   },
   {
    "id": "gn-attentiveaimakesfirstacquisitionbuystakeoffmonkeyasbeamaipow",
@@ -4241,6 +4215,32 @@
    "url": "https://aecmag.com/collaboration/trimble-embeds-ai-across-aeco/",
    "ta": "يقوم Trimble بدمج الذكاء الاصطناعي عبر AECO",
    "sa": "تقدم منصة Trimble Connect وكلاء الذكاء الاصطناعي والأتمتة لتحسين تنسيق المشروع وإدارة المخاطر وتبسيط سير العمل."
+  },
+  {
+   "id": "gn-trimbleembedsaiacrossaeco",
+   "cat": "arch",
+   "src": "AEC Magazine",
+   "ts": "2026-11-10T09:19:34Z",
+   "t": "Trimble embeds AI across AECO",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE80RFMwR0pCV2RRUHJSTU9fYlZWYUZQMHNicjB4TVFVZVlrd19Pa0lsd29TY3JSb0xJN29LUnlIS3hBOGZ0TldvbVVFbzdGZjhQRjlXa0EtZGdJYmlxanRVTkdHM19NSlVJODNfY29pRW0?oc=5",
+   "ta": "يقوم Trimble بدمج الذكاء الاصطناعي عبر AECO"
+  },
+  {
+   "id": "gh-1452417816",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-10T08:52:22Z",
+   "t": "huawei-csl/MACaQ: SOTA model-agnostic quantization for GGUF, local inference and beyond. Quantize and run t…",
+   "s": "345 نجمة، لغة C++",
+   "tags": [
+    "جديد كلياً"
+   ],
+   "url": "https://github.com/huawei-csl/MACaQ",
+   "ta": "huawei-csl/MACaQ: تكميم نموذج SOTA لـ GGUF والاستدلال المحلي وما بعده. تكميم وتشغيل ر…"
   }
  ]
 }
