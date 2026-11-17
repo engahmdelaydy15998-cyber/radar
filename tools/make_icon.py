@@ -177,35 +177,9 @@ def build(name, pal):
         tl=layer(); td=ImageDraw.Draw(tl); k=R*0.5
         td.polygon([(cx-k*0.55,cy-k),(cx-k*0.55,cy+k),(cx+k,cy)],fill=(255,255,255,255)); over(base,tl)
     blip(318,0.35,0.050,(236,52,52),playg,solid=(236,52,52))
-    # architecture: simple bold mud-brick dome + vault + arched door (Hassan Fathy spirit); melts into the radar
-    ax,ay=pos(54,0.325); AW=N*0.108; Rc=AW*1.15
-    echo(ax,ay,Rc,pal['arch_echo'],0.325,54,0.4)
-    # soft black fade behind the mark instead of a visible disc: no hard edge, just a feathered shadow
-    bgf=layer(); ImageDraw.Draw(bgf).ellipse([ax-Rc*1.1,ay-Rc*1.1,ax+Rc*1.1,ay+Rc*1.1],fill=(4,3,9,185))
-    over(base,bgf.filter(ImageFilter.GaussianBlur(Rc*0.55)))
-    sz=int(AW*2.6); G=Image.new("L",(sz,sz),0); gd_=ImageDraw.Draw(G)
-    u=AW*0.62; ox,oy=sz/2,sz/2+0.15*u
-    def Q(p): return (ox+p[0]*u, oy+p[1]*u)
-    def domeP(cx,by,rx,ry):
-        return [Q((cx+rx*math.cos(math.pi*k/40),by-ry*math.sin(math.pi*k/40))) for k in range(41)]
-    gd_.polygon(domeP(0,0.60,0.62,0.86),fill=255)
-    gd_.rectangle([*Q((-0.80,0.60)),*Q((0.80,0.90))],fill=255)
-    gd_.polygon(domeP(-1.32,0.72,0.38,0.46),fill=255); gd_.rectangle([*Q((-1.70,0.72)),*Q((-0.94,0.90))],fill=255)
-    gd_.polygon(domeP(1.32,0.72,0.38,0.38),fill=255);  gd_.rectangle([*Q((0.94,0.72)),*Q((1.70,0.90))],fill=255)
-    # arched openings cut out
-    def cut(cx,top,w_,bot):
-        gd_.rectangle([*Q((cx-w_,top+w_)),*Q((cx+w_,bot))],fill=0)
-        gd_.polygon([Q((cx+w_*math.cos(math.pi*k/30),top+w_-w_*math.sin(math.pi*k/30))) for k in range(31)],fill=0)
-    cut(0,0.50,0.15,0.90); cut(-1.32,0.74,0.07,0.90); cut(1.32,0.74,0.07,0.90)
-    # fade toward the edges so it dissolves into the soft backdrop, no hard edge
-    fade=Image.new("L",(sz,sz)); fp=ImageDraw.Draw(fade)
-    for y in range(sz):
-        t=(y-(oy-0.9*u))/(1.8*u); fp.line([(0,y),(sz,y)],fill=int(255*max(0.82,min(1,1.5-t*0.6))))
-    G=ImageChops.multiply(G,fade).filter(ImageFilter.GaussianBlur(0.7*S))
-    col=Image.new("RGB",(sz,sz)); cp_=ImageDraw.Draw(col)
-    for x in range(sz): cp_.line([(x,0),(x,sz)],fill=lerp(pal['wall'][0],pal['wall'][1],x/sz))
-    sh2=layer(); sh2.paste((0,0,0,170),(int(ax-sz/2),int(ay-sz/2)+int(S*4)),G.filter(ImageFilter.GaussianBlur(5*S))); over(base,sh2)
-    t=layer(); t.paste(col.convert("RGBA"),(int(ax-sz/2),int(ay-sz/2)),G); over(base,t)
+    # architecture: same small lit-circle badge language as the code marks, labeled ARC, sandy mud-brick tone
+    archcol=pal['wall'][1]
+    blip(54,0.325,0.038,archcol,txt("ARC",0.85,W(archcol)))
     out=base.convert("RGB").resize((512,512),Image.LANCZOS)
     # vignette
     v=Image.new("L",(512,512),0); vd=ImageDraw.Draw(v)
