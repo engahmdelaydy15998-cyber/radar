@@ -1,7 +1,20 @@
 {
- "updated": "2026-11-17T14:08:19Z",
+ "updated": "2026-11-17T14:21:56Z",
  "demo": false,
  "items": [
+  {
+   "id": "af-nts1xykw4lharness_adapters_fine_tune_qwen3827b_for_pi_agents",
+   "cat": "agents",
+   "src": "r/LocalLLaMA",
+   "ts": "2026-11-17T13:48:41Z",
+   "t": "[Harness Adapters] Fine tune Qwen3.8-27B for Pi Agents",
+   "s": "",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xykw4l/harness_adapters_fine_tune_qwen3827b_for_pi_agents/",
+   "ta": "[محولات الحزام] ضبط Qwen3.8-27B لوكلاء Pi"
+  },
   {
    "id": "af-omments1xykjuythe_upcoming_open_weight_small_qwen_models_are",
    "cat": "agents",
@@ -54,6 +67,19 @@
    "url": "https://www.youtube.com/watch?v=gl2U4fGTr6g",
    "ta": "الاختراق الجديد لـ OpenAI هو... الفوضى المطلقة",
    "sa": "❤️ تحقق من Lambda هنا وقم بالتسجيل في GPU Cloud الخاصة بهم: https://lambda.com/papers 📝 الورقة متاحة هنا: https://www.kitp.ucsb.edu/sites/de…"
+  },
+  {
+   "id": "gn-autodeskandneilsoftsetupbimanddigitaltwincentre",
+   "cat": "arch",
+   "src": "Express Computer",
+   "ts": "2026-11-17T11:55:13Z",
+   "t": "Autodesk and Neilsoft set up BIM and digital twin centre",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNM01CWUlpQ3Y5SWtSeTNqYVE3R2E2OWs1bF9pQURzRnd1ZXRweEl2WmdiOWNzNHJHTUNMYmxsMkJyUHYyTXFUaUE4VWttaS1UY2p2Nk1yclhJNEJMblhWNGdCRUR2OWFkWUtReEpJSVh4ekdtTFNXUU9pN0IxVVRzWHNRdWNTUXAwNXVYa3JoNGZkUGlubUFkLXRya2hQenY4c2YtZHppYw?oc=5",
+   "ta": "قامت Autodesk وNeilsoft بإعداد BIM ومركز التوأم الرقمي"
   },
   {
    "id": "hn-50530163",
@@ -4219,32 +4245,6 @@
    ],
    "url": "https://github.com/FrigadeHQ/yogurt",
    "ta": "Show HN: Yogurt - بديل مجاني وخاص ومفتوح المصدر للجرانولا"
-  },
-  {
-   "id": "gn-opencodevsclaudecode10govs20pro2026",
-   "cat": "agents",
-   "src": "shattered.io",
-   "ts": "2026-11-11T15:24:53Z",
-   "t": "OpenCode vs Claude Code: $10 Go vs $20 Pro [2026]",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBFdG42U3hhcWw1ZS1yMG1felZHWDlETjhZMjJsNzl6aU9MWS1ST3E1WXBOOERpSHpUeEljbDRDSzNzbjlUX05tWTJpeFhOdVBJMDVKcDltbHRyb1ItWnp3QkRDN29BUEpqQ3hnS0luWHV6TGZl?oc=5",
-   "ta": "OpenCode مقابل Claude Code: 10 دولارات Go مقابل 20 دولارًا Pro [2026]"
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov11anthropiciporoadshow",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-11T15:11:59Z",
-   "t": "Anthropic's IPO roadshow video",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
-   "ta": "فيديو الحملة الترويجية للاكتتاب العام لشركة Anthropic"
   }
  ]
 }
