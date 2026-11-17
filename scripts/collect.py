@@ -65,7 +65,7 @@ HN_ARCH_QUERIES = ["Revit", "BIM", "Autodesk", "Grasshopper", "generative design
 NEWS_QUERIES = [
     "AI architecture BIM",
     "Revit AI",
-    "Autodesk AI Forma",
+    "Autodesk Forma AI architecture",
     "generative design architecture AI",
     "Rhino Grasshopper AI",
     "Archicad AI",
@@ -75,10 +75,18 @@ NEWS_QUERIES = [
     "digital twin building AI",
 ]
 
+# Google News results must also clearly be about architecture / AEC, otherwise they are dropped.
+AEC_KW = re.compile(
+    r"architect|\bBIM\b|Revit|Archicad|Rhino|Grasshopper|\bAEC\b|construction|building design|Autodesk|"
+    r"digital twin|Snaptrude|Hypar|TestFit|Arkio|Speckle|Enscape|Twinmotion|Lumion|Vectorworks|Navisworks|"
+    r"generative design|floor plan|real estate design|urban design|\bIFC\b|openBIM|Bentley|Trimble|Nemetschek",
+    re.I,
+)
+
 # Feed and video items in the architecture section must mention AI, BIM or computational tools.
 ARCH_KW = re.compile(
-    r"\bAI\b|artificial intelligence|machine learning|generative|BIM|Revit|Archicad|Rhino|Grasshopper|Dynamo|"
-    r"parametric|computational|digital twin|Autodesk|Forma|Navisworks|ChatGPT|Claude|Midjourney|diffusion|"
+    r"\bAI\b|artificial intelligence|machine learning|generative|BIM|Revit|Archicad|Rhino|Grasshopper|Dynamo Revit|"
+    r"parametric|computational|digital twin|Autodesk|Navisworks|ChatGPT|Claude|Midjourney|diffusion|"
     r"automation|algorithm|robot|3D print|\bIFC\b|openBIM|Speckle|Enscape|Twinmotion|Lumion|\bCAD\b",
     re.I,
 )
@@ -376,6 +384,8 @@ def collect_news(known_ids, cutoff):
             item_id = "gn-" + re.sub(r"\W+", "", title.lower())[:60]
             if ts < cutoff or item_id in known_ids or item_id in seen:
                 continue
+            if not (AEC_KW.search(title) and ARCH_KW.search(title + " " + src)):
+                continue
             seen.add(item_id)
             items.append({"id": item_id, "cat": "arch", "src": src, "ts": iso(ts), "t": title,
                           "s": "", "tags": ["AI + AEC"], "url": link})
@@ -438,7 +448,8 @@ def merge(existing, new):
 def main():
     now = datetime.now(timezone.utc)
     cutoff = now - timedelta(days=MAX_AGE_DAYS)
-    existing = load_existing()
+    existing = [it for it in load_existing()
+                if not (it["id"].startswith("gn-") and not (AEC_KW.search(it["t"]) and ARCH_KW.search(it["t"])))]
     known = {it["id"] for it in existing}
 
     new = []

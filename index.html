@@ -304,8 +304,12 @@ function renderChips() {
 function renderSrc() {
   var el = document.getElementById("srcPills");
   var counts = {};
-  allItems().forEach(function (it) { counts[it.src] = (counts[it.src] || 0) + 1; });
-  var list = ["الكل"].concat(Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; }));
+  allItems().forEach(function (it) {
+    if (state.cat !== "all" && it.cat !== state.cat) return;
+    counts[it.src] = (counts[it.src] || 0) + 1;
+  });
+  var top = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; }).slice(0, 7);
+  var list = ["الكل"].concat(top);
   if (list.indexOf(state.src) === -1) state.src = "الكل";
   el.innerHTML = "";
   list.forEach(function (s) {
