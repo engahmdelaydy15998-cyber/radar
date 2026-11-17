@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T14:21:56Z",
+ "updated": "2026-11-17T14:34:08Z",
  "demo": false,
  "items": [
   {
@@ -3468,19 +3468,6 @@
    "sa": "تعرف على المزيد حول نموذج القرار: https://developers.openai.com/api/docs/guides/decisions https://platform.openai.com/decisions اكتشف المزيد: 🛠️…"
   },
   {
-   "id": "gn-aecdatamodelapiswhatcustomersshouldknowaboutaccessvalueandpr",
-   "cat": "arch",
-   "src": "Autodesk News",
-   "ts": "2026-11-12T17:00:19Z",
-   "t": "AEC Data Model APIs: What customers should know about access, value and pricing",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tWHJ6QUhVTVpuOGlTUVlRLXhaRVA1QldMN1piVmI3UjJXQ3doX3NweUlfQkNfZ0hFVjRjakhQdVJycC1DaDZRYXhiX0FlZnBnUUJkXy1NRTV6OUI3aENIUktyNnAxYTFzZC16RDl0U3NldkVs?oc=5",
-   "ta": "واجهات برمجة التطبيقات لنموذج بيانات شركة AEC: ما يجب أن يعرفه العملاء حول الوصول والقيمة والتسعير"
-  },
-  {
    "id": "gn-attentiveaimakesfirstacquisitionbuystakeoffmonkeyasbeamaipow",
    "cat": "arch",
    "src": "Business Wire",
@@ -4245,6 +4232,19 @@
    ],
    "url": "https://github.com/FrigadeHQ/yogurt",
    "ta": "Show HN: Yogurt - بديل مجاني وخاص ومفتوح المصدر للجرانولا"
+  },
+  {
+   "id": "af-httpssimonwillisonnet2026Nov11anthropiciporoadshow",
+   "cat": "agents",
+   "src": "Simon Willison",
+   "ts": "2026-11-11T15:11:59Z",
+   "t": "Anthropic's IPO roadshow video",
+   "s": "",
+   "tags": [
+    "مدونة"
+   ],
+   "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
+   "ta": "فيديو الحملة الترويجية للاكتتاب العام لشركة Anthropic"
   }
  ]
 }
