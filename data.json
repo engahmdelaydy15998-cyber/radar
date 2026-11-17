@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T05:16:34Z",
+ "updated": "2026-11-17T05:18:53Z",
  "demo": false,
  "items": [
   {
@@ -213,6 +213,19 @@
    ],
    "url": "https://news.ycombinator.com/item?id=50522776",
    "ta": "Launch HN: Axonnic (YC F26) - أكمام لتتبع الأصابع وتقدير القوة"
+  },
+  {
+   "id": "gn-fbiandawssoundalarmaiagentsnowautomatecyberattacksatindustri",
+   "cat": "agents",
+   "src": "BigGo Finance",
+   "ts": "2026-11-16T20:25:00Z",
+   "t": "FBI and AWS Sound Alarm: AI Agents Now Automate Cyberattacks at Industrial Scale",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0zcnNJdUJhcnB1a0lEY1dMZ2ZsUG1vQkdiRFRpNlJzdktoYmdvODRPeVZRMGlnRXBTNWJzb3l1b2xZYklBMC1hTnBldTB3XzJnNWV0WmZ2M3dTYTJBWUh0QXdsQlR1ajQ1V3VBZFE2N20tek5YRmc?oc=5",
+   "ta": "الإنذار الصوتي لمكتب التحقيقات الفيدرالي وAWS: يقوم وكلاء الذكاء الاصطناعي الآن بأتمتة الهجمات الإلكترونية على المستوى الصناعي"
   },
   {
    "id": "yt-Zbv70lLBHgo",
@@ -624,6 +637,19 @@
    ],
    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xxmj9o/paper_models_gamer_a_generalist/",
    "ta": "[ورقة ونماذج] اللاعب: نموذج أساسي للرؤية واللغة والعمل لوكيل الألعاب في الوقت الفعلي طويل الأفق"
+  },
+  {
+   "id": "gn-artexhowcybercriminalsuseaiagentstoscaletheirattacks",
+   "cat": "agents",
+   "src": "Security Affairs",
+   "ts": "2026-11-16T10:44:46Z",
+   "t": "ARTEX: How Cybercriminals Use AI Agents to Scale Their Attacks",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUmJER1FmTmtmNElRbWtOTFYtUVlWOUEtT0xkaF9zcjZVODBlMmp0eEwxemVaVlZ6WVplb3hzVTdKb1YxUzZaMnBGTXIxOThfanZMWS1JaEtxSHBLN2NxYVRtSWV2N2Q0MHBBQkhGX2dJYzNKZWwyVXJDUFZrZDVvazJsMURadXpxQlpacng4QUg0VXFBUDNFRVhaQ19pemJDREZpVXF3SdIBrAFBVV95cUxNbGJKZldBMFJYVXVLeXluWTZIY3NSTUZmWHBzeFh3TDNjd0YyTWJ4SXpnMTZvUUJKSWdsYmZlX0RXN00xWHlJUkVwOUZMdklBVWFnM2I1LW5DajN1NXR4OTk1dnBhUlZLRG9KQ184eE9WNFpwV2NLdURwbExlV3FUODR2Q3FpSUIyWF9SUG10amRzaVVnTHk1OWFVVWMwcmJKVWhjTE5NS3pCdHp4?oc=5",
+   "ta": "ARTEX: كيف يستخدم مجرمو الإنترنت عملاء الذكاء الاصطناعي لتوسيع نطاق هجماتهم"
   },
   {
    "id": "gn-originalvoiceslaunchestwineo20fordigitaltwins",
@@ -1853,19 +1879,6 @@
    "sa": "جرب @OpenAI Decisions API هنا: https://developers.openai.com/api/docs/guides/decisions إليك أخبار الذكاء الاصطناعي من أحد أعنف الأسابيع التي شهدناها على الإطلاق..."
   },
   {
-   "id": "gn-telgeplansarchitectureledentrybeforedetailingwork",
-   "cat": "arch",
-   "src": "Multibagg AI",
-   "ts": "2026-11-13T17:08:18Z",
-   "t": "Telge plans architecture-led entry before detailing work",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSHpxd2MweDJtcFowODJVMkt5YV9abTJ2eDk2YWRBX3Y3encxQ2NaMzdCeEdfeGZ0VmxmX2xkbWFJekxlYmZkbVVybFdXdG1EOVVsZDFtYXVwRjd5NTY4V1JuRk1kRHdNSTV4UEJjRVJ3LW5USXhCa1hjbnZyYnBZNFB2aDNxWnhtOGFrNklXYWNrWkdPOV9tZjBZWDZmdlNURWQxQmRoRllxaHNyOFBJLV9IaWFVQQ?oc=5",
-   "ta": "تخطط Telge للدخول القائم على الهندسة المعمارية قبل تفاصيل العمل"
-  },
-  {
    "id": "yt-PkAmyub12K8",
    "cat": "co",
    "src": "YouTube",
@@ -2211,6 +2224,19 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8tSHQtWTJjYXdKd1B0cFFWR19rWmFQdlM1d001Yk8yeDJiQlctVFk5TGFkUFZTN1Q3NHlTNHFfeVRVY2kzcnpEaVk1NEZmOGc?oc=5",
    "ta": "Claude vs ChatGPT: أي الذكاء الاصطناعي هو الأفضل فعليًا في عام 2026؟"
+  },
+  {
+   "id": "gn-fbiwarnshackersuseartexaiagentstoreachprivilegedaccessinunde",
+   "cat": "agents",
+   "src": "Pasquale Pillitteri",
+   "ts": "2026-11-13T08:00:00Z",
+   "t": "FBI warns hackers use ARTEX AI agents to reach privileged access in under three hours",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQeGV6LUU2bi0zZl93ZkVJajZ1OUNCYlhjelB2c1EyVXQ3WG1CUHVkMHdhRG9wUElRRXlQVk9HcjdqSHZ4WVNVUUpFQ0hVWFBOVE1iN1JTOG5oZnJOUUdXV3ZQR3lBd3NSRExFX0w1UGhhOVBVelgyMFNSLUMyZEE4NFJXQ3ZtZHlmXzNOZWFpbzNFVzdQT3l5emNfMHJnb3Ux?oc=5",
+   "ta": "يحذر مكتب التحقيقات الفيدرالي (FBI) من أن المتسللين يستخدمون عملاء ARTEX AI للوصول إلى الوصول المميز في أقل من ثلاث ساعات"
   },
   {
    "id": "gn-vscode1146addsaiagentinboxmodelcomparisonsandchatwindows",
@@ -3418,6 +3444,19 @@
    "ta": "Cursor vs Claude Code: أيهما يجب أن تدفع ثمنه على جهاز Mac؟"
   },
   {
+   "id": "gn-claudesonnet55pricebenchmarksandwhogetsit",
+   "cat": "agents",
+   "src": "Fello AI",
+   "ts": "2026-11-11T08:00:00Z",
+   "t": "Claude Sonnet 5.5: Price, Benchmarks and Who Gets It",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1ldU84YncyWEp0dDVCRmR3Z0JkNnE1MFJmZEtNZ29GYWVMOVZSdmN6Q1hmZFhzQU41bE1UckxaV1I2VG9WVlFpWDBXQTdnaDg?oc=5",
+   "ta": "كلود سونيت 5.5: السعر والمعايير ومن يحصل عليه"
+  },
+  {
    "id": "gn-hanyangcyberuniversitytrainsaibimsmartconstructionadvisors",
    "cat": "arch",
    "src": "Chosunbiz",
@@ -4202,45 +4241,6 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNakYzck5od18tbnpCQzVmaE13U0p0VlRvQ3lSd2UtbWZmai1EVDhBWTVOQmVqWEg1QUlobndtaUZxcmFUZ0VMMGNxR0RLRGg5aEZTRUVJa1BuclpNNHRSVHlxbjFvMjBUWVk3c0FsUEtJdXAwQ2xGQjFLMDBCS2JoWFFnUTg4dHNFTENaNTBHY1UtX05ScFBxaTY1MndSTWpNajZTcXN4QW9NYWVyR1VBUk9sRQ?oc=5",
    "ta": "جاكوبس تطلق حلاً رقميًا مزدوجًا لمراكز بيانات الذكاء الاصطناعي"
-  },
-  {
-   "id": "gh-1452054001",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-10T01:00:43Z",
-   "t": "Muanyan-mjq/zotero-interlinear: Immersive bilingual paragraph-by-paragraph reading for Zotero. Original on top, translati…",
-   "s": "75 نجمة، لغة TypeScript",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/Muanyan-mjq/zotero-interlinear",
-   "ta": "Muanyan-mjq/zotero-interlinear: قراءة غامرة للفقرة بفقرة ثنائية اللغة لـ Zotero. الأصل في الأعلى، مترجم…"
-  },
-  {
-   "id": "gn-ripple65bpreviewonollamawhattheseventagsare",
-   "cat": "agents",
-   "src": "OrcaRouter",
-   "ts": "2026-11-10T00:23:30Z",
-   "t": "Ripple-65B Preview on Ollama: what the seven tags are",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0wNUY3eHFGRlU3bXNuNUVrcG1SN1BiNGxWRVpCbjRrUkd4RU52V3dHaVpHWV81MURjYWY5YmtwY1BCYThPRGZ1LUxzV0EzbUI0Ty1hZUpicXBsMGhPbkhlS0lXU3pEeVhXb1hNcGtCcVNQSlFY?oc=5",
-   "ta": "معاينة Ripple-65B على Olma: ما هي العلامات السبعة"
-  },
-  {
-   "id": "gn-museembermetaunveilsitssmallestmodelyetwith1mtokencontextfor",
-   "cat": "agents",
-   "src": "Interesting Engineering",
-   "ts": "2026-11-10T00:23:00Z",
-   "t": "Muse Ember: Meta unveils its smallest model yet with 1M-token context for cheaper agents",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTk1RNkRBZEx0Rjc1Qkw2RHEwWVUwV1hVVUpVTzA5SnZZNWg1MTgzNXN6ajEwR2FUeUwxSC12aThwZmlNQ09BVWhHX3dLUElmWDNhUmpHVUM5dDc0dE9uSHJqaHdZTVlieWhLeHZGNkJiUWZGb1Zpb3dGYVIyQWkzZXZFSEVSUlVybFAtNUpFRjQ?oc=5",
-   "ta": "Muse Ember: Meta تكشف عن أصغر نموذج لها حتى الآن مع سياق 1M-token للوكلاء الأرخص"
   }
  ]
 }
