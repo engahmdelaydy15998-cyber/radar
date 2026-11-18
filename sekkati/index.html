@@ -189,6 +189,7 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
     <h2>📖 دليل الاستخدام</h2>
     <div class="note">
       <b>🗺 شكل:</b> بيبدّل بين 4 أشكال للخريطة: عادي (فيكتور)، أسود، خرائط OSM، وقمر صناعي.<br><br>
+      <b>اسأل Claude:</b> قول "سجل مشاكل طريقي" وهيبدأ يسجّل رحلتك فوراً (من غير ما يحتاج مفتاح API)، وقول "وقف التسجيل" عشان يحفظها. أي سؤال تاني محتاج مفتاح Anthropic محفوظ فوق.<br><br>
       <b>من/إلى:</b> اكتب أو اضغط "موقعي"، أو اضغط على الخريطة واختار بداية/وجهة. الطرق بتتحسب تلقائي وتظهر تحت كخريطة منبثقة (sheet) فوق الخريطة.<br><br>
       <b>كروت الطرق:</b> الدقايق هي التقدير الكلي. "تقدير" يعني محسوب من OSRM + وقفات متوقعة + رادارات/كارتات/لجان؛ لو مكتوب إنه "مشيته قبل كده" فده زمن حقيقي من رحلاتك المسجلة. ★ هو الطريق المرشّح كأفضل اختيار.<br><br>
       <b>أزرار التعليم</b> (📷 رادار، 💳 كارتة، ⛔ مقفول، ↩️ يوتيرن، 🚓 لجنة): اضغط الزرار وبعدين اضغط مكانه على الخريطة. ضغطة تانية على نفس المكان بتشيله.<br><br>
@@ -913,7 +914,7 @@ $('altNo').onclick = () => { $('alt').hidden = true; };
 $('akey').value = (() => { try { return localStorage.getItem('sekkati-akey') || ''; } catch(e){ return ''; } })();
 $('akeySave').onclick = () => { try { localStorage.setItem('sekkati-akey', $('akey').value.trim()); $('msg').textContent = ''; } catch(e){} };
 $('akeyClear').onclick = () => { try { localStorage.removeItem('sekkati-akey'); } catch(e){} $('akey').value = ''; };
-const APP_GUIDE = 'سكّتي تطبيق ملاحة: اكتب من/إلى وهيحسب طرق ويرتبهم بالأفضل. 🗺 شكل بيبدّل بين 4 أشكال للخريطة (فيكتور/أسود/OSM/قمر صناعي). أزرار التعليم 📷 رادار / 💳 كارتة / ⛔ مقفول / ↩️ يوتيرن / 🚓 لجنة: اضغط الزرار وبعدين مكانه على الخريطة. 🧭 جوجل + سجّل بيفتح جوجل مابس ويسجّل الرحلة بصمت. ▶ ابدأ القيادة شاشة ملء شاشة بتنطق التعليمات والتنبيهات. تسجيل رحلة بيتعلّم من طرقك. فيه نسخة احتياطية (ملف .json) من كارت الرحلات.';
+const APP_GUIDE = 'سكّتي تطبيق ملاحة. لو قلت "سجل مشاكل طريقي" بينفّذها فوراً (يبدأ تسجيل الرحلة من غير ما يحتاج مفتاح API)، وقول "وقف التسجيل" عشان يحفظها. اكتب من/إلى وهيحسب طرق ويرتبهم بالأفضل. 🗺 شكل بيبدّل بين 4 أشكال للخريطة (فيكتور/أسود/OSM/قمر صناعي). أزرار التعليم 📷 رادار / 💳 كارتة / ⛔ مقفول / ↩️ يوتيرن / 🚓 لجنة: اضغط الزرار وبعدين مكانه على الخريطة. 🧭 جوجل + سجّل بيفتح جوجل مابس ويسجّل الرحلة بصمت. ▶ ابدأ القيادة شاشة ملء شاشة بتنطق التعليمات والتنبيهات. تسجيل رحلة بيتعلّم من طرقك. فيه نسخة احتياطية (ملف .json) من كارت الرحلات.';
 function openAsk(){ hideSheets(); $('cl').hidden = false; if (!$('akey').value.trim()) $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; }
 $('nclaude').onclick = () => { const h = $('cl').hidden; hideSheets(); $('cl').hidden = !h; if (!$('akey').value.trim() && !h === false) $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; };
 $('askgen').onclick = openAsk;
@@ -937,7 +938,21 @@ function nearbyText(here){                         // بلاغات/رادارا�
   if (nPois.length) parts.push([...new Set(nPois.map(p => POI_AR[p.kind] || p.kind))].join('، ') + ' قريب منك');
   return parts.join(' · ');
 }
+function tryVoiceCommand(q){                       // أوامر بتتنفذ فوراً من غير ما تحتاج Claude أو مفتاح API
+  const t = (q || '').replace(/[ً-ْ]/g, '');
+  if (/وقف.*تسجيل|قفل.*تسجيل|بلاش.*تسجيل|خلّص.*تسجيل/.test(t)){
+    if (watchId === null) return 'مفيش تسجيل شغال دلوقتي.';
+    stopRec(); return 'تمام، وقفت التسجيل وحفظت الرحلة.';
+  }
+  if (/سجّ?ل.*(مشاكل|طريق|رحل)|ابدأ.*تسجيل/.test(t)){
+    if (watchId !== null) return 'أنا أصلاً باسجّل الرحلة دي.';
+    startRec(); return 'تمام، بدأت أسجّل رحلتك ومشاكل الطريق.';
+  }
+  return null;
+}
 async function askClaude(q){
+  const cmd = tryVoiceCommand(q);
+  if (cmd){ $('clout').textContent = cmd; speak(cmd); return; }
   const key = (() => { try { return localStorage.getItem('sekkati-akey') || ''; } catch(e){ return ''; } })();
   if (!key){ $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; return; }
   $('clout').textContent = '...بفكر';
