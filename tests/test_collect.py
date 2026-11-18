@@ -66,3 +66,15 @@ c.get = boom
 assert c.main() == 0
 assert open(c.DATA, "rb").read() == before, "failure must not clobber data"
 print("ALL OK", first_count, "items; sample:", json.dumps(d["items"][0], ensure_ascii=False)[:200])
+
+# watches: flags matching items, clears the flag once a watch is removed
+c.WATCHES = os.path.join(tmp, "watches.json")
+json.dump({"watches": [{"id": "w1", "desc": "مشكلة اللاما", "kw": ["llm", "lama"], "active": True}]}, open(c.WATCHES, "w", encoding="utf-8"))
+sample = [{"id": "x1", "t": "cool llm project", "s": ""}, {"id": "x2", "t": "something else", "s": ""}]
+c.apply_watches(sample)
+assert sample[0]["watch"] == "مشكلة اللاما", "should flag the matching item"
+assert "watch" not in sample[1], "should not flag a non-matching item"
+json.dump({"watches": []}, open(c.WATCHES, "w", encoding="utf-8"))
+c.apply_watches(sample)
+assert "watch" not in sample[0], "flag must clear once the watch is gone"
+print("WATCH TEST OK")

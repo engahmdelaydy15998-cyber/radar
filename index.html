@@ -141,6 +141,7 @@ header {
 .badge { padding: 1px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; }
 .badge-new { background: var(--accent); color: #111; }
 .badge-mine { background: var(--surface-2); color: var(--text); border: 1px solid var(--line); }
+.badge-watch { background: color-mix(in srgb, var(--accent) 24%, transparent); color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 50%, transparent); }
 .card h3 { margin: 0 0 6px; font-size: 17px; line-height: 1.55; font-weight: 600; text-wrap: balance; overflow-wrap: anywhere; }
 .card p { margin: 0; font-size: 14px; line-height: 1.8; color: #c6c6cb; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
@@ -176,7 +177,17 @@ footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 1
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
           <span class="n" id="savedN" style="display:none"></span>
         </button>
+        <button class="icon-btn" id="btnWatch" aria-label="متابعة مشكلة" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+        </button>
       </div>
+    </div>
+
+    <div class="panel" id="watchBox" hidden>
+      <input id="watchDesc" class="field" type="text" placeholder="المشكلة اللي بترجع تاني (مثال: الأجنت بيتوه في خطوات طويلة)" autocomplete="off">
+      <input id="watchKw" class="field ltr" type="text" placeholder="كلمات مفتاحية بالإنجليزي، مفصولة بفاصلة" autocomplete="off">
+      <button class="btn-main" id="watchGo" style="width:100%">تابع المشكلة دي</button>
+      <p class="hint">هيتفتح لك issue جاهز على GitHub، دوس Submit وخلاص. أي خبر يتعلق بالمشكلة دي هيظهر مميز في الرادار بعد التحديث الجاي (كل 3 ساعات). مفيش إشعار لسه، لازم تفتح التطبيق تشوفه.</p>
     </div>
 
     <div class="panel" id="addBox" hidden>
@@ -317,7 +328,7 @@ function matches(it, ignoreCat) {
   if (state.onlyNew && !it.isNew) return false;
   if (state.onlySaved && !saved[it.id]) return false;
   if (state.q) {
-    var hay = ((it.t || "") + " " + (it.ta || "") + " " + (it.s || "") + " " + (it.tags || []).join(" ") + " " + (it.src || "")).toLowerCase();
+    var hay = ((it.t || "") + " " + (it.ta || "") + " " + (it.s || "") + " " + (it.tags || []).join(" ") + " " + (it.src || "") + " " + (it.watch || "")).toLowerCase();
     if (hay.indexOf(state.q.toLowerCase()) === -1) return false;
   }
   return true;
@@ -397,6 +408,7 @@ function renderFeed() {
     var desc = it.sa || (!isStat ? it.s : "");
     var tagList = (it.tags || []).slice();
     if (isStat) tagList.push(it.s);
+    if (it.watch) tagList.unshift("🔔 " + it.watch);
     var hasDet = !!desc || tagList.length > 0;
     var isOpen = hasDet && (state.expandAll || !!opened[it.id]);
 
@@ -407,6 +419,7 @@ function renderFeed() {
     var meta = a.querySelector(".meta");
     function badge(cls, txt) { var b = document.createElement("span"); b.className = cls; b.textContent = txt; meta.appendChild(b); }
     if (it.isNew) badge("pnew", "New");
+    if (it.watch) badge("badge badge-watch", "🔔 بتتابعها");
     if (isMine) badge("badge badge-mine", "رابطك"); else if (it.demo) badge("badge badge-mine", "مثال");
     var sp0 = document.createElement("span"); sp0.className = "src"; sp0.textContent = it.src; meta.appendChild(sp0);
     var sp1 = document.createElement("span"); sp1.textContent = "·"; meta.appendChild(sp1);
@@ -553,6 +566,22 @@ document.getElementById("btnAdd").onclick = function () {
   box.hidden = !box.hidden;
   this.setAttribute("aria-pressed", String(!box.hidden));
   if (!box.hidden) linkIn.focus();
+};
+document.getElementById("btnWatch").onclick = function () {
+  var box = document.getElementById("watchBox");
+  box.hidden = !box.hidden;
+  this.setAttribute("aria-pressed", String(!box.hidden));
+  if (!box.hidden) document.getElementById("watchDesc").focus();
+};
+document.getElementById("watchGo").onclick = function () {
+  var desc = document.getElementById("watchDesc").value.trim();
+  var kw = document.getElementById("watchKw").value.trim();
+  if (!desc || !kw) { toast("لازم وصف المشكلة وكلمة مفتاحية واحدة على الأقل."); return; }
+  var body = "desc: " + desc + "\nkw: " + kw;
+  var url = "https://github.com/" + REPO + "/issues/new?title=" + encodeURIComponent("add-watch: " + desc.slice(0, 60)) + "&body=" + encodeURIComponent(body);
+  window.open(url, "_blank", "noopener");
+  toast("اضغط Submit في صفحة GitHub وهتتابع المشكلة دي");
+  document.getElementById("watchDesc").value = ""; document.getElementById("watchKw").value = "";
 };
 document.getElementById("btnSearch").onclick = function () {
   var box = document.getElementById("searchBox");

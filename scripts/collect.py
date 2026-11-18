@@ -62,6 +62,10 @@ CHANNELS += [
 # Extra channels added from the app live in channels.json: {"channels":[{"handle"|"id","name","kind"}]}
 EXTRA = os.path.join(ROOT, "channels.json")
 
+# Watched recurring problems, added from the app (or by Claude in a chat session) via the add-watch
+# issue flow: {"watches":[{"id","desc","kw":[...],"active"}]}. See scripts/add_watch.py.
+WATCHES = os.path.join(ROOT, "watches.json")
+
 AGENT_RSS = [
     ("https://simonwillison.net/atom/everything/", "Simon Willison"),
     ("https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day", "r/LocalLLaMA"),
@@ -529,6 +533,36 @@ def add_translations(items, limit=150):
     return done
 
 
+# ---------- watches ----------
+
+def load_watches():
+    try:
+        with open(WATCHES, encoding="utf-8") as f:
+            return json.load(f).get("watches", [])
+    except Exception:
+        return []
+
+
+def apply_watches(items):
+    """Flag items matching an active watch's keywords with item["watch"] = <problem desc>."""
+    compiled = []
+    for w in load_watches():
+        if not w.get("active", True):
+            continue
+        pat = "|".join(re.escape(k) for k in w.get("kw", []) if k.strip())
+        if pat:
+            compiled.append((w.get("desc", ""), re.compile(pat, re.I)))
+    for it in items:
+        it.pop("watch", None)
+        if not compiled:
+            continue
+        hay = " ".join(str(it.get(k, "")) for k in ("t", "s", "ta", "sa"))
+        for desc, rx in compiled:
+            if rx.search(hay):
+                it["watch"] = desc
+                break
+
+
 # ---------- merge ----------
 
 def load_existing():
@@ -554,6 +588,7 @@ def main():
     existing = [it for it in load_existing()
                 if not (it["id"].startswith("gn-") and it.get("cat") == "arch" and not (AEC_KW.search(it["t"]) and ARCH_KW.search(it["t"])))]
     known = {it["id"] for it in existing}
+    watch_before = {it["id"]: it.get("watch") for it in existing}
 
     new = []
     for name, fn in (("youtube", collect_youtube), ("hn", collect_hn), ("github", collect_github), ("rss", collect_rss), ("news", collect_news), ("agent_feeds", collect_agent_feeds)):
@@ -568,10 +603,12 @@ def main():
     items = merge(existing, new)
     tr = add_translations(items)
     log("translated:", tr)
+    apply_watches(items)
+    watch_changed = any(it.get("watch") != watch_before.get(it["id"]) for it in items)
     if not items:
         log("nothing to write")
         return 0
-    if [i["id"] for i in items] == [i["id"] for i in existing] and not new and not tr:
+    if [i["id"] for i in items] == [i["id"] for i in existing] and not new and not tr and not watch_changed:
         log("no changes")
         return 0
     out = {"updated": iso(now), "demo": False, "items": items}
