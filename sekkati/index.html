@@ -917,16 +917,42 @@ const APP_GUIDE = 'سكّتي تطبيق ملاحة: اكتب من/إلى وهي
 function openAsk(){ hideSheets(); $('cl').hidden = false; if (!$('akey').value.trim()) $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; }
 $('nclaude').onclick = () => { const h = $('cl').hidden; hideSheets(); $('cl').hidden = !h; if (!$('akey').value.trim() && !h === false) $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; };
 $('askgen').onclick = openAsk;
+function getPosOnce(){                             // آخر موقع معروف، أو تحديد سريع لو مفيش
+  return new Promise(res => {
+    if (lastPos) return res(lastPos);
+    if (!('geolocation' in navigator)) return res(null);
+    navigator.geolocation.getCurrentPosition(
+      p => res({lat:p.coords.latitude, lon:p.coords.longitude}), () => res(null),
+      {enableHighAccuracy:true, timeout:6000, maximumAge:15000});
+  });
+}
+function nearbyText(here){                         // بلاغات/رادارات/مقفول قريبة منك، حتى من غير رحلة محسوبة
+  const nJams = jams.filter(j => j.until > Date.now() && hav(j, here) < 2000);
+  const nBlocks = blocks.filter(b => b.until > Date.now() && hav(b, here) < 1500);
+  const nPois = allPois().filter(p => hav(p, here) < 600);
+  if (!nJams.length && !nBlocks.length && !nPois.length) return 'مفيش بلاغات أو رادارات قريبة من مكانك في بياناتنا دلوقتي.';
+  const parts = [];
+  if (nJams.length) parts.push(nJams.map(j => j.kind === 'accident' ? 'بلاغ حادثة' : 'بلاغ زحمة').join('، ') + ' قريب منك');
+  if (nBlocks.length) parts.push(nBlocks.length + ' طريق مقفول قريب منك');
+  if (nPois.length) parts.push([...new Set(nPois.map(p => POI_AR[p.kind] || p.kind))].join('، ') + ' قريب منك');
+  return parts.join(' · ');
+}
 async function askClaude(q){
   const key = (() => { try { return localStorage.getItem('sekkati-akey') || ''; } catch(e){ return ''; } })();
   if (!key){ $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; return; }
   $('clout').textContent = '...بفكر';
   try {
-    let alts = '';
-    if (nav && lastPos && dest){ try { const rs = await computeRoutes(lastPos, dest);
-      alts = rs.map((x, i) => `${i + 1}) ${x.r.via || 'طريق'}: ${mins(x.s.adj)} د، ${km(x.s.dist)} كم، ${x.s.info ? x.s.info.turns + ' لفة' : ''}، ${x.s.pois.filter(p => p.kind === 'radar').length} رادار، ${x.s.tolls} كارتة${x.s.jams ? '، فيه بلاغ زحمة' : ''}${x.s.observed ? '، مشيته قبل كده' : ''}`).join('\n'); } catch(e){} }
-    const here = nav ? nav.cum[nav.last] : 0, rem = nav ? nav.total - here : 0;
-    const ctx = nav ? `الطريق الحالي: ${nav.via || ''}\nالمتبقي: ${km(rem)} كم\nالبلاغات النشطة: ${jams.filter(j => j.until > Date.now()).length}\nالبدائل من مكاني (بدون زحمة حية):\n${alts}` : 'مفيش رحلة شغالة دلوقتي.';
+    let ctx;
+    if (nav && lastPos && dest){
+      let alts = '';
+      try { const rs = await computeRoutes(lastPos, dest);
+        alts = rs.map((x, i) => `${i + 1}) ${x.r.via || 'طريق'}: ${mins(x.s.adj)} د، ${km(x.s.dist)} كم، ${x.s.info ? x.s.info.turns + ' لفة' : ''}، ${x.s.pois.filter(p => p.kind === 'radar').length} رادار، ${x.s.tolls} كارتة${x.s.jams ? '، فيه بلاغ زحمة' : ''}${x.s.observed ? '، مشيته قبل كده' : ''}`).join('\n'); } catch(e){}
+      const here = nav.cum[nav.last], rem = nav.total - here;
+      ctx = `الطريق الحالي: ${nav.via || ''}\nالمتبقي: ${km(rem)} كم\nالبلاغات النشطة: ${jams.filter(j => j.until > Date.now()).length}\nالبدائل من مكاني (بدون زحمة حية):\n${alts}`;
+    } else {
+      const here = await getPosOnce();
+      ctx = here ? `السواق مش بدأ رحلة محسوبة دلوقتي، بس ده موقعه الحالي. ${nearbyText(here)}` : 'مفيش رحلة شغالة، ومقدرش أوصل لموقع السواق دلوقتي (محتاج يسمح بالموقع).';
+    }
     const r = await fetch('https://api.anthropic.com/v1/messages', {method:'POST',
       headers:{'content-type':'application/json', 'x-api-key':key, 'anthropic-version':'2023-06-01', 'anthropic-dangerous-direct-browser-access':'true'},
       body:JSON.stringify({model:'claude-haiku-5-5', max_tokens:300,
