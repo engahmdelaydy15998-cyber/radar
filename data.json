@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T06:56:46Z",
+ "updated": "2026-11-19T07:00:41Z",
  "demo": false,
  "items": [
   {
@@ -12,7 +12,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQUkNwNzNBOFJHa0dpSkF0cDBDNTB0SXh6VVdqRHhXNktjUTRNWWlNVEE1NnhkOXlyUTdOUXZRRjd3R0VqVjEtWVcyNDhFWGZwYThfNmxKUy1iZl82Vkh2NG5yaUI0am40OER0MURwZGllbTJnU1FqaUFFYlJhMVg0UTExYXpGYm1OejFPUjhnbmFDWENGYnNtc1R4LWZHT1JMczhXMTYwNTdlQkdjNHlFUU5XMjZXUzhLNzJIZ2ZkVXU1QzV6dUV6TXhibUVWelhsOTRxZ08zcDRaRF94UTVfSDVWc1AwNXM?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQUkNwNzNBOFJHa0dpSkF0cDBDNTB0SXh6VVdqRHhXNktjUTRNWWlNVEE1NnhkOXlyUTdOUXZRRjd3R0VqVjEtWVcyNDhFWGZwYThfNmxKUy1iZl82Vkh2NG5yaUI0am40OER0MURwZGllbTJnU1FqaUFFYlJhMVg0UTExYXpGYm1OejFPUjhnbmFDWENGYnNtc1R4LWZHT1JMczhXMTYwNTdlQkdjNHlFUU5XMjZXUzhLNzJIZ2ZkVXU1QzV6dUV6TXhibUVWelhsOTRxZ08zcDRaRF94UTVfSDVWc1AwNXM?oc=5",
+   "ta": "أوتوديسك ونيلسوفت ينشئان مركز BIM والتوأم الرقمي للتميز في بيون"
   },
   {
    "id": "hn-50555093",
@@ -83,6 +84,19 @@
    "ta": "يبدو Gemini 4 Neon وكأنه منافس لـ Opus 5.5"
   },
   {
+   "id": "gn-softbankdemonstratesremoteriskassessmentofdamagedbuildingsus",
+   "cat": "arch",
+   "src": "ASCII.jp",
+   "ts": "2026-11-19T00:00:00Z",
+   "t": "SoftBank Demonstrates Remote Risk Assessment of Damaged Buildings Using Drones and Digital Twins",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5FeEc2RHdGR3RSLVA4UlpVRTNPRlRwTkhVWER0OUhsTWtRcHlkUDdTLTlZS2hoWjJDb21Xc254SWVXNG1hbGx1UFZSdmwwSHV4TUhwSDhWcDQ?oc=5",
+   "ta": "سوفت بنك تعرض تقييم المخاطر عن بعد للمباني المتضررة باستخدام الطائرات بدون طيار والتوائم الرقمية"
+  },
+  {
    "id": "af-httpssimonwillisonnet2026Nov18llmgemini",
    "cat": "agents",
    "src": "Simon Willison",
@@ -92,7 +106,8 @@
    "tags": [
     "مدونة"
    ],
-   "url": "https://simonwillison.net/2026/Nov/18/llm-gemini/"
+   "url": "https://simonwillison.net/2026/Nov/18/llm-gemini/",
+   "ta": "الجوزاء 0.38"
   },
   {
    "id": "yt-R0rXSJmymTc",
@@ -132,7 +147,8 @@
     "نقاش"
    ],
    "url": "https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering",
-   "url2": "https://news.ycombinator.com/item?id=50553225"
+   "url2": "https://news.ycombinator.com/item?id=50553225",
+   "ta": "LLM بمساعدة الهندسة العكسية"
   },
   {
    "id": "hn-50553192",
@@ -407,7 +423,8 @@
    "tags": [
     "مدونة"
    ],
-   "url": "https://simonwillison.net/2026/Nov/18/datasette-arrows/"
+   "url": "https://simonwillison.net/2026/Nov/18/datasette-arrows/",
+   "ta": "أسهم مجموعة البيانات 0.1a0"
   },
   {
    "id": "hn-50548845",
@@ -847,7 +864,9 @@
    "tags": [
     "Elzero Web School"
    ],
-   "url": "https://www.youtube.com/watch?v=z-uPdD3w5h8"
+   "url": "https://www.youtube.com/watch?v=z-uPdD3w5h8",
+   "ta": "تعلم Reactjs #06 - فهم هيكل المشروع",
+   "sa": "فهم هيكل المشروع الدروس والواجبات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
   },
   {
    "id": "hn-50545232",
@@ -860,7 +879,8 @@
     "نقاش"
    ],
    "url": "https://www.bloomberg.com/news/features/2026-11-18/gta-6-review-rockstar-games-latest-is-a-masterpiece",
-   "url2": "https://news.ycombinator.com/item?id=50545232"
+   "url2": "https://news.ycombinator.com/item?id=50545232",
+   "ta": "مراجعة لعبة GTA 6: إنها تحفة فنية"
   },
   {
    "id": "gn-eventconsidersimpactofaionarchitectureanddesign",
@@ -872,7 +892,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWGJyTk9TeDdnUndJcTFNTjFvOVJ0VnhjQ3l5VnhKaXZfUmg4SkVPQ0p0aGg4X2lXMFVscDI0NnU2Y0hZUnIwVDVLdXpic0V1UEoyMl9MS1YzT19IQ3U1LXhCajRMUlFHNGVjalprQjZLZV9jS2lEUVdrWWZiSnF1akYwTWxlei0zYjBuZ2c3ZmRnMWU1Y01TdGVCbWRvcjAyWXdZUkJhWTllQVZqMWNIQVBTUE1Idw?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWGJyTk9TeDdnUndJcTFNTjFvOVJ0VnhjQ3l5VnhKaXZfUmg4SkVPQ0p0aGg4X2lXMFVscDI0NnU2Y0hZUnIwVDVLdXpic0V1UEoyMl9MS1YzT19IQ3U1LXhCajRMUlFHNGVjalprQjZLZV9jS2lEUVdrWWZiSnF1akYwTWxlei0zYjBuZ2c3ZmRnMWU1Y01TdGVCbWRvcjAyWXdZUkJhWTllQVZqMWNIQVBTUE1Idw?oc=5",
+   "ta": "يتناول الحدث تأثير الذكاء الاصطناعي على الهندسة المعمارية والتصميم"
   },
   {
    "id": "gn-autodeskandneilsofttosetupaecocentreofexcellenceinpune",
@@ -884,7 +905,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQUmEtck9FbWxFTFY5ZG1kbkFQZFhNb3NUazNlNjRfOHJHLVhDS2RaSzJEdkcwV3BxU092ZkdrdEgzdW5mX21GenpseUJ4elNyV2lRSzhFeUZSeDlYY2JzUlVOSG1xSzBmN1J2ZF9nRl9OM2RvZ1c1QUdaV1Bwa2hFTDhJOENZQ2Rtby1mWXJvMDB0VHlYcG9uQ0QxMW5pby1tcG9PbElkZjBhZW9sa1BkNkI0cU84ak1nM3lPUDRUeTJYTnpHcVI4VFFKd0w1N1ZGM3c?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQUmEtck9FbWxFTFY5ZG1kbkFQZFhNb3NUazNlNjRfOHJHLVhDS2RaSzJEdkcwV3BxU092ZkdrdEgzdW5mX21GenpseUJ4elNyV2lRSzhFeUZSeDlYY2JzUlVOSG1xSzBmN1J2ZF9nRl9OM2RvZ1c1QUdaV1Bwa2hFTDhJOENZQ2Rtby1mWXJvMDB0VHlYcG9uQ0QxMW5pby1tcG9PbElkZjBhZW9sa1BkNkI0cU84ak1nM3lPUDRUeTJYTnpHcVI4VFFKd0w1N1ZGM3c?oc=5",
+   "ta": "أوتوديسك ونيلسوفت لإنشاء مركز AECO للتميز في بيون"
   },
   {
    "id": "gn-neilsoftautodesksetupbuiltenvironmentinnovationhubinpune",
@@ -896,7 +918,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQMHRLd3ZBRmNHS1ZRaWkyU3ZrczdMdmpJRS0zM29Hd0phY2tYaFFEaHhoM1Uwc25TQ1pYTmZCakZXZGhVNEhlczJIUnRRbEp4OXAxMTl0bDNJekg3X1ItQTdtVmYtYjAtSHdLZGFPOFlCb1IxNVNtX00xT21aaEN6UFRxUl9acHpZanJBdG5QUU1tV01kWkdHYzNucXhfeHRpbHBhSXZSWXh4QdIBqgFBVV95cUxQMHRLd3ZBRmNHS1ZRaWkyU3ZrczdMdmpJRS0zM29Hd0phY2tYaFFEaHhoM1Uwc25TQ1pYTmZCakZXZGhVNEhlczJIUnRRbEp4OXAxMTl0bDNJekg3X1ItQTdtVmYtYjAtSHdLZGFPOFlCb1IxNVNtX00xT21aaEN6UFRxUl9acHpZanJBdG5QUU1tV01kWkdHYzNucXhfeHRpbHBhSXZSWXh4QQ?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQMHRLd3ZBRmNHS1ZRaWkyU3ZrczdMdmpJRS0zM29Hd0phY2tYaFFEaHhoM1Uwc25TQ1pYTmZCakZXZGhVNEhlczJIUnRRbEp4OXAxMTl0bDNJekg3X1ItQTdtVmYtYjAtSHdLZGFPOFlCb1IxNVNtX00xT21aaEN6UFRxUl9acHpZanJBdG5QUU1tV01kWkdHYzNucXhfeHRpbHBhSXZSWXh4QdIBqgFBVV95cUxQMHRLd3ZBRmNHS1ZRaWkyU3ZrczdMdmpJRS0zM29Hd0phY2tYaFFEaHhoM1Uwc25TQ1pYTmZCakZXZGhVNEhlczJIUnRRbEp4OXAxMTl0bDNJekg3X1ItQTdtVmYtYjAtSHdLZGFPOFlCb1IxNVNtX00xT21aaEN6UFRxUl9acHpZanJBdG5QUU1tV01kWkdHYzNucXhfeHRpbHBhSXZSWXh4QQ?oc=5",
+   "ta": "نيلسوفت وأوتوديسك ينشئان مركزًا للابتكار البيئي المبني في بيون"
   },
   {
    "id": "yt-q8iHsdzd94U",
@@ -908,7 +931,9 @@
    "tags": [
     "WorldofAI"
    ],
-   "url": "https://www.youtube.com/watch?v=q8iHsdzd94U"
+   "url": "https://www.youtube.com/watch?v=q8iHsdzd94U",
+   "ta": "كلود فابل 5.5 أم أوبوس 5.6؟! GPT-6.2 أسترا وسول، جيميني 4 نيون اليوم! ومايكروسوفت ماي! أخبار الذكاء الاصطناعي",
+   "sa": "يمكن للعملاء الآن تصفح الويب والتفاعل معه مثل البشر: https://browserbase.run/yt-wai-2 🚨 قد يتوفر Claude Fable 5.5 أو Opus 5.6 قريبًا..."
   },
   {
    "id": "hn-50543947",
@@ -921,7 +946,8 @@
     "نقاش"
    ],
    "url": "https://news.ycombinator.com/item?id=50543947",
-   "url2": ""
+   "url2": "",
+   "ta": "كلود يحصل على هيلا بجنون العظمة"
   },
   {
    "id": "gn-rhino9patchessubdsandtheaiintheroom",
@@ -933,7 +959,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNTjlzcGVCbTZIYnRjM1hmNmhXTHEwenRjN05Qa3A3blpxa3ZhRW9YME9wUkVtbV9Fc3gyOUFHUXBQb3JTS1NzMlVrOFAzSlZNdUhnbE9mem95cFAzaUM1cFhsbEVGS1NWMUN0clVwYmVzYkxrS2p3dzlCV2Q3Unl5ckNldTB1QnAweHF6UlRadw?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNTjlzcGVCbTZIYnRjM1hmNmhXTHEwenRjN05Qa3A3blpxa3ZhRW9YME9wUkVtbV9Fc3gyOUFHUXBQb3JTS1NzMlVrOFAzSlZNdUhnbE9mem95cFAzaUM1cFhsbEVGS1NWMUN0clVwYmVzYkxrS2p3dzlCV2Q3Unl5ckNldTB1QnAweHF6UlRadw?oc=5",
+   "ta": "وحيد القرن 9: التصحيحات، وSubDs، والذكاء الاصطناعي في الغرفة"
   },
   {
    "id": "hn-50543119",
@@ -946,7 +973,8 @@
     "نقاش"
    ],
    "url": "https://pirateface.co/articles/pirate-face-cli",
-   "url2": "https://news.ycombinator.com/item?id=50543119"
+   "url2": "https://news.ycombinator.com/item?id=50543119",
+   "ta": "يحتاج Torrent Infra إلى التحديث على الفور حتى تتمكن النماذج المفتوحة من البقاء"
   },
   {
    "id": "yt-2HTBY1FL4As",
@@ -958,7 +986,9 @@
    "tags": [
     "AssemblyAI"
    ],
-   "url": "https://www.youtube.com/shorts/2HTBY1FL4As"
+   "url": "https://www.youtube.com/shorts/2HTBY1FL4As",
+   "ta": "نضع Blurt على Android Auto 🚀",
+   "sa": "أصبحت خدمة تحويل الكلام إلى نص دقيقة وسريعة وبأسعار معقولة في السيارات 🤯 ظل الإدخال الصوتي لنظام Android Auto يخطئ في فهم أسماء الشوارع في سنغافورة، لذلك أنشأت Mart…"
   },
   {
    "id": "gn-lessonsfromchinahowclientsaregettingaheadwithaiandwhatarchit",
@@ -970,7 +1000,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVDE1RGFfOGxnUkdYREh4OWl2SldSd0pUYnJXd0MyVzVNckhNZTZZTS01VHNxUGdTbkp4UlZFT1AyMGdzY1pDR01HVmc1Q2Jjc3ZNS3FrNThWUVpqS2loX1JrNWozSzdHUnRBenRFRzEzdzh4V21FeXNKZlNPR0lxa3hFSFhhNk5WRXY0ZFdXcU8?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVDE1RGFfOGxnUkdYREh4OWl2SldSd0pUYnJXd0MyVzVNckhNZTZZTS01VHNxUGdTbkp4UlZFT1AyMGdzY1pDR01HVmc1Q2Jjc3ZNS3FrNThWUVpqS2loX1JrNWozSzdHUnRBenRFRzEzdzh4V21FeXNKZlNPR0lxa3hFSFhhNk5WRXY0ZFdXcU8?oc=5",
+   "ta": "دروس من الصين: كيف يتقدم العملاء في مجال الذكاء الاصطناعي، وما يمكن للمهندسين المعماريين فعله حيال ذلك"
   },
   {
    "id": "yt---ifDcgr3UY",
@@ -982,7 +1013,9 @@
    "tags": [
     "Dr Firas"
    ],
-   "url": "https://www.youtube.com/shorts/--ifDcgr3UY"
+   "url": "https://www.youtube.com/shorts/--ifDcgr3UY",
+   "ta": "كلود وايت بورد: ملاحظاتك الفوضوية تصبح خطة في 4 حركات",
+   "sa": "ملاحظات فوضوية؟ يحولها كلود إلى خطة باستخدام ألواح كلود البيضاء الجديدة. 4 حركات: قم برمي كل شيء على اللوحة، وقم بدعوة فريقك، واطلب المدرسة..."
   },
   {
    "id": "gn-autodeskandneilsoftbuildjointgotomarketpusharoundbimanddigit",
@@ -994,7 +1027,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPWHlFV2dUcDVkSHlQNXhhVGdSNzFfclFqZnIxTEF5ODRXS0I4TXVJQndlQVZsR2hFcHRmbU9Eem1Fdk40NFhMS3lYMW93SVNoenRoQUJJUHlxTVNXZnFoWmw5aG93a0J5RWRkUU9HQXdzZ2QxZ0J1aXVjYWV1SVNwT1daNFlnZ08zaUJaRURIcUw2MjhYOHFZV2hPT0R4RzFBSENINlpfUzhhakVCQTByNTlkX2VObkJHNi1aLQ?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPWHlFV2dUcDVkSHlQNXhhVGdSNzFfclFqZnIxTEF5ODRXS0I4TXVJQndlQVZsR2hFcHRmbU9Eem1Fdk40NFhMS3lYMW93SVNoenRoQUJJUHlxTVNXZnFoWmw5aG93a0J5RWRkUU9HQXdzZ2QxZ0J1aXVjYWV1SVNwT1daNFlnZ08zaUJaRURIcUw2MjhYOHFZV2hPT0R4RzFBSENINlpfUzhhakVCQTByNTlkX2VObkJHNi1aLQ?oc=5",
+   "ta": "تقوم Autodesk وNeilsoft ببناء دفعة مشتركة للسوق حول BIM وDigital Twins"
   },
   {
    "id": "gn-attackerscompromisemicrosoftsagentframeworkpypipackagetostea",
@@ -1006,7 +1040,8 @@
    "tags": [
     "Agents"
    ],
-   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVHZzbnVXd1FuNW1LTEVnVl9SbHM5ZGtrX05LMHpOREZsU01XNXpfaTdPZTQ1UDVZNjZrYzJfVGNmb0JPYU5naENvRlpBUEdmNE9oVmVzUjZwV1hhT1lNN294OTM2U1BXbnlReHJXV3c4ZUliTkl6aFRrSkJLMDNUbTNR?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVHZzbnVXd1FuNW1LTEVnVl9SbHM5ZGtrX05LMHpOREZsU01XNXpfaTdPZTQ1UDVZNjZrYzJfVGNmb0JPYU5naENvRlpBUEdmNE9oVmVzUjZwV1hhT1lNN294OTM2U1BXbnlReHJXV3c4ZUliTkl6aFRrSkJLMDNUbTNR?oc=5",
+   "ta": "يقوم المهاجمون باختراق حزمة Microsoft Agent Framework PyPI لسرقة بيانات اعتماد السحابة"
   },
   {
    "id": "gn-breakinghijackedreleasesofmicrosoftsofficialagentframeworkst",
@@ -1018,7 +1053,8 @@
    "tags": [
     "Agents"
    ],
-   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNd19Jc3NucWd0Z0xsU2dIZ1p0MjVoTVJyOXdZNEhreDNTQVNxV0VWVm1ybnF4N0VfTTFkVTRpNXAtSW1xUUdQb19SeGVTMVJPZlQ5VWZvaEptM21YT3d0bXlHRGJ3UnRKc0doSDlpZTJDUllSa01DLXN2dEpXZzVJdXRBT3Iya1Nxd3hCbXIxZkYyQmRXd2kwR2pnVnpzeWg3ajRyTVJXVnFPWUt1cU1qNjlOd08tcjQ5bXM5VDktaW1EZWszT0E?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNd19Jc3NucWd0Z0xsU2dIZ1p0MjVoTVJyOXdZNEhreDNTQVNxV0VWVm1ybnF4N0VfTTFkVTRpNXAtSW1xUUdQb19SeGVTMVJPZlQ5VWZvaEptM21YT3d0bXlHRGJ3UnRKc0doSDlpZTJDUllSa01DLXN2dEpXZzVJdXRBT3Iya1Nxd3hCbXIxZkYyQmRXd2kwR2pnVnpzeWg3ajRyTVJXVnFPWUt1cU1qNjlOd08tcjQ5bXM5VDktaW1EZWszT0E?oc=5",
+   "ta": "عاجل: الإصدارات المختطفة من إطار عمل وكيل Microsoft الرسمي تسرق بيانات اعتماد Azure وCI"
   },
   {
    "id": "hn-50542361",
@@ -1031,7 +1067,8 @@
     "نقاش"
    ],
    "url": "https://news.ycombinator.com/item?id=50542361",
-   "url2": ""
+   "url2": "",
+   "ta": "دروس مثيرة للاهتمام تعمل من أجل بدء التشغيل"
   },
   {
    "id": "hn-50542070",
@@ -1044,7 +1081,8 @@
     "نقاش"
    ],
    "url": "https://arxiv.org/abs/2403.19675",
-   "url2": "https://news.ycombinator.com/item?id=50542070"
+   "url2": "https://news.ycombinator.com/item?id=50542070",
+   "ta": "مراجعة لكتاب ألفريد نورث وايتهيد \"مقدمة في الرياضيات\""
   },
   {
    "id": "gn-musesparkvschatgptvsclaudevsgemini2026",
@@ -1056,7 +1094,8 @@
    "tags": [
     "Agents"
    ],
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBsNkJ4VnZjT1kwY3Z5YnJFek1oSDZ4Umo4UWd5T09FcTNMRkpIZ013MllmR3hBS0tvWXJuSnk2TmpaaXlEbU1TbU5ZZ2FabkVyei1CU2hKMnU5MlBBTHZVMmZNYTllU0ZxZVJETkl2RQ?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBsNkJ4VnZjT1kwY3Z5YnJFek1oSDZ4Umo4UWd5T09FcTNMRkpIZ013MllmR3hBS0tvWXJuSnk2TmpaaXlEbU1TbU5ZZ2FabkVyei1CU2hKMnU5MlBBTHZVMmZNYTllU0ZxZVJETkl2RQ?oc=5",
+   "ta": "ميوز سبارك ضد تشات جي بي تي ضد كلود ضد جيميني (2026)"
   },
   {
    "id": "hn-50541790",
@@ -1069,7 +1108,8 @@
     "نقاش"
    ],
    "url": "https://kernel.dev/blog/why-is-gemini-4-carbon-taking-so-long/",
-   "url2": "https://news.ycombinator.com/item?id=50541790"
+   "url2": "https://news.ycombinator.com/item?id=50541790",
+   "ta": "لماذا يستغرق Gemini 4 Carbon وقتًا طويلاً؟"
   },
   {
    "id": "hn-50541619",
@@ -1082,7 +1122,8 @@
     "نقاش"
    ],
    "url": "http://xinmingtu.cn/blog/2026/claude-opus-5-5-protein-sequences/",
-   "url2": "https://news.ycombinator.com/item?id=50541619"
+   "url2": "https://news.ycombinator.com/item?id=50541619",
+   "ta": "تم تدريب كلود على تسلسل البروتين على نطاق واسع"
   },
   {
    "id": "gn-autodeskneilsoftlaunchbimanddigitaltwincoeinpune",
@@ -1094,7 +1135,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNVDVZeTlkRjZOSmEzMEZEUGhtYWFJVlVycHlmb2c4cDFSbGh3WG9NOHE3WjBpVjN5dGttWTJEek02V1NEdGx0RW1ydEEyOXFOc2xzczg3RDdJMTF6LTZ0ZllvNW5OWEhKS2d1bTlqMllIUzFLWUNIZy1PMEY4SV9CME4xMXJsNTJfRlIwbkZ1SUZKcVpXZjdUaWpKQ2d6bXlXZEw3X0hOb0RMdEFkSW82dTVrMkdSQ1BvSURPZ0V2WlBkOTJwM1c4ZmMyTHJBX3d3amlzeGhuYldWeDByNmE5LUhkTmI1a013dXZHWlNHdHI4SXNpczN5Vl9lUDFDU1JrMFduU2p3WDljbUhsQnBFX3ZB0gHaAUFVX3lxTE15NkNlQ0w2M0J4azlEMy1hYVFSQXVqd25IZjdkYzlrVkNUS09ORVN0NUVPLU80bzhVaWNYWTMySkxybmlsd2RSc0liMFFTbzB5Tk12QWppb2tBQ1YwYmhBT000eDEyeUU1NFVyR2F4am8wZVEtLXQyYjhrd2ZPb2oydTVmOEdERG5FcG5nX3NDeVdNOEQ1TGNXMEYwS0hvV2JyZ3pLS1VqcEJXN2s1YUc3QUNoVWVjM3h1Z01oMlZwVVBBTlBWckZRTUR3akc3R1lJcHpqX0ItaTV3?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNVDVZeTlkRjZOSmEzMEZEUGhtYWFJVlVycHlmb2c4cDFSbGh3WG9NOHE3WjBpVjN5dGttWTJEek02V1NEdGx0RW1ydEEyOXFOc2xzczg3RDdJMTF6LTZ0ZllvNW5OWEhKS2d1bTlqMllIUzFLWUNIZy1PMEY4SV9CME4xMXJsNTJfRlIwbkZ1SUZKcVpXZjdUaWpKQ2d6bXlXZEw3X0hOb0RMdEFkSW82dTVrMkdSQ1BvSURPZ0V2WlBkOTJwM1c4ZmMyTHJBX3d3amlzeGhuYldWeDByNmE5LUhkTmI1a013dXZHWlNHdHI4SXNpczN5Vl9lUDFDU1JrMFduU2p3WDljbUhsQnBFX3ZB0gHaAUFVX3lxTE15NkNlQ0w2M0J4azlEMy1hYVFSQXVqd25IZjdkYzlrVkNUS09ORVN0NUVPLU80bzhVaWNYWTMySkxybmlsd2RSc0liMFFTbzB5Tk12QWppb2tBQ1YwYmhBT000eDEyeUU1NFVyR2F4am8wZVEtLXQyYjhrd2ZPb2oydTVmOEdERG5FcG5nX3NDeVdNOEQ1TGNXMEYwS0hvV2JyZ3pLS1VqcEJXN2s1YUc3QUNoVWVjM3h1Z01oMlZwVVBBTlBWckZRTUR3akc3R1lJcHpqX0ItaTV3?oc=5",
+   "ta": "أوتوديسك ونيلسوفت تطلقان BIM وDigital Twin CoE في بيون"
   },
   {
    "id": "hn-50541023",
@@ -1107,7 +1149,8 @@
     "نقاش"
    ],
    "url": "https://retrocomputing.stackexchange.com/questions/16912",
-   "url2": "https://news.ycombinator.com/item?id=50541023"
+   "url2": "https://news.ycombinator.com/item?id=50541023",
+   "ta": "هل خططت شركة IBM في الأصل لاستخدام 68000 في جهاز الكمبيوتر؟ (2020)"
   },
   {
    "id": "yt-JVHkb8PTMvc",
@@ -1119,7 +1162,9 @@
    "tags": [
     "Matt Wolfe"
    ],
-   "url": "https://www.youtube.com/watch?v=JVHkb8PTMvc"
+   "url": "https://www.youtube.com/watch?v=JVHkb8PTMvc",
+   "ta": "OpenAI GPT-6.2 Astra موجود هنا - ليس كما تعتقد",
+   "sa": "مشاركة آخر الأخبار والتطورات في مجال الذكاء الاصطناعي - 🛠️ استكشاف أدوات وأخبار الذكاء الاصطناعي: https://futuretools.io/ اكتشف المزيد: 🛠️ استكشاف أدوات وأخبار الذكاء الاصطناعي: https..."
   },
   {
    "id": "yt-lemt3NUBGTg",
@@ -1131,7 +1176,9 @@
    "tags": [
     "AssemblyAI"
    ],
-   "url": "https://www.youtube.com/shorts/lemt3NUBGTg"
+   "url": "https://www.youtube.com/shorts/lemt3NUBGTg",
+   "ta": "هل يمكن لـ AssemblyAI TTS نطق هذه؟ تحدي النطق",
+   "sa": "هل يمكن لـ AssemblyAI TTS نطق هذه؟ تحدي النطق"
   },
   {
    "id": "yt-2pdF52EVlbM",
@@ -1157,7 +1204,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNOFJVVThoLWhwNU9VbnNrLUNWU2lBMkhCbFp5VFM4bTNEcjhudUh4dU0xb2pTMDJtMzZCM3ZwUGZsaVIzUXdUbUhmb2w0QzhSem8xYU9CNkoycWhDNlFfeVlZZjczNlFuWEdZaEdDR1RnQXNjYXhUUFJuOXNOMUFXdkw1eWxOM2pvYUM0Zy1rUF9GQkU2QUgyUU9MOHlXams5c1UwNzdB?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNOFJVVThoLWhwNU9VbnNrLUNWU2lBMkhCbFp5VFM4bTNEcjhudUh4dU0xb2pTMDJtMzZCM3ZwUGZsaVIzUXdUbUhmb2w0QzhSem8xYU9CNkoycWhDNlFfeVlZZjczNlFuWEdZaEdDR1RnQXNjYXhUUFJuOXNOMUFXdkw1eWxOM2pvYUM0Zy1rUF9GQkU2QUgyUU9MOHlXams5c1UwNzdB?oc=5",
+   "ta": "قصة | بناء توأم رقمي: استكشاف مستقبل الرعاية الشخصية لمرضى السرطان"
   },
   {
    "id": "yt-_5ZDkWP8K0c",
@@ -1307,7 +1355,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNYzJsVGlzNXNpejhucEYwMTlHajFyb09wUGdaQU15Rk84NHV5OEgzWnVUODlDS0VUREZfTVppZ1hXREJoZ2lCMDRkRnNOSlZOVF8tX3NZY2dCb3ZUbW9mSFRxdmgydldXTVJTYm9KNUFoUXRGS3pURjg4XzlUcGhlYkNxQzZ4Wm9ZbUVkbTdlWXdQenppMVB1cU5icEJKOEx3Y2gxdUZ0VWNZS0FQRzUwMHhwUU5Cc0dERVZOMi1PZXZWd2pidk5j?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNYzJsVGlzNXNpejhucEYwMTlHajFyb09wUGdaQU15Rk84NHV5OEgzWnVUODlDS0VUREZfTVppZ1hXREJoZ2lCMDRkRnNOSlZOVF8tX3NZY2dCb3ZUbW9mSFRxdmgydldXTVJTYm9KNUFoUXRGS3pURjg4XzlUcGhlYkNxQzZ4Wm9ZbUVkbTdlWXdQenppMVB1cU5icEJKOEx3Y2gxdUZ0VWNZS0FQRzUwMHhwUU5Cc0dERVZOMi1PZXZWd2pidk5j?oc=5",
+   "ta": "التصميم بالذكاء: الذكاء الاصطناعي والطبيعة ومسؤوليات مهندسي المناظر الطبيعية"
   },
   {
    "id": "af-tpssimonwillisonnet2026Nov17externalsandboxesforcodingagents",
@@ -1332,7 +1381,8 @@
    "tags": [
     "Agents"
    ],
-   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQNnIyYlA2MTF3bjg5VFFOOFkxdHNDbDBwYWc2SU9LXzIwVno5blktS0NNdV9CVXdnOTlzYkh0dWpFbEpMQkZpa1BCdXFpR0dLdlAzS3VCODFiQTBwbnFjTkdoVzlkYUUzY3VjT3c1MzB0cEZZdjQ4cUcyOHd1QzE3UGl2M2pZZkh1bG9lTktpSmIta0E?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQNnIyYlA2MTF3bjg5VFFOOFkxdHNDbDBwYWc2SU9LXzIwVno5blktS0NNdV9CVXdnOTlzYkh0dWpFbEpMQkZpa1BCdXFpR0dLdlAzS3VCODFiQTBwbnFjTkdoVzlkYUUzY3VjT3c1MzB0cEZZdjQ4cUcyOHd1QzE3UGl2M2pZZkh1bG9lTktpSmIta0E?oc=5",
+   "ta": "تقول مايكروسوفت إن نموذجها الجديد للتشفير بالذكاء الاصطناعي ينافس نموذج Claude Opus 5.5 بنسبة 5% من التكلفة"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov17gpt62astraandsol",
@@ -1357,7 +1407,8 @@
    "tags": [
     "Agents"
    ],
-   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNTkEyNTlZaF9BRmFHNWw5ZmpILWUyTTYwOWswREVrYzRyZ2tWMERod1plX3ZBUzdaVFY5M1VlakFCUWF6U2h5eTdsMnJOS0RzaVdpWW9XN0tOZC1BODhSeVpfTVIxY29xOTkwYjk0aVlwM0FyeV9jc3p5THdlYjB3SHBxY3hBVGhkSEZ1TUVlZ0JNMEU?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNTkEyNTlZaF9BRmFHNWw5ZmpILWUyTTYwOWswREVrYzRyZ2tWMERod1plX3ZBUzdaVFY5M1VlakFCUWF6U2h5eTdsMnJOS0RzaVdpWW9XN0tOZC1BODhSeVpfTVIxY29xOTkwYjk0aVlwM0FyeV9jc3p5THdlYjB3SHBxY3hBVGhkSEZ1TUVlZ0JNMEU?oc=5",
+   "ta": "تعرض إطار عمل وكيل Microsoft للاختراق: يستهدف برنامج سرقة بيانات الاعتماد خطوط أنابيب Azure وCI"
   },
   {
    "id": "yt-oLkthLKyjIs",
@@ -1425,7 +1476,8 @@
     "نقاش"
    ],
    "url": "https://surgehq.ai/blog/sudo-l7",
-   "url2": "https://news.ycombinator.com/item?id=50537739"
+   "url2": "https://news.ycombinator.com/item?id=50537739",
+   "ta": "Sudo L7: هل يمكن لوكلاء البرمجة التصرف مثل المهندسين العاملين؟"
   },
   {
    "id": "yt-FaSRY19XOBY",
@@ -1466,7 +1518,8 @@
     "نقاش"
    ],
    "url": "https://www.dialup.net/farcall/",
-   "url2": "https://news.ycombinator.com/item?id=50536648"
+   "url2": "https://news.ycombinator.com/item?id=50536648",
+   "ta": "إظهار HN: SSH في DOS: لقد قمت بكتابة محاكي x86 (IBM PC)."
   },
   {
    "id": "hn-50536468",
@@ -1726,7 +1779,8 @@
    "tags": [
     "جديد كلياً"
    ],
-   "url": "https://github.com/Jadouminou/final-phase-lite"
+   "url": "https://github.com/Jadouminou/final-phase-lite",
+   "ta": "Jadouminou/final-phase-lite: نافذة مجانية لمقاطع الفيديو التي تنشئها باستخدام Claude Code أو OpenCode: شاهد عمل الذكاء الاصطناعي، من فضلك..."
   },
   {
    "id": "gn-googlewarnshackersareusingaiagentstolaunchcyberattacksatmach",
@@ -1831,7 +1885,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxPTnd0Q3FUdGI3XzZILTJia3ZiVy0tTTVpbFBrQUkwbW5Xa3RxMnZka3dnMktMRDd3OUszcXNudDl6S1NfQWJJR0NiMlNUTDhVM1JYRWw4VmtQaVp1WXUxb3AyanRjNkRMZ3Y3WUVjbmlVdExHMW5aTVlzejlCTGlNTzR0cVNqN1hDendFTmxWU09CUjhGODd5aE83aFMxbHRBeGdaSW5Uc3RhX180cjB3SS12dllTV0dhUzE1M1VzNlk1aTFFTnhWNnVDYWFMYjA2T3hSQzQ0ZGxudV9FbzBWR2I0V1lWV2RXMkZSNXpOdER2QUJjelR0MWVwWF9zMFZDemVjOUpLV3Zsa2hUVDV6cHRrWHVra0NmcDNXRm80aEdYZw?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxPTnd0Q3FUdGI3XzZILTJia3ZiVy0tTTVpbFBrQUkwbW5Xa3RxMnZka3dnMktMRDd3OUszcXNudDl6S1NfQWJJR0NiMlNUTDhVM1JYRWw4VmtQaVp1WXUxb3AyanRjNkRMZ3Y3WUVjbmlVdExHMW5aTVlzejlCTGlNTzR0cVNqN1hDendFTmxWU09CUjhGODd5aE83aFMxbHRBeGdaSW5Uc3RhX180cjB3SS12dllTV0dhUzE1M1VzNlk1aTFFTnhWNnVDYWFMYjA2T3hSQzQ0ZGxudV9FbzBWR2I0V1lWV2RXMkZSNXpOdER2QUJjelR0MWVwWF9zMFZDemVjOUpLV3Zsa2hUVDV6cHRrWHVra0NmcDNXRm80aEdYZw?oc=5",
+   "ta": "لا تنتظر أيها المطورون الذين لا يستخدمون برنامج Revit! قم بإنشاء وظائف Revit الإضافية الخاصة بك باستخدام الذكاء الاصطناعي وواجهة برمجة تطبيقات Revit."
   },
   {
    "id": "hn-50531481",
@@ -2178,7 +2233,8 @@
    "tags": [
     "Agents"
    ],
-   "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9rWFFmeW5aZ3drSDhVdHM5YkZIRkVTZmo3ZWZBS0tackhuWFMzeEN4MG4tMnhGa1B0eFJpNHhxN1BOS3Zhczhj?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9rWFFmeW5aZ3drSDhVdHM5YkZIRkVTZmo3ZWZBS0tackhuWFMzeEN4MG4tMnhGa1B0eFJpNHhxN1BOS3Zhczhj?oc=5",
+   "ta": "تسعير GLM لعام 2026: أسعار API وخطة ترميز بقيمة 18 دولارًا ونماذج مجانية"
   },
   {
    "id": "gn-howmuchdoesaicostin2026thecompletepricingcomparison",
@@ -2190,7 +2246,8 @@
    "tags": [
     "Agents"
    ],
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1OMVVYdjlTQWNCRFM0elFCdWNIOU5pTm5KQUNOWGc4RjlqbUlHU2J3NjhiQk96UTNZYTJWSVFYUEU4bDhNU1ZRSnc0VnlTQjVQVXVKdA?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1OMVVYdjlTQWNCRFM0elFCdWNIOU5pTm5KQUNOWGc4RjlqbUlHU2J3NjhiQk96UTNZYTJWSVFYUEU4bDhNU1ZRSnc0VnlTQjVQVXVKdA?oc=5",
+   "ta": "ما هي تكلفة الذكاء الاصطناعي في عام 2026؟ مقارنة الأسعار الكاملة"
   },
   {
    "id": "gn-googlewarnshackersareusingaiagentstoautomatecyberattacks",
@@ -2294,7 +2351,8 @@
    "tags": [
     "Agents"
    ],
-   "url": "https://news.google.com/rss/articles/CBMirgJBVV95cUxNeFc5LXA2bVlGYk9YalVCblJFenZ6VUFzMUk3QS1jM0tTQzU2YVVPZnk5aHdZaW5ISjg1WGxBVnNWemI2NzNrY3FPZ2dOelVmdUVSUDRVUjdRdGxjWHV3UVloRzNmVjY4dXNFWC13bHd5SHNuc2N0RGx6ZlM2UXJHa3M1ekRybndtbXhCbmh1OUdDcVlYVmZrQURUQWZHRFNrbFZOWjNvVjhJRERpMGY1akhScjZheV9kbnhqTlE3cVJ1c2p6UEZqcTl2d2NXaU96WHJNb25PT0pTQTZCakJYTjU3Vy11M2I1eDYtVE1SMTFmYTg0ckN0YXdrUHk1a2xOWmlUYVBIUUpTcVpNWHU0NC1HUmczbE9oTW13dEp4MGNlUndvYVVOdXFVczJEZw?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMirgJBVV95cUxNeFc5LXA2bVlGYk9YalVCblJFenZ6VUFzMUk3QS1jM0tTQzU2YVVPZnk5aHdZaW5ISjg1WGxBVnNWemI2NzNrY3FPZ2dOelVmdUVSUDRVUjdRdGxjWHV3UVloRzNmVjY4dXNFWC13bHd5SHNuc2N0RGx6ZlM2UXJHa3M1ekRybndtbXhCbmh1OUdDcVlYVmZrQURUQWZHRFNrbFZOWjNvVjhJRERpMGY1akhScjZheV9kbnhqTlE3cVJ1c2p6UEZqcTl2d2NXaU96WHJNb25PT0pTQTZCakJYTjU3Vy11M2I1eDYtVE1SMTFmYTg0ckN0YXdrUHk1a2xOWmlUYVBIUUpTcVpNWHU0NC1HUmczbE9oTW13dEp4MGNlUndvYVVOdXFVczJEZw?oc=5",
+   "ta": "تطلق Frontmost AI مهارات AEO لـ Claude Code لمساعدة الشركات في الحصول على توصية في ChatGPT"
   },
   {
    "id": "af-omments1xyb7jwclover_2_dense_278b_base_7_lora_experts_routed",
@@ -3104,7 +3162,8 @@
     "نقاش"
    ],
    "url": "https://github.com/Apakottur/unref",
-   "url2": "https://news.ycombinator.com/item?id=50517410"
+   "url2": "https://news.ycombinator.com/item?id=50517410",
+   "ta": "Show HN: Unref – أداة البحث عن أكواد Python الميتة المبنية على محلل Ruff"
   },
   {
    "id": "yt-VpHYPfvfy0o",
@@ -3169,7 +3228,8 @@
    "tags": [
     "جديد كلياً"
    ],
-   "url": "https://github.com/hiruhiru2005/sync-strata"
+   "url": "https://github.com/hiruhiru2005/sync-strata",
+   "ta": "hiruhiru2005/sync-strata: تطبيق LLM محلي بنقرة واحدة لنظامي التشغيل Windows وLinux: Qwen3.8-Flash-Next مع Sync quantiz..."
   },
   {
    "id": "hn-50516995",
@@ -3342,7 +3402,8 @@
     "نقاش"
    ],
    "url": "https://github.com/plabayo/venndb",
-   "url2": "https://news.ycombinator.com/item?id=50515603"
+   "url2": "https://news.ycombinator.com/item?id=50515603",
+   "ta": "إظهار HN: VennDB: إلحاق Rust DB في الذاكرة فقط للصفوف التي تم الاستعلام عنها باستخدام إشارات البت"
   },
   {
    "id": "gh-1459776570",
@@ -3764,7 +3825,8 @@
    "tags": [
     "أداة مفتوحة المصدر"
    ],
-   "url": "https://github.com/true-sage-76/dynamo-for-revit-desktop"
+   "url": "https://github.com/true-sage-76/dynamo-for-revit-desktop",
+   "ta": "true-sage-76/dynamo-for-revit-desktop: حزمة Dynamo for Revit 2026 المستقلة مع محرر الرسم البياني للعقدة ومكتبة الحزم المجمعة و..."
   },
   {
    "id": "gh-1459089377",
@@ -3776,7 +3838,8 @@
    "tags": [
     "أداة مفتوحة المصدر"
    ],
-   "url": "https://github.com/verarussell/rhinoinside-for-revit-desktop"
+   "url": "https://github.com/verarussell/rhinoinside-for-revit-desktop",
+   "ta": "verarussell/rhinoinside-for-revit-desktop: حزمة RhinoInside for Revit 2026 المستقلة مع وقت تشغيل الجسر الهندسي، وبيانات الوظيفة الإضافية..."
   },
   {
    "id": "gh-1459089147",
@@ -3788,7 +3851,8 @@
    "tags": [
     "أداة مفتوحة المصدر"
    ],
-   "url": "https://github.com/urban-seal-59/v-ray-for-revit-desktop"
+   "url": "https://github.com/urban-seal-59/v-ray-for-revit-desktop",
+   "ta": "Urban-seal-59/v-ray-for-revit-desktop: حزمة V-Ray for Revit 2026 المستقلة مع التوزيع دون الاتصال بالإنترنت، ومكتبة المواد، وdenoi..."
   },
   {
    "id": "yt-dwbtj3-8xcM",
@@ -3853,7 +3917,8 @@
    "tags": [
     "مشروع جديد"
    ],
-   "url": "https://github.com/WyrmClimberManacle/Gemini-Config-Checker-"
+   "url": "https://github.com/WyrmClimberManacle/Gemini-Config-Checker-",
+   "ta": "WyrmClimberManacle/Gemini-Config-Checker-: ماسح منطقة السلسلة: ابحث عن تكوينات الوكيل التي تنقلك إلى Google AI Studio وGemini (s..."
   },
   {
    "id": "gh-1459020291",
@@ -3917,7 +3982,8 @@
    "tags": [
     "مشروع جديد"
    ],
-   "url": "https://github.com/weightcashiercupola/Gemini-Config-Checker-"
+   "url": "https://github.com/weightcashiercupola/Gemini-Config-Checker-",
+   "ta": "Weightcashiercupola/Gemini-Config-Checker-: ماسح منطقة السلسلة: ابحث عن تكوينات الوكيل التي تنقلك إلى Google AI Studio وGemini (s..."
   },
   {
    "id": "gh-1459018207",
@@ -3929,7 +3995,8 @@
    "tags": [
     "مشروع جديد"
    ],
-   "url": "https://github.com/VortexHostFeel/Gemini-Config-Checker-"
+   "url": "https://github.com/VortexHostFeel/Gemini-Config-Checker-",
+   "ta": "VortexHostFeel/Gemini-Config-Checker-: ماسح منطقة السلسلة: ابحث عن تكوينات الوكيل التي تنقلك إلى Google AI Studio وGemini (s..."
   },
   {
    "id": "gh-1459018163",
@@ -4021,7 +4088,8 @@
     "نقاش"
    ],
    "url": "https://medium.com/@smoking2man/when-ai-knows-more-than-it-can-offer-how-training-turns-an-intelligent-assistant-into-a-generator-7e700f05163e",
-   "url2": "https://news.ycombinator.com/item?id=50507918"
+   "url2": "https://news.ycombinator.com/item?id=50507918",
+   "ta": "عندما يعرف الذكاء الاصطناعي أكثر مما يمكنه تقديمه"
   },
   {
    "id": "yt-BAcHqbZbpAE",
@@ -4127,7 +4195,8 @@
    "tags": [
     "Agents"
    ],
-   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1FbFRybmtOZm9paW1XaEJ5Q1lpZ1gxMExWUDF2Q2N2X0FEakZKUkdBWXVBcjF1bWFfVnlzNnY2WFd1akVZa3VNZmJ2T0REV0UwUlpXdUhjdGlWYlF1M25iMmpvLWNQVUNLeC1feWJDNjI2Y3BfNGRoc1VFVQ?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1FbFRybmtOZm9paW1XaEJ5Q1lpZ1gxMExWUDF2Q2N2X0FEakZKUkdBWXVBcjF1bWFfVnlzNnY2WFd1akVZa3VNZmJ2T0REV0UwUlpXdUhjdGlWYlF1M25iMmpvLWNQVUNLeC1feWJDNjI2Y3BfNGRoc1VFVQ?oc=5",
+   "ta": "الأنثروبيك تشرح انخفاض جودة كلود كود: 3% ضرب [2026]"
   },
   {
    "id": "gn-lawmajorshipsiphoneappin13dayswithclaudecode",
@@ -4235,19 +4304,6 @@
    ],
    "url": "https://www.wsj.com/business/airlines/the-single-router-in-southern-arkansas-that-ground-air-travel-to-a-halt-eedc326c",
    "ta": "جهاز التوجيه الوحيد في جنوب أركنساس الذي توقف السفر الجوي الأرضي"
-  },
-  {
-   "id": "gh-1458381510",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-15T02:41:10Z",
-   "t": "baney75/smoothstone: A skill and CLI that lets small local models like LFM3-1.7B make 3D printable parts, from…",
-   "s": "34 نجمة، لغة Python",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/baney75/smoothstone",
-   "ta": "baney75/smoothstone: مهارة وCLI تتيح للنماذج المحلية الصغيرة مثل LFM3-1.7B صنع أجزاء قابلة للطباعة ثلاثية الأبعاد، من..."
   }
  ]
 }
