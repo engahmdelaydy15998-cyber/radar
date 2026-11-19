@@ -177,9 +177,19 @@ def build(name, pal):
         tl=layer(); td=ImageDraw.Draw(tl); k=R*0.5
         td.polygon([(cx-k*0.55,cy-k),(cx-k*0.55,cy+k),(cx+k,cy)],fill=(255,255,255,255)); over(base,tl)
     blip(318,0.35,0.050,(236,52,52),playg,solid=(236,52,52))
-    # architecture: same small lit-circle badge language as the code marks, labeled ARC, sandy mud-brick tone
+    # architecture: small Hassan-Fathy-style mud-brick dome, same lit-circle badge language as the code marks
+    def domeg(col):
+        def fn(cx,cy,R,far):
+            tl=layer(); td=ImageDraw.Draw(tl); k=R*0.56; y0=cy-k*0.15
+            td.pieslice([cx-k,y0-k,cx+k,y0+k],180,360,fill=col+(255,))
+            bw,bh=k*1.7,k*0.30
+            td.rectangle([cx-bw/2,y0,cx+bw/2,y0+bh],fill=col+(255,))
+            over(base,tl.filter(ImageFilter.GaussianBlur(far)) if far else tl)
+        return fn
     archcol=pal['wall'][1]
-    blip(54,0.325,0.038,archcol,txt("ARC",0.85,W(archcol)))
+    blip(54,0.325,0.038,archcol,domeg(W(archcol)))
+    # MEP (mechanical/electrical/plumbing): same text-badge language as the code marks
+    blip(14,0.40,0.030,pal['mep'],txt("MEP",0.95,W(pal['mep'])),far=0.5*S)
     out=base.convert("RGB").resize((512,512),Image.LANCZOS)
     # vignette
     v=Image.new("L",(512,512),0); vd=ImageDraw.Draw(v)
@@ -187,14 +197,15 @@ def build(name, pal):
         r=256*(1.25-i/30*0.55); vd.ellipse([256-r,256-r,256+r,256+r],fill=int(255*(i/30)**0.8))
     dark=Image.new("RGB",(512,512),(0,0,0)); out=Image.composite(out,dark,v.filter(ImageFilter.GaussianBlur(20)).point(lambda p:min(255,int(p*0.9)+110)))
     out.save(name); return out
-PV={'glow': (120, 80, 210), 'bokeh': (170, 130, 255), 'ring': (176, 140, 255), 'streak': (255, 130, 170), 'grad': ((232, 222, 255), (255, 120, 175)), 'lglow': (255, 110, 170), 'plate': ((6, 5, 14), (26, 16, 52)), 'sweep': (190, 150, 255), 'c': [(140, 165, 255), (165, 150, 255), (190, 160, 255), (215, 185, 255), (200, 160, 255), (255, 150, 200), (225, 150, 255)], 'arch_echo': (214, 196, 255), 'sky': ((34, 26, 84), (118, 92, 200)), 'plaza': (186, 172, 238), 'wall': ((250, 244, 255), (176, 160, 226)), 'course': (196, 184, 238), 'door': (30, 24, 70), 'arch_rim': (235, 225, 255)}
-PG={'glow': (20, 110, 60), 'bokeh': (70, 200, 120), 'ring': (90, 235, 130), 'streak': (80, 255, 150), 'grad': ((226, 255, 232), (80, 235, 130)), 'lglow': (60, 220, 110), 'plate': ((2, 10, 6), (10, 44, 22)), 'sweep': (110, 255, 150), 'c': [(80, 230, 140), (110, 235, 120), (60, 210, 150), (150, 240, 130), (90, 225, 170), (190, 255, 160), (120, 240, 190)], 'arch_echo': (150, 255, 180), 'sky': ((6, 40, 22), (30, 110, 60)), 'plaza': (70, 160, 95), 'wall': ((236, 255, 238), (130, 200, 150)), 'course': (150, 205, 165), 'door': (6, 40, 22), 'arch_rim': (190, 255, 205)}
+PV={'glow': (120, 80, 210), 'bokeh': (170, 130, 255), 'ring': (176, 140, 255), 'streak': (255, 130, 170), 'grad': ((232, 222, 255), (255, 120, 175)), 'lglow': (255, 110, 170), 'plate': ((6, 5, 14), (26, 16, 52)), 'sweep': (190, 150, 255), 'c': [(140, 165, 255), (165, 150, 255), (190, 160, 255), (215, 185, 255), (200, 160, 255), (255, 150, 200), (225, 150, 255)], 'arch_echo': (214, 196, 255), 'sky': ((34, 26, 84), (118, 92, 200)), 'plaza': (186, 172, 238), 'wall': ((250, 244, 255), (176, 160, 226)), 'course': (196, 184, 238), 'door': (30, 24, 70), 'arch_rim': (235, 225, 255), 'mep': (120, 190, 200)}
+PG={'glow': (20, 110, 60), 'bokeh': (70, 200, 120), 'ring': (90, 235, 130), 'streak': (80, 255, 150), 'grad': ((226, 255, 232), (80, 235, 130)), 'lglow': (60, 220, 110), 'plate': ((2, 10, 6), (10, 44, 22)), 'sweep': (110, 255, 150), 'c': [(80, 230, 140), (110, 235, 120), (60, 210, 150), (150, 240, 130), (90, 225, 170), (190, 255, 160), (120, 240, 190)], 'arch_echo': (150, 255, 180), 'sky': ((6, 40, 22), (30, 110, 60)), 'plaza': (70, 160, 95), 'wall': ((236, 255, 238), (130, 200, 150)), 'course': (150, 205, 165), 'door': (6, 40, 22), 'arch_rim': (190, 255, 205), 'mep': (205, 190, 90)}
 a=build("v14_violet.png",PV)
 b=build("v14_green.png",PG)
 def maskable(im,name):
-    bgc=im.getpixel((6,6)); canvas=Image.new("RGB",(512,512),(5,5,9)); k=0.80
+    bgc=im.getpixel((6,6)); canvas=Image.new("RGB",(512,512),(5,5,9)); k=0.92
     r=im.resize((int(512*k),int(512*k)),Image.LANCZOS); canvas.paste(r,((512-r.width)//2,(512-r.height)//2)); canvas.save(name)
 maskable(a,"v14_violet_maskable.png")
+maskable(b,"v14_green_maskable.png")
 sheet=Image.new("RGB",(512*2+60,512+40),(24,24,26))
 for i,im in enumerate((a,b)):
     m=Image.new("L",(512,512),0); ImageDraw.Draw(m).rounded_rectangle([0,0,512,512],radius=112,fill=255)
