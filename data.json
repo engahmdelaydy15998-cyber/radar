@@ -1,7 +1,19 @@
 {
- "updated": "2026-11-19T02:32:52Z",
+ "updated": "2026-11-19T06:56:46Z",
  "demo": false,
  "items": [
+  {
+   "id": "gn-autodeskandneilsoftestablishbimanddigitaltwincentreofexcelle",
+   "cat": "arch",
+   "src": "Construction World",
+   "ts": "2026-11-19T05:26:15Z",
+   "t": "Autodesk And Neilsoft Establish BIM And Digital Twin Centre Of Excellence In Pune",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQUkNwNzNBOFJHa0dpSkF0cDBDNTB0SXh6VVdqRHhXNktjUTRNWWlNVEE1NnhkOXlyUTdOUXZRRjd3R0VqVjEtWVcyNDhFWGZwYThfNmxKUy1iZl82Vkh2NG5yaUI0am40OER0MURwZGllbTJnU1FqaUFFYlJhMVg0UTExYXpGYm1OejFPUjhnbmFDWENGYnNtc1R4LWZHT1JMczhXMTYwNTdlQkdjNHlFUU5XMjZXUzhLNzJIZ2ZkVXU1QzV6dUV6TXhibUVWelhsOTRxZ08zcDRaRF94UTVfSDVWc1AwNXM?oc=5"
+  },
   {
    "id": "hn-50555093",
    "cat": "arch",
@@ -71,6 +83,18 @@
    "ta": "يبدو Gemini 4 Neon وكأنه منافس لـ Opus 5.5"
   },
   {
+   "id": "af-httpssimonwillisonnet2026Nov18llmgemini",
+   "cat": "agents",
+   "src": "Simon Willison",
+   "ts": "2026-11-18T23:59:20Z",
+   "t": "llm-gemini 0.38",
+   "s": "",
+   "tags": [
+    "مدونة"
+   ],
+   "url": "https://simonwillison.net/2026/Nov/18/llm-gemini/"
+  },
+  {
    "id": "yt-R0rXSJmymTc",
    "cat": "agents",
    "src": "YouTube",
@@ -96,6 +120,19 @@
    ],
    "url": "https://www.youtube.com/shorts/gp66d6d46SI",
    "sa": "يمكن لوكيل الذكاء الاصطناعي الخاص بك أن يقوم بكل أعمال Git نيابةً عنك. لهذا السبب يجب أن تعرف ذلك. البرنامج التعليمي الكامل لـ Git: https://youtu.be/c5TSRxrDEK8 #git #shorts"
+  },
+  {
+   "id": "hn-50553225",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-18T22:29:13Z",
+   "t": "LLM assisted reverse engineering",
+   "s": "156 نقطة، 38 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering",
+   "url2": "https://news.ycombinator.com/item?id=50553225"
   },
   {
    "id": "hn-50553192",
@@ -359,6 +396,18 @@
    "url": "https://news.ycombinator.com/item?id=50549188",
    "url2": "",
    "ta": "إطلاق HN: Maritime (YC F26) - سحابة مُدارة لوكلاء الذكاء الاصطناعي للإنتاج"
+  },
+  {
+   "id": "af-httpssimonwillisonnet2026Nov18datasettearrows",
+   "cat": "agents",
+   "src": "Simon Willison",
+   "ts": "2026-11-18T17:09:59Z",
+   "t": "datasette-arrows 0.1a0",
+   "s": "",
+   "tags": [
+    "مدونة"
+   ],
+   "url": "https://simonwillison.net/2026/Nov/18/datasette-arrows/"
   },
   {
    "id": "hn-50548845",
@@ -4199,58 +4248,6 @@
    ],
    "url": "https://github.com/baney75/smoothstone",
    "ta": "baney75/smoothstone: مهارة وCLI تتيح للنماذج المحلية الصغيرة مثل LFM3-1.7B صنع أجزاء قابلة للطباعة ثلاثية الأبعاد، من..."
-  },
-  {
-   "id": "hn-50502988",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-15T01:18:36Z",
-   "t": "Court denies motion to dismiss DRAM price fixing case",
-   "s": "527 نقطة، 233 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://litnews.ai/articles/garciaguirre-samsung-sk-hynix-micron-dram-conspiracy-suit-survives-dismissal",
-   "ta": "المحكمة ترفض طلب رفض قضية تحديد أسعار DRAM"
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov14datasettellm",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-14T23:59:28Z",
-   "t": "datasette-llm 0.1a11",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
-   "ta": "مجموعة البيانات-LLM 0.1a11"
-  },
-  {
-   "id": "hn-50501920",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-14T22:59:26Z",
-   "t": "Bill Gates Has Earned Billions Investing in Climate-Polluting Landfills",
-   "s": "15 نقطة، 1 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.propublica.org/article/bill-gates-republic-landfill-methane-pollution",
-   "ta": "لقد كسب بيل جيتس المليارات من الاستثمار في مدافن النفايات الملوثة للمناخ"
-  },
-  {
-   "id": "gh-1458203102",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2026-11-14T21:36:31Z",
-   "t": "carla-foster/dynamo-for-revit-desktop: Dynamo for Revit 2026 standalone bundle with node graph editor, bundled package library a…",
-   "s": "247 نجمة، لغة C++",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/carla-foster/dynamo-for-revit-desktop",
-   "ta": "carla-foster/dynamo-for-revit-desktop: حزمة Dynamo for Revit 2026 المستقلة مع محرر الرسم البياني للعقدة ومكتبة الحزم المجمعة و..."
   }
  ]
 }
