@@ -1,7 +1,92 @@
 {
- "updated": "2026-11-19T18:34:06Z",
+ "updated": "2026-11-19T20:32:11Z",
  "demo": false,
  "items": [
+  {
+   "id": "yt-8UftQ10Unmk",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-19T20:30:24Z",
+   "t": "Learn Reactjs #14 - Destructuring Object Props",
+   "s": "Destructuring Object Props Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
+   "tags": [
+    "Elzero Web School"
+   ],
+   "url": "https://www.youtube.com/watch?v=8UftQ10Unmk"
+  },
+  {
+   "id": "yt-KGA7B_c_S4s",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-19T20:03:10Z",
+   "t": "Anthropic IPOs, GPT 6.2 Astra Arrives, But There’s a Bigger Story",
+   "s": "GPT 6.2 Astra is OpenAI’s best model, so for each of the last 4 years this would have been the only headline. But now Gemini is catching up fast, wit…",
+   "tags": [
+    "AI Explained"
+   ],
+   "url": "https://www.youtube.com/watch?v=KGA7B_c_S4s"
+  },
+  {
+   "id": "yt-nEYuoqqMgyg",
+   "cat": "agents",
+   "src": "YouTube",
+   "ts": "2026-11-19T20:02:19Z",
+   "t": "What's going on with GPT-6.2?",
+   "s": "Check out Spacesheep: https://spacesheep.dev/matt First 1,000 signups get 3 months free Check out Scarlet: https://github.com/Forward-Future/scarlet…",
+   "tags": [
+    "Matthew Berman"
+   ],
+   "url": "https://www.youtube.com/watch?v=nEYuoqqMgyg"
+  },
+  {
+   "id": "yt-FORdPIWOH5k",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-19T19:58:06Z",
+   "t": "Gemini and the path to AGI with Koray Kavukcuoglu",
+   "s": "Seven years after their last conversation at Google DeepMind’s London office, Professor Hannah Fry reunites with Koray Kavukcuoglu, SVP at Google Dee…",
+   "tags": [
+    "Google DeepMind"
+   ],
+   "url": "https://www.youtube.com/watch?v=FORdPIWOH5k"
+  },
+  {
+   "id": "yt-FUj0a5B6bVk",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-19T19:47:46Z",
+   "t": "POV: The diff after I asked Claude to fix my app",
+   "s": "Join My Newsletter for Regular AI Updates 👇🏼 https://forwardfuture.com My Links 🔗 👉🏻 X: https://x.com/matthewberman 👉🏻 Forward Future X: https://x.co…",
+   "tags": [
+    "Matthew Berman"
+   ],
+   "url": "https://www.youtube.com/shorts/FUj0a5B6bVk"
+  },
+  {
+   "id": "gn-aiinmedicineandbiologyresearcherscallforamultilayeredsecurit",
+   "cat": "arch",
+   "src": "Medical Xpress",
+   "ts": "2026-11-19T19:40:10Z",
+   "t": "AI in medicine and biology: Researchers call for a multilayered security architecture",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOdnNCUHMyaHVDeWFacnZucG5DZUptTUc5RGUxb2w2a3dPc1ZMQV9hLU5RRVN4S1dEQWZrSklGVEg1NkcxWVJDU3FGZWkxRzkzOWpVZ1B3bTNTRFBRSDBGc0Zsa1B6N0p3Z01nMVV1WU9HajdFSXk1OXFocGEwckYwZzVYUDBxRzh2UnlKOXNzQ3NvSnM?oc=5"
+  },
+  {
+   "id": "hn-50564282",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-19T18:42:13Z",
+   "t": "No Bailout for the AI Bubble, Anthropic IPO Protesters Say",
+   "s": "16 نقطة، 2 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.techpolicy.press/no-bailout-for-the-ai-bubble-anthropic-ipo-protesters-say/",
+   "url2": "https://news.ycombinator.com/item?id=50564282"
+  },
   {
    "id": "yt-eqMkdFXkB1U",
    "cat": "reels",
@@ -122,8 +207,7 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
-   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري"
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5"
   },
   {
    "id": "hn-50562528",
@@ -196,6 +280,19 @@
    "ta": "تم إصدار GitLab 19.6.0 ولا يزال عرضة لـ Ruby2Shell وNGINX2Root"
   },
   {
+   "id": "hn-50561436",
+   "cat": "agents",
+   "src": "Hacker News",
+   "ts": "2026-11-19T15:32:47Z",
+   "t": "Show HN: Watch weight-space programming in action with WebGPU",
+   "s": "28 نقطة، 3 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://tabbyml.github.io/weight-space-playground/",
+   "url2": "https://news.ycombinator.com/item?id=50561436"
+  },
+  {
    "id": "yt-JDsFHmq9hlA",
    "cat": "co",
    "src": "YouTube",
@@ -250,6 +347,19 @@
    "ta": "bookwjitchieni1986/blender-ai-mcp-addon: مساعد الذكاء الاصطناعي وخادم MCP لـ Blender: الدردشة المرئية وأدوات المشهد وسير العمل متعدد الوكلاء."
   },
   {
+   "id": "hn-50560461",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-19T14:20:08Z",
+   "t": "OpenAI still has a WebRTC Problem",
+   "s": "87 نقطة، 25 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://moq.dev/blog/webrtc-is-still-the-problem/",
+   "url2": "https://news.ycombinator.com/item?id=50560461"
+  },
+  {
    "id": "yt-Z7sMsqo6pjw",
    "cat": "long",
    "src": "YouTube",
@@ -262,6 +372,18 @@
    "url": "https://www.youtube.com/watch?v=Z7sMsqo6pjw",
    "ta": "تعلم Reactjs #12 - إنشاء صفحة وتنظيم المكونات",
    "sa": "إنشاء صفحة وتنظيم المكونات الدروس والواجبات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+  },
+  {
+   "id": "gn-kestrellabsaddsautodeskformaintegrationandscheduledcloudcomp",
+   "cat": "arch",
+   "src": "StreetInsider",
+   "ts": "2026-11-19T13:55:46Z",
+   "t": "Kestrel Labs Adds Autodesk® Forma® Integration and Scheduled Cloud Compliance Checks",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNYXA5Z1IycHBUeVI1aVpKZVpBRWllRjJDSC1nYzdxN0RLQjBFZlVnOUd1Z0dxMkhLUjl2MTFRN0NxS3BLTDVCNERXR0I3ejdQYWhGSGxmeUpiQzdjSWlvNG90OWcyVGdGa0tWcWdsMzBycVhPVm5JNUxaVEdoUzBwZHFlLU9KRlFaQmxDQ2lvN1J3c1FsR1p2VmFtSjlyQjJKT3BCcE1GOU51d2ZscEVSU1NWa1MxUTdJWXNPa0lPNVhvZVJ5WUtLaHozRVdoQ0hOOWFJNW1aTmtfcEJPTUhxeEhPYw?oc=5"
   },
   {
    "id": "hn-50559749",
@@ -1537,6 +1659,18 @@
    "url": "https://www.youtube.com/shorts/--ifDcgr3UY",
    "ta": "كلود وايت بورد: ملاحظاتك الفوضوية تصبح خطة في 4 حركات",
    "sa": "ملاحظات فوضوية؟ يحولها كلود إلى خطة باستخدام ألواح كلود البيضاء الجديدة. 4 حركات: قم برمي كل شيء على اللوحة، وقم بدعوة فريقك، واطلب المدرسة..."
+  },
+  {
+   "id": "gn-claudesonnet55pricebenchmarksandwhogetsit",
+   "cat": "agents",
+   "src": "Fello AI",
+   "ts": "2026-11-18T06:59:41Z",
+   "t": "Claude Sonnet 5.5: Price, Benchmarks and Who Gets It",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1ldU84YncyWEp0dDVCRmR3Z0JkNnE1MFJmZEtNZ29GYWVMOVZSdmN6Q1hmZFhzQU41bE1UckxaV1I2VG9WVlFpWDBXQTdnaDg?oc=5"
   },
   {
    "id": "gn-autodeskandneilsoftbuildjointgotomarketpusharoundbimanddigit",
@@ -4178,151 +4312,6 @@
    ],
    "url": "https://simonwillison.net/2026/Nov/15/datasette/",
    "ta": "مجموعة البيانات 1.0a43"
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov15datasette2",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-15T23:18:17Z",
-   "t": "datasette 0.65.6",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/15/datasette-2/",
-   "ta": "مجموعة البيانات 0.65.6"
-  },
-  {
-   "id": "yt-xaJbDobf2zo",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-15T23:05:14Z",
-   "t": "The Graphisoft 2026 release is here. So what comes next?",
-   "s": "The Graphisoft 2026 release is here. So what comes next? 👀 Our community superusers see more AI, more automation and more time for livable spaces. Wh…",
-   "tags": [
-    "Archicad"
-   ],
-   "url": "https://www.youtube.com/shorts/xaJbDobf2zo",
-   "ta": "إصدار Graphisoft 2026 موجود هنا. إذن ماذا يأتي بعد ذلك؟",
-   "sa": "إصدار Graphisoft 2026 موجود هنا. إذن ماذا يأتي بعد ذلك؟ 👀 يرى المستخدمون المتميزون في مجتمعنا المزيد من الذكاء الاصطناعي والمزيد من الأتمتة والمزيد من الوقت للمساحات الصالحة للعيش. هل…"
-  },
-  {
-   "id": "hn-50511395",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-15T22:11:43Z",
-   "t": "Old Bitly links are being hijacked",
-   "s": "369 نقطة، 195 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://ransomnews.com/burger-king-tweet-bitly-link-hijack-2026/",
-   "ta": "يتم اختطاف روابط Bitly القديمة"
-  },
-  {
-   "id": "hn-50511238",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-15T21:54:20Z",
-   "t": "Show HN: Rbit – Self Hosted Git Forge in Rust",
-   "s": "20 نقطة، 11 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://rbit.sh/",
-   "ta": "إظهار HN: Rbit – Git Forge المستضاف ذاتيًا في Rust"
-  },
-  {
-   "id": "gn-uberbuildsframeworktogovernautonomousaiagentsacrosstheirlife",
-   "cat": "agents",
-   "src": "news.lavx.hu",
-   "ts": "2026-11-15T21:15:28Z",
-   "t": "Uber Builds Framework to Govern Autonomous AI Agents Across Their Lifecycle",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNS1J1bEJBRWF3VUNsODgyNG1FN0pSemJzcXZGV2xIZkF1UllrZFYxZ2VzbjR4YUVqSnpqSEpxUUs5UVUyZU5heVBXdmp5d3NNbTZIWjMzVG5IdjRwUEw3aFFrcHhXam9ZZGJaSEtYSURtTEljS0NaVE5FVnhwUzNiTVRxN0VvclQzZ0VzelNCU2dMUU9OVHdab2Fid2hPWWUwNmMzRjh5UQ?oc=5",
-   "ta": "تقوم أوبر ببناء إطار عمل لإدارة وكلاء الذكاء الاصطناعي المستقلين عبر دورة حياتهم"
-  },
-  {
-   "id": "hn-50510827",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-15T21:14:39Z",
-   "t": "SuperMimic",
-   "s": "16 نقطة، 0 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://supermimic.github.io/",
-   "ta": "سوبرميميك"
-  },
-  {
-   "id": "yt-GKukMmf4u4c",
-   "cat": "arch",
-   "src": "YouTube",
-   "ts": "2026-11-15T20:51:38Z",
-   "t": "Architecture Reimagined: FORMAS.AI + CARTESIAN 3D",
-   "s": "Architecture is never finished, learn how to reimagine what already exists. Join Carlos Banon (Co-Founder & Chief Design and AI Officer at FORMAS.AI)…",
-   "tags": [
-    "Parametric Architecture"
-   ],
-   "url": "https://www.youtube.com/watch?v=GKukMmf4u4c",
-   "ta": "إعادة تصور الهندسة المعمارية: FORMAS.AI + CARTESIAN 3D",
-   "sa": "الهندسة المعمارية لا تنتهي أبدًا، تعلم كيفية إعادة تصور ما هو موجود بالفعل. انضم إلى كارلوس بانون (المؤسس المشارك ورئيس قسم التصميم والذكاء الاصطناعي في FORMAS.AI)..."
-  },
-  {
-   "id": "gh-1459227651",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-15T20:46:03Z",
-   "t": "Peshiemaina21/telegram-news-autopilot: Telegram Autopilot: Community-Driven, Feature-Rich Bot for Discord and Telegram",
-   "s": "47 نجمة، لغة TypeScript",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/Peshiemaina21/telegram-news-autopilot",
-   "ta": "Peshiemaina21/telegram-news-autopilot: Telegram Autopilot: روبوت مدفوع بالمجتمع وغني بالميزات لـ Discord وTelegram"
-  },
-  {
-   "id": "hn-50510296",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-15T20:20:05Z",
-   "t": "WebGL Flight Simulator with seed generated terrain",
-   "s": "225 نقطة، 57 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://baron.by.dai.studio/",
-   "ta": "WebGL Flight Simulator مع التضاريس المولدة بالبذور"
-  },
-  {
-   "id": "hn-50510042",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-15T19:49:28Z",
-   "t": "Ask HN: Stripe closed us after one $1,500 invoice and never asked for evidence",
-   "s": "176 نقطة، 90 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://news.ycombinator.com/item?id=50510042",
-   "ta": "اسأل HN: لقد أغلقتنا شركة Stripe بعد فاتورة بقيمة 1500 دولار ولم تطلب أبدًا أي دليل"
-  },
-  {
-   "id": "gh-1459167449",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2026-11-15T19:31:25Z",
-   "t": "darmank3254-png/autodesk-revit: Autodesk Revit: Building Information Modeling for Architecture and Engineering",
-   "s": "47 نجمة، لغة TypeScript",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/darmank3254-png/autodesk-revit",
-   "ta": "darmank3254-png/autodesk-revit: Autodesk Revit: نمذجة معلومات البناء للهندسة المعمارية والهندسة"
   }
  ]
 }
