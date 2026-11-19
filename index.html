@@ -71,8 +71,6 @@ header {
 .field.ltr { direction: ltr; text-align: left; }
 .panel .two { display: flex; gap: 8px; }
 .panel select.field { flex: 1; }
-.seg { display: flex; gap: 6px; }
-.seg .pill[aria-pressed="true"] { color: var(--text); border-color: var(--text); }
 .srow { display: flex; gap: 8px; }
 .srow .field { flex: 1; }
 .rcard { border: 1px solid var(--line); border-radius: 14px; padding: 12px; background: var(--surface); display: flex; flex-direction: column; gap: 6px; }
@@ -83,6 +81,8 @@ header {
 .rcard .ra .go { background: var(--accent); color: #111; border-color: var(--accent); font-weight: 700; }
 .btn-main { height: 44px; padding: 0 18px; border: 0; border-radius: 12px; background: var(--accent); color: #111; font-weight: 700; }
 .hint { font-size: 12px; color: var(--muted); line-height: 1.8; margin: 0; }
+.sresh { font-size: 12px; font-weight: 700; color: var(--muted); margin: 10px 0 -2px; text-transform: uppercase; letter-spacing: .02em; }
+.sresh:first-child { margin-top: 2px; }
 .err { color: #ff9a8a; font-size: 13px; margin: 0; }
 
 .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
@@ -165,7 +165,7 @@ footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 1
 <div class="wrap">
   <header>
     <div class="bar">
-      <div class="brand"><span class="dot"></span><span>رادار <span style="color:var(--accent)">AI</span></span></div>
+      <div class="brand"><span class="dot"></span><span><span style="font-size:14px;font-weight:600;color:var(--muted)">Radar</span> <span style="color:var(--accent);font-size:24px">AI</span></span></div>
       <div class="tools">
         <button class="icon-btn" id="btnAdd" aria-label="إضافة رابط" aria-pressed="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
@@ -202,14 +202,9 @@ footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 1
     </div>
 
     <div class="panel" id="searchBox" hidden>
-      <div class="seg" id="scope" role="group" aria-label="مكان البحث">
-        <button class="pill" data-s="radar" aria-pressed="true">الرادار</button>
-        <button class="pill" data-s="github" aria-pressed="false">GitHub</button>
-        <button class="pill" data-s="youtube" aria-pressed="false">YouTube</button>
-      </div>
       <div class="srow">
-        <input id="q" class="field" type="search" placeholder="ابحث في الرادار" autocomplete="off" enterkeyhint="search">
-        <button class="btn-main" id="qGo" hidden>بحث</button>
+        <input id="q" class="field" type="search" placeholder="دوّر في الرادار، أو دوس بحث لكل المنصات" autocomplete="off" enterkeyhint="search">
+        <button class="btn-main" id="qGo">بحث في كل المنصات</button>
       </div>
       <div class="two" id="kindRow" hidden>
         <select id="chanKind" class="field" aria-label="قسم القناة">
@@ -588,27 +583,16 @@ document.getElementById("btnSearch").onclick = function () {
   box.hidden = !box.hidden;
   this.setAttribute("aria-pressed", String(!box.hidden));
   if (!box.hidden) document.getElementById("q").focus();
-  else { document.getElementById("q").value = ""; setScope("radar"); }
+  else { document.getElementById("q").value = ""; state.q = ""; sres.innerHTML = ""; hint(""); document.getElementById("kindRow").hidden = true; render(); }
 };
-/* search: radar (local filter), GitHub (in-app results), YouTube (in-app with a key, otherwise opens YouTube) */
+/* search: types into "q" always live-filters the radar feed below; "qGo" (or Enter) also fires
+   GitHub + Hacker News + YouTube (if a key is saved) at once and shows them grouped, like one combined search. */
 var REPO = "engahmdelaydy15998-cyber/radar";
-var scope = "radar";
 var qEl = document.getElementById("q"), qGo = document.getElementById("qGo"), sres = document.getElementById("sres"), sHint = document.getElementById("sHint");
 function lsGet(k) { try { return localStorage.getItem(k) || ""; } catch (e) { return ""; } }
 function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
-function setScope(sc) {
-  scope = sc;
-  Array.prototype.forEach.call(document.querySelectorAll("#scope .pill"), function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-s") === sc)); });
-  qEl.placeholder = sc === "radar" ? "ابحث في الرادار" : sc === "github" ? "ابحث في GitHub عن أداة أو مشروع" : "ابحث في يوتيوب أو الصق @قناة أو رابطها";
-  qGo.hidden = sc === "radar";
-  document.getElementById("kindRow").hidden = sc !== "youtube";
-  sres.innerHTML = ""; sHint.hidden = true;
-  state.q = sc === "radar" ? qEl.value.trim() : "";
-  render();
-}
-Array.prototype.forEach.call(document.querySelectorAll("#scope .pill"), function (b) { b.onclick = function () { setScope(b.getAttribute("data-s")); }; });
-qEl.oninput = function () { if (scope === "radar") { state.q = this.value.trim(); render(); } };
-qEl.onkeydown = function (e) { if (e.key === "Enter" && scope !== "radar") { e.preventDefault(); runSearch(); } };
+qEl.oninput = function () { state.q = this.value.trim(); render(); };
+qEl.onkeydown = function (e) { if (e.key === "Enter") { e.preventDefault(); runSearch(); } };
 qGo.onclick = runSearch;
 
 function saveFound(o) {
@@ -633,63 +617,93 @@ function rcard(title, sub, openUrl, actions) {
   d.appendChild(r); return d;
 }
 function hint(t) { sHint.textContent = t; sHint.hidden = !t; }
+function section(title) {
+  var box = document.createElement("div");
+  var h = document.createElement("div"); h.className = "sresh"; h.textContent = title; box.appendChild(h);
+  sres.appendChild(box);
+  return box;
+}
+var OPEN_SEARCH = [
+  ["Instagram", "https://www.instagram.com/explore/search/keyword/?q="],
+  ["X", "https://x.com/search?q="],
+  ["Facebook", "https://www.facebook.com/search/top?q="],
+  ["LinkedIn", "https://www.linkedin.com/search/results/all/?keywords="],
+];
 function runSearch() {
   var v = qEl.value.trim();
   if (!v) return;
-  sres.innerHTML = ""; hint("بدور...");
-  if (scope === "github") {
-    fetch("https://api.github.com/search/repositories?sort=stars&order=desc&per_page=10&q=" + encodeURIComponent(v))
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (d) {
-        hint((d.items || []).length ? "" : "مفيش نتائج");
-        (d.items || []).forEach(function (r) {
-          var sub = (r.description || "") + "  ★ " + r.stargazers_count + (r.language ? "  ·  " + r.language : "");
-          sres.appendChild(rcard(r.full_name, sub, r.html_url, [{ label: "للرادار", go: true, fn: function () {
-            saveFound({ cat: "code", src: "GitHub", t: r.full_name + (r.description ? ": " + r.description : ""), url: r.html_url, tags: ["★ " + r.stargazers_count] });
-          } }]));
-        });
-      }).catch(function () { hint("البحث في GitHub وقف مؤقتاً (حد الطلبات). جرب بعد دقيقة."); });
-    return;
-  }
-  /* youtube */
+  sres.innerHTML = ""; hint("");
+  document.getElementById("kindRow").hidden = true;
+  /* a YouTube channel link or @handle: offer to add it as a channel, nothing else to search for */
   var m = v.match(/youtube\.com\/(@[\w.\-]+|channel\/(UC[\w-]{22}))/i) || v.match(/^(@[\w.\-]{2,40})$/);
   if (m) {
     var ref = m[2] || m[1];
-    hint("");
+    document.getElementById("kindRow").hidden = false;
     sres.appendChild(rcard(ref, "قناة يوتيوب", m[2] ? "https://www.youtube.com/channel/" + ref : "https://www.youtube.com/" + ref, [{ label: "＋ قناة للرادار", go: true, fn: function () { addChannelToRadar(ref, ref); } }]));
     return;
   }
+  var pending = 3;
+  function oneDone() { pending--; if (pending === 0 && !sres.querySelector(".rcard")) hint("مفيش نتائج من المصادر اللي بندور فيها جوه التطبيق."); }
+
+  var ghBox = section("GitHub");
+  fetch("https://api.github.com/search/repositories?sort=stars&order=desc&per_page=6&q=" + encodeURIComponent(v))
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      (d.items || []).forEach(function (r) {
+        var sub = (r.description || "") + "  ★ " + r.stargazers_count + (r.language ? "  ·  " + r.language : "");
+        ghBox.appendChild(rcard(r.full_name, sub, r.html_url, [{ label: "للرادار", go: true, fn: function () {
+          saveFound({ cat: "code", src: "GitHub", t: r.full_name + (r.description ? ": " + r.description : ""), url: r.html_url, tags: ["★ " + r.stargazers_count] });
+        } }]));
+      });
+    }).catch(function () {}).then(oneDone);
+
+  var hnBox = section("Hacker News");
+  fetch("https://hn.algolia.com/api/v1/search?query=" + encodeURIComponent(v) + "&tags=story&hitsPerPage=6")
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      (d.hits || []).forEach(function (h) {
+        var hurl = h.url || ("https://news.ycombinator.com/item?id=" + h.objectID);
+        hnBox.appendChild(rcard(h.title, (h.points || 0) + " نقطة، " + (h.num_comments || 0) + " تعليق", hurl, [{ label: "للرادار", go: true, fn: function () {
+          saveFound({ cat: "code", src: "Hacker News", t: h.title, url: hurl, tags: ["نقاش"] });
+        } }]));
+      });
+    }).catch(function () {}).then(oneDone);
+
+  var ytBox = section("YouTube");
   var key = lsGet("radar-ytkey");
   var ytUrl = "https://www.youtube.com/results?search_query=" + encodeURIComponent(v);
   if (!key) {
-    hint("البحث جوه التطبيق على يوتيوب محتاج مفتاح مجاني من جوجل. من غيره: افتح نتائج يوتيوب، وانسخ رابط القناة أو @اسمها والصقه هنا عشان تضيفها.");
-    sres.appendChild(rcard("ابحث عن «" + v + "» في يوتيوب", "", ytUrl, []));
+    ytBox.appendChild(rcard("ابحث عن «" + v + "» في يوتيوب", "محتاج مفتاح مجاني من جوجل عشان نتايجه تبان هنا جوه التطبيق", ytUrl, []));
     var kb = document.createElement("div"); kb.className = "srow";
     var ki = document.createElement("input"); ki.className = "field ltr"; ki.placeholder = "YouTube API key (اختياري)";
     var kg = document.createElement("button"); kg.className = "btn-main"; kg.textContent = "حفظ";
     kg.onclick = function () { if (ki.value.trim()) { lsSet("radar-ytkey", ki.value.trim()); toast("اتحفظ. ابحث تاني"); runSearch(); } };
-    kb.appendChild(ki); kb.appendChild(kg); sres.appendChild(kb);
-    return;
+    kb.appendChild(ki); kb.appendChild(kg); ytBox.appendChild(kb);
+    oneDone();
+  } else {
+    fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&type=video,channel&q=" + encodeURIComponent(v) + "&key=" + encodeURIComponent(key))
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (d) {
+        (d.items || []).forEach(function (it) {
+          var sn = it.snippet || {};
+          if (it.id.kind === "youtube#channel") {
+            var cid = it.id.channelId;
+            ytBox.appendChild(rcard(sn.title, "قناة · " + (sn.description || ""), "https://www.youtube.com/channel/" + cid, [{ label: "＋ قناة للرادار", go: true, fn: function () { addChannelToRadar(cid, sn.title); } }]));
+          } else {
+            var vu = "https://www.youtube.com/watch?v=" + it.id.videoId;
+            ytBox.appendChild(rcard(sn.title, sn.channelTitle, vu, [{ label: "للرادار", go: true, fn: function () { saveFound({ cat: "long", src: "YouTube", t: sn.title, url: vu, tags: [sn.channelTitle] }); } }]));
+          }
+        });
+      }).catch(function () {
+        var cb = document.createElement("button"); cb.className = "pill"; cb.textContent = "المفتاح مش شغال، مسحه"; cb.onclick = function () { lsSet("radar-ytkey", ""); runSearch(); };
+        ytBox.appendChild(cb);
+      }).then(oneDone);
   }
-  fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&type=video,channel&q=" + encodeURIComponent(v) + "&key=" + encodeURIComponent(key))
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function (d) {
-      hint((d.items || []).length ? "" : "مفيش نتائج");
-      (d.items || []).forEach(function (it) {
-        var sn = it.snippet || {};
-        if (it.id.kind === "youtube#channel") {
-          var cid = it.id.channelId;
-          sres.appendChild(rcard(sn.title, "قناة · " + (sn.description || ""), "https://www.youtube.com/channel/" + cid, [{ label: "＋ قناة للرادار", go: true, fn: function () { addChannelToRadar(cid, sn.title); } }]));
-        } else {
-          var vu = "https://www.youtube.com/watch?v=" + it.id.videoId;
-          sres.appendChild(rcard(sn.title, sn.channelTitle, vu, [{ label: "للرادار", go: true, fn: function () { saveFound({ cat: "long", src: "YouTube", t: sn.title, url: vu, tags: [sn.channelTitle] }); } }]));
-        }
-      });
-    }).catch(function () {
-      hint("المفتاح مش شغال أو الحصة خلصت. تقدر تمسحه وتجرب تاني.");
-      var cb = document.createElement("button"); cb.className = "pill"; cb.textContent = "مسح المفتاح"; cb.onclick = function () { lsSet("radar-ytkey", ""); hint(""); sres.innerHTML = ""; };
-      sres.appendChild(cb);
-    });
+
+  var extBox = section("منصات تانية");
+  OPEN_SEARCH.forEach(function (p) {
+    extBox.appendChild(rcard("افتح بحث «" + v + "» في " + p[0], "", p[1] + encodeURIComponent(v), []));
+  });
 }
 document.getElementById("btnSaved").onclick = function () { state.onlySaved = !state.onlySaved; render(); };
 document.getElementById("btnExp").onclick = function () { state.expandAll = !state.expandAll; opened = {}; render(); };
