@@ -1,7 +1,68 @@
 {
- "updated": "2026-11-19T07:00:41Z",
+ "updated": "2026-11-19T11:34:22Z",
  "demo": false,
  "items": [
+  {
+   "id": "yt-GUx89takPiA",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-19T10:56:57Z",
+   "t": "Learn Reactjs #11 - Props Basics",
+   "s": "Props Basics Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
+   "tags": [
+    "Elzero Web School"
+   ],
+   "url": "https://www.youtube.com/watch?v=GUx89takPiA"
+  },
+  {
+   "id": "yt-p9WsINy2BbE",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-19T09:44:09Z",
+   "t": "Clip GTA 6 live with Claude Code: your clip is ready before the stream ends",
+   "s": "GTA 6 drops November 19th, and nothing on PC. If you wait for the stream to end to clip it, you're already late. I asked Claude Code for a tool that…",
+   "tags": [
+    "Dr Firas"
+   ],
+   "url": "https://www.youtube.com/shorts/p9WsINy2BbE"
+  },
+  {
+   "id": "yt-Cy7Wz6Z4TWU",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-19T09:26:19Z",
+   "t": "DeepMind Just Showed Us What AI Is Really For",
+   "s": "❤️ Check out Lambda here and sign up for their GPU Cloud: https://lambda.com/papers 📝 The DeepMind AlphaGenome 2paper is available here: https://deep…",
+   "tags": [
+    "Two Minute Papers"
+   ],
+   "url": "https://www.youtube.com/watch?v=Cy7Wz6Z4TWU"
+  },
+  {
+   "id": "hn-50557420",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-19T08:23:41Z",
+   "t": "Wife of Senior Nvidia Executive Caught Up in Alleged AI Chip Smuggling Scandal",
+   "s": "17 نقطة، 0 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.gadgetreview.com/wife-of-senior-nvidia-executive-caught-up-in-alleged-ai-chip-smuggling-scandal",
+   "url2": "https://news.ycombinator.com/item?id=50557420"
+  },
+  {
+   "id": "yt-Bh_dj5cTJuQ",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-19T07:00:30Z",
+   "t": "4 free official AI courses in 4 nights (the last one edited this video)",
+   "s": "This video was edited overnight by Claude Code, all on its own. And the course that teaches you how to do this is free. 4 official courses, one per n…",
+   "tags": [
+    "Dr Firas"
+   ],
+   "url": "https://www.youtube.com/shorts/Bh_dj5cTJuQ"
+  },
   {
    "id": "gn-autodeskandneilsoftestablishbimanddigitaltwincentreofexcelle",
    "cat": "arch",
@@ -14,6 +75,19 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQUkNwNzNBOFJHa0dpSkF0cDBDNTB0SXh6VVdqRHhXNktjUTRNWWlNVEE1NnhkOXlyUTdOUXZRRjd3R0VqVjEtWVcyNDhFWGZwYThfNmxKUy1iZl82Vkh2NG5yaUI0am40OER0MURwZGllbTJnU1FqaUFFYlJhMVg0UTExYXpGYm1OejFPUjhnbmFDWENGYnNtc1R4LWZHT1JMczhXMTYwNTdlQkdjNHlFUU5XMjZXUzhLNzJIZ2ZkVXU1QzV6dUV6TXhibUVWelhsOTRxZ08zcDRaRF94UTVfSDVWc1AwNXM?oc=5",
    "ta": "أوتوديسك ونيلسوفت ينشئان مركز BIM والتوأم الرقمي للتميز في بيون"
+  },
+  {
+   "id": "hn-50555712",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-19T03:28:27Z",
+   "t": "Elon Musk - I'm Not MAGA",
+   "s": "14 نقطة، 4 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.cnbc.com/video/2026/11/18/elon-musk-im-not-maga.html",
+   "url2": "https://news.ycombinator.com/item?id=50555712"
   },
   {
    "id": "hn-50555093",
@@ -909,6 +983,18 @@
    "ta": "أوتوديسك ونيلسوفت لإنشاء مركز AECO للتميز في بيون"
   },
   {
+   "id": "gn-selfhostingopensourcellmsollamavsvllmvshuggingface",
+   "cat": "agents",
+   "src": "Nasscom",
+   "ts": "2026-11-18T10:36:07Z",
+   "t": "Self-Hosting Open-Source LLMs: Ollama vs vLLM vs Hugging Face",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbWhFQ2lpT3BMX3kzSDEwbVMtd01tb2s0WTNKOGJJNGhVTHd0dTBqTDZXQWV2bGlWUFY0cElsenI1X1FVTXZMd3Q4YS1XZGFPYkZkNkQxX0tYWFdmNHJkbS1fOTdlMmhxSVAtODZ1UGVneVlIbDlwVTY0bzBnWUxrYmxlYzFBRU9jdXNtUWZWb1pXYk5GYW96UlVzZkgza3MxYi1rRzFHbw?oc=5"
+  },
+  {
    "id": "gn-neilsoftautodesksetupbuiltenvironmentinnovationhubinpune",
    "cat": "arch",
    "src": "SMEStreet",
@@ -989,6 +1075,18 @@
    "url": "https://www.youtube.com/shorts/2HTBY1FL4As",
    "ta": "نضع Blurt على Android Auto 🚀",
    "sa": "أصبحت خدمة تحويل الكلام إلى نص دقيقة وسريعة وبأسعار معقولة في السيارات 🤯 ظل الإدخال الصوتي لنظام Android Auto يخطئ في فهم أسماء الشوارع في سنغافورة، لذلك أنشأت Mart…"
+  },
+  {
+   "id": "gn-claudecodev21325fixessecurityandpermissions",
+   "cat": "agents",
+   "src": "remio",
+   "ts": "2026-11-18T07:16:43Z",
+   "t": "Claude Code v2.1.325 Fixes Security and Permissions",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOMnpBamVkbWRrY29acHU0aUdtOTJoT0E5Z2tna3Nid191ODRXR0w1aFlTZzdJZkt0a3lPbVl1dWRhSm9pOHJpaWpZbmw4WXNmVnhJSzd3MkQtU0ZHSWhFMzNwM1VTU0VtSVBNaXd4Tlo0OWN0NkdMNnk2Q3BqOGJIbHBWTQ?oc=5"
   },
   {
    "id": "gn-lessonsfromchinahowclientsaregettingaheadwithaiandwhatarchit",
@@ -1741,6 +1839,19 @@
    "url": "https://www.youtube.com/shorts/7F2oYREhfG4",
    "ta": "ما هي الوكلاء العميقين؟ ما هو رمل؟ تمت الإجابة على أهم الأسئلة المتعلقة بورشة العمل",
    "sa": "يجيب إيشان لال، مهندس التعليم في LangChain، على سؤالين شائعين خلال ورش عمل Interrupt NYC. ما هو الوكيل مقابل الوكيل العميق مقابل ..."
+  },
+  {
+   "id": "hn-50532515",
+   "cat": "agents",
+   "src": "Hacker News",
+   "ts": "2026-11-17T15:16:45Z",
+   "t": "Show HN: An API for word timestamps from speech, 75% within 20ms",
+   "s": "27 نقطة، 5 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://quebec.yarn.so",
+   "url2": "https://news.ycombinator.com/item?id=50532515"
   },
   {
    "id": "yt-9WVmt-vg8d0",
@@ -4184,126 +4295,6 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOaE5HcWFIX09WbTE5SFZjUjZFMWsxOE4zd25jVWdFNzNsNFFETm9Ha0VTT1Y5TklQc2VEZDRTbktLaGI5b1gzNExuLW9EZHZHbVdndl9YSUdGQlppSy1Td19DNTNXZlhzZjZ5NWpYMWVJWGlIY20wWnlIai1TQS1Ka29uZzMyekJUMnFiYXQtMUtwVVVnSGZoNVdadi1XdTBvaU5WbzA4T0ZpQnFzUk9rSDVESFh5SWs?oc=5",
    "ta": "شركة \"بابكو للطاقة\" BeVentures تستثمر في شركة Geminus لمنصة التوأم الرقمي - الأخبار والإحصائيات"
-  },
-  {
-   "id": "gn-anthropicexplainsclaudecodesqualitydrop3hit2026",
-   "cat": "agents",
-   "src": "shattered.io",
-   "ts": "2026-11-15T08:00:00Z",
-   "t": "Anthropic Explains Claude Code’s Quality Drop: 3% Hit [2026]",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1FbFRybmtOZm9paW1XaEJ5Q1lpZ1gxMExWUDF2Q2N2X0FEakZKUkdBWXVBcjF1bWFfVnlzNnY2WFd1akVZa3VNZmJ2T0REV0UwUlpXdUhjdGlWYlF1M25iMmpvLWNQVUNLeC1feWJDNjI2Y3BfNGRoc1VFVQ?oc=5",
-   "ta": "الأنثروبيك تشرح انخفاض جودة كلود كود: 3% ضرب [2026]"
-  },
-  {
-   "id": "gn-lawmajorshipsiphoneappin13dayswithclaudecode",
-   "cat": "agents",
-   "src": "shattered.io",
-   "ts": "2026-11-15T07:49:24Z",
-   "t": "Law Major Ships iPhone App in 13 Days With Claude Code",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNcGZpdzFaZENrMTFSOS1ZUFJveU5CT1l4MWt5ZUU5cy1KRV82SlItV3A3bjJWR0lDR0kzX1l5ZHRDZ0M3TkFPNXp0anl0bFh4X3QtSmxsc3BvMHFqMzRqVHhZQXplMW9qWjM2SkJmcm5PLVdtUk5VM1RXWndWaVlrR2xnd1M2VzRD?oc=5",
-   "ta": "يقوم Law Major بشحن تطبيق iPhone خلال 13 يومًا باستخدام Claude Code"
-  },
-  {
-   "id": "rss-ainstprogramtheproductiveambiguityofcontemporaryarchitecture",
-   "cat": "arch",
-   "src": "ArchDaily",
-   "ts": "2026-11-15T07:30:00Z",
-   "t": "Against Program: The Productive Ambiguity of Contemporary Architecture",
-   "s": "This article is part of our new Opinion section, a format for argument-driven essays on critical questions shaping our field.",
-   "tags": [
-    "AEC"
-   ],
-   "url": "https://www.archdaily.com/1188137/against-program-the-productive-ambiguity-of-contemporary-architecture",
-   "ta": "ضد البرنامج: الغموض الإنتاجي للعمارة المعاصرة",
-   "sa": "هذه المقالة هي جزء من قسم الرأي الجديد لدينا، وهو تنسيق للمقالات المبنية على الحجج حول الأسئلة الحرجة التي تشكل مجالنا."
-  },
-  {
-   "id": "yt-iXvttGCoc1g",
-   "cat": "agents",
-   "src": "YouTube",
-   "ts": "2026-11-15T07:13:16Z",
-   "t": "Gemini 4 Krypton BEATS FABLE 5.2!?, GPT-6.2 Preview, GLM-5.5 LEAKED & Claude Code UPDATE! AI NEWS",
-   "s": "Your whole AI workflow in one place, from $10/month: Mammouth → https://mammouth.ai Google is moving at an INSANE pace! 🚀 A new Gemini 4 Krypton chec…",
-   "tags": [
-    "WorldofAI"
-   ],
-   "url": "https://www.youtube.com/watch?v=iXvttGCoc1g",
-   "ta": "Gemini 4 Krypton BEATS FABLE 5.2!؟، معاينة GPT-6.2، تسريب GLM-5.5 وتحديث كلود كود! أخبار الذكاء الاصطناعي",
-   "sa": "سير عمل الذكاء الاصطناعي بالكامل في مكان واحد، بسعر يبدأ من 10 دولارات شهريًا: Mammouth → https://mammouth.ai Google يتحرك بوتيرة جنونية! 🚀 فحص جيميني 4 كريبتون جديد..."
-  },
-  {
-   "id": "yt-X3r-mZtPfP8",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-15T07:12:15Z",
-   "t": "The Self-Driving Car With Balls",
-   "s": "Sharing the latest news and advancements in AI Discover More: 🛠️ Explore AI Tools & News: https://futuretools.io/ 📰 Weekly Newsletter: https://future…",
-   "tags": [
-    "Matt Wolfe"
-   ],
-   "url": "https://www.youtube.com/shorts/X3r-mZtPfP8",
-   "ta": "السيارة ذاتية القيادة بالكرات",
-   "sa": "مشاركة آخر الأخبار والتطورات في مجال الذكاء الاصطناعي اكتشف المزيد: 🛠️ اكتشف أدوات وأخبار الذكاء الاصطناعي: https://futuretools.io/ 📰 النشرة الإخبارية الأسبوعية: https://future…"
-  },
-  {
-   "id": "hn-50504077",
-   "cat": "agents",
-   "src": "Hacker News",
-   "ts": "2026-11-15T04:40:41Z",
-   "t": "Kiri – The Modern Container Runtime",
-   "s": "94 نقطة، 36 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://runkiri.com/",
-   "ta": "كيري - وقت تشغيل الحاوية الحديثة"
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov15datasetteapps",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-15T04:02:45Z",
-   "t": "datasette-apps 0.4a0",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/15/datasette-apps/",
-   "ta": "تطبيقات مجموعة البيانات 0.4a0"
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov15datasetteagent",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-15T03:49:47Z",
-   "t": "datasette-agent 0.6a0",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/15/datasette-agent/",
-   "ta": "وكيل مجموعة البيانات 0.6a0"
-  },
-  {
-   "id": "hn-50503588",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-15T03:05:54Z",
-   "t": "The Single Router in Southern Arkansas That Ground Air Travel to a Halt",
-   "s": "89 نقطة، 60 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.wsj.com/business/airlines/the-single-router-in-southern-arkansas-that-ground-air-travel-to-a-halt-eedc326c",
-   "ta": "جهاز التوجيه الوحيد في جنوب أركنساس الذي توقف السفر الجوي الأرضي"
   }
  ]
 }
