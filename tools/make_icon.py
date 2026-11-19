@@ -177,17 +177,9 @@ def build(name, pal):
         tl=layer(); td=ImageDraw.Draw(tl); k=R*0.5
         td.polygon([(cx-k*0.55,cy-k),(cx-k*0.55,cy+k),(cx+k,cy)],fill=(255,255,255,255)); over(base,tl)
     blip(318,0.35,0.050,(236,52,52),playg,solid=(236,52,52))
-    # architecture: small Hassan-Fathy-style mud-brick dome, same lit-circle badge language as the code marks
-    def domeg(col):
-        def fn(cx,cy,R,far):
-            tl=layer(); td=ImageDraw.Draw(tl); k=R*0.56; y0=cy-k*0.15
-            td.pieslice([cx-k,y0-k,cx+k,y0+k],180,360,fill=col+(255,))
-            bw,bh=k*1.7,k*0.30
-            td.rectangle([cx-bw/2,y0,cx+bw/2,y0+bh],fill=col+(255,))
-            over(base,tl.filter(ImageFilter.GaussianBlur(far)) if far else tl)
-        return fn
+    # architecture: same small lit-circle badge language as the code marks, labeled ARC, sandy mud-brick tone
     archcol=pal['wall'][1]
-    blip(54,0.325,0.038,archcol,domeg(W(archcol)))
+    blip(54,0.325,0.038,archcol,txt("ARC",0.85,W(archcol)))
     # MEP (mechanical/electrical/plumbing): same text-badge language as the code marks
     blip(14,0.40,0.030,pal['mep'],txt("MEP",0.95,W(pal['mep'])),far=0.5*S)
     out=base.convert("RGB").resize((512,512),Image.LANCZOS)
