@@ -85,11 +85,21 @@ def build(name, pal):
             pts.append((cx+math.cos(a-math.pi/2)*rr,cy+math.sin(a-math.pi/2)*rr))
         m_d.polygon(pts,fill=255)
     spark(md,C+0.150*N*LS,C-0.115*N*LS,0.042*N*LS*1.2)
+    if MAGIC:
+        spark(md,C-0.205*N*LS,C-0.105*N*LS,0.022*N*LS)
+        spark(md,C+0.185*N*LS,C+0.085*N*LS,0.018*N*LS)
     # shadow
     sh=Image.new("RGBA",(N,N),(0,0,0,0)); sh.paste((0,0,0,200),(0,0),mask.filter(ImageFilter.GaussianBlur(10*S)))
     sh=ImageChops.offset(sh,int(6*S),int(14*S)); over(base,sh)
     # glow
     gl2=Image.new("RGBA",(N,N),(0,0,0,0)); gl2.paste(pal['lglow']+(150,),(0,0),mask.filter(ImageFilter.GaussianBlur(14*S))); over(base,gl2)
+    if MAGIC:
+        # soft halo behind the letters so AI reads first at home-screen size
+        hl=layer(); hd_=ImageDraw.Draw(hl); HR=N*0.17*LS/0.66
+        for i in range(30,0,-1):
+            r=HR*i/30; hd_.ellipse([C-r,C-r,C+r,C+r],fill=pal['lglow']+(int(70*(1-i/30)**1.4),))
+        over(base,hl.filter(ImageFilter.GaussianBlur(8*S)))
+        gl3=Image.new("RGBA",(N,N),(0,0,0,0)); gl3.paste(pal['lglow']+(110,),(0,0),mask.filter(ImageFilter.GaussianBlur(30*S))); over(base,gl3)
     # extrusion
     ext=Image.new("RGBA",(N,N),(0,0,0,0))
     for d in range(10,0,-1):
@@ -219,7 +229,30 @@ def build(name, pal):
         sh2=layer(); sh2.paste((0,0,0,170),(int(ax-sz/2),int(ay-sz/2)+int(S*4)),G.filter(ImageFilter.GaussianBlur(5*S))); over(base,sh2)
         t=layer(); t.paste(col.convert("RGBA"),(int(ax-sz/2),int(ay-sz/2)),G); over(base,t)
     # MEP (mechanical/electrical/plumbing): same text-badge language as the code marks
-    blip(14,0.40,0.030,pal['mep'],txt("MEP",0.95,W(pal['mep'])),far=0.5*S)
+    if not MAGIC:
+        blip(14,0.40,0.030,pal['mep'],txt("MEP",0.95,W(pal['mep'])),far=0.5*S)
+    else:
+        def gearg(col):
+            def fn(cx,cy,R,far):
+                tl=layer(); td=ImageDraw.Draw(tl); ro,ri,n=R*0.62,R*0.46,8; pts=[]
+                for i in range(n*4):
+                    a=2*math.pi*i/(n*4); rr=ro if (i%4) in (0,1) else ri
+                    pts.append((cx+math.cos(a)*rr,cy+math.sin(a)*rr))
+                td.polygon(pts,fill=col+(255,)); h=R*0.20
+                over(base,tl.filter(ImageFilter.GaussianBlur(far)) if far else tl)
+                dot=layer(); ImageDraw.Draw(dot).ellipse([cx-h,cy-h,cx+h,cy+h],fill=lerp(col,(10,20,14),0.7)+(255,)); over(base,dot)
+            return fn
+        def beamg(col):
+            def fn(cx,cy,R,far):
+                tl=layer(); td=ImageDraw.Draw(tl); w,h,t=R*1.0,R*1.05,R*0.22
+                td.rectangle([cx-w/2,cy-h/2,cx+w/2,cy-h/2+t],fill=col+(255,))
+                td.rectangle([cx-w/2,cy+h/2-t,cx+w/2,cy+h/2],fill=col+(255,))
+                td.rectangle([cx-t/2,cy-h/2,cx+t/2,cy+h/2],fill=col+(255,))
+                over(base,tl.filter(ImageFilter.GaussianBlur(far)) if far else tl)
+            return fn
+        mc=lerp(pal['mep'],(0,0,0),0.25)
+        blip(14,0.40,0.032,mc,gearg(W(pal['mep'])),far=0.4*S)
+        blip(90,0.42,0.030,mc,beamg(W(pal['mep'])),far=0.4*S)
     out=base.convert("RGB").resize((512,512),Image.LANCZOS)
     # vignette
     v=Image.new("L",(512,512),0); vd=ImageDraw.Draw(v)
@@ -232,6 +265,7 @@ PG={'glow': (20, 110, 60), 'bokeh': (70, 200, 120), 'ring': (90, 235, 130), 'str
 import os
 ARCH_MARK=os.environ.get("ARCH_MARK","dome")
 AI_SCALE=float(os.environ.get("AI_SCALE","0.66"))
+MAGIC=os.environ.get("MAGIC")=="1"
 a=build("v14_violet.png",PV)
 b=build("v14_green.png",PG)
 def maskable(im,name):
