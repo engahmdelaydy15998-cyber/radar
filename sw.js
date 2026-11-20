@@ -1,5 +1,5 @@
 // رادار service worker: pages network-first (so updates show), assets cache-first, data.json network-first.
-var CACHE = "radar-v27";
+var CACHE = "radar-v28";
 var SHELL = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", function (e) {

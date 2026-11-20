@@ -577,6 +577,70 @@ def apply_watches(items):
                 break
 
 
+# ---------- AI headlines (GitHub Models, free with the workflow's GITHUB_TOKEN) ----------
+
+AI_URL = "https://models.github.ai/inference/chat/completions"
+AI_MODEL = "openai/gpt-4.1-mini"
+TOPICS = ("arch", "addins", "agents", "mcp", "oss", "courses", "news")
+AI_SYSTEM = (
+    "أنت محرر أخبار تقنية لمهندس معماري مصري مهتم بالـ BIM والذكاء الاصطناعي والـ agents والكود. "
+    "لكل خبر اكتب بالعربي الفصيح المبسط مع ترك المصطلحات التقنية بالإنجليزي (BIM, Revit, MCP, agent...):\n"
+    "- h: منشيت قصير جذاب ومفهوم من أول نظرة (أقل من 70 حرف)، مش ترجمة حرفية للعنوان.\n"
+    "- x: سطر واحد بالخلاصة أو ليه الخبر ده يهمه (أقل من 140 حرف).\n"
+    "- tags: من 1 لـ 3 تاجات قصيرة بالإنجليزي.\n"
+    "- topic: واحد بس من: arch (BIM والعمارة والتشييد)، addins (إضافات لبرامج BIM/CAD)، agents، mcp، "
+    "oss (مشروع مفتوح المصدر)، courses (شرح أو كورس)، news (أي حاجة تانية). "
+    "كلمة architecture عن المعالجات أو البرمجيات مش عمارة.\n"
+    'رجّع JSON بالشكل: {"items":[{"id":"...","h":"...","x":"...","tags":["..."],"topic":"..."}]}'
+)
+
+
+def ai_call(batch, token):
+    payload = [{"id": it["id"], "title": it["t"], "about": clip(it.get("s", ""), 200), "source": it.get("src", ""),
+                "cat": it.get("cat", "")} for it in batch]
+    body = json.dumps({
+        "model": AI_MODEL,
+        "response_format": {"type": "json_object"},
+        "temperature": 0.3,
+        "messages": [{"role": "system", "content": AI_SYSTEM},
+                     {"role": "user", "content": json.dumps(payload, ensure_ascii=False)}],
+    }).encode("utf-8")
+    req = urllib.request.Request(AI_URL, data=body, method="POST", headers={
+        "Authorization": "Bearer " + token, "Content-Type": "application/json",
+        "Accept": "application/vnd.github+json", "User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=90) as r:
+        msg = json.loads(r.read().decode("utf-8"))["choices"][0]["message"]["content"]
+    return json.loads(msg).get("items", [])
+
+
+def add_ai_headlines(items, max_calls=3, batch=20):
+    """Adds h (Arabic headline), x (one-line takeaway), tg (tags), tp (topic) to items that lack them."""
+    token = os.environ.get("GITHUB_TOKEN")
+    if not token:
+        return 0
+    todo = [it for it in items if not it.get("h")][: max_calls * batch]
+    by_id = {it["id"]: it for it in todo}
+    done = 0
+    for i in range(0, len(todo), batch):
+        try:
+            out = ai_call(todo[i:i + batch], token)
+        except Exception as ex:
+            log("ai headlines failed:", ex)
+            break
+        for o in out:
+            it = by_id.get(o.get("id"))
+            h = (o.get("h") or "").strip()
+            if not it or not h:
+                continue
+            it["h"] = h[:90]
+            it["x"] = (o.get("x") or "").strip()[:180]
+            it["tg"] = [str(t)[:24] for t in (o.get("tags") or [])][:3]
+            if o.get("topic") in TOPICS:
+                it["tp"] = o["topic"]
+            done += 1
+    return done
+
+
 # ---------- merge ----------
 
 def load_existing():
@@ -616,13 +680,15 @@ def main():
 
     items = merge(existing, new)
     tr = add_translations(items)
+    ai = add_ai_headlines(items)
+    log("ai headlines:", ai)
     log("translated:", tr)
     apply_watches(items)
     watch_changed = any(it.get("watch") != watch_before.get(it["id"]) for it in items)
     if not items:
         log("nothing to write")
         return 0
-    if [i["id"] for i in items] == [i["id"] for i in existing] and not new and not tr and not watch_changed:
+    if [i["id"] for i in items] == [i["id"] for i in existing] and not new and not tr and not ai and not watch_changed:
         log("no changes")
         return 0
     out = {"updated": iso(now), "demo": False, "items": items}

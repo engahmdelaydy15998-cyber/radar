@@ -171,6 +171,7 @@ header {
 .badge-watch { background: color-mix(in srgb, var(--accent) 24%, transparent); color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 50%, transparent); }
 .card h3 { margin: 0 0 6px; font-size: 17px; line-height: 1.55; font-weight: 600; text-wrap: balance; overflow-wrap: anywhere; }
 .card p { margin: 0; font-size: 14px; line-height: 1.8; color: #c6c6cb; }
+.det .orig { color: var(--muted); font-size: 12.5px; margin-bottom: 6px; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 .tag { font-size: 12px; padding: 2px 9px; border-radius: 8px; background: var(--surface-2); color: var(--muted); }
 .actions { display: flex; gap: 6px; margin-top: 10px; align-items: center; }
@@ -313,6 +314,7 @@ function topicOf(it) {
   if (it._t) return it._t;
   var t, x = itemText(it);
   if (it.mine && CATS.some(function (c) { return c.id === it.cat && c.id !== "all"; })) t = it.cat;
+  else if (it.tp && CATS.some(function (c) { return c.id === it.tp; })) t = it.tp;
   else if (MCP_RE.test(x)) t = "mcp";
   else if (ADDIN_RE.test(x) && (it.cat === "arch" || BIMTOOL_RE.test(x))) t = "addins";
   else if (it.src === "GitHub") t = "oss";
@@ -401,7 +403,7 @@ function matches(it, ignoreCat) {
   if (state.onlyNew && !it.isNew) return false;
   if (state.onlySaved && !saved[it.id]) return false;
   if (state.q) {
-    var hay = ((it.t || "") + " " + (it.ta || "") + " " + (it.s || "") + " " + (it.tags || []).join(" ") + " " + (it.src || "") + " " + (it.watch || "")).toLowerCase();
+    var hay = ((it.t || "") + " " + (it.ta || "") + " " + (it.h || "") + " " + (it.x || "") + " " + (it.s || "") + " " + (it.tags || []).join(" ") + " " + (it.src || "") + " " + (it.watch || "")).toLowerCase();
     if (hay.indexOf(state.q.toLowerCase()) === -1) return false;
   }
   return true;
@@ -479,16 +481,16 @@ function renderFeed() {
     var primary = it.url2 || it.url;
     var isStat = !!it.s && /^\d+ /.test(it.s);
     var desc = it.sa || (!isStat ? it.s : "");
-    var tagList = (it.tags || []).slice();
+    var tagList = (it.tg || []).concat(it.tags || []);
     if (isStat) tagList.push(it.s);
     if (it.watch) tagList.unshift("🔔 " + it.watch);
-    var hasDet = !!desc || tagList.length > 0;
+    var hasDet = !!desc || tagList.length > 0 || !!it.h;
     var isOpen = hasDet && (state.expandAll || !!opened[it.id]);
 
     a.innerHTML =
       '<div class="cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + c.icon + '</svg></div>' +
       '<div class="cbody"><h3 dir="auto"></h3><div class="meta"></div><p hidden></p><div class="det" hidden></div><div class="actions"></div></div>';
-    a.querySelector("h3").textContent = it.t;
+    a.querySelector("h3").textContent = it.h || it.t;
     var meta = a.querySelector(".meta");
     function badge(cls, txt) { var b = document.createElement("span"); b.className = cls; b.textContent = txt; meta.appendChild(b); }
     if (it.isNew) badge("pnew", "New");
@@ -497,10 +499,12 @@ function renderFeed() {
     var sp0 = document.createElement("span"); sp0.className = "src"; sp0.textContent = it.src; meta.appendChild(sp0);
     var sp1 = document.createElement("span"); sp1.textContent = "·"; meta.appendChild(sp1);
     var sp2 = document.createElement("span"); sp2.textContent = it.when || ""; meta.appendChild(sp2);
-    if (it.ta) { var p = a.querySelector("p"); p.hidden = false; p.textContent = it.ta; }
+    var sub = it.h ? it.x : it.ta;
+    if (sub) { var p = a.querySelector("p"); p.hidden = false; p.textContent = sub; }
 
     var det = a.querySelector(".det");
     if (hasDet) {
+      if (it.h) { var ot = document.createElement("div"); ot.className = "orig"; ot.dir = "auto"; ot.textContent = it.t; det.appendChild(ot); }
       if (desc) { var dp = document.createElement("div"); dp.textContent = desc; det.appendChild(dp); }
       if (tagList.length) {
         var tg = document.createElement("div"); tg.className = "tags";

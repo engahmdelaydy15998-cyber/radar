@@ -78,3 +78,16 @@ json.dump({"watches": []}, open(c.WATCHES, "w", encoding="utf-8"))
 c.apply_watches(sample)
 assert "watch" not in sample[0], "flag must clear once the watch is gone"
 print("WATCH TEST OK")
+
+# AI headlines: fills h/x/tg/tp from the model reply, ignores bad topics, skips without a token
+os.environ["GITHUB_TOKEN"] = "x"
+c.ai_call = lambda batch, token: [{"id": b["id"], "h": "منشيت " + b["id"], "x": "خلاصة", "tags": ["BIM", "AI", "Revit", "extra"],
+                                   "topic": "arch" if b["id"] == "a" else "nope"} for b in batch]
+items = [{"id": "a", "t": "Revit AI plugin", "s": ""}, {"id": "b", "t": "CPU architecture", "s": ""}, {"id": "c", "t": "done", "h": "قديم"}]
+assert c.add_ai_headlines(items) == 2
+assert items[0]["h"] == "منشيت a" and items[0]["tp"] == "arch" and items[0]["tg"] == ["BIM", "AI", "Revit"]
+assert "tp" not in items[1], "invalid topic must be dropped"
+assert items[2]["h"] == "قديم", "already-headlined items are left alone"
+del os.environ["GITHUB_TOKEN"]
+assert c.add_ai_headlines([{"id": "z", "t": "x"}]) == 0
+print("AI TEST OK")
