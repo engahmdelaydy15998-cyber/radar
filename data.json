@@ -1,7 +1,67 @@
 {
- "updated": "2026-11-20T15:06:04Z",
+ "updated": "2026-11-20T16:05:13Z",
  "demo": false,
  "items": [
+  {
+   "id": "gn-cursorisconsideringphasingoutchineseaimodels",
+   "cat": "agents",
+   "src": "Techzine Global",
+   "ts": "2026-11-20T15:32:51Z",
+   "t": "Cursor is considering phasing out Chinese AI models",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdGZnejVaWGpvRnFkc2dVNVVSR2R3TDlwTzgwM3ZtSnB2cGJ1d0QxT1hqaXVJV3JtTFZ1UUZLZXRSc1JKOGlDaWhDX0lTWU5wdGppMTh2cnVPWFh3UktoYVhXTlBkTlM5enAyY1BXdlFDMWZKd0NMY0dPUU5Eei15WkdFUnpiTmRJZDJrQmdXZnBaQlhDdWl3YnJIQQ?oc=5"
+  },
+  {
+   "id": "yt-k87Iqft91j8",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-20T15:14:53Z",
+   "t": "The Most Dangerous AI Agent Is an Overly Helpful One (It's Not Why You Think)",
+   "s": "The most dangerous AI agent is an overly helpful one. It'll take risky actions just to get the job done, even something like deleting a production da…",
+   "tags": [
+    "Cole Medin"
+   ],
+   "url": "https://www.youtube.com/watch?v=k87Iqft91j8"
+  },
+  {
+   "id": "gh-1465526334",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-20T14:28:07Z",
+   "t": "marketzy/codex-cli-repo-workbench: Codex Cli Repo Workbench provides a local workspace for managing and inspecting Codex CLI…",
+   "s": "93 نجمة، لغة HTML",
+   "tags": [
+    "جديد كلياً"
+   ],
+   "url": "https://github.com/marketzy/codex-cli-repo-workbench"
+  },
+  {
+   "id": "gh-1465523535",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-20T14:25:27Z",
+   "t": "han938/open-webui-private-ai-desk: Chat with private AI models locally, powered by Open Webui Private Ai Desk.",
+   "s": "93 نجمة، لغة TypeScript",
+   "tags": [
+    "جديد كلياً"
+   ],
+   "url": "https://github.com/han938/open-webui-private-ai-desk"
+  },
+  {
+   "id": "gh-1465511622",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-20T14:14:22Z",
+   "t": "wozniakalan323-bit/opencode-project-workbench: Opencode Project Workbench structures opencode project tasks, files, and workflow state.",
+   "s": "93 نجمة، لغة HTML",
+   "tags": [
+    "جديد كلياً"
+   ],
+   "url": "https://github.com/wozniakalan323-bit/opencode-project-workbench"
+  },
   {
    "id": "yt-tPszikxVpgE",
    "cat": "reels",
@@ -770,8 +830,7 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
-   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري"
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5"
   },
   {
    "id": "hn-50562528",
@@ -4281,72 +4340,6 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNQXFJN2cyOFZUbmJRNmVMSWl3Q2Nocy05ZjBCVC1mY0dhbThQWHkzZ0w2OVh0OWtpTmt0NmdjSlJZaUltdzVicVEwRTYxSXZfTE5MV1NybFhEWUZBM3hKTE9IRlNYSVdjTU5MWnFabWZDMjJOR0VGd1IxcHczcVdBcGJrUS1rd0g4amYtS2M5clVjQnRyS1RIeUZXSHhfeFlLSDBWc0pCclhtWllBMjl0ZElsQ2J3WmFNVDJ1Y3RFaWRxYUhzbll0VnBaajlLWmM?oc=5",
    "ta": "أمازون تكشف عن حملات عملاء الذكاء الاصطناعي لسرقة بيانات اعتماد النماذج واستهداف بورصات العملات المشفرة باستخدام التزييف العميق"
-  },
-  {
-   "id": "af-ocalLLaMAcomments1xxy7ebmihoyo_gamer_a_generalist_game_agent",
-   "cat": "agents",
-   "src": "r/LocalLLaMA",
-   "ts": "2026-11-16T19:11:42Z",
-   "t": "miHoYo Gamer: A Generalist Game Agent",
-   "s": "",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xxy7eb/mihoyo_gamer_a_generalist_game_agent/",
-   "ta": "miHoYo Gamer: وكيل ألعاب عام"
-  },
-  {
-   "id": "af-ents1xxxs0asmall_gemma_4_tokenizers_were_recently_updated_by",
-   "cat": "agents",
-   "src": "r/LocalLLaMA",
-   "ts": "2026-11-16T18:55:18Z",
-   "t": "Small Gemma 4 tokenizers were recently updated by Google - fix for an issue that caused nonsense output when encountering certain tokens",
-   "s": "",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xxxs0a/small_gemma_4_tokenizers_were_recently_updated_by/",
-   "ta": "تم تحديث رموز Gemma 4 الصغيرة مؤخرًا بواسطة Google - إصلاح المشكلة التي تسببت في إخراج هراء عند مواجهة رموز مميزة معينة"
-  },
-  {
-   "id": "hn-50521287",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-16T18:48:54Z",
-   "t": "Show HN: Birds as Code",
-   "s": "13 نقطة، 9 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://erl-j.github.io/fun-zone/birds.html",
-   "url2": "https://news.ycombinator.com/item?id=50521287",
-   "ta": "إظهار HN: الطيور كرمز"
-  },
-  {
-   "id": "gh-1460417668",
-   "cat": "code",
-   "src": "GitHub",
-   "ts": "2026-11-16T18:40:04Z",
-   "t": "sybil-solutions/inference-optimisation-skill: Agent skill for hill-climbing local LLM serving speed (decode, speculative decoding, pref…",
-   "s": "585 نجمة، لغة Python",
-   "tags": [
-    "مشروع جديد"
-   ],
-   "url": "https://github.com/sybil-solutions/inference-optimisation-skill",
-   "ta": "sybil-solutions/inference-optimization-skill: مهارة الوكيل لسرعة تقديم LLM المحلية لتسلق التلال (فك التشفير، فك التشفير التخميني، التفضيل..."
-  },
-  {
-   "id": "gh-1460406084",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-16T18:29:04Z",
-   "t": "edgerunners2/capri-ai-desktop: Capri — Free open-source AI desktop pet, gaming overlay & voice companion for Windows. Vi…",
-   "s": "214 نجمة، لغة Python",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/edgerunners2/capri-ai-desktop",
-   "ta": "edgerunners2/capri-ai-desktop: Capri — حيوان أليف مجاني لسطح المكتب يعمل بالذكاء الاصطناعي ومفتوح المصدر، وتراكب ألعاب ورفيق صوتي لنظام التشغيل Windows. السادس…"
   }
  ]
 }
