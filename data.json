@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T20:27:40Z",
+ "updated": "2026-11-20T20:34:48Z",
  "demo": false,
  "items": [
   {
@@ -12,7 +12,14 @@
    "tags": [
     "Fireship"
    ],
-   "url": "https://www.youtube.com/watch?v=rMaMe32qQkA"
+   "url": "https://www.youtube.com/watch?v=rMaMe32qQkA",
+   "h": "كانفاس HTML و CSS لـ Coding Agent",
+   "x": "أداة جديدة تمنح الـ coding agent مساحة تصميم حقيقية بـ HTML و CSS.",
+   "tg": [
+    "AI",
+    "Coding"
+   ],
+   "tp": "agents"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov20ravivakil",
@@ -79,7 +86,14 @@
     "Add-in"
    ],
    "url": "https://github.com/Marcio282003/portfolio",
-   "ta": "Marcio282003/portfolio: دراسات حالة لمشاريع في C#/.NET وRevit API وPostgreSQL تم تطويرها في VIAVOZ LT..."
+   "ta": "Marcio282003/portfolio: دراسات حالة لمشاريع في C#/.NET وRevit API وPostgreSQL تم تطويرها في VIAVOZ LT...",
+   "h": "تطوير Revit API باستخدام C# و .NET",
+   "x": "دراسات حالة لمشاريع برمجية تربط Revit API بقواعد بيانات PostgreSQL.",
+   "tg": [
+    "Revit",
+    "C#"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-aH3_Vgn5Qjc",
@@ -93,7 +107,15 @@
    ],
    "url": "https://www.youtube.com/shorts/aH3_Vgn5Qjc",
    "ta": "يبني Claude Code مشهدك ثلاثي الأبعاد في Blender: القطع الأربع المجانية",
-   "sa": "عندما تصف مشهدًا، يقوم كلود كود ببنائه داخل Blender. يحتاج إلى 4 قطع مجانية: Blender وMCP لامتداد Blender وحزمة Blender Skills و..."
+   "sa": "عندما تصف مشهدًا، يقوم كلود كود ببنائه داخل Blender. يحتاج إلى 4 قطع مجانية: Blender وMCP لامتداد Blender وحزمة Blender Skills و...",
+   "h": "استخدام Claude Code لبناء مشهد 3D في Blender",
+   "x": "كيف تربط Claude Code بـ Blender عبر الـ MCP لبناء مشهد 3D بالوصف النصي.",
+   "tg": [
+    "MCP",
+    "Blender",
+    "AI"
+   ],
+   "tp": "mcp"
   },
   {
    "id": "yt-mU8WKII1gpk",
@@ -120,7 +142,15 @@
     "Add-in"
    ],
    "url": "https://github.com/Delures/revit-mcp",
-   "ta": "Delures/revit-mcp: خادم MCP لـ Autodesk Revit: 22 أداة ومحرك C# مضمن ودعم Revit 2019-2027"
+   "ta": "Delures/revit-mcp: خادم MCP لـ Autodesk Revit: 22 أداة ومحرك C# مضمن ودعم Revit 2019-2027",
+   "h": "سيرفر MCP جديد لـ Autodesk Revit",
+   "x": "أداة قوية تدعم Revit من 2019 لـ 2027 مع 22 أداة ومحرك C# مدمج.",
+   "tg": [
+    "Revit",
+    "MCP",
+    "BIM"
+   ],
+   "tp": "mcp"
   },
   {
    "id": "yt-X19Q12hmRjY",
@@ -229,7 +259,14 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdGZnejVaWGpvRnFkc2dVNVVSR2R3TDlwTzgwM3ZtSnB2cGJ1d0QxT1hqaXVJV3JtTFZ1UUZLZXRSc1JKOGlDaWhDX0lTWU5wdGppMTh2cnVPWFh3UktoYVhXTlBkTlM5enAyY1BXdlFDMWZKd0NMY0dPUU5Eei15WkdFUnpiTmRJZDJrQmdXZnBaQlhDdWl3YnJIQQ?oc=5",
-   "ta": "تدرس شركة Cursor التخلص التدريجي من نماذج الذكاء الاصطناعي الصينية"
+   "ta": "تدرس شركة Cursor التخلص التدريجي من نماذج الذكاء الاصطناعي الصينية",
+   "h": "كورسر تفكر في التخلي عن نماذج الذكاء الاصطناعي الصينية",
+   "x": "تحديث جديد قد يؤثر على أدوات الـ AI والـ agents في بيئة عملك البرمجية.",
+   "tg": [
+    "Cursor",
+    "AI Models"
+   ],
+   "tp": "agents"
   },
   {
    "id": "yt-k87Iqft91j8",
@@ -243,7 +280,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=k87Iqft91j8",
    "ta": "وكيل الذكاء الاصطناعي الأكثر خطورة هو عامل مفيد للغاية (هذا ليس سبب تفكيرك)",
-   "sa": "أخطر وكيل للذكاء الاصطناعي هو عامل مفيد للغاية. سيتطلب الأمر إجراءات محفوفة بالمخاطر لمجرد إنجاز المهمة، حتى لو كان ذلك مثل حذف بيانات الإنتاج..."
+   "sa": "أخطر وكيل للذكاء الاصطناعي هو عامل مفيد للغاية. سيتطلب الأمر إجراءات محفوفة بالمخاطر لمجرد إنجاز المهمة، حتى لو كان ذلك مثل حذف بيانات الإنتاج...",
+   "h": "خطورة الـ AI Agent المتفاني زيادة عن اللزوم",
+   "x": "احذر من الـ agents التي تتخذ قرارات خطيرة لتنفيذ المهام بسرعة وتدمير الـ production data.",
+   "tg": [
+    "AI Agents",
+    "Security"
+   ],
+   "tp": "agents"
   },
   {
    "id": "gh-1465526334",
@@ -269,7 +313,15 @@
     "جديد كلياً"
    ],
    "url": "https://github.com/han938/open-webui-private-ai-desk",
-   "ta": "han938/open-webui-private-ai-desk: قم بالدردشة مع نماذج الذكاء الاصطناعي الخاصة محليًا، بدعم من Open Webui Private Ai Desk."
+   "ta": "han938/open-webui-private-ai-desk: قم بالدردشة مع نماذج الذكاء الاصطناعي الخاصة محليًا، بدعم من Open Webui Private Ai Desk.",
+   "h": "منصة Open WebUI لإدارة نماذج الذكاء الاصطناعي محلياً",
+   "x": "أداة ممتازة للدردشة مع نماذج AI خاصة بك محلياً لضمان سرية بيانات مشاريعك الهندسية.",
+   "tg": [
+    "Open WebUI",
+    "TypeScript",
+    "OSS"
+   ],
+   "tp": "oss"
   },
   {
    "id": "gh-1465511622",
@@ -282,7 +334,15 @@
     "جديد كلياً"
    ],
    "url": "https://github.com/wozniakalan323-bit/opencode-project-workbench",
-   "ta": "wozniakalan323-bit/opencode-project-workbench: يبني Opencode Project Workbench مهام مشروع الكود المفتوح وملفاته وحالة سير العمل."
+   "ta": "wozniakalan323-bit/opencode-project-workbench: يبني Opencode Project Workbench مهام مشروع الكود المفتوح وملفاته وحالة سير العمل.",
+   "h": "إدارة مهام الـ Coding عبر Opencode Project Workbench",
+   "x": "أداة لتنظيم ملفات وحالة مشاريع البرمجة وسير العمل بذكاء.",
+   "tg": [
+    "agents",
+    "workflow",
+    "oss"
+   ],
+   "tp": "agents"
   },
   {
    "id": "yt-tPszikxVpgE",
@@ -296,7 +356,14 @@
    ],
    "url": "https://www.youtube.com/shorts/tPszikxVpgE",
    "ta": "رئيس قسم الذكاء الاصطناعي كلاي يقرأ الآثار مع مئات من استدعاءات الأدوات",
-   "sa": "يعد وكيل Clay الجديد أوسع من وكيله السابق، ويستخدمه العملاء بطرق لم يتوقعها الفريق. يقول جيف بارج، رئيس قسم الذكاء الاصطناعي في كلاي، لهاريسون..."
+   "sa": "يعد وكيل Clay الجديد أوسع من وكيله السابق، ويستخدمه العملاء بطرق لم يتوقعها الفريق. يقول جيف بارج، رئيس قسم الذكاء الاصطناعي في كلاي، لهاريسون...",
+   "h": "كيف يقرأ الـ AI مئات الـ Tool Calls في Traces المعقدة؟",
+   "x": "نظرة متقدمة على كيفية تعامل الـ AI agents مع استدعاءات الأدوات الضخمة.",
+   "tg": [
+    "agents",
+    "AI"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50574383",
@@ -323,7 +390,15 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOdU53d3lmMlc2QUdMYWNxMVhINXcxU0ZXeFlXTEZyNkdQMnE2Y2VfSzB4MVpTZmdnMHZ6SDRGQ05ja2JwbFpOeXVxelFOTVhlT09vVDg2ZnJXblNNcDFnMWJoanJQSXhiTUV3dDJqWHhTM0xwRVhLWVYyTjltSXcyaFgwUHJwdXdka2RBcDRHRWdjcHMwbkNLM1FUZFNpVE9PNlNPeg?oc=5",
-   "ta": "يستطيع الذكاء الاصطناعي رسم مخطط للطابق في ثوانٍ. لكن هل هذا يجعله تصميمًا جيدًا؟"
+   "ta": "يستطيع الذكاء الاصطناعي رسم مخطط للطابق في ثوانٍ. لكن هل هذا يجعله تصميمًا جيدًا؟",
+   "h": "هل تصميم الـ Floor Plan السريع بالـ AI يعني أنه تصميم جيد؟",
+   "x": "السرعة في توليد المساقط الأفقية لا تعني بالضرورة جودة المعمار.",
+   "tg": [
+    "BIM",
+    "GenerativeDesign",
+    "Architecture"
+   ],
+   "tp": "arch"
   },
   {
    "id": "hn-50573886",
@@ -337,7 +412,14 @@
    ],
    "url": "https://cekrem.github.io/posts/if-you-stop-writing-code-you-also-get-worse-at-reviewing-it/",
    "url2": "https://news.ycombinator.com/item?id=50573886",
-   "ta": "إذا توقفت عن كتابة التعليمات البرمجية، فإنك ستسوء أيضًا عند مراجعتها"
+   "ta": "إذا توقفت عن كتابة التعليمات البرمجية، فإنك ستسوء أيضًا عند مراجعتها",
+   "h": "التوقف عن كتابة الكود يضعف قدرتك على مراجعته",
+   "x": "خطورة الاعتماد الكلي على الـ AI وكيف يفقد المهندس مهارة مراجعة الكود.",
+   "tg": [
+    "Coding",
+    "Skills"
+   ],
+   "tp": "arch"
   },
   {
    "id": "hn-50573681",
@@ -351,7 +433,15 @@
    ],
    "url": "https://spectrum.ieee.org/epic-games-unreal-engine-ai",
    "url2": "https://news.ycombinator.com/item?id=50573681",
-   "ta": "تتحول Epic Games إلى ترميز الذكاء الاصطناعي للمحرك غير الواقعي"
+   "ta": "تتحول Epic Games إلى ترميز الذكاء الاصطناعي للمحرك غير الواقعي",
+   "h": "Epic Games تعتمد على الـ AI Coding في Unreal Engine",
+   "x": "كيف تستخدم الشركات الكبرى الذكاء الاصطناعي لتسريع تطوير محركات الألعاب.",
+   "tg": [
+    "AI",
+    "Coding",
+    "UnrealEngine"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-AmP65h3quI4",
@@ -365,7 +455,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=AmP65h3quI4",
    "ta": "تعلم Reactjs #15 - القيم الافتراضية للدعائم",
-   "sa": "القيم الافتراضية لدروس وواجبات الدعائم: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+   "sa": "القيم الافتراضية لدروس وواجبات الدعائم: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
+   "h": "تعلم React.js وتحديد القيم الافتراضية للـ Props",
+   "x": "درس عملي لتطوير تطبيقات الويب وربط الواجهات بكفاءة.",
+   "tg": [
+    "React",
+    "Frontend",
+    "Courses"
+   ],
+   "tp": "courses"
   },
   {
    "id": "gn-neoshapesandsphereneusegenerativedesignandmetalbinderjetting",
@@ -391,7 +489,15 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPUG9nbE82QkJFY0lVVF9NdHlpY1pHMmhlYU9sY2FNcmFUZ0xyMmdXS0FRUmdmdmNxSF8ycVh2M1lweGpSOTdfRjliRWVUT2RvcGZhb0hMYlVJTUg5NFY2VWZONk1hR3VoT2t0UW9yU0ZjbFBmY2FVb2tkd3NVR0FJUWRjUmZrSklQTjc1eDBhVzZhV05YQWM5QjV5TDJ1VG9lY1BnYVdzdlphZ0YxM1k3bkx6d3llc3EtY3FGNUN0eWF4dw?oc=5",
-   "ta": "سوق ماسحات الليزر الضوئية حتى عام 2035: نمذجة معلومات البناء (BIM) والبنية التحتية تتطلب التوسع في استهلاك الوقود - الأخبار والإحصائيات"
+   "ta": "سوق ماسحات الليزر الضوئية حتى عام 2035: نمذجة معلومات البناء (BIM) والبنية التحتية تتطلب التوسع في استهلاك الوقود - الأخبار والإحصائيات",
+   "h": "نمو قوي في سوق الـ Laser Scanners بدعم من مشاريع الـ BIM",
+   "x": "طفرة في استخدام مسح الأثر والبناء لتلبية احتياجات البنية التحتية.",
+   "tg": [
+    "BIM",
+    "LaserScanning",
+    "Infrastructure"
+   ],
+   "tp": "arch"
   },
   {
    "id": "hn-50573041",
@@ -419,7 +525,14 @@
    ],
    "url": "https://architectlabs.com/blog/frostbite",
    "url2": "https://news.ycombinator.com/item?id=50572503",
-   "ta": "Frostbite: تم اكتشاف بنية جديدة لوحدة المعالجة المركزية وتصميمها والتحقق منها بواسطة الذكاء الاصطناعي"
+   "ta": "Frostbite: تم اكتشاف بنية جديدة لوحدة المعالجة المركزية وتصميمها والتحقق منها بواسطة الذكاء الاصطناعي",
+   "h": "Frostbite: معمارية معالجات جديدة صممها الذكاء الاصطناعي",
+   "x": "استكشاف معمارية CPU جديدة تم تصميمها والتحقق منها بالكامل عبر الـ AI.",
+   "tg": [
+    "Architecture",
+    "AI",
+    "Hardware"
+   ]
   },
   {
    "id": "hn-50572355",
@@ -446,7 +559,15 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1YRi1zbjRteEQ2cV9USklzRFp3bWV3bmZJZTdWYlkxTng4Mk1meVdNZHZWbDhRNHNxZUtwdGUwZV83MmJiYXNCdjA1YmEyakhQUmtEOHFjdDQ?oc=5",
-   "ta": "بدائل كلود كود في عام 2026: 9 خيارات والخطة التي تدفع مقابلها بالفعل"
+   "ta": "بدائل كلود كود في عام 2026: 9 خيارات والخطة التي تدفع مقابلها بالفعل",
+   "h": "بدائل Claude Code: 9 خيارات قوية لكود أسرع",
+   "x": "تعرف على أفضل بدائل الـ coding agents المتاحة حالياً لتطوير مشاريعك.",
+   "tg": [
+    "Agents",
+    "Coding",
+    "AI"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50572176",
@@ -488,7 +609,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=6NT9TsT6iMc",
    "ta": "جوجل حققت مؤشر القوة النسبية؟! نموذج التخفي الجديد يتفوق على Fable 5.2 وAnthropic Post IPO وGenie 4 والمزيد! أخبار الذكاء الاصطناعي",
-   "sa": "قبض على الأخطاء التي تظهر فقط عند الدمج. جرب TestSprite مجانًا: https://www.testsprite.com/?via=mahi-2611a ربما يكون Google قد حقق للتو Recursiv..."
+   "sa": "قبض على الأخطاء التي تظهر فقط عند الدمج. جرب TestSprite مجانًا: https://www.testsprite.com/?via=mahi-2611a ربما يكون Google قد حقق للتو Recursiv...",
+   "h": "تطورات ضخمة في نماذج الذكاء الاصطناعي والـ agents",
+   "x": "نظرة على أحدث إصدارات نماذج الـ AI وقدرات الـ agents الجديدة في السوق.",
+   "tg": [
+    "AI",
+    "Agents",
+    "News"
+   ],
+   "tp": "agents"
   },
   {
    "id": "gn-nemetschekgrouptospotlightaipoweredsolutionsforthemiddleeast",
@@ -501,7 +630,15 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQbldMQ0dfeVRpWG5iV1FLQ01IWDNlZVVxM0doT2poaTF3d0g2dHpST0dFWlItdi1INEkyZS1WWU5kdjZQZ1J0ZmRZazN1WDNhSm45enc0YnFiMFBkUkFwcnRHZXB5ZmFROXRVcG9zR3U5NzZ2aXZuZElpWnVyVmRlSFI5ZnZvaFpLN2JqbVRUSzJ3ZlgtdThoTmtSanpYbHk4UE1WMFRMQTJFOVJvTlJfM1FwelhERFRHUndEU2ZZY0J5TXg5?oc=5",
-   "ta": "مجموعة Nemetschek تسلط الضوء على الحلول المدعومة بالذكاء الاصطناعي لقطاع AEC/O في الشرق الأوسط في Big 5 Global 2026"
+   "ta": "مجموعة Nemetschek تسلط الضوء على الحلول المدعومة بالذكاء الاصطناعي لقطاع AEC/O في الشرق الأوسط في Big 5 Global 2026",
+   "h": "Nemetschek تعرض حلول الـ BIM والـ AI في Big 5",
+   "x": "مجموعة Nemetschek تستعرض أحدث حلول الـ AEC المدعومة بالذكاء الاصطناعي بمنطقة الشرق الأوسط.",
+   "tg": [
+    "BIM",
+    "AEC",
+    "AI"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-wuCYQ2YSa9c",
@@ -529,7 +666,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=OSHSopaYjTw",
    "ta": "إنشاء ومشاركة لوحة المعلومات في ChatGPT",
-   "sa": "حول تحليلك إلى لوحة معلومات يمكن لفريقك استخدامها. بناءً على مثال مبيعات Acme الخيالي، يقدم هذا الدليل الإرشادي مقاييس ربع سنوية ومقاييس..."
+   "sa": "حول تحليلك إلى لوحة معلومات يمكن لفريقك استخدامها. بناءً على مثال مبيعات Acme الخيالي، يقدم هذا الدليل الإرشادي مقاييس ربع سنوية ومقاييس...",
+   "h": "أنشئ وشارك Dashboard احترافي مباشرة من ChatGPT",
+   "x": "خطوات عملية لتحويل تحليلات البيانات والـ metrics لوحة تحكم جاهزة لفريقك.",
+   "tg": [
+    "ChatGPT",
+    "Data",
+    "Productivity"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-JEgTn37Sk50",
@@ -557,7 +702,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=oJIuz3AFfEQ",
    "ta": "قم بتوصيل بيانات فريقك بـ ChatGPT",
-   "sa": "قم بتوصيل أدوات البيانات التي يستخدمها فريقك بالفعل بـ ChatGPT. هذه الإرشادات مخصصة لمسؤولي مساحة العمل: قم بتمكين المكون الإضافي للبيانات، واختر كيف يمكن لزملائك في الفريق..."
+   "sa": "قم بتوصيل أدوات البيانات التي يستخدمها فريقك بالفعل بـ ChatGPT. هذه الإرشادات مخصصة لمسؤولي مساحة العمل: قم بتمكين المكون الإضافي للبيانات، واختر كيف يمكن لزملائك في الفريق...",
+   "h": "اربط داتا فريقك بـ ChatGPT مباشرة",
+   "x": "دليلك كمسؤول workspace لتفعيل plugins الداتا وتسهيل شغل فريقك.",
+   "tg": [
+    "ChatGPT",
+    "Data"
+   ],
+   "tp": "agents"
   },
   {
    "id": "yt-KrlfehIapEA",
@@ -571,7 +723,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=KrlfehIapEA",
    "ta": "تعرف على وكيل البيانات في ChatGPT",
-   "sa": "ابدأ باستخدام مكون البيانات الإضافي في ChatGPT. قم بجولة سريعة للتعرف على كيفية طرح أسئلة حول بياناتك، وإنشاء تصورات، وإنشاء لوحات معلومات، و..."
+   "sa": "ابدأ باستخدام مكون البيانات الإضافي في ChatGPT. قم بجولة سريعة للتعرف على كيفية طرح أسئلة حول بياناتك، وإنشاء تصورات، وإنشاء لوحات معلومات، و...",
+   "h": "تعرف على Data Agent الجديد في ChatGPT",
+   "x": "اسأل براحتك عن داتا شركتك واعمل visualizations وdashboards بسهولة.",
+   "tg": [
+    "Data Agent",
+    "ChatGPT"
+   ],
+   "tp": "agents"
   },
   {
    "id": "yt-3_fayTbZrW8",
@@ -585,7 +744,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=3_fayTbZrW8",
    "ta": "قم بإنشاء تقرير ومشاركته في ChatGPT Space",
-   "sa": "امنح فريقك تقريرًا يمكنهم قراءته ومناقشته والعمل عليه معًا. في هذه الإرشادات التفصيلية، قم بتحويل تحليل مبيعات Acme الخيالي إلى صفحة في Spac..."
+   "sa": "امنح فريقك تقريرًا يمكنهم قراءته ومناقشته والعمل عليه معًا. في هذه الإرشادات التفصيلية، قم بتحويل تحليل مبيعات Acme الخيالي إلى صفحة في Spac...",
+   "h": "اصنع وشير تقاريرك داخل ChatGPT Space",
+   "x": "حول تحليلات الشغل لـ Page يقدر فريقك يقراها ويناقشها معاك.",
+   "tg": [
+    "ChatGPT",
+    "Reports"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50569985",
@@ -599,7 +765,14 @@
    ],
    "url": "https://www.gimp.org/news/2026/11/16/gimp-ui-tests/",
    "url2": "https://news.ycombinator.com/item?id=50569985",
-   "ta": "لدى GIMP الآن اختبارات واجهة المستخدم"
+   "ta": "لدى GIMP الآن اختبارات واجهة المستخدم",
+   "h": "برنامج GIMP يدعم UI tests رسمياً",
+   "x": "خطوة مهمة لتطوير واجهات وبرمجيات أدوات التصميم المفتوحة.",
+   "tg": [
+    "GIMP",
+    "UI"
+   ],
+   "tp": "oss"
   },
   {
    "id": "rss-m1188271whathappenedtoparametricismhowastyleblurredintoalook",
@@ -613,7 +786,14 @@
    ],
    "url": "https://www.archdaily.com/1188271/what-happened-to-parametricism-how-a-style-blurred-into-a-look",
    "ta": "ماذا حدث البارامترية؟ كيف نمط غير واضح في نظرة",
-   "sa": "في سبتمبر 2008، في سلسلة من الجلسات التي تم تنظيمها على هامش بينالي البندقية للهندسة المعمارية الحادي عشر تحت اسم Dark Side Club، تم تقديم نص…"
+   "sa": "في سبتمبر 2008، في سلسلة من الجلسات التي تم تنظيمها على هامش بينالي البندقية للهندسة المعمارية الحادي عشر تحت اسم Dark Side Club، تم تقديم نص…",
+   "h": "إيه اللي حصل للـ Parametricism في العمارة؟",
+   "x": "مقال بيناقش إزاي الفلسفة البارامترية تحولت لمجرد شكل بصري في التصميم.",
+   "tg": [
+    "Parametricism",
+    "Architecture"
+   ],
+   "tp": "arch"
   },
   {
    "id": "hn-50569783",
@@ -627,7 +807,14 @@
    ],
    "url": "https://www.fermionresearch.com/research/mapping-every-neuron-in-qwen3-8b/",
    "url2": "https://news.ycombinator.com/item?id=50569783",
-   "ta": "رسم خرائط لكل خلية عصبية في Qwen3-8B"
+   "ta": "رسم خرائط لكل خلية عصبية في Qwen3-8B",
+   "h": "خريطة تفصيلية لكل neuron في Qwen3-8B",
+   "x": "تحليل عميق لبنية النماذج الذكية هيساعدك تفهم إزاي الـ LLMs بتفكر.",
+   "tg": [
+    "Qwen",
+    "AI"
+   ],
+   "tp": "agents"
   },
   {
    "id": "gn-mcaaconferenceexploresaiandmepconstructiontechnology",
@@ -640,7 +827,14 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOOG1MQUdHblBTbVNvc1dwS0lxNk9aaDkxV3pTSTRoaHJJMGdLZklJN0RycVVKNWpBWWtVeFNPa2tsZGd1NXFHR0N4OVp1V2dBRUk4OHRjSGdMc0xCbERBYXE1bHhVbXoyME5xUFYxME1vYVppc0N5aTZyeEJhMHBDQ2ZySXZ6NUxzMjMxTjkwWkd0WnBtWDZhVGNyN1BRNWZjRGYzLWJYaV9VTGRucEExVDZ1eVF1cFRlWlpUVA?oc=5",
-   "ta": "مؤتمر MCAA يستكشف تكنولوجيا البناء بالذكاء الاصطناعي والهندسة الكهربائية والميكانيكية"
+   "ta": "مؤتمر MCAA يستكشف تكنولوجيا البناء بالذكاء الاصطناعي والهندسة الكهربائية والميكانيكية",
+   "h": "مؤتمر MCAA يناقش الـ AI وتكنولوجيا الـ MEP",
+   "x": "استعراض لأحدث تقنيات الذكاء الاصطناعي وأنظمة الكهروميكانيك في التشييد.",
+   "tg": [
+    "MEP",
+    "Construction"
+   ],
+   "tp": "arch"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov20tokenfraudishereanditsbad",
@@ -653,7 +847,14 @@
     "مدونة"
    ],
    "url": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
-   "ta": "الاحتيال الرمزي موجود هنا وهو أمر سيئ (YouTube)"
+   "ta": "الاحتيال الرمزي موجود هنا وهو أمر سيئ (YouTube)",
+   "h": "احذر.. احتيال الـ Tokens بقى واقع مرير",
+   "x": "نظرة سريعة على مخاطر الاحتيال التقني الجديدة في عالم الذكاء الاصطناعي.",
+   "tg": [
+    "Tokens",
+    "Security"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-5eON_8rgKzk",
@@ -667,7 +868,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=5eON_8rgKzk",
    "ta": "الجوزاء 4 النيون مثير للسخرية ...",
-   "sa": "انضم إلى رسالتي الإخبارية للحصول على تحديثات منتظمة للذكاء الاصطناعي 👇🏼 https://forwardfuture.com تحقق من Scarlet: https://github.com/Forward-Future/scarlet روابطي 🔗 👉🏻 X:..."
+   "sa": "انضم إلى رسالتي الإخبارية للحصول على تحديثات منتظمة للذكاء الاصطناعي 👇🏼 https://forwardfuture.com تحقق من Scarlet: https://github.com/Forward-Future/scarlet روابطي 🔗 👉🏻 X:...",
+   "h": "قدرات خيالية مع Gemini 4 Neon",
+   "x": "تابع أحدث إطلاقات نماذج الذكاء الاصطناعي وتأثيرها على أدواتك.",
+   "tg": [
+    "Gemini",
+    "AI"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50569478",
@@ -681,7 +889,13 @@
    ],
    "url": "https://www.motherjones.com/politics/2026/11/army-military-iowa-lead-azide-toxic-detonation-dust-health/",
    "url2": "https://news.ycombinator.com/item?id=50569478",
-   "ta": "الجيش يفجر \"قنبلة رصاصية\" سامة في ولاية أيوا. نسيت أن أحذر الناس"
+   "ta": "الجيش يفجر \"قنبلة رصاصية\" سامة في ولاية أيوا. نسيت أن أحذر الناس",
+   "h": "أزمة بيئية بسبب تفجيرات الجيش الأمريكي",
+   "x": "خبر عن أضرار بيئية محتملة وغياب التحذيرات للمواطنين.",
+   "tg": [
+    "Environment"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-E83rp6tZ34I",
@@ -695,7 +909,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=E83rp6tZ34I",
    "ta": "لقد سمحنا للعملاء الصوتيين بالبحث في الويب باستخدام Parallel!!",
-   "sa": "إنها ليلة بناء شاملة مع Parallel x AssemblyAI، لقد حصلنا على العديد من وكلاء الصوت المذهلين الذين قاموا ببناء بيانات الباحث في الوقت الفعلي باستخدام أنظمة الويب الموازية !! واي…"
+   "sa": "إنها ليلة بناء شاملة مع Parallel x AssemblyAI، لقد حصلنا على العديد من وكلاء الصوت المذهلين الذين قاموا ببناء بيانات الباحث في الوقت الفعلي باستخدام أنظمة الويب الموازية !! واي…",
+   "h": "ربط voice agents بالإنترنت",
+   "x": "تجربة ناجحة لتطوير voice agents قادرة على البحث في بيانات الويب لحظياً.",
+   "tg": [
+    "Voice Agents",
+    "AI"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50568130",
@@ -709,7 +930,14 @@
    ],
    "url": "https://git-aarvin.github.io/mei/",
    "url2": "https://news.ycombinator.com/item?id=50568130",
-   "ta": "Gemini 4 Neon هو الرقم 1 الجديد في مؤشر هندسة النماذج"
+   "ta": "Gemini 4 Neon هو الرقم 1 الجديد في مؤشر هندسة النماذج",
+   "h": "صدارة جديدة في الـ Models Engineering Index",
+   "x": "نموذج Gemini 4 Neon يحتل المركز الأول في مؤشر هندسة النماذج.",
+   "tg": [
+    "Gemini",
+    "AI Models"
+   ],
+   "tp": "news"
   },
   {
    "id": "hn-50567735",
@@ -764,7 +992,14 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQSUo2NHR6RFpSYmlOTGlFQnQtTjVEVTk0dVBIeHRtOHRWZkNQQllQQWRoa0EtVGhUZ19sS3lJTEVqRlZvbnNaQXE1d084YXNxX3UyS0VnZktBTVdYOWhOZDdWdXhZekd3VDlKV2pNNmJrWGFGbDVxNG96clFXdW5ZMi1jbGM2dHFBTHJ0OWVEQkN3c1BnSFpiLUNTMDdmTEhJWm1wVVZwTmNtY3BZaHRB?oc=5",
-   "ta": "تدعي Ploy AI Gateway أنها أسرع بـ 8 مرات وأرخص بـ 20 مرة من Claude Code وCodex: المطالب به مقابل التحقق منه"
+   "ta": "تدعي Ploy AI Gateway أنها أسرع بـ 8 مرات وأرخص بـ 20 مرة من Claude Code وCodex: المطالب به مقابل التحقق منه",
+   "h": "بوابة Ploy AI أسرع وأرخص بكتير",
+   "x": "مقارنة بين ادعاءات سرعة ورخص Ploy AI Gateway وبين الأداء الحقيقي مقارنة بـ Claude Code.",
+   "tg": [
+    "AI Gateway",
+    "Coding"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-YbZDDCHDSnE",
@@ -791,7 +1026,15 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxQc25QdW1JRXBDb1c5UlFsZUIzU1Zuc0lrejRhWFZCcVNTM3JJd3hFWkgxeGFGbGRQZUdxLUJuaTZfb2k0SnRMSGcwb29uVThXTUlzWjMyWVhFTTNKM2FnbUxlY1oyMFBsclQzckhjNUxGV21PelcxMW9ZSUhhLU82anNGLXlwN0RHTHhudWpMM0prdk1vTGJyamJjX0FzMXlLWVlzMkVzLXlDUmFLcHd0X3V6V3dFdnpwODhXcHNfVEttUkFJcDFEaTZhMVNrd3M3WnJJLXhzQ041NjhMa3VRZUZFOHI4NURuXzVJelFMY3Q1Zk01OTBlc3dLbDFwT0trZFc3MnhFSUN1YmhMSTFES0pkWHA5VWl5LVE?oc=5",
-   "ta": "من لقطات Revit إلى القصص: سير عمل فيديو الذكاء الاصطناعي للاتصالات المعمارية"
+   "ta": "من لقطات Revit إلى القصص: سير عمل فيديو الذكاء الاصطناعي للاتصالات المعمارية",
+   "h": "من لقطات Revit الثابتة لفيديوهات ذكية",
+   "x": "كيف تستخدم تقنيات AI Video لعمل workflows عرض معماري مبهر من موديلات Revit.",
+   "tg": [
+    "Revit",
+    "BIM",
+    "AI"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-3l3uH85M_10",
@@ -805,7 +1048,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=3l3uH85M_10",
    "ta": "لدى Hermes متجر تطبيقات خاص بها: 2451 ملحقًا مجانيًا يمكنك تثبيته!",
-   "sa": "🔗 Hostinger VPS for Hermes: https://www.hostg.xyz/SHJc5 🎁 رمز الخصم: GOHERMES Hermes Marketplace: أفضل 10 مكونات إضافية تحتاجها لوكيل الذكاء الاصطناعي الخاص بك..."
+   "sa": "🔗 Hostinger VPS for Hermes: https://www.hostg.xyz/SHJc5 🎁 رمز الخصم: GOHERMES Hermes Marketplace: أفضل 10 مكونات إضافية تحتاجها لوكيل الذكاء الاصطناعي الخاص بك...",
+   "h": "متجر plugins خاص بـ Hermes",
+   "x": "أكثر من 2400 plugin مجاني متاح لتطوير قدرات الـ AI agent الخاص بك.",
+   "tg": [
+    "Plugins",
+    "Agents"
+   ],
+   "tp": "agents"
   },
   {
    "id": "yt-sof3vW4mHTs",
