@@ -1,7 +1,49 @@
 {
- "updated": "2026-11-20T06:15:11Z",
+ "updated": "2026-11-20T06:19:30Z",
  "demo": false,
  "items": [
+  {
+   "id": "yt-OSHSopaYjTw",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-20T06:07:50Z",
+   "t": "Create and Share a Dashboard in ChatGPT",
+   "s": "Turn your analysis into a dashboard your team can use. Building on the fictional Acme sales example, this walkthrough brings quarterly metrics and cu…",
+   "tags": [
+    "OpenAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=OSHSopaYjTw",
+   "ta": "إنشاء ومشاركة لوحة المعلومات في ChatGPT",
+   "sa": "حول تحليلك إلى لوحة معلومات يمكن لفريقك استخدامها. بناءً على مثال مبيعات Acme الخيالي، يقدم هذا الدليل الإرشادي مقاييس ربع سنوية ومقاييس..."
+  },
+  {
+   "id": "yt-JEgTn37Sk50",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-20T06:05:59Z",
+   "t": "Ask Questions About Your Data in ChatGPT",
+   "s": "Prepare for a sales meeting by asking ChatGPT what changed in your data and which customers need attention. Using sample data from the fictional comp…",
+   "tags": [
+    "OpenAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=JEgTn37Sk50",
+   "ta": "اطرح أسئلة حول بياناتك في ChatGPT",
+   "sa": "استعد لاجتماع المبيعات من خلال سؤال ChatGPT عما تغير في بياناتك والعملاء الذين يحتاجون إلى الاهتمام. باستخدام بيانات عينة من الشركات الخيالية ..."
+  },
+  {
+   "id": "yt-oJIuz3AFfEQ",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-20T06:02:57Z",
+   "t": "Connect Your Team’s Data to ChatGPT",
+   "s": "Connect the data tools your team already uses to ChatGPT. This walkthrough is for workspace admins: enable the Data plugin, choose how teammates can…",
+   "tags": [
+    "OpenAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=oJIuz3AFfEQ",
+   "ta": "قم بتوصيل بيانات فريقك بـ ChatGPT",
+   "sa": "قم بتوصيل أدوات البيانات التي يستخدمها فريقك بالفعل بـ ChatGPT. هذه الإرشادات مخصصة لمسؤولي مساحة العمل: قم بتمكين المكون الإضافي للبيانات، واختر كيف يمكن لزملائك في الفريق..."
+  },
   {
    "id": "yt-KrlfehIapEA",
    "cat": "co",
@@ -4297,46 +4339,6 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPaWJ3cERDenlEeUtlZWlIY1pLWTlsY3g3Q0lQT0FjNGc4SFRiSi1IbmNBa0Y4cmdieUNyY21SZWxDRTNQOUxNalhISjRpdkZlNUxtbXFiSUtxMkFWTmtJWTZLNWNzZWRIV25faHlEZVFpUXFDRXpfZ0d0bzlodVVsSVl5al9FRzN0ZVFCRmZtZGFWeXVtMGpqdmxLbUo?oc=5",
    "ta": "Qwen4-Max هو أحدث نموذج رائد للذكاء الاصطناعي في الصين، وهو يجعل GPT وClaude يبدوان باهظي الثمن"
-  },
-  {
-   "id": "gn-opensourceaiagentsforcybersecurityinspectthentrust",
-   "cat": "agents",
-   "src": "TechSpective",
-   "ts": "2026-11-16T13:12:57Z",
-   "t": "Open Source AI Agents for Cybersecurity: Inspect, Then Trust",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNamtYZzZRWkppY0o2ZlF5QndRckh2ZUFrWHY0eWJnajdqblBYZEdiQUdPanNVNTBYMm5rWF9xUmxCUUlodWdyNWNSZXUxaHZHTW1tUWlqWjJZNmsyZ3pISGFvYUJ0N0xmdWYxS08zQ0MwZXU4dENTWnAwR1RhYjNGeTR1Y0t0Mm52SDlUV3B4VEJfRVNjVmx4ZWM5bw?oc=5",
-   "ta": "وكلاء الذكاء الاصطناعي مفتوح المصدر للأمن السيبراني: الفحص ثم الثقة"
-  },
-  {
-   "id": "gh-1460031638",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-16T13:05:32Z",
-   "t": "hiruhiru2005/sync-strata: A one-click local LLM app for Windows and Linux: Qwen3.8-Flash-Next with the Sync quantiz…",
-   "s": "32 نجمة، لغة C++",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/hiruhiru2005/sync-strata",
-   "ta": "hiruhiru2005/sync-strata: تطبيق LLM محلي بنقرة واحدة لنظامي التشغيل Windows وLinux: Qwen3.8-Flash-Next مع Sync quantiz..."
-  },
-  {
-   "id": "hn-50516995",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-16T12:41:48Z",
-   "t": "Show HN: Deslop skill based on corpus-linguistics and psycholinguistics research",
-   "s": "13 نقطة، 4 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://github.com/etodanik/deslop",
-   "url2": "https://news.ycombinator.com/item?id=50516995",
-   "ta": "إظهار HN: مهارة Deslop المبنية على أبحاث علم اللغة واللسانيات النفسية"
   }
  ]
 }
