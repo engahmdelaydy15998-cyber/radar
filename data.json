@@ -1,7 +1,82 @@
 {
- "updated": "2026-11-20T11:57:57Z",
+ "updated": "2026-11-20T14:58:43Z",
  "demo": false,
  "items": [
+  {
+   "id": "yt-tPszikxVpgE",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-20T13:31:58Z",
+   "t": "Clay's Head of AI on Reading Traces With Hundreds of Tool Calls",
+   "s": "Clay's new agent is broader than its earlier ones, and customers use it in ways the team didn't expect. Jeff Barg, Head of AI at Clay, tells Harrison…",
+   "tags": [
+    "LangChain"
+   ],
+   "url": "https://www.youtube.com/shorts/tPszikxVpgE"
+  },
+  {
+   "id": "hn-50574383",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-20T13:29:59Z",
+   "t": "Global stock markets slump as Anthropic's record IPO fails to stem AI sell-off",
+   "s": "48 نقطة، 21 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
+   "url2": "https://news.ycombinator.com/item?id=50574383"
+  },
+  {
+   "id": "hn-50573886",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-20T12:41:38Z",
+   "t": "If you stop writing code, you also get worse at reviewing it",
+   "s": "63 نقطة، 12 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://cekrem.github.io/posts/if-you-stop-writing-code-you-also-get-worse-at-reviewing-it/",
+   "url2": "https://news.ycombinator.com/item?id=50573886"
+  },
+  {
+   "id": "hn-50573681",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-20T12:16:36Z",
+   "t": "Epic Games Turns to AI Coding for the Unreal Engine",
+   "s": "29 نقطة، 25 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://spectrum.ieee.org/epic-games-unreal-engine-ai",
+   "url2": "https://news.ycombinator.com/item?id=50573681"
+  },
+  {
+   "id": "yt-AmP65h3quI4",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-20T12:00:31Z",
+   "t": "Learn Reactjs #15 - Default Values For Props",
+   "s": "Default Values For Props Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
+   "tags": [
+    "Elzero Web School"
+   ],
+   "url": "https://www.youtube.com/watch?v=AmP65h3quI4"
+  },
+  {
+   "id": "gn-neoshapesandsphereneusegenerativedesignandmetalbinderjetting",
+   "cat": "arch",
+   "src": "https://3dprinting.com/",
+   "ts": "2026-11-20T12:00:09Z",
+   "t": "Neoshapes and Spherene Use Generative Design and Metal Binder Jetting for Lightweight Jewelry",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOc3BXbzBoVmN2UVhod0h0MWxfNmE3NkNDTDVJeEhtRkVqc2otTW5DdmZYNFNlWld4WTRJV2J0ZVJTeXZpamVPM0tEUHBvLUc0ZjJXWm9DMzZ3QmRMcm9EQkFRU2Z0U21qZlltT1NyWmNnd251UGgtV0Y3ZDJTOG9lNElmTEREWGs3MVNocnFzNFVpLWl5V194QnEyY0tEeDFVYmt0M0R1cFQxLUZxMzBGaDZTYTN1NFZ2Snh0Vk9yaw?oc=5"
+  },
   {
    "id": "hn-50572503",
    "cat": "arch",
@@ -197,6 +272,19 @@
    "sa": "في سبتمبر 2008، في سلسلة من الجلسات التي تم تنظيمها على هامش بينالي البندقية للهندسة المعمارية الحادي عشر تحت اسم Dark Side Club، تم تقديم نص…"
   },
   {
+   "id": "hn-50569783",
+   "cat": "agents",
+   "src": "Hacker News",
+   "ts": "2026-11-20T03:26:51Z",
+   "t": "Mapping every neuron in Qwen3-8B",
+   "s": "26 نقطة، 2 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.fermionresearch.com/research/mapping-every-neuron-in-qwen3-8b/",
+   "url2": "https://news.ycombinator.com/item?id=50569783"
+  },
+  {
    "id": "gn-mcaaconferenceexploresaiandmepconstructiontechnology",
    "cat": "arch",
    "src": "Construction Owners",
@@ -319,6 +407,18 @@
    "url": "https://www.youtube.com/shorts/2qd2LEXDYpo",
    "ta": "لقد أعطيت Hark Pro ثلاث مهام يومية",
    "sa": "https://hark.link/mattberman لقد أعطيت Hark Pro ثلاث وظائف وأبقيت يدي بعيدًا عن لوحة المفاتيح. أولاً، قام بفرز صندوق الوارد الخاص بي ووضع علامة على الإيصالات التي تزيد قيمتها عن 200 دولار."
+  },
+  {
+   "id": "gn-ployaigatewayclaims8xfaster20xcheaperthanclaudecodeandcodexc",
+   "cat": "agents",
+   "src": "explainx.ai",
+   "ts": "2026-11-19T21:18:36Z",
+   "t": "Ploy AI Gateway Claims 8x Faster, 20x Cheaper Than Claude Code and Codex: Claimed vs Verified",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQSUo2NHR6RFpSYmlOTGlFQnQtTjVEVTk0dVBIeHRtOHRWZkNQQllQQWRoa0EtVGhUZ19sS3lJTEVqRlZvbnNaQXE1d084YXNxX3UyS0VnZktBTVdYOWhOZDdWdXhZekd3VDlKV2pNNmJrWGFGbDVxNG96clFXdW5ZMi1jbGM2dHFBTHJ0OWVEQkN3c1BnSFpiLUNTMDdmTEhJWm1wVVZwTmNtY3BZaHRB?oc=5"
   },
   {
    "id": "yt-YbZDDCHDSnE",
@@ -647,8 +747,7 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
-   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري"
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5"
   },
   {
    "id": "hn-50562528",
@@ -748,6 +847,19 @@
    "ta": "إظهار HN: شاهد برمجة مساحة الوزن أثناء العمل باستخدام WebGPU"
   },
   {
+   "id": "hn-50561199",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-19T15:16:02Z",
+   "t": "Show HN: Fast deterministic natural language search for OpenStreetMap data",
+   "s": "63 نقطة، 23 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://hippomaps.ch/?q=cafes+by+the+Limmat+100+m+from+the+lake+in+zurich#map=15.02/47.36708/8.54935",
+   "url2": "https://news.ycombinator.com/item?id=50561199"
+  },
+  {
    "id": "yt-JDsFHmq9hlA",
    "cat": "co",
    "src": "YouTube",
@@ -800,6 +912,19 @@
    ],
    "url": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon",
    "ta": "bookwjitchieni1986/blender-ai-mcp-addon: مساعد الذكاء الاصطناعي وخادم MCP لـ Blender: الدردشة المرئية وأدوات المشهد وسير العمل متعدد الوكلاء."
+  },
+  {
+   "id": "hn-50560595",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-19T14:29:49Z",
+   "t": "Floppy3.5: A portable 3.5-inch floppy WiFi NAS",
+   "s": "50 نقطة، 9 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/bigcrimping/floppy3.5",
+   "url2": "https://news.ycombinator.com/item?id=50560595"
   },
   {
    "id": "hn-50560461",
@@ -1125,6 +1250,18 @@
    ],
    "url": "https://github.com/Windsoft-Glazir/Glazir-Exporter",
    "ta": "Windsoft-Glazir/Glazir-Exporter: مُصدِّر Glazir من Windsoft — وظيفة Revit الإضافية لتبادل الرسومات والنماذج ثلاثية الأبعاد مع Glazir..."
+  },
+  {
+   "id": "gh-1463683138",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-19T04:58:46Z",
+   "t": "INK-Q/agy-fast: Non-invasive MCP accelerator plugin for Google Antigravity (CLI/Desktop/IDE): cuts LLM tu…",
+   "s": "105 نجمة، لغة TypeScript",
+   "tags": [
+    "جديد كلياً"
+   ],
+   "url": "https://github.com/INK-Q/agy-fast"
   },
   {
    "id": "hn-50555712",
@@ -4196,151 +4333,6 @@
    ],
    "url": "https://blog.rhett.info/duolingo-screen-time-uninstall/",
    "ta": "يستخدم Duolingo إذن وقت الشاشة لمنع إلغاء التثبيت"
-  },
-  {
-   "id": "hn-50520804",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-16T18:12:48Z",
-   "t": "Strengthening the fight against online child sexual abuse",
-   "s": "110 نقطة، 257 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://openai.com/index/strengthening-online-child-safety/",
-   "ta": "تعزيز مكافحة الاعتداء الجنسي على الأطفال عبر الإنترنت"
-  },
-  {
-   "id": "hn-50520741",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-16T18:08:04Z",
-   "t": "Show HN: Fakemetrics.com – \"build in public\" like a superstar",
-   "s": "28 نقطة، 8 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://fakemetrics.com/",
-   "ta": "إظهار HN: Fakemetrics.com - \"البناء في الأماكن العامة\" مثل النجم"
-  },
-  {
-   "id": "hn-50520518",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-16T17:52:23Z",
-   "t": "Michael Mann's 'Heat' Copyright Fight Turns on a Deal with Himself",
-   "s": "38 نقطة، 6 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://copyrightlately.com/michael-mann-heat-copyright-termination/",
-   "ta": "معركة حقوق الطبع والنشر التي خاضها مايكل مان \"هيت\" تؤدي إلى صفقة مع نفسه"
-  },
-  {
-   "id": "yt-kMdHCyAnNHA",
-   "cat": "agents",
-   "src": "YouTube",
-   "ts": "2026-11-16T17:42:57Z",
-   "t": "Box CEO Explains How AI Is Changing Software",
-   "s": "Join My Newsletter for Regular AI Updates 👇🏼 https://forwardfuture.com My Links 🔗 👉🏻 X: https://x.com/matthewberman 👉🏻 Forward Future X: https://x.co…",
-   "tags": [
-    "Matthew Berman"
-   ],
-   "url": "https://www.youtube.com/watch?v=kMdHCyAnNHA",
-   "ta": "يشرح الرئيس التنفيذي لشركة Box كيف يعمل الذكاء الاصطناعي على تغيير البرامج",
-   "sa": "انضم إلى رسالتي الإخبارية للحصول على تحديثات منتظمة للذكاء الاصطناعي 👇🏼 https://forwardfuture.com روابطي 🔗 👉🏻 X: https://x.com/matthewberman 👉🏻 Forward Future X: https://x.co..."
-  },
-  {
-   "id": "gn-googlespotsaiagentturningsecuritypatchesintoexploits",
-   "cat": "agents",
-   "src": "Hackread",
-   "ts": "2026-11-16T17:28:07Z",
-   "t": "Google Spots AI Agent Turning Security Patches Into Exploits",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBudURQaENzTkI4X2d2WGU3Y2pxc2tuRGMtZ0w2NUhfalB1d3lWOTRNc3Z4WURQcVZaUHhOblNKRGw5T0trQ0huck5EYzdVUnlNdzJTU1BxaGFYeWE2MXlITUk4UzljRHBESXpOdjZnay03SU9STFRsZGtiOA?oc=5",
-   "ta": "جوجل تكتشف وكيل الذكاء الاصطناعي الذي يحول التصحيحات الأمنية إلى برمجيات إكسبلويت"
-  },
-  {
-   "id": "hn-50520148",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-16T17:25:35Z",
-   "t": "How Billions in Safe Insurance Money Is Being Bet on A.I. Debt",
-   "s": "25 نقطة، 1 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.nytimes.com/2026/11/16/business/insurance-ai-debt.html",
-   "ta": "كيف يتم المراهنة بالمليارات من أموال التأمين الآمن على الذكاء الاصطناعي؟ دَين"
-  },
-  {
-   "id": "hn-50520076",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-16T17:20:28Z",
-   "t": "Ask HN: If AI tools are so good, why isn't your bug backlog empty?",
-   "s": "34 نقطة، 59 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://news.ycombinator.com/item?id=50520076",
-   "ta": "اسأل HN: إذا كانت أدوات الذكاء الاصطناعي جيدة جدًا، فلماذا لا يكون تراكم الأخطاء لديك فارغًا؟"
-  },
-  {
-   "id": "hn-50520027",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-16T17:16:55Z",
-   "t": "USA: RSF Urges Congress to Impeach FCC Chairman Brendan Carr",
-   "s": "14 نقطة، 0 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://rsf.org/en/usa-rsf-urges-congress-impeach-fcc-chairman-brendan-carr",
-   "ta": "الولايات المتحدة الأمريكية: مراسلون بلا حدود تحث الكونجرس على عزل رئيس لجنة الاتصالات الفيدرالية بريندان كار"
-  },
-  {
-   "id": "af-mments1xxuzggamd_loom_fun_added_radeon_9700_support_over_the",
-   "cat": "agents",
-   "src": "r/LocalLLaMA",
-   "ts": "2026-11-16T17:10:54Z",
-   "t": "AMD Loom Fun: Added Radeon 9700 support over the weekend. Benchmarked 48 models with an average 42% speedup over llama.cpp.",
-   "s": "",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xxuzgg/amd_loom_fun_added_radeon_9700_support_over_the/",
-   "ta": "AMD Loom Fun: تمت إضافة دعم Radeon 9700 خلال عطلة نهاية الأسبوع. تم قياس 48 طرازًا بمتوسط ​​سرعة 42% عبر llama.cpp."
-  },
-  {
-   "id": "gn-googlefindsexploit_agenttheaithatturnspatchesintoexploitsuna",
-   "cat": "agents",
-   "src": "Pasquale Pillitteri",
-   "ts": "2026-11-16T17:05:07Z",
-   "t": "Google finds exploit_agent, the AI that turns patches into exploits unaided",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOODI0VkhnSkg3eTdVSi1lS09wb01tcHExNlR2djhBeTJEbW1jT2xkb1JzcEpES2hkbjRIeVk5ZEg3bTNoS255RmVsS1VhamszelItQlRwS2kwT3MxQkdyVThneXFIZWhGaHRLcXRyN0VRNmhzS1FSXzlnWFhYTTQ2NXBmandNa0R1SDhqaFd6eDhLUF9hZTdPc210S1I?oc=5",
-   "ta": "تعثر Google على Exploit_agent، وهو الذكاء الاصطناعي الذي يحول التصحيحات إلى برامج استغلال دون مساعدة"
-  },
-  {
-   "id": "yt-vVVdxMwPBuA",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-16T16:55:56Z",
-   "t": "How Check Point speeds up vulnerability research with Daybreak | OpenAI for Cybersecurity",
-   "s": "Check Point CTO Jonathan Zanger explains how his team uses OpenAI Daybreak to analyze vulnerabilities and turn findings into protections for customer…",
-   "tags": [
-    "OpenAI"
-   ],
-   "url": "https://www.youtube.com/watch?v=vVVdxMwPBuA",
-   "ta": "كيف تعمل Check Point على تسريع أبحاث الثغرات الأمنية باستخدام Daybreak | OpenAI للأمن السيبراني",
-   "sa": "يشرح Check Point CTO جوناثان زانجر كيف يستخدم فريقه OpenAI Daybreak لتحليل نقاط الضعف وتحويل النتائج إلى حماية للعملاء..."
   }
  ]
 }
