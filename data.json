@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T11:50:02Z",
+ "updated": "2026-11-20T11:52:08Z",
  "demo": false,
  "items": [
   {
@@ -636,6 +636,19 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxORTRRckdxQTc3N21UMHdvWll6eGk1ekt0dnlVRE9xMl8wSE5PeVI2Vl9jUFhHTEtmQnF1UmxET25GVHVOUVBPMmVQa3lpcmxiZXZXeXVCX1B2U01hTHE3NkJyWHVBcnYzazdZaEdnNHp3RWR6bktWRWdWUUtCdkxxRU9FQ0RiRU5SeW9TcWduNjN0MU1hNC02UjlmdTJUZnBPbDVrc0FB?oc=5",
    "ta": "أليساندرو ميليس يتحدث عن الذكاء الاصطناعي: كيف يغير الذكاء الاصطناعي الطريقة التي نتخيل بها الهندسة المعمارية"
+  },
+  {
+   "id": "gn-formabuildingdesignnamedbestincategorybyarchitecturalrecord",
+   "cat": "arch",
+   "src": "Autodesk News",
+   "ts": "2026-11-19T16:57:59Z",
+   "t": "Forma Building Design named Best in Category by Architectural Record",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
+   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري"
   },
   {
    "id": "hn-50562528",
@@ -1385,6 +1398,19 @@
    "url": "https://www.youtube.com/watch?v=KMBdcSgQ9og",
    "ta": "تعلم Reactjs #10 - فصل المكونات إلى ملفات",
    "sa": "فصل المكونات إلى ملفات الدروس والواجبات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+  },
+  {
+   "id": "gn-venturebeatgooglelaunchesgemini4neonbutcarbonstokenratesarec",
+   "cat": "agents",
+   "src": "Digg",
+   "ts": "2026-11-18T20:35:30Z",
+   "t": "VentureBeat: Google launches Gemini 4 Neon—but Carbon’s token rates are cheaper for now",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE5QYUt6NEdXck1QRmk3cTJVSnhiQ2JLeTc4c2N0YkhfSTIxNGVuSmVCTW5vNTU4cUdaN1gxc3JJZVoyMVBW?oc=5",
+   "ta": "VentureBeat: أطلقت Google لعبة Gemini 4 Neon، لكن أسعار الرموز المميزة لـ Carbon أرخص في الوقت الحالي"
   },
   {
    "id": "yt-hT0qW_DRFLw",
@@ -4315,32 +4341,6 @@
    "url": "https://www.youtube.com/watch?v=vVVdxMwPBuA",
    "ta": "كيف تعمل Check Point على تسريع أبحاث الثغرات الأمنية باستخدام Daybreak | OpenAI للأمن السيبراني",
    "sa": "يشرح Check Point CTO جوناثان زانجر كيف يستخدم فريقه OpenAI Daybreak لتحليل نقاط الضعف وتحويل النتائج إلى حماية للعملاء..."
-  },
-  {
-   "id": "gn-agenticaiframeworkspushhackingthreattoinflectionpointgooglew",
-   "cat": "agents",
-   "src": "Cybersecurity Dive",
-   "ts": "2026-11-16T16:43:41Z",
-   "t": "Agentic AI frameworks push hacking threat to ‘inflection point,’ Google warns",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNN3V2WUd5TFN5eTU4SnRFVldnVXpiMk5jWTBPb1d0Z1ItNjVEbDBSUG04ZFg5c2lWUVA4YUdpUWJoRi1MU3pWR21fUGZncDMyWndHWnFFZEtzTVY2MjQ0VzlpTTM4OVBfUWNQU1NIUFRhVEVEaS1xNmJqQkZmRnVadTNJUlZpLW9Na2VscHlB?oc=5",
-   "ta": "تحذر Google من أن أطر عمل الذكاء الاصطناعي الوكيل تدفع تهديد القرصنة إلى \"نقطة انعطاف\""
-  },
-  {
-   "id": "gn-nemetscheksdesignslumpiscyclicalnotanaicasualtydeutschebanka",
-   "cat": "arch",
-   "src": "ad-hoc-news.de",
-   "ts": "2026-11-16T15:21:15Z",
-   "t": "Nemetschek's Design Slump Is Cyclical, Not an AI Casualty, Deutsche Bank Argues",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNdlQtb3d5T0haTDU3VlZTeW16d3VaVkFjQzBDZm0zMEtxd3FHaWt5M1BMMkMwa056MlBKdnEzaGZEbHFKekUwQVZjeEdkeTg0b1Z6WFk2WDZ2a05mZHJObllXd3NUTFBHRktxWmQ5d19KUnA2Z1RHTG5fZ1BCZ3JjSmZSSDFGYVNfUFRweWxvVURweUkzeG4tODluMkZQMVUzYXNadTBndkM1bk9LYUFGZmZ3NWF2YWdUSHJKUDdoZ1labGtqZ1ZEZGx5VVUzeHhRNU1fYWJ1N3RzTFhKYlpndWNDcw?oc=5",
-   "ta": "ركود تصميم نيميتشيك هو أمر دوري، وليس ضحية للذكاء الاصطناعي، كما يقول دويتشه بنك"
   }
  ]
 }
