@@ -1,0 +1,10 @@
+{
+  "appId": "com.sekkati.app",
+  "appName": "سكّتي",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false,
+    "useLegacyBridge": true
+  },
+  "plugins": {}
+}

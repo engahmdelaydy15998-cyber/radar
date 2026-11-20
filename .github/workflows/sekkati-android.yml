@@ -1,0 +1,67 @@
+name: sekkati-android
+
+# Builds the سكّتي Android app (Capacitor shell around sekkati/) and publishes the APK
+# to the "sekkati-apk" release, so it always downloads from the same link.
+on:
+  push:
+    paths:
+      - "sekkati/**"
+      - "sekkati-android/**"
+      - ".github/workflows/sekkati-android.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sekkati-android
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: sekkati-android
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Install
+        run: npm ci
+
+      - name: Copy web app into the Android project
+        run: npm run sync
+
+      - name: Build APK
+        run: |
+          chmod +x android/gradlew
+          cd android && ./gradlew assembleDebug --no-daemon --stacktrace
+
+      - name: Rename APK
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk sekkati.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sekkati-apk
+          path: sekkati-android/sekkati.apk
+
+      - name: Publish to the sekkati-apk release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! gh release view sekkati-apk >/dev/null 2>&1; then
+            gh release create sekkati-apk --target "$GITHUB_SHA" --title "سكّتي - تطبيق أندرويد" \
+              --notes "حمّل sekkati.apk وثبّته (اسمح بالتثبيت من مصادر غير معروفة). بيتحدّث تلقائي مع كل تعديل."
+          fi
+          gh release upload sekkati-apk sekkati.apk --clobber

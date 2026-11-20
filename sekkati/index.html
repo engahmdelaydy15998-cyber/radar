@@ -442,6 +442,26 @@ function overlap(Da, Db){                         // نسبة نقاط Da الق
 /*CORE_END*/
 
 const $ = id => document.getElementById(id);
+/* تطبيق الأندرويد (Capacitor): GPS في الخلفية، نطق من الموبايل نفسه، وفقاعة فوق جوجل مابس. في المتصفح كل ده بيتجاهل. */
+const NATIVE = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+const NP = NATIVE ? window.Capacitor.Plugins : {};
+let appActive = true, overlayWant = null, overlayShown = '', overlayAsked = false;
+function overlaySet(text, level){                  // آخر محتوى للفقاعة؛ بتظهر بس والتطبيق في الخلفية
+  overlayWant = text ? {text, level:level || 'info'} : null;
+  if (!NATIVE || !NP.Bubble) return;
+  const k = overlayWant && !appActive ? overlayWant.level + overlayWant.text : '';
+  if (k === overlayShown) return;
+  overlayShown = k;
+  if (k) NP.Bubble.show(overlayWant).catch(() => {}); else NP.Bubble.hide().catch(() => {});
+}
+function ensureOverlay(){                          // إذن "الظهور فوق التطبيقات" مرة واحدة
+  if (!NATIVE || !NP.Bubble || overlayAsked) return;
+  overlayAsked = true;
+  NP.Bubble.canDraw().then(r => {
+    if (!r.value && confirm('عشان تنبيهات الرادار والكارتة تظهر فوق جوجل مابس، اسمح لسكّتي بـ"الظهور فوق التطبيقات الأخرى". أفتح الإعدادات؟')) NP.Bubble.requestDraw();
+  }).catch(() => {});
+}
+if (NATIVE && NP.App) NP.App.addListener('appStateChange', st => { appActive = st.isActive; overlaySet(overlayWant && overlayWant.text, overlayWant && overlayWant.level); });
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const arab = n => Math.round(n).toLocaleString('ar-EG');
 const fmtT = s => { s = Math.round(s); const h = Math.floor(s/3600), m = Math.floor(s%3600/60), x = s%60;
@@ -550,7 +570,14 @@ $('teachX').onclick = () => { $('teach').hidden = true; };
 $('hint').onclick = () => { if (mode) setMode(mode); };
 function followGoogle(){                           // لحد ما جودة طرقنا تتحسن: جوجل بيدّي الاتجاهات، وإحنا بنسجّل الرحلة بصمت
   if (!start || !dest){ $('msg').textContent = 'محتاج من وإلى الأول عشان أفتحلك جوجل مابس.'; return; }
-  window.open(`https://www.google.com/maps/dir/?api=1&origin=${start.lat},${start.lon}&destination=${dest.lat},${dest.lon}&travelmode=driving&dir_action=navigate`, '_blank');
+  const url = `https://www.google.com/maps/dir/?api=1&origin=${start.lat},${start.lon}&destination=${dest.lat},${dest.lon}&travelmode=driving&dir_action=navigate`;
+  if (NATIVE){                                     // في التطبيق: جوجل يوصّل، وسكّتي فوقه بالفقاعة والتنبيهات والتسجيل
+    if (!$('name').value.trim()) $('name').value = 'متابعة جوجل إلى ' + (dest.name || 'الوجهة');
+    startFree();
+    (NP.AppLauncher ? NP.AppLauncher.openUrl({url}) : Promise.reject()).catch(() => { location.href = url; });
+    return;
+  }
+  window.open(url, '_blank');
   if (watchId === null){ if (!$('name').value.trim()) $('name').value = 'متابعة جوجل إلى ' + (dest.name || 'الوجهة'); startRec(); }
 }
 function setPlace(which, p, label){
@@ -824,6 +851,13 @@ function pickArVoice(){
 }
 if ('speechSynthesis' in window){ pickArVoice(); speechSynthesis.onvoiceschanged = pickArVoice; }
 function speak(t, done){
+  if (voiceOn && NATIVE && NP.TextToSpeech){       // نطق الموبايل نفسه، وبيشتغل والتطبيق في الخلفية
+    const end = () => { if (done) done(); };
+    NP.TextToSpeech.stop().catch(() => {})
+      .then(() => NP.TextToSpeech.speak({text:t, lang:'ar-EG', rate:1, pitch:1, volume:1}))
+      .catch(() => NP.TextToSpeech.speak({text:t, lang:'ar', rate:1, pitch:1, volume:1})).then(end, end);
+    return;
+  }
   if (!voiceOn || !('speechSynthesis' in window)){ if (done) setTimeout(done, 200); return; }
   try {
     const u = new SpeechSynthesisUtterance(t); u.lang = arVoice ? arVoice.lang : 'ar-EG';
@@ -915,6 +949,7 @@ function followCar(p, me, spd){                    // الخريطة بتلف م
 }
 async function startFree(){                         // قيادة من غير وجهة: تسجيل + تنبيهات + أرقام الطريق علطول
   if (navOn) return;
+  ensureOverlay();
   nav = {free:true, spoken:{}, slowSince:0, lastAsk:0}; navOn = true; hdFrom = null; clearBubbles(); $('teach').hidden = true; $('nnext').hidden = true;
   document.body.classList.add('nav'); $('nav').hidden = false; try { map.resize(); } catch(e){}
   $('narrow').textContent = '🚗'; $('ndist').textContent = ''; $('ntext').textContent = 'قيادة حرة: بسجّل الطريق وبنبّهك قبل الرادارات والكارتات';
@@ -939,6 +974,8 @@ function freeUpdate(p){
   });
   const kind = np ? (np.kind || 'radar') : '', over = np && kind === 'radar' && np.max && spd > np.max + 3;
   $('nrad').hidden = !np;
+  overlaySet(np ? POI_IC[kind] + ' ' + POI_AR[kind] + ' بعد ' + fmtD(dp) + (np.max ? ' · الحد ' + arab(np.max) : '') : arab(Math.round(spd)) + ' كم/س · سكّتي شغالة',
+             np ? (over ? 'danger' : 'warn') : 'info');
   if (np){
     $('nrad').textContent = POI_IC[kind] + ' ' + POI_AR[kind] + ' بعد ' + fmtD(dp) + (np.max ? ' · الحد ' + arab(np.max) : '');
     $('nrad').classList.toggle('warn', !!over);
@@ -991,6 +1028,7 @@ function navRender(speed, off){
   $('nremkm').textContent = fmtD(rem);
   const np = n.pois.find(r => r.at > here), dp = np ? np.at - here : 0, over = np && np.kind === 'radar' && np.max && speed > np.max + 3;
   $('nrad').hidden = !(np && dp <= 2000);
+  overlaySet(np && dp <= 2000 ? POI_IC[np.kind] + ' ' + POI_AR[np.kind] + ' بعد ' + fmtD(dp) : arrowOf(st) + ' ' + fmtD(dNext) + ' · ' + instrOf(st), np && dp <= 2000 ? (over ? 'danger' : 'warn') : 'info');
   if (np && dp <= 2000){ $('nrad').textContent = POI_IC[np.kind] + ' ' + POI_AR[np.kind] + ' بعد ' + fmtD(dp) + (np.max ? ' · الحد ' + arab(np.max) : ''); $('nrad').classList.toggle('warn', !!over); }
   if (off) return;
   if (np) [500, 150].forEach(th => {
@@ -1017,7 +1055,7 @@ async function reroute(me){
 }
 function exitNav(){
   if (!navOn) return;
-  navOn = false; nav = null; lastPos = null; hdFrom = null; $('nnext').hidden = true;
+  navOn = false; nav = null; lastPos = null; hdFrom = null; $('nnext').hidden = true; overlaySet(null);
   document.body.classList.remove('nav'); $('nav').hidden = true; $('nrad').hidden = true; $('netal').textContent = 'الوصول';
   ['alt', 'ask', 'rpt', 'cl'].forEach(i => $(i).hidden = true);
   try { map.resize(); map.easeTo({pitch:0, bearing:0, padding:{top:0, bottom:0, left:0, right:0}, duration:500}); } catch(e){}
@@ -1166,16 +1204,26 @@ $('clmic').onclick = async () => {
 
 /* التسجيل */
 let watchId = null, pts = [], tick = null, wl = null, t0 = 0;
+let bgWatch = null;
+function onFix(p){
+  pts.push({t:p.timestamp, lat:p.coords.latitude, lon:p.coords.longitude, acc:p.coords.accuracy, v:p.coords.speed});
+  if (navOn) navUpdate(p);
+  else { const ll = [p.coords.longitude, p.coords.latitude]; if (mMe) mMe.setLngLat(ll); else mMe = addMk(mkEl('', 'me'), ll[0], ll[1]); try { map.easeTo({center:ll, duration:500}); } catch(e){} }
+}
 async function startRec(){
-  if (!('geolocation' in navigator)){ $('msg').textContent = 'المتصفح ده مش بيدعم GPS.'; return; }
+  if (!NATIVE && !('geolocation' in navigator)){ $('msg').textContent = 'المتصفح ده مش بيدعم GPS.'; return; }
   $('msg').textContent = ''; pts = []; t0 = Date.now();
   try { wl = await navigator.wakeLock.request('screen'); } catch(e){}
-  watchId = navigator.geolocation.watchPosition(p => {
-    pts.push({t:p.timestamp, lat:p.coords.latitude, lon:p.coords.longitude, acc:p.coords.accuracy, v:p.coords.speed});
-    if (navOn) navUpdate(p);
-    else { const ll = [p.coords.longitude, p.coords.latitude]; if (mMe) mMe.setLngLat(ll); else mMe = addMk(mkEl('', 'me'), ll[0], ll[1]); try { map.easeTo({center:ll, duration:500}); } catch(e){} }
-  }, e => { $('msg').textContent = e.code === 1 ? 'لازم تسمح للموقع من إعدادات المتصفح، والصفحة لازم تتفتح عبر https.' : 'مشكلة في الـGPS: ' + e.message; },
-  {enableHighAccuracy:true, maximumAge:0, timeout:20000});
+  if (NATIVE && NP.BackgroundGeolocation){         // بيكمّل يسجّل والشاشة مقفولة أو جوجل مابس قدام
+    watchId = 'bg';
+    NP.BackgroundGeolocation.addWatcher({backgroundTitle:'سكّتي شغالة', backgroundMessage:'بتسجّل الطريق وبتنبهك قبل الرادارات والكارتات', requestPermissions:true, stale:false, distanceFilter:0},
+      (loc, err) => {
+        if (err){ $('msg').textContent = err.code === 'NOT_AUTHORIZED' ? 'لازم تسمح لسكّتي بالموقع من إعدادات التطبيق.' : 'مشكلة في الـGPS: ' + err.message; if (err.code === 'NOT_AUTHORIZED') NP.BackgroundGeolocation.openSettings(); return; }
+        if (loc) onFix({timestamp:loc.time, coords:{latitude:loc.latitude, longitude:loc.longitude, accuracy:loc.accuracy, speed:loc.speed, heading:loc.bearing}});
+      }).then(id => { if (watchId === null) NP.BackgroundGeolocation.removeWatcher({id}); else bgWatch = id; });
+  } else watchId = navigator.geolocation.watchPosition(onFix,
+    e => { $('msg').textContent = e.code === 1 ? 'لازم تسمح للموقع من إعدادات المتصفح، والصفحة لازم تتفتح عبر https.' : 'مشكلة في الـGPS: ' + e.message; },
+    {enableHighAccuracy:true, maximumAge:0, timeout:20000});
   tick = setInterval(live, 1000);
   $('rec').textContent = '■ إيقاف وحفظ'; $('rec').classList.add('red');
 }
@@ -1185,7 +1233,9 @@ function live(){
   $('lv').textContent = last && last.v != null ? Math.round(last.v * 3.6) : 0;
 }
 function stopRec(){
-  navigator.geolocation.clearWatch(watchId); clearInterval(tick);
+  if (bgWatch !== null){ NP.BackgroundGeolocation.removeWatcher({id:bgWatch}).catch(() => {}); bgWatch = null; }
+  else if (watchId !== 'bg') navigator.geolocation.clearWatch(watchId);
+  clearInterval(tick);
   try { wl && wl.release(); } catch(e){}
   $('rec').textContent = '▶ ابدأ التسجيل'; $('rec').classList.remove('red'); watchId = null;
   if (!navOn && mMe){ mMe.remove(); mMe = null; }

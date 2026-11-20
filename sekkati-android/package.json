@@ -1,0 +1,21 @@
+{
+  "name": "sekkati-android",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Android shell for سكّتي: background GPS, native speech, floating bubble over Google Maps",
+  "scripts": {
+    "web": "rm -rf www && mkdir -p www && cp -r ../sekkati/. www/ && rm -f www/HANDOFF.md www/sw.js",
+    "sync": "npm run web && npx cap sync android"
+  },
+  "dependencies": {
+    "@capacitor-community/background-geolocation": "^1.3.1",
+    "@capacitor-community/text-to-speech": "^8.0.2",
+    "@capacitor/android": "^8.6.2",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/app-launcher": "^8.0.1",
+    "@capacitor/core": "^8.6.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.6.2"
+  }
+}
