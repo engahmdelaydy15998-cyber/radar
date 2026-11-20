@@ -316,7 +316,7 @@ function topicOf(it) {
   else if (MCP_RE.test(x)) t = "mcp";
   else if (ADDIN_RE.test(x) && (it.cat === "arch" || BIMTOOL_RE.test(x))) t = "addins";
   else if (it.src === "GitHub") t = "oss";
-  else if (COURSE_RE.test((it.t || "") + " " + (it.ta || ""))) t = "courses";
+  else if (COURSE_RE.test(it.t || "")) t = "courses";
   else if (it.cat === "arch") t = "arch";
   else if (it.cat === "agents") t = "agents";
   else t = "news";
