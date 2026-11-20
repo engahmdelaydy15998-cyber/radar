@@ -581,7 +581,7 @@ def apply_watches(items):
 
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent"
 # tried in order; the first model the key can use is kept for the rest of the run
-GEMINI_MODELS = ["gemini-3.8-flash", "gemini-flash-latest", "gemini-4-hydrogen"]
+GEMINI_MODELS = ["gemini-flash-lite-latest", "gemini-3.1-flash-lite", "gemini-flash-latest"]
 TOPICS = ("arch", "addins", "agents", "mcp", "oss", "courses", "news")
 AI_SYSTEM = (
     "أنت محرر أخبار تقنية لمهندس معماري مصري مهتم بالـ BIM والذكاء الاصطناعي والـ agents والكود. "
@@ -604,7 +604,7 @@ def gemini_post(model, payload, key):
     }).encode("utf-8")
     req = urllib.request.Request(GEMINI_URL % model, data=body, method="POST",
                                  headers={"x-goog-api-key": key, "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=150) as r:
+    with urllib.request.urlopen(req, timeout=60) as r:
         raw = r.read().decode("utf-8", "replace")
     try:
         parts = json.loads(raw)["candidates"][0]["content"]["parts"]

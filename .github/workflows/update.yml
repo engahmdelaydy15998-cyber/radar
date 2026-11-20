@@ -24,23 +24,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Probe Gemini (temporary)
-        continue-on-error: true
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: |
-          set +e
-          echo "== list"
-          curl -sS -m 30 "https://generativelanguage.googleapis.com/v1beta/models?pageSize=200" -H "x-goog-api-key: $GEMINI_API_KEY" -o /tmp/m.json -w "HTTP %{http_code} in %{time_total}s\n"
-          grep -o '"name": "models/[^"]*"' /tmp/m.json | sed 's/.*models\///; s/"//' | tr '\n' ' '; echo
-          for m in $(grep -o '"name": "models/[^"]*"' /tmp/m.json | sed 's/.*models\///; s/"//' | grep -E 'flash|lite' | grep -v -E 'image|tts|audio|live|embed' | head -6); do
-            echo "== gen $m"
-            curl -sS -m 120 -o /tmp/r.json -w "HTTP %{http_code} in %{time_total}s\n" \
-              "https://generativelanguage.googleapis.com/v1beta/models/$m:generateContent" \
-              -H "x-goog-api-key: $GEMINI_API_KEY" -H "Content-Type: application/json" \
-              -d '{"contents":[{"parts":[{"text":"say ok"}]}]}'
-            head -c 200 /tmp/r.json 2>/dev/null; echo
-          done
       - name: Collect new items
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
