@@ -93,7 +93,8 @@ h2{font-size:15px;margin:0 0 8px;color:var(--mut);font-weight:500}
 .mk.car:after{content:"";position:absolute;top:7px;width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:15px solid #050505}
 body.nav{overflow:hidden;padding:0;max-width:none}
 body.nav #stage{position:fixed;inset:0;height:100%;min-height:0;border-radius:0;z-index:1}
-body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,body.nav #sheet{display:none}
+body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,body.nav #sheet,body.nav #freeGo{display:none}
+#freeGo{position:absolute;left:10px;top:128px;z-index:4;border-radius:999px;padding:12px 18px;background:var(--ok);color:#050505;font-weight:700;box-shadow:0 4px 12px rgba(0,0,0,.45)}
 #nav[hidden]{display:none}
 #nbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--card);color:var(--ink);border-bottom:1px solid var(--line);
   display:flex;align-items:center;gap:14px;padding:calc(env(safe-area-inset-top) + 10px) 16px 12px}
@@ -147,6 +148,7 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
     <button class="chip" id="tiles">🗺 شكل</button>
     <button class="chip" id="gfollow" style="background:#4285f4;color:#fff;border-color:#4285f4">🧭 جوجل + سجّل</button>
   </div>
+  <button id="freeGo">🚗 ابدأ السواقة</button>
   <div id="sheet">
     <div class="handle"></div>
     <div id="res"></div>
@@ -188,6 +190,7 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
   <div class="card">
     <h2>📖 دليل الاستخدام</h2>
     <div class="note">
+      <b>🚗 ابدأ السواقة:</b> زرار أخضر على الخريطة. من غير ما تكتب من/إلى، بيفتح شاشة القيادة، ويسجّل الطريق، ويوريك السرعة والوقت والوقفات، وينبّهك قبل أي رادار أو كارتة أو لجنة قدامك.<br><br>
       <b>🗺 شكل:</b> بيبدّل بين 4 أشكال للخريطة: عادي (فيكتور)، أسود، خرائط OSM، وقمر صناعي.<br><br>
       <b>اسأل Claude:</b> قول "سجل مشاكل طريقي" وهيبدأ يسجّل رحلتك فوراً (من غير ما يحتاج مفتاح API)، وقول "وقف التسجيل" عشان يحفظها. أي سؤال تاني محتاج مفتاح Anthropic محفوظ فوق.<br><br>
       <b>من/إلى:</b> اكتب أو اضغط "موقعي"، أو اضغط على الخريطة واختار بداية/وجهة. الطرق بتتحسب تلقائي وتظهر تحت كخريطة منبثقة (sheet) فوق الخريطة.<br><br>
@@ -218,7 +221,7 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
   <div id="nbot">
     <div id="nstats">
       <div class="nb"><b id="nspd">٠</b><span>كم/س</span></div>
-      <div class="nb"><b id="neta">--:--</b><span>الوصول</span></div>
+      <div class="nb"><b id="neta">--:--</b><span id="netal">الوصول</span></div>
       <div class="nb"><b id="nrem">-- د</b><span id="nremkm">-- كم</span></div>
     </div>
     <div id="nbtn">
@@ -784,17 +787,75 @@ async function startNav(sel){
   speak(instrOf(nav.steps[0]));
   navRender(0);
 }
+function brg(a, b){
+  const r = Math.PI / 180, dl = (b.lon - a.lon) * r;
+  const y = Math.sin(dl) * Math.cos(b.lat * r), x = Math.cos(a.lat * r) * Math.sin(b.lat * r) - Math.sin(a.lat * r) * Math.cos(b.lat * r) * Math.cos(dl);
+  return (Math.atan2(y, x) / r + 360) % 360;
+}
+function speedOf(p){                               // كم/س؛ بعض المتصفحات مش بتبعت speed فبنحسبها من آخر نقطتين
+  if (p.coords.speed != null && !isNaN(p.coords.speed)) return p.coords.speed * 3.6;
+  const a = pts[pts.length - 2], b = pts[pts.length - 1], dt = a && b ? (b.t - a.t) / 1000 : 0;
+  return dt > 0 && dt < 30 ? hav(a, b) / dt * 3.6 : 0;
+}
+let hdFrom = null;
+function followCar(p, me, spd){                    // الخريطة بتلف مع اتجاه العربية زي جوجل؛ لو المتصفح مش بيبعت heading بنحسبه من الحركة
+  let raw = p.coords.heading;
+  if (raw == null || isNaN(raw)){ raw = null; if (!hdFrom) hdFrom = me; else if (hav(hdFrom, me) > 12){ raw = brg(hdFrom, me); hdFrom = me; } }
+  if (raw != null && spd > 5){ const d = ((raw - heading + 540) % 360) - 180; heading = (heading + d * 0.6 + 360) % 360; }
+  if (mMe) mMe.setLngLat([me.lon, me.lat]); else mMe = addMk(mkEl('', 'car'), me.lon, me.lat);
+  try { map.easeTo({center:[me.lon, me.lat], zoom:17, pitch:55, bearing:heading, duration:800, padding:{top:280, bottom:60, left:0, right:0}, essential:true}); } catch(e){}
+}
+async function startFree(){                         // قيادة من غير وجهة: تسجيل + تنبيهات + أرقام الطريق علطول
+  if (navOn) return;
+  nav = {free:true, spoken:{}, slowSince:0, lastAsk:0}; navOn = true; hdFrom = null;
+  document.body.classList.add('nav'); $('nav').hidden = false; try { map.resize(); } catch(e){}
+  $('narrow').textContent = '🚗'; $('ndist').textContent = ''; $('ntext').textContent = 'قيادة حرة: بسجّل الطريق وبنبّهك قبل الرادارات والكارتات';
+  $('netal').textContent = 'الوقت'; $('nspd').textContent = '٠'; $('neta').textContent = '00:00'; $('nrem').textContent = '٠ وقفة'; $('nremkm').textContent = '٠ م';
+  drawRoutes([]); drawMarks();
+  speak('تمام، بدأت أسجّل الطريق، وهنبّهك قبل الرادارات والكارتات');
+  if (watchId === null){ if (!$('name').value.trim()) $('name').value = 'قيادة حرة ' + new Date().toLocaleDateString('ar-EG'); navStartedRec = true; await startRec(); }
+}
+function freeUpdate(p){
+  const me = {lat:p.coords.latitude, lon:p.coords.longitude}, spd = speedOf(p); lastPos = me;
+  followCar(p, me, spd);
+  const r = analyze(pts);
+  $('nspd').textContent = arab(Math.round(spd));
+  $('neta').textContent = fmtT((Date.now() - t0) / 1000);
+  $('nrem').textContent = arab(r.stops) + ' وقفة';
+  $('nremkm').textContent = fmtD(r.dist);
+  let np = null, dp = 2000;                         // أقرب حاجة قدامك على نفس خط سيرك تقريباً
+  if (spd > 5) allPois().forEach(q => {
+    const d = hav(me, q); if (d >= dp) return;
+    const a = ((brg(me, q) - heading + 540) % 360 - 180) * Math.PI / 180;
+    if (Math.cos(a) > 0.5 && Math.abs(d * Math.sin(a)) < 45){ np = q; dp = d; }
+  });
+  const kind = np ? (np.kind || 'radar') : '', over = np && kind === 'radar' && np.max && spd > np.max + 3;
+  $('nrad').hidden = !np;
+  if (np){
+    $('nrad').textContent = POI_IC[kind] + ' ' + POI_AR[kind] + ' بعد ' + fmtD(dp) + (np.max ? ' · الحد ' + arab(np.max) : '');
+    $('nrad').classList.toggle('warn', !!over);
+    const id = kind + np.lat.toFixed(4) + np.lon.toFixed(4);
+    [500, 150].forEach(th => {
+      const key = id + ':' + th;
+      if (dp <= th && !nav.spoken[key]){ nav.spoken[key] = 1; if (dp > th * 0.6) speak(POI_AR[kind] + ' بعد ' + (th === 500 ? 'خمسمية' : 'ميت وخمسين') + ' متر' + (np.max ? '، الحد ' + arab(np.max) : '')); }
+    });
+    if (over && dp < 300 && !nav.spoken['o' + id]){ nav.spoken['o' + id] = 1; speak('هدّي السرعة'); }
+  }
+  if (spd < 6){
+    if (!nav.slowSince) nav.slowSince = Date.now();
+    else if (Date.now() - nav.slowSince > 25000 && Date.now() - nav.lastAsk > 180000 && r.dist > 80) askWhy();
+  } else nav.slowSince = 0;
+}
 function navUpdate(p){
   if (!nav) return;
+  if (nav.free) return freeUpdate(p);
   const me = {lat:p.coords.latitude, lon:p.coords.longitude}, D = nav.D; lastPos = me;
   let bi = -1, bd = 1e12;
   const scan = (a, b) => { for (let i = a; i <= b; i++){ const d = hav(D[i], me); if (d < bd){ bd = d; bi = i; } } };
   scan(Math.max(0, nav.last - 10), Math.min(D.length - 1, nav.last + 150));
   if (bd > 60) scan(0, D.length - 1);
-  const spd = p.coords.speed != null && !isNaN(p.coords.speed) ? p.coords.speed * 3.6 : 0;
-  if (p.coords.heading != null && !isNaN(p.coords.heading) && spd > 5){ const d = ((p.coords.heading - heading + 540) % 360) - 180; heading = (heading + d * 0.6 + 360) % 360; }
-  if (mMe) mMe.setLngLat([me.lon, me.lat]); else mMe = addMk(mkEl('', 'car'), me.lon, me.lat);
-  try { map.easeTo({center:[me.lon, me.lat], zoom:17, pitch:55, bearing:heading, duration:800, padding:{top:280, bottom:60, left:0, right:0}, essential:true}); } catch(e){}
+  const spd = speedOf(p);
+  followCar(p, me, spd);
   if (bd > 50){ nav.off++; if (nav.off >= 3) reroute(me); navRender(spd, true); return; }
   nav.off = 0; nav.last = bi;
   navRender(spd);
@@ -845,8 +906,8 @@ async function reroute(me){
 }
 function exitNav(){
   if (!navOn) return;
-  navOn = false; nav = null; lastPos = null;
-  document.body.classList.remove('nav'); $('nav').hidden = true; $('nrad').hidden = true;
+  navOn = false; nav = null; lastPos = null; hdFrom = null;
+  document.body.classList.remove('nav'); $('nav').hidden = true; $('nrad').hidden = true; $('netal').textContent = 'الوصول';
   ['alt', 'ask', 'rpt', 'cl'].forEach(i => $(i).hidden = true);
   try { map.resize(); map.easeTo({pitch:0, bearing:0, padding:{top:0, bottom:0, left:0, right:0}, duration:500}); } catch(e){}
   try { speechSynthesis.cancel(); } catch(e){}
@@ -856,6 +917,7 @@ function exitNav(){
   if (results.length) showRoutes(Math.min(selIdx, results.length - 1));
 }
 $('nexit').onclick = exitNav;
+$('freeGo').onclick = startFree;
 $('nmute').onclick = () => { voiceOn = !voiceOn; $('nmute').textContent = voiceOn ? '🔊' : '🔇'; if (!voiceOn){ try { speechSynthesis.cancel(); } catch(e){} } };
 
 /* البلاغات أثناء القيادة */
@@ -892,6 +954,7 @@ function handleReport(kind){
 /* اقتراح طريق بديل: نقارن الباقي من الطريق الحالي ببدائل من مكانك */
 let altCand = null;
 async function suggestAlt(force){
+  if (nav && nav.free){ if (force) speak('محتاج وجهة الأول عشان أدورلك على طريق تاني'); return; }
   if (!nav || !lastPos) return;
   const old = nav;
   try {
@@ -914,7 +977,7 @@ $('altNo').onclick = () => { $('alt').hidden = true; };
 $('akey').value = (() => { try { return localStorage.getItem('sekkati-akey') || ''; } catch(e){ return ''; } })();
 $('akeySave').onclick = () => { try { localStorage.setItem('sekkati-akey', $('akey').value.trim()); $('msg').textContent = ''; } catch(e){} };
 $('akeyClear').onclick = () => { try { localStorage.removeItem('sekkati-akey'); } catch(e){} $('akey').value = ''; };
-const APP_GUIDE = 'سكّتي تطبيق ملاحة. لو قلت "سجل مشاكل طريقي" بينفّذها فوراً (يبدأ تسجيل الرحلة من غير ما يحتاج مفتاح API)، وقول "وقف التسجيل" عشان يحفظها. اكتب من/إلى وهيحسب طرق ويرتبهم بالأفضل. 🗺 شكل بيبدّل بين 4 أشكال للخريطة (فيكتور/أسود/OSM/قمر صناعي). أزرار التعليم 📷 رادار / 💳 كارتة / ⛔ مقفول / ↩️ يوتيرن / 🚓 لجنة: اضغط الزرار وبعدين مكانه على الخريطة. 🧭 جوجل + سجّل بيفتح جوجل مابس ويسجّل الرحلة بصمت. ▶ ابدأ القيادة شاشة ملء شاشة بتنطق التعليمات والتنبيهات. تسجيل رحلة بيتعلّم من طرقك. فيه نسخة احتياطية (ملف .json) من كارت الرحلات.';
+const APP_GUIDE = 'سكّتي تطبيق ملاحة. لو قلت "سجل مشاكل طريقي" بينفّذها فوراً (يبدأ تسجيل الرحلة من غير ما يحتاج مفتاح API)، وقول "وقف التسجيل" عشان يحفظها. زرار 🚗 ابدأ السواقة بيبدأ قيادة من غير وجهة (تسجيل + تنبيهات رادار/كارتة قدامك). اكتب من/إلى وهيحسب طرق ويرتبهم بالأفضل. 🗺 شكل بيبدّل بين 4 أشكال للخريطة (فيكتور/أسود/OSM/قمر صناعي). أزرار التعليم 📷 رادار / 💳 كارتة / ⛔ مقفول / ↩️ يوتيرن / 🚓 لجنة: اضغط الزرار وبعدين مكانه على الخريطة. 🧭 جوجل + سجّل بيفتح جوجل مابس ويسجّل الرحلة بصمت. ▶ ابدأ القيادة شاشة ملء شاشة بتنطق التعليمات والتنبيهات. تسجيل رحلة بيتعلّم من طرقك. فيه نسخة احتياطية (ملف .json) من كارت الرحلات.';
 function openAsk(){ hideSheets(); $('cl').hidden = false; if (!$('akey').value.trim()) $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; }
 $('nclaude').onclick = () => { const h = $('cl').hidden; hideSheets(); $('cl').hidden = !h; if (!$('akey').value.trim() && !h === false) $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; };
 $('askgen').onclick = openAsk;
@@ -942,11 +1005,11 @@ function tryVoiceCommand(q){                       // أوامر بتتنفذ ف
   const t = (q || '').replace(/[ً-ْ]/g, '');
   if (/وقف.*تسجيل|قفل.*تسجيل|بلاش.*تسجيل|خلّص.*تسجيل/.test(t)){
     if (watchId === null) return 'مفيش تسجيل شغال دلوقتي.';
-    stopRec(); return 'تمام، وقفت التسجيل وحفظت الرحلة.';
+    if (navOn) exitNav(); if (watchId !== null) stopRec(); return 'تمام، وقفت التسجيل وحفظت الرحلة.';
   }
-  if (/سجّ?ل.*(مشاكل|طريق|رحل)|ابدأ.*تسجيل/.test(t)){
-    if (watchId !== null) return 'أنا أصلاً باسجّل الرحلة دي.';
-    startRec(); return 'تمام، بدأت أسجّل رحلتك ومشاكل الطريق.';
+  if (/سجّ?ل.*(مشاكل|طريق|رحل)|ابدأ.*(تسجيل|سواق)/.test(t)){
+    if (navOn || watchId !== null) return 'أنا أصلاً باسجّل الرحلة دي.';
+    hideSheets(); startFree(); return 'تمام، بدأت أسجّل رحلتك ومشاكل الطريق.';
   }
   return null;
 }
@@ -958,7 +1021,7 @@ async function askClaude(q){
   $('clout').textContent = '...بفكر';
   try {
     let ctx;
-    if (nav && lastPos && dest){
+    if (nav && !nav.free && lastPos && dest){
       let alts = '';
       try { const rs = await computeRoutes(lastPos, dest);
         alts = rs.map((x, i) => `${i + 1}) ${x.r.via || 'طريق'}: ${mins(x.s.adj)} د، ${km(x.s.dist)} كم، ${x.s.info ? x.s.info.turns + ' لفة' : ''}، ${x.s.pois.filter(p => p.kind === 'radar').length} رادار، ${x.s.tolls} كارتة${x.s.jams ? '، فيه بلاغ زحمة' : ''}${x.s.observed ? '، مشيته قبل كده' : ''}`).join('\n'); } catch(e){}
