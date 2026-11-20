@@ -128,6 +128,8 @@ ARCH_KW = re.compile(
     re.I,
 )
 GH_ARCH_TOPICS = ["bim", "ifc", "revit", "grasshopper", "dynamo", "building-information-modeling"]
+# plugins for BIM/CAD tools; tagged "Add-in" so the app files them under its Add-ins tile
+GH_ADDIN_TOPICS = ["revit-addin", "revit-plugin", "revit-api", "grasshopper-plugin", "dynamo-package", "pyrevit"]
 
 HN_QUERIES = ["LLM", "Claude", "AI agent", "OpenAI", "Gemini", "coding assistant"]
 
@@ -367,9 +369,21 @@ def collect_github(known_ids, cutoff):
         q3 = "topic:%s created:>%s stars:>30" % (topic, fresh)
         u3 = "https://api.github.com/search/repositories?sort=stars&order=desc&per_page=6&q=" + urllib.parse.quote(q3)
         try:
-            more = parse_github(get(u3, headers), "agents", "جديد كلياً")
+            more = parse_github(get(u3, headers), "agents", "MCP" if topic == "mcp" else "جديد كلياً")
         except Exception as ex:
             log("github agents: failed", topic, ex)
+            continue
+        for it in more:
+            if it["id"] not in known_ids and it["id"] not in seen:
+                seen.add(it["id"])
+                out.append(it)
+    for topic in GH_ADDIN_TOPICS:
+        q4 = "topic:%s pushed:>%s" % (topic, week)
+        u4 = "https://api.github.com/search/repositories?sort=updated&order=desc&per_page=5&q=" + urllib.parse.quote(q4)
+        try:
+            more = parse_github(get(u4, headers), "arch", "Add-in")
+        except Exception as ex:
+            log("github addins: failed", topic, ex)
             continue
         for it in more:
             if it["id"] not in known_ids and it["id"] not in seen:
