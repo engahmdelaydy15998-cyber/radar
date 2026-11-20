@@ -1,7 +1,35 @@
 {
- "updated": "2026-11-20T05:12:20Z",
+ "updated": "2026-11-20T06:09:36Z",
  "demo": false,
  "items": [
+  {
+   "id": "yt-KrlfehIapEA",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-20T05:35:32Z",
+   "t": "Meet the Data Agent in ChatGPT",
+   "s": "Get started with the Data plugin in ChatGPT. Take a quick tour of how to ask questions about your data, create visualizations, build dashboards, and…",
+   "tags": [
+    "OpenAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=KrlfehIapEA",
+   "ta": "تعرف على وكيل البيانات في ChatGPT",
+   "sa": "ابدأ باستخدام مكون البيانات الإضافي في ChatGPT. قم بجولة سريعة للتعرف على كيفية طرح أسئلة حول بياناتك، وإنشاء تصورات، وإنشاء لوحات معلومات، و..."
+  },
+  {
+   "id": "yt-3_fayTbZrW8",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-20T05:32:52Z",
+   "t": "Create and Share a Report in ChatGPT Space",
+   "s": "Give your team a report they can read, discuss, and work on together. In this walkthrough, turn the fictional Acme sales analysis into a Page in Spac…",
+   "tags": [
+    "OpenAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=3_fayTbZrW8",
+   "ta": "قم بإنشاء تقرير ومشاركته في ChatGPT Space",
+   "sa": "امنح فريقك تقريرًا يمكنهم قراءته ومناقشته والعمل عليه معًا. في هذه الإرشادات التفصيلية، قم بتحويل تحليل مبيعات Acme الخيالي إلى صفحة في Spac..."
+  },
   {
    "id": "hn-50569985",
    "cat": "arch",
@@ -13,7 +41,21 @@
     "نقاش"
    ],
    "url": "https://www.gimp.org/news/2026/11/16/gimp-ui-tests/",
-   "url2": "https://news.ycombinator.com/item?id=50569985"
+   "url2": "https://news.ycombinator.com/item?id=50569985",
+   "ta": "لدى GIMP الآن اختبارات واجهة المستخدم"
+  },
+  {
+   "id": "gn-mcaaconferenceexploresaiandmepconstructiontechnology",
+   "cat": "arch",
+   "src": "Construction Owners",
+   "ts": "2026-11-20T03:18:47Z",
+   "t": "MCAA Conference Explores AI and MEP Construction Technology",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOOG1MQUdHblBTbVNvc1dwS0lxNk9aaDkxV3pTSTRoaHJJMGdLZklJN0RycVVKNWpBWWtVeFNPa2tsZGd1NXFHR0N4OVp1V2dBRUk4OHRjSGdMc0xCbERBYXE1bHhVbXoyME5xUFYxME1vYVppc0N5aTZyeEJhMHBDQ2ZySXZ6NUxzMjMxTjkwWkd0WnBtWDZhVGNyN1BRNWZjRGYzLWJYaV9VTGRucEExVDZ1eVF1cFRlWlpUVA?oc=5",
+   "ta": "مؤتمر MCAA يستكشف تكنولوجيا البناء بالذكاء الاصطناعي والهندسة الكهربائية والميكانيكية"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov20tokenfraudishereanditsbad",
@@ -25,7 +67,8 @@
    "tags": [
     "مدونة"
    ],
-   "url": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/"
+   "url": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
+   "ta": "الاحتيال الرمزي موجود هنا وهو أمر سيئ (YouTube)"
   },
   {
    "id": "yt-5eON_8rgKzk",
@@ -37,7 +80,9 @@
    "tags": [
     "Matthew Berman"
    ],
-   "url": "https://www.youtube.com/watch?v=5eON_8rgKzk"
+   "url": "https://www.youtube.com/watch?v=5eON_8rgKzk",
+   "ta": "الجوزاء 4 النيون مثير للسخرية ...",
+   "sa": "انضم إلى رسالتي الإخبارية للحصول على تحديثات منتظمة للذكاء الاصطناعي 👇🏼 https://forwardfuture.com تحقق من Scarlet: https://github.com/Forward-Future/scarlet روابطي 🔗 👉🏻 X:..."
   },
   {
    "id": "hn-50569478",
@@ -50,7 +95,8 @@
     "نقاش"
    ],
    "url": "https://www.motherjones.com/politics/2026/11/army-military-iowa-lead-azide-toxic-detonation-dust-health/",
-   "url2": "https://news.ycombinator.com/item?id=50569478"
+   "url2": "https://news.ycombinator.com/item?id=50569478",
+   "ta": "الجيش يفجر \"قنبلة رصاصية\" سامة في ولاية أيوا. نسيت أن أحذر الناس"
   },
   {
    "id": "yt-E83rp6tZ34I",
@@ -135,6 +181,19 @@
    "url": "https://www.youtube.com/shorts/YbZDDCHDSnE",
    "ta": "سيختبر هذا ما إذا كان الذكاء الاصطناعي مجرد فقاعة حقًا",
    "sa": "مشاركة آخر الأخبار والتطورات في مجال الذكاء الاصطناعي اكتشف المزيد: 🛠️ اكتشف أدوات وأخبار الذكاء الاصطناعي: https://futuretools.io/ 📰 النشرة الإخبارية الأسبوعية: https://future…"
+  },
+  {
+   "id": "gn-fromrevitstillstostoriesaivideoworkflowsforarchitecturalcomm",
+   "cat": "arch",
+   "src": "Autodesk",
+   "ts": "2026-11-19T21:11:57Z",
+   "t": "From Revit Stills to Stories: AI Video Workflows for Architectural Communication",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxQc25QdW1JRXBDb1c5UlFsZUIzU1Zuc0lrejRhWFZCcVNTM3JJd3hFWkgxeGFGbGRQZUdxLUJuaTZfb2k0SnRMSGcwb29uVThXTUlzWjMyWVhFTTNKM2FnbUxlY1oyMFBsclQzckhjNUxGV21PelcxMW9ZSUhhLU82anNGLXlwN0RHTHhudWpMM0prdk1vTGJyamJjX0FzMXlLWVlzMkVzLXlDUmFLcHd0X3V6V3dFdnpwODhXcHNfVEttUkFJcDFEaTZhMVNrd3M3WnJJLXhzQ041NjhMa3VRZUZFOHI4NURuXzVJelFMY3Q1Zk01OTBlc3dLbDFwT0trZFc3MnhFSUN1YmhMSTFES0pkWHA5VWl5LVE?oc=5",
+   "ta": "من لقطات Revit إلى القصص: سير عمل فيديو الذكاء الاصطناعي للاتصالات المعمارية"
   },
   {
    "id": "yt-3l3uH85M_10",
@@ -244,7 +303,8 @@
     "نقاش"
    ],
    "url": "https://news.ycombinator.com/item?id=50565484",
-   "url2": ""
+   "url2": "",
+   "ta": "اسأل HN: أين ترى البرمجيات بعد 5 سنوات؟"
   },
   {
    "id": "yt-FORdPIWOH5k",
@@ -435,7 +495,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
+   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري"
   },
   {
    "id": "hn-50562528",
@@ -735,7 +796,8 @@
    "tags": [
     "Agents"
    ],
-   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQdGlJeUZvdUhrYzFUdW40RER0bmlIaDV0Mzd6QzNKZklEdXVQZUY5a1BxRFZQNFJnS3lxazN0ZWlLdFBwRjJ5TXdtVkI5VWdybnFpV3JtY2xtT2JlUkx5NlVjdUxfQUtqTXEzQjBMaWtPYWgtSVZwdzQzMDBfUU9nRGNRSWo?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQdGlJeUZvdUhrYzFUdW40RER0bmlIaDV0Mzd6QzNKZklEdXVQZUY5a1BxRFZQNFJnS3lxazN0ZWlLdFBwRjJ5TXdtVkI5VWdybnFpV3JtY2xtT2JlUkx5NlVjdUxfQUtqTXEzQjBMaWtPYWgtSVZwdzQzMDBfUU9nRGNRSWo?oc=5",
+   "ta": "البرنامج التعليمي لـ Ollama API: 12 خطوة، 70 دقيقة"
   },
   {
    "id": "yt-GUx89takPiA",
@@ -1366,6 +1428,19 @@
    "url": "https://www.youtube.com/watch?v=X-uW8sMnBO8",
    "ta": "تعلم Reactjs #08 - JavaScript داخل JSX",
    "sa": "دروس وواجبات JavaScript داخل JSX: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+  },
+  {
+   "id": "gn-microsoftsagentframeworkpypipackagecompromisedtostealcredent",
+   "cat": "agents",
+   "src": "BleepingComputer",
+   "ts": "2026-11-18T16:58:42Z",
+   "t": "Microsoft’s Agent Framework PyPI package compromised to steal credentials",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMk9Wal83ZG1aczJiLWJlT3dxT2RKWm8wMkFyMEJES3VKSHhHVzVjRE5KNTdFMFlKWndJbVBEVzR1emx3MUl2M01zZXcwbDJrZ05Ud1lEN05vRExzOGFPV1RMV1VZTE1DX1BGbDBWc2RESHZRcEhIb29XYXU3U2tvOEdDbnd4OEc5cGVOcFFZYk9UNjJpVkRiNEVxUGpZNUZSQUNKZ2M4bkJ5dlJZbzBOckcxdkR3alVENnRSYQ?oc=5",
+   "ta": "تم اختراق حزمة Microsoft Agent Framework PyPI لسرقة بيانات الاعتماد"
   },
   {
    "id": "yt-Dg2Z6IRbDVI",
@@ -4262,72 +4337,6 @@
    "url": "https://github.com/etodanik/deslop",
    "url2": "https://news.ycombinator.com/item?id=50516995",
    "ta": "إظهار HN: مهارة Deslop المبنية على أبحاث علم اللغة واللسانيات النفسية"
-  },
-  {
-   "id": "gh-1459972500",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-16T12:11:22Z",
-   "t": "punit2911/meridian-multimodal-rag: Evidence-grounded multimodal RAG for industrial maintenance documentation, with hybrid re…",
-   "s": "41 نجمة، لغة Python",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/punit2911/meridian-multimodal-rag",
-   "ta": "punit2911/meridian-multimodal-rag: RAG متعدد الوسائط المبني على الأدلة لتوثيق الصيانة الصناعية، مع إعادة مختلطة ..."
-  },
-  {
-   "id": "gh-1459971684",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-16T12:10:36Z",
-   "t": "erkamyaman/rust-anything: Rewrite your whole app in Rust, one piece at a time, checked against the original's recor…",
-   "s": "1314 نجمة، لغة Rust",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/erkamyaman/rust-anything",
-   "ta": "erkamyaman/rust-anything: أعد كتابة تطبيقك بالكامل في Rust، قطعة واحدة في كل مرة، وقارنه بالسجل الأصلي..."
-  },
-  {
-   "id": "gn-nvidiaskillevaluatorchecksandevaluationsforaiagentskills",
-   "cat": "agents",
-   "src": "news.lavx.hu",
-   "ts": "2026-11-16T11:07:39Z",
-   "t": "NVIDIA/SkillEvaluator: Checks and evaluations for AI agent skills",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQ1ZQdzl0WU5hS3NGWC00SEdkanlmXzY0UTI3TDZCaEdZYTR2QzE3dzRURDZRTjJkOFN2czJMMGxuZU9CM2lNWkF5TTVQVVhsU05qeG1SUVZpbFFISkFrUklGTExMZV96MFpVSXBocXpvN1ZEekswQVQzNWd2Y042WTloMUtHQXlFbkgtb1paTm40cXNCcnFJTFJKS2pCRkNBTnRhT2NDMA?oc=5",
-   "ta": "NVIDIA/SkillEvaluator: عمليات التحقق والتقييم لمهارات وكيل الذكاء الاصطناعي"
-  },
-  {
-   "id": "yt-ZpsxNdHMCzI",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-16T11:00:58Z",
-   "t": "ChatGPT's secret travel codes don't exist: create your own 5",
-   "s": "ChatGPT's secret travel codes don't exist. But you can create your own, just once, in its custom instructions. /phrases, /scams, /photo, /budget, /da…",
-   "tags": [
-    "Dr Firas"
-   ],
-   "url": "https://www.youtube.com/shorts/ZpsxNdHMCzI",
-   "ta": "رموز السفر السرية الخاصة بـ ChatGPT غير موجودة: أنشئ رموزك الخاصة 5",
-   "sa": "رموز السفر السرية لـ ChatGPT غير موجودة. ولكن يمكنك إنشاء الخاصة بك، مرة واحدة فقط، في تعليماتها المخصصة. /عبارات، /عمليات احتيال، /صورة، /ميزانية، /دا..."
-  },
-  {
-   "id": "af-comrLocalLLaMAcomments1xxmj9opaper_models_gamer_a_generalist",
-   "cat": "agents",
-   "src": "r/LocalLLaMA",
-   "ts": "2026-11-16T10:58:50Z",
-   "t": "[Paper & Models] Gamer: A Generalist Vision-Language-Action Foundation Model for Long-Horizon Real-Time Game Agent",
-   "s": "",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xxmj9o/paper_models_gamer_a_generalist/",
-   "ta": "[ورقة ونماذج] اللاعب: نموذج أساسي للرؤية واللغة والعمل لوكيل الألعاب في الوقت الفعلي طويل الأفق"
   }
  ]
 }
