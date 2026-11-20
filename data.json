@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T14:58:43Z",
+ "updated": "2026-11-20T15:06:04Z",
  "demo": false,
  "items": [
   {
@@ -12,7 +12,9 @@
    "tags": [
     "LangChain"
    ],
-   "url": "https://www.youtube.com/shorts/tPszikxVpgE"
+   "url": "https://www.youtube.com/shorts/tPszikxVpgE",
+   "ta": "رئيس قسم الذكاء الاصطناعي كلاي يقرأ الآثار مع مئات من استدعاءات الأدوات",
+   "sa": "يعد وكيل Clay الجديد أوسع من وكيله السابق، ويستخدمه العملاء بطرق لم يتوقعها الفريق. يقول جيف بارج، رئيس قسم الذكاء الاصطناعي في كلاي، لهاريسون..."
   },
   {
    "id": "hn-50574383",
@@ -25,7 +27,8 @@
     "نقاش"
    ],
    "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
-   "url2": "https://news.ycombinator.com/item?id=50574383"
+   "url2": "https://news.ycombinator.com/item?id=50574383",
+   "ta": "تراجعت أسواق الأسهم العالمية مع فشل الاكتتاب العام الأولي القياسي لشركة Anthropic في وقف عمليات بيع الذكاء الاصطناعي"
   },
   {
    "id": "hn-50573886",
@@ -38,7 +41,8 @@
     "نقاش"
    ],
    "url": "https://cekrem.github.io/posts/if-you-stop-writing-code-you-also-get-worse-at-reviewing-it/",
-   "url2": "https://news.ycombinator.com/item?id=50573886"
+   "url2": "https://news.ycombinator.com/item?id=50573886",
+   "ta": "إذا توقفت عن كتابة التعليمات البرمجية، فإنك ستسوء أيضًا عند مراجعتها"
   },
   {
    "id": "hn-50573681",
@@ -51,7 +55,8 @@
     "نقاش"
    ],
    "url": "https://spectrum.ieee.org/epic-games-unreal-engine-ai",
-   "url2": "https://news.ycombinator.com/item?id=50573681"
+   "url2": "https://news.ycombinator.com/item?id=50573681",
+   "ta": "تتحول Epic Games إلى ترميز الذكاء الاصطناعي للمحرك غير الواقعي"
   },
   {
    "id": "yt-AmP65h3quI4",
@@ -63,7 +68,9 @@
    "tags": [
     "Elzero Web School"
    ],
-   "url": "https://www.youtube.com/watch?v=AmP65h3quI4"
+   "url": "https://www.youtube.com/watch?v=AmP65h3quI4",
+   "ta": "تعلم Reactjs #15 - القيم الافتراضية للدعائم",
+   "sa": "القيم الافتراضية لدروس وواجبات الدعائم: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
   },
   {
    "id": "gn-neoshapesandsphereneusegenerativedesignandmetalbinderjetting",
@@ -75,7 +82,21 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOc3BXbzBoVmN2UVhod0h0MWxfNmE3NkNDTDVJeEhtRkVqc2otTW5DdmZYNFNlWld4WTRJV2J0ZVJTeXZpamVPM0tEUHBvLUc0ZjJXWm9DMzZ3QmRMcm9EQkFRU2Z0U21qZlltT1NyWmNnd251UGgtV0Y3ZDJTOG9lNElmTEREWGs3MVNocnFzNFVpLWl5V194QnEyY0tEeDFVYmt0M0R1cFQxLUZxMzBGaDZTYTN1NFZ2Snh0Vk9yaw?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOc3BXbzBoVmN2UVhod0h0MWxfNmE3NkNDTDVJeEhtRkVqc2otTW5DdmZYNFNlWld4WTRJV2J0ZVJTeXZpamVPM0tEUHBvLUc0ZjJXWm9DMzZ3QmRMcm9EQkFRU2Z0U21qZlltT1NyWmNnd251UGgtV0Y3ZDJTOG9lNElmTEREWGs3MVNocnFzNFVpLWl5V194QnEyY0tEeDFVYmt0M0R1cFQxLUZxMzBGaDZTYTN1NFZ2Snh0Vk9yaw?oc=5",
+   "ta": "تستخدم Neoshapes وSpherene التصميم المبتكر والنفث المعدني للمجوهرات خفيفة الوزن"
+  },
+  {
+   "id": "gn-laserscannersmarketto2035bimandinfrastructuredemandfuelexpan",
+   "cat": "arch",
+   "src": "IndexBox",
+   "ts": "2026-11-20T11:11:05Z",
+   "t": "Laser Scanners Market To 2035: BIM and Infrastructure Demand Fuel Expansion - News and Statistics",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPUG9nbE82QkJFY0lVVF9NdHlpY1pHMmhlYU9sY2FNcmFUZ0xyMmdXS0FRUmdmdmNxSF8ycVh2M1lweGpSOTdfRjliRWVUT2RvcGZhb0hMYlVJTUg5NFY2VWZONk1hR3VoT2t0UW9yU0ZjbFBmY2FVb2tkd3NVR0FJUWRjUmZrSklQTjc1eDBhVzZhV05YQWM5QjV5TDJ1VG9lY1BnYVdzdlphZ0YxM1k3bkx6d3llc3EtY3FGNUN0eWF4dw?oc=5",
+   "ta": "سوق ماسحات الليزر الضوئية حتى عام 2035: نمذجة معلومات البناء (BIM) والبنية التحتية تتطلب التوسع في استهلاك الوقود - الأخبار والإحصائيات"
   },
   {
    "id": "hn-50572503",
@@ -282,7 +303,8 @@
     "نقاش"
    ],
    "url": "https://www.fermionresearch.com/research/mapping-every-neuron-in-qwen3-8b/",
-   "url2": "https://news.ycombinator.com/item?id=50569783"
+   "url2": "https://news.ycombinator.com/item?id=50569783",
+   "ta": "رسم خرائط لكل خلية عصبية في Qwen3-8B"
   },
   {
    "id": "gn-mcaaconferenceexploresaiandmepconstructiontechnology",
@@ -418,7 +440,8 @@
    "tags": [
     "Agents"
    ],
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQSUo2NHR6RFpSYmlOTGlFQnQtTjVEVTk0dVBIeHRtOHRWZkNQQllQQWRoa0EtVGhUZ19sS3lJTEVqRlZvbnNaQXE1d084YXNxX3UyS0VnZktBTVdYOWhOZDdWdXhZekd3VDlKV2pNNmJrWGFGbDVxNG96clFXdW5ZMi1jbGM2dHFBTHJ0OWVEQkN3c1BnSFpiLUNTMDdmTEhJWm1wVVZwTmNtY3BZaHRB?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQSUo2NHR6RFpSYmlOTGlFQnQtTjVEVTk0dVBIeHRtOHRWZkNQQllQQWRoa0EtVGhUZ19sS3lJTEVqRlZvbnNaQXE1d084YXNxX3UyS0VnZktBTVdYOWhOZDdWdXhZekd3VDlKV2pNNmJrWGFGbDVxNG96clFXdW5ZMi1jbGM2dHFBTHJ0OWVEQkN3c1BnSFpiLUNTMDdmTEhJWm1wVVZwTmNtY3BZaHRB?oc=5",
+   "ta": "تدعي Ploy AI Gateway أنها أسرع بـ 8 مرات وأرخص بـ 20 مرة من Claude Code وCodex: المطالب به مقابل التحقق منه"
   },
   {
    "id": "yt-YbZDDCHDSnE",
@@ -747,7 +770,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
+   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري"
   },
   {
    "id": "hn-50562528",
@@ -857,7 +881,8 @@
     "نقاش"
    ],
    "url": "https://hippomaps.ch/?q=cafes+by+the+Limmat+100+m+from+the+lake+in+zurich#map=15.02/47.36708/8.54935",
-   "url2": "https://news.ycombinator.com/item?id=50561199"
+   "url2": "https://news.ycombinator.com/item?id=50561199",
+   "ta": "إظهار HN: بحث سريع باللغة الطبيعية الحتمية عن بيانات OpenStreetMap"
   },
   {
    "id": "yt-JDsFHmq9hlA",
@@ -924,7 +949,8 @@
     "نقاش"
    ],
    "url": "https://github.com/bigcrimping/floppy3.5",
-   "url2": "https://news.ycombinator.com/item?id=50560595"
+   "url2": "https://news.ycombinator.com/item?id=50560595",
+   "ta": "Floppy3.5: وحدة تخزين متصلة بالإنترنت (NAS) محمولة ومرنة مقاس 3.5 بوصة تعمل بتقنية WiFi"
   },
   {
    "id": "hn-50560461",
@@ -1261,7 +1287,8 @@
    "tags": [
     "جديد كلياً"
    ],
-   "url": "https://github.com/INK-Q/agy-fast"
+   "url": "https://github.com/INK-Q/agy-fast",
+   "ta": "INK-Q/agy-fast: مكون إضافي لتسريع MCP غير جراحي لـ Google Antigravity (CLI/Desktop/IDE): يقطع LLM ..."
   },
   {
    "id": "hn-50555712",
@@ -4320,19 +4347,6 @@
    ],
    "url": "https://github.com/edgerunners2/capri-ai-desktop",
    "ta": "edgerunners2/capri-ai-desktop: Capri — حيوان أليف مجاني لسطح المكتب يعمل بالذكاء الاصطناعي ومفتوح المصدر، وتراكب ألعاب ورفيق صوتي لنظام التشغيل Windows. السادس…"
-  },
-  {
-   "id": "hn-50520825",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-16T18:14:13Z",
-   "t": "Duolingo uses screen time permission to block uninstall",
-   "s": "38 نقطة، 28 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://blog.rhett.info/duolingo-screen-time-uninstall/",
-   "ta": "يستخدم Duolingo إذن وقت الشاشة لمنع إلغاء التثبيت"
   }
  ]
 }
