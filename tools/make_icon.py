@@ -142,6 +142,10 @@ def build(name, pal):
         over(base,gl.filter(ImageFilter.GaussianBlur(R*0.9)))
     def blip(a,ring,rad,col,draw_glyph,solid=None,far=0):
         cx,cy=pos(a,ring); R=N*rad; lit=lit_amount(a); cc=solid or col
+        if MAGIC:
+            # dark gap around the badge so ring lines stop short of it instead of cutting through
+            kn=layer(); ImageDraw.Draw(kn).ellipse([cx-R*1.45,cy-R*1.45,cx+R*1.45,cy+R*1.45],fill=pal['plate'][0]+(235,))
+            over(base,kn.filter(ImageFilter.GaussianBlur(R*0.18)))
         echo(cx,cy,R,cc,ring,a,lit)
         sh=layer(); ImageDraw.Draw(sh).ellipse([cx-R,cy-R+R*0.14,cx+R,cy+R+R*0.14],fill=(0,0,0,170)); over(base,sh.filter(ImageFilter.GaussianBlur(R*0.2)))
         tile=lit_tile(R,cc,cx,cy); size=tile.size[0]
@@ -150,13 +154,16 @@ def build(name, pal):
         rim=layer(); ImageDraw.Draw(rim).ellipse([cx-R,cy-R,cx+R,cy+R],outline=cc+(int(150+90*lit),),width=max(2,int(S*1.8)))
         if far: t=t.filter(ImageFilter.GaussianBlur(far)); rim=rim.filter(ImageFilter.GaussianBlur(far))
         over(base,t); over(base,rim)
-        draw_glyph(cx,cy,R,far)
-        if not lit:
+        draw_glyph(cx,cy,R,0 if MAGIC else far)
+        if not lit and not MAGIC:
             dm=layer(); ImageDraw.Draw(dm).ellipse([cx-R*1.1,cy-R*1.1,cx+R*1.1,cy+R*1.1],fill=(6,5,14,60)); over(base,dm.filter(ImageFilter.GaussianBlur(R*0.15)))
     def txt(label,k,col):
         def fn(cx,cy,R,far):
             ff=ImageFont.truetype(INTER,int(R*k)); tl=layer(); td=ImageDraw.Draw(tl); tb=td.textbbox((0,0),label,font=ff)
-            td.text((cx-(tb[2]-tb[0])/2-tb[0],cy-(tb[3]-tb[1])/2-tb[1]),label,font=ff,fill=col+(255,))
+            xy=(cx-(tb[2]-tb[0])/2-tb[0],cy-(tb[3]-tb[1])/2-tb[1])
+            if MAGIC:
+                sh_=layer(); ImageDraw.Draw(sh_).text((xy[0],xy[1]+S*1.5),label,font=ff,fill=(0,0,0,200)); over(base,sh_.filter(ImageFilter.GaussianBlur(S*1.2)))
+            td.text(xy,label,font=ff,fill=((255,255,255) if MAGIC else col)+(255,))
             over(base,tl.filter(ImageFilter.GaussianBlur(far)) if far else tl)
         return fn
     def sparkg(col):
@@ -176,12 +183,13 @@ def build(name, pal):
         return fn
     W=lambda c:lerp(c,(255,255,255),0.82)
     cc=pal['c']
+    R40=0.35 if MAGIC else 0.40
     blip(122,0.35,0.046,cc[0],txt("C#",1.3,W(cc[0])))
-    blip(150,0.40,0.040,cc[1],txt("{ }",1.0,W(cc[1])))
+    blip(150,R40,0.040,cc[1],txt("{ }",1.0,W(cc[1])))
     blip(178,0.30,0.034,cc[2],txt("Py",1.0,W(cc[2])),far=0.4*S)
     blip(204,0.35,0.030,cc[3],txt("JS",1.0,W(cc[3])),far=0.7*S)
     blip(229,0.30,0.026,cc[4],txt(">_",1.0,W(cc[4])),far=0.9*S)
-    blip(255,0.40,0.030,cc[5],sparkg(W(cc[5])),far=0.7*S)
+    blip(255,R40,0.030,cc[5],sparkg(W(cc[5])),far=0.7*S)
     blip(288,0.35,0.028,cc[6],rssg(W(cc[6])),far=0.8*S)
     def playg(cx,cy,R,far):
         tl=layer(); td=ImageDraw.Draw(tl); k=R*0.5
@@ -251,8 +259,8 @@ def build(name, pal):
                 over(base,tl.filter(ImageFilter.GaussianBlur(far)) if far else tl)
             return fn
         mc=lerp(pal['mep'],(0,0,0),0.25)
-        blip(14,0.40,0.032,mc,gearg(W(pal['mep'])),far=0.4*S)
-        blip(90,0.42,0.030,mc,beamg(W(pal['mep'])),far=0.4*S)
+        blip(14,0.35,0.032,mc,gearg(W(pal['mep'])),far=0.4*S)
+        blip(90,0.35,0.030,mc,beamg(W(pal['mep'])),far=0.4*S)
     out=base.convert("RGB").resize((512,512),Image.LANCZOS)
     # vignette
     v=Image.new("L",(512,512),0); vd=ImageDraw.Draw(v)
