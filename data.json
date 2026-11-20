@@ -1,7 +1,19 @@
 {
- "updated": "2026-11-20T19:29:40Z",
+ "updated": "2026-11-20T20:05:45Z",
  "demo": false,
  "items": [
+  {
+   "id": "yt-rMaMe32qQkA",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-20T19:49:02Z",
+   "t": "If you’ve deployed anything since 2015, I have bad news...",
+   "s": "Paper gives your coding agent a design canvas built on real HTML and CSS. Try it: https://paper.design/?utm_source=youtube&utm_medium=sponsor&utm_cam…",
+   "tags": [
+    "Fireship"
+   ],
+   "url": "https://www.youtube.com/watch?v=rMaMe32qQkA"
+  },
   {
    "id": "af-httpssimonwillisonnet2026Nov20ravivakil",
    "cat": "agents",
@@ -1068,8 +1080,7 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
-   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري"
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5"
   },
   {
    "id": "hn-50562528",
@@ -4337,19 +4348,6 @@
    "url": "https://www.youtube.com/watch?v=FiFU66g5B7Q",
    "ta": "لقد قمت ببناء Magic 8 Ball التي تستمع وتتحدث",
    "sa": "لقد اخترقت Magic 8 Ball حتى تستمع فعليًا: يسمع تحويل الكلام إلى نص من AssemblyAI سؤالك، ويكتب LLM من خلال بوابة LLM إجابة غامضة، ..."
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov16llm",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-16T23:57:26Z",
-   "t": "llm 0.37.3",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/16/llm/",
-   "ta": "م 0.37.3"
   }
  ]
 }
