@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T11:31:59Z",
+ "updated": "2026-11-20T11:42:34Z",
  "demo": false,
  "items": [
   {
@@ -1061,6 +1061,19 @@
    "sa": "تم تحرير هذا الفيديو بين عشية وضحاها بواسطة كلود كود، كل ذلك بمفرده. والدورة التي تعلمك كيفية القيام بذلك مجانية. 4 دورات رسمية، واحدة لكل…"
   },
   {
+   "id": "gn-autodeskincadskstockpricenewsquotehistory",
+   "cat": "arch",
+   "src": "Yahoo! Finance Canada",
+   "ts": "2026-11-19T05:59:38Z",
+   "t": "Autodesk, Inc. (ADSK) Stock Price, News, Quote & History",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9jLVZBWGtEU1p1WjJsNFdTRUZ0SkFwSmdrZjRPaDQxTmtCSjE3R0dvbG1ENEQ1Z3VUVDFTc3E0Y3hxcm1JVE1rNHFPTzBLVDMzVVE?oc=5",
+   "ta": "Autodesk, Inc. (ADSK) سعر السهم والأخبار والاقتباس والتاريخ"
+  },
+  {
    "id": "hn-50556534",
    "cat": "arch",
    "src": "Hacker News",
@@ -1208,6 +1221,19 @@
    "url": "https://www.youtube.com/watch?v=R0rXSJmymTc",
    "ta": "Gemini 4 Neon هو أقوى نموذج للذكاء الاصطناعي من Google! يتفوق على Opus 5.5 وGPT-6.2 (مختبر بالكامل)",
    "sa": "سير عمل الذكاء الاصطناعي بالكامل في مكان واحد، بسعر يبدأ من 10 دولارات شهريًا: Mammouth → https://mammouth.ai أصدرت Google رسميًا لعبة Gemini 4 Neon، وقد تكون واحدة..."
+  },
+  {
+   "id": "gn-googlelaunchesgemini4neonwithopus55levelcodingperformanceat2",
+   "cat": "agents",
+   "src": "VentureBeat",
+   "ts": "2026-11-18T23:33:31Z",
+   "t": "Google launches Gemini 4 Neon with Opus 5.5-level coding performance at 25% lower API token prices",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOTEZSUEtSV0dGT3g1ZXlGVW0xdjhfbDZnclc5RUdza3pibmNqaktCNUNOTkxuSzVabEppT2JZNEFMYzZmN3ZuNk9XNEl0cWZjTTdKQTNNUTBOZWJVNXFVc0ZyNEZrLVBjM2dLZExkc2lfbFpLQ3VmYmJLT1NRRzAyT2FJS1NRc3EybXpvdGZqTURJcFNZYVZQX2hqcVBQM08wMW5SUHVQU1VRNnBZcERuX3E3NnRSMXdQZTRmSEdIREZERzJXWlFNQ1RaV20?oc=5",
+   "ta": "جوجل تطلق Gemini 4 Neon بأداء ترميزي بمستوى Opus 5.5 وبأسعار أقل بنسبة 25% لرموز واجهة برمجة التطبيقات"
   },
   {
    "id": "yt-gp66d6d46SI",
@@ -3494,6 +3520,32 @@
    "ta": "ما هي تكلفة الذكاء الاصطناعي في عام 2026؟ مقارنة الأسعار الكاملة"
   },
   {
+   "id": "gn-codexvscursorwhichtousenowthatopenaiisleavingcursor",
+   "cat": "agents",
+   "src": "Fello AI",
+   "ts": "2026-11-17T08:00:00Z",
+   "t": "Codex vs Cursor: Which to Use Now That OpenAI Is Leaving Cursor",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1SazZWeTdSRDVRWlU3dFFxV2pEcXFaSXBNSXF2dkdVa0o5TU1NcnJILTQ5VzAyV1M1M3d1OWIyXzhVbkRJZ3lFRGNnamU?oc=5",
+   "ta": "Codex vs Cursor: ما الذي يجب استخدامه الآن بعد أن يترك OpenAI المؤشر؟"
+  },
+  {
+   "id": "gn-kimipricing2026plansapicostsfreetier",
+   "cat": "agents",
+   "src": "Fello AI",
+   "ts": "2026-11-17T08:00:00Z",
+   "t": "Kimi Pricing 2026: Plans, API Costs & Free Tier",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5ZUWVuVmFDM3VaOVdtNFItYkczaVZST2ZiOXYySzBWQVhCaWlGa2pidzVreUdEbGxYeVF2MERuZkdWcV85Qk4tbA?oc=5",
+   "ta": "تسعير Kimi 2026: الخطط وتكاليف واجهة برمجة التطبيقات والطبقة المجانية"
+  },
+  {
    "id": "gn-googlewarnshackersareusingaiagentstoautomatecyberattacks",
    "cat": "agents",
    "src": "Firstpost",
@@ -4290,59 +4342,6 @@
    ],
    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xxsc7u/censorship_is_turning_me_into_a_true_local_llm/",
    "ta": "لقد حولتني الرقابة إلى مؤمن محلي حقيقي بماجستير القانون"
-  },
-  {
-   "id": "gn-gtigaithreattrackeragenticthreatactivitycrossesasignificantt",
-   "cat": "agents",
-   "src": "Google Cloud",
-   "ts": "2026-11-16T15:29:09Z",
-   "t": "GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQOEsyMTZIZmRtLWR2emJyWkNVVldUdW9Pay12YUZPRDdJZEtQN3VUWWNnWXVnaVJYUHgzdnM3NXF1Q3RKclp5Rzk4Z2QtVllIMGZCVXlCb3cyQ25sVzJna1RVLThYYXJJYXdURkpBZlRTV0RYaDdhOE9TMjhCYXpjZnNrdlhkYTZYb2psdjhRVUctUG5tVUFSbHdQa2FjVlJTMFBGR3RRaXBaNWZrSGh5NUJ3?oc=5",
-   "ta": "GTIG AI Threat Tracker: نشاط التهديد الوكيل يتجاوز عتبة كبيرة"
-  },
-  {
-   "id": "gn-nemetscheksdesignslumpiscyclicalnotanaicasualtydeutschebanka",
-   "cat": "arch",
-   "src": "ad-hoc-news.de",
-   "ts": "2026-11-16T15:21:15Z",
-   "t": "Nemetschek's Design Slump Is Cyclical, Not an AI Casualty, Deutsche Bank Argues",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNdlQtb3d5T0haTDU3VlZTeW16d3VaVkFjQzBDZm0zMEtxd3FHaWt5M1BMMkMwa056MlBKdnEzaGZEbHFKekUwQVZjeEdkeTg0b1Z6WFk2WDZ2a05mZHJObllXd3NUTFBHRktxWmQ5d19KUnA2Z1RHTG5fZ1BCZ3JjSmZSSDFGYVNfUFRweWxvVURweUkzeG4tODluMkZQMVUzYXNadTBndkM1bk9LYUFGZmZ3NWF2YWdUSHJKUDdoZ1labGtqZ1ZEZGx5VVUzeHhRNU1fYWJ1N3RzTFhKYlpndWNDcw?oc=5",
-   "ta": "تراجع تصميم نيميتشيك هو أمر دوري، وليس ضحية للذكاء الاصطناعي، كما يقول دويتشه بنك"
-  },
-  {
-   "id": "gh-1460180740",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-16T15:09:46Z",
-   "t": "boringmarketer/boring-marketing-skills: 31 free marketing skills for your AI agent: research, positioning, copy, pages, SEO, AI s…",
-   "s": "390 نجمة، لغة Python",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/boringmarketer/boring-marketing-skills",
-   "ta": "مهارات تسويقية مملة/تسويقية مملة: 31 مهارات تسويقية مجانية لوكيل الذكاء الاصطناعي الخاص بك: البحث وتحديد المواقع والنسخ والصفحات وتحسين محركات البحث والذكاء الاصطناعي..."
-  },
-  {
-   "id": "yt-83NRvB_Gusk",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-16T14:48:43Z",
-   "t": "My AI Agents Write Code Faster Than I Can Verify It",
-   "s": "76% of developers and engineering managers in Sonar's 2027 State of Code report say they generate AI code faster than they can verify it! And I'm rig…",
-   "tags": [
-    "Cole Medin"
-   ],
-   "url": "https://www.youtube.com/shorts/83NRvB_Gusk",
-   "ta": "يقوم وكلاء الذكاء الاصطناعي بكتابة التعليمات البرمجية بشكل أسرع مما يمكنني التحقق منه",
-   "sa": "يقول 76% من المطورين ومديري الهندسة في تقرير Sonar's State of Code لعام 2027 أنهم يقومون بإنشاء كود الذكاء الاصطناعي بشكل أسرع مما يمكنهم التحقق منه! وأنا راجح…"
   }
  ]
 }
