@@ -1,7 +1,47 @@
 {
- "updated": "2026-11-20T16:05:13Z",
+ "updated": "2026-11-20T17:07:29Z",
  "demo": false,
  "items": [
+  {
+   "id": "af-httpssimonwillisonnet2026Nov20leventalpoge",
+   "cat": "agents",
+   "src": "Simon Willison",
+   "ts": "2026-11-20T16:30:48Z",
+   "t": "Quoting Levent Alpöge",
+   "s": "",
+   "tags": [
+    "مدونة"
+   ],
+   "url": "https://simonwillison.net/2026/Nov/20/levent-alpoge/",
+   "ta": "نقلا عن ليفنت ألبوج"
+  },
+  {
+   "id": "yt-WGvsk0LIveU",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-20T16:00:17Z",
+   "t": "3 ChatGPT Tips to Save Money",
+   "s": "ChatGPT can help you find ways to save, whether you’re shopping for a desk chair or wondering what you’re still paying for after a free trial ends. L…",
+   "tags": [
+    "OpenAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=WGvsk0LIveU",
+   "sa": "يمكن أن يساعدك ChatGPT في العثور على طرق للتوفير، سواء كنت تتسوق لشراء كرسي مكتب أو تتساءل عما لا تزال تدفع مقابله بعد انتهاء الفترة التجريبية المجانية. ل…"
+  },
+  {
+   "id": "hn-50576232",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-20T15:34:31Z",
+   "t": "Finite-time blow-up for the Navier–Stokes equations",
+   "s": "33 نقطة، 9 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/tristanbuckmaster/navier-stokes/",
+   "url2": "https://news.ycombinator.com/item?id=50576232",
+   "ta": "انفجار زمني محدود لمعادلات نافييه-ستوكس"
+  },
   {
    "id": "gn-cursorisconsideringphasingoutchineseaimodels",
    "cat": "agents",
@@ -12,7 +52,8 @@
    "tags": [
     "Agents"
    ],
-   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdGZnejVaWGpvRnFkc2dVNVVSR2R3TDlwTzgwM3ZtSnB2cGJ1d0QxT1hqaXVJV3JtTFZ1UUZLZXRSc1JKOGlDaWhDX0lTWU5wdGppMTh2cnVPWFh3UktoYVhXTlBkTlM5enAyY1BXdlFDMWZKd0NMY0dPUU5Eei15WkdFUnpiTmRJZDJrQmdXZnBaQlhDdWl3YnJIQQ?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdGZnejVaWGpvRnFkc2dVNVVSR2R3TDlwTzgwM3ZtSnB2cGJ1d0QxT1hqaXVJV3JtTFZ1UUZLZXRSc1JKOGlDaWhDX0lTWU5wdGppMTh2cnVPWFh3UktoYVhXTlBkTlM5enAyY1BXdlFDMWZKd0NMY0dPUU5Eei15WkdFUnpiTmRJZDJrQmdXZnBaQlhDdWl3YnJIQQ?oc=5",
+   "ta": "تدرس شركة Cursor التخلص التدريجي من نماذج الذكاء الاصطناعي الصينية"
   },
   {
    "id": "yt-k87Iqft91j8",
@@ -24,7 +65,9 @@
    "tags": [
     "Cole Medin"
    ],
-   "url": "https://www.youtube.com/watch?v=k87Iqft91j8"
+   "url": "https://www.youtube.com/watch?v=k87Iqft91j8",
+   "ta": "وكيل الذكاء الاصطناعي الأكثر خطورة هو عامل مفيد للغاية (هذا ليس سبب تفكيرك)",
+   "sa": "أخطر وكيل للذكاء الاصطناعي هو عامل مفيد للغاية. سيتطلب الأمر إجراءات محفوفة بالمخاطر لمجرد إنجاز المهمة، حتى لو كان ذلك مثل حذف بيانات الإنتاج..."
   },
   {
    "id": "gh-1465526334",
@@ -36,7 +79,8 @@
    "tags": [
     "جديد كلياً"
    ],
-   "url": "https://github.com/marketzy/codex-cli-repo-workbench"
+   "url": "https://github.com/marketzy/codex-cli-repo-workbench",
+   "ta": "Marketzy/codex-cli-repo-workbench: يوفر Codex Cli Repo Workbench مساحة عمل محلية لإدارة وفحص Codex CLI..."
   },
   {
    "id": "gh-1465523535",
@@ -48,7 +92,8 @@
    "tags": [
     "جديد كلياً"
    ],
-   "url": "https://github.com/han938/open-webui-private-ai-desk"
+   "url": "https://github.com/han938/open-webui-private-ai-desk",
+   "ta": "han938/open-webui-private-ai-desk: قم بالدردشة مع نماذج الذكاء الاصطناعي الخاصة محليًا، بدعم من Open Webui Private Ai Desk."
   },
   {
    "id": "gh-1465511622",
@@ -60,7 +105,8 @@
    "tags": [
     "جديد كلياً"
    ],
-   "url": "https://github.com/wozniakalan323-bit/opencode-project-workbench"
+   "url": "https://github.com/wozniakalan323-bit/opencode-project-workbench",
+   "ta": "wozniakalan323-bit/opencode-project-workbench: يبني Opencode Project Workbench مهام مشروع الكود المفتوح وملفاته وحالة سير العمل."
   },
   {
    "id": "yt-tPszikxVpgE",
@@ -89,6 +135,19 @@
    "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
    "url2": "https://news.ycombinator.com/item?id=50574383",
    "ta": "تراجعت أسواق الأسهم العالمية مع فشل الاكتتاب العام الأولي القياسي لشركة Anthropic في وقف عمليات بيع الذكاء الاصطناعي"
+  },
+  {
+   "id": "gn-aicandrawafloorplaninsecondsbutdoesthatmakeitagooddesign",
+   "cat": "arch",
+   "src": "PC Tech Magazine",
+   "ts": "2026-11-20T13:27:21Z",
+   "t": "AI Can Draw a Floor Plan in Seconds. But Does That Make It a Good Design?",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOdU53d3lmMlc2QUdMYWNxMVhINXcxU0ZXeFlXTEZyNkdQMnE2Y2VfSzB4MVpTZmdnMHZ6SDRGQ05ja2JwbFpOeXVxelFOTVhlT09vVDg2ZnJXblNNcDFnMWJoanJQSXhiTUV3dDJqWHhTM0xwRVhLWVYyTjltSXcyaFgwUHJwdXdka2RBcDRHRWdjcHMwbkNLM1FUZFNpVE9PNlNPeg?oc=5",
+   "ta": "يستطيع الذكاء الاصطناعي رسم مخطط للطابق في ثوانٍ. لكن هل هذا يجعله تصميمًا جيدًا؟"
   },
   {
    "id": "hn-50573886",
@@ -830,7 +889,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
+   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري"
   },
   {
    "id": "hn-50562528",
@@ -1758,6 +1818,20 @@
    ],
    "url": "https://www.youtube.com/shorts/p8hQeqPW13M",
    "sa": "يقول كلود أن فكرتك رائعة؟ تقديمه للمحاكمة. مع المحكمة، وهي مهارة مجانية من Alex Chen (@nocodealex) لكلود كود، ستنتقل فكرتك إلى المحكمة: pr..."
+  },
+  {
+   "id": "hn-50549718",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-18T18:00:55Z",
+   "t": "Show HN: BPM – Baby Plus Music Visualizer",
+   "s": "13 نقطة، 8 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://hberg.com/bpm/",
+   "url2": "https://news.ycombinator.com/item?id=50549718",
+   "ta": "عرض HN: BPM – مصور الموسيقى Baby Plus"
   },
   {
    "id": "gh-1463149139",
@@ -4272,74 +4346,6 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0zcnNJdUJhcnB1a0lEY1dMZ2ZsUG1vQkdiRFRpNlJzdktoYmdvODRPeVZRMGlnRXBTNWJzb3l1b2xZYklBMC1hTnBldTB3XzJnNWV0WmZ2M3dTYTJBWUh0QXdsQlR1ajQ1V3VBZFE2N20tek5YRmc?oc=5",
    "ta": "الإنذار الصوتي لمكتب التحقيقات الفيدرالي وAWS: يقوم وكلاء الذكاء الاصطناعي الآن بأتمتة الهجمات الإلكترونية على المستوى الصناعي"
-  },
-  {
-   "id": "yt-Zbv70lLBHgo",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-16T20:23:56Z",
-   "t": "How Check Point speeds up vulnerability research with Daybreak | OpenAI for Cybersecurity",
-   "s": "Check Point CTO Jonathan Zanger explains how his team uses OpenAI Daybreak to analyze vulnerabilities and turn findings into protections for customer…",
-   "tags": [
-    "OpenAI"
-   ],
-   "url": "https://www.youtube.com/shorts/Zbv70lLBHgo",
-   "ta": "كيف تعمل Check Point على تسريع أبحاث الثغرات الأمنية باستخدام Daybreak | OpenAI للأمن السيبراني",
-   "sa": "يشرح Check Point CTO جوناثان زانجر كيف يستخدم فريقه OpenAI Daybreak لتحليل نقاط الضعف وتحويل النتائج إلى حماية للعملاء..."
-  },
-  {
-   "id": "gn-attackersusedaiagentstoautomatecybercrimeatindustrialscalefb",
-   "cat": "agents",
-   "src": "news.lavx.hu",
-   "ts": "2026-11-16T20:23:46Z",
-   "t": "Attackers used AI agents to automate cybercrime at 'industrial scale,' FBI and AWS warn",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOODZYRnF1djg0WVotTTNFcmtuc0prRE02V3gzbVFENWV2NkFneVBTTXhLU2ktSkNqZXNMZzU0SkwtRk9mRnhoY2FCN3lwV0FKU1hmQTR5ZldaUzF6U1hhY0E2UnpSU2JMVV95ekpITDd6SmdBOUF1ZlpCTGh6b2Qyb0pZTldfME85aGx5LTRuUkNtODdrYXNIb003ZS1aWUQtRkVLN1BqaEh3Y1ZwTWFsV2QtMA?oc=5",
-   "ta": "استخدم المهاجمون عملاء الذكاء الاصطناعي لأتمتة الجرائم الإلكترونية على \"النطاق الصناعي\"، حسبما حذر مكتب التحقيقات الفيدرالي وAWS"
-  },
-  {
-   "id": "hn-50522639",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-16T20:21:58Z",
-   "t": "Ask HN: Are iPhone Duo Customers Happy?",
-   "s": "13 نقطة، 8 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://news.ycombinator.com/item?id=50522639",
-   "url2": "",
-   "ta": "اسأل HN: هل عملاء iPhone Duo سعداء؟"
-  },
-  {
-   "id": "yt-ytmawkPTP24",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-16T20:18:59Z",
-   "t": "Why Microsoft couldn’t fix its own servers for 36 hours...",
-   "s": "OpenRouter gives you one API for every AI model that routes and governs every request, so your AI is better, faster, and cheaper. Try it free: https:…",
-   "tags": [
-    "Fireship"
-   ],
-   "url": "https://www.youtube.com/watch?v=ytmawkPTP24",
-   "ta": "لماذا لم تتمكن مايكروسوفت من إصلاح خوادمها الخاصة لمدة 36 ساعة...",
-   "sa": "يوفر لك OpenRouter واجهة برمجة تطبيقات واحدة لكل نموذج من نماذج الذكاء الاصطناعي التي توجه كل طلب وتحكمه، بحيث يكون الذكاء الاصطناعي الخاص بك أفضل وأسرع وأرخص. جربه مجانًا: https:…"
-  },
-  {
-   "id": "gn-amazonuncoversaiagentcampaignsstealingmodelcredentialsandtar",
-   "cat": "agents",
-   "src": "SSBCrack",
-   "ts": "2026-11-16T20:18:22Z",
-   "t": "Amazon Uncovers AI Agent Campaigns Stealing Model Credentials and Targeting Crypto Exchanges with Deepfakes",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNQXFJN2cyOFZUbmJRNmVMSWl3Q2Nocy05ZjBCVC1mY0dhbThQWHkzZ0w2OVh0OWtpTmt0NmdjSlJZaUltdzVicVEwRTYxSXZfTE5MV1NybFhEWUZBM3hKTE9IRlNYSVdjTU5MWnFabWZDMjJOR0VGd1IxcHczcVdBcGJrUS1rd0g4amYtS2M5clVjQnRyS1RIeUZXSHhfeFlLSDBWc0pCclhtWllBMjl0ZElsQ2J3WmFNVDJ1Y3RFaWRxYUhzbll0VnBaajlLWmM?oc=5",
-   "ta": "أمازون تكشف عن حملات عملاء الذكاء الاصطناعي لسرقة بيانات اعتماد النماذج واستهداف بورصات العملات المشفرة باستخدام التزييف العميق"
   }
  ]
 }
