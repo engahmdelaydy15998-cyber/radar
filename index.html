@@ -70,6 +70,7 @@ header {
 .field::placeholder { color: var(--muted); }
 .field.ltr { direction: ltr; text-align: left; }
 .panel .two { display: flex; gap: 8px; }
+.panel .two[hidden] { display: none; }
 .panel select.field { flex: 1; }
 .srow { display: flex; gap: 8px; }
 .srow .field { flex: 1; }
@@ -81,8 +82,28 @@ header {
 .rcard .ra .go { background: var(--accent); color: #111; border-color: var(--accent); font-weight: 700; }
 .btn-main { height: 44px; padding: 0 18px; border: 0; border-radius: 12px; background: var(--accent); color: #111; font-weight: 700; }
 .hint { font-size: 12px; color: var(--muted); line-height: 1.8; margin: 0; }
-.sresh { font-size: 12px; font-weight: 700; color: var(--muted); margin: 10px 0 -2px; text-transform: uppercase; letter-spacing: .02em; }
-.sresh:first-child { margin-top: 2px; }
+.btn-icon { width: 44px; padding: 0; display: inline-grid; place-items: center; flex: 0 0 auto; }
+.btn-icon svg { width: 20px; height: 20px; }
+.stabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding: 2px 0 4px; }
+.stabs::-webkit-scrollbar { display: none; }
+.stab { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); font-size: 13px; font-weight: 600; }
+.stab .scount { font-family: var(--font-mono); font-size: 11px; color: var(--muted); font-weight: 500; }
+.stab .scount:empty { display: none; }
+.stab[aria-pressed="true"] { border-color: var(--sc, var(--text)); background: color-mix(in srgb, var(--sc, #fff) 16%, var(--surface)); }
+.sdot { width: 8px; height: 8px; border-radius: 50%; background: var(--sc); flex: 0 0 auto; }
+.sgroup { display: flex; flex-direction: column; gap: 8px; padding: 10px; border-radius: 16px; border: 1px solid color-mix(in srgb, var(--sc) 35%, var(--line)); background: color-mix(in srgb, var(--sc) 6%, transparent); }
+.sgroup[hidden] { display: none; }
+.sresh { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; color: var(--sc); cursor: pointer; }
+.sresh .scount { font-family: var(--font-mono); font-size: 12px; font-weight: 500; padding: 1px 8px; border-radius: 999px; background: color-mix(in srgb, var(--sc) 18%, transparent); }
+.sresh .scount:empty { display: none; }
+.slist { display: flex; flex-direction: column; gap: 8px; }
+.sgroup:not(.open) .slist > .rcard:nth-child(n+4) { display: none; }
+.smore { height: 38px; border-radius: 10px; border: 1px dashed color-mix(in srgb, var(--sc) 55%, var(--line)); background: transparent; color: var(--sc); font-size: 13px; font-weight: 700; }
+.smore[hidden] { display: none; }
+.sgroup .rcard { padding: 10px 12px; gap: 4px; }
+.sgroup .rcard b { font-size: 14px; }
+.sgroup .rcard small { font-size: 12px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.sgroup .rcard .ra a, .sgroup .rcard .ra button { padding: 4px 10px; font-size: 12px; }
 .err { color: #ff9a8a; font-size: 13px; margin: 0; }
 
 .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
@@ -159,9 +180,30 @@ header {
 .toast[hidden] { display: none; }
 .empty { text-align: center; color: var(--muted); padding: 48px 12px; font-size: 15px; line-height: 1.9; }
 footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 12px; line-height: 1.9; }
+/* launch splash: radar disc with a live sweep and the wordmark, shown once per app launch */
+#splash { position: fixed; inset: 0; z-index: 50; background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px; transition: opacity .45s ease; animation: spOut .4s ease 4s forwards; }
+#splash.hide { opacity: 0; pointer-events: none; }
+@keyframes spOut { to { opacity: 0; visibility: hidden; } }
+.sp-radar { position: relative; width: min(64vw, 270px); aspect-ratio: 1; border-radius: 50%; overflow: hidden;
+  background: repeating-radial-gradient(circle, transparent 0 calc(12.5% - 1px), rgba(90,235,130,.26) calc(12.5% - 1px) 12.5%), radial-gradient(circle, #0c3a1d 0%, #04140a 72%);
+  box-shadow: 0 0 0 2px rgba(90,235,130,.6), 0 0 0 9px rgba(90,235,130,.08), 0 0 60px rgba(90,235,130,.28); }
+.sp-radar::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent calc(50% - .5px), rgba(90,235,130,.22) calc(50% - .5px) calc(50% + .5px), transparent 0), linear-gradient(0deg, transparent calc(50% - .5px), rgba(90,235,130,.22) calc(50% - .5px) calc(50% + .5px), transparent 0); }
+.sp-sweep { position: absolute; inset: 0; border-radius: 50%; background: conic-gradient(from 0deg, transparent 0 68%, rgba(110,255,150,0) 68%, rgba(110,255,150,.55) 100%); animation: spSpin 1.8s linear infinite; }
+.sp-sweep::after { content: ""; position: absolute; left: calc(50% - 1px); top: 0; width: 2px; height: 50%; background: #9dffbe; box-shadow: 0 0 10px 2px rgba(120,255,160,.8); }
+@keyframes spSpin { to { transform: rotate(360deg); } }
+.sp-blip { position: absolute; width: 9px; height: 9px; margin: -4.5px; border-radius: 50%; background: #b6ffcc; box-shadow: 0 0 12px 3px rgba(120,255,160,.75); opacity: 0; animation: spBlip 1.8s linear infinite; }
+@keyframes spBlip { 0%, 100% { opacity: 0; } 8% { opacity: 1; } 55% { opacity: .15; } }
+.sp-word { display: flex; align-items: baseline; gap: 8px; font-weight: 700; }
+.sp-word .r { font-size: 20px; font-weight: 600; color: var(--muted); }
+.sp-word .a { font-size: 46px; color: var(--accent); text-shadow: 0 0 24px rgba(255,122,61,.45); }
+@media (prefers-reduced-motion: reduce) { .sp-sweep, .sp-blip { animation-duration: 6s; } }
 </style>
 </head>
 <body>
+<div id="splash" aria-hidden="true">
+  <div class="sp-radar"><div class="sp-sweep"></div><span class="sp-blip" style="left:70%;top:30%;animation-delay:0.25s"></span><span class="sp-blip" style="left:78%;top:62%;animation-delay:0.55s"></span><span class="sp-blip" style="left:34%;top:74%;animation-delay:1.05s"></span><span class="sp-blip" style="left:26%;top:38%;animation-delay:1.45s"></span></div>
+  <div class="sp-word" dir="ltr"><span class="r">Radar</span><span class="a">AI</span></div>
+</div>
 <div class="wrap">
   <header>
     <div class="bar">
@@ -203,8 +245,8 @@ footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 1
 
     <div class="panel" id="searchBox" hidden>
       <div class="srow">
-        <input id="q" class="field" type="search" placeholder="دوّر في الرادار، أو دوس بحث لكل المنصات" autocomplete="off" enterkeyhint="search">
-        <button class="btn-main" id="qGo">بحث في كل المنصات</button>
+        <input id="q" class="field" type="search" placeholder="ابحث في الرادار وكل المنصات" autocomplete="off" enterkeyhint="search">
+        <button class="btn-main btn-icon" id="qGo" aria-label="بحث في كل المنصات"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
       </div>
       <div class="two" id="kindRow" hidden>
         <select id="chanKind" class="field" aria-label="قسم القناة">
@@ -236,6 +278,13 @@ footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 1
 </div>
 
 <script>
+/* hide the launch splash after one sweep, or at once on a reload within the same session */
+(function () {
+  var sp = document.getElementById("splash"), seen = false;
+  try { seen = !!sessionStorage.getItem("radar-splash"); sessionStorage.setItem("radar-splash", "1"); } catch (e) {}
+  if (seen) { sp.remove(); return; }
+  setTimeout(function () { sp.classList.add("hide"); setTimeout(function () { sp.remove(); }, 500); }, 1900);
+})();
 var CATS = [
   { id: "all", name: "All", icon: '<rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/>' },
   { id: "arch", name: "BIM AI", color: "var(--c-arch)", icon: '<path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6M9 11h2M13 11h2"/>' },
@@ -617,11 +666,49 @@ function rcard(title, sub, openUrl, actions) {
   d.appendChild(r); return d;
 }
 function hint(t) { sHint.textContent = t; sHint.hidden = !t; }
-function section(title) {
-  var box = document.createElement("div");
-  var h = document.createElement("div"); h.className = "sresh"; h.textContent = title; box.appendChild(h);
-  sres.appendChild(box);
-  return box;
+var SRC_COLORS = { youtube: "#ff5c5c", github: "var(--c-code)", hn: "#ff9f43", ext: "var(--c-long)" };
+var stabs = null, sgroups = [];
+/* one results group per source: colored header with a count, first 3 results, then "عرض الكل" */
+function section(key, title) {
+  var color = SRC_COLORS[key];
+  var g = document.createElement("section"); g.className = "sgroup"; g.style.setProperty("--sc", color);
+  var h = document.createElement("div"); h.className = "sresh";
+  h.innerHTML = '<span class="sdot"></span><span class="sname"></span><span class="scount"></span>';
+  h.querySelector(".sname").textContent = title;
+  var list = document.createElement("div"); list.className = "slist";
+  var more = document.createElement("button"); more.className = "smore"; more.hidden = true;
+  g.appendChild(h); g.appendChild(list); g.appendChild(more); sres.appendChild(g);
+  var tab = document.createElement("button"); tab.className = "stab"; tab.style.setProperty("--sc", color);
+  tab.innerHTML = '<span class="sdot"></span><span class="sname"></span><b class="scount"></b>';
+  tab.querySelector(".sname").textContent = title;
+  stabs.appendChild(tab);
+  var grp = { key: key, el: g, tab: tab };
+  function upd() {
+    var n = list.querySelectorAll(".rcard").length;
+    h.querySelector(".scount").textContent = n || "";
+    tab.querySelector(".scount").textContent = n || "";
+    more.hidden = n <= 3 || g.classList.contains("solo");
+    more.textContent = g.classList.contains("open") ? "عرض أقل" : "عرض الكل (" + n + ")";
+  }
+  grp.upd = upd;
+  grp.add = function (el) { list.appendChild(el); upd(); };
+  more.onclick = function () { g.classList.toggle("open"); upd(); };
+  tab.onclick = function () { setTab(key); };
+  h.onclick = function () { setTab(key); };
+  sgroups.push(grp);
+  return grp;
+}
+function setTab(key) {
+  Array.prototype.forEach.call(stabs.children, function (t, i) {
+    t.setAttribute("aria-pressed", String(i === 0 ? key === "all" : sgroups[i - 1].key === key));
+  });
+  sgroups.forEach(function (g) {
+    var solo = key === g.key;
+    g.el.hidden = key !== "all" && !solo;
+    g.el.classList.toggle("solo", solo);
+    g.el.classList.toggle("open", solo);
+    g.upd();
+  });
 }
 var OPEN_SEARCH = [
   ["Instagram", "https://www.instagram.com/explore/search/keyword/?q="],
@@ -632,7 +719,7 @@ var OPEN_SEARCH = [
 function runSearch() {
   var v = qEl.value.trim();
   if (!v) return;
-  sres.innerHTML = ""; hint("");
+  sres.innerHTML = ""; hint(""); sgroups = [];
   document.getElementById("kindRow").hidden = true;
   /* a YouTube channel link or @handle: offer to add it as a channel, nothing else to search for */
   var m = v.match(/youtube\.com\/(@[\w.\-]+|channel\/(UC[\w-]{22}))/i) || v.match(/^(@[\w.\-]{2,40})$/);
@@ -642,67 +729,76 @@ function runSearch() {
     sres.appendChild(rcard(ref, "قناة يوتيوب", m[2] ? "https://www.youtube.com/channel/" + ref : "https://www.youtube.com/" + ref, [{ label: "＋ قناة للرادار", go: true, fn: function () { addChannelToRadar(ref, ref); } }]));
     return;
   }
+  stabs = document.createElement("div"); stabs.className = "stabs";
+  var all = document.createElement("button"); all.className = "stab"; all.textContent = "الكل"; all.setAttribute("aria-pressed", "true");
+  all.onclick = function () { setTab("all"); };
+  stabs.appendChild(all); sres.appendChild(stabs);
+
   var pending = 3;
-  function oneDone() { pending--; if (pending === 0 && !sres.querySelector(".rcard")) hint("مفيش نتائج من المصادر اللي بندور فيها جوه التطبيق."); }
+  function oneDone() {
+    pending--;
+    if (pending === 0 && !sres.querySelector(".sgroup:not(:last-child) .rcard")) hint("مفيش نتائج من المصادر اللي بندور فيها جوه التطبيق.");
+  }
 
-  var ghBox = section("GitHub");
-  fetch("https://api.github.com/search/repositories?sort=stars&order=desc&per_page=6&q=" + encodeURIComponent(v))
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function (d) {
-      (d.items || []).forEach(function (r) {
-        var sub = (r.description || "") + "  ★ " + r.stargazers_count + (r.language ? "  ·  " + r.language : "");
-        ghBox.appendChild(rcard(r.full_name, sub, r.html_url, [{ label: "للرادار", go: true, fn: function () {
-          saveFound({ cat: "code", src: "GitHub", t: r.full_name + (r.description ? ": " + r.description : ""), url: r.html_url, tags: ["★ " + r.stargazers_count] });
-        } }]));
-      });
-    }).catch(function () {}).then(oneDone);
+  var yt = section("youtube", "YouTube");
+  var gh = section("github", "GitHub");
+  var hn = section("hn", "Hacker News");
+  var ext = section("ext", "منصات تانية");
 
-  var hnBox = section("Hacker News");
-  fetch("https://hn.algolia.com/api/v1/search?query=" + encodeURIComponent(v) + "&tags=story&hitsPerPage=6")
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function (d) {
-      (d.hits || []).forEach(function (h) {
-        var hurl = h.url || ("https://news.ycombinator.com/item?id=" + h.objectID);
-        hnBox.appendChild(rcard(h.title, (h.points || 0) + " نقطة، " + (h.num_comments || 0) + " تعليق", hurl, [{ label: "للرادار", go: true, fn: function () {
-          saveFound({ cat: "code", src: "Hacker News", t: h.title, url: hurl, tags: ["نقاش"] });
-        } }]));
-      });
-    }).catch(function () {}).then(oneDone);
-
-  var ytBox = section("YouTube");
   var key = lsGet("radar-ytkey");
   var ytUrl = "https://www.youtube.com/results?search_query=" + encodeURIComponent(v);
   if (!key) {
-    ytBox.appendChild(rcard("ابحث عن «" + v + "» في يوتيوب", "محتاج مفتاح مجاني من جوجل عشان نتايجه تبان هنا جوه التطبيق", ytUrl, []));
+    yt.add(rcard("افتح نتايج «" + v + "» في يوتيوب", "عشان الفيديوهات تظهر هنا محتاج مفتاح مجاني من جوجل (مرة واحدة)", ytUrl, []));
     var kb = document.createElement("div"); kb.className = "srow";
     var ki = document.createElement("input"); ki.className = "field ltr"; ki.placeholder = "YouTube API key (اختياري)";
     var kg = document.createElement("button"); kg.className = "btn-main"; kg.textContent = "حفظ";
     kg.onclick = function () { if (ki.value.trim()) { lsSet("radar-ytkey", ki.value.trim()); toast("اتحفظ. ابحث تاني"); runSearch(); } };
-    kb.appendChild(ki); kb.appendChild(kg); ytBox.appendChild(kb);
+    kb.appendChild(ki); kb.appendChild(kg); yt.add(kb);
     oneDone();
   } else {
-    fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&type=video,channel&q=" + encodeURIComponent(v) + "&key=" + encodeURIComponent(key))
+    fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=8&type=video,channel&q=" + encodeURIComponent(v) + "&key=" + encodeURIComponent(key))
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (d) {
         (d.items || []).forEach(function (it) {
           var sn = it.snippet || {};
           if (it.id.kind === "youtube#channel") {
             var cid = it.id.channelId;
-            ytBox.appendChild(rcard(sn.title, "قناة · " + (sn.description || ""), "https://www.youtube.com/channel/" + cid, [{ label: "＋ قناة للرادار", go: true, fn: function () { addChannelToRadar(cid, sn.title); } }]));
+            yt.add(rcard(sn.title, "قناة · " + (sn.description || ""), "https://www.youtube.com/channel/" + cid, [{ label: "＋ قناة للرادار", go: true, fn: function () { addChannelToRadar(cid, sn.title); } }]));
           } else {
             var vu = "https://www.youtube.com/watch?v=" + it.id.videoId;
-            ytBox.appendChild(rcard(sn.title, sn.channelTitle, vu, [{ label: "للرادار", go: true, fn: function () { saveFound({ cat: "long", src: "YouTube", t: sn.title, url: vu, tags: [sn.channelTitle] }); } }]));
+            yt.add(rcard(sn.title, sn.channelTitle, vu, [{ label: "للرادار", go: true, fn: function () { saveFound({ cat: "long", src: "YouTube", t: sn.title, url: vu, tags: [sn.channelTitle] }); } }]));
           }
         });
       }).catch(function () {
         var cb = document.createElement("button"); cb.className = "pill"; cb.textContent = "المفتاح مش شغال، مسحه"; cb.onclick = function () { lsSet("radar-ytkey", ""); runSearch(); };
-        ytBox.appendChild(cb);
+        yt.add(cb);
       }).then(oneDone);
   }
 
-  var extBox = section("منصات تانية");
+  fetch("https://api.github.com/search/repositories?sort=stars&order=desc&per_page=8&q=" + encodeURIComponent(v))
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      (d.items || []).forEach(function (r) {
+        var sub = (r.description || "") + "  ★ " + r.stargazers_count + (r.language ? "  ·  " + r.language : "");
+        gh.add(rcard(r.full_name, sub, r.html_url, [{ label: "للرادار", go: true, fn: function () {
+          saveFound({ cat: "code", src: "GitHub", t: r.full_name + (r.description ? ": " + r.description : ""), url: r.html_url, tags: ["★ " + r.stargazers_count] });
+        } }]));
+      });
+    }).catch(function () {}).then(oneDone);
+
+  fetch("https://hn.algolia.com/api/v1/search?query=" + encodeURIComponent(v) + "&tags=story&hitsPerPage=8")
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      (d.hits || []).forEach(function (h) {
+        var hurl = h.url || ("https://news.ycombinator.com/item?id=" + h.objectID);
+        hn.add(rcard(h.title, (h.points || 0) + " نقطة، " + (h.num_comments || 0) + " تعليق", hurl, [{ label: "للرادار", go: true, fn: function () {
+          saveFound({ cat: "code", src: "Hacker News", t: h.title, url: hurl, tags: ["نقاش"] });
+        } }]));
+      });
+    }).catch(function () {}).then(oneDone);
+
   OPEN_SEARCH.forEach(function (p) {
-    extBox.appendChild(rcard("افتح بحث «" + v + "» في " + p[0], "", p[1] + encodeURIComponent(v), []));
+    ext.add(rcard("دوّر على «" + v + "» في " + p[0], "بيفتح بحث " + p[0] + " نفسه", p[1] + encodeURIComponent(v), []));
   });
 }
 document.getElementById("btnSaved").onclick = function () { state.onlySaved = !state.onlySaved; render(); };
