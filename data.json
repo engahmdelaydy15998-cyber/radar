@@ -1,7 +1,57 @@
 {
- "updated": "2026-11-20T02:18:04Z",
+ "updated": "2026-11-20T05:12:20Z",
  "demo": false,
  "items": [
+  {
+   "id": "hn-50569985",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-20T04:00:24Z",
+   "t": "GIMP now has UI tests",
+   "s": "19 نقطة، 4 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.gimp.org/news/2026/11/16/gimp-ui-tests/",
+   "url2": "https://news.ycombinator.com/item?id=50569985"
+  },
+  {
+   "id": "af-httpssimonwillisonnet2026Nov20tokenfraudishereanditsbad",
+   "cat": "agents",
+   "src": "Simon Willison",
+   "ts": "2026-11-20T02:49:57Z",
+   "t": "Token fraud is here and it’s BAD (YouTube)",
+   "s": "",
+   "tags": [
+    "مدونة"
+   ],
+   "url": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/"
+  },
+  {
+   "id": "yt-5eON_8rgKzk",
+   "cat": "agents",
+   "src": "YouTube",
+   "ts": "2026-11-20T02:37:36Z",
+   "t": "Gemini 4 Neon is ridiculous...",
+   "s": "Join My Newsletter for Regular AI Updates 👇🏼 https://forwardfuture.com Check out Scarlet: https://github.com/Forward-Future/scarlet My Links 🔗 👉🏻 X:…",
+   "tags": [
+    "Matthew Berman"
+   ],
+   "url": "https://www.youtube.com/watch?v=5eON_8rgKzk"
+  },
+  {
+   "id": "hn-50569478",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-20T02:35:52Z",
+   "t": "The Army Is Detonating a Toxic \"Lead Bomb\" in Iowa. It Forgot to Warn People",
+   "s": "13 نقطة، 4 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.motherjones.com/politics/2026/11/army-military-iowa-lead-azide-toxic-detonation-dust-health/",
+   "url2": "https://news.ycombinator.com/item?id=50569478"
+  },
   {
    "id": "yt-E83rp6tZ34I",
    "cat": "co",
@@ -182,6 +232,19 @@
    "url": "https://www.youtube.com/watch?v=nEYuoqqMgyg",
    "ta": "ماذا يحدث مع GPT-6.2؟",
    "sa": "تحقق من Spacesheep: https://spacesheep.dev/matt أول 1000 مشترك يحصلون على 3 أشهر مجانًا تحقق من Scarlet: https://github.com/Forward-Future/scarlet..."
+  },
+  {
+   "id": "hn-50565484",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-19T20:01:18Z",
+   "t": "Ask HN: Where do you see Software in 5 years?",
+   "s": "14 نقطة، 16 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50565484",
+   "url2": ""
   },
   {
    "id": "yt-FORdPIWOH5k",
@@ -372,8 +435,7 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
-   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري"
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5"
   },
   {
    "id": "hn-50562528",
@@ -662,6 +724,18 @@
    "url": "https://www.youtube.com/watch?v=ikNf7eW8CHk",
    "ta": "تعرف على برايان وبيست، النقاط في العمل في Holiday Extras",
    "sa": "ديفيد لي، مدير الابتكار والنمو في Holiday Extras، يسمي نقطته برايان أثناء تنقلاته الصباحية. يتحدثون خلال الاجتماعات المقبلة ، و ..."
+  },
+  {
+   "id": "gn-ollamaapitutorial12steps70min",
+   "cat": "agents",
+   "src": "shattered.io",
+   "ts": "2026-11-19T11:12:18Z",
+   "t": "Ollama API Tutorial: 12 Steps, 70 Min",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQdGlJeUZvdUhrYzFUdW40RER0bmlIaDV0Mzd6QzNKZklEdXVQZUY5a1BxRFZQNFJnS3lxazN0ZWlLdFBwRjJ5TXdtVkI5VWdybnFpV3JtY2xtT2JlUkx5NlVjdUxfQUtqTXEzQjBMaWtPYWgtSVZwdzQzMDBfUU9nRGNRSWo?oc=5"
   },
   {
    "id": "yt-GUx89takPiA",
@@ -4254,86 +4328,6 @@
    ],
    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xxmj9o/paper_models_gamer_a_generalist/",
    "ta": "[ورقة ونماذج] اللاعب: نموذج أساسي للرؤية واللغة والعمل لوكيل الألعاب في الوقت الفعلي طويل الأفق"
-  },
-  {
-   "id": "gn-artexhowcybercriminalsuseaiagentstoscaletheirattacks",
-   "cat": "agents",
-   "src": "Security Affairs",
-   "ts": "2026-11-16T10:44:46Z",
-   "t": "ARTEX: How Cybercriminals Use AI Agents to Scale Their Attacks",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUmJER1FmTmtmNElRbWtOTFYtUVlWOUEtT0xkaF9zcjZVODBlMmp0eEwxemVaVlZ6WVplb3hzVTdKb1YxUzZaMnBGTXIxOThfanZMWS1JaEtxSHBLN2NxYVRtSWV2N2Q0MHBBQkhGX2dJYzNKZWwyVXJDUFZrZDVvazJsMURadXpxQlpacng4QUg0VXFBUDNFRVhaQ19pemJDREZpVXF3SdIBrAFBVV95cUxNbGJKZldBMFJYVXVLeXluWTZIY3NSTUZmWHBzeFh3TDNjd0YyTWJ4SXpnMTZvUUJKSWdsYmZlX0RXN00xWHlJUkVwOUZMdklBVWFnM2I1LW5DajN1NXR4OTk1dnBhUlZLRG9KQ184eE9WNFpwV2NLdURwbExlV3FUODR2Q3FpSUIyWF9SUG10amRzaVVnTHk1OWFVVWMwcmJKVWhjTE5NS3pCdHp4?oc=5",
-   "ta": "ARTEX: كيف يستخدم مجرمو الإنترنت عملاء الذكاء الاصطناعي لتوسيع نطاق هجماتهم"
-  },
-  {
-   "id": "gn-originalvoiceslaunchestwineo20fordigitaltwins",
-   "cat": "arch",
-   "src": "IT Brief UK",
-   "ts": "2026-11-16T10:42:00Z",
-   "t": "OriginalVoices launches Twineo 2.0 for digital twins",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOUHV5QkVyZEQxTmFOUzlydnJodDRvUWpmclpDT3lIZU1iUmlaTVdvSVZXdm9IUnpRSm1DNXM5RFZabmFzczk2T3R5d3ctd19lSl9yOWZKNWhMZVJRUmZzQl9KdFNSZWVUSFRNeFZYM0NXc2FoOU50cktFMW1JQmU3cGJwMjRfUWc?oc=5",
-   "ta": "تطلق OriginalVoices برنامج Twineo 2.0 للتوائم الرقمية"
-  },
-  {
-   "id": "gn-awsopensourcesemulatorforlocaltestingof200servicesbycodingag",
-   "cat": "agents",
-   "src": "infoq.com",
-   "ts": "2026-11-16T10:40:37Z",
-   "t": "AWS Open-Sources Emulator for Local Testing of 200+ Services by Coding Agents",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE93anQ5SVZ0bHgxWV90MjIyMkpsWjc0U3hvUVhadF9PZEZtU0FVSzZ4UGNzSFRaUTY0dzlXUHN3T3ZTdFMya3RKbE9GZFVZRzd2Y2E4NUlRUzNJTGJEMEo5UHBKaDJpQQ?oc=5",
-   "ta": "محاكي AWS مفتوح المصدر للاختبار المحلي لأكثر من 200 خدمة بواسطة وكلاء الترميز"
-  },
-  {
-   "id": "rss-contentbeyondbimfromengineeringdatatoengineeringintelligence",
-   "cat": "arch",
-   "src": "AEC Magazine",
-   "ts": "2026-11-16T10:22:33Z",
-   "t": "Beyond BIM: From Engineering Data to Engineering Intelligence",
-   "s": "BIM provided the structured data foundation on which next-gen engineering workflows can be built The post Beyond BIM: From Engineering Data to Engineering Inte…",
-   "tags": [
-    "AEC"
-   ],
-   "url": "https://aecmag.com/sponsored-content/beyond-bim-from-engineering-data-to-engineering-intelligence/",
-   "ta": "ما وراء BIM: من البيانات الهندسية إلى الذكاء الهندسي",
-   "sa": "قدمت BIM أساس البيانات المنظمة التي يمكن من خلالها بناء مسارات العمل الهندسية من الجيل التالي. المقال ما بعد BIM: من البيانات الهندسية إلى التكامل الهندسي ..."
-  },
-  {
-   "id": "gn-beyondbimfromengineeringdatatoengineeringintelligence",
-   "cat": "arch",
-   "src": "AEC Magazine",
-   "ts": "2026-11-16T10:22:33Z",
-   "t": "Beyond BIM: From Engineering Data to Engineering Intelligence",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNalNDWGNFNVB4WVFYRzFETTU2X003S1FJeWU4c2I0Y1VTUVZtOHQxU1lrSVBjak9RRDBhUWZpemx4N2FZYk4wdzVTc3h2UHdpZ0VNdXEzWjRSSDhEUVZlVHFENURXNGsxN18wbm01U0VpbUZVTEdyZ29qSHplV0RldTItUjhBNk5jVENSV2lHaDdnN21yeFl4Z3VJSG5fSGM?oc=5",
-   "ta": "ما وراء BIM: من البيانات الهندسية إلى الذكاء الهندسي"
-  },
-  {
-   "id": "yt-2f6yeG78xFA",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-16T10:00:40Z",
-   "t": "Nod, the n8n AI agent that builds your workflows (NOD)",
-   "s": "I sent a single message on Telegram. Nod built me a 13-node n8n workflow, already tested. Nod is the new AI agent from the n8n team: free, open sourc…",
-   "tags": [
-    "Dr Firas"
-   ],
-   "url": "https://www.youtube.com/shorts/2f6yeG78xFA",
-   "ta": "Nod، وكيل n8n AI الذي يبني سير العمل الخاص بك (NOD)",
-   "sa": "لقد أرسلت رسالة واحدة على Telegram. قامت شركة Nod ببناء سير عمل n8n مكون من 13 عقدة، وتم اختباره بالفعل. Nod هو وكيل الذكاء الاصطناعي الجديد من فريق n8n: مجاني ومفتوح المصدر..."
   }
  ]
 }
