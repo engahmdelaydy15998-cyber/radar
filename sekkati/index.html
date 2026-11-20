@@ -157,7 +157,10 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
     <h1 class="brand"><span class="dot"></span>سكّتي</h1>
     <div class="tagline">🛣️ سكة السلامة</div>
   </div>
-  <button class="sec" id="locate" style="padding:8px 12px">📍 موقعي</button>
+  <div style="display:flex;gap:6px">
+    <button class="sec" id="install" hidden style="padding:8px 12px;border-color:var(--acc);color:var(--acc)">📲 ثبّت</button>
+    <button class="sec" id="locate" style="padding:8px 12px">📍 موقعي</button>
+  </div>
 </div>
 
 <div id="stage">
@@ -1207,6 +1210,10 @@ renderTrips(); drawMarks();
 try { const p = JSON.parse(localStorage.getItem('plan') || 'null'); if (p && p.length && p[0].s && p[0].s.pois){ results = p; setTimeout(() => showRoutes(0), 800); } } catch(e){}
 useMyLocation();
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+let installEv = null;                              // زرار تثبيت بيظهر بس لما كروم يسمح بالتثبيت
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); installEv = e; $('install').hidden = false; });
+$('install').onclick = async () => { if (!installEv) return; installEv.prompt(); try { await installEv.userChoice; } catch(e){} installEv = null; $('install').hidden = true; };
+window.addEventListener('appinstalled', () => { $('install').hidden = true; });
 </script>
 </body>
 </html>
