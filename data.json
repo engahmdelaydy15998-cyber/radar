@@ -1,7 +1,103 @@
 {
- "updated": "2026-11-20T06:52:18Z",
+ "updated": "2026-11-20T11:31:59Z",
  "demo": false,
  "items": [
+  {
+   "id": "hn-50572503",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-20T10:01:41Z",
+   "t": "Frostbite: A new CPU architecture discovered, designed and verified by AI",
+   "s": "105 نقطة، 77 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://architectlabs.com/blog/frostbite",
+   "url2": "https://news.ycombinator.com/item?id=50572503",
+   "ta": "Frostbite: تم اكتشاف بنية جديدة لوحدة المعالجة المركزية وتصميمها والتحقق منها بواسطة الذكاء الاصطناعي"
+  },
+  {
+   "id": "hn-50572355",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-20T09:43:19Z",
+   "t": "If you can't explain something in simple terms, you don't understand it (2017)",
+   "s": "30 نقطة، 13 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://kottke.org/17/06/if-you-cant-explain-something-in-simple-terms-you-dont-understand-it",
+   "url2": "https://news.ycombinator.com/item?id=50572355",
+   "ta": "إذا لم تتمكن من شرح شيء ما بعبارات بسيطة، فأنت لا تفهمه (2017)"
+  },
+  {
+   "id": "gn-claudecodealternativesin20269optionsandtheplanyoualreadypayf",
+   "cat": "agents",
+   "src": "Fello AI",
+   "ts": "2026-11-20T09:31:59Z",
+   "t": "Claude Code Alternatives in 2026: 9 Options and the Plan You Already Pay For",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1YRi1zbjRteEQ2cV9USklzRFp3bWV3bmZJZTdWYlkxTng4Mk1meVdNZHZWbDhRNHNxZUtwdGUwZV83MmJiYXNCdjA1YmEyakhQUmtEOHFjdDQ?oc=5",
+   "ta": "بدائل كلود كود في عام 2026: 9 خيارات والخطة التي تدفع مقابلها بالفعل"
+  },
+  {
+   "id": "hn-50572116",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-20T09:13:09Z",
+   "t": "Carnival Cruises emits ten times more sulphur oxide than all of Europe's cars",
+   "s": "62 نقطة، 20 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://ecohustler.com/article/one-corporation-to-pollute-them-all/",
+   "url2": "https://news.ycombinator.com/item?id=50572116",
+   "ta": "تنبعث من رحلات الكرنفال من أكسيد الكبريت عشرة أضعاف ما تصدره جميع السيارات الأوروبية"
+  },
+  {
+   "id": "yt-6NT9TsT6iMc",
+   "cat": "agents",
+   "src": "YouTube",
+   "ts": "2026-11-20T08:15:34Z",
+   "t": "Google ACHIEVED RSI?! New Stealth Model BEATS Fable 5.2, Anthropic Post IPO, Genie 4 & MORE! AI NEWS",
+   "s": "Catch the bugs that only show up at the merge. Try TestSprite free: https://www.testsprite.com/?via=mahi-2611a Google may have just achieved Recursiv…",
+   "tags": [
+    "WorldofAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=6NT9TsT6iMc",
+   "ta": "جوجل حققت مؤشر القوة النسبية؟! نموذج التخفي الجديد يتفوق على Fable 5.2 وAnthropic Post IPO وGenie 4 والمزيد! أخبار الذكاء الاصطناعي",
+   "sa": "قبض على الأخطاء التي تظهر فقط عند الدمج. جرب TestSprite مجانًا: https://www.testsprite.com/?via=mahi-2611a ربما يكون Google قد حقق للتو Recursiv..."
+  },
+  {
+   "id": "gn-nemetschekgrouptospotlightaipoweredsolutionsforthemiddleeast",
+   "cat": "arch",
+   "src": "Nemetschek",
+   "ts": "2026-11-20T07:54:02Z",
+   "t": "Nemetschek Group to Spotlight AI-Powered Solutions for the Middle East’s AEC/O Sector at Big 5 Global 2026",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQbldMQ0dfeVRpWG5iV1FLQ01IWDNlZVVxM0doT2poaTF3d0g2dHpST0dFWlItdi1INEkyZS1WWU5kdjZQZ1J0ZmRZazN1WDNhSm45enc0YnFiMFBkUkFwcnRHZXB5ZmFROXRVcG9zR3U5NzZ2aXZuZElpWnVyVmRlSFI5ZnZvaFpLN2JqbVRUSzJ3ZlgtdThoTmtSanpYbHk4UE1WMFRMQTJFOVJvTlJfM1FwelhERFRHUndEU2ZZY0J5TXg5?oc=5",
+   "ta": "مجموعة Nemetschek تسلط الضوء على الحلول المدعومة بالذكاء الاصطناعي لقطاع AEC/O في الشرق الأوسط في Big 5 Global 2026"
+  },
+  {
+   "id": "yt-wuCYQ2YSa9c",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-20T07:01:09Z",
+   "t": "Fable 5.2 after the free week: credits, a spending cap and resets before March",
+   "s": "Your free week of Fable 5.2 on Pro is over. On Max and Ultra, you may still have 1 to 3 Fable resets, valid until March 8, 2027. The 4 rules and the…",
+   "tags": [
+    "Dr Firas"
+   ],
+   "url": "https://www.youtube.com/shorts/wuCYQ2YSa9c",
+   "ta": "الخرافة 5.2 بعد الأسبوع المجاني: الاعتمادات والحد الأقصى للإنفاق وإعادة التعيين قبل شهر مارس",
+   "sa": "لقد انتهى أسبوعك المجاني من Fable 5.2 على Pro. في Max وUltra، قد لا يزال لديك 1 إلى 3 عمليات إعادة تعيين Fable، صالحة حتى 8 مارس 2027. القواعد الأربعة و..."
+  },
   {
    "id": "yt-OSHSopaYjTw",
    "cat": "co",
@@ -85,6 +181,20 @@
    "url": "https://www.gimp.org/news/2026/11/16/gimp-ui-tests/",
    "url2": "https://news.ycombinator.com/item?id=50569985",
    "ta": "لدى GIMP الآن اختبارات واجهة المستخدم"
+  },
+  {
+   "id": "rss-m1188271whathappenedtoparametricismhowastyleblurredintoalook",
+   "cat": "arch",
+   "src": "ArchDaily",
+   "ts": "2026-11-20T04:00:00Z",
+   "t": "What Happened to Parametricism? How a Style Blurred Into a Look",
+   "s": "In September 2008, at a series of sessions organized alongside the 11th Venice Architecture Biennale under the name of the Dark Side Club , a text was presente…",
+   "tags": [
+    "AEC"
+   ],
+   "url": "https://www.archdaily.com/1188271/what-happened-to-parametricism-how-a-style-blurred-into-a-look",
+   "ta": "ماذا حدث البارامترية؟ كيف نمط غير واضح في نظرة",
+   "sa": "في سبتمبر 2008، في سلسلة من الجلسات التي تم تنظيمها على هامش بينالي البندقية للهندسة المعمارية الحادي عشر تحت اسم Dark Side Club، تم تقديم نص…"
   },
   {
    "id": "gn-mcaaconferenceexploresaiandmepconstructiontechnology",
@@ -537,7 +647,8 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
+   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري"
   },
   {
    "id": "hn-50562528",
@@ -1414,6 +1525,19 @@
    "url": "https://news.ycombinator.com/item?id=50549188",
    "url2": "",
    "ta": "إطلاق HN: Maritime (YC F26) - سحابة مُدارة لوكلاء الذكاء الاصطناعي للإنتاج"
+  },
+  {
+   "id": "gn-microsoftsofficialpythonagentframeworkhijackedtodistributema",
+   "cat": "agents",
+   "src": "The Register",
+   "ts": "2026-11-18T17:23:37Z",
+   "t": "Microsoft's official Python agent framework hijacked to distribute malware",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPSFdyTEhpOVF1SXk4LXkxSXg5bnJ3b1RpbUV5dHpfUEdKZUw4WXpJRzZYTEg3VzEtSEVWN2FNSWV0OERSWUlRd045NkMyd3Q0QVRoaFJ2VzFhelJCNTk0YzJFaWRrcldQZ1ExaHdqM0d2RmZvSXZwTWZadHVPQ2xFa2l0VFRmVWEwY3dhUVM4LXJWcGc2NWkxNS1ndWJHZVZrUzhHaDk2d1VvTjJ3VThlSnpCY1RrTVNzdkduTjh1SWZGN1FFY1N6TQ?oc=5",
+   "ta": "تم اختراق إطار عمل وكيل Python الرسمي لشركة Microsoft لتوزيع البرامج الضارة"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov18datasettearrows",
@@ -4219,125 +4343,6 @@
    "url": "https://www.youtube.com/shorts/83NRvB_Gusk",
    "ta": "يقوم وكلاء الذكاء الاصطناعي بكتابة التعليمات البرمجية بشكل أسرع مما يمكنني التحقق منه",
    "sa": "يقول 76% من المطورين ومديري الهندسة في تقرير Sonar's State of Code لعام 2027 أنهم يقومون بإنشاء كود الذكاء الاصطناعي بشكل أسرع مما يمكنهم التحقق منه! وأنا راجح…"
-  },
-  {
-   "id": "hn-50518068",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-16T14:38:54Z",
-   "t": "A 512 KiB binary message teaching chess without a shared language",
-   "s": "31 نقطة، 6 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://artemlegotin.com/golden-board/",
-   "ta": "رسالة ثنائية بحجم 512 كيلو بايت لتعليم الشطرنج بدون لغة مشتركة"
-  },
-  {
-   "id": "gn-googleaiagentturnedasecuritypatchintoaworkingexploitwithouth",
-   "cat": "agents",
-   "src": "news.lavx.hu",
-   "ts": "2026-11-16T14:19:04Z",
-   "t": "Google: AI agent turned a security patch into a working exploit without human help",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNT20xRmU5cklTRVlxSERzTkwzMUNPaWg2Znlhb2tiZm9UUVZkV2h2N25RcnZTNUdDYlhoTFd5TkhwdWtROFV1c1dWWXlpZFljbDN4NFl0R3VQQWhkdDNyTHdlRExoODFDeXhsZVFZWGUxaGlQZERzSEU2MDFhd3J1SGlXZmlZOHFCc1dOdWFmdWJWbzQ2ejBvZ2MtcVh0Sks4NTl1TEhaNExFODM1aVNJ?oc=5",
-   "ta": "Google: قام عميل الذكاء الاصطناعي بتحويل التصحيح الأمني ​​إلى ثغرة فعالة دون مساعدة بشرية"
-  },
-  {
-   "id": "af-ocalLLaMAcomments1xxqfqrstop_worrying_about_qwen_4s_aa_index",
-   "cat": "agents",
-   "src": "r/LocalLLaMA",
-   "ts": "2026-11-16T14:16:10Z",
-   "t": "Stop worrying about Qwen 4's AA index",
-   "s": "",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xxqfqr/stop_worrying_about_qwen_4s_aa_index/",
-   "ta": "توقف عن القلق بشأن مؤشر Qwen 4's AA"
-  },
-  {
-   "id": "hn-50517803",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-16T14:14:51Z",
-   "t": "Show HN: Coral – Open-source gateway where agents write their own tools",
-   "s": "50 نقطة، 23 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://github.com/withcoral/coral",
-   "ta": "Show HN: Coral – بوابة مفتوحة المصدر حيث يكتب الوكلاء أدواتهم الخاصة"
-  },
-  {
-   "id": "gn-googlefindshackersusingaiagentstobuildandrunexploitsfromsoft",
-   "cat": "agents",
-   "src": "The Hacker News",
-   "ts": "2026-11-16T14:00:00Z",
-   "t": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOMU1mNVUtaU1mbFc5RkYtbVl5SndUcjJPVm1FVjcxWnB1NW9KRHJoTloxZ053STNBdUxuVHhqLXF6dV8xRWRGMUNhRzVMSnhrNTRnNnRtY2s0WWMzeEVjR21HOVQwT0R3RkVXZDNYbFRqY2FYZl9wOElWc3JVRklDUFdRcWw?oc=5",
-   "ta": "تعثر Google على قراصنة يستخدمون وكلاء الذكاء الاصطناعي لإنشاء برامج استغلالية وتشغيلها من تصحيحات البرامج"
-  },
-  {
-   "id": "hn-50517410",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-16T13:30:30Z",
-   "t": "Show HN: Unref – A Python dead code finder built on Ruff's parser",
-   "s": "31 نقطة، 5 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://github.com/Apakottur/unref",
-   "url2": "https://news.ycombinator.com/item?id=50517410",
-   "ta": "Show HN: Unref – أداة البحث عن أكواد Python الميتة المبنية على محلل Ruff"
-  },
-  {
-   "id": "yt-VpHYPfvfy0o",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-16T13:23:40Z",
-   "t": "Building Jarvis: JPMC’s Agent Building Assembly Line",
-   "s": "David Odomirok, Tony Wu, and Jane Xue of JPMorgan Chase explain Jarvis, which they describe not as a single agent but as an agent-building assembly l…",
-   "tags": [
-    "LangChain"
-   ],
-   "url": "https://www.youtube.com/watch?v=VpHYPfvfy0o",
-   "ta": "بناء جارفيس: خط تجميع مبنى وكيل JPMC",
-   "sa": "يشرح ديفيد أودوميروك، وتوني وو، وجين شيوي من جيه بي مورجان تشيس جارفيس، الذي يصفونه ليس كوكيل واحد ولكن كمجموعة بناء وكيل."
-  },
-  {
-   "id": "hn-50517352",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-16T13:21:53Z",
-   "t": "Show HN: OpenTodo – a self-hosted, local-first task manager in one Go binary",
-   "s": "20 نقطة، 20 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://github.com/OpenTodoApp/OpenTodo",
-   "ta": "إظهار HN: OpenTodo - مدير مهام محلي مستضاف ذاتيًا في برنامج Go ثنائي واحد"
-  },
-  {
-   "id": "gn-qwen4maxischinasnewestflagshipaimodelanditmakesgptandclaudel",
-   "cat": "agents",
-   "src": "Digital Trends",
-   "ts": "2026-11-16T13:16:37Z",
-   "t": "Qwen4-Max is China's newest flagship AI model, and it makes GPT and Claude look expensive",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPaWJ3cERDenlEeUtlZWlIY1pLWTlsY3g3Q0lQT0FjNGc4SFRiSi1IbmNBa0Y4cmdieUNyY21SZWxDRTNQOUxNalhISjRpdkZlNUxtbXFiSUtxMkFWTmtJWTZLNWNzZWRIV25faHlEZVFpUXFDRXpfZ0d0bzlodVVsSVl5al9FRzN0ZVFCRmZtZGFWeXVtMGpqdmxLbUo?oc=5",
-   "ta": "Qwen4-Max هو أحدث نموذج رائد للذكاء الاصطناعي في الصين، وهو يجعل GPT وClaude يبدوان باهظي الثمن"
   }
  ]
 }
