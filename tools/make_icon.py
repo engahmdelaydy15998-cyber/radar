@@ -177,9 +177,37 @@ def build(name, pal):
         tl=layer(); td=ImageDraw.Draw(tl); k=R*0.5
         td.polygon([(cx-k*0.55,cy-k),(cx-k*0.55,cy+k),(cx+k,cy)],fill=(255,255,255,255)); over(base,tl)
     blip(318,0.35,0.050,(236,52,52),playg,solid=(236,52,52))
-    # architecture: same small lit-circle badge language as the code marks, labeled ARC, sandy mud-brick tone
-    archcol=pal['wall'][1]
-    blip(54,0.325,0.038,archcol,txt("ARC",0.85,W(archcol)))
+    if ARCH_MARK=="arc":
+        # architecture: same small lit-circle badge language as the code marks, labeled ARC
+        archcol=pal['wall'][1]
+        blip(54,0.325,0.038,archcol,txt("ARC",0.85,W(archcol)))
+    else:
+        # architecture: mud-brick dome + two vaults + arched doors (Hassan Fathy spirit); melts into the radar
+        ax,ay=pos(54,0.325); AW=N*0.108
+        echo(ax,ay,AW*0.30,pal['arch_echo'],0.325,54,0.4)
+        gl=layer(); ImageDraw.Draw(gl).ellipse([ax-AW*1.0,ay-AW*0.9,ax+AW*1.0,ay+AW*0.9],fill=pal['arch_echo']+(34,))
+        over(base,gl.filter(ImageFilter.GaussianBlur(AW*0.35)))
+        sz=int(AW*2.6); G=Image.new("L",(sz,sz),0); gd_=ImageDraw.Draw(G)
+        u=AW*0.62; ox,oy=sz/2,sz/2+0.15*u
+        def Q(p): return (ox+p[0]*u, oy+p[1]*u)
+        def domeP(cx,by,rx,ry):
+            return [Q((cx+rx*math.cos(math.pi*k/40),by-ry*math.sin(math.pi*k/40))) for k in range(41)]
+        gd_.polygon(domeP(0,0.60,0.62,0.86),fill=255)
+        gd_.rectangle([*Q((-0.80,0.60)),*Q((0.80,0.90))],fill=255)
+        gd_.polygon(domeP(-1.32,0.72,0.38,0.46),fill=255); gd_.rectangle([*Q((-1.70,0.72)),*Q((-0.94,0.90))],fill=255)
+        gd_.polygon(domeP(1.32,0.72,0.38,0.38),fill=255);  gd_.rectangle([*Q((0.94,0.72)),*Q((1.70,0.90))],fill=255)
+        def cut(cx,top,w_,bot):
+            gd_.rectangle([*Q((cx-w_,top+w_)),*Q((cx+w_,bot))],fill=0)
+            gd_.polygon([Q((cx+w_*math.cos(math.pi*k/30),top+w_-w_*math.sin(math.pi*k/30))) for k in range(31)],fill=0)
+        cut(0,0.50,0.15,0.90); cut(-1.32,0.74,0.07,0.90); cut(1.32,0.74,0.07,0.90)
+        fade=Image.new("L",(sz,sz)); fp=ImageDraw.Draw(fade)
+        for y in range(sz):
+            t=(y-(oy-0.9*u))/(1.8*u); fp.line([(0,y),(sz,y)],fill=int(255*max(0.85,min(1,1.5-t*0.6))))
+        G=ImageChops.multiply(G,fade).filter(ImageFilter.GaussianBlur(0.7*S))
+        col=Image.new("RGB",(sz,sz)); cp_=ImageDraw.Draw(col)
+        for x in range(sz): cp_.line([(x,0),(x,sz)],fill=lerp(pal['wall'][0],pal['wall'][1],x/sz))
+        sh2=layer(); sh2.paste((0,0,0,170),(int(ax-sz/2),int(ay-sz/2)+int(S*4)),G.filter(ImageFilter.GaussianBlur(5*S))); over(base,sh2)
+        t=layer(); t.paste(col.convert("RGBA"),(int(ax-sz/2),int(ay-sz/2)),G); over(base,t)
     # MEP (mechanical/electrical/plumbing): same text-badge language as the code marks
     blip(14,0.40,0.030,pal['mep'],txt("MEP",0.95,W(pal['mep'])),far=0.5*S)
     out=base.convert("RGB").resize((512,512),Image.LANCZOS)
@@ -191,6 +219,8 @@ def build(name, pal):
     out.save(name); return out
 PV={'glow': (120, 80, 210), 'bokeh': (170, 130, 255), 'ring': (176, 140, 255), 'streak': (255, 130, 170), 'grad': ((232, 222, 255), (255, 120, 175)), 'lglow': (255, 110, 170), 'plate': ((6, 5, 14), (26, 16, 52)), 'sweep': (190, 150, 255), 'c': [(140, 165, 255), (165, 150, 255), (190, 160, 255), (215, 185, 255), (200, 160, 255), (255, 150, 200), (225, 150, 255)], 'arch_echo': (214, 196, 255), 'sky': ((34, 26, 84), (118, 92, 200)), 'plaza': (186, 172, 238), 'wall': ((250, 244, 255), (176, 160, 226)), 'course': (196, 184, 238), 'door': (30, 24, 70), 'arch_rim': (235, 225, 255), 'mep': (120, 190, 200)}
 PG={'glow': (20, 110, 60), 'bokeh': (70, 200, 120), 'ring': (90, 235, 130), 'streak': (80, 255, 150), 'grad': ((226, 255, 232), (80, 235, 130)), 'lglow': (60, 220, 110), 'plate': ((2, 10, 6), (10, 44, 22)), 'sweep': (110, 255, 150), 'c': [(80, 230, 140), (110, 235, 120), (60, 210, 150), (150, 240, 130), (90, 225, 170), (190, 255, 160), (120, 240, 190)], 'arch_echo': (150, 255, 180), 'sky': ((6, 40, 22), (30, 110, 60)), 'plaza': (70, 160, 95), 'wall': ((236, 255, 238), (130, 200, 150)), 'course': (150, 205, 165), 'door': (6, 40, 22), 'arch_rim': (190, 255, 205), 'mep': (205, 190, 90)}
+import os
+ARCH_MARK=os.environ.get("ARCH_MARK","dome")
 a=build("v14_violet.png",PV)
 b=build("v14_green.png",PG)
 def maskable(im,name):
