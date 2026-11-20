@@ -609,8 +609,13 @@ def ai_call(batch, token):
         "Authorization": "Bearer " + token, "Content-Type": "application/json",
         "Accept": "application/vnd.github+json", "User-Agent": UA})
     with urllib.request.urlopen(req, timeout=90) as r:
-        msg = json.loads(r.read().decode("utf-8"))["choices"][0]["message"]["content"]
-    return json.loads(msg).get("items", [])
+        raw = r.read().decode("utf-8", "replace")
+    try:
+        msg = json.loads(raw)["choices"][0]["message"]["content"] or ""
+        m = re.search(r"\{.*\}", msg, re.S)
+        return json.loads(m.group(0)).get("items", [])
+    except Exception:
+        raise RuntimeError("unexpected reply: " + raw[:300].replace("\n", " "))
 
 
 def add_ai_headlines(items, max_calls=3, batch=20):
