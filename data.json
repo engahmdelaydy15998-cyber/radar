@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T11:42:34Z",
+ "updated": "2026-11-20T11:47:42Z",
  "demo": false,
  "items": [
   {
@@ -1048,6 +1048,19 @@
    "ta": "زوجة أحد كبار المسؤولين التنفيذيين في Nvidia عالقة في فضيحة تهريب شرائح الذكاء الاصطناعي المزعومة"
   },
   {
+   "id": "gh-1463800284",
+   "cat": "arch",
+   "src": "GitHub",
+   "ts": "2026-11-19T07:18:26Z",
+   "t": "gotoarchi/archi-daylight: archi Daylight - daylight analysis for Autodesk Revit",
+   "s": "0 نجمة، لغة غير محددة",
+   "tags": [
+    "Add-in"
+   ],
+   "url": "https://github.com/gotoarchi/archi-daylight",
+   "ta": "gotoarchi/archi-daylight: Archi Daylight - تحليل ضوء النهار لبرنامج Autodesk Revit"
+  },
+  {
    "id": "yt-Bh_dj5cTJuQ",
    "cat": "reels",
    "src": "YouTube",
@@ -1099,6 +1112,19 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQUkNwNzNBOFJHa0dpSkF0cDBDNTB0SXh6VVdqRHhXNktjUTRNWWlNVEE1NnhkOXlyUTdOUXZRRjd3R0VqVjEtWVcyNDhFWGZwYThfNmxKUy1iZl82Vkh2NG5yaUI0am40OER0MURwZGllbTJnU1FqaUFFYlJhMVg0UTExYXpGYm1OejFPUjhnbmFDWENGYnNtc1R4LWZHT1JMczhXMTYwNTdlQkdjNHlFUU5XMjZXUzhLNzJIZ2ZkVXU1QzV6dUV6TXhibUVWelhsOTRxZ08zcDRaRF94UTVfSDVWc1AwNXM?oc=5",
    "ta": "أوتوديسك ونيلسوفت ينشئان مركز BIM والتوأم الرقمي للتميز في بيون"
+  },
+  {
+   "id": "gh-1463690017",
+   "cat": "arch",
+   "src": "GitHub",
+   "ts": "2026-11-19T05:08:20Z",
+   "t": "Windsoft-Glazir/Glazir-Exporter: Glazir Exporter by Windsoft — Revit add-in for exchanging drawings and 3D models with Gla…",
+   "s": "0 نجمة، لغة غير محددة",
+   "tags": [
+    "Add-in"
+   ],
+   "url": "https://github.com/Windsoft-Glazir/Glazir-Exporter",
+   "ta": "Windsoft-Glazir/Glazir-Exporter: مُصدِّر Glazir من Windsoft — وظيفة Revit الإضافية لتبادل الرسومات والنماذج ثلاثية الأبعاد مع Glazir..."
   },
   {
    "id": "hn-50555712",
@@ -2287,6 +2313,19 @@
    "ta": "عاجل: الإصدارات المختطفة من إطار عمل وكيل Microsoft الرسمي تسرق بيانات اعتماد Azure وCI"
   },
   {
+   "id": "gh-1462394591",
+   "cat": "arch",
+   "src": "GitHub",
+   "ts": "2026-11-18T06:13:13Z",
+   "t": "yosifkhalifa66/Containment-Length-Calculator-Revit-Plugin: Autodesk Revit pyRevit plugin to calculate total route length of conduits and cable trays…",
+   "s": "0 نجمة، لغة Python",
+   "tags": [
+    "Add-in"
+   ],
+   "url": "https://github.com/yosifkhalifa66/Containment-Length-Calculator-Revit-Plugin",
+   "ta": "yosifkhalifa66/Containment-Length-Calculator-Revit-Plugin: البرنامج المساعد Autodesk Revit pyRevit لحساب إجمالي طول المسار للقنوات وصواني الكابلات..."
+  },
+  {
    "id": "hn-50542361",
    "cat": "arch",
    "src": "Hacker News",
@@ -2762,6 +2801,19 @@
    "url": "https://www.youtube.com/watch?v=EWfxlhtcqTE",
    "ta": "تعلم Reactjs #03 - إعداد بيئة التطوير",
    "sa": "إعداد بيئة التطوير الدروس والواجبات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+  },
+  {
+   "id": "gh-1461866226",
+   "cat": "arch",
+   "src": "GitHub",
+   "ts": "2026-11-17T19:18:05Z",
+   "t": "ConsciousnessEvoker/Revit-Latest-2026: Autodesk Revit Repack 2026 Design Suite Lifetime Perpetual Bim Patch Structural Build Cad…",
+   "s": "0 نجمة، لغة غير محددة",
+   "tags": [
+    "Add-in"
+   ],
+   "url": "https://github.com/ConsciousnessEvoker/Revit-Latest-2026",
+   "ta": "ConsciousnessEvocer/Revit-Latest-2026: Autodesk Revit Repack 2026 Design Suite Lifetime Perpetual Bim Patch الهيكل الهيكلي..."
   },
   {
    "id": "hn-50536648",
@@ -4289,59 +4341,6 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNN3V2WUd5TFN5eTU4SnRFVldnVXpiMk5jWTBPb1d0Z1ItNjVEbDBSUG04ZFg5c2lWUVA4YUdpUWJoRi1MU3pWR21fUGZncDMyWndHWnFFZEtzTVY2MjQ0VzlpTTM4OVBfUWNQU1NIUFRhVEVEaS1xNmJqQkZmRnVadTNJUlZpLW9Na2VscHlB?oc=5",
    "ta": "تحذر Google من أن أطر عمل الذكاء الاصطناعي الوكيل تدفع تهديد القرصنة إلى \"نقطة انعطاف\""
-  },
-  {
-   "id": "gn-googlerevealshowhackersareusingaiagentstoautomaterealworldcy",
-   "cat": "agents",
-   "src": "CyberSecurityNews",
-   "ts": "2026-11-16T16:00:52Z",
-   "t": "Google Reveals How Hackers Are Using AI Agents to Automate Real-World Cyberattacks",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBDMkFxZmtFOWNSS2xhS1BWVm5WS2VvU3JlR2hVM3F4X3YxOUs4S1BUbU5CdnI2ME1VbE8yVDBGOFZrckhpRC1pbXNycndpMnA4eDZtZWJtellRVC1Qbjh0TGJKU29nbHMt0gFuQVVfeXFMTm1nRFJwZk51TnA0bFNzaXFjLVNtV0ZFemljTWVxdzB3Zk1sUDh3MjZVU1cwVDhFVDJrWENwQTgwRWtfWVU4cm9hVXFlNVk5bnR6RFdRUjUxYXdyTVpFN1F4blRHdVgtTDBwQWgzY2c?oc=5",
-   "ta": "تكشف Google كيف يستخدم المتسللون عملاء الذكاء الاصطناعي لأتمتة الهجمات الإلكترونية في العالم الحقيقي"
-  },
-  {
-   "id": "yt-9fVixvNaNPI",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-16T16:00:28Z",
-   "t": "What Is NOD? The AI Agent That Builds n8n Workflows for You!",
-   "s": "🚀 Discover NOD, the new AI agent from the n8n team! In this complete beginner-friendly tutorial, I'll show you what NOD is, how it works, and how to…",
-   "tags": [
-    "Dr Firas"
-   ],
-   "url": "https://www.youtube.com/watch?v=9fVixvNaNPI",
-   "ta": "ما هو NOD؟ وكيل الذكاء الاصطناعي الذي يبني سير عمل n8n لك!",
-   "sa": "🚀 اكتشف NOD، وكيل الذكاء الاصطناعي الجديد من فريق n8n! في هذا البرنامج التعليمي الكامل المناسب للمبتدئين، سأوضح لك ما هو NOD، وكيف يعمل، وكيفية ..."
-  },
-  {
-   "id": "gn-thealgorithmiccriticcanartificialintelligencelearntojudgearc",
-   "cat": "arch",
-   "src": "Parametric Architecture",
-   "ts": "2026-11-16T16:00:00Z",
-   "t": "The Algorithmic Critic: Can Artificial Intelligence Learn to Judge Architecture?",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBGTjBEMHk0SU9KUWZRN0hpaHFvdG1ReUtJZ2t6YnZ1T3dKYlBaV0xGSEpWa2ZfYnd5YjdsOXM1MGJKVW9jMWh4UjZ6cUo3c3RJQmpGXzVqQ2lPc3g0dWZYcHJhZ0VKcHl2MzZXLURmNWFNR3h6dzc3amhsbm8?oc=5",
-   "ta": "الناقد الخوارزمي: هل يمكن للذكاء الاصطناعي أن يتعلم الحكم على الهندسة المعمارية؟"
-  },
-  {
-   "id": "af-omments1xxsc7ucensorship_is_turning_me_into_a_true_local_llm",
-   "cat": "agents",
-   "src": "r/LocalLLaMA",
-   "ts": "2026-11-16T15:31:28Z",
-   "t": "Censorship is turning me into a true Local LLM believer",
-   "s": "",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xxsc7u/censorship_is_turning_me_into_a_true_local_llm/",
-   "ta": "لقد حولتني الرقابة إلى مؤمن محلي حقيقي بماجستير القانون"
   }
  ]
 }
