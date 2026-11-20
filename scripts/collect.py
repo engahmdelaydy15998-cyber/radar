@@ -581,7 +581,7 @@ def apply_watches(items):
 
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent"
 # tried in order; the first model the key can use is kept for the rest of the run
-GEMINI_MODELS = ["gemini-4-hydrogen", "gemini-flash-latest", "gemini-2.5-flash"]
+GEMINI_MODELS = ["gemini-3.8-flash", "gemini-flash-latest", "gemini-4-hydrogen"]
 TOPICS = ("arch", "addins", "agents", "mcp", "oss", "courses", "news")
 AI_SYSTEM = (
     "أنت محرر أخبار تقنية لمهندس معماري مصري مهتم بالـ BIM والذكاء الاصطناعي والـ agents والكود. "
@@ -604,7 +604,7 @@ def gemini_post(model, payload, key):
     }).encode("utf-8")
     req = urllib.request.Request(GEMINI_URL % model, data=body, method="POST",
                                  headers={"x-goog-api-key": key, "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=90) as r:
+    with urllib.request.urlopen(req, timeout=150) as r:
         raw = r.read().decode("utf-8", "replace")
     try:
         parts = json.loads(raw)["candidates"][0]["content"]["parts"]
@@ -635,7 +635,7 @@ def ai_call(batch, key):
     raise RuntimeError(" | ".join(errors))
 
 
-def add_ai_headlines(items, max_calls=3, batch=20):
+def add_ai_headlines(items, max_calls=6, batch=10):
     """Adds h (Arabic headline), x (one-line takeaway), tg (tags), tp (topic) to items that lack them."""
     token = os.environ.get("GEMINI_API_KEY")
     if not token:
@@ -644,7 +644,10 @@ def add_ai_headlines(items, max_calls=3, batch=20):
     todo = [it for it in items if not it.get("h")][: max_calls * batch]
     by_id = {it["id"]: it for it in todo}
     done = 0
+    import time
     for i in range(0, len(todo), batch):
+        if i:
+            time.sleep(4)
         try:
             out = ai_call(todo[i:i + batch], token)
         except Exception as ex:
