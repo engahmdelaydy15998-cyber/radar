@@ -12,6 +12,8 @@ public class MainActivity extends BridgeActivity {
     public void onCreate(Bundle savedInstanceState) {
         registerPlugin(BubblePlugin.class);
         super.onCreate(savedInstanceState);
+        // The WebView follows the phone's font-size setting by default, which blows up every button; keep the designed sizes.
+        getBridge().getWebView().getSettings().setTextZoom(100);
         // Android 13+: without this the background-location notification can't show, and tracking stops in the background.
         if (Build.VERSION.SDK_INT >= 33
                 && checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
