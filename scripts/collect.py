@@ -579,8 +579,11 @@ def apply_watches(items):
 
 # ---------- AI headlines (GitHub Models, free with the workflow's GITHUB_TOKEN) ----------
 
-AI_URL = "https://models.github.ai/inference/chat/completions"
-AI_MODEL = "openai/gpt-4.1-mini"
+# GitHub Models endpoints, tried in order; the first one that answers is kept for the rest of the run
+AI_ENDPOINTS = [
+    ("https://models.github.ai/inference/chat/completions", "openai/gpt-4.1-mini"),
+    ("https://models.inference.ai.azure.com/chat/completions", "gpt-4o-mini"),
+]
 TOPICS = ("arch", "addins", "agents", "mcp", "oss", "courses", "news")
 AI_SYSTEM = (
     "أنت محرر أخبار تقنية لمهندس معماري مصري مهتم بالـ BIM والذكاء الاصطناعي والـ agents والكود. "
@@ -595,27 +598,47 @@ AI_SYSTEM = (
 )
 
 
-def ai_call(batch, token):
-    payload = [{"id": it["id"], "title": it["t"], "about": clip(it.get("s", ""), 200), "source": it.get("src", ""),
-                "cat": it.get("cat", "")} for it in batch]
+def ai_post(url, model, payload, token):
     body = json.dumps({
-        "model": AI_MODEL,
+        "model": model,
         "response_format": {"type": "json_object"},
         "temperature": 0.3,
         "messages": [{"role": "system", "content": AI_SYSTEM},
                      {"role": "user", "content": json.dumps(payload, ensure_ascii=False)}],
     }).encode("utf-8")
-    req = urllib.request.Request(AI_URL, data=body, method="POST", headers={
+    req = urllib.request.Request(url, data=body, method="POST", headers={
         "Authorization": "Bearer " + token, "Content-Type": "application/json",
-        "Accept": "application/vnd.github+json", "User-Agent": UA})
+        "Accept": "application/json", "X-GitHub-Api-Version": "2022-11-28"})
     with urllib.request.urlopen(req, timeout=90) as r:
         raw = r.read().decode("utf-8", "replace")
+        info = "%s %s %s" % (r.status, r.geturl(), r.headers.get("Content-Type"))
     try:
         msg = json.loads(raw)["choices"][0]["message"]["content"] or ""
         m = re.search(r"\{.*\}", msg, re.S)
         return json.loads(m.group(0)).get("items", [])
     except Exception:
-        raise RuntimeError("unexpected reply: " + raw[:300].replace("\n", " "))
+        raise RuntimeError("unexpected reply (%s): %s" % (info, raw[:200].replace("\n", " ")))
+
+
+_ai_ok = []
+
+
+def ai_call(batch, token):
+    payload = [{"id": it["id"], "title": it["t"], "about": clip(it.get("s", ""), 200), "source": it.get("src", ""),
+                "cat": it.get("cat", "")} for it in batch]
+    errors = []
+    for url, model in (_ai_ok or AI_ENDPOINTS):
+        try:
+            out = ai_post(url, model, payload, token)
+            if not _ai_ok:
+                _ai_ok.append((url, model))
+                log("ai endpoint:", url, model)
+            return out
+        except urllib.error.HTTPError as ex:
+            errors.append("%s -> HTTP %s %s" % (url, ex.code, ex.read()[:200]))
+        except Exception as ex:
+            errors.append("%s -> %s" % (url, ex))
+    raise RuntimeError(" | ".join(errors))
 
 
 def add_ai_headlines(items, max_calls=3, batch=20):
