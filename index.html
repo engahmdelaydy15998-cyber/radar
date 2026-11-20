@@ -20,7 +20,9 @@
   --line: #262629;
   --text: #f1f1f2;
   --muted: #8d8d94;
-  --accent: #ff7a3d;
+  --accent: #5aeb82;
+  --accent-grad: linear-gradient(180deg, #8dffab, #3fd16c);
+  --accent-ink: #04140a;
   --c-reels: #ff6b81;
   --c-long: #6ea8ff;
   --c-co: #b794f6;
@@ -34,7 +36,7 @@
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-body); }
-body { min-height: 100%; -webkit-text-size-adjust: 100%; }
+body { background: radial-gradient(120% 55% at 50% 0%, #07200f 0%, var(--bg) 62%) fixed; min-height: 100%; -webkit-text-size-adjust: 100%; }
 button, input, select { font: inherit; color: inherit; }
 button { cursor: pointer; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -50,13 +52,13 @@ header {
 }
 .bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; }
-.dot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(255,122,61,.18); }
+.dot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(90,235,130,.18); }
 .tools { display: flex; gap: 8px; }
 .icon-btn {
   min-width: 40px; height: 40px; padding: 0 10px; display: inline-flex; gap: 6px; align-items: center; justify-content: center;
   background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
 }
-.icon-btn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #111; }
+.icon-btn[aria-pressed="true"] { background: var(--accent-grad); border-color: var(--accent); color: var(--accent-ink); box-shadow: 0 0 16px rgba(90,235,130,.35); }
 .icon-btn .n { font-family: var(--font-mono); font-size: 12px; }
 .icon-btn svg { width: 20px; height: 20px; }
 
@@ -79,8 +81,8 @@ header {
 .rcard small { color: var(--muted); font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; direction: auto; }
 .rcard .ra { display: flex; gap: 8px; margin-top: 4px; }
 .rcard .ra a, .rcard .ra button { padding: 6px 12px; border-radius: 10px; border: 1px solid var(--line); background: transparent; color: var(--text); font-size: 13px; text-decoration: none; }
-.rcard .ra .go { background: var(--accent); color: #111; border-color: var(--accent); font-weight: 700; }
-.btn-main { height: 44px; padding: 0 18px; border: 0; border-radius: 12px; background: var(--accent); color: #111; font-weight: 700; }
+.rcard .ra .go { background: var(--accent-grad); color: var(--accent-ink); border-color: var(--accent); font-weight: 700; }
+.btn-main { height: 44px; padding: 0 18px; border: 0; border-radius: 12px; background: var(--accent-grad); color: var(--accent-ink); font-weight: 700; box-shadow: 0 0 18px rgba(90,235,130,.22); }
 .hint { font-size: 12px; color: var(--muted); line-height: 1.8; margin: 0; }
 .btn-icon { width: 44px; padding: 0; display: inline-grid; place-items: center; flex: 0 0 auto; }
 .btn-icon svg { width: 20px; height: 20px; }
@@ -90,6 +92,8 @@ header {
 .stab .scount { font-family: var(--font-mono); font-size: 11px; color: var(--muted); font-weight: 500; }
 .stab .scount:empty { display: none; }
 .stab[aria-pressed="true"] { border-color: var(--sc, var(--text)); background: color-mix(in srgb, var(--sc, #fff) 16%, var(--surface)); }
+.skind { font-size: 11px; font-weight: 500; color: var(--muted); }
+.sresh .skind { font-size: 12px; }
 .sdot { width: 8px; height: 8px; border-radius: 50%; background: var(--sc); flex: 0 0 auto; }
 .sgroup { display: flex; flex-direction: column; gap: 8px; padding: 10px; border-radius: 16px; border: 1px solid color-mix(in srgb, var(--sc) 35%, var(--line)); background: color-mix(in srgb, var(--sc) 6%, transparent); }
 .sgroup[hidden] { display: none; }
@@ -133,14 +137,15 @@ header {
 .chip[aria-pressed="true"] .count { color: #444; }
 
 .row2 { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin: 14px 0 6px; font-size: 13px; color: var(--muted); }
-.row2 .pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.row2 .pills { display: flex; gap: 6px; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.row2 .pills::-webkit-scrollbar { display: none; }
 .pill { white-space: nowrap; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--line); background: transparent; font-size: 13px; color: var(--muted); }
 .pill[aria-pressed="true"] { color: var(--text); border-color: var(--muted); background: var(--surface-2); }
 
 .notice {
   margin: 12px 0 4px; padding: 10px 12px; border-radius: 12px;
-  background: rgba(255,122,61,.08); border: 1px dashed rgba(255,122,61,.45);
-  color: #ffb998; font-size: 13px; line-height: 1.7;
+  background: rgba(90,235,130,.08); border: 1px dashed rgba(90,235,130,.45);
+  color: #b6f5c8; font-size: 13px; line-height: 1.7;
 }
 
 .feed { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
@@ -160,7 +165,7 @@ header {
 .meta .src { font-family: var(--font-mono); direction: ltr; }
 .meta .cat { color: var(--c); font-weight: 600; }
 .badge { padding: 1px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; }
-.badge-new { background: var(--accent); color: #111; }
+.badge-new { background: var(--accent-grad); color: var(--accent-ink); }
 .badge-mine { background: var(--surface-2); color: var(--text); border: 1px solid var(--line); }
 .badge-watch { background: color-mix(in srgb, var(--accent) 24%, transparent); color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 50%, transparent); }
 .card h3 { margin: 0 0 6px; font-size: 17px; line-height: 1.55; font-weight: 600; text-wrap: balance; overflow-wrap: anywhere; }
@@ -195,19 +200,20 @@ footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 1
 @keyframes spBlip { 0%, 100% { opacity: 0; } 8% { opacity: 1; } 55% { opacity: .15; } }
 .sp-word { display: flex; align-items: baseline; gap: 8px; font-weight: 700; }
 .sp-word .r { font-size: 20px; font-weight: 600; color: var(--muted); }
-.sp-word .a { font-size: 46px; color: var(--accent); text-shadow: 0 0 24px rgba(255,122,61,.45); }
+.sp-word .a { font-size: 46px; }
+.ai-word, .sp-word .a { background: linear-gradient(180deg, #e8ffee, #5aeb82); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 12px rgba(90,235,130,.5)); }
 @media (prefers-reduced-motion: reduce) { .sp-sweep, .sp-blip { animation-duration: 6s; } }
 </style>
 </head>
 <body>
 <div id="splash" aria-hidden="true">
   <div class="sp-radar"><div class="sp-sweep"></div><span class="sp-blip" style="left:70%;top:30%;animation-delay:0.25s"></span><span class="sp-blip" style="left:78%;top:62%;animation-delay:0.55s"></span><span class="sp-blip" style="left:34%;top:74%;animation-delay:1.05s"></span><span class="sp-blip" style="left:26%;top:38%;animation-delay:1.45s"></span></div>
-  <div class="sp-word" dir="ltr"><span class="r">Radar</span><span class="a">AI</span></div>
+  <div class="sp-word" dir="ltr"><span class="r">Radar</span><span class="a ai-word">AI</span></div>
 </div>
 <div class="wrap">
   <header>
     <div class="bar">
-      <div class="brand"><span class="dot"></span><span><span style="font-size:14px;font-weight:600;color:var(--muted)">Radar</span> <span style="color:var(--accent);font-size:24px">AI</span></span></div>
+      <div class="brand"><span class="dot"></span><span><span style="font-size:14px;font-weight:600;color:var(--muted)">Radar</span> <span class="ai-word" style="font-size:24px">AI</span></span></div>
       <div class="tools">
         <button class="icon-btn" id="btnAdd" aria-label="إضافة رابط" aria-pressed="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
@@ -385,6 +391,7 @@ function renderChips() {
     var inCat = allItems().filter(function (it) { return c.id === "all" || it.cat === c.id; });
     var n = inCat.filter(function (it) { return matches(it, true); }).length;
     var nn = inCat.filter(function (it) { return it.isNew; }).length;
+    if (c.id === "creative" && !inCat.length && state.cat !== c.id) return;
     var b = document.createElement("button");
     b.className = "tile";
     b.setAttribute("aria-pressed", String(state.cat === c.id));
@@ -669,18 +676,18 @@ function hint(t) { sHint.textContent = t; sHint.hidden = !t; }
 var SRC_COLORS = { youtube: "#ff5c5c", github: "var(--c-code)", hn: "#ff9f43", ext: "var(--c-long)" };
 var stabs = null, sgroups = [];
 /* one results group per source: colored header with a count, first 3 results, then "عرض الكل" */
-function section(key, title) {
+function section(key, title, kind) {
   var color = SRC_COLORS[key];
   var g = document.createElement("section"); g.className = "sgroup"; g.style.setProperty("--sc", color);
   var h = document.createElement("div"); h.className = "sresh";
-  h.innerHTML = '<span class="sdot"></span><span class="sname"></span><span class="scount"></span>';
-  h.querySelector(".sname").textContent = title;
+  h.innerHTML = '<span class="sdot"></span><span class="sname"></span><span class="skind"></span><span class="scount"></span>';
+  h.querySelector(".sname").textContent = title; h.querySelector(".skind").textContent = kind;
   var list = document.createElement("div"); list.className = "slist";
   var more = document.createElement("button"); more.className = "smore"; more.hidden = true;
   g.appendChild(h); g.appendChild(list); g.appendChild(more); sres.appendChild(g);
   var tab = document.createElement("button"); tab.className = "stab"; tab.style.setProperty("--sc", color);
-  tab.innerHTML = '<span class="sdot"></span><span class="sname"></span><b class="scount"></b>';
-  tab.querySelector(".sname").textContent = title;
+  tab.innerHTML = '<span class="sdot"></span><span class="sname"></span><span class="skind"></span><b class="scount"></b>';
+  tab.querySelector(".sname").textContent = title; tab.querySelector(".skind").textContent = kind;
   stabs.appendChild(tab);
   var grp = { key: key, el: g, tab: tab };
   function upd() {
@@ -740,10 +747,10 @@ function runSearch() {
     if (pending === 0 && !sres.querySelector(".sgroup:not(:last-child) .rcard")) hint("مفيش نتائج من المصادر اللي بندور فيها جوه التطبيق.");
   }
 
-  var yt = section("youtube", "YouTube");
-  var gh = section("github", "GitHub");
-  var hn = section("hn", "Hacker News");
-  var ext = section("ext", "منصات تانية");
+  var yt = section("youtube", "YouTube", "فيديوهات");
+  var gh = section("github", "GitHub", "أدوات وكود");
+  var hn = section("hn", "Hacker News", "نقاشات وأخبار");
+  var ext = section("ext", "منصات تانية", "روابط بحث");
 
   var key = lsGet("radar-ytkey");
   var ytUrl = "https://www.youtube.com/results?search_query=" + encodeURIComponent(v);
