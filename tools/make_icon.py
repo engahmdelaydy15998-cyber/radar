@@ -70,7 +70,7 @@ def build(name, pal):
     edd.line([(C,C),(C+math.cos(a)*N*0.445,C-math.sin(a)*N*0.445)],fill=pal['sweep']+(255,),width=int(3.2*S))
     over(base,ed.filter(ImageFilter.GaussianBlur(2.5*S))); over(base,ed)
     # lettering: extruded 3D, violet -> pink gradient
-    LS=0.66; w=int(N*0.046*LS)
+    LS=AI_SCALE; w=int(N*0.046*LS)
     mask=Image.new("L",(N,N),0); md=ImageDraw.Draw(mask)
     def stroke(p,q):
         md.line([(C+p[0]*N*LS,C+p[1]*N*LS),(C+q[0]*N*LS,C+q[1]*N*LS)],fill=255,width=w)
@@ -177,18 +177,9 @@ def build(name, pal):
         tl=layer(); td=ImageDraw.Draw(tl); k=R*0.5
         td.polygon([(cx-k*0.55,cy-k),(cx-k*0.55,cy+k),(cx+k,cy)],fill=(255,255,255,255)); over(base,tl)
     blip(318,0.35,0.050,(236,52,52),playg,solid=(236,52,52))
-    if ARCH_MARK=="arc":
-        # architecture: same small lit-circle badge language as the code marks, labeled ARC
-        archcol=pal['wall'][1]
-        blip(54,0.325,0.038,archcol,txt("ARC",0.85,W(archcol)))
-    else:
-        # architecture: mud-brick dome + two vaults + arched doors (Hassan Fathy spirit); melts into the radar
-        ax,ay=pos(54,0.325); AW=N*0.108
-        echo(ax,ay,AW*0.30,pal['arch_echo'],0.325,54,0.4)
-        gl=layer(); ImageDraw.Draw(gl).ellipse([ax-AW*1.0,ay-AW*0.9,ax+AW*1.0,ay+AW*0.9],fill=pal['arch_echo']+(34,))
-        over(base,gl.filter(ImageFilter.GaussianBlur(AW*0.35)))
-        sz=int(AW*2.6); G=Image.new("L",(sz,sz),0); gd_=ImageDraw.Draw(G)
-        u=AW*0.62; ox,oy=sz/2,sz/2+0.15*u
+    # mud-brick dome + two vaults + arched doors (Hassan Fathy spirit), drawn as a mask; u = drawing unit
+    def dome_mask(sz,u,ox,oy):
+        G=Image.new("L",(sz,sz),0); gd_=ImageDraw.Draw(G)
         def Q(p): return (ox+p[0]*u, oy+p[1]*u)
         def domeP(cx,by,rx,ry):
             return [Q((cx+rx*math.cos(math.pi*k/40),by-ry*math.sin(math.pi*k/40))) for k in range(41)]
@@ -200,6 +191,25 @@ def build(name, pal):
             gd_.rectangle([*Q((cx-w_,top+w_)),*Q((cx+w_,bot))],fill=0)
             gd_.polygon([Q((cx+w_*math.cos(math.pi*k/30),top+w_-w_*math.sin(math.pi*k/30))) for k in range(31)],fill=0)
         cut(0,0.50,0.15,0.90); cut(-1.32,0.74,0.07,0.90); cut(1.32,0.74,0.07,0.90)
+        return G
+    archcol=pal['wall'][1]
+    if ARCH_MARK=="arc":
+        blip(54,0.325,0.038,archcol,txt("ARC",0.85,W(archcol)))
+    elif ARCH_MARK=="domebadge":
+        def domeg(col):
+            def fn(cx,cy,R,far):
+                sz=int(R*2)+2; u=R*0.55
+                G=dome_mask(sz,u,sz/2,sz/2-0.32*u).filter(ImageFilter.GaussianBlur(0.5*S))
+                tl=layer(); tl.paste(col+(255,),(int(cx-sz/2),int(cy-sz/2)),G); over(base,tl)
+            return fn
+        bc=lerp(archcol,(0,0,0),0.35); blip(60,0.36,0.050,bc,domeg(W(archcol)))
+    else:
+        ax,ay=pos(60,0.36); AW=N*0.088
+        echo(ax,ay,AW*0.30,pal['arch_echo'],0.36,60,0.4)
+        gl=layer(); ImageDraw.Draw(gl).ellipse([ax-AW*1.0,ay-AW*0.9,ax+AW*1.0,ay+AW*0.9],fill=pal['arch_echo']+(34,))
+        over(base,gl.filter(ImageFilter.GaussianBlur(AW*0.35)))
+        sz=int(AW*2.6); u=AW*0.62; ox,oy=sz/2,sz/2+0.15*u
+        G=dome_mask(sz,u,ox,oy)
         fade=Image.new("L",(sz,sz)); fp=ImageDraw.Draw(fade)
         for y in range(sz):
             t=(y-(oy-0.9*u))/(1.8*u); fp.line([(0,y),(sz,y)],fill=int(255*max(0.85,min(1,1.5-t*0.6))))
@@ -221,6 +231,7 @@ PV={'glow': (120, 80, 210), 'bokeh': (170, 130, 255), 'ring': (176, 140, 255), '
 PG={'glow': (20, 110, 60), 'bokeh': (70, 200, 120), 'ring': (90, 235, 130), 'streak': (80, 255, 150), 'grad': ((226, 255, 232), (80, 235, 130)), 'lglow': (60, 220, 110), 'plate': ((2, 10, 6), (10, 44, 22)), 'sweep': (110, 255, 150), 'c': [(80, 230, 140), (110, 235, 120), (60, 210, 150), (150, 240, 130), (90, 225, 170), (190, 255, 160), (120, 240, 190)], 'arch_echo': (150, 255, 180), 'sky': ((6, 40, 22), (30, 110, 60)), 'plaza': (70, 160, 95), 'wall': ((236, 255, 238), (130, 200, 150)), 'course': (150, 205, 165), 'door': (6, 40, 22), 'arch_rim': (190, 255, 205), 'mep': (205, 190, 90)}
 import os
 ARCH_MARK=os.environ.get("ARCH_MARK","dome")
+AI_SCALE=float(os.environ.get("AI_SCALE","0.66"))
 a=build("v14_violet.png",PV)
 b=build("v14_green.png",PG)
 def maskable(im,name):
