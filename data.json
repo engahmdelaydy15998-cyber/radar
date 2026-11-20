@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T20:16:31Z",
+ "updated": "2026-11-20T20:27:40Z",
  "demo": false,
  "items": [
   {
@@ -26,6 +26,19 @@
    ],
    "url": "https://simonwillison.net/2026/Nov/20/ravi-vakil/",
    "ta": "نقلا عن رافي فاكيل"
+  },
+  {
+   "id": "hn-50580377",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-20T19:21:24Z",
+   "t": "Judge: DHS's Seizure Of Immigration Lawyer's Phone Likely Violated 1st Amendment",
+   "s": "14 نقطة، 1 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.techdirt.com/2026/11/20/judge-says-dhss-seizure-of-an-immigration-lawyers-phone-likely-violated-the-first-amendment/",
+   "url2": "https://news.ycombinator.com/item?id=50580377"
   },
   {
    "id": "yt-wqNIzUmNt9M",
@@ -4334,20 +4347,6 @@
    "url": "https://www.archdaily.com/1187950/haloplaza-hangzhou-vanke-mixed-use-complex-nikken-sekkei",
    "ta": "مجمع HaloPlaza Hangzhou Vanke متعدد الاستخدامات / Nikken Sekkei",
    "sa": "ومن خلال تنشيط قناة مهملة، أنشأنا بيئة حضرية جديدة ونابضة بالحياة وخططنا لمساحة عامة مستمرة ومفتوحة على طول الواجهة البحرية. فوق…"
-  },
-  {
-   "id": "yt-FiFU66g5B7Q",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-16T23:58:56Z",
-   "t": "I built a Magic 8 Ball that listens and talks back",
-   "s": "I hacked a Magic 8 Ball so it actually listens: AssemblyAI speech-to-text hears your question, an LLM through LLM gateway writes a mystical answer, a…",
-   "tags": [
-    "AssemblyAI"
-   ],
-   "url": "https://www.youtube.com/watch?v=FiFU66g5B7Q",
-   "ta": "لقد قمت ببناء Magic 8 Ball التي تستمع وتتحدث",
-   "sa": "لقد اخترقت Magic 8 Ball حتى تستمع فعليًا: يسمع تحويل الكلام إلى نص من AssemblyAI سؤالك، ويكتب LLM من خلال بوابة LLM إجابة غامضة، ..."
   }
  ]
 }
