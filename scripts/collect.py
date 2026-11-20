@@ -581,7 +581,7 @@ def apply_watches(items):
 
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent"
 # tried in order; the first model the key can use is kept for the rest of the run
-GEMINI_MODELS = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-flash-latest"]
+GEMINI_MODELS = ["gemini-4-hydrogen", "gemini-flash-latest", "gemini-2.5-flash"]
 TOPICS = ("arch", "addins", "agents", "mcp", "oss", "courses", "news")
 AI_SYSTEM = (
     "أنت محرر أخبار تقنية لمهندس معماري مصري مهتم بالـ BIM والذكاء الاصطناعي والـ agents والكود. "
