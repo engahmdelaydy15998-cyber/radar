@@ -28,7 +28,7 @@ input:focus{outline:none;border-color:var(--acc)}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:22px;color:var(--acc);margin:0}
 .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--acc)}
 .tagline{font-size:11px;color:var(--mut);padding-inline-start:20px}
-#stage{position:relative;height:64vh;min-height:430px;border-radius:16px;overflow:hidden;background:#111}
+#stage{position:relative;height:calc(100vh - 78px);height:calc(100dvh - 78px);min-height:430px;border-radius:16px;overflow:hidden;background:#111}
 #map{position:absolute;inset:0;direction:ltr}
 #map.dark-tiles .maplibregl-canvas{filter:invert(1) hue-rotate(180deg) brightness(.92) contrast(1.05) saturate(.9)}
 #panel{position:absolute;top:8px;left:8px;right:8px;z-index:5;background:rgba(15,15,16,.96);border:1px solid var(--line);border-radius:14px;padding:8px}
@@ -44,23 +44,44 @@ input:focus{outline:none;border-color:var(--acc)}
 .sri{display:flex;justify-content:space-between;gap:8px;padding:11px 6px;border-top:1px solid var(--line);font-size:14px;cursor:pointer}
 .sri:first-child{margin-top:6px}
 .sri small{color:var(--mut);white-space:nowrap}
-#tools{position:absolute;bottom:10px;left:10px;right:10px;z-index:4;display:flex;gap:6px;flex-wrap:wrap;transition:bottom .25s ease}
-#stage.sheet-open #tools{bottom:calc(46% + 14px)}
+#tools{position:absolute;top:128px;left:10px;z-index:4;display:flex;flex-direction:column;gap:10px}
+.rb{width:46px;height:46px;padding:0;border-radius:50%;background:#1d1d20;color:var(--ink);border:1px solid #2c2c30;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(0,0,0,.45)}
+.rb svg{width:24px;height:24px;fill:currentColor}
+.rb.sm{width:36px;height:36px;box-shadow:none}
+.rb.on{background:var(--acc);color:#050505;border-color:var(--acc)}
+#teach{position:absolute;left:8px;right:8px;bottom:8px;z-index:7;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:10px 12px 12px;box-shadow:0 -6px 22px rgba(0,0,0,.5)}
+#teach[hidden]{display:none}
+#teach .th{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+#teach .tg{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+#teach .tg button{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:8px 2px;font-size:12px;display:flex;flex-direction:column;align-items:center;gap:4px}
+#teach .tg button i{font-style:normal;font-size:22px;line-height:1}
+#teach .tg button.on{border-color:var(--acc);background:rgba(245,196,81,.12)}
+.bub{background:#fff;color:#1a1a1a;border-radius:8px;padding:3px 8px;font-size:13px;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,.4);white-space:nowrap;cursor:pointer;direction:rtl}
+.bub.sel{background:#1a56db;color:#fff}
+.bub .k{font-weight:500;font-size:11px;opacity:.8}
 #sheet{position:absolute;left:0;right:0;bottom:0;z-index:6;background:var(--card);border-radius:18px 18px 0 0;box-shadow:0 -10px 26px rgba(0,0,0,.5);
   max-height:46%;overflow:auto;padding:4px 12px 14px;transform:translateY(100%);transition:transform .25s ease;pointer-events:none}
 #sheet.open{transform:translateY(0);pointer-events:auto}
 #sheet .handle{width:36px;height:4px;border-radius:999px;background:var(--line);margin:8px auto 10px}
-.chip{padding:7px 12px;border-radius:999px;background:rgba(15,15,16,.92);border:1px solid var(--line);color:var(--ink);font-size:14px}
-.chip.on{background:var(--acc);color:#050505;border-color:var(--acc)}
-#hint{position:absolute;bottom:56px;left:10px;right:10px;z-index:4;background:rgba(245,196,81,.95);color:#050505;border-radius:10px;padding:6px 10px;font-size:13px;transition:bottom .25s ease}
-#stage.sheet-open #hint{bottom:calc(46% + 60px)}
+#resX{position:absolute;top:10px;left:10px}
+#hint{position:absolute;bottom:70px;left:10px;right:10px;z-index:4;background:rgba(245,196,81,.95);color:#050505;border-radius:10px;padding:8px 10px;font-size:13px;transition:bottom .25s ease;cursor:pointer}
+#stage.sheet-open #hint{bottom:calc(46% + 12px)}
 #hint[hidden]{display:none}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin-top:12px}
 h2{font-size:15px;margin:0 0 8px;color:var(--mut);font-weight:500}
 .note{font-size:13px;color:var(--mut)}
 #msg{font-size:13px;color:var(--bad);min-height:18px;margin-top:6px}
-.rt{border:2px solid var(--line);border-radius:14px;padding:11px 12px;margin-top:8px;cursor:pointer;background:var(--card)}
-.rt.sel{border-color:var(--acc)}
+.rt{border-top:1px solid var(--line);padding:10px 2px;cursor:pointer}
+.rt.sel{border-top:0;padding-top:2px;cursor:default}
+.rt.sel .h{justify-content:flex-start;flex-wrap:wrap}
+.rt.alt{display:flex;justify-content:space-between;gap:8px;font-size:14px}
+.rt.alt b{font-size:16px}
+.rt .t.best{color:var(--ok)}
+.act{display:flex;gap:8px;margin:10px 0 4px}
+.act button{border-radius:999px;padding:11px 14px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.act svg{width:18px;height:18px;fill:currentColor}
+#startNav{flex:1.3;background:#0f7b5f;color:#fff}
+#gfollow{flex:1;background:transparent;color:var(--ink);border:1px solid var(--line)}
 .rt .h{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
 .rt .t{font-size:26px;font-weight:700}
 .rt .k{color:var(--mut);font-size:14px}
@@ -94,22 +115,36 @@ h2{font-size:15px;margin:0 0 8px;color:var(--mut);font-weight:500}
 body.nav{overflow:hidden;padding:0;max-width:none}
 body.nav #stage{position:fixed;inset:0;height:100%;min-height:0;border-radius:0;z-index:1}
 body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,body.nav #sheet,body.nav #freeGo{display:none}
-#freeGo{position:absolute;left:10px;top:128px;z-index:4;border-radius:999px;padding:12px 18px;background:var(--ok);color:#050505;font-weight:700;box-shadow:0 4px 12px rgba(0,0,0,.45)}
+#freeGo{position:absolute;left:10px;bottom:12px;z-index:4;border-radius:999px;padding:12px 18px 12px 20px;background:#0f7b5f;color:#fff;font-weight:700;display:flex;align-items:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.45)}
+#freeGo svg{width:20px;height:20px;fill:currentColor}
+#stage.sheet-open #freeGo{display:none}
 #nav[hidden]{display:none}
-#nbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--card);color:var(--ink);border-bottom:1px solid var(--line);
-  display:flex;align-items:center;gap:14px;padding:calc(env(safe-area-inset-top) + 10px) 16px 12px}
-#narrow{font-size:54px;line-height:1;min-width:64px;text-align:center;color:var(--acc)}
-#ndist{font-size:30px;font-weight:700}
-#ntext{font-size:17px;color:var(--mut)}
-#nrad{position:fixed;top:calc(env(safe-area-inset-top) + 86px);right:12px;z-index:1000;background:var(--acc);color:#050505;border-radius:999px;padding:6px 14px;font-weight:700;box-shadow:0 4px 10px rgba(0,0,0,.4)}
+#nbar{position:fixed;top:calc(env(safe-area-inset-top) + 8px);left:8px;right:8px;z-index:1000;background:#0f6e56;color:#fff;border-radius:14px;
+  display:flex;align-items:center;gap:14px;padding:12px 16px;box-shadow:0 4px 14px rgba(0,0,0,.45)}
+#narrow{font-size:50px;line-height:1;min-width:58px;text-align:center;font-weight:700}
+#ndist{font-size:28px;font-weight:700;line-height:1.15}
+#ntext{font-size:18px;line-height:1.3}
+#nnext{position:fixed;top:calc(env(safe-area-inset-top) + 96px);right:8px;z-index:1000;background:#0a5442;color:#fff;border-radius:0 0 12px 12px;padding:4px 14px 6px;font-size:15px}
+#nnext b{font-size:20px}
+#nnext[hidden]{display:none}
+#nrad{position:fixed;top:calc(env(safe-area-inset-top) + 104px);left:12px;z-index:1000;background:var(--acc);color:#050505;border-radius:999px;padding:6px 14px;font-weight:700;box-shadow:0 4px 10px rgba(0,0,0,.4)}
 #nrad.warn{background:var(--bad);color:#fff}
 #nrad[hidden]{display:none}
-#nbot{position:fixed;bottom:0;left:0;right:0;z-index:1000;background:var(--card);border-top:1px solid var(--line);padding:10px 12px calc(env(safe-area-inset-bottom) + 10px)}
-#nstats{display:flex;justify-content:space-around;margin-bottom:8px}
-.nb{text-align:center}.nb b{display:block;font-size:22px;font-variant-numeric:tabular-nums}.nb span{font-size:12px;color:var(--mut)}
-#nbtn{display:flex;gap:8px}
-#nbtn button{flex:1;padding:10px 6px;font-size:15px}
-.sheet{position:fixed;left:8px;right:8px;bottom:calc(env(safe-area-inset-bottom) + 118px);z-index:1001;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px}
+#nside{position:fixed;left:12px;bottom:calc(env(safe-area-inset-bottom) + 96px);z-index:1000;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+#nside .rb{width:50px;height:50px;background:rgba(20,20,22,.92)}
+#nside .pill{width:auto;padding:0 14px;border-radius:999px;gap:6px;font-size:15px;font-weight:700}
+#nside .pill svg{width:20px;height:20px;fill:var(--acc)}
+#nspdc{position:fixed;right:12px;bottom:calc(env(safe-area-inset-bottom) + 96px);z-index:1000;width:66px;height:66px;border-radius:50%;background:#141416;border:3px solid #fff;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;box-shadow:0 3px 10px rgba(0,0,0,.5)}
+#nspdc b{font-size:24px;font-variant-numeric:tabular-nums}
+#nspdc span{font-size:10px;color:var(--mut);margin-top:2px}
+#nbot{position:fixed;bottom:0;left:0;right:0;z-index:1000;background:#111113;border-radius:18px 18px 0 0;display:flex;align-items:center;gap:12px;
+  padding:12px 14px calc(env(safe-area-inset-bottom) + 12px);box-shadow:0 -6px 18px rgba(0,0,0,.45)}
+#nbot .nmain{flex:1;text-align:center}
+#nbot .nmain b{display:block;font-size:28px;color:var(--ok);line-height:1.1;font-variant-numeric:tabular-nums}
+#nbot .nsub{font-size:14px;color:var(--mut)}
+#nexit{background:#2a2a2e}
+.sheet{position:fixed;left:8px;right:8px;bottom:calc(env(safe-area-inset-bottom) + 92px);z-index:1001;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px}
 .sheet[hidden]{display:none}
 .sheet .g{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .sheet .g button{padding:14px 4px;font-size:15px;background:var(--card2);color:var(--ink);border:1px solid var(--line)}
@@ -140,15 +175,20 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
   </div>
   <div id="hint" hidden></div>
   <div id="tools">
-    <button class="chip" data-mode="radar">📷 رادار</button>
-    <button class="chip" data-mode="toll">💳 كارتة</button>
-    <button class="chip" data-mode="block">⛔ مقفول</button>
-    <button class="chip" data-mode="uturn">↩️ يوتيرن</button>
-    <button class="chip" data-mode="checkpoint">🚓 لجنة</button>
-    <button class="chip" id="tiles">🗺 شكل</button>
-    <button class="chip" id="gfollow" style="background:#4285f4;color:#fff;border-color:#4285f4">🧭 جوجل + سجّل</button>
+    <button class="rb" id="tiles" aria-label="شكل الخريطة" title="شكل الخريطة"><svg viewBox="0 0 24 24"><path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/></svg></button>
+    <button class="rb" id="teachBtn" aria-label="علّم على الخريطة" title="علّم رادار أو كارتة أو لجنة"><svg viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg></button>
   </div>
-  <button id="freeGo">🚗 ابدأ السواقة</button>
+  <div id="teach" hidden>
+    <div class="th"><b>علّم على الخريطة</b><button class="rb sm" id="teachX" aria-label="قفل"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button></div>
+    <div class="tg">
+      <button data-mode="radar"><i>📷</i>رادار</button>
+      <button data-mode="toll"><i>💳</i>كارتة</button>
+      <button data-mode="checkpoint"><i>🚓</i>لجنة</button>
+      <button data-mode="uturn"><i>↩️</i>يوتيرن</button>
+      <button data-mode="block"><i>⛔</i>مقفول</button>
+    </div>
+  </div>
+  <button id="freeGo"><svg viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>ابدأ السواقة</button>
   <div id="sheet">
     <div class="handle"></div>
     <div id="res"></div>
@@ -190,12 +230,12 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
   <div class="card">
     <h2>📖 دليل الاستخدام</h2>
     <div class="note">
-      <b>🚗 ابدأ السواقة:</b> زرار أخضر على الخريطة. من غير ما تكتب من/إلى، بيفتح شاشة القيادة، ويسجّل الطريق، ويوريك السرعة والوقت والوقفات، وينبّهك قبل أي رادار أو كارتة أو لجنة قدامك.<br><br>
-      <b>🗺 شكل:</b> بيبدّل بين 4 أشكال للخريطة: عادي (فيكتور)، أسود، خرائط OSM، وقمر صناعي.<br><br>
+      <b>🚗 ابدأ السواقة:</b> الزرار الأخضر تحت على الخريطة. من غير ما تكتب من/إلى، بيفتح شاشة القيادة، ويسجّل الطريق، ويوريك السرعة والوقت والوقفات، وينبّهك قبل أي رادار أو كارتة أو لجنة قدامك.<br><br>
+      <b>زرار الطبقات (الدايري فوق ⚠):</b> بيبدّل بين 4 أشكال للخريطة: عادي (فيكتور)، أسود، خرائط OSM، وقمر صناعي.<br><br>
       <b>اسأل Claude:</b> قول "سجل مشاكل طريقي" وهيبدأ يسجّل رحلتك فوراً (من غير ما يحتاج مفتاح API)، وقول "وقف التسجيل" عشان يحفظها. أي سؤال تاني محتاج مفتاح Anthropic محفوظ فوق.<br><br>
-      <b>من/إلى:</b> اكتب أو اضغط "موقعي"، أو اضغط على الخريطة واختار بداية/وجهة. الطرق بتتحسب تلقائي وتظهر تحت كخريطة منبثقة (sheet) فوق الخريطة.<br><br>
+      <b>من/إلى:</b> اكتب أو اضغط "موقعي"، أو اضغط على الخريطة واختار بداية/وجهة. الطرق بتتحسب تلقائي: وقت كل طريق مكتوب عليه في الخريطة، وتحت ملخص الطريق المختار وزرار ابدأ القيادة. علامة × تقفل الطرق.<br><br>
       <b>كروت الطرق:</b> الدقايق هي التقدير الكلي. "تقدير" يعني محسوب من OSRM + وقفات متوقعة + رادارات/كارتات/لجان؛ لو مكتوب إنه "مشيته قبل كده" فده زمن حقيقي من رحلاتك المسجلة. ★ هو الطريق المرشّح كأفضل اختيار.<br><br>
-      <b>أزرار التعليم</b> (📷 رادار، 💳 كارتة، ⛔ مقفول، ↩️ يوتيرن، 🚓 لجنة): اضغط الزرار وبعدين اضغط مكانه على الخريطة. ضغطة تانية على نفس المكان بتشيله.<br><br>
+      <b>⚠ علّم على الخريطة:</b> الزرار الدايري اللي عليه علامة تحذير. بيفتح اختيارات (رادار، كارتة، لجنة، يوتيرن، مقفول): اختار واحدة واضغط مكانها على الخريطة. ضغطة تانية على نفس المكان بتشيله، والضغط على الشريط الأصفر بيلغي.<br><br>
       <b>🧭 جوجل + سجّل:</b> يفتحلك جوجل مابس بنفس من/إلى (اتجاهاته أفضل من اتجاهاتنا دلوقتي)، وفي نفس الوقت يبدأ يسجّل رحلتك بصمت عشان نبني بيانات حقيقية بمرور الوقت.<br><br>
       <b>▶ ابدأ القيادة:</b> شاشة ملء الشاشة فيها كل التعليمات، وتنبيهات صوتية للرادارات والكارتات واللجان قبل ما توصلها، وبيسألك لو وقفت كتير "واقفين ليه؟".<br><br>
       <b>تسجيل رحلة:</b> منفصل عن القيادة، بيسجّل مسارك وبيحسب وقفاتك عشان التطبيق يتعلّم طرقك. كل رحلة بتخلي الاقتراحات أدق.<br><br>
@@ -205,8 +245,9 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
 </div>
 
 <div id="nav" hidden>
-  <div id="nrad" hidden></div>
   <div id="nbar"><div id="narrow">↑</div><div><div id="ndist">—</div><div id="ntext">—</div></div></div>
+  <div id="nnext" hidden>ثم <b id="nnexta">↑</b></div>
+  <div id="nrad" hidden></div>
   <div id="alt" class="sheet" hidden style="bottom:auto;top:calc(env(safe-area-inset-top) + 130px)">
     <div id="alttxt" style="font-size:15px"></div>
     <div class="row"><button id="altYes">غيّر الطريق</button><button class="sec" id="altNo">خليني</button></div>
@@ -218,18 +259,15 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
   <div id="rpt" class="sheet" hidden>
     <div class="g" id="rptg"></div>
   </div>
+  <div id="nside">
+    <button class="rb" id="nmute" aria-label="الصوت"></button>
+    <button class="rb" id="nclaude" aria-label="اسأل Claude"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM7 9h10v2H7V9zm6 5H7v-2h6v2zm4-6H7V6h10v2z"/></svg></button>
+    <button class="rb pill" id="nreport" aria-label="إبلاغ"><svg viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>إبلاغ</button>
+  </div>
+  <div id="nspdc"><b id="nspd">٠</b><span>كم/س</span></div>
   <div id="nbot">
-    <div id="nstats">
-      <div class="nb"><b id="nspd">٠</b><span>كم/س</span></div>
-      <div class="nb"><b id="neta">--:--</b><span id="netal">الوصول</span></div>
-      <div class="nb"><b id="nrem">-- د</b><span id="nremkm">-- كم</span></div>
-    </div>
-    <div id="nbtn">
-      <button class="sec" id="nreport">⚑ بلّغ</button>
-      <button class="sec" id="nclaude">🤖 Claude</button>
-      <button class="sec" id="nmute">🔊</button>
-      <button class="red" id="nexit">خروج</button>
-    </div>
+    <button class="rb" id="nexit" aria-label="خروج"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+    <div class="nmain"><b id="nrem">-- د</b><div class="nsub"><span id="nremkm">-- كم</span> • <span id="netal">الوصول</span> <span id="neta">--:--</span></div></div>
   </div>
 </div>
 
@@ -451,7 +489,8 @@ function fitTo(coords){
   if (!coords.length) return;
   let a = 1e9, b = 1e9, c = -1e9, d = -1e9;
   coords.forEach(([lo, la]) => { a = Math.min(a, lo); b = Math.min(b, la); c = Math.max(c, lo); d = Math.max(d, la); });
-  try { map.fitBounds([[a, b], [c, d]], {padding:{top:190, bottom:60, left:30, right:30}, pitch:0, bearing:0, duration:700}); } catch(e){}
+  const bot = results.length ? Math.round($('stage').clientHeight * 0.46) + 24 : 60;   // الطرق تبان فوق الشيت مش وراه
+  try { map.fitBounds([[a, b], [c, d]], {padding:{top:190, bottom:bot, left:70, right:30}, pitch:0, bearing:0, duration:700}); } catch(e){}
 }
 
 /* الأماكن والبحث (من / إلى) */
@@ -464,15 +503,19 @@ const hints = {radar:'اضغط على مكان الرادار لتعليمه. ا
 function setMode(m){
   mode = (mode === m) ? null : m;
   document.querySelectorAll('[data-mode]').forEach(x => x.classList.toggle('on', x.dataset.mode === mode));
-  $('hint').hidden = !mode; if (mode) $('hint').textContent = hints[mode];
+  $('hint').hidden = !mode; if (mode) $('hint').textContent = hints[mode] + ' (اضغط هنا للإلغاء)';
+  $('teachBtn').classList.toggle('on', !!mode && mode !== 'a' && mode !== 'b');
   try { map.getCanvas().style.cursor = mode ? 'crosshair' : ''; } catch(e){}
 }
-document.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => setMode(b.dataset.mode));
-$('gfollow').onclick = () => {                     // لحد ما جودة طرقنا تتحسن: جوجل بيدّي الاتجاهات، وإحنا بنسجّل الرحلة بصمت
+document.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { setMode(b.dataset.mode); $('teach').hidden = true; });
+$('teachBtn').onclick = () => { if (mode && mode !== 'a' && mode !== 'b'){ setMode(mode); return; } $('teach').hidden = !$('teach').hidden; };
+$('teachX').onclick = () => { $('teach').hidden = true; };
+$('hint').onclick = () => { if (mode) setMode(mode); };
+function followGoogle(){                           // لحد ما جودة طرقنا تتحسن: جوجل بيدّي الاتجاهات، وإحنا بنسجّل الرحلة بصمت
   if (!start || !dest){ $('msg').textContent = 'محتاج من وإلى الأول عشان أفتحلك جوجل مابس.'; return; }
   window.open(`https://www.google.com/maps/dir/?api=1&origin=${start.lat},${start.lon}&destination=${dest.lat},${dest.lon}&travelmode=driving&dir_action=navigate`, '_blank');
   if (watchId === null){ if (!$('name').value.trim()) $('name').value = 'متابعة جوجل إلى ' + (dest.name || 'الوجهة'); startRec(); }
-};
+}
 function setPlace(which, p, label){
   const o = {lat:p.lat, lon:p.lon, name:label || p.name || 'نقطة على الخريطة'};
   if (which === 'a'){ start = o; startCur = false; $('qa').value = o.name;
@@ -692,19 +735,47 @@ function why(x, k){
     parts.push(`${dk > 0.2 ? 'أطول ' + dk.toFixed(1) + ' كم لكن ' : ''}متوقع يكون أسهل وأسرع فعلياً من الطريق "الأقصر"`); }
   return parts.join(' · ');
 }
+const bubbles = [];
+function clearBubbles(){ bubbles.splice(0).forEach(m => m.remove()); }
+function bubbleAt(k){                              // فقاعة الوقت في أبعد نقطة عن باقي الطرق، عشان ما تقعش فوق بعض
+  const C = results[k].r.coords, others = results.filter((_, j) => j !== k).map(x => x.r.coords);
+  let best = C[Math.floor(C.length / 2)], bd = -1;
+  for (let f = 0.25; f <= 0.75; f += 0.05){
+    const c = C[Math.floor(C.length * f)], p = {lat:c[1], lon:c[0]};
+    let md = 1e12; others.forEach(O => { for (let i = 0; i < O.length; i += 4){ const d = hav(p, {lat:O[i][1], lon:O[i][0]}); if (d < md) md = d; } });
+    if (md > bd){ bd = md; best = c; }
+  }
+  return best;
+}
 function showRoutes(sel){
   selIdx = sel;
-  drawRoutes(results.map((x, k) => ({coords:x.r.coords, c:k === sel ? '#4285f4' : '#8d8d94', w:k === sel ? 8 : 5})).sort((a, b) => (a.w - b.w)));
+  drawRoutes(results.map((x, k) => ({coords:x.r.coords, c:k === sel ? '#1a56db' : '#8fb4f5', w:k === sel ? 8 : 6})).sort((a, b) => (a.w - b.w)));
   fitTo(results[sel].r.coords); drawMarks();
-  $('res').innerHTML = results.map((x, k) => { const s = x.s;
-    return `<div class="rt ${k === sel ? 'sel' : ''}" data-k="${k}">
-    <div class="h"><span class="t">${arab(mins(s.adj))} د${s.observed ? '' : ' <span class="k">(تقدير)</span>'}</span><span>${k === 0 ? '<span class="tag">★ الأفضل ليك</span>' : '<span class="k">بديل ' + k + '</span>'}</span></div>
-    <div class="via">${x.r.via ? 'عن طريق ' + esc(x.r.via) : ''} <span class="k">· ${arab(s.dist/1000)} كم</span></div>
-    <div class="m">وقفات متوقعة ≈ ${s.expStops.toFixed(1)} · ${s.info ? s.info.turns + ' لفة، ' + s.info.inter + ' تقاطع' : ''}${s.pois.filter(p => p.kind === 'radar').length ? ' · 📷 ' + s.pois.filter(p => p.kind === 'radar').length : ''}${s.tolls ? ' · 💳 ' + s.tolls : ''}${s.uturns ? ' · ↩️ ' + s.uturns : ''}${s.checks ? ' · 🚓 ' + s.checks : ''}${s.jams ? ' · 🚗 بلاغ زحمة' : ''}</div>
-    <div class="m">${why(x, k)}</div></div>`; }).join('') +
-    '<button class="big" id="startNav" style="margin-top:10px;background:var(--ok);color:#050505">▶ ابدأ القيادة</button>';
-  $('res').querySelectorAll('.rt').forEach(d => d.onclick = () => showRoutes(+d.dataset.k));
+  clearBubbles();
+  results.forEach((x, k) => {
+    const el = mkEl(`${arab(mins(x.s.adj))} د${k === 0 ? ' <span class="k">★</span>' : ''}`, 'bub' + (k === sel ? ' sel' : ''));
+    el.classList.remove('mk'); el.onclick = ev => { ev.stopPropagation(); showRoutes(k); };
+    const c = bubbleAt(k); bubbles.push(addMk(el, c[0], c[1], 'bottom'));
+  });
+  const x = results[sel], s = x.s, nRad = s.pois.filter(p => p.kind === 'radar').length;
+  const facts = [s.info ? arab(s.info.turns) + ' لفة' : '', '≈ ' + (+s.expStops.toFixed(1)).toLocaleString('ar-EG') + ' وقفة', nRad ? '📷 ' + nRad : '', s.tolls ? '💳 ' + s.tolls : '',
+    s.uturns ? '↩️ ' + s.uturns : '', s.checks ? '🚓 ' + s.checks : '', s.jams ? '🚗 بلاغ زحمة' : ''].filter(Boolean).join(' · ');
+  $('res').innerHTML = `<button class="rb sm" id="resX" aria-label="قفل"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button><div class="rt sel" data-k="${sel}">
+    <div class="h"><span class="t${sel === 0 ? ' best' : ''}">${arab(mins(s.adj))} د <span class="k">(${arab(s.dist/1000)} كم)</span></span>${sel === 0 ? '<span class="tag">★ الأفضل ليك</span>' : ''}</div>
+    ${x.r.via ? `<div class="via">عن طريق ${esc(x.r.via)}</div>` : ''}
+    <div class="m">${why(x, sel)}</div>
+    <div class="m">${facts}${s.observed ? '' : ' · تقدير'}</div></div>
+    <div class="act"><button id="startNav"><svg viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>ابدأ القيادة</button><button id="gfollow">جوجل + سجّل</button></div>` +
+    results.map((y, k) => k === sel ? '' : `<div class="rt alt" data-k="${k}"><span><b>${arab(mins(y.s.adj))} د</b> <span class="k">${y.r.via ? 'عن طريق ' + esc(y.r.via) : 'بديل'}</span></span><span class="k">${arab(y.s.dist/1000)} كم</span></div>`).join('');
+  $('res').querySelectorAll('.rt.alt').forEach(d => d.onclick = () => showRoutes(+d.dataset.k));
   $('startNav').onclick = () => startNav(sel);
+  $('gfollow').onclick = followGoogle;
+  $('resX').onclick = closeRoutes;
+}
+function closeRoutes(){                            // زي X في جوجل: يقفل الطرق ويرجّع الخريطة فاضية
+  results = []; put('plan', []); $('res').innerHTML = ''; drawRoutes([]); clearBubbles();
+  dest = null; $('qb').value = ''; if (mDest){ mDest.remove(); mDest = null; }
+  drawMarks();
 }
 
 /* الصوت: نطق وتعرّف */
@@ -780,7 +851,7 @@ function drawNavLine(rt){ drawRoutes([{coords:rt.r.coords, c:'#4285f4', w:10}]);
 async function startNav(sel){
   const rt = results[sel];
   if (!rt || !rt.r.steps || !rt.r.steps.length){ $('msg').textContent = 'اطلب الطرق من جديد الأول عشان تبدأ القيادة.'; return; }
-  nav = setupNavRoute(rt); navOn = true;
+  nav = setupNavRoute(rt); navOn = true; clearBubbles(); $('teach').hidden = true;
   document.body.classList.add('nav'); $('nav').hidden = false; try { map.resize(); } catch(e){}
   drawNavLine(rt); drawMarks();
   if (watchId === null){ if (!$('name').value.trim()) $('name').value = 'إلى ' + (dest && dest.name || 'الوجهة'); await startRec(); navStartedRec = true; }
@@ -807,10 +878,10 @@ function followCar(p, me, spd){                    // الخريطة بتلف م
 }
 async function startFree(){                         // قيادة من غير وجهة: تسجيل + تنبيهات + أرقام الطريق علطول
   if (navOn) return;
-  nav = {free:true, spoken:{}, slowSince:0, lastAsk:0}; navOn = true; hdFrom = null;
+  nav = {free:true, spoken:{}, slowSince:0, lastAsk:0}; navOn = true; hdFrom = null; clearBubbles(); $('teach').hidden = true; $('nnext').hidden = true;
   document.body.classList.add('nav'); $('nav').hidden = false; try { map.resize(); } catch(e){}
   $('narrow').textContent = '🚗'; $('ndist').textContent = ''; $('ntext').textContent = 'قيادة حرة: بسجّل الطريق وبنبّهك قبل الرادارات والكارتات';
-  $('netal').textContent = 'الوقت'; $('nspd').textContent = '٠'; $('neta').textContent = '00:00'; $('nrem').textContent = '٠ وقفة'; $('nremkm').textContent = '٠ م';
+  $('netal').textContent = 'وقفات'; $('nspd').textContent = '٠'; $('neta').textContent = '٠'; $('nrem').textContent = '00:00'; $('nremkm').textContent = '٠ م';
   drawRoutes([]); drawMarks();
   speak('تمام، بدأت أسجّل الطريق، وهنبّهك قبل الرادارات والكارتات');
   if (watchId === null){ if (!$('name').value.trim()) $('name').value = 'قيادة حرة ' + new Date().toLocaleDateString('ar-EG'); navStartedRec = true; await startRec(); }
@@ -820,8 +891,8 @@ function freeUpdate(p){
   followCar(p, me, spd);
   const r = analyze(pts);
   $('nspd').textContent = arab(Math.round(spd));
-  $('neta').textContent = fmtT((Date.now() - t0) / 1000);
-  $('nrem').textContent = arab(r.stops) + ' وقفة';
+  $('nrem').textContent = fmtT((Date.now() - t0) / 1000);
+  $('neta').textContent = arab(r.stops);
   $('nremkm').textContent = fmtD(r.dist);
   let np = null, dp = 2000;                         // أقرب حاجة قدامك على نفس خط سيرك تقريباً
   if (spd > 5) allPois().forEach(q => {
@@ -873,7 +944,10 @@ function navRender(speed, off){
   $('narrow').textContent = off ? '⟲' : arrowOf(st);
   $('ndist').textContent = off ? '' : fmtD(dNext);
   $('ntext').textContent = off ? 'جاري إعادة حساب الطريق...' : instrOf(st);
-  $('nspd').textContent = arab(speed || 0);
+  $('nspd').textContent = arab(Math.round(speed || 0));
+  const nx = n.steps[k + 1];
+  $('nnext').hidden = !!off || !nx || nx.type === 'arrive' || nx.at - st.at > 400;
+  if (nx) $('nnexta').textContent = arrowOf(nx);
   const remSec = n.adj * (n.total ? rem / n.total : 0), eta = new Date(Date.now() + remSec * 1000);
   $('neta').textContent = eta.toLocaleTimeString('ar-EG', {hour:'2-digit', minute:'2-digit'});
   $('nrem').textContent = arab(Math.max(1, Math.round(remSec / 60))) + ' د';
@@ -906,7 +980,7 @@ async function reroute(me){
 }
 function exitNav(){
   if (!navOn) return;
-  navOn = false; nav = null; lastPos = null; hdFrom = null;
+  navOn = false; nav = null; lastPos = null; hdFrom = null; $('nnext').hidden = true;
   document.body.classList.remove('nav'); $('nav').hidden = true; $('nrad').hidden = true; $('netal').textContent = 'الوصول';
   ['alt', 'ask', 'rpt', 'cl'].forEach(i => $(i).hidden = true);
   try { map.resize(); map.easeTo({pitch:0, bearing:0, padding:{top:0, bottom:0, left:0, right:0}, duration:500}); } catch(e){}
@@ -918,7 +992,10 @@ function exitNav(){
 }
 $('nexit').onclick = exitNav;
 $('freeGo').onclick = startFree;
-$('nmute').onclick = () => { voiceOn = !voiceOn; $('nmute').textContent = voiceOn ? '🔊' : '🔇'; if (!voiceOn){ try { speechSynthesis.cancel(); } catch(e){} } };
+const IC_VOL = '<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>';
+const IC_MUTE = '<svg viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>';
+$('nmute').innerHTML = IC_VOL;
+$('nmute').onclick = () => { voiceOn = !voiceOn; $('nmute').innerHTML = voiceOn ? IC_VOL : IC_MUTE; if (!voiceOn){ try { speechSynthesis.cancel(); } catch(e){} } };
 
 /* البلاغات أثناء القيادة */
 const REPORTS = [['toll', '💳 كارتة'], ['jam', '🚗 زحمة'], ['accident', '💥 حادثة'], ['block', '⛔ مقفول'], ['radar', '📷 رادار'], ['checkpoint', '🚓 لجنة'], ['alt', '🔀 طريق تاني']];
@@ -977,7 +1054,7 @@ $('altNo').onclick = () => { $('alt').hidden = true; };
 $('akey').value = (() => { try { return localStorage.getItem('sekkati-akey') || ''; } catch(e){ return ''; } })();
 $('akeySave').onclick = () => { try { localStorage.setItem('sekkati-akey', $('akey').value.trim()); $('msg').textContent = ''; } catch(e){} };
 $('akeyClear').onclick = () => { try { localStorage.removeItem('sekkati-akey'); } catch(e){} $('akey').value = ''; };
-const APP_GUIDE = 'سكّتي تطبيق ملاحة. لو قلت "سجل مشاكل طريقي" بينفّذها فوراً (يبدأ تسجيل الرحلة من غير ما يحتاج مفتاح API)، وقول "وقف التسجيل" عشان يحفظها. زرار 🚗 ابدأ السواقة بيبدأ قيادة من غير وجهة (تسجيل + تنبيهات رادار/كارتة قدامك). اكتب من/إلى وهيحسب طرق ويرتبهم بالأفضل. 🗺 شكل بيبدّل بين 4 أشكال للخريطة (فيكتور/أسود/OSM/قمر صناعي). أزرار التعليم 📷 رادار / 💳 كارتة / ⛔ مقفول / ↩️ يوتيرن / 🚓 لجنة: اضغط الزرار وبعدين مكانه على الخريطة. 🧭 جوجل + سجّل بيفتح جوجل مابس ويسجّل الرحلة بصمت. ▶ ابدأ القيادة شاشة ملء شاشة بتنطق التعليمات والتنبيهات. تسجيل رحلة بيتعلّم من طرقك. فيه نسخة احتياطية (ملف .json) من كارت الرحلات.';
+const APP_GUIDE = 'سكّتي تطبيق ملاحة. لو قلت "سجل مشاكل طريقي" بينفّذها فوراً (يبدأ تسجيل الرحلة من غير ما يحتاج مفتاح API)، وقول "وقف التسجيل" عشان يحفظها. زرار 🚗 ابدأ السواقة بيبدأ قيادة من غير وجهة (تسجيل + تنبيهات رادار/كارتة قدامك). اكتب من/إلى وهيحسب طرق ويرتبهم بالأفضل. زرار الطبقات الدايري بيبدّل بين 4 أشكال للخريطة (فيكتور/أسود/OSM/قمر صناعي). زرار ⚠ الدايري على الخريطة بيفتح التعليم (رادار/كارتة/لجنة/يوتيرن/مقفول): اختار وبعدين اضغط مكانه على الخريطة. 🧭 جوجل + سجّل بيفتح جوجل مابس ويسجّل الرحلة بصمت. ▶ ابدأ القيادة شاشة ملء شاشة بتنطق التعليمات والتنبيهات. تسجيل رحلة بيتعلّم من طرقك. فيه نسخة احتياطية (ملف .json) من كارت الرحلات.';
 function openAsk(){ hideSheets(); $('cl').hidden = false; if (!$('akey').value.trim()) $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; }
 $('nclaude').onclick = () => { const h = $('cl').hidden; hideSheets(); $('cl').hidden = !h; if (!$('akey').value.trim() && !h === false) $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; };
 $('askgen').onclick = openAsk;
