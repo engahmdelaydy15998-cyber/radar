@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T21:37:42Z",
+ "updated": "2026-11-21T21:42:59Z",
  "demo": false,
  "items": [
   {
@@ -14,7 +14,14 @@
    ],
    "url": "https://www.youtube.com/shorts/GFxHjrYwoFk",
    "ta": "لقد صنعوا صراصير سايبورغ باستخدام الذكاء الاصطناعي المدمج.",
-   "sa": "مشاركة آخر الأخبار والتطورات في مجال الذكاء الاصطناعي اكتشف المزيد: 🛠️ اكتشف أدوات وأخبار الذكاء الاصطناعي: https://futuretools.io/ 📰 النشرة الإخبارية الأسبوعية: https://future…"
+   "sa": "مشاركة آخر الأخبار والتطورات في مجال الذكاء الاصطناعي اكتشف المزيد: 🛠️ اكتشف أدوات وأخبار الذكاء الاصطناعي: https://futuretools.io/ 📰 النشرة الإخبارية الأسبوعية: https://future…",
+   "h": "روبوتات حشرية بـ AI مدمج",
+   "x": "تقنيات روبوتات دمجت الـ AI مع حشرات حقيقية لتطبيقات المراقبة المتقدمة.",
+   "tg": [
+    "Robotics",
+    "AI"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-I0Fasi1-teQ",
@@ -28,7 +35,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=I0Fasi1-teQ",
    "ta": "حذرنا الأنثروبيون من الذكاء الاصطناعي. ثم أصبحت علنية.",
-   "sa": "جرب Grok Bot من شركة SpaceXSI، الراعي لهذا الفيديو: https://tinyurl.com/yc4b4ymz أصبحت Anthropic الآن شركة عامة. أنا أنظر إلى كيفية تحذيراته ..."
+   "sa": "جرب Grok Bot من شركة SpaceXSI، الراعي لهذا الفيديو: https://tinyurl.com/yc4b4ymz أصبحت Anthropic الآن شركة عامة. أنا أنظر إلى كيفية تحذيراته ...",
+   "h": "تحولات Anthropic وعالم الـ Agents",
+   "x": "تحليل لتحركات شركة Anthropic وتأثير تحذيرات الـ AI على مستقبل الـ agents.",
+   "tg": [
+    "Anthropic",
+    "Agents"
+   ],
+   "tp": "agents"
   },
   {
    "id": "yt-yq4FctnSglI",
@@ -316,7 +330,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=G2AGx8zzX88",
    "ta": "تعلم Reactjs #18 - نشر الدعائم",
-   "sa": "دروس وواجبات في نشر الدعائم: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+   "sa": "دروس وواجبات في نشر الدعائم: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
+   "h": "احتراف React و Spreading Props",
+   "x": "درس جديد لتعلم تكتيكات Spreading Props في تطوير الـ Web والـ UI.",
+   "tg": [
+    "React",
+    "Frontend"
+   ],
+   "tp": "courses"
   },
   {
    "id": "yt-a36atq-Dy8A",
@@ -416,7 +437,14 @@
    ],
    "url": "https://www.youtube.com/shorts/7_pMINxEEPU",
    "ta": "ماذا يمكنك استخدام هذا ل؟",
-   "sa": "مشاركة آخر الأخبار والتطورات في مجال الذكاء الاصطناعي اكتشف المزيد: 🛠️ اكتشف أدوات وأخبار الذكاء الاصطناعي: https://futuretools.io/ 📰 النشرة الإخبارية الأسبوعية: https://future…"
+   "sa": "مشاركة آخر الأخبار والتطورات في مجال الذكاء الاصطناعي اكتشف المزيد: 🛠️ اكتشف أدوات وأخبار الذكاء الاصطناعي: https://futuretools.io/ 📰 النشرة الإخبارية الأسبوعية: https://future…",
+   "h": "تطبيقات جديدة في عالم الـ AI",
+   "x": "نظرة سريعة على أحدث ابتكارات الـ AI وكيفية توظيفها في مشاريعك.",
+   "tg": [
+    "AI",
+    "Tools"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-GojQtxCT3dg",
@@ -452,7 +480,13 @@
    ],
    "url": "https://en.wikipedia.org/wiki/Twin_films",
    "url2": "https://news.ycombinator.com/item?id=50584481",
-   "ta": "الأفلام المزدوجة هي أفلام لها نفس المؤامرات أو قصص مشابهة تم إصدارها في وقت قصير"
+   "ta": "الأفلام المزدوجة هي أفلام لها نفس المؤامرات أو قصص مشابهة تم إصدارها في وقت قصير",
+   "h": "ظاهرة الأفلام المتطابقة Twin Films",
+   "x": "نظرة على الأفلام التي تملك نفس الحبكة وتصدر في نفس التوقيت تقريبا.",
+   "tg": [
+    "Media"
+   ],
+   "tp": "news"
   },
   {
    "id": "gn-generativearchitecturalmodelsrequiresymbolicrulestoreproduce",
@@ -487,7 +521,14 @@
    ],
    "url": "https://taisho.design/en/blog/accessible-color-palette-from-one-color",
    "url2": "https://news.ycombinator.com/item?id=50584198",
-   "ta": "كيفية إنشاء لوحة ألوان يمكن الوصول إليها من لون واحد"
+   "ta": "كيفية إنشاء لوحة ألوان يمكن الوصول إليها من لون واحد",
+   "h": "توليد Color Palette متوافقة للـ UI",
+   "x": "طريقة ذكية لإنشاء لوحة ألوان متاحة وسهلة القراءة من لون أساسي واحد.",
+   "tg": [
+    "UI",
+    "Design"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-Yeigx_aVkoM",
@@ -564,7 +605,13 @@
    ],
    "url": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/sir-brian-may-adds-new-dimension-to-hera-asteroid",
    "url2": "https://news.ycombinator.com/item?id=50583768",
-   "ta": "يضيف السير بريان ماي بعدًا جديدًا لكويكب هيرا"
+   "ta": "يضيف السير بريان ماي بعدًا جديدًا لكويكب هيرا",
+   "h": "بيانات ثلاثية الأبعاد لكويكب Hera",
+   "x": "مساهمات علمية جديدة لإضافة أبعاد بصرية وتحليلية لمهام استكشاف الفضاء.",
+   "tg": [
+    "Science"
+   ],
+   "tp": "news"
   },
   {
    "id": "hn-50583761",
@@ -578,7 +625,13 @@
    ],
    "url": "https://news.ycombinator.com/item?id=50583761",
    "url2": "",
-   "ta": "لقد كنت عاطلاً عن العمل منذ عامين و15 عامًا بالولايات المتحدة. ماذا أفعل؟"
+   "ta": "لقد كنت عاطلاً عن العمل منذ عامين و15 عامًا بالولايات المتحدة. ماذا أفعل؟",
+   "h": "فترة توقف عن العمل: ماذا تفعل؟",
+   "x": "نصائح وإستراتيجيات للمهندسين والمطورين أصحاب الخبرات الكبيرة للتعامل مع فترة البطالة.",
+   "tg": [
+    "Career"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-IsWEWB-Ownk",
@@ -614,7 +667,14 @@
    ],
    "url": "https://www.youtube.com/shorts/BoBe0tepch4",
    "ta": "عملت ستة روبوتات على مدار 24 ساعة في متجر صغير في شنغهاي",
-   "sa": "انضم إلى رسالتي الإخبارية للحصول على تحديثات منتظمة للذكاء الاصطناعي 👇🏼 https://forwardfuture.com روابطي 🔗 👉🏻 X: https://x.com/matthewberman 👉🏻 Forward Future X: https://x.co..."
+   "sa": "انضم إلى رسالتي الإخبارية للحصول على تحديثات منتظمة للذكاء الاصطناعي 👇🏼 https://forwardfuture.com روابطي 🔗 👉🏻 X: https://x.com/matthewberman 👉🏻 Forward Future X: https://x.co...",
+   "h": "روبوتات تعمل وردية كاملة بمتجر",
+   "x": "ستة روبوتات تنفذ مهام كاملة في متجر بشانغهاي بدون تدخل بشري.",
+   "tg": [
+    "Robotics",
+    "Automation"
+   ],
+   "tp": "news"
   },
   {
    "id": "hn-50583445",
@@ -649,7 +709,14 @@
    ],
    "url": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib",
    "url2": "https://news.ycombinator.com/item?id=50582069",
-   "ta": "حبوب منع الحمل لعلاج سرطان البنكرياس تعتبر \"أكبر إنجاز منذ عقود\""
+   "ta": "حبوب منع الحمل لعلاج سرطان البنكرياس تعتبر \"أكبر إنجاز منذ عقود\"",
+   "h": "طفرة طبية لعلاج سرطان البنكرياس",
+   "x": "اكتشاف دوائي جديد يُعد الأضخم منذ عقود في علاج الأورام الخطيرة.",
+   "tg": [
+    "Health",
+    "Tech"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-d_hP8pqUCr0",
@@ -1332,7 +1399,14 @@
    ],
    "url": "https://outdata.net/blog/261120",
    "url2": "https://news.ycombinator.com/item?id=50574264",
-   "ta": "اختبار المحاكاة الحتمية متاح للجميع"
+   "ta": "اختبار المحاكاة الحتمية متاح للجميع",
+   "h": "اختبارات المحاكاة الحتمية لكل الأنظمة",
+   "x": "تعلم كيف تضمن استقرار الكود والـ simulation بدون أخطاء عشوائية.",
+   "tg": [
+    "Simulation",
+    "Testing"
+   ],
+   "tp": "oss"
   },
   {
    "id": "hn-50573886",
@@ -2562,15 +2636,7 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
-   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري",
-   "h": "فوز مشروع Forma بجائزة Architectural Record",
-   "x": "تصميم معماري متميز يعكس قوة الأدوات الرقمية الحديثة في التخطيط.",
-   "tg": [
-    "Forma",
-    "Architecture",
-    "BIM"
-   ],
-   "tp": "arch"
+   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري"
   },
   {
    "id": "hn-50562582",
