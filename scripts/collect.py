@@ -698,7 +698,8 @@ def gemini_search(query, key, model):
 
 def collect_social(known_ids, cutoff, now=None):
     key = os.environ.get("GEMINI_API_KEY")
-    if not key:
+    # Google Search grounding isn't in Gemini's free tier, so this stays off until billing is set up
+    if not key or os.environ.get("GEMINI_SEARCH") != "1":
         return []
     now = now or datetime.now(timezone.utc)
     start = (now.timetuple().tm_yday * 8 + now.hour // 3) * SOCIAL_PER_RUN % len(SOCIAL_QUERIES)

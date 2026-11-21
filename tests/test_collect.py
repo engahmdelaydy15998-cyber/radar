@@ -113,6 +113,8 @@ print("SHARED TEST OK")
 
 # social: only grounded source URLs are kept (resolved from redirects); a URL only in the model's text is dropped
 os.environ["GEMINI_API_KEY"] = "x"
+assert c.collect_social(set(), now - timedelta(days=14)) == [], "off unless GEMINI_SEARCH=1"
+os.environ["GEMINI_SEARCH"] = "1"
 c.gemini_search = lambda q, key, model: (
     "https://www.linkedin.com/posts/ali_revit-ai-activity-1 | Ali | Revit AI tips\nhttps://www.instagram.com/p/FAKE123/ | X | made up",
     [{"uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/abc", "title": "linkedin.com"},
@@ -123,5 +125,5 @@ got = c.collect_social(set(), now - timedelta(days=14))
 assert len(got) == 1 and got[0]["url"] == "https://www.linkedin.com/posts/ali_revit-ai-activity-1", got
 assert got[0]["src"] == "LinkedIn" and got[0]["t"] == "Revit AI tips" and got[0]["s"] == "Ali"
 assert c.collect_social({got[0]["id"]}, now - timedelta(days=14)) == []
-del os.environ["GEMINI_API_KEY"]
+del os.environ["GEMINI_API_KEY"]; del os.environ["GEMINI_SEARCH"]
 print("SOCIAL TEST OK")
