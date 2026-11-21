@@ -613,7 +613,7 @@ def gemini_post(model, payload, key):
     body = json.dumps({
         "systemInstruction": {"parts": [{"text": AI_SYSTEM}]},
         "contents": [{"role": "user", "parts": [{"text": json.dumps(payload, ensure_ascii=False)}]}],
-        "generationConfig": {"responseMimeType": "application/json", "temperature": 0.3},
+        "generationConfig": {"responseMimeType": "application/json", "temperature": 0.3, "maxOutputTokens": 8192},
     }).encode("utf-8")
     req = urllib.request.Request(GEMINI_URL % model, data=body, method="POST",
                                  headers={"x-goog-api-key": key, "Content-Type": "application/json"})
@@ -623,8 +623,9 @@ def gemini_post(model, payload, key):
         parts = json.loads(raw)["candidates"][0]["content"]["parts"]
         msg = "".join(p.get("text", "") for p in parts)
         return json.loads(re.search(r"\{.*\}", msg, re.S).group(0)).get("items", [])
-    except Exception:
-        raise RuntimeError("unexpected reply: " + raw[:200].replace("\n", " "))
+    except Exception as ex:
+        fin = re.search(r'"finishReason":\s*"(\w+)"', raw)
+        raise RuntimeError("unexpected reply (%s, %s): %s" % (ex, fin.group(1) if fin else "?", raw[-200:].replace("\n", " ")))
 
 
 _ai_model = []
@@ -705,6 +706,11 @@ def collect_social(known_ids, cutoff, now=None):
     for q, cat in jobs:
         try:
             text, chunks = gemini_search(q, key, (_ai_model or GEMINI_MODELS)[0])
+        except urllib.error.HTTPError as ex:
+            log("social: failed", q, ex.code, ex.read()[:300])
+            if ex.code == 429:
+                break
+            continue
         except Exception as ex:
             log("social: failed", q, ex)
             continue
