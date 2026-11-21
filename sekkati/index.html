@@ -26,6 +26,12 @@ button.sec{background:transparent;color:var(--ink);border:1px solid var(--line)}
 button.red{background:var(--bad);color:#050505}
 button.big{width:100%;font-size:15px;padding:11px}
 input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px;width:100%}
+.fl{display:block;font-size:11px;color:var(--mut)}.fl input,.fl select{margin-top:3px;font-size:14px;padding:8px 10px}
+.ci{display:flex;align-items:center;gap:8px;padding:8px 0;border-top:1px solid var(--line);font-size:14px}
+.ci .n{flex:1;min-width:0}.ci .n div{font-size:12px;color:var(--mut)}
+.ci .late{color:var(--bad)}.ci .soon{color:var(--acc)}.ci .ok{color:var(--ok)}
+.ci button{padding:5px 9px;font-size:12px}
+.ce{display:none;gap:6px;padding:0 0 8px}.ce.on{display:grid;grid-template-columns:1fr 1fr}.ce input{padding:6px 8px;font-size:13px}
 .an{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:8px}
 .an div{background:var(--bg);border-radius:10px;padding:7px 4px;text-align:center}.an b{display:block;font-size:16px}.an span{font-size:11px;color:var(--mut)}
 input:focus{outline:none;border-color:var(--acc)}
@@ -233,6 +239,23 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
   <div class="card" id="anCard" hidden>
     <h2>📊 تحليل آخر رحلة</h2>
     <div id="anBody"></div>
+  </div>
+
+  <div class="card" id="carCard">
+    <h2>🚗 عربيتي</h2>
+    <div id="carDue"></div>
+    <label class="fl">العربية والموديل والسنة<input id="carModel" type="text" placeholder="مثلاً: هيونداي إلنترا 2016 1.6"></label>
+    <div class="row">
+      <label class="fl">العداد دلوقتي (كم)<input id="carOdo" type="number" inputmode="numeric" placeholder="85000"></label>
+      <label class="fl">الاستهلاك (لتر/100 كم)<input id="carCons" type="number" inputmode="decimal" step="0.1" placeholder="8"></label>
+    </div>
+    <div class="row">
+      <label class="fl">الوقود<select id="carFuel"><option value="92">بنزين 92</option><option value="80">بنزين 80</option><option value="95">بنزين 95</option><option value="diesel">سولار</option><option value="cng">غاز</option></select></label>
+      <label class="fl">سعر اللتر (جنيه)<input id="carPrice" type="number" inputmode="decimal" step="0.25" placeholder="17.25"></label>
+    </div>
+    <div class="row"><button class="sec" id="carSave">حفظ</button><button class="sec" id="carAsk">🤖 اسأل Claude عن مواعيد عربيتي</button></div>
+    <div class="note" id="carNote" style="margin-top:6px">العداد بيزيد لوحده مع كل رحلة بتسجلها. المواعيد تحت متوسطات عامة لحد ما تسأل Claude أو تعدّلها من كتيّب العربية.</div>
+    <div id="carItems" style="margin-top:8px"></div>
   </div>
 
   <div class="card">
@@ -1220,7 +1243,7 @@ $('altNo').onclick = () => { $('alt').hidden = true; };
 $('akey').value = (() => { try { return localStorage.getItem('sekkati-akey') || ''; } catch(e){ return ''; } })();
 $('akeySave').onclick = () => { try { localStorage.setItem('sekkati-akey', $('akey').value.trim()); $('msg').textContent = ''; } catch(e){} };
 $('akeyClear').onclick = () => { try { localStorage.removeItem('sekkati-akey'); } catch(e){} $('akey').value = ''; };
-const APP_GUIDE = 'سكّتي تطبيق ملاحة. لو قلت "سجل مشاكل طريقي" بينفّذها فوراً (يبدأ تسجيل الرحلة من غير ما يحتاج مفتاح API)، وقول "وقف التسجيل" عشان يحفظها. زرار 🚗 ابدأ السواقة بيبدأ قيادة من غير وجهة (تسجيل + تنبيهات رادار/كارتة قدامك). اكتب من/إلى وهيحسب طرق ويرتبهم بالأفضل. زرار الطبقات بيبدّل بين خريطة عادية وقمر صناعي، وزرار الشمس/القمر بيبدّل بين فاتح وغامق. زرار ⚠ الدايري على الخريطة بيفتح التعليم (رادار/كارتة/لجنة/يوتيرن/مقفول): اختار وبعدين اضغط مكانه على الخريطة. 🧭 جوجل + سجّل بيفتح جوجل مابس ويسجّل الرحلة بصمت. ▶ ابدأ القيادة شاشة ملء شاشة بتنطق التعليمات والتنبيهات. تسجيل رحلة بيتعلّم من طرقك. فيه نسخة احتياطية (ملف .json) من كارت الرحلات.';
+const APP_GUIDE = 'سكّتي تطبيق ملاحة. في تطبيق الأندرويد الفقاعة فوق جوجل مابس فيها 🎤: تقول "هنا رادار" أو "في لجنة" وهو يسجّل مكانك، وأي كلام أطول بيتحفظ ملاحظة. كارت عربيتي فيه العداد واستهلاك البنزين ومواعيد الصيانة وتنبيهاتها، وClaude ممكن يظبط مواعيد الموديل بالظبط. لو قلت "سجل مشاكل طريقي" بينفّذها فوراً (يبدأ تسجيل الرحلة من غير ما يحتاج مفتاح API)، وقول "وقف التسجيل" عشان يحفظها. زرار 🚗 ابدأ السواقة بيبدأ قيادة من غير وجهة (تسجيل + تنبيهات رادار/كارتة قدامك). اكتب من/إلى وهيحسب طرق ويرتبهم بالأفضل. زرار الطبقات بيبدّل بين خريطة عادية وقمر صناعي، وزرار الشمس/القمر بيبدّل بين فاتح وغامق. زرار ⚠ الدايري على الخريطة بيفتح التعليم (رادار/كارتة/لجنة/يوتيرن/مقفول): اختار وبعدين اضغط مكانه على الخريطة. 🧭 جوجل + سجّل بيفتح جوجل مابس ويسجّل الرحلة بصمت. ▶ ابدأ القيادة شاشة ملء شاشة بتنطق التعليمات والتنبيهات. تسجيل رحلة بيتعلّم من طرقك. فيه نسخة احتياطية (ملف .json) من كارت الرحلات.';
 function openAsk(){ hideSheets(); $('cl').hidden = false; if (!$('akey').value.trim()) $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; }
 $('nclaude').onclick = () => { const h = $('cl').hidden; hideSheets(); $('cl').hidden = !h; if (!$('akey').value.trim() && !h === false) $('clout').textContent = 'حط مفتاح Claude من الإعدادات الأول.'; };
 $('askgen').onclick = openAsk;
@@ -1336,7 +1359,7 @@ function stopRec(){
   if (pts.length < 5){ $('msg').textContent = 'التسجيل قصير جداً، اتلغى.'; return; }
   const name = $('name').value.trim() || 'رحلة ' + new Date().toLocaleDateString('ar-EG');
   trips.unshift({id:Date.now(), name, start:pts[0].t, pts:pack(pts)});
-  save(); $('name').value = ''; renderTrips();
+  save(); $('name').value = ''; renderTrips(); carAddTrip(trips[0]);
   analyzeTrip(trips[0], true);
 }
 
@@ -1362,11 +1385,15 @@ async function analyzeTrip(t, announce){
       else an.onBest = cands.some(c => c.same >= 0.7);
     } catch(e){}
   }
+  const car = load('car', null);
+  if (car && car.cons){ const l = an.dist / 1000 * car.cons / 100 * (1 + 0.6 * (an.dur ? an.stopTime / an.dur : 0)); an.fuel = {l, cost:car.price ? l * car.price : 0}; }
   t.an = an; save();
   showAnalysis(t, an, false);
   if (announce){
     let say = 'خلصت الرحلة: ' + km(an.dist) + ' كيلو في ' + arab(Math.max(1, Math.round(an.dur / 60))) + ' دقيقة، ' + (an.stops ? 'ووقفت ' + arab(an.stops) + ' مرة.' : 'ومن غير ولا وقفة.');
     if (an.alt) say += ' وفيه طريق ' + (an.alt.faster ? 'أسرع' : 'أقصر') + (an.alt.via ? ' عن طريق ' + an.alt.via : '') + '، بصّ على التحليل.';
+    const due = carDue().filter(x => x.st !== 'ok').slice(0, 2);
+    if (due.length) say += ' وتنبيه صيانة: ' + due.map(x => x.it.name + (x.st === 'late' ? ' متأخر' : ' قرب')).join('، و') + '.';
     speak(say);
   }
 }
@@ -1383,6 +1410,7 @@ function showAnalysis(t, an, loading){
     + box(km(an.dist) + ' كم', 'المسافة') + box(fmtT(an.dur), 'الوقت') + box(arab(an.stops), 'وقفات')
     + box(fmtT(an.stopTime), 'وقت الوقوف') + box(arab(an.moveAvg), 'متوسط كم/س') + box(arab(an.max), 'أقصى كم/س') + '</div>'
     + `<div class="note">عدّيت على: 📷 ${arab(an.radar)} رادار · 💳 ${arab(an.toll)} كارتة · 🚓 ${arab(an.check)} لجنة</div>`
+    + (an.fuel ? `<div class="note" style="margin-top:4px">⛽ حوالي ${(+an.fuel.l.toFixed(1)).toLocaleString('ar-EG')} لتر${an.fuel.cost ? ' ≈ ' + arab(an.fuel.cost) + ' جنيه' : ''} (تقدير حسب استهلاك عربيتك والوقفات)</div>` : '')
     + ((an.notes || []).length ? `<div class="note" style="margin-top:4px">📝 ملاحظاتك: ${an.notes.map(esc).join(' · ')}</div>` : '') + alt;
   $('anCard').hidden = false;
   if ($('anMap')) $('anMap').onclick = () => {
@@ -1409,12 +1437,13 @@ function renderTrips(){
     trips = trips.filter(t => t.id !== +b.dataset.del); save(); renderTrips();
   });
 }
-const backupData = () => ({trips, blocks, pois:myPois, jams, notes, exportedAt:Date.now()});
+const backupData = () => ({trips, blocks, pois:myPois, jams, notes, car:load('car', null), exportedAt:Date.now()});
 function mergeBackup(d){
   const add = Array.isArray(d) ? d : (d.trips || []), have = new Set(trips.map(t => t.id));
   add.forEach(t => { if (t && t.id && t.pts && !have.has(t.id)) trips.push(t); });
   (d.pois || []).forEach(p => { if (!myPois.some(x => x.kind === p.kind && hav(x, p) < 40)) myPois.push(p); });
   (d.blocks || []).forEach(b => { if (b.until > Date.now() && !blocks.some(x => hav(x, b) < 40)) blocks.push(b); });
+  if (d.car && !load('car', null)){ put('car', d.car); renderCar(); }
   (d.notes || []).forEach(n => { if (n && n.t && !notes.some(x => x.t === n.t)) notes.push(n); });
   (d.jams || []).forEach(j => { if (j.until > Date.now() && !jams.some(x => x.kind === j.kind && hav(x, j) < 60)) jams.push(j); });
   trips.sort((a, b) => b.start - a.start); save(); renderTrips(); drawMarks();
@@ -1441,6 +1470,88 @@ $('imp').onclick = () => {
   catch(e){ $('msg').textContent = 'البيانات مش سليمة.'; }
 };
 renderTrips(); drawMarks();
+/* عربيتي: العداد، البنزين، ومواعيد الصيانة */
+const CAR_ITEMS = [                                // متوسطات عامة؛ Claude أو كتيّب العربية بيدّوا الأدق
+  {id:'oil', name:'زيت الموتور', km:5000, mo:6}, {id:'oilf', name:'فلتر الزيت', km:5000, mo:6},
+  {id:'airf', name:'فلتر الهوا', km:15000, mo:12}, {id:'acf', name:'فلتر التكييف', km:15000, mo:12},
+  {id:'plugs', name:'البوجيهات', km:30000, mo:24}, {id:'tbelt', name:'سير الكاتينة (التايمنج)', km:60000, mo:48},
+  {id:'belts', name:'سيور المروحة والدينامو', km:40000, mo:36}, {id:'brakes', name:'تيل الفرامل', km:30000, mo:24},
+  {id:'rot', name:'ترصيص وتبديل الكاوتش', km:10000, mo:6}, {id:'tires', name:'الكاوتش', km:45000, mo:60},
+  {id:'batt', name:'البطارية', km:0, mo:30}, {id:'cool', name:'مية الردياتير', km:40000, mo:24},
+  {id:'gear', name:'زيت الفتيس', km:60000, mo:48}];
+function carGet(){ const c = load('car', null) || {}; c.items = CAR_ITEMS.map(d => ({...d, ...((c.items || []).find(x => x.id === d.id) || {})})); return c; }
+function carPut(c){ put('car', c); renderCar(); }
+function carAddTrip(t){                            // العداد بيزيد بمسافة الرحلة
+  const c = load('car', null); if (!c || !c.odo) return;
+  c.odo = Math.round(c.odo + analyze(unpack(t.pts)).dist / 1000); put('car', c); renderCar();
+}
+function carDue(){
+  const c = carGet(), now = Date.now(), out = [];
+  c.items.forEach(it => {
+    if (it.lastDate == null && it.lastKm == null) return;
+    const kmLeft = it.km && it.lastKm != null && c.odo ? it.lastKm + it.km - c.odo : Infinity;
+    const dLeft = it.mo && it.lastDate ? (it.lastDate + it.mo * 30.44 * 864e5 - now) / 864e5 : Infinity;
+    const st = kmLeft <= 0 || dLeft <= 0 ? 'late' : kmLeft <= Math.max(500, it.km * 0.1) || dLeft <= 14 ? 'soon' : 'ok';
+    out.push({it, kmLeft, dLeft, st});
+  });
+  return out.sort((a, b) => ({late:0, soon:1, ok:2})[a.st] - ({late:0, soon:1, ok:2})[b.st]);
+}
+function renderCar(){
+  const c = carGet(), due = carDue(), byId = {}; due.forEach(d => byId[d.it.id] = d);
+  if (document.activeElement && document.activeElement.closest && document.activeElement.closest('#carCard') && document.activeElement.tagName === 'INPUT') return;
+  $('carModel').value = c.model || ''; $('carOdo').value = c.odo || ''; $('carCons').value = c.cons || ''; $('carFuel').value = c.fuel || '92'; $('carPrice').value = c.price || '';
+  const bad = due.filter(d => d.st !== 'ok');
+  $('carDue').innerHTML = bad.length ? `<div class="note" style="color:var(--acc);margin-bottom:8px">🔔 ${bad.map(d => esc(d.it.name) + (d.st === 'late' ? ' (متأخر)' : ' (قرب)')).join(' · ')}</div>` : '';
+  const left = d => {                              // متأخر: بس اللي خلص (كيلو أو أيام)؛ غير كده: الفاضل من الاتنين
+    if (!d) return '<span class="soon">حط آخر مرة</span>';
+    const k = isFinite(d.kmLeft) ? d.kmLeft : null, dd = isFinite(d.dLeft) ? Math.round(d.dLeft) : null;
+    const parts = d.st === 'late' ? [k !== null && k <= 0 ? arab(-k) + ' كم' : '', dd !== null && dd <= 0 ? arab(-dd) + ' يوم' : '']
+                                   : [k !== null ? arab(k) + ' كم' : '', dd !== null ? arab(dd) + ' يوم' : ''];
+    return `<span class="${d.st}">${d.st === 'late' ? 'متأخر' : 'فاضل'} ${parts.filter(Boolean).join(d.st === 'late' ? ' و' : ' أو ')}</span>`;
+  };
+  $('carItems').innerHTML = c.items.filter(it => it.km || it.mo).map(it => `<div class="ci"><div class="n"><b>${esc(it.name)}</b><div>كل ${[it.km ? arab(it.km) + ' كم' : '', it.mo ? arab(it.mo) + ' شهر' : ''].filter(Boolean).join(' أو ')}${it.lastDate ? ' · آخر مرة ' + new Date(it.lastDate).toLocaleDateString('ar-EG') : ''} · ${left(byId[it.id])}</div></div>
+    <button class="sec" data-done="${it.id}">✔ النهارده</button><button class="sec" data-ed="${it.id}">✎</button></div>
+    <div class="ce" id="ce-${it.id}"><input data-f="km" type="number" placeholder="كل كام كم" value="${it.km || ''}"><input data-f="mo" type="number" placeholder="كل كام شهر" value="${it.mo || ''}">
+    <input data-f="lastDate" type="date" value="${it.lastDate ? new Date(it.lastDate).toISOString().slice(0, 10) : ''}"><input data-f="lastKm" type="number" placeholder="العداد ساعتها" value="${it.lastKm != null ? it.lastKm : ''}">
+    <button class="sec" data-sv="${it.id}" style="grid-column:1/3">حفظ</button></div>`).join('');
+  $('carItems').querySelectorAll('[data-done]').forEach(b => b.onclick = () => {
+    const c2 = carGet(), it = c2.items.find(x => x.id === b.dataset.done); it.lastDate = Date.now(); it.lastKm = c2.odo || null; carPut(c2);
+  });
+  $('carItems').querySelectorAll('[data-ed]').forEach(b => b.onclick = () => $('ce-' + b.dataset.ed).classList.toggle('on'));
+  $('carItems').querySelectorAll('[data-sv]').forEach(b => b.onclick = () => {
+    const box = $('ce-' + b.dataset.sv), c2 = carGet(), it = c2.items.find(x => x.id === b.dataset.sv), v = f => box.querySelector(`[data-f="${f}"]`).value;
+    it.km = +v('km') || 0; it.mo = +v('mo') || 0; it.lastDate = v('lastDate') ? new Date(v('lastDate')).getTime() : null; it.lastKm = v('lastKm') !== '' ? +v('lastKm') : null; carPut(c2);
+  });
+}
+$('carSave').onclick = () => {
+  const c = carGet(); c.model = $('carModel').value.trim(); c.odo = +$('carOdo').value || 0; c.cons = +$('carCons').value || 0;
+  c.fuel = $('carFuel').value; c.price = +$('carPrice').value || 0; document.activeElement.blur(); carPut(c);
+  $('carNote').textContent = 'اتحفظ. العداد هيزيد لوحده مع كل رحلة.';
+};
+$('carAsk').onclick = async () => {                // Claude بيدّي مواعيد الصيانة والاستهلاك للموديل ده بالظبط
+  const key = (() => { try { return localStorage.getItem('sekkati-akey') || ''; } catch(e){ return ''; } })();
+  const model = $('carModel').value.trim();
+  if (!model){ $('carNote').textContent = 'اكتب موديل العربية الأول.'; return; }
+  if (!key){ $('carNote').textContent = 'محتاج مفتاح Claude (من كارت مساعد Claude تحت).'; return; }
+  $('carNote').textContent = '...بسأل Claude عن ' + model;
+  try {
+    const r = await fetch('https://api.anthropic.com/v1/messages', {method:'POST',
+      headers:{'content-type':'application/json', 'x-api-key':key, 'anthropic-version':'2023-06-01', 'anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({model:'claude-haiku-5-5', max_tokens:700,
+        system:'إنت خبير صيانة عربيات في مصر. رد بـ JSON بس من غير أي كلام تاني.',
+        messages:[{role:'user', content:`العربية: ${model}، الوقود: ${$('carFuel').selectedOptions[0].textContent}. ادّيني متوسط الاستهلاك في مصر (لتر/100كم، مدينة وطرق) ومواعيد الصيانة الموصى بيها للعربية دي بالظبط حسب كتيّب الشركة، بالكيلو والشهور (0 لو مش منطبق، زي البطارية بالكيلو أو لو الموتور بكاتينة حديد مش سير).
+الشكل: {"cons": رقم, "note": "جملة قصيرة بالمصري عن أهم حاجة في صيانة العربية دي", "items": [{"id": "...", "km": رقم, "mo": رقم}]}
+الـ ids: ${CAR_ITEMS.map(x => x.id + ' (' + x.name + ')').join('، ')}`}]})});
+    const j = await r.json(); if (!r.ok) throw new Error((j.error && j.error.message) || r.status);
+    const txt = (j.content || []).map(c => c.text || '').join(''), m = txt.match(/\{[\s\S]*\}/);
+    const d = JSON.parse(m ? m[0] : txt), c = carGet();
+    c.model = model; if (d.cons > 2 && d.cons < 30){ c.cons = +(+d.cons).toFixed(1); }
+    (d.items || []).forEach(x => { const it = c.items.find(y => y.id === x.id); if (it){ it.km = Math.max(0, +x.km || 0); it.mo = Math.max(0, +x.mo || 0); } });
+    carPut(c); $('carNote').textContent = '✔ المواعيد اتظبطت لـ ' + model + (d.note ? '. ' + d.note : '');
+  } catch(e){ $('carNote').textContent = 'مقدرتش أوصل لـ Claude: ' + (e.message || e); }
+};
+renderCar();
+
 (() => {                                           // تسجيل اتقطع (التطبيق اتقفل قبل الحفظ): نسأل نحفظه ولا لأ
   const old = load('bgwatch', null);
   if (NATIVE && old && NP.BackgroundGeolocation){ NP.BackgroundGeolocation.removeWatcher({id:old}).catch(() => {}); put('bgwatch', null); }
@@ -1450,7 +1561,7 @@ renderTrips(); drawMarks();
   $('draft').hidden = false;
   $('draftSave').onclick = () => {
     trips.unshift({id:Date.now(), name:d.name || 'رحلة اتقطعت ' + new Date(d.start).toLocaleDateString('ar-EG'), start:d.start, pts:d.pts});
-    put('recdraft', null); save(); renderTrips(); $('draft').hidden = true; analyzeTrip(trips[0], false);
+    put('recdraft', null); save(); renderTrips(); carAddTrip(trips[0]); $('draft').hidden = true; analyzeTrip(trips[0], false);
   };
   $('draftDrop').onclick = () => { put('recdraft', null); $('draft').hidden = true; };
 })();
