@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T21:49:26Z",
+ "updated": "2026-11-21T21:58:56Z",
  "demo": false,
  "items": [
   {
@@ -751,7 +751,14 @@
    ],
    "url": "https://www.businesswire.com/news/home/20261120446139/en/Grand-Theft-Auto-VI-Shatters-Entertainment-Box-Office-Records-with-%243.79-Billion-in-Day-One-Retail-Sales",
    "url2": "https://news.ycombinator.com/item?id=50581907",
-   "ta": "GTA VI تحطم الأرقام القياسية في شباك التذاكر مع 3.79 مليار دولار في مبيعات التجزئة في اليوم الأول"
+   "ta": "GTA VI تحطم الأرقام القياسية في شباك التذاكر مع 3.79 مليار دولار في مبيعات التجزئة في اليوم الأول",
+   "h": "مبيعات GTA VI التاريخية",
+   "x": "تحطيم أرقام المبيعات بـ 3.79 مليار دولار في أول يوم طراوة.",
+   "tg": [
+    "Gaming",
+    "Industry"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-mX7wHNnsghs",
@@ -872,7 +879,14 @@
    ],
    "url": "https://www.techdirt.com/2026/11/20/judge-says-dhss-seizure-of-an-immigration-lawyers-phone-likely-violated-the-first-amendment/",
    "url2": "https://news.ycombinator.com/item?id=50580377",
-   "ta": "القاضي: مصادرة وزارة الأمن الداخلي لهاتف محامي الهجرة من المحتمل أن تكون انتهاكًا للتعديل الأول"
+   "ta": "القاضي: مصادرة وزارة الأمن الداخلي لهاتف محامي الهجرة من المحتمل أن تكون انتهاكًا للتعديل الأول",
+   "h": "حماية خصوصية المحامين",
+   "x": "القضاء يرى أن مصادرة هاتف محامٍ تمثل انتهاكاً دستورياً.خلفية قانونية تهمك.",
+   "tg": [
+    "Privacy",
+    "Law"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-wqNIzUmNt9M",
@@ -1014,7 +1028,14 @@
    ],
    "url": "https://www.youtube.com/shorts/X19Q12hmRjY",
    "ta": "طريقة مخففة لاستخدام ChatGPT: البحث عن طبيب",
-   "sa": "تبدأ فحوصاتك السنوية بالعثور على الطبيب المناسب. تشارك Magan Chin كيفية استخدام ChatGPT للعثور على الأطباء ذوي التصنيف العالي في مكان قريب. نصيحة من 💡: الانستقرام…"
+   "sa": "تبدأ فحوصاتك السنوية بالعثور على الطبيب المناسب. تشارك Magan Chin كيفية استخدام ChatGPT للعثور على الأطباء ذوي التصنيف العالي في مكان قريب. نصيحة من 💡: الانستقرام…",
+   "h": "ChatGPT للبحث عن طبيب",
+   "x": "طريقة ذكية لاستخدام ChatGPT في إيجاد الأطباء الأعلى تقييمًا بالقرب منك.",
+   "tg": [
+    "AI",
+    "ChatGPT"
+   ],
+   "tp": "news"
   },
   {
    "id": "hn-50578286",
@@ -1028,7 +1049,14 @@
    ],
    "url": "https://dbushell.com/2026/11/16/visited-links/",
    "url2": "https://news.ycombinator.com/item?id=50578286",
-   "ta": "الروابط التي تمت زيارتها باللون الأرجواني"
+   "ta": "الروابط التي تمت زيارتها باللون الأرجواني",
+   "h": "لماذا الروابط الزائرة بنفسجية؟",
+   "x": "معلومة تقنية سريعة عن تصميم الويب وتجربة المستخدم منذ البداية.",
+   "tg": [
+    "Web",
+    "Design"
+   ],
+   "tp": "news"
   },
   {
    "id": "hn-50577991",
@@ -1542,7 +1570,14 @@
    ],
    "url": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib",
    "url2": "https://news.ycombinator.com/item?id=50573041",
-   "ta": "حبوب منع الحمل لعلاج سرطان البنكرياس تعتبر \"أكبر إنجاز منذ عقود\""
+   "ta": "حبوب منع الحمل لعلاج سرطان البنكرياس تعتبر \"أكبر إنجاز منذ عقود\"",
+   "h": "اختراق طبّي لسرطان البنكرياس",
+   "x": "حبة دواء جديدة تُعد الأكبر منذ عقود في علاج أخطر الأورام.",
+   "tg": [
+    "Health",
+    "Tech"
+   ],
+   "tp": "news"
   },
   {
    "id": "gh-1465322684",
@@ -1597,7 +1632,14 @@
    ],
    "url": "https://kottke.org/17/06/if-you-cant-explain-something-in-simple-terms-you-dont-understand-it",
    "url2": "https://news.ycombinator.com/item?id=50572355",
-   "ta": "إذا لم تتمكن من شرح شيء ما بعبارات بسيطة، فأنت لا تفهمه (2017)"
+   "ta": "إذا لم تتمكن من شرح شيء ما بعبارات بسيطة، فأنت لا تفهمه (2017)",
+   "h": "بساطة الشرح دليل الفهم",
+   "x": "قاعدة ذهبية في البرمجة والهندسة: إن لم تستطع شرحه ببساطة فأنت لا تفهمه.",
+   "tg": [
+    "Coding",
+    "Logic"
+   ],
+   "tp": "news"
   },
   {
    "id": "hn-50572348",
@@ -1654,7 +1696,14 @@
    ],
    "url": "https://www.theguardian.com/commentisfree/2026/nov/18/gta-6-grand-theft-auto-vi-rockstar-employees-union-recognition",
    "url2": "https://news.ycombinator.com/item?id=50572176",
-   "ta": "لقد صنعنا GTA 6، أكبر لعبة في العالم – يجب أن تكون لدينا ظروف عمل مناسبة"
+   "ta": "لقد صنعنا GTA 6، أكبر لعبة في العالم – يجب أن تكون لدينا ظروف عمل مناسبة",
+   "h": "ظروف عمل مطوري الألعاب",
+   "x": "مطورو GTA 6 يطالبون ببيئة عمل تليق بحجم أكبر لعبة في العالم.",
+   "tg": [
+    "Gaming",
+    "Dev"
+   ],
+   "tp": "news"
   },
   {
    "id": "hn-50572116",
@@ -1668,7 +1717,14 @@
    ],
    "url": "https://ecohustler.com/article/one-corporation-to-pollute-them-all/",
    "url2": "https://news.ycombinator.com/item?id=50572116",
-   "ta": "تنبعث من رحلات الكرنفال من أكسيد الكبريت عشرة أضعاف ما تصدره جميع السيارات الأوروبية"
+   "ta": "تنبعث من رحلات الكرنفال من أكسيد الكبريت عشرة أضعاف ما تصدره جميع السيارات الأوروبية",
+   "h": "تلوث السفن السياحية المرعب",
+   "x": "رحلات Carnival Cruises تصدر كبريتًا يفوق سيارات أوروبا كلها بعشرة أضعاف!",
+   "tg": [
+    "Environment",
+    "Data"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-6NT9TsT6iMc",
@@ -1725,7 +1781,14 @@
    ],
    "url": "https://www.youtube.com/shorts/wuCYQ2YSa9c",
    "ta": "الخرافة 5.2 بعد الأسبوع المجاني: الاعتمادات والحد الأقصى للإنفاق وإعادة التعيين قبل شهر مارس",
-   "sa": "لقد انتهى أسبوعك المجاني من Fable 5.2 على Pro. في Max وUltra، قد لا يزال لديك 1 إلى 3 عمليات إعادة تعيين Fable، صالحة حتى 8 مارس 2027. القواعد الأربعة و..."
+   "sa": "لقد انتهى أسبوعك المجاني من Fable 5.2 على Pro. في Max وUltra، قد لا يزال لديك 1 إلى 3 عمليات إعادة تعيين Fable، صالحة حتى 8 مارس 2027. القواعد الأربعة و...",
+   "h": "تحديثات Fable 5.2 الجديدة",
+   "x": "تفاصيل انتهاء الأسبوع المجاني وقواعد إعادة التعيين قبل مارس 2027.",
+   "tg": [
+    "Software",
+    "Updates"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-OSHSopaYjTw",
@@ -2181,7 +2244,14 @@
    ],
    "url": "https://news.ycombinator.com/item?id=50566487",
    "url2": "",
-   "ta": "يجب أن تقدم Anthropic مخزونًا لـ Stack Overflow (و OpenAI أيضًا)"
+   "ta": "يجب أن تقدم Anthropic مخزونًا لـ Stack Overflow (و OpenAI أيضًا)",
+   "h": "الذكاء الاصطناعي وStack Overflow",
+   "x": "اقتراحات بمنح Anthropic وOpenAI أسهماً لمنصة Stack Overflow لدعم مجتمع البرمجة.",
+   "tg": [
+    "AI",
+    "StackOverflow"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-YbZDDCHDSnE",
@@ -2669,11 +2739,12 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
    "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري",
-   "h": "تتويج Forma Building Design عالمياً",
-   "x": "مشروع معماري جديد يثبت قوة استخدام أدوات التصميم الحديثة.",
+   "h": "Autodesk Forma يحصد جائزة كبرى",
+   "x": "اختيار تصميم Forma Building Design كأفضل فئة من Architectural Record ليعزز أدوات الـ BIM",
    "tg": [
-    "Autodesk",
-    "BIM"
+    "BIM",
+    "Autodesk Forma",
+    "Architecture"
    ],
    "tp": "arch"
   },
@@ -3880,7 +3951,14 @@
    ],
    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
    "url2": "https://news.ycombinator.com/item?id=50552424",
-   "ta": "الجوزاء 4 النيون"
+   "ta": "الجوزاء 4 النيون",
+   "h": "إطلاق نموذج Gemini 4 Neon",
+   "x": "إصدار جديد ومثير في عالم الـ AI يهم كل مطور مهتم بأحدث تقنيات الـ Code والـ LLMs",
+   "tg": [
+    "AI",
+    "Gemini",
+    "Code"
+   ]
   },
   {
    "id": "hn-50552264",
@@ -3944,7 +4022,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=KMBdcSgQ9og",
    "ta": "تعلم Reactjs #10 - فصل المكونات إلى ملفات",
-   "sa": "فصل المكونات إلى ملفات الدروس والواجبات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+   "sa": "فصل المكونات إلى ملفات الدروس والواجبات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
+   "h": "دورة ReactJS لتقسيم الكومبوننتس",
+   "x": "شرح عملي مفيد لتنظيم كود الـ Addins والمنصات الهندسية بذكاء وكفاءة",
+   "tg": [
+    "React",
+    "Code",
+    "Courses"
+   ],
+   "tp": "courses"
   },
   {
    "id": "gn-venturebeatgooglelaunchesgemini4neonbutcarbonstokenratesarec",
@@ -3978,7 +4064,15 @@
    ],
    "url": "https://www.youtube.com/shorts/hT0qW_DRFLw",
    "ta": "السبب وراء عدم تمكن أي شخص من اللحاق بـ NVIDIA",
-   "sa": "مشاركة آخر الأخبار والتطورات في مجال الذكاء الاصطناعي اكتشف المزيد: 🛠️ اكتشف أدوات وأخبار الذكاء الاصطناعي: https://futuretools.io/ 📰 النشرة الإخبارية الأسبوعية: https://future…"
+   "sa": "مشاركة آخر الأخبار والتطورات في مجال الذكاء الاصطناعي اكتشف المزيد: 🛠️ اكتشف أدوات وأخبار الذكاء الاصطناعي: https://futuretools.io/ 📰 النشرة الإخبارية الأسبوعية: https://future…",
+   "h": "سر تفوق NVIDIA المطلق في الذكاء الاصطناعي",
+   "x": "ليه هاردوير ون 3D وبنية الكروت بتفرق معاك في تشغيل الـ AI والـ simulations الثقيلة.",
+   "tg": [
+    "NVIDIA",
+    "AI",
+    "Hardware"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-QOOE1syC-7s",
@@ -3992,7 +4086,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=QOOE1syC-7s",
    "ta": "تعلم Reactjs #09 - ابدأ في استخدام المكونات",
-   "sa": "ابدأ في استخدام دروس وواجبات المكونات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+   "sa": "ابدأ في استخدام دروس وواجبات المكونات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
+   "h": "ابدأ استخدام الـ Components في Reactjs",
+   "x": "تعلم بناء واجهات مستخدم تفاعلية مرتبة عشان تفيد بيها مشاريعك البرمجية والـ web tools.",
+   "tg": [
+    "React",
+    "Frontend",
+    "Code"
+   ],
+   "tp": "courses"
   },
   {
    "id": "hn-50550096",
@@ -4006,7 +4108,13 @@
    ],
    "url": "https://jimmyhmiller.com/magic-of-partial-evaluation",
    "url2": "https://news.ycombinator.com/item?id=50550096",
-   "ta": "سحر التقييم الجزئي"
+   "ta": "سحر التقييم الجزئي",
+   "h": "سحر الـ Partial Evaluation في البرمجة",
+   "x": "تقنية متقدمة في الـ Compilers تحسن أداء الكود وتختصر حسابات وقت التشغيل.",
+   "tg": [
+    "Code",
+    "Performance"
+   ]
   },
   {
    "id": "hn-50550085",
@@ -4082,7 +4190,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=pVc6KkjeCfU",
    "ta": "خلف الكواليس مع جيني 4",
-   "sa": "اذهب إلى ما وراء الكواليس لفيلم Genie 4 الأخير بينما نستكشف نموذجنا العالمي الأكثر واقعية وتفاعلية حتى الآن. بدلاً من إنشاء فيديو ثابت،…"
+   "sa": "اذهب إلى ما وراء الكواليس لفيلم Genie 4 الأخير بينما نستكشف نموذجنا العالمي الأكثر واقعية وتفاعلية حتى الآن. بدلاً من إنشاء فيديو ثابت،…",
+   "h": "كواليس نموذج Genie 4 للعوالم التفاعلية",
+   "x": "شاهد إزاي الـ AI بيصنع عوالم افتراضية واقعية تفاعلية مش مجرد فيديوهات ثابتة.",
+   "tg": [
+    "Genie 4",
+    "World Model",
+    "AI"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-EDp4IoAUsXY",
@@ -4096,7 +4212,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=EDp4IoAUsXY",
    "ta": "Project Genie: قم بإنشاء واستكشاف عوالم تفاعلية باستخدام Genie 4",
-   "sa": "ادخل إلى مخيلتك باستخدام Project Genie، المدعوم الآن بواسطة النموذج العالمي الأكثر واقعية وتفاعلية من Google DeepMind حتى الآن، Genie 4. Project Ge..."
+   "sa": "ادخل إلى مخيلتك باستخدام Project Genie، المدعوم الآن بواسطة النموذج العالمي الأكثر واقعية وتفاعلية من Google DeepMind حتى الآن، Genie 4. Project Ge...",
+   "h": "اصنع عوالمك التفاعلية مع Genie 4 من Google",
+   "x": "استكشاف قدرات Google DeepMind في بناء بيئات افتراضية تفاعلية بالكامل بالـ AI.",
+   "tg": [
+    "Google",
+    "Genie 4",
+    "AI"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-p8hQeqPW13M",
@@ -4130,7 +4254,15 @@
    ],
    "url": "https://hberg.com/bpm/",
    "url2": "https://news.ycombinator.com/item?id=50549718",
-   "ta": "عرض HN: BPM – مصور الموسيقى Baby Plus"
+   "ta": "عرض HN: BPM – مصور الموسيقى Baby Plus",
+   "h": "أداة BPM لتوليد مؤثرات بصرية موسيقية",
+   "x": "مشروع مفتوح المصدر لعمل Visualizer متفاعل مع الصوت، ممكن يلهمك في العروض المعمارية.",
+   "tg": [
+    "Visualizer",
+    "Music",
+    "OpenSource"
+   ],
+   "tp": "oss"
   },
   {
    "id": "gh-1463149139",
@@ -4143,7 +4275,15 @@
     "جديد كلياً"
    ],
    "url": "https://github.com/Bodila51/gtavi-claudecode",
-   "ta": "Bodila51/gtavi-claudecode: البرنامج الإضافي Claude Code الذي يحول تدفقات GTA 6 إلى مقاطع عمودية مدفوعة: حملات مباشرة، وثلاث..."
+   "ta": "Bodila51/gtavi-claudecode: البرنامج الإضافي Claude Code الذي يحول تدفقات GTA 6 إلى مقاطع عمودية مدفوعة: حملات مباشرة، وثلاث...",
+   "h": "إضافة Claude Code لدمج البثوث بذكاء",
+   "x": "أداة بايثون تعمل كـ agent لتحويل بثوث ألعاب لقصاصات فيديو باستخدام Claude Code.",
+   "tg": [
+    "Claude Code",
+    "Agents",
+    "Python"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50549493",
@@ -4157,7 +4297,14 @@
    ],
    "url": "https://openai.com/index/advancing-chip-design-with-our-models/",
    "url2": "https://news.ycombinator.com/item?id=50549493",
-   "ta": "تطوير تصميم الرقائق باستخدام نماذج OpenAI"
+   "ta": "تطوير تصميم الرقائق باستخدام نماذج OpenAI",
+   "h": "تطوير تصميم الـ Chips باستخدام OpenAI",
+   "x": "إزاي نماذج الذكاء الاصطناعي بتساعد في تصميم وتخطيط المعالجات والشرائح الإلكترونية.",
+   "tg": [
+    "Chip Design",
+    "OpenAI",
+    "AI"
+   ]
   },
   {
    "id": "gn-frontmostaireleasesaeoskillsforclaudecodetohelpbusinessesget",
@@ -4170,7 +4317,15 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQWlFrd29nS3plOFEyUk1Xbnl1Um9BcWFFVW1XWVNfZHFYdXJkTW5MQ0xhb0pXQmtUWlI2VUpXdHdTTG5ILTQ5eWJheDdJWUg1YlpacnBJeHdhTmFXVVNNQW15cWxXbmo1cUhhVW02VUpBM2FNa3EwclRlTklYMG9rU2FORENfMUQtc0g0UE10aTV2YWZuN1oweV9qU1ZlNnlORGkwWTJOYVhHXzUxOEt3QjVzenBTSHpVRmlEUnpNdU5sbk16eGU3LWJjZlluS0piUzZ5TExVSi1sNWZqcUtJ?oc=5",
-   "ta": "تطلق Frontmost AI مهارات AEO لـ Claude Code لمساعدة الشركات في الحصول على توصية في ChatGPT"
+   "ta": "تطلق Frontmost AI مهارات AEO لـ Claude Code لمساعدة الشركات في الحصول على توصية في ChatGPT",
+   "h": "مهارات AEO جديدة لـ Claude Code",
+   "x": "إضافات جديدة للـ agent تساعد الأنشطة التجارية في الظهور والترشيح عبر ChatGPT.",
+   "tg": [
+    "AEO",
+    "Claude Code",
+    "Agents"
+   ],
+   "tp": "agents"
   },
   {
    "id": "yt-c5TSRxrDEK8",
@@ -4184,7 +4339,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=c5TSRxrDEK8",
    "ta": "أنت بحاجة إلى تعلم Git الآن !!",
-   "sa": "يكتب الذكاء الاصطناعي معظم طلبات السحب الخاصة بك الآن، ولكنك أنت من ينقر على الدمج. يقرأ CodeRabbit كل ملف أولاً ويعرض لك ما يكسره. ابدأ…"
+   "sa": "يكتب الذكاء الاصطناعي معظم طلبات السحب الخاصة بك الآن، ولكنك أنت من ينقر على الدمج. يقرأ CodeRabbit كل ملف أولاً ويعرض لك ما يكسره. ابدأ…",
+   "h": "ليه لازم تتعلم Git دلوقتي حالاً؟",
+   "x": "مع كثرة استخدام الـ AI لكتابة الـ PRs، دورك كمراجع ومتحكم في النسخ عبر Git بقى حاسم.",
+   "tg": [
+    "Git",
+    "Code",
+    "Workflow"
+   ]
   },
   {
    "id": "hn-50549188",
@@ -4198,7 +4360,15 @@
    ],
    "url": "https://news.ycombinator.com/item?id=50549188",
    "url2": "",
-   "ta": "إطلاق HN: Maritime (YC F26) - سحابة مُدارة لوكلاء الذكاء الاصطناعي للإنتاج"
+   "ta": "إطلاق HN: Maritime (YC F26) - سحابة مُدارة لوكلاء الذكاء الاصطناعي للإنتاج",
+   "h": "منصة سحابية لإدارة الـ AI agents بإنتاجية عالية",
+   "x": "حل سحابي جديد يسهل تشغيل ومراقبة الـ production AI agents في مشاريعك.",
+   "tg": [
+    "AI",
+    "Cloud",
+    "Agents"
+   ],
+   "tp": "agents"
   },
   {
    "id": "gn-microsoftsofficialpythonagentframeworkhijackedtodistributema",
@@ -4211,7 +4381,15 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPSFdyTEhpOVF1SXk4LXkxSXg5bnJ3b1RpbUV5dHpfUEdKZUw4WXpJRzZYTEg3VzEtSEVWN2FNSWV0OERSWUlRd045NkMyd3Q0QVRoaFJ2VzFhelJCNTk0YzJFaWRrcldQZ1ExaHdqM0d2RmZvSXZwTWZadHVPQ2xFa2l0VFRmVWEwY3dhUVM4LXJWcGc2NWkxNS1ndWJHZVZrUzhHaDk2d1VvTjJ3VThlSnpCY1RrTVNzdkduTjh1SWZGN1FFY1N6TQ?oc=5",
-   "ta": "تم اختراق إطار عمل وكيل Python الرسمي لشركة Microsoft لتوزيع البرامج الضارة"
+   "ta": "تم اختراق إطار عمل وكيل Python الرسمي لشركة Microsoft لتوزيع البرامج الضارة",
+   "h": "اختراق إطار عمل Python للـ agents من Microsoft",
+   "x": "تحذير أمني هام بعد اختراق مكتبة رسمية لتوزيع برمجيات خبيثة.",
+   "tg": [
+    "Python",
+    "Security",
+    "Agents"
+   ],
+   "tp": "agents"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov18datasettearrows",
@@ -4224,7 +4402,14 @@
     "مدونة"
    ],
    "url": "https://simonwillison.net/2026/Nov/18/datasette-arrows/",
-   "ta": "أسهم مجموعة البيانات 0.1a0"
+   "ta": "أسهم مجموعة البيانات 0.1a0",
+   "h": "إطلاق أداة datasette-arrows لإدارة البيانات",
+   "x": "تحديث جديد يهم المهتمين بتحليل البيانات والـ workflows السريعة.",
+   "tg": [
+    "Python",
+    "Data"
+   ],
+   "tp": "oss"
   },
   {
    "id": "hn-50548845",
@@ -4293,7 +4478,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=Dg2Z6IRbDVI",
    "ta": "LangSmith لوكلاء الترميز: تتبع الإنفاق حسب النتيجة",
-   "sa": "تعد البرمجة أكبر فئة من الإنفاق على تطبيقات الذكاء الاصطناعي للمؤسسات، حيث وصلت إلى 34 مليار دولار في عام 2026، لكن معظم قادة الهندسة ما زالوا غير قادرين على تقديم إجابة دقيقة..."
+   "sa": "تعد البرمجة أكبر فئة من الإنفاق على تطبيقات الذكاء الاصطناعي للمؤسسات، حيث وصلت إلى 34 مليار دولار في عام 2026، لكن معظم قادة الهندسة ما زالوا غير قادرين على تقديم إجابة دقيقة...",
+   "h": "تتبع تكاليف Coding Agents عبر LangSmith",
+   "x": "ازاي تراقب وتتحكم في ميزانية الـ AI agents أثناء كتابة الكود بكفاءة.",
+   "tg": [
+    "LangSmith",
+    "AI",
+    "Coding"
+   ],
+   "tp": "courses"
   },
   {
    "id": "hn-50548667",
@@ -4321,7 +4514,15 @@
    ],
    "url": "https://news.ycombinator.com/item?id=50548660",
    "url2": "",
-   "ta": "عرض HN: مصنع ماسترا، مصنع البرمجيات مفتوحة المصدر الذي نستخدمه لبناء ماسترا"
+   "ta": "عرض HN: مصنع ماسترا، مصنع البرمجيات مفتوحة المصدر الذي نستخدمه لبناء ماسترا",
+   "h": "مصنع برمجيات مفتوح المصدر بناءً على Mastra",
+   "x": "أداة open-source جديدة لمساعدتك في هندسة وتطوير الأنظمة الذكية.",
+   "tg": [
+    "OpenSource",
+    "Mastra",
+    "Agents"
+   ],
+   "tp": "oss"
   },
   {
    "id": "hn-50548491",
@@ -4335,7 +4536,14 @@
    ],
    "url": "https://www.quantamagazine.org/how-m-c-eschers-art-creates-bizarre-mathematical-worlds-20261118/",
    "url2": "https://news.ycombinator.com/item?id=50548491",
-   "ta": "م. فن إيشر يخلق عوالم رياضية"
+   "ta": "م. فن إيشر يخلق عوالم رياضية",
+   "h": "عوالم إيشر الرياضية والهندسة",
+   "x": "استكشاف الهندسة المعقدة من خلال فن M.C. Escher الرياضي.",
+   "tg": [
+    "Geometry",
+    "Architecture"
+   ],
+   "tp": "arch"
   },
   {
    "id": "hn-50548026",
@@ -4376,7 +4584,14 @@
    ],
    "url": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/",
    "url2": "https://news.ycombinator.com/item?id=50547777",
-   "ta": "يطرح وكلاء الذكاء الاصطناعي أسئلة أفضل من محاسبي شركة KPMG في تجربة التدقيق"
+   "ta": "يطرح وكلاء الذكاء الاصطناعي أسئلة أفضل من محاسبي شركة KPMG في تجربة التدقيق",
+   "h": "AI agents تتفوق في المراجعة",
+   "x": "كيف تطرح وكلاء الذكاء الاصطناعي أسئلة أعمق في عمليات التدقيق المالي؟",
+   "tg": [
+    "AI",
+    "Agents"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50547729",
@@ -4403,7 +4618,14 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1oLWY2NHRTcEtYdWduMTBYV2U2X2tjVHdPU1dtdXNxcmNwSnZKOHR4SXBaTEw1aHd2TVdoWXFUVnVobGt5N0R1X3RhS0pXbDhaMDhOd2ZJb2dPRm5zS1lTRHpFeTlEWW8yNVBhbENyOHphWGI2ZVZidjNjMTY?oc=5",
-   "ta": "ما وراء CAD وBIM: كيف تعيد Synaps التفكير في التصميم المعماري باستخدام الذكاء الاصطناعي"
+   "ta": "ما وراء CAD وBIM: كيف تعيد Synaps التفكير في التصميم المعماري باستخدام الذكاء الاصطناعي",
+   "h": "تجاوز BIM التقليدي مع Synaps",
+   "x": "كيف تعيد منصة Synaps صياغة التصميم المعماري باستخدام الذكاء الاصطناعي؟",
+   "tg": [
+    "BIM",
+    "AI"
+   ],
+   "tp": "arch"
   },
   {
    "id": "hn-50547583",
@@ -4431,7 +4653,14 @@
    ],
    "url": "https://www.youtube.com/shorts/FWk1txbbdiY",
    "ta": "تعمل عمليات التقييم دون الاتصال بالإنترنت وعبر الإنترنت مثل التعاقد مع زميل في الفريق",
-   "sa": "تشرح جين شيويه، المديرة التنفيذية في بنك جيه بي مورجان تشيس، كيف يقوم فريقها ببناء الثقة في العملاء الذين يمكن نشرهم بين عشية وضحاها، بدءًا من..."
+   "sa": "تشرح جين شيويه، المديرة التنفيذية في بنك جيه بي مورجان تشيس، كيف يقوم فريقها ببناء الثقة في العملاء الذين يمكن نشرهم بين عشية وضحاها، بدءًا من...",
+   "h": "تقييم الـ AI agents كالمهندسين",
+   "x": "بناء الثقة في الـ agents عبر اختبارات دقيقة تشبه توظيف زميل جديد.",
+   "tg": [
+    "Agents",
+    "Evaluation"
+   ],
+   "tp": "agents"
   },
   {
    "id": "yt-6UJPFP09lro",
@@ -4472,7 +4701,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=rAtIbtWaOQ0",
    "ta": "تقديم AssemblyAI-STT-3.7: نماذج النسخ من الجيل التالي",
-   "sa": "تقديم الحدود الجديدة في نماذج النسخ: AssemblyAI-STT-3.7-Realtime للمحادثة المباشرة، AssemblyAI-STT-3.7-Realtime-Agent للتحويل..."
+   "sa": "تقديم الحدود الجديدة في نماذج النسخ: AssemblyAI-STT-3.7-Realtime للمحادثة المباشرة، AssemblyAI-STT-3.7-Realtime-Agent للتحويل...",
+   "h": "نماذج AssemblyAI-STT الجديدة للـ Realtime والـ Agents",
+   "x": "تعرف على جيل جديد من نماذج الصوت والتحويل الفوري للـ Voice Agents.",
+   "tg": [
+    "AI",
+    "Speech",
+    "Agents"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50547122",
@@ -4486,7 +4723,14 @@
    ],
    "url": "https://huggingface.co/n4ze3m/tiny-voca",
    "url2": "https://news.ycombinator.com/item?id=50547122",
-   "ta": "يعمل نموذج TTS ذو 4.5 مليون معلمة على تشغيل 70 مرة في الوقت الفعلي على وحدة المعالجة المركزية ويكلف تدريبه 10 دولارات فقط"
+   "ta": "يعمل نموذج TTS ذو 4.5 مليون معلمة على تشغيل 70 مرة في الوقت الفعلي على وحدة المعالجة المركزية ويكلف تدريبه 10 دولارات فقط",
+   "h": "موديل TTS صغير يعمل بسرعة فائقة وتكلفة زهيدة",
+   "x": "موديل صوتي بـ 4.5M parameters يشتغل بسرعة 70 ضعف الـ Realtime على الـ CPU.",
+   "tg": [
+    "TTS",
+    "AI",
+    "Code"
+   ]
   },
   {
    "id": "yt-fqKYSxqJoN8",
@@ -4500,7 +4744,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=fqKYSxqJoN8",
    "ta": "هل انتهى كابوس برج لوس أنجلوس الذي تبلغ تكلفته مليار دولار أخيراً؟",
-   "sa": "هل لوس أنجلوس على وشك الانتهاء من مشروع أبراج الجرافيتي الذي تبلغ تكلفته 1.8 مليار دولار؟ Rayon هي أداة CAD متكاملة وسهلة للانتقال من المفهوم إلى الاكتمال."
+   "sa": "هل لوس أنجلوس على وشك الانتهاء من مشروع أبراج الجرافيتي الذي تبلغ تكلفته 1.8 مليار دولار؟ Rayon هي أداة CAD متكاملة وسهلة للانتقال من المفهوم إلى الاكتمال.",
+   "h": "نهاية كابوس الأبراج المليارية في لوس أنجلوس",
+   "x": "تابع كيف تُسهل أدوات الـ CAD الحديثة مثل Rayon رحلة مشاريع الـ Architecture من الفكرة للتنفيذ.",
+   "tg": [
+    "CAD",
+    "Architecture",
+    "Rayon"
+   ],
+   "tp": "arch"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov18psfendofyearfundraiser",
@@ -4513,7 +4765,14 @@
     "مدونة"
    ],
    "url": "https://simonwillison.net/2026/Nov/18/psf-end-of-year-fundraiser/",
-   "ta": "حملة جمع التبرعات لنهاية العام لـ PSF"
+   "ta": "حملة جمع التبرعات لنهاية العام لـ PSF",
+   "h": "حملة التبرعات السنوية لـ PSF",
+   "x": "ادعم مؤسسة بايثون لدعم مجتمع الـ Development والـ Open Source.",
+   "tg": [
+    "Python",
+    "OpenSource"
+   ],
+   "tp": "oss"
   },
   {
    "id": "hn-50546900",
@@ -4527,7 +4786,14 @@
    ],
    "url": "https://www.ppfideas.com/episodes/can-universities-survive-ai-vs-higher-education",
    "url2": "https://news.ycombinator.com/item?id=50546900",
-   "ta": "هل تستطيع الجامعات البقاء على قيد الحياة؟ الذكاء الاصطناعي مقابل التعليم العالي [تسجيل صوتي]"
+   "ta": "هل تستطيع الجامعات البقاء على قيد الحياة؟ الذكاء الاصطناعي مقابل التعليم العالي [تسجيل صوتي]",
+   "h": "هل تستطيع الجامعات النجاة من زلزال الـ AI؟",
+   "x": "نقاش تقني حول تأثير الذكاء الاصطناعي على مستقبل التعليم العالي.",
+   "tg": [
+    "AI",
+    "Education"
+   ],
+   "tp": "news"
   },
   {
    "id": "gh-1462898291",
@@ -4540,7 +4806,15 @@
     "جديد كلياً"
    ],
    "url": "https://github.com/senickimoro-art/pinokio-olvara-ai-workspace",
-   "ta": "senickimoro-art/pinokio-olvara-ai-workspace: مساحة عمل معيارية لسطح المكتب لتكوين نماذج الذكاء الاصطناعي المحلية وتشغيلها."
+   "ta": "senickimoro-art/pinokio-olvara-ai-workspace: مساحة عمل معيارية لسطح المكتب لتكوين نماذج الذكاء الاصطناعي المحلية وتشغيلها.",
+   "h": "بيئة Pinokio لتشغيل وإدارة الـ Local AI Models",
+   "x": "Workspace مرنة لتشغيل وإدارة نماذج الذكاء الاصطناعي محلياً على جهازك.",
+   "tg": [
+    "AI",
+    "Workspace",
+    "Local"
+   ],
+   "tp": "oss"
   },
   {
    "id": "gh-1462897554",
@@ -4553,7 +4827,15 @@
     "جديد كلياً"
    ],
    "url": "https://github.com/kenzz-devv/open-webui-talora-ai-workspace",
-   "ta": "kenzz-devv/open-webui-talora-ai-workspace: مساحة عمل مبسطة لتنظيم سير عمل الذكاء الاصطناعي وتشغيله في مكان واحد."
+   "ta": "kenzz-devv/open-webui-talora-ai-workspace: مساحة عمل مبسطة لتنظيم سير عمل الذكاء الاصطناعي وتشغيله في مكان واحد.",
+   "h": "منصة Talora لتنظيم وتحغيل الـ AI Workflows",
+   "x": "أداة متميزة لتنظيم مسارات عمل الذكاء الاصطناعي في مكان واحد.",
+   "tg": [
+    "TypeScript",
+    "AI",
+    "Workflow"
+   ],
+   "tp": "oss"
   },
   {
    "id": "hn-50546587",
@@ -4567,7 +4849,14 @@
    ],
    "url": "https://sgiannopoulos.github.io/blog/machine-code-programming/",
    "url2": "https://news.ycombinator.com/item?id=50546587",
-   "ta": "يمكن لـ LLMs قراءة وكتابة الملفات التنفيذية بايتًا بايت من ملف تفريغ سداسي عشري"
+   "ta": "يمكن لـ LLMs قراءة وكتابة الملفات التنفيذية بايتًا بايت من ملف تفريغ سداسي عشري",
+   "h": "الـ LLMs تقرأ وتكتب الـ Executables من الـ Hex dump",
+   "x": "قدرات خارقة للـ LLMs في التعامل مع الملفات التنفيذية بايت بايت.",
+   "tg": [
+    "LLM",
+    "Code",
+    "Hex"
+   ]
   },
   {
    "id": "yt-97NdOeGCpfQ",
@@ -4581,7 +4870,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=97NdOeGCpfQ",
    "ta": "تعلم Reactjs #07 - مقدمة إلى JSX",
-   "sa": "مقدمة إلى دروس وواجبات JSX: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+   "sa": "مقدمة إلى دروس وواجبات JSX: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
+   "h": "الدرس السابع في كورس Reactjs: مقدمة في JSX",
+   "x": "كمل تعلم الـ Frontend واعرف أساسيات كتابة الـ JSX بكل سهولة.",
+   "tg": [
+    "React",
+    "Courses",
+    "Frontend"
+   ],
+   "tp": "courses"
   },
   {
    "id": "rss-ucturalengineeringteklaapihelpstransformstructuralsteelreuse",
@@ -4595,7 +4892,15 @@
    ],
    "url": "https://aecmag.com/structural-engineering/tekla-api-helps-transform-structural-steel-reuse/",
    "ta": "تساعد Tekla API على تحويل عملية إعادة استخدام الفولاذ الهيكلي",
-   "sa": "يستخدم ويليام هير أتمتة مخصصة لتعظيم الفولاذ المستصلح في مشروع لندن التاريخي. ظهرت واجهة برمجة التطبيقات Tekla API في تحويل عملية إعادة استخدام الفولاذ الهيكلي..."
+   "sa": "يستخدم ويليام هير أتمتة مخصصة لتعظيم الفولاذ المستصلح في مشروع لندن التاريخي. ظهرت واجهة برمجة التطبيقات Tekla API في تحويل عملية إعادة استخدام الفولاذ الهيكلي...",
+   "h": "استخدام Tekla API لإعادة تدوير الهياكل المعدنية",
+   "x": "كيف ساهمت أتمتة الـ Tekla API في إعادة استخدام الحديد الإنشائي بمشروع ضخم في لندن.",
+   "tg": [
+    "Tekla",
+    "API",
+    "BIM"
+   ],
+   "tp": "arch"
   },
   {
    "id": "hn-50546465",
