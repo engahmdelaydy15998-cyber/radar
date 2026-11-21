@@ -149,7 +149,8 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
 #nbot .nmain{flex:1;text-align:center}
 #nbot .nmain b{display:block;font-size:23px;color:var(--ok);line-height:1.1;font-variant-numeric:tabular-nums}
 #nbot .nsub{font-size:13px;color:var(--mut)}
-#nexit{background:var(--card2)}
+#nexit{background:var(--bad);color:#fff;border-color:var(--bad);width:auto;padding:0 14px;border-radius:999px;gap:6px;font-weight:700;font-size:14px}
+#nexit svg{width:16px;height:16px}
 .sheet{position:fixed;left:8px;right:8px;bottom:calc(env(safe-area-inset-bottom) + 76px);z-index:1001;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px}
 .sheet[hidden]{display:none}
 .sheet .g{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
@@ -294,9 +295,14 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
   </div>
   <div id="nspdc"><b id="nspd">٠</b><span>كم/س</span></div>
   <div id="nbot">
-    <button class="rb" id="nexit" aria-label="خروج"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+    <button class="rb" id="nexit" aria-label="إنهاء وحفظ"><svg viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg>إنهاء وحفظ</button>
     <div class="nmain"><b id="nrem">-- د</b><div class="nsub"><span id="nremkm">-- كم</span> • <span id="netal">الوصول</span> <span id="neta">--:--</span></div></div>
   </div>
+</div>
+
+<div id="draft" class="sheet" hidden>
+  <div id="drafttxt" style="font-size:15px;margin-bottom:8px"></div>
+  <div class="row" style="margin-top:0"><button id="draftSave" style="background:var(--pri);color:var(--pri-ink)">احفظها</button><button class="sec" id="draftDrop">امسحها</button></div>
 </div>
 
 <div id="cl" class="sheet" hidden>
@@ -465,7 +471,7 @@ const $ = id => document.getElementById(id);
 /* تطبيق الأندرويد (Capacitor): GPS في الخلفية، نطق من الموبايل نفسه، وفقاعة فوق جوجل مابس. في المتصفح كل ده بيتجاهل. */
 const NATIVE = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
 const NP = NATIVE ? window.Capacitor.Plugins : {};
-let appActive = true, overlayWant = null, overlayShown = '', overlayAsked = false;
+let appActive = true, overlayWant = null, overlayShown = '', overlayAsked = false, voiceWaiter = null;
 function overlaySet(text, level){                  // آخر محتوى للفقاعة؛ بتظهر بس والتطبيق في الخلفية
   overlayWant = text ? {text, level:level || 'info'} : null;
   if (!NATIVE || !NP.Bubble) return;
@@ -488,6 +494,11 @@ function ensureOverlay(){                          // إذن "الظهور فو�
 }
 if (NATIVE && NP.Bubble){
   NP.Bubble.addListener('action', e => overlayAction(e.id));
+  NP.Bubble.addListener('voice', e => {
+    const t = (e && e.text) || '';
+    if (voiceWaiter){ const w = voiceWaiter; voiceWaiter = null; w(t || null); return; }
+    voiceFromBubble(t, e && e.error);
+  });
   $('bubCard').hidden = false;
   $('bubTest').onclick = () => NP.Bubble.canDraw().then(r => {
     if (!r.value){ $('bubTest').textContent = 'فعّل الإذن لسكّتي وارجع اضغط تاني'; NP.Bubble.requestDraw(); return; }
@@ -507,11 +518,11 @@ const fmtD = m => m >= 1000 ? (m/1000).toLocaleString('ar-EG', {maximumFractionD
 
 /* التخزين */
 function load(k, d){ try { const v = JSON.parse(localStorage.getItem(k) || 'null'); return v == null ? (d === undefined ? [] : d) : v; } catch(e){ return d === undefined ? [] : d; } }
-let trips = load('trips'), blocks = load('blocks'), jams = load('jams'), osmPois = load('osmpois');
+let trips = load('trips'), blocks = load('blocks'), jams = load('jams'), osmPois = load('osmpois'), notes = load('notes');
 let myPois = load('pois');
 if (!myPois.length) { const old = load('radars'); if (old.length) myPois = old.map(r => ({lat:r.lat, lon:r.lon, kind:'radar'})); }
 function put(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch(e){ return false; } }
-function save(){ if (!put('trips', trips) | !put('blocks', blocks) | !put('pois', myPois) | !put('jams', jams)) $('msg').textContent = 'تعذّر الحفظ على الجهاز. استخدم التصدير.'; }
+function save(){ if (!put('trips', trips) | !put('blocks', blocks) | !put('pois', myPois) | !put('jams', jams) | !put('notes', notes)) $('msg').textContent = 'تعذّر الحفظ على الجهاز. استخدم التصدير.'; }
 const pack = pts => pts.map(p => [p.t, +p.lat.toFixed(5), +p.lon.toFixed(5), Math.round(p.acc||0)]);
 const unpack = a => a.map(r => ({t:r[0], lat:r[1], lon:r[2], acc:r[3]}));
 
@@ -701,6 +712,7 @@ function drawMarks(){
   if (sel) sel.s.pois.filter(p => p.src === 'osm').forEach(p => add(p, false));
   blocks = blocks.filter(b => b.until > Date.now());
   blocks.forEach(b => blockMarkers.push(addMk(mkEl('⛔', 'blk'), b.lon, b.lat)));
+  notes.forEach(n => { const el = mkEl('📝', 'poi note'); el.title = n.text; el.onclick = ev => { ev.stopPropagation(); $('msg').textContent = '📝 ' + n.text; }; blockMarkers.push(addMk(el, n.lon, n.lat)); });
 }
 map.on('click', e => {
   const p = {lat:e.lngLat.lat, lon:e.lngLat.lng};
@@ -926,7 +938,25 @@ if (NATIVE && NP.Bubble){ $('vset').hidden = false; $('vset').onclick = () => NP
 loadVoices();
 if (!NATIVE && 'speechSynthesis' in window) speechSynthesis.addEventListener('voiceschanged', loadVoices);
 if (NATIVE && NP.App) NP.App.addListener('resume', loadVoices);   // بعد ما يرجع من إعدادات المحرك
+function voiceFromBubble(t, err){                 // كلام من زرار 🎤 في الفقاعة وانت سايق
+  if (!t){ speak(err === 'no-recognizer' ? 'الموبايل مفيهوش خدمة التعرف على الصوت' : 'ما سمعتش حاجة'); return; }
+  const k = parseReport(t), short = t.trim().split(/\s+/).length <= 5;   // جملة طويلة = ملاحظة بكلامك، حتى لو فيها "واقف" أو "زحمة"
+  if (k === 'none' && short) speak('تمام');
+  else if (k && short) handleReport(k);
+  else saveNote(t);
+}
+function saveNote(t){                              // أي كلام مش بلاغ معروف بيتحفظ ملاحظة على المكان
+  const p = lastPos || (pts.length ? pts[pts.length - 1] : null);
+  if (!p){ speak('لسه مستني إشارة الـ GPS'); return; }
+  notes.push({lat:p.lat, lon:p.lon, t:Date.now(), text:t}); save(); drawMarks();
+  speak('تمام، سجلت ملاحظة');
+}
 function listen(ms, lang){
+  if (NATIVE && NP.Bubble) return new Promise(res => {
+    voiceWaiter = res;
+    NP.Bubble.voice().catch(() => { voiceWaiter = null; res(null); });
+    setTimeout(() => { if (voiceWaiter === res){ voiceWaiter = null; res(null); } }, 25000);
+  });
   return new Promise(res => {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SR) return res(null);
@@ -1281,19 +1311,22 @@ async function startRec(){
       (loc, err) => {
         if (err){ $('msg').textContent = err.code === 'NOT_AUTHORIZED' ? 'لازم تسمح لسكّتي بالموقع من إعدادات التطبيق.' : 'مشكلة في الـGPS: ' + err.message; if (err.code === 'NOT_AUTHORIZED') NP.BackgroundGeolocation.openSettings(); return; }
         if (loc) onFix({timestamp:loc.time, coords:{latitude:loc.latitude, longitude:loc.longitude, accuracy:loc.accuracy, speed:loc.speed, heading:loc.bearing}});
-      }).then(id => { if (watchId === null) NP.BackgroundGeolocation.removeWatcher({id}); else bgWatch = id; });
+      }).then(id => { if (watchId === null) NP.BackgroundGeolocation.removeWatcher({id}); else { bgWatch = id; put('bgwatch', id); } });
   } else watchId = navigator.geolocation.watchPosition(onFix,
     e => { $('msg').textContent = e.code === 1 ? 'لازم تسمح للموقع من إعدادات المتصفح، والصفحة لازم تتفتح عبر https.' : 'مشكلة في الـGPS: ' + e.message; },
     {enableHighAccuracy:true, maximumAge:0, timeout:20000});
   tick = setInterval(live, 1000);
   $('rec').textContent = '■ إيقاف وحفظ'; $('rec').classList.add('red');
 }
+let draftAt = 0;
 function live(){
   const r = analyze(pts), last = pts[pts.length-1];
+  if (pts.length >= 2 && Date.now() - draftAt > 10000){ draftAt = Date.now(); put('recdraft', {name:$('name').value.trim(), start:pts[0].t, pts:pack(pts)}); }
   $('lt').textContent = fmtT((Date.now() - t0)/1000); $('ld').textContent = km(r.dist); $('ls').textContent = r.stops;
   $('lv').textContent = last && last.v != null ? Math.round(last.v * 3.6) : 0;
 }
 function stopRec(){
+  put('recdraft', null); put('bgwatch', null);
   if (bgWatch !== null){ NP.BackgroundGeolocation.removeWatcher({id:bgWatch}).catch(() => {}); bgWatch = null; }
   else if (watchId !== 'bg') navigator.geolocation.clearWatch(watchId);
   clearInterval(tick);
@@ -1314,7 +1347,8 @@ async function analyzeTrip(t, announce){
   const T = P.filter(p => !p.acc || p.acc <= 50), a = P[0], b = P[P.length - 1];
   const passed = allPois().filter(q => T.some(p => hav(p, q) < 40)), cnt = k => passed.filter(q => (q.kind || 'radar') === k).length;
   const an = {dist:r.dist, dur:r.dur, stops:r.stops, stopTime:r.stopTime, moveAvg:r.moveAvg, max:r.max * 3.6,
-              radar:cnt('radar'), toll:cnt('toll'), check:cnt('checkpoint'), alt:null, onBest:false};
+              radar:cnt('radar'), toll:cnt('toll'), check:cnt('checkpoint'), alt:null, onBest:false,
+              notes:notes.filter(n => n.t >= P[0].t && n.t <= P[P.length - 1].t + 120000).map(n => n.text)};
   anAlt = null;
   if (r.dist > 800){
     showAnalysis(t, an, true);
@@ -1348,7 +1382,8 @@ function showAnalysis(t, an, loading){
   $('anBody').innerHTML = `<div class="note" style="margin-bottom:6px">${esc(t.name)}</div><div class="an">`
     + box(km(an.dist) + ' كم', 'المسافة') + box(fmtT(an.dur), 'الوقت') + box(arab(an.stops), 'وقفات')
     + box(fmtT(an.stopTime), 'وقت الوقوف') + box(arab(an.moveAvg), 'متوسط كم/س') + box(arab(an.max), 'أقصى كم/س') + '</div>'
-    + `<div class="note">عدّيت على: 📷 ${arab(an.radar)} رادار · 💳 ${arab(an.toll)} كارتة · 🚓 ${arab(an.check)} لجنة</div>` + alt;
+    + `<div class="note">عدّيت على: 📷 ${arab(an.radar)} رادار · 💳 ${arab(an.toll)} كارتة · 🚓 ${arab(an.check)} لجنة</div>`
+    + ((an.notes || []).length ? `<div class="note" style="margin-top:4px">📝 ملاحظاتك: ${an.notes.map(esc).join(' · ')}</div>` : '') + alt;
   $('anCard').hidden = false;
   if ($('anMap')) $('anMap').onclick = () => {
     closeRoutes();
@@ -1374,12 +1409,13 @@ function renderTrips(){
     trips = trips.filter(t => t.id !== +b.dataset.del); save(); renderTrips();
   });
 }
-const backupData = () => ({trips, blocks, pois:myPois, jams, exportedAt:Date.now()});
+const backupData = () => ({trips, blocks, pois:myPois, jams, notes, exportedAt:Date.now()});
 function mergeBackup(d){
   const add = Array.isArray(d) ? d : (d.trips || []), have = new Set(trips.map(t => t.id));
   add.forEach(t => { if (t && t.id && t.pts && !have.has(t.id)) trips.push(t); });
   (d.pois || []).forEach(p => { if (!myPois.some(x => x.kind === p.kind && hav(x, p) < 40)) myPois.push(p); });
   (d.blocks || []).forEach(b => { if (b.until > Date.now() && !blocks.some(x => hav(x, b) < 40)) blocks.push(b); });
+  (d.notes || []).forEach(n => { if (n && n.t && !notes.some(x => x.t === n.t)) notes.push(n); });
   (d.jams || []).forEach(j => { if (j.until > Date.now() && !jams.some(x => x.kind === j.kind && hav(x, j) < 60)) jams.push(j); });
   trips.sort((a, b) => b.start - a.start); save(); renderTrips(); drawMarks();
 }
@@ -1405,6 +1441,19 @@ $('imp').onclick = () => {
   catch(e){ $('msg').textContent = 'البيانات مش سليمة.'; }
 };
 renderTrips(); drawMarks();
+(() => {                                           // تسجيل اتقطع (التطبيق اتقفل قبل الحفظ): نسأل نحفظه ولا لأ
+  const old = load('bgwatch', null);
+  if (NATIVE && old && NP.BackgroundGeolocation){ NP.BackgroundGeolocation.removeWatcher({id:old}).catch(() => {}); put('bgwatch', null); }
+  const d = load('recdraft', null); if (!d || !d.pts || d.pts.length < 5) return;
+  const r = analyze(unpack(d.pts)), when = new Date(d.start).toLocaleString('ar-EG', {weekday:'short', hour:'2-digit', minute:'2-digit'});
+  $('drafttxt').textContent = `فيه رحلة اتسجلت وماتحفظتش (${when}، ${km(r.dist)} كم، ${fmtT(r.dur)}). تحفظها؟`;
+  $('draft').hidden = false;
+  $('draftSave').onclick = () => {
+    trips.unshift({id:Date.now(), name:d.name || 'رحلة اتقطعت ' + new Date(d.start).toLocaleDateString('ar-EG'), start:d.start, pts:d.pts});
+    put('recdraft', null); save(); renderTrips(); $('draft').hidden = true; analyzeTrip(trips[0], false);
+  };
+  $('draftDrop').onclick = () => { put('recdraft', null); $('draft').hidden = true; };
+})();
 try { const p = JSON.parse(localStorage.getItem('plan') || 'null'); if (p && p.length && p[0].s && p[0].s.pois){ results = p; setTimeout(() => showRoutes(0), 800); } } catch(e){}
 useMyLocation();
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});

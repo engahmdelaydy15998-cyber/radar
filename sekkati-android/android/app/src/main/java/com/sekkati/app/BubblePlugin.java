@@ -34,7 +34,7 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 @CapacitorPlugin(name = "Bubble")
 public class BubblePlugin extends Plugin {
     private static final String[][] BUTTONS = {
-            {"radar", "📷\nرادار"}, {"toll", "💳\nكارتة"}, {"checkpoint", "🚓\nلجنة"},
+            {"voice", "🎤\nقول"}, {"radar", "📷\nرادار"}, {"toll", "💳\nكارتة"}, {"checkpoint", "🚓\nلجنة"},
             {"mute", "🔊\nصوت"}, {"stop", "■\nإنهاء"}, {"open", "↗\nسكّتي"}};
 
     private final Handler main = new Handler(Looper.getMainLooper());
@@ -44,6 +44,33 @@ public class BubblePlugin extends Plugin {
     private ImageView head;
     private TextView pill, muteBtn;
     private boolean muted;
+
+    private static BubblePlugin self;
+
+    @Override
+    public void load() { self = this; }
+
+    /** Called by VoiceActivity with the recognised text (or null plus a reason). */
+    static void deliverVoice(String text, String error) {
+        if (self == null) return;
+        JSObject d = new JSObject();
+        d.put("text", text == null ? "" : text);
+        if (error != null) d.put("error", error);
+        self.notifyListeners("voice", d);
+    }
+
+    /** Opens the voice-input dialog over the current screen (works on top of Google Maps). */
+    @PluginMethod
+    public void voice(PluginCall call) {
+        startVoice();
+        call.resolve();
+    }
+
+    private void startVoice() {
+        Intent i = new Intent(app(), VoiceActivity.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        app().startActivity(i);
+    }
 
     private Context app() { return getContext().getApplicationContext(); }
 
@@ -167,7 +194,7 @@ public class BubblePlugin extends Plugin {
 
         menu = new LinearLayout(app());
         menu.setOrientation(LinearLayout.HORIZONTAL);
-        menu.setPadding(dp(6), dp(6), dp(6), dp(6));
+        menu.setPadding(dp(5), dp(5), dp(5), dp(5));
         menu.setBackground(round(Color.parseColor("#F2121214"), 22));
         menu.setElevation(dp(8));
         menu.setVisibility(View.GONE);
@@ -179,11 +206,12 @@ public class BubblePlugin extends Plugin {
             t.setTextSize(TypedValue.COMPLEX_UNIT_SP, 11);
             t.setLineSpacing(0, 1.05f);
             t.setBackground(round(Color.parseColor("#2A2A2E"), 14));
-            LinearLayout.LayoutParams bl = new LinearLayout.LayoutParams(dp(50), dp(54));
-            bl.setMargins(dp(3), 0, dp(3), 0);
+            LinearLayout.LayoutParams bl = new LinearLayout.LayoutParams(dp(44), dp(54));
+            bl.setMargins(dp(2), 0, dp(2), 0);
             final String id = b[0];
             t.setOnClickListener(v -> {
                 if ("open".equals(id)) openApp();
+                else if ("voice".equals(id)) startVoice();
                 else if ("mute".equals(id)) setMuted(!muted);
                 emit(id);
                 if (!"mute".equals(id)) menu.setVisibility(View.GONE);
