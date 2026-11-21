@@ -1,7 +1,56 @@
 {
- "updated": "2026-11-21T19:11:57Z",
+ "updated": "2026-11-21T21:37:42Z",
  "demo": false,
  "items": [
+  {
+   "id": "yt-GFxHjrYwoFk",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-21T21:25:07Z",
+   "t": "They built cyborg cockroaches with built-in AI...",
+   "s": "Sharing the latest news and advancements in AI Discover More: 🛠️ Explore AI Tools & News: https://futuretools.io/ 📰 Weekly Newsletter: https://future…",
+   "tags": [
+    "Matt Wolfe"
+   ],
+   "url": "https://www.youtube.com/shorts/GFxHjrYwoFk",
+   "ta": "لقد صنعوا صراصير سايبورغ باستخدام الذكاء الاصطناعي المدمج.",
+   "sa": "مشاركة آخر الأخبار والتطورات في مجال الذكاء الاصطناعي اكتشف المزيد: 🛠️ اكتشف أدوات وأخبار الذكاء الاصطناعي: https://futuretools.io/ 📰 النشرة الإخبارية الأسبوعية: https://future…"
+  },
+  {
+   "id": "yt-I0Fasi1-teQ",
+   "cat": "agents",
+   "src": "YouTube",
+   "ts": "2026-11-21T21:23:31Z",
+   "t": "Anthropic Warned Us About AI. Then It Went Public.",
+   "s": "Try Grok Bot from SpaceXSI, the sponsor of this video: https://tinyurl.com/yc4b4ymz Anthropic is now a public company. I look at how its warnings abo…",
+   "tags": [
+    "Matthew Berman"
+   ],
+   "url": "https://www.youtube.com/watch?v=I0Fasi1-teQ",
+   "ta": "حذرنا الأنثروبيون من الذكاء الاصطناعي. ثم أصبحت علنية.",
+   "sa": "جرب Grok Bot من شركة SpaceXSI، الراعي لهذا الفيديو: https://tinyurl.com/yc4b4ymz أصبحت Anthropic الآن شركة عامة. أنا أنظر إلى كيفية تحذيراته ..."
+  },
+  {
+   "id": "yt-yq4FctnSglI",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-21T20:30:25Z",
+   "t": "Learn Reactjs #20 - Conditional Rendering",
+   "s": "Conditional Rendering Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
+   "tags": [
+    "Elzero Web School"
+   ],
+   "url": "https://www.youtube.com/watch?v=yq4FctnSglI",
+   "ta": "تعلم Reactjs #20 - العرض الشرطي",
+   "sa": "دروس وواجبات التقديم الشرطي: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
+   "h": "دروس Reactjs: الـ Conditional Rendering",
+   "x": "تابع تعلم تطوير واجهات المستخدم لبناء أدوات وتطبيقات ويب لـ BIM وCAD.",
+   "tg": [
+    "React",
+    "Code"
+   ],
+   "tp": "courses"
+  },
   {
    "id": "gn-autodeskneilsoftlaunchbimanddigitaltwincentre",
    "cat": "arch",
@@ -41,6 +90,27 @@
     "Claude",
     "Plugins",
     "AI"
+   ],
+   "tp": "agents"
+  },
+  {
+   "id": "gn-howtorunalocalllmprivatelyonyourowncomputer",
+   "cat": "agents",
+   "src": "ChipIn",
+   "ts": "2026-11-21T17:26:01Z",
+   "t": "How to Run a Local LLM Privately on Your Own Computer",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5mTEFlVVF2c0d3WFgxN3ZBaFhRRUZTdGZGNkVPX3RPS2lvMVMtcEJFWjNkNTNjWTNMNWRVR0JKT0IxSWdXZHktODVmeEhXdw?oc=5",
+   "ta": "كيفية تشغيل LLM محلي بشكل خاص على جهاز الكمبيوتر الخاص بك",
+   "h": "تشغيل Local LLM محلياً وبخصوصية تامة",
+   "x": "شرح عملي لتشغيل نماذج الذكاء الاصطناعي على جهازك الشخصي لتحسين الكود والـ agents.",
+   "tg": [
+    "LLM",
+    "Privacy",
+    "Agents"
    ],
    "tp": "agents"
   },
@@ -191,6 +261,27 @@
     "Benchmark"
    ],
    "tp": "news"
+  },
+  {
+   "id": "gh-1466551152",
+   "cat": "arch",
+   "src": "GitHub",
+   "ts": "2026-11-21T13:04:36Z",
+   "t": "AR-Tokee/autodesk-revit: Autodesk Revit: BIM Desktop Platform for Parametric Design Documentation",
+   "s": "22 نجمة، لغة HTML",
+   "tags": [
+    "Add-in"
+   ],
+   "url": "https://github.com/AR-Tokee/autodesk-revit",
+   "ta": "AR-Tokee/autodesk-revit: Autodesk Revit: منصة BIM لسطح المكتب لتوثيق التصميم البارامتري",
+   "h": "مستودع لـ Autodesk Revit على GitHub",
+   "x": "استكشف منصة الـ BIM المكتبية للتصميم البارامترري وتوثيق المشاريع.",
+   "tg": [
+    "Revit",
+    "BIM",
+    "Parametric"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-ugXq5fngjy8",
@@ -547,6 +638,20 @@
    "tp": "news"
   },
   {
+   "id": "hn-50582069",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-20T21:03:12Z",
+   "t": "Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'",
+   "s": "195 نقطة، 56 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib",
+   "url2": "https://news.ycombinator.com/item?id=50582069",
+   "ta": "حبوب منع الحمل لعلاج سرطان البنكرياس تعتبر \"أكبر إنجاز منذ عقود\""
+  },
+  {
    "id": "yt-d_hP8pqUCr0",
    "cat": "long",
    "src": "YouTube",
@@ -862,7 +967,14 @@
    ],
    "url": "https://klauria.tech/klauria-art/",
    "url2": "https://news.ycombinator.com/item?id=50577991",
-   "ta": "أنا سعيد جدًا بالهندسة التقنية لموقع الويب الفني الخاص بي"
+   "ta": "أنا سعيد جدًا بالهندسة التقنية لموقع الويب الفني الخاص بي",
+   "h": "تصميم ويب فنان بمواصفات تقنية عالية",
+   "x": "تعرف على كيف بنى مطور الـ Tech architecture لموقعه الفني ليلهمك في مشاريعك البرمجية.",
+   "tg": [
+    "Web",
+    "Architecture"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-mPsKlTicXF4",
@@ -1341,6 +1453,26 @@
    "url": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib",
    "url2": "https://news.ycombinator.com/item?id=50573041",
    "ta": "حبوب منع الحمل لعلاج سرطان البنكرياس تعتبر \"أكبر إنجاز منذ عقود\""
+  },
+  {
+   "id": "gh-1465322684",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-20T11:01:20Z",
+   "t": "sous-labs/songe: A training engine for your local model, using your idle compute",
+   "s": "156 نجمة، لغة Python",
+   "tags": [
+    "جديد كلياً"
+   ],
+   "url": "https://github.com/sous-labs/songe",
+   "ta": "sous-labs/songe: محرك تدريب لنموذجك المحلي، باستخدام حاسوبك الخامل",
+   "h": "درّب Local Model على جهازك بـ Idle Compute",
+   "x": "أداة ذكية للاستفادة من قوة جهازك غير المستغلة في تدريب الـ Local Models.",
+   "tg": [
+    "Python",
+    "Agents"
+   ],
+   "tp": "oss"
   },
   {
    "id": "hn-50572503",
@@ -2431,10 +2563,11 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
    "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري",
-   "h": "Autodesk Forma يحصد جائزة Architectural Record",
-   "x": "تصميم المباني في Forma يفوز كأفضل فئة، وده يهم مهندسي الـ BIM.",
+   "h": "فوز مشروع Forma بجائزة Architectural Record",
+   "x": "تصميم معماري متميز يعكس قوة الأدوات الرقمية الحديثة في التخطيط.",
    "tg": [
-    "Autodesk Forma",
+    "Forma",
+    "Architecture",
     "BIM"
    ],
    "tp": "arch"
@@ -2871,7 +3004,15 @@
    ],
    "url": "https://architosh.com/2026/11/the-plateau-how-aec-software-incumbents-reached-the-peak-of-the-maturity-curve/",
    "ta": "الهضبة: كيف وصل شاغلو برامج AEC إلى ذروة منحنى النضج",
-   "sa": "المساهم الضيف الدكتور بيبلاب ساركار، كبير مسؤولي المنتجات (CPO) في NeoBIM، كتب مقالًا مثيرًا للتفكير حول المكانة التي يقف فيها قادة سوق AEC BIM…"
+   "sa": "المساهم الضيف الدكتور بيبلاب ساركار، كبير مسؤولي المنتجات (CPO) في NeoBIM، كتب مقالًا مثيرًا للتفكير حول المكانة التي يقف فيها قادة سوق AEC BIM…",
+   "h": "هل وصلت برمجيات الـ AEC إلى ذروة نضجها؟",
+   "x": "تحليل لواقع ومستقبل شركات برمجيات الـ BIM الكبرى ومكانة NeoBIM بالسوق.",
+   "tg": [
+    "BIM",
+    "AEC",
+    "Software"
+   ],
+   "tp": "arch"
   },
   {
    "id": "gn-credentialstealerslippedintomicrosoftsofficialpythonagentfra",
@@ -2884,7 +3025,15 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOVm90Rk5jN29IT3h4VHJTTzBfNlIzZ0RzdmJXZDZGZG8xS3pjRUwwcWxvb2otSXp5WjJJWnZ4MFRGMGhRQVA5RUFsZXBaYzdkTmdQUWFqd1RNdnIwaml4bU9Namd4VXdiZnNKNW9TX1o0YWhXaTFhQ2JqdXFQaXpXclhNbkpBTzlJakZ3a3lSYm5zQU1BaVlYNUpR?oc=5",
-   "ta": "تسللت أداة سرقة بيانات الاعتماد إلى إطار عمل وكيل Python الرسمي لشركة Microsoft"
+   "ta": "تسللت أداة سرقة بيانات الاعتماد إلى إطار عمل وكيل Python الرسمي لشركة Microsoft",
+   "h": "ثغرة أمنية في إطار عمل Agents من Microsoft",
+   "x": "اختراق برمجيات الـ Python agent framework وسرقة بيانات الاعتماد.",
+   "tg": [
+    "Agents",
+    "Python",
+    "Security"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50558942",
@@ -2925,7 +3074,15 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQdGlJeUZvdUhrYzFUdW40RER0bmlIaDV0Mzd6QzNKZklEdXVQZUY5a1BxRFZQNFJnS3lxazN0ZWlLdFBwRjJ5TXdtVkI5VWdybnFpV3JtY2xtT2JlUkx5NlVjdUxfQUtqTXEzQjBMaWtPYWgtSVZwdzQzMDBfUU9nRGNRSWo?oc=5",
-   "ta": "البرنامج التعليمي لـ Ollama API: 12 خطوة، 70 دقيقة"
+   "ta": "البرنامج التعليمي لـ Ollama API: 12 خطوة، 70 دقيقة",
+   "h": "شرح عملي لربط الـ Ollama API",
+   "x": "دليل سريع في 12 خطوة لربط وتطوير نماذج الذكاء الاصطناعي محلياً.",
+   "tg": [
+    "Ollama",
+    "API",
+    "AI"
+   ],
+   "tp": "agents"
   },
   {
    "id": "yt-GUx89takPiA",
@@ -2966,7 +3123,15 @@
     "جديد كلياً"
    ],
    "url": "https://github.com/iamajmeena/neonclipping",
-   "ta": "iamajmeena/neonclipping: الصق رابطًا، واحصل على تسمية توضيحية للمقاطع تبلغ 9:16 دقيقة تقريبًا. محرك قص مجاني ومحلي ومفتوح المصدر..."
+   "ta": "iamajmeena/neonclipping: الصق رابطًا، واحصل على تسمية توضيحية للمقاطع تبلغ 9:16 دقيقة تقريبًا. محرك قص مجاني ومحلي ومفتوح المصدر...",
+   "h": "أداة open-source لقص الفيديوهات بالـ AI",
+   "x": "مشروع Python مجاني ومحلي لتحويل الروابط إلى مقاطع قصيرة بمعالجة سريعة.",
+   "tg": [
+    "Python",
+    "OpenSource",
+    "AI"
+   ],
+   "tp": "oss"
   },
   {
    "id": "gn-nemetschekstock20belowintrinsicvaluedespiteairisksotcmktsnem",
@@ -2979,7 +3144,15 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNYllvSFhqMjA4S2Q4T0xETVM2TzJqbDFOUTU5UFFxX2JzUzhOeUR0aUF4UExsOEkzVkZJd25EeXV6TGJpMFlUT1F4RlF4MzEwaV96Vml5emtBdGtpb2NodHRZcERrRXd5dWY0bk1KOERpMWM4UHZUeVduOGhPSmpHWTRIRjNCTzUxV1VXRng2cDVaNzYxNmpPQzRDYXFhYmJrekdxN0dzQmJraXVveFFZcEVyRUVpRWhGZnRBYw?oc=5",
-   "ta": "سهم Nemetschek: 20% أقل من مخاطر الذكاء الاصطناعي ذات القيمة الجوهرية (OTCMKTS:NEMTF)"
+   "ta": "سهم Nemetschek: 20% أقل من مخاطر الذكاء الاصطناعي ذات القيمة الجوهرية (OTCMKTS:NEMTF)",
+   "h": "تقييم أسهم Nemetschek وعلاقتها بمخاطر الـ AI",
+   "x": "تحليل مالي لشركة Nemetschek الرائدة في برمجيات الـ BIM والتشييد.",
+   "tg": [
+    "BIM",
+    "Nemetschek",
+    "Stocks"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-p9WsINy2BbE",
@@ -2993,7 +3166,15 @@
    ],
    "url": "https://www.youtube.com/shorts/p9WsINy2BbE",
    "ta": "مقطع GTA 6 مباشر مع Claude Code: مقطعك جاهز قبل انتهاء البث",
-   "sa": "GTA 6 تصدر في 19 نوفمبر، ولا شيء على جهاز الكمبيوتر. إذا انتظرت انتهاء البث لقصه، فأنت متأخر بالفعل. لقد طلبت من كلود كود أداة..."
+   "sa": "GTA 6 تصدر في 19 نوفمبر، ولا شيء على جهاز الكمبيوتر. إذا انتظرت انتهاء البث لقصه، فأنت متأخر بالفعل. لقد طلبت من كلود كود أداة...",
+   "h": "اصنع clips أوتوماتيكية للبث المباشر باستخدام Claude Code",
+   "x": "كيف تستخدم الـ AI وكود البرمجة لإنشاء مقاطع فيديو فورية أثناء البث.",
+   "tg": [
+    "ClaudeCode",
+    "Agents",
+    "Automation"
+   ],
+   "tp": "agents"
   },
   {
    "id": "yt-Cy7Wz6Z4TWU",
@@ -3020,7 +3201,15 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOYnhHRnJucWhlMnNhQ0NPUmlZNDBkcUNuNHF0SGJVY202Y3lvSmRySTg4Yjc3REl6T3dVR1l6ZnlPdk1sQ0Zwb0R6NHJNcGhsUWZVaEh1VmpSeTM4SEs3a0tqTE93QTlOcUJUVHJoMDRlTHVJLUQtMjhGdmZMZS16RUFNRExkTldNSEl1VjZyUE5qdw?oc=5",
-   "ta": "Revenium تطلق برنامج Sidekick، حيث تضع تكاليف ترميز الذكاء الاصطناعي في الوقت الفعلي وحدود الميزانية داخل كلود كود وكلود كوورك"
+   "ta": "Revenium تطلق برنامج Sidekick، حيث تضع تكاليف ترميز الذكاء الاصطناعي في الوقت الفعلي وحدود الميزانية داخل كلود كود وكلود كوورك",
+   "h": "إدارة تكاليف الـ AI الكودنج مع Sidekick",
+   "x": "أداة جديدة لمراقبة ميزانية وتكاليف الذكاء الاصطناعي مباشرة داخل بيئة التطوير.",
+   "tg": [
+    "ClaudeCode",
+    "AI",
+    "Coding"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50557420",
@@ -3074,7 +3263,14 @@
     "Add-in"
    ],
    "url": "https://github.com/gotoarchi/archi-daylight",
-   "ta": "gotoarchi/archi-daylight: Archi Daylight - تحليل ضوء النهار لبرنامج Autodesk Revit"
+   "ta": "gotoarchi/archi-daylight: Archi Daylight - تحليل ضوء النهار لبرنامج Autodesk Revit",
+   "h": "أداة مجانية لتحليل الإضاءة الطبيعية لـ Revit",
+   "x": "أداة جديدة لتحليل الـ daylight داخل Autodesk Revit لتطوير كفاءة التصميم البيئي.",
+   "tg": [
+    "Revit",
+    "BIM"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-Bh_dj5cTJuQ",
@@ -3087,7 +3283,14 @@
     "Dr Firas"
    ],
    "url": "https://www.youtube.com/shorts/Bh_dj5cTJuQ",
-   "sa": "تم تحرير هذا الفيديو بين عشية وضحاها بواسطة كلود كود، كل ذلك بمفرده. والدورة التي تعلمك كيفية القيام بذلك مجانية. 4 دورات رسمية، واحدة لكل…"
+   "sa": "تم تحرير هذا الفيديو بين عشية وضحاها بواسطة كلود كود، كل ذلك بمفرده. والدورة التي تعلمك كيفية القيام بذلك مجانية. 4 دورات رسمية، واحدة لكل…",
+   "h": "كورسات ذكاء اصطناعي مجانية وتجربة قوية لـ Claude Code",
+   "x": "اكتشف 4 كورسات AI رسمية مع تجربة عملية لإنتاج وتعديل الفيديوهات بالكامل عبر الـ agents.",
+   "tg": [
+    "AI",
+    "Agents"
+   ],
+   "tp": "courses"
   },
   {
    "id": "gn-autodeskincadskstockpricenewsquotehistory",
@@ -3127,7 +3330,14 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQUkNwNzNBOFJHa0dpSkF0cDBDNTB0SXh6VVdqRHhXNktjUTRNWWlNVEE1NnhkOXlyUTdOUXZRRjd3R0VqVjEtWVcyNDhFWGZwYThfNmxKUy1iZl82Vkh2NG5yaUI0am40OER0MURwZGllbTJnU1FqaUFFYlJhMVg0UTExYXpGYm1OejFPUjhnbmFDWENGYnNtc1R4LWZHT1JMczhXMTYwNTdlQkdjNHlFUU5XMjZXUzhLNzJIZ2ZkVXU1QzV6dUV6TXhibUVWelhsOTRxZ08zcDRaRF94UTVfSDVWc1AwNXM?oc=5",
-   "ta": "أوتوديسك ونيلسوفت ينشئان مركز BIM والتوأم الرقمي للتميز في بيون"
+   "ta": "أوتوديسك ونيلسوفت ينشئان مركز BIM والتوأم الرقمي للتميز في بيون",
+   "h": "مركز تميز جديد للـ BIM والـ Digital Twin",
+   "x": "خطوة جديدة لتعزيز تقنيات الـ BIM والـ Digital Twin بالسوق الهندسي بالتعاون مع Autodesk.",
+   "tg": [
+    "BIM",
+    "DigitalTwin"
+   ],
+   "tp": "arch"
   },
   {
    "id": "gh-1463690017",
@@ -3140,7 +3350,14 @@
     "Add-in"
    ],
    "url": "https://github.com/Windsoft-Glazir/Glazir-Exporter",
-   "ta": "Windsoft-Glazir/Glazir-Exporter: مُصدِّر Glazir من Windsoft — وظيفة Revit الإضافية لتبادل الرسومات والنماذج ثلاثية الأبعاد مع Glazir..."
+   "ta": "Windsoft-Glazir/Glazir-Exporter: مُصدِّر Glazir من Windsoft — وظيفة Revit الإضافية لتبادل الرسومات والنماذج ثلاثية الأبعاد مع Glazir...",
+   "h": "إضافة Glazir Exporter لربط موديلات Revit",
+   "x": "Add-in جديد لتسهيل تبادل الرسومات والموديلات ثلاثية الأبعاد من Revit.",
+   "tg": [
+    "Revit",
+    "Add-in"
+   ],
+   "tp": "addins"
   },
   {
    "id": "gh-1463683138",
@@ -3153,7 +3370,14 @@
     "جديد كلياً"
    ],
    "url": "https://github.com/INK-Q/agy-fast",
-   "ta": "INK-Q/agy-fast: مكون إضافي لتسريع MCP غير جراحي لـ Google Antigravity (CLI/Desktop/IDE): يقطع LLM ..."
+   "ta": "INK-Q/agy-fast: مكون إضافي لتسريع MCP غير جراحي لـ Google Antigravity (CLI/Desktop/IDE): يقطع LLM ...",
+   "h": "تسريع الـ MCP وسرعة الاستجابة للـ LLM",
+   "x": "Plugin جديد لتقليل وقت الاستجابة وتسريع الـ MCP لبيئة التطوير والـ CLI.",
+   "tg": [
+    "MCP",
+    "TypeScript"
+   ],
+   "tp": "mcp"
   },
   {
    "id": "hn-50555712",
@@ -4129,6 +4353,19 @@
    "sa": "تقدم Nova8 ثماني وحدات معالجة رسوميات في 4U إلى منشآت لم يتم تصميمها مطلقًا للتبريد السائل"
   },
   {
+   "id": "gn-dontwaitnonrevitdeveloperscreateyourownrevitaddinsusingaiand",
+   "cat": "arch",
+   "src": "Autodesk",
+   "ts": "2026-11-18T12:28:03Z",
+   "t": "Don't Wait, Non-Revit Developers! Create Your Own Revit Add-Ins Using AI and the Revit API.",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxOeTRDTGVtOG9JVWd0QWgyUEJPUnZMZDdKX0htMmdGckRJeGg5dWlCaXNkMTZ4Ym51UkI4Z3ZJdlo1T21YU1J0Vk5mMUlyMm1EOXI0enc0V0E1NV8wY3o3RVpLUU5waU1rZW9odlMzejJGbVlONzliMmhxRnVxZUc2TGlKbnphbVdMRWw3QXJ1bTNxUGdteGtvWlhiLUtqQ2c3cFlLd3VRSUFlNUJvTm1Wb2s3dWxaSXBIM0dRVHZQZUJSR2tRcTZLZmdPRU1KcTZYSTdGcHo4a1F6Nnc4ZDhpOTQ1bnJra0V0TDlEODI0bHRGSVloREk4VTF1MFdwZ1dSVE5kbHppamkwR0pnTEZ0bm0zLVcweWdDaFhGME1NNDF2UQ?oc=5",
+   "ta": "لا تنتظر أيها المطورون الذين لا يستخدمون برنامج Revit! قم بإنشاء وظائف Revit الإضافية الخاصة بك باستخدام الذكاء الاصطناعي وواجهة برمجة تطبيقات Revit."
+  },
+  {
    "id": "gn-couldaipowereddigitaltwinsmakeourfutureenergysystemssmartera",
    "cat": "arch",
    "src": "AZoBuild",
@@ -4516,6 +4753,20 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNVDVZeTlkRjZOSmEzMEZEUGhtYWFJVlVycHlmb2c4cDFSbGh3WG9NOHE3WjBpVjN5dGttWTJEek02V1NEdGx0RW1ydEEyOXFOc2xzczg3RDdJMTF6LTZ0ZllvNW5OWEhKS2d1bTlqMllIUzFLWUNIZy1PMEY4SV9CME4xMXJsNTJfRlIwbkZ1SUZKcVpXZjdUaWpKQ2d6bXlXZEw3X0hOb0RMdEFkSW82dTVrMkdSQ1BvSURPZ0V2WlBkOTJwM1c4ZmMyTHJBX3d3amlzeGhuYldWeDByNmE5LUhkTmI1a013dXZHWlNHdHI4SXNpczN5Vl9lUDFDU1JrMFduU2p3WDljbUhsQnBFX3ZB0gHaAUFVX3lxTE15NkNlQ0w2M0J4azlEMy1hYVFSQXVqd25IZjdkYzlrVkNUS09ORVN0NUVPLU80bzhVaWNYWTMySkxybmlsd2RSc0liMFFTbzB5Tk12QWppb2tBQ1YwYmhBT000eDEyeUU1NFVyR2F4am8wZVEtLXQyYjhrd2ZPb2oydTVmOEdERG5FcG5nX3NDeVdNOEQ1TGNXMEYwS0hvV2JyZ3pLS1VqcEJXN2s1YUc3QUNoVWVjM3h1Z01oMlZwVVBBTlBWckZRTUR3akc3R1lJcHpqX0ItaTV3?oc=5",
    "ta": "أوتوديسك ونيلسوفت تطلقان BIM وDigital Twin CoE في بيون"
+  },
+  {
+   "id": "hn-50541047",
+   "cat": "agents",
+   "src": "Hacker News",
+   "ts": "2026-11-18T02:18:29Z",
+   "t": "Show HN: An ASCII cell aquarium for your terminal",
+   "s": "36 نقطة، 15 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/kborer/cells/",
+   "url2": "https://news.ycombinator.com/item?id=50541047",
+   "ta": "إظهار HN: حوض أسماك خلية ASCII لجهازك"
   },
   {
    "id": "hn-50541023",
@@ -5117,129 +5368,6 @@
    "url": "https://github.com/RunanywhereAI/trnrt",
    "url2": "https://news.ycombinator.com/item?id=50533270",
    "ta": "إظهار HN: TrnRT – محرك استدلال LLM مفتوح المصدر لـ AWS Trainium"
-  },
-  {
-   "id": "yt-PmZdQ4MiqwQ",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-17T15:59:24Z",
-   "t": "Learn Reactjs #01 - Introduction To The Course",
-   "s": "Introduction To The Course Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
-   "tags": [
-    "Elzero Web School"
-   ],
-   "url": "https://www.youtube.com/watch?v=PmZdQ4MiqwQ",
-   "ta": "تعلم Reactjs #01 - مقدمة للدورة",
-   "sa": "مقدمة لدروس وواجبات الدورة: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
-  },
-  {
-   "id": "hn-50532786",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-17T15:33:48Z",
-   "t": "A.I. Just Blew Up a Key Tenet of Computer Science",
-   "s": "26 نقطة، 22 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.nytimes.com/2026/11/06/science/ai-exponential-time-hypothesis.html",
-   "url2": "https://news.ycombinator.com/item?id=50532786",
-   "ta": "منظمة العفو الدولية. فقط فجر أحد المبادئ الأساسية لعلوم الكمبيوتر"
-  },
-  {
-   "id": "yt-7F2oYREhfG4",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-17T15:33:41Z",
-   "t": "What are Deep Agents? What's a Sandbox? Our Top Workshop Questions Answered",
-   "s": "LangChain Education Engineer Ishaan Lal answers two commonly asked questions during the Interrupt NYC workshops. What is an Agent vs. Deep Agent vs.…",
-   "tags": [
-    "LangChain"
-   ],
-   "url": "https://www.youtube.com/shorts/7F2oYREhfG4",
-   "ta": "ما هي الوكلاء العميقين؟ ما هو رمل؟ تمت الإجابة على أهم الأسئلة المتعلقة بورشة العمل",
-   "sa": "يجيب إيشان لال، مهندس التعليم في LangChain، على سؤالين شائعين خلال ورش عمل Interrupt NYC. ما هو الوكيل مقابل الوكيل العميق مقابل ..."
-  },
-  {
-   "id": "hn-50532515",
-   "cat": "agents",
-   "src": "Hacker News",
-   "ts": "2026-11-17T15:16:45Z",
-   "t": "Show HN: An API for word timestamps from speech, 75% within 20ms",
-   "s": "27 نقطة، 5 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://quebec.yarn.so",
-   "url2": "https://news.ycombinator.com/item?id=50532515",
-   "ta": "إظهار HN: واجهة برمجة تطبيقات للطوابع الزمنية للكلمات من الكلام، 75% خلال 20 مللي ثانية"
-  },
-  {
-   "id": "yt-9WVmt-vg8d0",
-   "cat": "arch",
-   "src": "YouTube",
-   "ts": "2026-11-17T15:00:10Z",
-   "t": "Top 5 Mistakes in Revit Beginners Make | Correct way to work in Revit Tutorial",
-   "s": "Get 30% OFF all Balkan Architect courses, templates, and subscription packages with code BF26 at https://balkanarchitect.com/p/black-friday-26?utm_so…",
-   "tags": [
-    "Balkan Architect"
-   ],
-   "url": "https://www.youtube.com/watch?v=9WVmt-vg8d0",
-   "ta": "أهم 5 أخطاء يرتكبها المبتدئون في برنامج الريفيت | الطريقة الصحيحة للعمل في برنامج الريفيت",
-   "sa": "احصل على خصم 30% على جميع الدورات والقوالب وحزم الاشتراك الخاصة بـ Balkan Architect باستخدام الكود BF26 على https://balkanarchitect.com/p/black-friday-26?utm_so…"
-  },
-  {
-   "id": "gn-therisksofdevicecodeauthenticationforaicodingagents",
-   "cat": "agents",
-   "src": "Microsoft",
-   "ts": "2026-11-17T15:00:00Z",
-   "t": "The risks of device code authentication for AI coding agents",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOVDhGeDNvZ3JuSVJBcGZoMTV1NXRad0Y4cU9IbWhhSVAwMnB0UGlLd0tlT29sVWNTeVZrVkpmY0FRUVNCVmF2MzZPME5nb1NyRGsxSkJTWk1qMWtmekt4LXRXZEluZkM3QllKb0RiUTd3eFFMQjU0cWhhT0hhZXdUazBqTEx5akxySXJpV0YwZ2N1NzZ4bG1hR0xTaHFqMmE5aVMtaC1RMTJ2emx0WWVENkg1aGF4OGFuaFE?oc=5",
-   "ta": "مخاطر مصادقة رمز الجهاز لوكلاء تشفير الذكاء الاصطناعي"
-  },
-  {
-   "id": "gh-1461556419",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-17T14:53:51Z",
-   "t": "Jadouminou/final-phase-lite: A free window for the videos you make with Claude Code or OpenCode: watch the AI work, pl…",
-   "s": "31 نجمة، لغة JavaScript",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/Jadouminou/final-phase-lite",
-   "ta": "Jadouminou/final-phase-lite: نافذة مجانية لمقاطع الفيديو التي تنشئها باستخدام Claude Code أو OpenCode: شاهد عمل الذكاء الاصطناعي، من فضلك..."
-  },
-  {
-   "id": "gn-googlewarnshackersareusingaiagentstolaunchcyberattacksatmach",
-   "cat": "agents",
-   "src": "The American Bazaar",
-   "ts": "2026-11-17T14:52:17Z",
-   "t": "Google warns hackers are using AI agents to launch cyberattacks at machine speed",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPMHRiYVB5X1RIRnJVZlZZclBxS1RSM0xkVXdldEd4aUZvNkE5T1J6MFFVXzE1ekNIRTg0LWtRV2VldnFKM0ZfbnVwTzU5YjFkQ3FpQWZRa1Vnd2VzVjlGbWl0QlJ3dE1uRlZfNmwyTmNvbERvcFk5UWZ0TUJsejhvZEx2SHJFdEZOMzd3TWRQX0ZwbzIwZndsT0NDclB0c1BrYzd5YUZZQ1JtbHQzV2xjYnFydV92WWZLbUptb1oza1NCelE?oc=5",
-   "ta": "تحذر Google من أن المتسللين يستخدمون عملاء الذكاء الاصطناعي لشن هجمات إلكترونية بسرعة الآلة"
-  },
-  {
-   "id": "hn-50532060",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-17T14:43:18Z",
-   "t": "Jensen Huang Liked Selling China Advanced AI Chips",
-   "s": "13 نقطة، 0 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://thezvi.substack.com/p/jensen-huang-really-liked-selling",
-   "url2": "https://news.ycombinator.com/item?id=50532060",
-   "ta": "أحب جنسن هوانغ بيع رقائق الذكاء الاصطناعي المتقدمة في الصين"
   }
  ]
 }
