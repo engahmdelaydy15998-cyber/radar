@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T21:45:02Z",
+ "updated": "2026-11-21T21:47:30Z",
  "demo": false,
  "items": [
   {
@@ -1364,7 +1364,15 @@
    ],
    "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
    "url2": "https://news.ycombinator.com/item?id=50574383",
-   "ta": "تراجعت أسواق الأسهم العالمية مع فشل الاكتتاب العام الأولي القياسي لشركة Anthropic في وقف عمليات بيع الذكاء الاصطناعي"
+   "ta": "تراجعت أسواق الأسهم العالمية مع فشل الاكتتاب العام الأولي القياسي لشركة Anthropic في وقف عمليات بيع الذكاء الاصطناعي",
+   "h": "فقاعة AI تؤثر على أسواق المال",
+   "x": "انهيار أسهم التقنية رغم طرح Anthropic، خبر يهمك كمهندس تتابع استثمارات الـ AI.",
+   "tg": [
+    "AI",
+    "Tech",
+    "Market"
+   ],
+   "tp": "news"
   },
   {
    "id": "gn-aicandrawafloorplaninsecondsbutdoesthatmakeitagooddesign",
@@ -1745,7 +1753,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=JEgTn37Sk50",
    "ta": "اطرح أسئلة حول بياناتك في ChatGPT",
-   "sa": "استعد لاجتماع المبيعات من خلال سؤال ChatGPT عما تغير في بياناتك والعملاء الذين يحتاجون إلى الاهتمام. باستخدام بيانات عينة من الشركات الخيالية ..."
+   "sa": "استعد لاجتماع المبيعات من خلال سؤال ChatGPT عما تغير في بياناتك والعملاء الذين يحتاجون إلى الاهتمام. باستخدام بيانات عينة من الشركات الخيالية ...",
+   "h": "اسأل بياناتك مباشرة باستخدام ChatGPT",
+   "x": "استخدم الذكاء الاصطناعي لتحليل بيانات المبيعات واكتشاف العملاء المستهدفين بسهولة.",
+   "tg": [
+    "ChatGPT",
+    "AI",
+    "Data"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-oJIuz3AFfEQ",
@@ -2071,7 +2087,15 @@
    ],
    "url": "https://www.techdirt.com/2026/11/19/court-tells-cops-that-the-4th-amendment-doesnt-cover-ai-generated-probable-cause/",
    "url2": "https://news.ycombinator.com/item?id=50567735",
-   "ta": "المحكمة: التعديل الرابع يحظر استخدام \"السبب المحتمل\" الناتج عن الذكاء الاصطناعي"
+   "ta": "المحكمة: التعديل الرابع يحظر استخدام \"السبب المحتمل\" الناتج عن الذكاء الاصطناعي",
+   "h": "المحكمة ترفض استخدام الذكاء الاصطناعي لتوليد Probable Cause",
+   "x": "قرار قضائي يمنع الاعتماد على مخرجات AI وحدها لتبرير الإجراءات القانونية.",
+   "tg": [
+    "AI",
+    "Law",
+    "Ethics"
+   ],
+   "tp": "news"
   },
   {
    "id": "hn-50567485",
@@ -2637,8 +2661,8 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
    "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري",
-   "h": "فوز Forma بجائزة Architectural Record",
-   "x": "إنجاز جديد لبرمجيات الـ BIM والتصميم المعماري يهم كل مهندس معماري.",
+   "h": "فوز Autodesk Forma بجائزة Architectural Record",
+   "x": "برنامج Forma يثبت كفاءته كأداة BIM متطورة لتصميم المباني والتحليل البيئي.",
    "tg": [
     "BIM",
     "Forma",
@@ -2715,7 +2739,15 @@
    ],
    "url": "https://restofworld.org/2026/ai-jobs-skills-gig-work/",
    "url2": "https://news.ycombinator.com/item?id=50562500",
-   "ta": "الذكاء الاصطناعي لا يحل محل وظيفتك. إنه يحولها إلى عمل أزعج منخفض الأجر"
+   "ta": "الذكاء الاصطناعي لا يحل محل وظيفتك. إنه يحولها إلى عمل أزعج منخفض الأجر",
+   "h": "هل يحول الذكاء الاصطناعي وظيفتك لـ gig work؟",
+   "x": "نقاش تقني حول تأثير أدوات الـ AI على مستقبل الوظائف والأجور في سوق العمل.",
+   "tg": [
+    "AI",
+    "Career",
+    "Future"
+   ],
+   "tp": "news"
   },
   {
    "id": "hn-50562320",
@@ -2751,7 +2783,15 @@
    ],
    "url": "https://news.ycombinator.com/item?id=50561571",
    "url2": "",
-   "ta": "تم إصدار GitLab 19.6.0 ولا يزال عرضة لـ Ruby2Shell وNGINX2Root"
+   "ta": "تم إصدار GitLab 19.6.0 ولا يزال عرضة لـ Ruby2Shell وNGINX2Root",
+   "h": "إصدار GitLab 19.6.0 مع ثغرات أمنية",
+   "x": "تحديث جديد لـ GitLab يواجه تحديات أمنية تتعلق بـ Ruby2Shell و NGINX2Root.",
+   "tg": [
+    "GitLab",
+    "Security",
+    "DevOps"
+   ],
+   "tp": "oss"
   },
   {
    "id": "gn-introducingthenewautodeskfusionplanssimpleraccesstocapabilit",
