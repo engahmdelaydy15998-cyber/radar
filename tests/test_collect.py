@@ -110,3 +110,18 @@ got = c.collect_shared(set(), now - timedelta(days=14))
 assert [g["id"] for g in got] == [sh[0]["id"]]
 assert c.collect_shared({sh[0]["id"]}, now - timedelta(days=14)) == []
 print("SHARED TEST OK")
+
+# social: only grounded source URLs are kept (resolved from redirects); a URL only in the model's text is dropped
+os.environ["GEMINI_API_KEY"] = "x"
+c.gemini_search = lambda q, key, model: (
+    "https://www.linkedin.com/posts/ali_revit-ai-activity-1 | Ali | Revit AI tips\nhttps://www.instagram.com/p/FAKE123/ | X | made up",
+    [{"uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/abc", "title": "linkedin.com"},
+     {"uri": "https://example.com/blog", "title": "example.com"}])
+c.resolve = lambda uri: "https://www.linkedin.com/posts/ali_revit-ai-activity-1?utm=x" if "redirect" in uri else uri
+c.SOCIAL_PER_RUN = 1
+got = c.collect_social(set(), now - timedelta(days=14))
+assert len(got) == 1 and got[0]["url"] == "https://www.linkedin.com/posts/ali_revit-ai-activity-1", got
+assert got[0]["src"] == "LinkedIn" and got[0]["t"] == "Revit AI tips" and got[0]["s"] == "Ali"
+assert c.collect_social({got[0]["id"]}, now - timedelta(days=14)) == []
+del os.environ["GEMINI_API_KEY"]
+print("SOCIAL TEST OK")

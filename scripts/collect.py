@@ -4,6 +4,7 @@
 Sources: YouTube channel feeds, Hacker News (Algolia), GitHub search.
 A source that fails is logged and skipped; the others still run.
 """
+import hashlib
 import json
 import os
 import re
@@ -647,6 +648,95 @@ def ai_call(batch, key):
     raise RuntimeError(" | ".join(errors))
 
 
+# ---------- social posts via Gemini + Google Search grounding ----------
+# Only URLs that come back in the grounding sources (real search results) are kept, never URLs the model
+# writes in its text, so a made-up link can't reach the feed.
+
+SOCIAL_QUERIES = [("Revit AI", "arch"), ("BIM artificial intelligence", "arch"), ("Dynamo Revit Python", "arch"),
+                  ("Grasshopper Rhino AI", "arch"), ("pyRevit Revit API C#", "arch"), ("AI agents for architects", "agents"),
+                  ("Claude Code engineers", "agents"), ("MEP BIM automation", "arch"), ("structural engineering AI", "arch")]
+SOCIAL_RE = re.compile(r"https?://(?:[\w-]+\.)?(?:linkedin\.com/(?:posts|feed/update|pulse)/|instagram\.com/(?:p|reel)/|"
+                       r"facebook\.com/(?:[^/\s]+/(?:posts|videos)/|reel/|share/|groups/[^/\s]+/posts/))[^\s|)\]]+", re.I)
+SOCIAL_PER_RUN = 3
+
+
+class _NoRedirect2(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *args, **kwargs):
+        return None
+
+
+def resolve(uri):
+    """Grounding sources come as Google redirect links; read the real URL from the Location header."""
+    if "grounding-api-redirect" not in uri:
+        return uri
+    opener = urllib.request.build_opener(_NoRedirect2)
+    try:
+        opener.open(urllib.request.Request(uri, headers={"User-Agent": UA}, method="HEAD"), timeout=15)
+    except urllib.error.HTTPError as ex:
+        return ex.headers.get("Location") or ""
+    except Exception:
+        return ""
+    return ""
+
+
+def gemini_search(query, key, model):
+    prompt = ("Search the web for public posts from the last 7 days on LinkedIn, Instagram or Facebook about: %s. "
+              "Only individual posts or articles, not profiles, job ads or company pages. "
+              "List up to 8, one per line: URL | author | one-sentence English summary." % query)
+    body = json.dumps({"contents": [{"role": "user", "parts": [{"text": prompt}]}],
+                       "tools": [{"google_search": {}}], "generationConfig": {"temperature": 0.2}}).encode("utf-8")
+    req = urllib.request.Request(GEMINI_URL % model, data=body, method="POST",
+                                 headers={"x-goog-api-key": key, "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        cand = json.loads(r.read().decode("utf-8", "replace"))["candidates"][0]
+    text = "".join(p.get("text", "") for p in cand.get("content", {}).get("parts", []))
+    chunks = [c.get("web", {}) for c in cand.get("groundingMetadata", {}).get("groundingChunks", [])]
+    return text, chunks
+
+
+def collect_social(known_ids, cutoff, now=None):
+    key = os.environ.get("GEMINI_API_KEY")
+    if not key:
+        return []
+    now = now or datetime.now(timezone.utc)
+    start = (now.timetuple().tm_yday * 8 + now.hour // 3) * SOCIAL_PER_RUN % len(SOCIAL_QUERIES)
+    jobs = [SOCIAL_QUERIES[(start + i) % len(SOCIAL_QUERIES)] for i in range(SOCIAL_PER_RUN)]
+    items, seen = [], set()
+    for q, cat in jobs:
+        try:
+            text, chunks = gemini_search(q, key, (_ai_model or GEMINI_MODELS)[0])
+        except Exception as ex:
+            log("social: failed", q, ex)
+            continue
+        lines = {}
+        for line in text.splitlines():
+            m = SOCIAL_RE.search(line)
+            if m:
+                parts = [x.strip(" *-") for x in line.split("|")]
+                lines[m.group(0).rstrip(".,")] = parts
+        found = 0
+        for ch in chunks:
+            url = resolve(ch.get("uri", ""))
+            m = SOCIAL_RE.match(url or "")
+            if not m:
+                continue
+            url = url.split("?")[0]
+            item_id = "so-" + hashlib.sha1(url.encode("utf-8")).hexdigest()[:12]
+            if item_id in known_ids or item_id in seen:
+                continue
+            info = next((v for k, v in lines.items() if k.split("?")[0] == url), None)
+            host = urllib.parse.urlparse(url).netloc.lower()
+            src = "LinkedIn" if "linkedin" in host else "Instagram" if "instagram" in host else "Facebook"
+            seen.add(item_id)
+            found += 1
+            items.append({"id": item_id, "cat": cat, "src": src, "ts": iso(now),
+                          "t": (info[2] if info and len(info) > 2 else ch.get("title") or q)[:200],
+                          "s": (info[1] if info and len(info) > 1 else "")[:120],
+                          "tags": [q], "url": url})
+        log("social:", q, "sources", len(chunks), "kept", found)
+    return items
+
+
 def add_ai_headlines(items, max_calls=6, batch=10):
     """Adds h (Arabic headline), x (one-line takeaway), tg (tags), tp (topic) to items that lack them."""
     token = os.environ.get("GEMINI_API_KEY")
@@ -707,7 +797,7 @@ def main():
     watch_before = {it["id"]: it.get("watch") for it in existing}
 
     new = []
-    for name, fn in (("youtube", collect_youtube), ("hn", collect_hn), ("github", collect_github), ("rss", collect_rss), ("news", collect_news), ("agent_feeds", collect_agent_feeds), ("shared", collect_shared)):
+    for name, fn in (("youtube", collect_youtube), ("hn", collect_hn), ("github", collect_github), ("rss", collect_rss), ("news", collect_news), ("agent_feeds", collect_agent_feeds), ("shared", collect_shared), ("social", collect_social)):
         try:
             got = fn(known, cutoff)
         except Exception as ex:
