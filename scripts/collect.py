@@ -66,6 +66,9 @@ EXTRA = os.path.join(ROOT, "channels.json")
 # issue flow: {"watches":[{"id","desc","kw":[...],"active"}]}. See scripts/add_watch.py.
 WATCHES = os.path.join(ROOT, "watches.json")
 
+# Links shared from the app (✨ منشيت → add-post issue → scripts/add_post.py): {"items":[feed items]}
+SHARED = os.path.join(ROOT, "shared.json")
+
 AGENT_RSS = [
     ("https://simonwillison.net/atom/everything/", "Simon Willison"),
     ("https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day", "r/LocalLLaMA"),
@@ -512,6 +515,15 @@ def collect_agent_feeds(known_ids, cutoff):
     return items
 
 
+def collect_shared(known_ids, cutoff):
+    try:
+        with open(SHARED, encoding="utf-8") as f:
+            items = json.load(f).get("items", [])
+    except Exception:
+        return []
+    return [dict(it) for it in items if it.get("id") and it["id"] not in known_ids and parse_ts(it["ts"]) >= cutoff]
+
+
 # ---------- translation (free Google endpoint, no key) ----------
 
 def has_arabic(t):
@@ -695,7 +707,7 @@ def main():
     watch_before = {it["id"]: it.get("watch") for it in existing}
 
     new = []
-    for name, fn in (("youtube", collect_youtube), ("hn", collect_hn), ("github", collect_github), ("rss", collect_rss), ("news", collect_news), ("agent_feeds", collect_agent_feeds)):
+    for name, fn in (("youtube", collect_youtube), ("hn", collect_hn), ("github", collect_github), ("rss", collect_rss), ("news", collect_news), ("agent_feeds", collect_agent_feeds), ("shared", collect_shared)):
         try:
             got = fn(known, cutoff)
         except Exception as ex:

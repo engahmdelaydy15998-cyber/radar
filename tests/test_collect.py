@@ -91,3 +91,22 @@ assert items[2]["h"] == "قديم", "already-headlined items are left alone"
 del os.environ["GEMINI_API_KEY"]
 assert c.add_ai_headlines([{"id": "z", "t": "x"}]) == 0
 print("AI TEST OK")
+
+# shared posts: add_post builds an item from the issue body; LinkedIn slugs become text; collector picks it up
+spec2 = importlib.util.spec_from_file_location("add_post", "/home/claude/radar-repo/scripts/add_post.py")
+ap = importlib.util.module_from_spec(spec2); spec2.loader.exec_module(ap)
+ap.PATH = os.path.join(tmp, "shared.json")
+ap.page_info = lambda url: ("", "")
+os.environ["ISSUE_BODY"] = "url: https://www.linkedin.com/posts/someone_revit-ai-agent-for-sheets-activity-7123456789-abcd\nnote: شوف البوست ده https://lnkd.in/x"
+assert ap.main() == 0
+sh = json.load(open(ap.PATH, encoding="utf-8"))["items"]
+assert len(sh) == 1 and sh[0]["src"] == "LinkedIn" and sh[0]["t"] == "revit ai agent for sheets", sh[0]
+assert "lnkd.in" not in sh[0]["s"] and "شوف البوست ده" in sh[0]["s"]
+assert ap.main() == 0 and len(json.load(open(ap.PATH, encoding="utf-8"))["items"]) == 1, "duplicate url must be ignored"
+os.environ["ISSUE_BODY"] = "url: javascript:alert(1)"
+assert ap.main() == 1
+c.SHARED = ap.PATH
+got = c.collect_shared(set(), now - timedelta(days=14))
+assert [g["id"] for g in got] == [sh[0]["id"]]
+assert c.collect_shared({sh[0]["id"]}, now - timedelta(days=14)) == []
+print("SHARED TEST OK")
