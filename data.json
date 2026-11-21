@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T21:47:30Z",
+ "updated": "2026-11-21T21:49:26Z",
  "demo": false,
  "items": [
   {
@@ -850,7 +850,15 @@
     "مدونة"
    ],
    "url": "https://simonwillison.net/2026/Nov/20/ravi-vakil/",
-   "ta": "نقلا عن رافي فاكيل"
+   "ta": "نقلا عن رافي فاكيل",
+   "h": "اقتباسات وفلسفة Ravi Vakil البرمجية",
+   "x": "رؤى مفيدة قد تُلهم طريقة تفكيرك في بناء الـ agents وحل المشكلات الهندسية.",
+   "tg": [
+    "AI",
+    "Agents",
+    "Philosophy"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50580377",
@@ -2661,12 +2669,11 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
    "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري",
-   "h": "فوز Autodesk Forma بجائزة Architectural Record",
-   "x": "برنامج Forma يثبت كفاءته كأداة BIM متطورة لتصميم المباني والتحليل البيئي.",
+   "h": "تتويج Forma Building Design عالمياً",
+   "x": "مشروع معماري جديد يثبت قوة استخدام أدوات التصميم الحديثة.",
    "tg": [
-    "BIM",
-    "Forma",
-    "Architecture"
+    "Autodesk",
+    "BIM"
    ],
    "tp": "arch"
   },
@@ -2703,7 +2710,14 @@
    ],
    "url": "https://news.ycombinator.com/item?id=50562528",
    "url2": "",
-   "ta": "يسرد سهم Anthropic (ANT) تقييمًا يقارب 2 تريليون دولار"
+   "ta": "يسرد سهم Anthropic (ANT) تقييمًا يقارب 2 تريليون دولار",
+   "h": "طرح أسهم Anthropic بقيمة فلكية",
+   "x": "مؤشر قوي على نمو سوق الذكاء الاصطناعي وتأثيره المستقبلي على أدوات الـ BIM.",
+   "tg": [
+    "AI",
+    "Anthropic"
+   ],
+   "tp": "news"
   },
   {
    "id": "hn-50562508",
@@ -3791,7 +3805,13 @@
    ],
    "url": "https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering",
    "url2": "https://news.ycombinator.com/item?id=50553225",
-   "ta": "LLM بمساعدة الهندسة العكسية"
+   "ta": "LLM بمساعدة الهندسة العكسية",
+   "h": "الهندسة العكسية بمساعدة LLM",
+   "x": "ازاي تستخدم الـ LLM في تفكيك وفهم الكود القديم لتطوير إضافات BIM.",
+   "tg": [
+    "LLM",
+    "Coding"
+   ]
   },
   {
    "id": "hn-50553192",
@@ -3839,7 +3859,14 @@
    ],
    "url": "https://www.youtube.com/shorts/opiL3SFz_RQ",
    "ta": "لن ترتدي بدلة غوص في سباق سريع: اختر النموذج المناسب لتحويل الكلام إلى نص",
-   "sa": "AssemblyAI-STT-3.7 عبارة عن ثلاثة نماذج لتحويل الكلام إلى نص، تم تصميم كل منها لوظيفة مختلفة: الصوت المسجل مسبقًا، والمحادثات المباشرة، ووكلاء الصوت. الذي على…"
+   "sa": "AssemblyAI-STT-3.7 عبارة عن ثلاثة نماذج لتحويل الكلام إلى نص، تم تصميم كل منها لوظيفة مختلفة: الصوت المسجل مسبقًا، والمحادثات المباشرة، ووكلاء الصوت. الذي على…",
+   "h": "اختر نموذج Speech-to-Text المناسب",
+   "x": "مقارنة تساعدك وأنت بتبني voice agents لتطبيقات الهندسة والمعمار.",
+   "tg": [
+    "AI",
+    "Agents"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50552424",
