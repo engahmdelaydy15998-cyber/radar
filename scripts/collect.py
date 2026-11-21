@@ -659,6 +659,7 @@ SOCIAL_QUERIES = [("Revit AI", "arch"), ("BIM artificial intelligence", "arch"),
 SOCIAL_RE = re.compile(r"https?://(?:[\w-]+\.)?(?:linkedin\.com/(?:posts|feed/update|pulse)/|instagram\.com/(?:p|reel)/|"
                        r"facebook\.com/(?:[^/\s]+/(?:posts|videos)/|reel/|share/|groups/[^/\s]+/posts/))[^\s|)\]]+", re.I)
 SOCIAL_PER_RUN = 3
+SOCIAL_MODELS = ["gemini-3-flash-preview", "gemini-flash-latest", "gemini-3.1-flash-lite", "gemini-flash-lite-latest"]
 
 
 class _NoRedirect2(urllib.request.HTTPRedirectHandler):
@@ -702,18 +703,20 @@ def collect_social(known_ids, cutoff, now=None):
     now = now or datetime.now(timezone.utc)
     start = (now.timetuple().tm_yday * 8 + now.hour // 3) * SOCIAL_PER_RUN % len(SOCIAL_QUERIES)
     jobs = [SOCIAL_QUERIES[(start + i) % len(SOCIAL_QUERIES)] for i in range(SOCIAL_PER_RUN)]
-    items, seen = [], set()
+    items, seen, models = [], set(), list(SOCIAL_MODELS)
     for q, cat in jobs:
-        try:
-            text, chunks = gemini_search(q, key, (_ai_model or GEMINI_MODELS)[0])
-        except urllib.error.HTTPError as ex:
-            log("social: failed", q, ex.code, ex.read()[:300])
-            if ex.code == 429:
-                break
-            continue
-        except Exception as ex:
-            log("social: failed", q, ex)
-            continue
+        text = None
+        while models and text is None:
+            try:
+                text, chunks = gemini_search(q, key, models[0])
+            except urllib.error.HTTPError as ex:
+                log("social: failed", q, models[0], ex.code, ex.read()[:160])
+                models.pop(0)
+            except Exception as ex:
+                log("social: failed", q, models[0], ex)
+                models.pop(0)
+        if text is None:
+            break
         lines = {}
         for line in text.splitlines():
             m = SOCIAL_RE.search(line)
