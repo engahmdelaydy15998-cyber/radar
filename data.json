@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T21:42:59Z",
+ "updated": "2026-11-21T21:45:02Z",
  "demo": false,
  "items": [
   {
@@ -2636,7 +2636,15 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
-   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري"
+   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري",
+   "h": "فوز Forma بجائزة Architectural Record",
+   "x": "إنجاز جديد لبرمجيات الـ BIM والتصميم المعماري يهم كل مهندس معماري.",
+   "tg": [
+    "BIM",
+    "Forma",
+    "Architecture"
+   ],
+   "tp": "arch"
   },
   {
    "id": "hn-50562582",
@@ -3113,7 +3121,14 @@
    ],
    "url": "https://www.nytimes.com/interactive/2026/11/16/climate/ai-data-center-pollution-carbon-emissions.html",
    "url2": "https://news.ycombinator.com/item?id=50558942",
-   "ta": "انبعاثات الكربون من مراكز البيانات الأمريكية الدول المتنافسة"
+   "ta": "انبعاثات الكربون من مراكز البيانات الأمريكية الدول المتنافسة",
+   "h": "انبعاثات الداتا سنتر تقترب من دول",
+   "x": "استهلاك الطاقة وانبعاثات Carbon في مراكز البيانات يؤثر على مستقبل الـ BIM والمشاريع الضخمة.",
+   "tg": [
+    "DataCenter",
+    "Carbon"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-ikNf7eW8CHk",
@@ -3127,7 +3142,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=ikNf7eW8CHk",
    "ta": "تعرف على برايان وبيست، النقاط في العمل في Holiday Extras",
-   "sa": "ديفيد لي، مدير الابتكار والنمو في Holiday Extras، يسمي نقطته برايان أثناء تنقلاته الصباحية. يتحدثون خلال الاجتماعات المقبلة ، و ..."
+   "sa": "ديفيد لي، مدير الابتكار والنمو في Holiday Extras، يسمي نقطته برايان أثناء تنقلاته الصباحية. يتحدثون خلال الاجتماعات المقبلة ، و ...",
+   "h": "تفاعل الـ AI agents في الشغل اليومي",
+   "x": "كيف يساعد الـ AI agents في إدارة المهام والاجتماعات بذكاء.",
+   "tg": [
+    "Agents",
+    "Innovation"
+   ],
+   "tp": "agents"
   },
   {
    "id": "gn-ollamaapitutorial12steps70min",
@@ -3162,7 +3184,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=GUx89takPiA",
    "ta": "تعلم Reactjs #11 - أساسيات الدعائم",
-   "sa": "دروس وواجبات أساسيات الدعائم: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+   "sa": "دروس وواجبات أساسيات الدعائم: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
+   "h": "أساسيات Reactjs للمطورين",
+   "x": "درس عملي في الـ code لفهم الـ Props وتطوير تطبيقات الويب.",
+   "tg": [
+    "React",
+    "Code"
+   ],
+   "tp": "courses"
   },
   {
    "id": "hn-50558494",
@@ -3176,7 +3205,14 @@
    ],
    "url": "https://twitter.com/catalinmpit/status/2123061832781090948",
    "url2": "https://news.ycombinator.com/item?id=50558494",
-   "ta": "الذكاء الاصطناعي يرهق الناس"
+   "ta": "الذكاء الاصطناعي يرهق الناس",
+   "h": "تأثير الـ AI على ضغط الشغل",
+   "x": "نقاش تقني حول كيفية تأثير أدوات الـ AI الحالية على زيادة ضغط العمل.",
+   "tg": [
+    "AI",
+    "Productivity"
+   ],
+   "tp": "news"
   },
   {
    "id": "gh-1463963309",
@@ -3254,7 +3290,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=Cy7Wz6Z4TWU",
    "ta": "لقد أظهر لنا DeepMind للتو الغرض الحقيقي من الذكاء الاصطناعي",
-   "sa": "❤️ قم بزيارة Lambda هنا وقم بالتسجيل في GPU Cloud الخاصة بهم: https://lambda.com/papers 📝 ورقة DeepMind AlphaGenome 2 متاحة هنا: https://deep..."
+   "sa": "❤️ قم بزيارة Lambda هنا وقم بالتسجيل في GPU Cloud الخاصة بهم: https://lambda.com/papers 📝 ورقة DeepMind AlphaGenome 2 متاحة هنا: https://deep...",
+   "h": "رؤية DeepMind الجديدة للـ AI",
+   "x": "استعراض لأحدث ابتكارات DeepMind وتأثيرها على الأبحاث والـ GPU Cloud.",
+   "tg": [
+    "DeepMind",
+    "AI"
+   ],
+   "tp": "news"
   },
   {
    "id": "gn-reveniumlaunchessidekickputtingrealtimeaicodingcostsandbudge",
@@ -3289,7 +3332,14 @@
    ],
    "url": "https://www.gadgetreview.com/wife-of-senior-nvidia-executive-caught-up-in-alleged-ai-chip-smuggling-scandal",
    "url2": "https://news.ycombinator.com/item?id=50557420",
-   "ta": "زوجة أحد كبار المسؤولين التنفيذيين في Nvidia عالقة في فضيحة تهريب شرائح الذكاء الاصطناعي المزعومة"
+   "ta": "زوجة أحد كبار المسؤولين التنفيذيين في Nvidia عالقة في فضيحة تهريب شرائح الذكاء الاصطناعي المزعومة",
+   "h": "فضيحة تهريب شرائح AI",
+   "x": "خبر تقني عن تورط عائلات تنفيذيين في تهريب معالجات الـ AI.",
+   "tg": [
+    "Hardware",
+    "Nvidia"
+   ],
+   "tp": "news"
   },
   {
    "id": "gn-howmuchdoesaicostin2026thecompletepricingcomparison",
@@ -3302,7 +3352,14 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1OMVVYdjlTQWNCRFM0elFCdWNIOU5pTm5KQUNOWGc4RjlqbUlHU2J3NjhiQk96UTNZYTJWSVFYUEU4bDhNU1ZRSnc0VnlTQjVQVXVKdA?oc=5",
-   "ta": "ما هي تكلفة الذكاء الاصطناعي في عام 2026؟ مقارنة الأسعار الكاملة"
+   "ta": "ما هي تكلفة الذكاء الاصطناعي في عام 2026؟ مقارنة الأسعار الكاملة",
+   "h": "تكلفة الـ AI في المستقبل القريب",
+   "x": "مقارنة شاملة لأسعار وتكاليف تشغيل نماذج الـ AI والـ agents.",
+   "tg": [
+    "Pricing",
+    "Agents"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50557025",
@@ -3316,7 +3373,14 @@
    ],
    "url": "https://review.firstround.com/the-engineers-guide-to-career-growth-advice-from-my-time-at-stripe-and-facebook/",
    "url2": "https://news.ycombinator.com/item?id=50557025",
-   "ta": "دليل المهندس للنمو الوظيفي – نصيحة من وقتي في Stripe و Facebook"
+   "ta": "دليل المهندس للنمو الوظيفي – نصيحة من وقتي في Stripe و Facebook",
+   "h": "دليل المهندس للنمو الوظيفي",
+   "x": "نصائح عملية من خبرات العمل في Stripe و Facebook لتطوير مسارك المهني.",
+   "tg": [
+    "Career",
+    "Engineering"
+   ],
+   "tp": "news"
   },
   {
    "id": "gh-1463800284",
@@ -3369,7 +3433,14 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9jLVZBWGtEU1p1WjJsNFdTRUZ0SkFwSmdrZjRPaDQxTmtCSjE3R0dvbG1ENEQ1Z3VUVDFTc3E0Y3hxcm1JVE1rNHFPTzBLVDMzVVE?oc=5",
-   "ta": "Autodesk, Inc. (ADSK) سعر السهم والأخبار والاقتباس والتاريخ"
+   "ta": "Autodesk, Inc. (ADSK) سعر السهم والأخبار والاقتباس والتاريخ",
+   "h": "أداء سهم Autodesk في السوق",
+   "x": "متابعة مالية لأسهم Autodesk الشركة الأم لبرامج Revit والـ BIM.",
+   "tg": [
+    "Autodesk",
+    "BIM"
+   ],
+   "tp": "arch"
   },
   {
    "id": "hn-50556534",
@@ -3383,7 +3454,15 @@
    ],
    "url": "https://github.com/rxolve/zpup",
    "url2": "https://news.ycombinator.com/item?id=50556534",
-   "ta": "عرض مشاهد HN: Zpup – Zdog ثلاثية الأبعاد بتنسيق JSON وSVG من أي زاوية"
+   "ta": "عرض مشاهد HN: Zpup – Zdog ثلاثية الأبعاد بتنسيق JSON وSVG من أي زاوية",
+   "h": "أداة Zpup لرسومات 3D بصيغة JSON",
+   "x": "أداة Open Source جديدة لتوليد مشاهد 3D بأسلوب Zdog وتصديرها SVG.",
+   "tg": [
+    "3D",
+    "SVG",
+    "OSS"
+   ],
+   "tp": "oss"
   },
   {
    "id": "gn-autodeskandneilsoftestablishbimanddigitaltwincentreofexcelle",
@@ -3484,7 +3563,14 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPZU94Zk5EcWw0Z05LMU5FUWRCZFVJVVIzNzhmbFJoTzA4R1p1WmlLWk12TkRlRnoyaWtTaXpueE1aMDhYN1FCUERLRXlDcXNiUWtMd283Vnc5Q2IzM1NoOU1xVGRteEJyc21YSEdJbWZFblV3R1FNQ003ak9NdGw4ZmdDU1lPX0Z1TTVobGtLcVNxY2RoNkRvTnFkd3haX3p1eFlSQVNxemwyZktJREVJMGk0Y2pMTGF1OGNJSUZHbW52anFNVVhyVTE3dEVtSEFHZ0Nrc1RxRlBmbzhGRjhpSjdLbnBaelE0cFcwZVl3Z09HUQ?oc=5",
-   "ta": "يتيح تحديث Autodesk Forma لشهر نوفمبر للمسؤولين تعيين الوصول إلى المشروع من خلال Autodesk Assistant"
+   "ta": "يتيح تحديث Autodesk Forma لشهر نوفمبر للمسؤولين تعيين الوصول إلى المشروع من خلال Autodesk Assistant",
+   "h": "تحديث Autodesk Forma وإدارة الوصول للمشاريع",
+   "x": "تسهيل التحكم في صلاحيات المشاريع عبر Autodesk Assistant للمديرين.",
+   "tg": [
+    "BIM",
+    "Autodesk Forma"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-a90pZ1DSyls",
@@ -3498,7 +3584,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=a90pZ1DSyls",
    "ta": "هذه المهارة تحول كلود كود إلى محرر فيديو خبير (سأتخلى عنها)",
-   "sa": "قام دماغي الثاني بالذكاء الاصطناعي بتحرير هذا الفيديو بأكمله بمهارة واحدة، وأنا أقدمه لك مجانًا ومفتوح المصدر! وإليك كيفية تحويل مجلد من الخام ..."
+   "sa": "قام دماغي الثاني بالذكاء الاصطناعي بتحرير هذا الفيديو بأكمله بمهارة واحدة، وأنا أقدمه لك مجانًا ومفتوح المصدر! وإليك كيفية تحويل مجلد من الخام ...",
+   "h": "حوّل Claude Code لخبير مونتاج فيديو",
+   "x": "مهارة مفتوحة المصدر تتيح لـ AI تحرير الفيديوهات بالكامل من ملفاتك.",
+   "tg": [
+    "Claude Code",
+    "AI",
+    "OSS"
+   ],
+   "tp": "oss"
   },
   {
    "id": "gn-cursorpricing2026xsubscriptiontiersandusagelimits",
@@ -3511,7 +3605,14 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE8tWko5QzJxdV94d1BiUG9hdzcxOFZHelEwTEZkdlJCbXl2V1FCQ3Z5Q2JrWXZDZVpQUThxWDZsNGpRbDNPZGRIRVFZbw?oc=5",
-   "ta": "تسعير المؤشر 2026: مستويات الاشتراك X وحدود الاستخدام"
+   "ta": "تسعير المؤشر 2026: مستويات الاشتراك X وحدود الاستخدام",
+   "h": "أسعار واشتراكات Cursor لعام 2026",
+   "x": "تفاصيل باقات الاستخدام وحدود التقييد لمحرر الكود الذكي Cursor.",
+   "tg": [
+    "Cursor",
+    "Agents"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50554374",
@@ -3525,7 +3626,14 @@
    ],
    "url": "https://micjm.com/blog/gemini-4-neon-looks-like-a-top-model/",
    "url2": "https://news.ycombinator.com/item?id=50554374",
-   "ta": "يبدو Gemini 4 Neon وكأنه منافس لـ Opus 5.5"
+   "ta": "يبدو Gemini 4 Neon وكأنه منافس لـ Opus 5.5",
+   "h": "منافسة قوية في نماذج الذكاء الاصطناعي",
+   "x": "Gemini 4 Neon يظهر كمهدد حقيقي لنماذج Opus.",
+   "tg": [
+    "Gemini",
+    "AI Models"
+   ],
+   "tp": "news"
   },
   {
    "id": "gn-softbankdemonstratesremoteriskassessmentofdamagedbuildingsus",
@@ -3538,7 +3646,15 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5FeEc2RHdGR3RSLVA4UlpVRTNPRlRwTkhVWER0OUhsTWtRcHlkUDdTLTlZS2hoWjJDb21Xc254SWVXNG1hbGx1UFZSdmwwSHV4TUhwSDhWcDQ?oc=5",
-   "ta": "سوفت بنك تعرض تقييم المخاطر عن بعد للمباني المتضررة باستخدام الطائرات بدون طيار والتوائم الرقمية"
+   "ta": "سوفت بنك تعرض تقييم المخاطر عن بعد للمباني المتضررة باستخدام الطائرات بدون طيار والتوائم الرقمية",
+   "h": "تقييم أضرار المباني بالدرونز وDigital Twins",
+   "x": "SoftBank تستخدم الطائرات المسيرة والتوائم الرقمية لفحص المباني المتضررة.",
+   "tg": [
+    "Digital Twin",
+    "BIM",
+    "Drones"
+   ],
+   "tp": "arch"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov18llmgemini",
@@ -3551,7 +3667,14 @@
     "مدونة"
    ],
    "url": "https://simonwillison.net/2026/Nov/18/llm-gemini/",
-   "ta": "الجوزاء 0.38"
+   "ta": "الجوزاء 0.38",
+   "h": "تحديث أداة llm-gemini 0.38",
+   "x": "إصدار جديد لتحسين التكامل مع نماذج Gemini البرمجية.",
+   "tg": [
+    "LLM",
+    "Gemini",
+    "Code"
+   ]
   },
   {
    "id": "yt-R0rXSJmymTc",
@@ -3565,7 +3688,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=R0rXSJmymTc",
    "ta": "Gemini 4 Neon هو أقوى نموذج للذكاء الاصطناعي من Google! يتفوق على Opus 5.5 وGPT-6.2 (مختبر بالكامل)",
-   "sa": "سير عمل الذكاء الاصطناعي بالكامل في مكان واحد، بسعر يبدأ من 10 دولارات شهريًا: Mammouth → https://mammouth.ai أصدرت Google رسميًا لعبة Gemini 4 Neon، وقد تكون واحدة..."
+   "sa": "سير عمل الذكاء الاصطناعي بالكامل في مكان واحد، بسعر يبدأ من 10 دولارات شهريًا: Mammouth → https://mammouth.ai أصدرت Google رسميًا لعبة Gemini 4 Neon، وقد تكون واحدة...",
+   "h": "اختبار قدرات نموذج Gemini 4 Neon الجديد",
+   "x": "مقارنة أداء Gemini 4 Neon مع أقوى نماذج الذكاء الاصطناعي في السوق.",
+   "tg": [
+    "Gemini",
+    "AI",
+    "Agents"
+   ],
+   "tp": "agents"
   },
   {
    "id": "gn-googlelaunchesgemini4neonwithopus55levelcodingperformanceat2",
@@ -3578,7 +3709,15 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOTEZSUEtSV0dGT3g1ZXlGVW0xdjhfbDZnclc5RUdza3pibmNqaktCNUNOTkxuSzVabEppT2JZNEFMYzZmN3ZuNk9XNEl0cWZjTTdKQTNNUTBOZWJVNXFVc0ZyNEZrLVBjM2dLZExkc2lfbFpLQ3VmYmJLT1NRRzAyT2FJS1NRc3EybXpvdGZqTURJcFNZYVZQX2hqcVBQM08wMW5SUHVQU1VRNnBZcERuX3E3NnRSMXdQZTRmSEdIREZERzJXWlFNQ1RaV20?oc=5",
-   "ta": "جوجل تطلق Gemini 4 Neon بأداء ترميزي بمستوى Opus 5.5 وبأسعار أقل بنسبة 25% لرموز واجهة برمجة التطبيقات"
+   "ta": "جوجل تطلق Gemini 4 Neon بأداء ترميزي بمستوى Opus 5.5 وبأسعار أقل بنسبة 25% لرموز واجهة برمجة التطبيقات",
+   "h": "إطلاق Gemini 4 Neon بأداء برمجي قوي وسعر أقل",
+   "x": "جوجل تطلق نموذجها الجديد بكفاءة عالية في الكود وتكلفة أقل للـ API.",
+   "tg": [
+    "Gemini",
+    "API",
+    "Code"
+   ],
+   "tp": "agents"
   },
   {
    "id": "yt-gp66d6d46SI",
@@ -3591,7 +3730,14 @@
     "NetworkChuck"
    ],
    "url": "https://www.youtube.com/shorts/gp66d6d46SI",
-   "sa": "يمكن لوكيل الذكاء الاصطناعي الخاص بك أن يقوم بكل أعمال Git نيابةً عنك. لهذا السبب يجب أن تعرف ذلك. البرنامج التعليمي الكامل لـ Git: https://youtu.be/c5TSRxrDEK8 #git #shorts"
+   "sa": "يمكن لوكيل الذكاء الاصطناعي الخاص بك أن يقوم بكل أعمال Git نيابةً عنك. لهذا السبب يجب أن تعرف ذلك. البرنامج التعليمي الكامل لـ Git: https://youtu.be/c5TSRxrDEK8 #git #shorts",
+   "h": "ليه لازم تتعلم Git حتى لو الـ AI agent بيعمل شغلك؟",
+   "x": "الذكاء الاصطناعي بيسهل الشغل، بس فهمك لـ Git أساسي لمراجعة الكود وإدارة مشاريعك البرمجية.",
+   "tg": [
+    "Git",
+    "AI",
+    "Coding"
+   ]
   },
   {
    "id": "hn-50553225",
@@ -3619,7 +3765,14 @@
    ],
    "url": "https://github.com/eklavya-raj/gta6-uefi",
    "url2": "https://news.ycombinator.com/item?id=50553192",
-   "ta": "تشبه GTA6 كصورة قابلة للتمهيد بحجم 942 كيلو بايت من UEFI"
+   "ta": "تشبه GTA6 كصورة قابلة للتمهيد بحجم 942 كيلو بايت من UEFI",
+   "h": "لعبة شبيهة بـ GTA6 في صورة UEFI bootable حجمها 942Kb فقط",
+   "x": "إنجاز تقني مبهر في ضغط وتصغير الكود ليعمل مباشرة من الـ boot بدون نظام تشغيل.",
+   "tg": [
+    "OS",
+    "Coding"
+   ],
+   "tp": "oss"
   },
   {
    "id": "yt--oA6oLxWpJg",
@@ -3688,7 +3841,15 @@
    ],
    "url": "https://springcraft-ai.github.io/springrep/",
    "url2": "https://news.ycombinator.com/item?id=50552140",
-   "ta": "إظهار HN: تحتاج الروبوتات إلى تصميم CAD أفضل، لذلك قمت بكتابة نواة B-rep وإجراء 3487 اختبارًا"
+   "ta": "إظهار HN: تحتاج الروبوتات إلى تصميم CAD أفضل، لذلك قمت بكتابة نواة B-rep وإجراء 3487 اختبارًا",
+   "h": "نظام B-rep kernel جديد مصمم خصيصاً لتطوير الـ CAD والروبوتات",
+   "x": "حلول هندسية جديدة لتطوير برمجيات التصميم والـ CAD بدقة عالية واختبارات مكثفة.",
+   "tg": [
+    "CAD",
+    "B-rep",
+    "Robotics"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-AhmCKHNqhB8",
@@ -3729,7 +3890,14 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE5QYUt6NEdXck1QRmk3cTJVSnhiQ2JLeTc4c2N0YkhfSTIxNGVuSmVCTW5vNTU4cUdaN1gxc3JJZVoyMVBW?oc=5",
-   "ta": "VentureBeat: أطلقت Google لعبة Gemini 4 Neon، لكن أسعار الرموز المميزة لـ Carbon أرخص في الوقت الحالي"
+   "ta": "VentureBeat: أطلقت Google لعبة Gemini 4 Neon، لكن أسعار الرموز المميزة لـ Carbon أرخص في الوقت الحالي",
+   "h": "منافسة قوية في تسعير الـ Tokens مع إطلاق Gemini 4 Neon",
+   "x": "جوجل تطلق Gemini 4 Neon بينما تقدم Carbon أسعاراً أرخص للـ tokens.",
+   "tg": [
+    "Gemini",
+    "AI"
+   ],
+   "tp": "agents"
   },
   {
    "id": "yt-hT0qW_DRFLw",
@@ -3785,7 +3953,14 @@
    ],
    "url": "https://benchmarks.bespokelabs.ai/multi-agent-coordination-bench/",
    "url2": "https://news.ycombinator.com/item?id=50550085",
-   "ta": "معيار التنسيق متعدد الوكلاء"
+   "ta": "معيار التنسيق متعدد الوكلاء",
+   "h": "معيار جديد لتنسيق الـ Multi Agent",
+   "x": "تعرف على أحدث الاختبارات والمعايير لقياس كفاءة وتنسيق الـ agents معاً.",
+   "tg": [
+    "Multi-Agent",
+    "Benchmark"
+   ],
+   "tp": "agents"
   },
   {
    "id": "gn-plieraanewbim20",
@@ -3798,7 +3973,14 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFB0bEZMY2J1Mm1LNDVDSG15NWJ6N2V5Nm44cFhPZG9POUtoVGNtbGZyelptSVJzcl8wVnk2VmYxOTBCR0FXVkxvNk51Y3BfVlN4RE1BV0FVTQ?oc=5",
-   "ta": "بلييرا: BIM 2.0 الجديد"
+   "ta": "بلييرا: BIM 2.0 الجديد",
+   "h": "Pliera: منصة BIM 2.0 لتتحدى Revit",
+   "x": "منصة BIM جديدة تعتمد على rule-based building configurators لمنافسة Revit.",
+   "tg": [
+    "BIM",
+    "Revit"
+   ],
+   "tp": "arch"
   },
   {
    "id": "rss-httpsaecmagcombimplieraanewbim20",
@@ -3812,7 +3994,14 @@
    ],
    "url": "https://aecmag.com/bim/pliera-a-new-bim-2-0/",
    "ta": "بلييرا: BIM 2.0 الجديد",
-   "sa": "تأتي منصة BIM الجديدة مع أدوات تكوين البناء القائمة على القواعد وخطط طموحة لتحدي Revit المنشور Pliera: BIM 2.0 الجديد ظهر لأول مرة على مجلة AEC..."
+   "sa": "تأتي منصة BIM الجديدة مع أدوات تكوين البناء القائمة على القواعد وخطط طموحة لتحدي Revit المنشور Pliera: BIM 2.0 الجديد ظهر لأول مرة على مجلة AEC...",
+   "h": "Pliera تقلب موازين الـ BIM",
+   "x": "منصة BIM 2.0 جديدة تقدم حلول متقدمة لتصميم المباني وتحدي برامج الـ AEC التقليدية.",
+   "tg": [
+    "BIM",
+    "AEC"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-pVc6KkjeCfU",
@@ -3853,7 +4042,14 @@
     "Dr Firas"
    ],
    "url": "https://www.youtube.com/shorts/p8hQeqPW13M",
-   "sa": "يقول كلود أن فكرتك رائعة؟ تقديمه للمحاكمة. مع المحكمة، وهي مهارة مجانية من Alex Chen (@nocodealex) لكلود كود، ستنتقل فكرتك إلى المحكمة: pr..."
+   "sa": "يقول كلود أن فكرتك رائعة؟ تقديمه للمحاكمة. مع المحكمة، وهي مهارة مجانية من Alex Chen (@nocodealex) لكلود كود، ستنتقل فكرتك إلى المحكمة: pr...",
+   "h": "اختبر أفكارك برمجياً باستخدام Claude Code",
+   "x": "أداة مجانية جديدة لـ Claude Code تعمل كمحكمة لتقييم ونقد أفكارك التقنية بعمق.",
+   "tg": [
+    "Claude",
+    "Coding"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50549718",
