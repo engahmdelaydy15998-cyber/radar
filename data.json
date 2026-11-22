@@ -1,7 +1,177 @@
 {
- "updated": "2026-11-22T11:16:58Z",
+ "updated": "2026-11-22T19:34:00Z",
  "demo": false,
  "items": [
+  {
+   "id": "hn-50601525",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-22T17:06:27Z",
+   "t": "Perplexity and Intelligence",
+   "s": "226 نقطة، 161 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://openai.com/index/perplexity-and-intelligence/",
+   "url2": "https://news.ycombinator.com/item?id=50601525",
+   "ta": "الحيرة والذكاء"
+  },
+  {
+   "id": "yt-C9XB0IMEX8k",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-22T16:56:48Z",
+   "t": "Learn Reactjs #21 - Show and Hide Content",
+   "s": "Show and Hide Content Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
+   "tags": [
+    "Elzero Web School"
+   ],
+   "url": "https://www.youtube.com/watch?v=C9XB0IMEX8k",
+   "ta": "تعلم Reactjs #21 - إظهار المحتوى وإخفائه",
+   "sa": "إظهار وإخفاء محتوى الدروس والواجبات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+  },
+  {
+   "id": "gn-inkling2minionollama32gbmacfloorpcwaits",
+   "cat": "agents",
+   "src": "shattered.io",
+   "ts": "2026-11-22T15:56:48Z",
+   "t": "Inkling 2 Mini on Ollama: 32GB Mac Floor, PC Waits",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOSzF3bXQwUjJVNGZ3UHZyYXhXc3pOb3BrN1dsWTNNTlo3UDRhVjlXU2swOXBvMjlqZXhCQURUYnI2QUQ5YUYxSmFDUjFTak1DeWN3TlNrY3JwTkNWU2ktVXpqUm9fTHR6OUFrVzFfM3lMRk9SNGlFYy1Jdnh5X2JBYUhKcFdkYk8zTzhn?oc=5",
+   "ta": "Inkling 2 Mini على Ollama: مساحة 32 جيجابايت لجهاز Mac، والكمبيوتر الشخصي في انتظاره",
+   "h": "تشغيل Inkling 2 Mini محلياً عبر Ollama",
+   "x": "تجربة ذكاء اصطناعي محلية تتطلب أجهزة قوية وتهم مهندسي الـ AI.",
+   "tg": [
+    "Ollama",
+    "AI",
+    "LLM"
+   ],
+   "tp": "agents"
+  },
+  {
+   "id": "hn-50600771",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-22T15:52:33Z",
+   "t": "Ask HN: Are the trades a safe career transition?",
+   "s": "34 نقطة، 60 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50600771",
+   "url2": "",
+   "ta": "اسأل HN: هل تعتبر الصفقات بمثابة انتقال وظيفي آمن؟"
+  },
+  {
+   "id": "hn-50600677",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-22T15:42:40Z",
+   "t": "Europe weakens chemical rules as science links them to 'lifestyle diseases'",
+   "s": "113 نقطة، 98 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.lemonde.fr/en/opinion/article/2026/11/22/as-science-increasingly-shows-the-role-chemical-substances-play-in-lifestyle-diseases-europe-weakens-its-regulations_6786595_23.html",
+   "url2": "https://news.ycombinator.com/item?id=50600677",
+   "ta": "أوروبا تضعف القواعد الكيميائية حيث يربطها العلم بـ \"أمراض نمط الحياة\""
+  },
+  {
+   "id": "gn-useclaudecodeforfreeitestfreebuffwhichpromisesvirtuallyunlim",
+   "cat": "agents",
+   "src": "Notebookcheck",
+   "ts": "2026-11-22T14:30:00Z",
+   "t": "Use Claude Code for free? I test Freebuff, which promises virtually unlimited AI coding",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPNkk4VjRnclRLMld0LUptUV9DUzd1MDIwYXJieGdUNWgwNlpJZzZEalBKbGU1Ql8wOFdkd1RnMm9obE1KTVRXaGhKbHl4TEVKSzhlQXA4aWVod3o5N3U5SVluR0JwRkdBZUw0T0VVajBxLWVIU1llOWw4VGVrT2w4MUV2OTMzMV9VUXQwY29iU1BoT2JuMjRtNVQxTUwyUWpjR3ZNVW02Wmx4d0VDcnNGd0JvZExvd1JQWmJGdm5zZERMU0lJcHlvWVV3?oc=5",
+   "ta": "استخدام كلود كود مجانا؟ لقد قمت باختبار Freebuff، الذي يعد بترميز الذكاء الاصطناعي غير المحدود تقريبًا",
+   "h": "تجربة Freebuff لكتابة الكود بلا حدود مع Claude",
+   "x": "أداة جديدة قد توفر لك إمكانية استخدام Claude Code مجاناً وبدون حدود.",
+   "tg": [
+    "Claude Code",
+    "AI",
+    "Coding"
+   ],
+   "tp": "agents"
+  },
+  {
+   "id": "hn-50599762",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-22T13:56:58Z",
+   "t": "Show HN: I built a game where you are an LLM's subagent",
+   "s": "179 نقطة، 46 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/gulivan/worker755",
+   "url2": "https://news.ycombinator.com/item?id=50599762",
+   "ta": "إظهار HN: لقد صممت لعبة تكون فيها وكيلًا فرعيًا لـ LLM",
+   "h": "لعبة جديدة تضعك في دور AI Subagent",
+   "x": "لعبة تفاعلية ممتعة للمهتمين بفهم طريقة عمل الـ agents والـ LLM.",
+   "tg": [
+    "LLM",
+    "Agents",
+    "Game"
+   ],
+   "tp": "agents"
+  },
+  {
+   "id": "hn-50599583",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-22T13:37:10Z",
+   "t": "U.N. Climate Talks Collapse in a Bitter Clash over Fossil Fuels",
+   "s": "91 نقطة، 111 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.nytimes.com/2026/11/22/climate/cop31-climate-summit-ends-climate.html",
+   "url2": "https://news.ycombinator.com/item?id=50599583",
+   "ta": "محادثات الأمم المتحدة بشأن المناخ تنهار في صراع مرير حول الوقود الأحفوري"
+  },
+  {
+   "id": "hn-50597959",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-22T09:57:01Z",
+   "t": "Muru – AI-assisted Rust server for Python apps by mod_WSGI's creator",
+   "s": "55 نقطة، 9 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://simonwillison.net/2026/Nov/21/muru/",
+   "url2": "https://news.ycombinator.com/item?id=50597959",
+   "ta": "Muru – خادم Rust المدعوم بالذكاء الاصطناعي لتطبيقات Python بواسطة منشئ mod_WSGI",
+   "h": "مكتبة Muru لتسريع تطبيقات Python بلغة Rust",
+   "x": "أداة مساعدة بالـ AI لبناء خوادم Rust سريعة لتطبيقات Python.",
+   "tg": [
+    "Rust",
+    "Python",
+    "AI"
+   ],
+   "tp": "arch"
+  },
+  {
+   "id": "hn-50597743",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-22T09:18:36Z",
+   "t": "Harsher on Male? Evaluating LLMs on Gender-Asymmetric Moral Framing in Conflicts",
+   "s": "87 نقطة، 76 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://arxiv.org/abs/2606.14068",
+   "url2": "https://news.ycombinator.com/item?id=50597743",
+   "ta": "أقسى على الذكر؟ تقييم LLMs حول التأطير الأخلاقي غير المتماثل بين الجنسين في الصراعات"
+  },
   {
    "id": "gn-servingalocalllmtoseveralusersollamalmstudiollamacppandvllmb",
    "cat": "agents",
@@ -20,7 +190,8 @@
     "Ollama",
     "vLLM"
    ],
-   "tp": "agents"
+   "tp": "agents",
+   "ta": "تقديم شهادة LLM محلية للعديد من المستخدمين: Ollama وLM Studio وllama.cpp وvLLM المعيارية"
   },
   {
    "id": "hn-50596511",
@@ -40,7 +211,8 @@
     "AI Security",
     "Supply Chain"
    ],
-   "tp": "news"
+   "tp": "news",
+   "ta": "أمن سلسلة التوريد بالذكاء الاصطناعي: ما تم العثور عليه من رموز الكناري"
   },
   {
    "id": "yt-cUuVObUqbn0",
@@ -59,7 +231,9 @@
     "Local AI",
     "Agents"
    ],
-   "tp": "agents"
+   "tp": "agents",
+   "ta": "إنكلينج 2 ميني أمر مجنون! نموذج الذكاء الاصطناعي المحلي الجديد 26B يتفوق على Qwen 3.8 27B! (تم اختباره بالكامل)",
+   "sa": "جرب DecisionNode، وقم بكتابة قرارات الذكاء الاصطناعي بالمللي ثانية. خصم 5 دولارات على أول عملية تعبئة بقيمة 10 دولارات أو أكثر: https://decisionnode.com/?ref=c8623hz7 Thinking Machin..."
   },
   {
    "id": "gn-monailabelzerodayaiagentsexploitmedicalimagingresearchserver",
@@ -78,7 +252,8 @@
     "Zero-Day",
     "AI Agents"
    ],
-   "tp": "agents"
+   "tp": "agents",
+   "ta": "MONAI Label Zero-Day: يستغل وكلاء الذكاء الاصطناعي خوادم أبحاث التصوير الطبي"
   },
   {
    "id": "hn-50594937",
@@ -91,7 +266,8 @@
     "نقاش"
    ],
    "url": "https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/",
-   "url2": "https://news.ycombinator.com/item?id=50594937"
+   "url2": "https://news.ycombinator.com/item?id=50594937",
+   "ta": "تطلق Tesla الإصدار FSD v15، الذي يستهدف أكبر نقاط الضعف فيها، بدءًا من العلامات وحتى الحفر"
   },
   {
    "id": "hn-50594911",
@@ -104,7 +280,8 @@
     "نقاش"
    ],
    "url": "https://stulle.app/",
-   "url2": "https://news.ycombinator.com/item?id=50594911"
+   "url2": "https://news.ycombinator.com/item?id=50594911",
+   "ta": "محاكي ساندويتش"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov21muru",
@@ -123,7 +300,8 @@
     "AI",
     "Tools"
    ],
-   "tp": "agents"
+   "tp": "agents",
+   "ta": "حائط"
   },
   {
    "id": "gn-autodeskandneilsofttoestablishbimanddigitaltwincentreinpune",
@@ -143,7 +321,8 @@
     "DigitalTwin",
     "Autodesk"
    ],
-   "tp": "arch"
+   "tp": "arch",
+   "ta": "أوتوديسك ونيلسوفت تؤسسان BIM ومركز التوأم الرقمي في بيون"
   },
   {
    "id": "yt-GFxHjrYwoFk",
@@ -205,7 +384,8 @@
     "AutoCAD",
     "GitHub"
    ],
-   "tp": "oss"
+   "tp": "oss",
+   "ta": "roman-chencode1904b4/cad-3d-engineering-suite-autodesk-2026-autocad-revit-porta: CAD، 3D & Engineering Suite Autodesk 2026 (AutoCAD، Revit، 3ds Max، Maya) تحديث وقت تشغيل NLM..."
   },
   {
    "id": "hn-50593481",
@@ -226,7 +406,8 @@
     "AI Agents",
     "Law"
    ],
-   "tp": "mcp"
+   "tp": "mcp",
+   "ta": "Pandex – القانون الأوروبي الرسمي لوكلاء الذكاء الاصطناعي، عبر MCP"
   },
   {
    "id": "yt-yq4FctnSglI",
@@ -260,7 +441,8 @@
     "نقاش"
    ],
    "url": "https://motherduck.com/blog/big-data-is-dead/",
-   "url2": "https://news.ycombinator.com/item?id=50593091"
+   "url2": "https://news.ycombinator.com/item?id=50593091",
+   "ta": "البيانات الضخمة ميتة"
   },
   {
    "id": "gn-opencodeandalocalllmhandletheboring80ofmycodingsoclaudeonlyg",
@@ -280,7 +462,8 @@
     "LLM",
     "Automation"
    ],
-   "tp": "agents"
+   "tp": "agents",
+   "ta": "يتعامل OpenCode وLLM المحلي مع 80% من عملية البرمجة الخاصة بي، لذلك يحصل كلود على الجزء الأصعب فقط"
   },
   {
    "id": "gn-autodeskneilsoftlaunchbimanddigitaltwincentre",
@@ -425,7 +608,8 @@
     "Ollama",
     "Local LLM"
    ],
-   "tp": "agents"
+   "tp": "agents",
+   "ta": "إعداد Inkling 2 Mini Ollama: متطلبات Mac وخيارات الكمبيوتر الشخصي"
   },
   {
    "id": "gh-1466700766",
@@ -444,7 +628,8 @@
     "AutoCAD",
     "CAD"
    ],
-   "tp": "oss"
+   "tp": "oss",
+   "ta": "jacobyoung21/autodesk-autocad-win: Autodesk AutoCAD - برنامج تصميم بمساعدة الكمبيوتر للرسم ثنائي الأبعاد والنمذجة ثلاثية الأبعاد والتقنيات..."
   },
   {
    "id": "gn-istoppedhittingclaudesusagelimitsafterchangingonehabitinhowi",
@@ -506,7 +691,8 @@
     "Rust",
     "Performance"
    ],
-   "tp": "oss"
+   "tp": "oss",
+   "ta": "EL4CTEO/fast-anything: لا تعيد كتابته في Rust. أعد كتابة الـ 5% البطيئة: ملف تعريف تطبيقات Python أو Node أو Ruby،..."
   },
   {
    "id": "gh-1466630833",
@@ -610,7 +796,8 @@
     "AECO",
     "Autodesk"
    ],
-   "tp": "arch"
+   "tp": "arch",
+   "ta": "تتعاون شركتا Autodesk وNeilsoft لإنشاء مركز AECO للتميز في بيون"
   },
   {
    "id": "yt-G2AGx8zzX88",
@@ -644,7 +831,8 @@
     "نقاش"
    ],
    "url": "https://www.reuters.com/business/bitcoin-falls-357-56814-2026-11-21/",
-   "url2": "https://news.ycombinator.com/item?id=50588272"
+   "url2": "https://news.ycombinator.com/item?id=50588272",
+   "ta": "البيتكوين يهبط لأدنى مستوياته في عامين"
   },
   {
    "id": "hn-50587205",
@@ -657,7 +845,8 @@
     "نقاش"
    ],
    "url": "https://www.alcf.anl.gov/news/exascale-fusion-simulation-team-named-finalist-2026-gordon-bell-prize",
-   "url2": "https://news.ycombinator.com/item?id=50587205"
+   "url2": "https://news.ycombinator.com/item?id=50587205",
+   "ta": "تم تعيين فريق محاكاة الاندماج Exascale ضمن المرشحين النهائيين لجائزة Gordon Bell لعام 2026"
   },
   {
    "id": "gn-autodeskadskbringscloudbuildingcodechecksintoformaworkflows",
@@ -677,7 +866,8 @@
     "Cloud",
     "BIM"
    ],
-   "tp": "arch"
+   "tp": "arch",
+   "ta": "تقوم Autodesk (ADSK) بإدراج عمليات التحقق من كود البناء السحابي في سير عمل Forma"
   },
   {
    "id": "yt-a36atq-Dy8A",
@@ -721,6 +911,27 @@
     "Open Source"
    ],
    "tp": "agents"
+  },
+  {
+   "id": "gh-1466262028",
+   "cat": "arch",
+   "src": "GitHub",
+   "ts": "2026-11-21T06:39:37Z",
+   "t": "jedbjorn/drive-it: A Model Context Protocol server and add-in for Autodesk Revit.",
+   "s": "0 نجمة، لغة JavaScript",
+   "tags": [
+    "Add-in"
+   ],
+   "url": "https://github.com/jedbjorn/drive-it",
+   "ta": "jedbjorn/drive-it: خادم بروتوكول السياق النموذجي والوظيفة الإضافية لبرنامج Autodesk Revit.",
+   "h": "ربط Autodesk Revit بـ Model Context Protocol",
+   "x": "إضافة جديدة وبرتوكول MCP لربط Revit بـ JavaScript يسهل أتمتة مهام الـ BIM.",
+   "tg": [
+    "Revit",
+    "MCP",
+    "BIM"
+   ],
+   "tp": "addins"
   },
   {
    "id": "hn-50586292",
@@ -1055,7 +1266,8 @@
     "Python",
     "GPU"
    ],
-   "tp": "oss"
+   "tp": "oss",
+   "ta": "alesha-pro/inference-optimization-playbook: 97 فرضية تم اختبارها حول جعل MoE LLMs ضخمة بسرعة على وحدات معالجة الرسومات الاستهلاكية (4x RTX 3090 + خبراء..."
   },
   {
    "id": "hn-50582069",
@@ -1643,7 +1855,8 @@
     "Claude",
     "3D"
    ],
-   "tp": "agents"
+   "tp": "agents",
+   "ta": "danielwh2/sprite-stacking: مهارة العميل: قم بتحويل عروض فنية من أربع وحدات بكسل إلى كائنات وهمية ثلاثية الأبعاد يمكنك تدويرها. يعمل مع كلو…"
   },
   {
    "id": "gh-1465526334",
@@ -3118,11 +3331,13 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
-   "h": "فوز Forma بجائزة Architectural Record",
-   "x": "تصميم Forma يحصد جائزة الأفضل في فئته، خبر يهم مهندسي الـ BIM ومصممي العمارة.",
+   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري",
+   "h": "Autodesk Forma تفوز بجائزة Architectural Record",
+   "x": "برنامج Forma يحقق تميزاً معمارياً جديداً في تحليل التصميم والتخطيط العمراني.",
    "tg": [
-    "BIM",
-    "Architecture"
+    "Forma",
+    "Architecture",
+    "BIM"
    ],
    "tp": "arch"
   },
@@ -4429,6 +4644,19 @@
     "AI"
    ],
    "tp": "agents"
+  },
+  {
+   "id": "gn-qwen4maxvsclaudeopus55thecheapermodelcostsyousomewhereelse",
+   "cat": "agents",
+   "src": "The New Stack",
+   "ts": "2026-11-18T19:13:03Z",
+   "t": "Qwen4-Max vs. Claude Opus 5.5: The cheaper model costs you somewhere else.",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9EQzlhLWFrWGdxNHVtSVdFM0NOck4xN3dJUmJYUmVOSERQREc2bWE1Z1J0dF81Y2tYRUFxai10RkxCanBEM2w2bGxGLWRFTHl3MkRLcmFPS3lHUVppWjJGajNn?oc=5",
+   "ta": "Qwen4-Max مقابل Claude Opus 5.5: النموذج الأرخص يكلفك في مكان آخر."
   },
   {
    "id": "yt-hT0qW_DRFLw",
@@ -6111,165 +6339,6 @@
    "url": "https://www.youtube.com/watch?v=Y6Gi_gYnOAo",
    "ta": "التقييمات والأتمتة عبر الإنترنت | مقدمة إلى لانج سميث (7/12)",
    "sa": "في مرحلة الاختبار، علمنا فقط أن العملاء كانوا منزعجين لأن موظفي LangSlice أخبرونا بذلك. يبدأ هذا الدرس مرحلة المراقبة بتسجيل المشاعر..."
-  },
-  {
-   "id": "yt-LxKNPrXBuyU",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-17T23:38:50Z",
-   "t": "ChatGPT 6.2 Astra is \"A Mess\"",
-   "s": "Sharing the latest news and advancements in AI Discover More: 🛠️ Explore AI Tools & News: https://futuretools.io/ 📰 Weekly Newsletter: https://future…",
-   "tags": [
-    "Matt Wolfe"
-   ],
-   "url": "https://www.youtube.com/shorts/LxKNPrXBuyU",
-   "ta": "ChatGPT 6.2 Astra عبارة عن \"فوضى\"",
-   "sa": "مشاركة آخر الأخبار والتطورات في مجال الذكاء الاصطناعي اكتشف المزيد: 🛠️ اكتشف أدوات وأخبار الذكاء الاصطناعي: https://futuretools.io/ 📰 النشرة الإخبارية الأسبوعية: https://future…"
-  },
-  {
-   "id": "yt-pmOJIq7Ah00",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-17T23:24:04Z",
-   "t": "Introducing ChatGPT for Sales",
-   "s": "Spend less time on busywork and more time selling with ChatGPT for Sales. The new Sales plugin and 30+ new and expanded partner plugins bring your cu…",
-   "tags": [
-    "OpenAI"
-   ],
-   "url": "https://www.youtube.com/watch?v=pmOJIq7Ah00",
-   "ta": "تقديم ChatGPT للمبيعات",
-   "sa": "اقضِ وقتًا أقل في العمل المزدحم ووقتًا أطول في البيع باستخدام ChatGPT للمبيعات. البرنامج الإضافي الجديد للمبيعات وأكثر من 30 مكونًا إضافيًا جديدًا وموسعًا للشركاء يجلب لك..."
-  },
-  {
-   "id": "gn-whymicrosoftthinkssmallercheaperaicanbeatclaudeandgpt",
-   "cat": "agents",
-   "src": "Decrypt",
-   "ts": "2026-11-17T23:16:03Z",
-   "t": "Why Microsoft Thinks Smaller, Cheaper AI Can Beat Claude and GPT",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTXpKRTNDbVNwOHhlS0h2MTlzSzVOTDVGN3dBZlpyeEhGdGthdnpzUE5EeHpNM0JYcEs2MTBxS3dZRFZWMmdIMGloOElkTVJLRVhDNWpVa1lhcjBWOVRES3lBRjJnRG52V3NmT1JFSlVVbHJ6R1JSS1NhV2hKWk1NQ0pQZ2xHNXYt?oc=5",
-   "ta": "لماذا تعتقد مايكروسوفت أن الذكاء الاصطناعي الأصغر والأرخص يمكنه التغلب على كلود وجي بي تي؟"
-  },
-  {
-   "id": "gh-1462078243",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-17T23:15:50Z",
-   "t": "thejarasal780-ship-it/ollama-local-ai-offline: Ollama Local AI Offline: Run Local LLMs Fully Offline on Desktop",
-   "s": "95 نجمة، لغة Python",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/thejarasal780-ship-it/ollama-local-ai-offline",
-   "ta": "thejarasal780-ship-it/ollama-local-ai-offline: Ollama Local AI Offline: تشغيل LLMs المحلية دون اتصال بالكامل على سطح المكتب"
-  },
-  {
-   "id": "gn-digitaltwinsthekeytosaferinfrastructuremodifications",
-   "cat": "arch",
-   "src": "TechTarget",
-   "ts": "2026-11-17T23:11:54Z",
-   "t": "Digital twins: The key to safer infrastructure modifications",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPUkNib2c2bW94Q3RxejFxcnVSR1NWNWdLZjZPLWZpSWVEYUxnbGo0NnV0TmNLOUhoZnRJWDZMeE55MTZsWEQ2WkdvblRtNXk5RFRGY3NvYTUxdVg2eEpCYkROSkpWX3o1VGpQMjFrQllkcmFGNHc4Q3B0VGlSbDc5NHdtUV9uVEVyVDFLVWstcXZjR2hBV1Q4VllGNE8ydlh0?oc=5",
-   "ta": "التوائم الرقمية: المفتاح لإجراء تعديلات أكثر أمانًا على البنية التحتية"
-  },
-  {
-   "id": "gn-designingwithintelligenceainatureandtheresponsibilitiesoflan",
-   "cat": "arch",
-   "src": "American Society of Landscape Architects",
-   "ts": "2026-11-17T23:10:34Z",
-   "t": "Designing with Intelligence: AI, Nature, and the Responsibilities of Landscape Architects",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNYzJsVGlzNXNpejhucEYwMTlHajFyb09wUGdaQU15Rk84NHV5OEgzWnVUODlDS0VUREZfTVppZ1hXREJoZ2lCMDRkRnNOSlZOVF8tX3NZY2dCb3ZUbW9mSFRxdmgydldXTVJTYm9KNUFoUXRGS3pURjg4XzlUcGhlYkNxQzZ4Wm9ZbUVkbTdlWXdQenppMVB1cU5icEJKOEx3Y2gxdUZ0VWNZS0FQRzUwMHhwUU5Cc0dERVZOMi1PZXZWd2pidk5j?oc=5",
-   "ta": "التصميم بالذكاء: الذكاء الاصطناعي والطبيعة ومسؤوليات مهندسي المناظر الطبيعية"
-  },
-  {
-   "id": "af-tpssimonwillisonnet2026Nov17externalsandboxesforcodingagents",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-17T22:52:29Z",
-   "t": "External sandboxes for coding agents",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
-   "ta": "صناديق الحماية الخارجية لوكلاء الترميز"
-  },
-  {
-   "id": "gn-microsoftsaysitsnewaicodingmodelrivalsclaudeopus55at5oftheco",
-   "cat": "agents",
-   "src": "ZDNET",
-   "ts": "2026-11-17T22:42:44Z",
-   "t": "Microsoft says its new AI coding model rivals Claude Opus 5.5 at 5% of the cost",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQNnIyYlA2MTF3bjg5VFFOOFkxdHNDbDBwYWc2SU9LXzIwVno5blktS0NNdV9CVXdnOTlzYkh0dWpFbEpMQkZpa1BCdXFpR0dLdlAzS3VCODFiQTBwbnFjTkdoVzlkYUUzY3VjT3c1MzB0cEZZdjQ4cUcyOHd1QzE3UGl2M2pZZkh1bG9lTktpSmIta0E?oc=5",
-   "ta": "تقول مايكروسوفت إن نموذجها الجديد للتشفير بالذكاء الاصطناعي ينافس نموذج Claude Opus 5.5 بنسبة 5% من التكلفة"
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov17gpt62astraandsol",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-17T22:38:52Z",
-   "t": "GPT‑6.2 Astra and GPT‑6.2 Sol",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/",
-   "ta": "GPT-6.2 أسترا وGPT-6.2 سول"
-  },
-  {
-   "id": "gh-1462022835",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-17T22:05:16Z",
-   "t": "zadazddq/lm-studio-private-ai: LM Studio: Local LLM Desktop Runtime with Offline Inference and Model Management",
-   "s": "92 نجمة، لغة Rust",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/zadazddq/lm-studio-private-ai",
-   "ta": "zadazddq/lm-studio-private-ai: LM Studio: وقت تشغيل سطح المكتب LLM المحلي مع الاستدلال دون اتصال وإدارة النماذج"
-  },
-  {
-   "id": "gn-microsoftagentframeworkcompromisedcredentialstealertargetsaz",
-   "cat": "agents",
-   "src": "wiz.io",
-   "ts": "2026-11-17T22:03:37Z",
-   "t": "Microsoft agent-framework Compromised: Credential Stealer Targets Azure and CI Pipelines",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNTkEyNTlZaF9BRmFHNWw5ZmpILWUyTTYwOWswREVrYzRyZ2tWMERod1plX3ZBUzdaVFY5M1VlakFCUWF6U2h5eTdsMnJOS0RzaVdpWW9XN0tOZC1BODhSeVpfTVIxY29xOTkwYjk0aVlwM0FyeV9jc3p5THdlYjB3SHBxY3hBVGhkSEZ1TUVlZ0JNMEU?oc=5",
-   "ta": "تعرض إطار عمل وكيل Microsoft للاختراق: يستهدف برنامج سرقة بيانات الاعتماد خطوط أنابيب Azure وCI"
-  },
-  {
-   "id": "yt-oLkthLKyjIs",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-17T21:45:04Z",
-   "t": "Learn Reactjs #05 - Understanding And Managing Packages",
-   "s": "Understanding And Managing Packages Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
-   "tags": [
-    "Elzero Web School"
-   ],
-   "url": "https://www.youtube.com/watch?v=oLkthLKyjIs",
-   "ta": "تعلم Reactjs #05 - فهم الحزم وإدارتها",
-   "sa": "فهم وإدارة الحزم الدروس والواجبات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
   }
  ]
 }
