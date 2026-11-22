@@ -224,7 +224,7 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
       <div class="stat"><b id="lv">0</b><span>كم/س</span></div>
     </div>
     <div style="margin-top:8px"><button class="big" id="rec">▶ ابدأ التسجيل</button></div>
-    <div class="note" style="margin-top:6px">الوقفة = وقوف 8 ثواني أو أكتر. كل رحلة بتخلي الاقتراحات أدق.</div>
+    <div class="note" id="recNote" style="margin-top:6px">بيسجّل مسارك والوقت والمسافة والوقفات (وقوف 8 ثواني أو أكتر) والسرعة، من غير شاشة القيادة. بعد ما توقف: تحليل الرحلة وهل فيه طريق أقصر، وبيزوّد عداد عربيتك، والطرق اللي بتمشيها كتير بتتقدّر بوقتك الحقيقي. ("ابدأ السواقة" اللي على الخريطة = نفس التسجيل + شاشة القيادة والتنبيهات.)</div>
   </div>
 
   <div class="card">
@@ -1327,7 +1327,10 @@ function onFix(p){
 async function startRec(){
   if (!NATIVE && !('geolocation' in navigator)){ $('msg').textContent = 'المتصفح ده مش بيدعم GPS.'; return; }
   $('msg').textContent = ''; pts = []; t0 = Date.now();
-  try { wl = await navigator.wakeLock.request('screen'); } catch(e){}
+  // العداد والزرار يبدأوا فوراً؛ طلب إبقاء الشاشة منوّرة ممكن يفضل معلّق في الـ WebView فمش بنستناه
+  tick = setInterval(live, 1000); live();
+  $('rec').textContent = '■ إيقاف وحفظ'; $('rec').classList.add('red');
+  if (!NATIVE && navigator.wakeLock) navigator.wakeLock.request('screen').then(x => { wl = x; }).catch(() => {});
   if (NATIVE && NP.BackgroundGeolocation){         // بيكمّل يسجّل والشاشة مقفولة أو جوجل مابس قدام
     watchId = 'bg';
     NP.BackgroundGeolocation.addWatcher({backgroundTitle:'سكّتي شغالة', backgroundMessage:'بتسجّل الطريق وبتنبهك قبل الرادارات والكارتات', requestPermissions:true, stale:false, distanceFilter:0},
@@ -1338,8 +1341,6 @@ async function startRec(){
   } else watchId = navigator.geolocation.watchPosition(onFix,
     e => { $('msg').textContent = e.code === 1 ? 'لازم تسمح للموقع من إعدادات المتصفح، والصفحة لازم تتفتح عبر https.' : 'مشكلة في الـGPS: ' + e.message; },
     {enableHighAccuracy:true, maximumAge:0, timeout:20000});
-  tick = setInterval(live, 1000);
-  $('rec').textContent = '■ إيقاف وحفظ'; $('rec').classList.add('red');
 }
 let draftAt = 0;
 function live(){
@@ -1347,6 +1348,8 @@ function live(){
   if (pts.length >= 2 && Date.now() - draftAt > 10000){ draftAt = Date.now(); put('recdraft', {name:$('name').value.trim(), start:pts[0].t, pts:pack(pts)}); }
   $('lt').textContent = fmtT((Date.now() - t0)/1000); $('ld').textContent = km(r.dist); $('ls').textContent = r.stops;
   $('lv').textContent = last && last.v != null ? Math.round(last.v * 3.6) : 0;
+  $('recNote').textContent = pts.length ? '🔴 بيسجّل: مسارك على الخريطة، والوقت والمسافة والوقفات والسرعة.'
+    : '📡 مستني إشارة الـ GPS… لو طوّل، اتأكد إن الموقع مفتوح ومسموح لسكّتي.';
 }
 function stopRec(){
   put('recdraft', null); put('bgwatch', null);
@@ -1355,6 +1358,7 @@ function stopRec(){
   clearInterval(tick);
   try { wl && wl.release(); } catch(e){}
   $('rec').textContent = '▶ ابدأ التسجيل'; $('rec').classList.remove('red'); watchId = null;
+  $('recNote').textContent = 'اتحفظت. التحليل تحت في "📊 تحليل آخر رحلة".';
   if (!navOn && mMe){ mMe.remove(); mMe = null; }
   if (pts.length < 5){ $('msg').textContent = 'التسجيل قصير جداً، اتلغى.'; return; }
   const name = $('name').value.trim() || 'رحلة ' + new Date().toLocaleDateString('ar-EG');
