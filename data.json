@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T08:02:09Z",
+ "updated": "2026-11-22T11:16:58Z",
  "demo": false,
  "items": [
   {
@@ -33,7 +33,14 @@
     "نقاش"
    ],
    "url": "https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens",
-   "url2": "https://news.ycombinator.com/item?id=50596511"
+   "url2": "https://news.ycombinator.com/item?id=50596511",
+   "h": "ثغرات سلاسل الإمداد للـ AI",
+   "x": "اكتشافات خطيرة باستخدام الـ Canary Tokens في أمان الـ Supply Chain للذكاء الاصطناعي.",
+   "tg": [
+    "AI Security",
+    "Supply Chain"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-cUuVObUqbn0",
@@ -45,7 +52,14 @@
    "tags": [
     "WorldofAI"
    ],
-   "url": "https://www.youtube.com/watch?v=cUuVObUqbn0"
+   "url": "https://www.youtube.com/watch?v=cUuVObUqbn0",
+   "h": "نموذج Inkling 2 Mini الجديد",
+   "x": "موديل 26B محلي ينافس بقوة ويهزم النماذج الأكبر في مهام الـ AI Agents.",
+   "tg": [
+    "Local AI",
+    "Agents"
+   ],
+   "tp": "agents"
   },
   {
    "id": "gn-monailabelzerodayaiagentsexploitmedicalimagingresearchserver",
@@ -57,7 +71,14 @@
    "tags": [
     "Agents"
    ],
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbGVRdmxYQ01aU2hXZzlmR0tSbGp4M0JMVTVFcWI3ZTc5SUhyYXJrYTc4RW93VmlkTzNVR3pXS2pTa2ZEamxXX0R6VE9NTjBpRlF3X204bm0xcE9UNkV3cElGd2hsVnVzdG1Wa0FGeTctZlRTeEhpN0pLdkN3TjdfcXNDOTlxaUplVFYyWWJNRkQ2SHpreTFCbjJoZFVpekhJVjkxMmRQeE11a205QWc?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbGVRdmxYQ01aU2hXZzlmR0tSbGp4M0JMVTVFcWI3ZTc5SUhyYXJrYTc4RW93VmlkTzNVR3pXS2pTa2ZEamxXX0R6VE9NTjBpRlF3X204bm0xcE9UNkV3cElGd2hsVnVzdG1Wa0FGeTctZlRTeEhpN0pLdkN3TjdfcXNDOTlxaUplVFYyWWJNRkQ2SHpreTFCbjJoZFVpekhJVjkxMmRQeE11a205QWc?oc=5",
+   "h": "استغلال ثغرات Zero-Day عبر الـ AI Agents",
+   "x": "كيف تستخدم الـ AI agents ثغرات سيرفرات الأبحاث الطبية وتأثير ذلك على البنية التحتية.",
+   "tg": [
+    "Zero-Day",
+    "AI Agents"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50594937",
@@ -185,6 +206,27 @@
     "GitHub"
    ],
    "tp": "oss"
+  },
+  {
+   "id": "hn-50593481",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-21T20:47:41Z",
+   "t": "Pandex – Official European Law for AI Agents, over MCP",
+   "s": "98 نقطة، 22 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.pandex.io",
+   "url2": "https://news.ycombinator.com/item?id=50593481",
+   "h": "قوانين أوروبا للـ AI عبر الـ MCP",
+   "x": "تطبيق Pandex يتيح للـ AI agents الوصول للقانون الأوروبي عبر بروتوكول MCP.",
+   "tg": [
+    "MCP",
+    "AI Agents",
+    "Law"
+   ],
+   "tp": "mcp"
   },
   {
    "id": "yt-yq4FctnSglI",
@@ -376,7 +418,14 @@
    "tags": [
     "Agents"
    ],
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5wVy14UUw1RVVadHFrVVhSNHY2Tm1CcHFwU3lFam0zYVM4Z3hJNnRZZ3ZIbFhzZTF5YVBsR0RoLXRMOTBlUTctcF9aTktFeXNCQ21EdWx0UWJUd0ZzQmxKWjhzNWhITW1qRVNzT0o1dw?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5wVy14UUw1RVVadHFrVVhSNHY2Tm1CcHFwU3lFam0zYVM4Z3hJNnRZZ3ZIbFhzZTF5YVBsR0RoLXRMOTBlUTctcF9aTktFeXNCQ21EdWx0UWJUd0ZzQmxKWjhzNWhITW1qRVNzT0o1dw?oc=5",
+   "h": "تشغيل Inkling 2 Mini محلياً",
+   "x": "متطلبات تشغيل الموديل الجديد عبر Ollama على أجهزة Mac وPC.",
+   "tg": [
+    "Ollama",
+    "Local LLM"
+   ],
+   "tp": "agents"
   },
   {
    "id": "gh-1466700766",
@@ -3069,12 +3118,11 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
-   "h": "جائزة كبرى لتصميمات Forma",
-   "x": "اعتراف عالمي جديد بقدرات أدوات التخطيط والتصميم الذكي في الـ BIM.",
+   "h": "فوز Forma بجائزة Architectural Record",
+   "x": "تصميم Forma يحصد جائزة الأفضل في فئته، خبر يهم مهندسي الـ BIM ومصممي العمارة.",
    "tg": [
-    "Forma",
-    "Architecture",
-    "BIM"
+    "BIM",
+    "Architecture"
    ],
    "tp": "arch"
   },
@@ -6222,20 +6270,6 @@
    "url": "https://www.youtube.com/watch?v=oLkthLKyjIs",
    "ta": "تعلم Reactjs #05 - فهم الحزم وإدارتها",
    "sa": "فهم وإدارة الحزم الدروس والواجبات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
-  },
-  {
-   "id": "hn-50538449",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-17T21:28:57Z",
-   "t": "Ask HN: Aren't the current cyber attacks suspicious?",
-   "s": "15 نقطة، 15 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://news.ycombinator.com/item?id=50538449",
-   "url2": "",
-   "ta": "اسأل HN: أليست الهجمات الإلكترونية الحالية مشبوهة؟"
   }
  ]
 }
