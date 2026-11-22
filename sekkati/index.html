@@ -720,10 +720,14 @@ $('swap').onclick = () => {
   if (dest){ if (mDest) mDest.setLngLat([dest.lon, dest.lat]); else mDest = addMk(mkEl('📍', 'de'), dest.lon, dest.lat, 'bottom'); }
   autoPlan();
 };
-function reverseName(lat, lon, cb){
-  fetch(`https://photon.komoot.io/reverse?lat=${lat}&lon=${lon}`).then(r => r.json()).then(j => {
+function reverseName(lat, lon, cb){                // الاسم بالعربي من Nominatim الأول (Photon بيرجّع أسماء لاتيني)، وPhoton لو فشل
+  const photon = () => fetch(`https://photon.komoot.io/reverse?lat=${lat}&lon=${lon}`).then(r => r.json()).then(j => {
     const p = j.features && j.features[0] && j.features[0].properties; if (p) cb([p.name || p.street, p.district || p.suburb || p.city].filter(Boolean).join('، '));
   }).catch(() => {});
+  fetch(`https://nominatim.openstreetmap.org/reverse?format=json&accept-language=ar&zoom=17&lat=${lat}&lon=${lon}`).then(r => r.json()).then(j => {
+    const a = j.address || {}, name = [a.road || a.pedestrian || j.name, a.suburb || a.neighbourhood || a.quarter || a.city_district || a.town || a.village || a.city].filter(Boolean).join('، ');
+    if (name) cb(name); else photon();
+  }).catch(photon);
 }
 function drawMarks(){
   poiMarkers.splice(0).forEach(m => m.remove()); blockMarkers.splice(0).forEach(m => m.remove());
@@ -1366,7 +1370,11 @@ function stopRec(){
   $('rec').textContent = '▶ ابدأ التسجيل'; $('rec').classList.remove('red'); watchId = null;
   $('recNote').textContent = 'اتحفظت. التحليل تحت في "📊 تحليل آخر رحلة".';
   if (!navOn && mMe){ mMe.remove(); mMe = null; }
-  if (pts.length < 5){ $('msg').textContent = 'التسجيل قصير جداً، اتلغى.'; return; }
+  if (pts.length < 5){                              // من غير مواقع كفاية مفيش رحلة؛ نقول السبب بدل رسالة عامة
+    $('msg').textContent = pts.length ? `التسجيل قصير جداً (وصل ${arab(pts.length)} موقع بس من الـ GPS)، اتلغى.`
+      : 'ماوصلش ولا موقع من الـ GPS، فمفيش حاجة تتحفظ. اتأكد إن الموقع (GPS) مفتوح في الموبايل وإن سكّتي مسموح لها بالموقع.';
+    $('recNote').textContent = $('msg').textContent; return;
+  }
   const name = $('name').value.trim() || 'رحلة ' + new Date().toLocaleDateString('ar-EG');
   trips.unshift({id:Date.now(), name, start:pts[0].t, pts:pack(pts)});
   save(); $('name').value = ''; renderTrips(); carAddTrip(trips[0]);
