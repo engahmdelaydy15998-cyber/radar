@@ -1448,10 +1448,18 @@ function mergeBackup(d){
   (d.jams || []).forEach(j => { if (j.until > Date.now() && !jams.some(x => x.kind === j.kind && hav(x, j) < 60)) jams.push(j); });
   trips.sort((a, b) => b.start - a.start); save(); renderTrips(); drawMarks();
 }
-$('exp').onclick = () => {
-  const blob = new Blob([JSON.stringify(backupData())], {type:'application/json'});
+$('exp').onclick = async () => {
+  const name = 'sekkati-' + new Date().toISOString().slice(0, 10) + '.json', data = JSON.stringify(backupData());
+  if (NATIVE && NP.Filesystem && NP.Share){        // الـ WebView مش بينزّل ملفات؛ بنكتبه ونفتح قايمة المشاركة (Drive، الملفات، واتساب)
+    try {
+      const w = await NP.Filesystem.writeFile({path:name, data, directory:'CACHE', encoding:'utf8'});
+      await NP.Share.share({title:'نسخة سكّتي الاحتياطية', text:'نسخة احتياطية من رحلاتي في سكّتي', files:[w.uri], dialogTitle:'احفظ النسخة الاحتياطية في'});
+    } catch(e){ if (!/cancel/i.test(String(e && e.message))) $('msg').textContent = 'مقدرتش أعمل الملف: ' + (e.message || e) + '. استخدم "تصدير كنص".'; }
+    return;
+  }
+  const blob = new Blob([data], {type:'application/json'});
   const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
-  a.download = 'sekkati-' + new Date().toISOString().slice(0, 10) + '.json';
+  a.download = name;
   document.body.appendChild(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(a.href), 10000);
 };
@@ -1462,7 +1470,12 @@ $('iof').onchange = () => {
   r.onload = () => { try { mergeBackup(JSON.parse(r.result)); } catch(e){ $('msg').textContent = 'الملف مش سليم.'; } };
   r.readAsText(f); $('iof').value = '';
 };
-$('exp2').onclick = () => { const io = $('io'); io.hidden = false; io.value = JSON.stringify(backupData()); io.select(); };
+$('exp2').onclick = () => {
+  const io = $('io'), txt = JSON.stringify(backupData()); io.hidden = false; io.value = txt; io.select();
+  const ok = () => { $('exp2').textContent = '✔ اتنسخ، الصقه في واتساب أو الملاحظات'; setTimeout(() => $('exp2').textContent = 'تصدير كنص', 4000); };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(ok, () => { try { if (document.execCommand('copy')) ok(); } catch(e){} });
+  else try { if (document.execCommand('copy')) ok(); } catch(e){}
+};
 $('imp').onclick = () => {
   const io = $('io');
   if (io.hidden || !io.value.trim()){ io.hidden = false; io.value = ''; return; }
