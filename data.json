@@ -1,7 +1,90 @@
 {
- "updated": "2026-11-22T01:15:43Z",
+ "updated": "2026-11-22T08:02:09Z",
  "demo": false,
  "items": [
+  {
+   "id": "gn-servingalocalllmtoseveralusersollamalmstudiollamacppandvllmb",
+   "cat": "agents",
+   "src": "SitePoint",
+   "ts": "2026-11-22T08:00:07Z",
+   "t": "Serving a Local LLM to Several Users: Ollama, LM Studio, llama.cpp and vLLM Benchmarked",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNWgzMTBuR2FtTGdnYXdQWEF0cHVibDZwMm85ZFBMamoyckRERUFrUTZKWjgyMU1nZVRpMHpwSFJBYUJVQ1VaWTN5aFRJdFpVLUZ5NEc3dEtld3VaSW5MUUx0V09ZdEpFWGRYSXU5MlJEMEVXN214MW43SExHRVF5c0x6eXlac1RjVUZfbmpkWDBTNmJ2Ny1ieTdYNzlsclFsa2VLeUpIMGhVell0c3otNA?oc=5",
+   "h": "مقارنة تشغيل Local LLM لعدة مستخدمين",
+   "x": "تعرف على أداء Ollama وvLLM في تشغيل النماذج لفريقك المكتبي.",
+   "tg": [
+    "LLM",
+    "Ollama",
+    "vLLM"
+   ],
+   "tp": "agents"
+  },
+  {
+   "id": "hn-50596511",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-22T05:11:43Z",
+   "t": "AI Supply Chain Security: What Canary Tokens Found",
+   "s": "53 نقطة، 6 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens",
+   "url2": "https://news.ycombinator.com/item?id=50596511"
+  },
+  {
+   "id": "yt-cUuVObUqbn0",
+   "cat": "agents",
+   "src": "YouTube",
+   "ts": "2026-11-22T05:00:39Z",
+   "t": "Inkling 2 Mini Is INSANE! NEW 26B Local AI Model BEATS Qwen 3.8 27B! (Fully Tested)",
+   "s": "Try DecisionNode, typed AI decisions in milliseconds. $5 off your first top-up of $10 or more: https://decisionnode.com/?ref=c8623hz7 Thinking Machin…",
+   "tags": [
+    "WorldofAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=cUuVObUqbn0"
+  },
+  {
+   "id": "gn-monailabelzerodayaiagentsexploitmedicalimagingresearchserver",
+   "cat": "agents",
+   "src": "Cloud Security Alliance (CSA)",
+   "ts": "2026-11-22T02:23:51Z",
+   "t": "MONAI Label Zero-Day: AI Agents Exploit Medical Imaging Research Servers",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbGVRdmxYQ01aU2hXZzlmR0tSbGp4M0JMVTVFcWI3ZTc5SUhyYXJrYTc4RW93VmlkTzNVR3pXS2pTa2ZEamxXX0R6VE9NTjBpRlF3X204bm0xcE9UNkV3cElGd2hsVnVzdG1Wa0FGeTctZlRTeEhpN0pLdkN3TjdfcXNDOTlxaUplVFYyWWJNRkQ2SHpreTFCbjJoZFVpekhJVjkxMmRQeE11a205QWc?oc=5"
+  },
+  {
+   "id": "hn-50594937",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-22T00:14:05Z",
+   "t": "Tesla launches FSD v15, targets its biggest weaknesses, from signs to potholes",
+   "s": "25 نقطة، 5 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/",
+   "url2": "https://news.ycombinator.com/item?id=50594937"
+  },
+  {
+   "id": "hn-50594911",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-22T00:07:59Z",
+   "t": "Sandwich Simulator",
+   "s": "174 نقطة، 61 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://stulle.app/",
+   "url2": "https://news.ycombinator.com/item?id=50594911"
+  },
   {
    "id": "af-httpssimonwillisonnet2026Nov21muru",
    "cat": "agents",
@@ -125,6 +208,19 @@
    "tp": "courses"
   },
   {
+   "id": "hn-50593091",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-21T20:03:50Z",
+   "t": "Big Data Is Dead",
+   "s": "14 نقطة، 1 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://motherduck.com/blog/big-data-is-dead/",
+   "url2": "https://news.ycombinator.com/item?id=50593091"
+  },
+  {
    "id": "gn-opencodeandalocalllmhandletheboring80ofmycodingsoclaudeonlyg",
    "cat": "agents",
    "src": "XDA",
@@ -134,7 +230,15 @@
    "tags": [
     "Agents"
    ],
-   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZmpqNE9ydlRXRVA1TGU5OU9TZmM3UUJHNWVTU2YzbloxWVNYcUpSSnpEOXhoLVV0bVl6VUJPdTFDYnYyVW93LTh1WjJVaVN4Y1dweGVyX3ltem0yWk44TU84dUI5a0xpTndtdXVwT2VJcnZzTEpDXzFyN1o4eUVRWWxSUlI2MXl4U242bWJUNUZ4Z0ZhMGRqbWhxQVFiM21WbDhYYmQxM01BeERqTFg1ZjVoNzFmb1JENTFaQjR0R1pDZw?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZmpqNE9ydlRXRVA1TGU5OU9TZmM3UUJHNWVTU2YzbloxWVNYcUpSSnpEOXhoLVV0bVl6VUJPdTFDYnYyVW93LTh1WjJVaVN4Y1dweGVyX3ltem0yWk44TU84dUI5a0xpTndtdXVwT2VJcnZzTEpDXzFyN1o4eUVRWWxSUlI2MXl4U242bWJUNUZ4Z0ZhMGRqbWhxQVFiM21WbDhYYmQxM01BeERqTFg1ZjVoNzFmb1JENTFaQjR0R1pDZw?oc=5",
+   "h": "تسريع كتابة كود بايثون عبر Local LLM",
+   "x": "استخدم Local LLM لإنجاز المهام المتكررة بالكود وتوفير Claude للمهام الصعبة.",
+   "tg": [
+    "Coding",
+    "LLM",
+    "Automation"
+   ],
+   "tp": "agents"
   },
   {
    "id": "gn-autodeskneilsoftlaunchbimanddigitaltwincentre",
@@ -263,6 +367,18 @@
    "tp": "courses"
   },
   {
+   "id": "gn-inkling2miniollamasetupmacrequirementsandpcoptions",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-21T16:00:00Z",
+   "t": "Inkling 2 Mini Ollama Setup: Mac Requirements and PC Options",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5wVy14UUw1RVVadHFrVVhSNHY2Tm1CcHFwU3lFam0zYVM4Z3hJNnRZZ3ZIbFhzZTF5YVBsR0RoLXRMOTBlUTctcF9aTktFeXNCQ21EdWx0UWJUd0ZzQmxKWjhzNWhITW1qRVNzT0o1dw?oc=5"
+  },
+  {
    "id": "gh-1466700766",
    "cat": "arch",
    "src": "GitHub",
@@ -323,6 +439,25 @@
     "Code"
    ],
    "tp": "news"
+  },
+  {
+   "id": "gh-1466635339",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-21T14:40:27Z",
+   "t": "EL4CTEO/fast-anything: Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps,…",
+   "s": "371 نجمة، لغة Rust",
+   "tags": [
+    "MCP"
+   ],
+   "url": "https://github.com/EL4CTEO/fast-anything",
+   "h": "أداة fast-anything لتسريع التطبيقات بـ Rust",
+   "x": "بدل من إعادة كتابة المشروع كاملاً، قم بتسريع الـ 5% البطيئة بـ Rust.",
+   "tg": [
+    "Rust",
+    "Performance"
+   ],
+   "tp": "oss"
   },
   {
    "id": "gh-1466630833",
@@ -409,6 +544,26 @@
    "tp": "agents"
   },
   {
+   "id": "gn-autodeskandneilsoftjoinforcestosetupaecocentreofexcellencein",
+   "cat": "arch",
+   "src": "Indian Chemical News",
+   "ts": "2026-11-21T13:00:00Z",
+   "t": "Autodesk and Neilsoft join forces to set up AECO Centre of Excellence in Pune",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOYWl1SHRpX05fYVl2SUdOWl94SklLc0Q2SlFqWVFBZlB1dHFDX1FQc3NNOUtWT2NaSUpsUEpTa3VhSHlwa0tJcTVaTExINndnTTVETFZQSG85TmlLZkNoVVNtOWJVSU90UDl3ZVBmVnQwY3NhX3prZmFLQlg2a0JuRVl5eHlWa3dJZmR0N1pJQkNnUjVLWUlRRDNzSHdiZ2sxaVdRemstSnkxX29PQmpqckJKWjUwTjdwaWZJZkdTaGtYYU9IbVhIM0RYa9IBywFBVV95cUxOYWl1SHRpX05fYVl2SUdOWl94SklLc0Q2SlFqWVFBZlB1dHFDX1FQc3NNOUtWT2NaSUpsUEpTa3VhSHlwa0tJcTVaTExINndnTTVETFZQSG85TmlLZkNoVVNtOWJVSU90UDl3ZVBmVnQwY3NhX3prZmFLQlg2a0JuRVl5eHlWa3dJZmR0N1pJQkNnUjVLWUlRRDNzSHdiZ2sxaVdRemstSnkxX29PQmpqckJKWjUwTjdwaWZJZkdTaGtYYU9IbVhIM0RYaw?oc=5",
+   "h": "مركز تميز جديد للـ AECO في الهند",
+   "x": "تأسيس مركز تميز لتطوير حلول الـ BIM وخدمات الهندسة المعمارية والإنشائية.",
+   "tg": [
+    "BIM",
+    "AECO",
+    "Autodesk"
+   ],
+   "tp": "arch"
+  },
+  {
    "id": "yt-G2AGx8zzX88",
    "cat": "long",
    "src": "YouTube",
@@ -454,6 +609,26 @@
    ],
    "url": "https://www.alcf.anl.gov/news/exascale-fusion-simulation-team-named-finalist-2026-gordon-bell-prize",
    "url2": "https://news.ycombinator.com/item?id=50587205"
+  },
+  {
+   "id": "gn-autodeskadskbringscloudbuildingcodechecksintoformaworkflows",
+   "cat": "arch",
+   "src": "Yahoo Finance",
+   "ts": "2026-11-21T08:14:44Z",
+   "t": "Autodesk (ADSK) Brings Cloud Building Code Checks Into Forma Workflows",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOYmZGOTRrNjJOeV8xaWdza1BRVk5zeG9taFV5LUxFOWRvNVhJNjRYSmZEZDlBelk1VEFLV3ZGRmJJV0RKOXBiZzBDQU5GX1dBOG05aFJGZFh6aGRDUFduc3RmMG5sMjVCaVRTRHR5WGl2cGUtRkFsTmJJMHQ2OFNXQmpoczJXUUpjSUtwbXJkNHlLMExNbmtyTGtFa3o?oc=5",
+   "h": "أكواد البناء السحابية في Forma",
+   "x": "فحص أكواد البناء السحابية أصبح جزءاً من بيئة التصميم لمشاريع الـ BIM.",
+   "tg": [
+    "Forma",
+    "Cloud",
+    "BIM"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-a36atq-Dy8A",
@@ -2893,7 +3068,15 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
+   "h": "جائزة كبرى لتصميمات Forma",
+   "x": "اعتراف عالمي جديد بقدرات أدوات التخطيط والتصميم الذكي في الـ BIM.",
+   "tg": [
+    "Forma",
+    "Architecture",
+    "BIM"
+   ],
+   "tp": "arch"
   },
   {
    "id": "hn-50562582",
@@ -4611,7 +4794,15 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMk9Wal83ZG1aczJiLWJlT3dxT2RKWm8wMkFyMEJES3VKSHhHVzVjRE5KNTdFMFlKWndJbVBEVzR1emx3MUl2M01zZXcwbDJrZ05Ud1lEN05vRExzOGFPV1RMV1VZTE1DX1BGbDBWc2RESHZRcEhIb29XYXU3U2tvOEdDbnd4OEc5cGVOcFFZYk9UNjJpVkRiNEVxUGpZNUZSQUNKZ2M4bkJ5dlJZbzBOckcxdkR3alVENnRSYQ?oc=5",
-   "ta": "تم اختراق حزمة Microsoft Agent Framework PyPI لسرقة بيانات الاعتماد"
+   "ta": "تم اختراق حزمة Microsoft Agent Framework PyPI لسرقة بيانات الاعتماد",
+   "h": "اختراق مكتبة Agent Framework على PyPI",
+   "x": "اختراق أمني لمكتبة ذكاء اصطناعي يسرق بيانات الاعتماد، احذر في مشاريعك.",
+   "tg": [
+    "Security",
+    "Agents",
+    "Python"
+   ],
+   "tp": "agents"
   },
   {
    "id": "yt-Dg2Z6IRbDVI",
@@ -5103,7 +5294,15 @@
    ],
    "url": "https://www.youtube.com/shorts/gcyO9ZI3dbI",
    "ta": "المستويات الثمانية لكلود: قام المستوى 8 بتحرير هذه البكرة بين عشية وضحاها",
-   "sa": "هذه البكرة؟ قام كلود بتحريره بنفسه، الليلة الماضية، في الساعة الثانية صباحًا. هذا هو المستوى 8. الدردشة، والمشاريع، والتحف، والموصلات، والعمل المشترك، والمهارات، وكلود كود، ..."
+   "sa": "هذه البكرة؟ قام كلود بتحريره بنفسه، الليلة الماضية، في الساعة الثانية صباحًا. هذا هو المستوى 8. الدردشة، والمشاريع، والتحف، والموصلات، والعمل المشترك، والمهارات، وكلود كود، ...",
+   "h": "تطوير قدرات Claude وعمل الـ agents ليلاً",
+   "x": "تعرف على قدرات Claude في أتمتة المهام المعمارية وبرمجة الكود عبر الـ agents الذكية.",
+   "tg": [
+    "Claude",
+    "agents",
+    "AI"
+   ],
+   "tp": "agents"
   },
   {
    "id": "rss-httpsaecmagcomcadrayonv4adifferentbetonthefutureofcad",
@@ -5117,7 +5316,15 @@
    ],
    "url": "https://aecmag.com/cad/rayon-v4-a-different-bet-on-the-future-of-cad/",
    "ta": "Rayon V4: رهان مختلف على مستقبل CAD",
-   "sa": "تأتي النمذجة ثلاثية الأبعاد، ووكيل الذكاء الاصطناعي، والعرض التوليدي، والوصول عبر الهاتف المحمول إلى برنامج CAD القائم على المتصفح. المنشور Rayon V4: رهان مختلف على مستقبل C..."
+   "sa": "تأتي النمذجة ثلاثية الأبعاد، ووكيل الذكاء الاصطناعي، والعرض التوليدي، والوصول عبر الهاتف المحمول إلى برنامج CAD القائم على المتصفح. المنشور Rayon V4: رهان مختلف على مستقبل C...",
+   "h": "إطلاق Rayon V4 للـ CAD السحابي مع الـ AI",
+   "x": "أداة CAD سحابية جديدة تدعم النمذجة ثلاثية الأبعاد والـ AI agent لتسريع الشغل المعماري.",
+   "tg": [
+    "CAD",
+    "BIM",
+    "AI"
+   ],
+   "tp": "arch"
   },
   {
    "id": "rss-cmagcomworkstationsrendaandnexaluslaunchliquidcooledaiserver",
@@ -5144,7 +5351,15 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxOeTRDTGVtOG9JVWd0QWgyUEJPUnZMZDdKX0htMmdGckRJeGg5dWlCaXNkMTZ4Ym51UkI4Z3ZJdlo1T21YU1J0Vk5mMUlyMm1EOXI0enc0V0E1NV8wY3o3RVpLUU5waU1rZW9odlMzejJGbVlONzliMmhxRnVxZUc2TGlKbnphbVdMRWw3QXJ1bTNxUGdteGtvWlhiLUtqQ2c3cFlLd3VRSUFlNUJvTm1Wb2s3dWxaSXBIM0dRVHZQZUJSR2tRcTZLZmdPRU1KcTZYSTdGcHo4a1F6Nnc4ZDhpOTQ1bnJra0V0TDlEODI0bHRGSVloREk4VTF1MFdwZ1dSVE5kbHppamkwR0pnTEZ0bm0zLVcweWdDaFhGME1NNDF2UQ?oc=5",
-   "ta": "لا تنتظر أيها المطورون الذين لا يستخدمون برنامج Revit! قم بإنشاء وظائف Revit الإضافية الخاصة بك باستخدام الذكاء الاصطناعي وواجهة برمجة تطبيقات Revit."
+   "ta": "لا تنتظر أيها المطورون الذين لا يستخدمون برنامج Revit! قم بإنشاء وظائف Revit الإضافية الخاصة بك باستخدام الذكاء الاصطناعي وواجهة برمجة تطبيقات Revit.",
+   "h": "ابرمج Revit add-ins بنفسك باستخدام الـ AI",
+   "x": "حتى لو مش مبرمج، يقدر الـ AI يساعدك تكتب كود وتطور إضافات لبرنامج Revit عبر الـ API.",
+   "tg": [
+    "Revit",
+    "Add-ins",
+    "API"
+   ],
+   "tp": "addins"
   },
   {
    "id": "gn-couldaipowereddigitaltwinsmakeourfutureenergysystemssmartera",
@@ -5157,7 +5372,15 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9uUjNyX3lLNVZVc1JZc2dKcmZMZnd5ZTBuOGlBVktaWTVYV1dWTUhGTll6QjhiRElybnF4NWp5ZU4wcEpxWHlod2tUUzFjWkhIR2xnUFBQUF9vdEE?oc=5",
-   "ta": "هل يمكن للتوائم الرقمية المدعومة بالذكاء الاصطناعي أن تجعل أنظمة الطاقة المستقبلية لدينا أكثر ذكاءً وأقل تكلفة؟"
+   "ta": "هل يمكن للتوائم الرقمية المدعومة بالذكاء الاصطناعي أن تجعل أنظمة الطاقة المستقبلية لدينا أكثر ذكاءً وأقل تكلفة؟",
+   "h": "Digital Twins مدعومة بالـ AI لطاقة أذكى",
+   "x": "ازاي الـ Digital Twins والـ AI بيغيروا مستقبل إدارة الطاقة في المشاريع.",
+   "tg": [
+    "Digital Twins",
+    "AI",
+    "BIM"
+   ],
+   "tp": "arch"
   },
   {
    "id": "gn-abouthalfofmechanicalcontractorsratebimtoshoplinkshighly",
@@ -5170,7 +5393,15 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOU1JSNVBHd0JBTy13Z2xMNWppVTNKU2JJaXN5N3lNOV9OTGpiMzlRV2pBcWN4cVNidE5fZDVtWjhrby1xNEtKWUdYRlk1ZUEzZ1d1cFMwb2FsMlprZnYtd3d6cTZjc1pHVlZadHY2M25uUkhVdDBieGhEc0hDRnV4TmV0MmppcThKb3Rmc3NyZG9JOV81NHF2bm5yTVBpbGJNTTJkTXppenFhRGJDb0prNWtIcDhtZmJTVUQyaExnSXA4cXdRV2FwdVlpVUZ5WjE2aWx5c2c3SEw?oc=5",
-   "ta": "حوالي نصف المقاولين الميكانيكيين يقيمون روابط BIM-to-shop بدرجة عالية"
+   "ta": "حوالي نصف المقاولين الميكانيكيين يقيمون روابط BIM-to-shop بدرجة عالية",
+   "h": "أهمية ربط الـ BIM بمرحلة الـ Fabrication",
+   "x": "نصف مقاولي الميكانيكا بيعتمدوا على ربط الـ BIM بالورشة لتسريع التنفيذ.",
+   "tg": [
+    "BIM",
+    "Revit",
+    "Fabrication"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-z-uPdD3w5h8",
@@ -5184,7 +5415,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=z-uPdD3w5h8",
    "ta": "تعلم Reactjs #06 - فهم هيكل المشروع",
-   "sa": "فهم هيكل المشروع الدروس والواجبات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+   "sa": "فهم هيكل المشروع الدروس والواجبات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
+   "h": "دليل هيكلة مشروعات React.js",
+   "x": "شرح عملي لفهم تنظيم الملفات والمجلدات في مشروعات React.",
+   "tg": [
+    "React",
+    "Coding",
+    "Web"
+   ],
+   "tp": "courses"
   },
   {
    "id": "hn-50545232",
@@ -5211,7 +5450,15 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWGJyTk9TeDdnUndJcTFNTjFvOVJ0VnhjQ3l5VnhKaXZfUmg4SkVPQ0p0aGg4X2lXMFVscDI0NnU2Y0hZUnIwVDVLdXpic0V1UEoyMl9MS1YzT19IQ3U1LXhCajRMUlFHNGVjalprQjZLZV9jS2lEUVdrWWZiSnF1akYwTWxlei0zYjBuZ2c3ZmRnMWU1Y01TdGVCbWRvcjAyWXdZUkJhWTllQVZqMWNIQVBTUE1Idw?oc=5",
-   "ta": "يتناول الحدث تأثير الذكاء الاصطناعي على الهندسة المعمارية والتصميم"
+   "ta": "يتناول الحدث تأثير الذكاء الاصطناعي على الهندسة المعمارية والتصميم",
+   "h": "تأثير الذكاء الاصطناعي على العمارة",
+   "x": "فعالية جديدة تناقش إزاي الـ AI بيعيد تشكيل مستقبل التصميم المعماري.",
+   "tg": [
+    "AI",
+    "Architecture",
+    "Design"
+   ],
+   "tp": "arch"
   },
   {
    "id": "gn-autodeskandneilsofttosetupaecocentreofexcellenceinpune",
@@ -5224,7 +5471,15 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQUmEtck9FbWxFTFY5ZG1kbkFQZFhNb3NUazNlNjRfOHJHLVhDS2RaSzJEdkcwV3BxU092ZkdrdEgzdW5mX21GenpseUJ4elNyV2lRSzhFeUZSeDlYY2JzUlVOSG1xSzBmN1J2ZF9nRl9OM2RvZ1c1QUdaV1Bwa2hFTDhJOENZQ2Rtby1mWXJvMDB0VHlYcG9uQ0QxMW5pby1tcG9PbElkZjBhZW9sa1BkNkI0cU84ak1nM3lPUDRUeTJYTnpHcVI4VFFKd0w1N1ZGM3c?oc=5",
-   "ta": "أوتوديسك ونيلسوفت لإنشاء مركز AECO للتميز في بيون"
+   "ta": "أوتوديسك ونيلسوفت لإنشاء مركز AECO للتميز في بيون",
+   "h": "مركز تميز جديد للـ AECO من Autodesk",
+   "x": "شراكة استراتيجية لتعزيز الابتكار التكنولوجي في قطاع الـ AEC.",
+   "tg": [
+    "Autodesk",
+    "BIM",
+    "AECO"
+   ],
+   "tp": "arch"
   },
   {
    "id": "gn-selfhostingopensourcellmsollamavsvllmvshuggingface",
@@ -5237,7 +5492,15 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbWhFQ2lpT3BMX3kzSDEwbVMtd01tb2s0WTNKOGJJNGhVTHd0dTBqTDZXQWV2bGlWUFY0cElsenI1X1FVTXZMd3Q4YS1XZGFPYkZkNkQxX0tYWFdmNHJkbS1fOTdlMmhxSVAtODZ1UGVneVlIbDlwVTY0bzBnWUxrYmxlYzFBRU9jdXNtUWZWb1pXYk5GYW96UlVzZkgza3MxYi1rRzFHbw?oc=5",
-   "ta": "LLMs مفتوحة المصدر ذاتية الاستضافة: Ollama vs vLLM vs Hugging Face"
+   "ta": "LLMs مفتوحة المصدر ذاتية الاستضافة: Ollama vs vLLM vs Hugging Face",
+   "h": "مقارنة استضافة الـ LLMs محلياً",
+   "x": "دليل سريع للمقارنة بين Ollama و vLLM و Hugging Face لتشغيل النماذج.",
+   "tg": [
+    "LLM",
+    "Ollama",
+    "AI"
+   ],
+   "tp": "agents"
   },
   {
    "id": "gn-neilsoftautodesksetupbuiltenvironmentinnovationhubinpune",
@@ -5250,7 +5513,15 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQMHRLd3ZBRmNHS1ZRaWkyU3ZrczdMdmpJRS0zM29Hd0phY2tYaFFEaHhoM1Uwc25TQ1pYTmZCakZXZGhVNEhlczJIUnRRbEp4OXAxMTl0bDNJekg3X1ItQTdtVmYtYjAtSHdLZGFPOFlCb1IxNVNtX00xT21aaEN6UFRxUl9acHpZanJBdG5QUU1tV01kWkdHYzNucXhfeHRpbHBhSXZSWXh4QdIBqgFBVV95cUxQMHRLd3ZBRmNHS1ZRaWkyU3ZrczdMdmpJRS0zM29Hd0phY2tYaFFEaHhoM1Uwc25TQ1pYTmZCakZXZGhVNEhlczJIUnRRbEp4OXAxMTl0bDNJekg3X1ItQTdtVmYtYjAtSHdLZGFPOFlCb1IxNVNtX00xT21aaEN6UFRxUl9acHpZanJBdG5QUU1tV01kWkdHYzNucXhfeHRpbHBhSXZSWXh4QQ?oc=5",
-   "ta": "نيلسوفت وأوتوديسك ينشئان مركزًا للابتكار البيئي المبني في بيون"
+   "ta": "نيلسوفت وأوتوديسك ينشئان مركزًا للابتكار البيئي المبني في بيون",
+   "h": "مركز ابتكار للبيئة العمرانية",
+   "x": "Autodesk تطلق hub جديد لدعم التكنولوجيا والحلول الهندسية.",
+   "tg": [
+    "Autodesk",
+    "BIM",
+    "Innovation"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-q8iHsdzd94U",
@@ -5264,7 +5535,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=q8iHsdzd94U",
    "ta": "كلود فابل 5.5 أم أوبوس 5.6؟! GPT-6.2 أسترا وسول، جيميني 4 نيون اليوم! ومايكروسوفت ماي! أخبار الذكاء الاصطناعي",
-   "sa": "يمكن للعملاء الآن تصفح الويب والتفاعل معه مثل البشر: https://browserbase.run/yt-wai-2 🚨 قد يتوفر Claude Fable 5.5 أو Opus 5.6 قريبًا..."
+   "sa": "يمكن للعملاء الآن تصفح الويب والتفاعل معه مثل البشر: https://browserbase.run/yt-wai-2 🚨 قد يتوفر Claude Fable 5.5 أو Opus 5.6 قريبًا...",
+   "h": "تطور الـ AI Agents وتصفح الويب",
+   "x": "إزاي الـ agents بقت تقدر تتصفح وتتفاعل مع الويب زي البشر تماماً.",
+   "tg": [
+    "Agents",
+    "AI",
+    "Automation"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50543947",
@@ -5278,7 +5557,15 @@
    ],
    "url": "https://news.ycombinator.com/item?id=50543947",
    "url2": "",
-   "ta": "كلود يحصل على هيلا بجنون العظمة"
+   "ta": "كلود يحصل على هيلا بجنون العظمة",
+   "h": "سلوك غريب وحذر لـ Claude",
+   "x": "نقاش تقني على Hacker News عن تغيرات غير معتادة في استجابات Claude.",
+   "tg": [
+    "Claude",
+    "AI",
+    "LLM"
+   ],
+   "tp": "news"
   },
   {
    "id": "gn-rhino9patchessubdsandtheaiintheroom",
@@ -5291,7 +5578,15 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNTjlzcGVCbTZIYnRjM1hmNmhXTHEwenRjN05Qa3A3blpxa3ZhRW9YME9wUkVtbV9Fc3gyOUFHUXBQb3JTS1NzMlVrOFAzSlZNdUhnbE9mem95cFAzaUM1cFhsbEVGS1NWMUN0clVwYmVzYkxrS2p3dzlCV2Q3Unl5ckNldTB1QnAweHF6UlRadw?oc=5",
-   "ta": "وحيد القرن 9: التصحيحات، وSubDs، والذكاء الاصطناعي في الغرفة"
+   "ta": "وحيد القرن 9: التصحيحات، وSubDs، والذكاء الاصطناعي في الغرفة",
+   "h": "Rhino 9 قادم بـ SubDs والذكاء الاصطناعي",
+   "x": "تحديثات قوية في Rhino 9 تفيد مهندسي الـ BIM والتصميم التداخلي مع أدوات AI جديدة.",
+   "tg": [
+    "Rhino",
+    "BIM",
+    "AI"
+   ],
+   "tp": "arch"
   },
   {
    "id": "gn-gpt62astraandsollaunchsametokenpriceasclaudebutupto6xcheaper",
@@ -5304,7 +5599,14 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxONklDZDByYVFzMS1CMGltTWpkZWtuMDRlYTFfaS1ReHpnN0hlWm90el9wUHgyMVpHX2ptbmNwQ3dHWk5IcVlPWjVlSjhKcldKUkQ2LVRiRVJ4MUpHZHZMSUU4QUVoRUVRcDdHQUVJUllBX2VxM0Fhb0VBNXVSS3lVa1Npd2hMRGZ2OXZlNnF1Q2VTNlRST242ZUFRTGdxeGpVOG8wR3RNQ0dKUmFEd1k3Y0Fn?oc=5",
-   "ta": "إطلاق GPT-6.2 Astra وSol: نفس سعر الرمز المميز لـ Claude، لكن التكاليف الحقيقية أرخص بما يصل إلى 6 مرات"
+   "ta": "إطلاق GPT-6.2 Astra وSol: نفس سعر الرمز المميز لـ Claude، لكن التكاليف الحقيقية أرخص بما يصل إلى 6 مرات",
+   "h": "إطلاق GPT-6.2 Astra بتكلفة أرخص 6 مرات",
+   "x": "موديل جديد ينافس بقوة في توفير التكاليف للـ AI agents وأتمتة الكود.",
+   "tg": [
+    "LLM",
+    "Agents"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50543119",
@@ -5318,7 +5620,14 @@
    ],
    "url": "https://pirateface.co/articles/pirate-face-cli",
    "url2": "https://news.ycombinator.com/item?id=50543119",
-   "ta": "يحتاج Torrent Infra إلى التحديث على الفور حتى تتمكن النماذج المفتوحة من البقاء"
+   "ta": "يحتاج Torrent Infra إلى التحديث على الفور حتى تتمكن النماذج المفتوحة من البقاء",
+   "h": "تطوير بنية Torrent التحتية لدعم Open Models",
+   "x": "تحديث ضروري لبنية مشاركة الملفات لضمان استمرار وتطور النماذج المفتوحة.",
+   "tg": [
+    "OpenSource",
+    "Infra"
+   ],
+   "tp": "oss"
   },
   {
    "id": "yt-2HTBY1FL4As",
@@ -5332,7 +5641,14 @@
    ],
    "url": "https://www.youtube.com/shorts/2HTBY1FL4As",
    "ta": "نضع Blurt على Android Auto 🚀",
-   "sa": "أصبحت خدمة تحويل الكلام إلى نص دقيقة وسريعة وبأسعار معقولة في السيارات 🤯 ظل الإدخال الصوتي لنظام Android Auto يخطئ في فهم أسماء الشوارع في سنغافورة، لذلك أنشأت Mart…"
+   "sa": "أصبحت خدمة تحويل الكلام إلى نص دقيقة وسريعة وبأسعار معقولة في السيارات 🤯 ظل الإدخال الصوتي لنظام Android Auto يخطئ في فهم أسماء الشوارع في سنغافورة، لذلك أنشأت Mart…",
+   "h": "دمج Blurt مع Android Auto",
+   "x": "تحسين الإدخال الصوتي Speech-to-Text للسيارات لحل مشاكل الأسماء واللهجات الصعبة.",
+   "tg": [
+    "Android",
+    "Audio"
+   ],
+   "tp": "news"
   },
   {
    "id": "gn-claudecodev21325fixessecurityandpermissions",
@@ -5345,7 +5661,15 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOMnpBamVkbWRrY29acHU0aUdtOTJoT0E5Z2tna3Nid191ODRXR0w1aFlTZzdJZkt0a3lPbVl1dWRhSm9pOHJpaWpZbmw4WXNmVnhJSzd3MkQtU0ZHSWhFMzNwM1VTU0VtSVBNaXd4Tlo0OWN0NkdMNnk2Q3BqOGJIbHBWTQ?oc=5",
-   "ta": "Claude Code v2.1.325 يعمل على إصلاح الأمان والأذونات"
+   "ta": "Claude Code v2.1.325 يعمل على إصلاح الأمان والأذونات",
+   "h": "تحديث Claude Code v2.1.325 للأمان والصلاحيات",
+   "x": "إصلاحات أمنية هامة وصلاحيات أفضل لمطوري البرمجيات باستخدام Claude.",
+   "tg": [
+    "Claude",
+    "Security",
+    "Code"
+   ],
+   "tp": "agents"
   },
   {
    "id": "gn-lessonsfromchinahowclientsaregettingaheadwithaiandwhatarchit",
@@ -5358,7 +5682,15 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVDE1RGFfOGxnUkdYREh4OWl2SldSd0pUYnJXd0MyVzVNckhNZTZZTS01VHNxUGdTbkp4UlZFT1AyMGdzY1pDR01HVmc1Q2Jjc3ZNS3FrNThWUVpqS2loX1JrNWozSzdHUnRBenRFRzEzdzh4V21FeXNKZlNPR0lxa3hFSFhhNk5WRXY0ZFdXcU8?oc=5",
-   "ta": "دروس من الصين: كيف يتقدم العملاء في مجال الذكاء الاصطناعي، وما يمكن للمهندسين المعماريين فعله حيال ذلك"
+   "ta": "دروس من الصين: كيف يتقدم العملاء في مجال الذكاء الاصطناعي، وما يمكن للمهندسين المعماريين فعله حيال ذلك",
+   "h": "دروس من الصين: كيف يسبق العملاء المعماريين بالـ AI؟",
+   "x": "تعرف على كيفية استخدام العملاء للذكاء الاصطناعي في قطاع العمارة وكيف تواجه التحدي.",
+   "tg": [
+    "Architecture",
+    "AI",
+    "BIM"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt---ifDcgr3UY",
@@ -5372,7 +5704,14 @@
    ],
    "url": "https://www.youtube.com/shorts/--ifDcgr3UY",
    "ta": "كلود وايت بورد: ملاحظاتك الفوضوية تصبح خطة في 4 حركات",
-   "sa": "ملاحظات فوضوية؟ يحولها كلود إلى خطة باستخدام ألواح كلود البيضاء الجديدة. 4 حركات: قم برمي كل شيء على اللوحة، وقم بدعوة فريقك، واطلب المدرسة..."
+   "sa": "ملاحظات فوضوية؟ يحولها كلود إلى خطة باستخدام ألواح كلود البيضاء الجديدة. 4 حركات: قم برمي كل شيء على اللوحة، وقم بدعوة فريقك، واطلب المدرسة...",
+   "h": "تحويل الملاحظات العشوائية لخطط مع Claude Whiteboards",
+   "x": "أداة جديدة من Claude لتحويل أفكارك وملاحظاتك إلى خطة عمل منظمة في خطوات معدودة.",
+   "tg": [
+    "Claude",
+    "Productivity"
+   ],
+   "tp": "agents"
   },
   {
    "id": "gn-claudesonnet55pricebenchmarksandwhogetsit",
@@ -5385,7 +5724,14 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1ldU84YncyWEp0dDVCRmR3Z0JkNnE1MFJmZEtNZ29GYWVMOVZSdmN6Q1hmZFhzQU41bE1UckxaV1I2VG9WVlFpWDBXQTdnaDg?oc=5",
-   "ta": "كلود سونيت 5.5: السعر والمعايير ومن يحصل عليه"
+   "ta": "كلود سونيت 5.5: السعر والمعايير ومن يحصل عليه",
+   "h": "تقييم وأسعار Claude Sonnet 5.5",
+   "x": "استعراض لأداء وتسعير الإصدار الجديد من Sonnet ومين المستفيد منه في البرمجة.",
+   "tg": [
+    "Claude",
+    "Benchmarks"
+   ],
+   "tp": "agents"
   },
   {
    "id": "gn-autodeskandneilsoftbuildjointgotomarketpusharoundbimanddigit",
@@ -5398,7 +5744,15 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPWHlFV2dUcDVkSHlQNXhhVGdSNzFfclFqZnIxTEF5ODRXS0I4TXVJQndlQVZsR2hFcHRmbU9Eem1Fdk40NFhMS3lYMW93SVNoenRoQUJJUHlxTVNXZnFoWmw5aG93a0J5RWRkUU9HQXdzZ2QxZ0J1aXVjYWV1SVNwT1daNFlnZ08zaUJaRURIcUw2MjhYOHFZV2hPT0R4RzFBSENINlpfUzhhakVCQTByNTlkX2VObkJHNi1aLQ?oc=5",
-   "ta": "تقوم Autodesk وNeilsoft ببناء دفعة مشتركة للسوق حول BIM وDigital Twins"
+   "ta": "تقوم Autodesk وNeilsoft ببناء دفعة مشتركة للسوق حول BIM وDigital Twins",
+   "h": "شراكة Autodesk وNeilsoft للـ BIM وDigital Twins",
+   "x": "تعاون استراتيجي لدفعة تسويقية جديدة حول حلول التوائم الرقمية ونمذجة البناء.",
+   "tg": [
+    "Autodesk",
+    "BIM",
+    "DigitalTwins"
+   ],
+   "tp": "arch"
   },
   {
    "id": "gn-attackerscompromisemicrosoftsagentframeworkpypipackagetostea",
@@ -5411,7 +5765,15 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVHZzbnVXd1FuNW1LTEVnVl9SbHM5ZGtrX05LMHpOREZsU01XNXpfaTdPZTQ1UDVZNjZrYzJfVGNmb0JPYU5naENvRlpBUEdmNE9oVmVzUjZwV1hhT1lNN294OTM2U1BXbnlReHJXV3c4ZUliTkl6aFRrSkJLMDNUbTNR?oc=5",
-   "ta": "يقوم المهاجمون باختراق حزمة Microsoft Agent Framework PyPI لسرقة بيانات اعتماد السحابة"
+   "ta": "يقوم المهاجمون باختراق حزمة Microsoft Agent Framework PyPI لسرقة بيانات اعتماد السحابة",
+   "h": "اختراق حزمة PyPI الخاصة بـ Microsoft Agent Framework",
+   "x": "هجوم سيبراني يستهدف سرقة بيانات الاعتماد السحابية عبر إطار عمل الـ Agents.",
+   "tg": [
+    "Security",
+    "Agents",
+    "Python"
+   ],
+   "tp": "agents"
   },
   {
    "id": "gn-breakinghijackedreleasesofmicrosoftsofficialagentframeworkst",
@@ -5874,157 +6236,6 @@
    "url": "https://news.ycombinator.com/item?id=50538449",
    "url2": "",
    "ta": "اسأل HN: أليست الهجمات الإلكترونية الحالية مشبوهة؟"
-  },
-  {
-   "id": "hn-50538303",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-17T21:16:12Z",
-   "t": "Harvard researchers find AI coding agents shifted the bottleneck to code review",
-   "s": "29 نقطة، 59 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review/",
-   "url2": "https://news.ycombinator.com/item?id=50538303",
-   "ta": "وجد باحثون في جامعة هارفارد أن وكلاء تشفير الذكاء الاصطناعي قد حولوا عنق الزجاجة إلى مراجعة التعليمات البرمجية"
-  },
-  {
-   "id": "gn-microsoftsaipitchatignitecheapermodelsasbusinesstokenspendis",
-   "cat": "agents",
-   "src": "Yahoo Finance",
-   "ts": "2026-11-17T20:34:33Z",
-   "t": "Microsoft's AI pitch at Ignite: Cheaper models as business 'token spend is going through the roof'",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOVnVRWHhtMFBjdG5GNnFzekIwRkc5V1BDR2ROdTVDVzdCVkd1Zy1EcE9IVzBJWGZDWTl4V3RZNElnMVJUd2JfSnVjNVlJZG1vT3ZESGRGS0JMNzdKLTJlM2tMSTNsaEg2TkhmV1hPWmxYREtSNnBaSXV1ekJGc2RtV3c0MUFtd2FXdEdVbUpVc282VEdZRW5Mai1NTGpMbUVSM1NUaXlDYnM1dHUtd1JVYlEzeVFISUs4ekVUZ1Q1X2MyM0hvaTl4UE9VUlA2ZUlQUDNJYW5oYzA5UkE?oc=5",
-   "ta": "عرض الذكاء الاصطناعي من Microsoft في Ignite: نماذج أرخص مع وصول \"الإنفاق الرمزي\" للأعمال إلى السقف"
-  },
-  {
-   "id": "hn-50537739",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-17T20:30:30Z",
-   "t": "Sudo L7: Can Coding Agents Act Like Staff Engineers?",
-   "s": "13 نقطة، 4 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://surgehq.ai/blog/sudo-l7",
-   "url2": "https://news.ycombinator.com/item?id=50537739",
-   "ta": "Sudo L7: هل يمكن لوكلاء البرمجة التصرف مثل المهندسين العاملين؟"
-  },
-  {
-   "id": "yt-FaSRY19XOBY",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-17T20:30:24Z",
-   "t": "Learn Reactjs #04 - Creating Your First React App",
-   "s": "Creating Your First React App Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
-   "tags": [
-    "Elzero Web School"
-   ],
-   "url": "https://www.youtube.com/watch?v=FaSRY19XOBY",
-   "ta": "تعلم Reactjs #04 - إنشاء أول تطبيق React لك",
-   "sa": "إنشاء الدروس والواجبات الأولى لتطبيق React: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
-  },
-  {
-   "id": "yt-EWfxlhtcqTE",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-17T19:30:08Z",
-   "t": "Learn Reactjs #03 - Setting Up The Development Environment",
-   "s": "Setting Up The Development Environment Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
-   "tags": [
-    "Elzero Web School"
-   ],
-   "url": "https://www.youtube.com/watch?v=EWfxlhtcqTE",
-   "ta": "تعلم Reactjs #03 - إعداد بيئة التطوير",
-   "sa": "إعداد بيئة التطوير الدروس والواجبات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
-  },
-  {
-   "id": "gh-1461866226",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2026-11-17T19:18:05Z",
-   "t": "ConsciousnessEvoker/Revit-Latest-2026: Autodesk Revit Repack 2026 Design Suite Lifetime Perpetual Bim Patch Structural Build Cad…",
-   "s": "0 نجمة، لغة غير محددة",
-   "tags": [
-    "Add-in"
-   ],
-   "url": "https://github.com/ConsciousnessEvoker/Revit-Latest-2026",
-   "ta": "ConsciousnessEvocer/Revit-Latest-2026: Autodesk Revit Repack 2026 Design Suite Lifetime Perpetual Bim Patch الهيكل الهيكلي..."
-  },
-  {
-   "id": "hn-50536648",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-17T19:14:13Z",
-   "t": "Show HN: SSH into DOS: I wrote an x86 (IBM PC) emulator",
-   "s": "19 نقطة، 3 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.dialup.net/farcall/",
-   "url2": "https://news.ycombinator.com/item?id=50536648",
-   "ta": "إظهار HN: SSH في DOS: لقد قمت بكتابة محاكي x86 (IBM PC)."
-  },
-  {
-   "id": "hn-50536468",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-17T19:01:43Z",
-   "t": "Launch HN: StarSling (YC P25) – Self-improving CI for agent-volume repos",
-   "s": "51 نقطة، 28 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://starsling.dev",
-   "url2": "https://news.ycombinator.com/item?id=50536468",
-   "ta": "إطلاق HN: StarSling (YC P25) – تحسين CI ذاتيًا لعمليات إعادة شراء حجم الوكيل"
-  },
-  {
-   "id": "gn-bimaimasterclassaiworkflowsandcustomtoolsforbim",
-   "cat": "arch",
-   "src": "Parametric Architecture",
-   "ts": "2026-11-17T19:00:00Z",
-   "t": "BIM + AI Masterclass: AI Workflows and Custom Tools for BIM",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPZHVLejh5cXE1LThReWJneGlOa3h0QWVKUHZINXlteW13akx1Y05ZM3dpcHpfcUVodHdRMFVZWHl2NkdjTUFaZHZEd21XZ09WbGJ0MmlNM0VjelFsNlUxQTJVWENlbG9IbE44WkhINUxveGU0V1RTRzZPSFZOZWFqWDNUeUttTXJhbWtjWFBqbmFpdVhJMEozbQ?oc=5",
-   "ta": "BIM + AI Masterclass: سير عمل الذكاء الاصطناعي والأدوات المخصصة لـ BIM"
-  },
-  {
-   "id": "yt-tKoDPOrLMX0",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-17T18:41:32Z",
-   "t": "Building 3D video sets with GPT-6.2 Astra",
-   "s": "GPT-6.2 Astra is our new flagship model, delivering a step up in capability with cleaner code, better frontends and 3D models, and more efficient too…",
-   "tags": [
-    "OpenAI"
-   ],
-   "url": "https://www.youtube.com/watch?v=tKoDPOrLMX0",
-   "ta": "إنشاء مجموعات فيديو ثلاثية الأبعاد باستخدام GPT-6.2 Astra",
-   "sa": "GPT-6.2 Astra هو نموذجنا الرئيسي الجديد، الذي يقدم زيادة في القدرة باستخدام كود أكثر وضوحًا، وواجهات أمامية أفضل ونماذج ثلاثية الأبعاد، وأكثر كفاءة أيضًا..."
-  },
-  {
-   "id": "hn-50535885",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-17T18:25:13Z",
-   "t": "MAI Code 2 and Code 2 Flash",
-   "s": "277 نقطة، 130 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
-   "url2": "https://news.ycombinator.com/item?id=50535885",
-   "ta": "كود MAI 2 ورمز 2 فلاش"
   }
  ]
 }
