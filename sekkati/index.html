@@ -40,7 +40,7 @@ input:focus{outline:none;border-color:var(--acc)}
 .brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:20px;color:var(--acc);margin:0}
 .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--acc)}
 .tagline{font-size:11px;color:var(--mut);padding-inline-start:20px}
-#stage{position:relative;height:calc(100vh - 66px);height:calc(100dvh - 66px);min-height:430px;border-radius:16px;overflow:hidden;background:var(--mapbg)}
+#stage{position:relative;height:52vh;height:52dvh;min-height:330px;border-radius:16px;overflow:hidden;background:var(--mapbg)}
 #map{position:absolute;inset:0;direction:ltr}
 #map.dark-tiles .maplibregl-canvas{filter:invert(1) hue-rotate(180deg) brightness(.92) contrast(1.05) saturate(.9)}
 #panel{position:absolute;top:8px;left:8px;right:8px;z-index:5;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px;box-shadow:0 2px 10px var(--sh)}
@@ -127,6 +127,16 @@ h2{font-size:15px;margin:0 0 8px;color:var(--mut);font-weight:500}
 body.nav{overflow:hidden;padding:0;max-width:none}
 body.nav #stage{position:fixed;inset:0;height:100%;min-height:0;border-radius:0;z-index:1}
 body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,body.nav #sheet,body.nav #freeGo{display:none}
+body.mapfull{overflow:hidden}
+body.mapfull #stage{position:fixed;inset:0;height:100%;min-height:0;border-radius:0;z-index:50}
+#mapBack{position:absolute;top:112px;right:10px;z-index:5;display:none;align-items:center;gap:6px;border-radius:999px;padding:8px 14px;background:var(--fab);color:var(--ink);border:1px solid var(--fabline);font-weight:700;box-shadow:0 2px 8px var(--sh)}
+body.mapfull #mapBack{display:inline-flex}
+body.mapfull #mapBig,body.nav #mapBack{display:none}
+.card h2.ctog{cursor:pointer;display:flex;align-items:center;justify-content:space-between;margin:0;color:var(--ink);font-weight:700;font-size:15px}
+.card h2.ctog:after{content:"▾";color:var(--mut);transition:transform .2s}
+.card.open h2.ctog:after{transform:rotate(180deg)}
+.card .cbody{display:none;margin-top:10px}.card.open .cbody{display:block}
+.card .keep{margin-top:6px}
 #freeGo{position:absolute;left:10px;bottom:12px;z-index:4;border-radius:999px;padding:9px 14px 9px 16px;font-size:14px;background:var(--pri);color:var(--pri-ink);font-weight:700;display:flex;align-items:center;gap:8px;box-shadow:0 3px 10px var(--sh)}
 #freeGo svg{width:17px;height:17px;fill:currentColor}
 #stage.sheet-open #freeGo{display:none}
@@ -191,6 +201,7 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
   </div>
   <div id="hint" hidden></div>
   <div id="tools">
+    <button class="rb" id="mapBig" aria-label="كبّر الخريطة" title="كبّر الخريطة"><svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg></button>
     <button class="rb" id="tiles" aria-label="شكل الخريطة" title="شكل الخريطة"><svg viewBox="0 0 24 24"><path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/></svg></button>
     <button class="rb" id="themeBtn" aria-label="فاتح أو غامق" title="فاتح أو غامق"></button>
     <button class="rb" id="teachBtn" aria-label="علّم على الخريطة" title="علّم رادار أو كارتة أو لجنة"><svg viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg></button>
@@ -205,6 +216,7 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
       <button data-mode="block"><i>⛔</i>مقفول</button>
     </div>
   </div>
+  <button id="mapBack">↩ رجوع</button>
   <button id="freeGo"><svg viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>ابدأ السواقة</button>
   <div id="sheet">
     <div class="handle"></div>
@@ -243,7 +255,7 @@ body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,bod
 
   <div class="card" id="carCard">
     <h2>🚗 عربيتي</h2>
-    <div id="carDue"></div>
+    <div id="carDue" class="keep"></div>
     <label class="fl">العربية والموديل والسنة<input id="carModel" type="text" placeholder="مثلاً: هيونداي إلنترا 2016 1.6"></label>
     <div class="row">
       <label class="fl">العداد دلوقتي (كم)<input id="carOdo" type="number" inputmode="numeric" placeholder="85000"></label>
@@ -587,6 +599,29 @@ map.on('error', e => {                           // لو ستايل الفيكت
 });
 function setStyle(k){ styleKey = k; try { map.setStyle(STYLES[k]); } catch(e){} $('map').classList.toggle('dark-tiles', k === 'osm' && isDark()); }
 $('tiles').onclick = () => { fell = true; setStyle(ORDER[(ORDER.indexOf(styleKey) + 1) % ORDER.length]); };
+function setMapFull(on){                           // الخريطة صغيرة عشان الصفحة تتنزل بالسكرول؛ بتكبر لما تحتاجها والطريق المختار فاضل
+  document.body.classList.toggle('mapfull', on);
+  setTimeout(() => { try { map.resize(); } catch(e){} if (results.length && !navOn) fitTo(results[selIdx].r.coords); }, 60);
+}
+$('mapBig').onclick = () => setMapFull(true);
+$('mapBack').onclick = () => setMapFull(false);
+document.querySelectorAll('#below > .card').forEach((c, i) => {   // الكروت مقفولة: العنوان بس، والضغط عليه بيفتحها
+  const h = c.querySelector(':scope > h2'); if (!h) return;
+  const key = 'card:' + (c.id || i), body = document.createElement('div'); body.className = 'cbody';
+  [...c.childNodes].filter(n => n !== h && !(n.classList && n.classList.contains('keep'))).forEach(n => body.appendChild(n));
+  c.appendChild(body); h.classList.add('ctog');
+  let open = null; try { open = localStorage.getItem(key); } catch(e){}
+  c.classList.toggle('open', open === null ? !!h.textContent.match(/تسجيل رحلة/) : open === '1');
+  h.onclick = () => { c.classList.toggle('open'); try { localStorage.setItem(key, c.classList.contains('open') ? '1' : '0'); } catch(e){} };
+});
+if (NATIVE && NP.App) NP.App.addListener('backButton', () => {   // زرار الرجوع في الموبايل: يقفل اللي مفتوح الأول
+  const sheet = ['cl', 'rpt', 'ask', 'alt', 'draft'].find(i => !$(i).hidden);
+  if (sheet) $(sheet).hidden = true;
+  else if (!$('teach').hidden) $('teach').hidden = true;
+  else if (mode) setMode(mode);
+  else if (document.body.classList.contains('mapfull') && !navOn) setMapFull(false);
+  else if (!navOn && NP.App.minimizeApp) NP.App.minimizeApp();
+});
 const IC_SUN = '<svg viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>';
 const IC_MOON = '<svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/></svg>';
 function themeChrome(){ const dark = isDark(); $('themeBtn').innerHTML = dark ? IC_SUN : IC_MOON; $('tcolor').content = dark ? '#050505' : '#ffffff'; }
@@ -742,6 +777,7 @@ function drawMarks(){
   notes.forEach(n => { const el = mkEl('📝', 'poi note'); el.title = n.text; el.onclick = ev => { ev.stopPropagation(); $('msg').textContent = '📝 ' + n.text; }; blockMarkers.push(addMk(el, n.lon, n.lat)); });
 }
 map.on('click', e => {
+  if (!document.body.classList.contains('mapfull') && !navOn && !mode){ setMapFull(true); return; }
   const p = {lat:e.lngLat.lat, lon:e.lngLat.lng};
   if (mode === 'radar' || mode === 'toll' || mode === 'uturn' || mode === 'checkpoint'){
     const i = myPois.findIndex(x => x.kind === mode && hav(x, p) < 40);
@@ -852,7 +888,7 @@ async function plan(){
   $('res').innerHTML = '<div class="note" style="padding:14px">...بدور على الطرق</div>';
   try {
     results = await computeRoutes(start, dest); put('plan', results);
-    showRoutes(0);
+    setMapFull(true); showRoutes(0);
   } catch(e){ $('res').innerHTML = ''; $('msg').textContent = 'مقدرتش أجيب الطرق. اتأكد من الإنترنت وجرّب تاني.'; }
 }
 function why(x, k){
@@ -1430,7 +1466,7 @@ function showAnalysis(t, an, loading){
     + `<div class="note">عدّيت على: 📷 ${arab(an.radar)} رادار · 💳 ${arab(an.toll)} كارتة · 🚓 ${arab(an.check)} لجنة</div>`
     + (an.fuel ? `<div class="note" style="margin-top:4px">⛽ حوالي ${(+an.fuel.l.toFixed(1)).toLocaleString('ar-EG')} لتر${an.fuel.cost ? ' ≈ ' + arab(an.fuel.cost) + ' جنيه' : ''} (تقدير حسب استهلاك عربيتك والوقفات)</div>` : '')
     + ((an.notes || []).length ? `<div class="note" style="margin-top:4px">📝 ملاحظاتك: ${an.notes.map(esc).join(' · ')}</div>` : '') + alt;
-  $('anCard').hidden = false;
+  $('anCard').hidden = false; $('anCard').classList.add('open');
   if ($('anMap')) $('anMap').onclick = () => {
     closeRoutes();
     drawRoutes([{coords:anAlt.track, c:'#f5c451', w:5}, {coords:anAlt.coords, c:cssVar('--route'), w:7}]);
