@@ -7,8 +7,9 @@ android {
         applicationId "com.sekkati.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        // Each CI build gets a higher code so the new APK installs as an update over the old one.
+        versionCode((System.getenv("GITHUB_RUN_NUMBER") ?: "1").toInteger() + 100)
+        versionName "1." + (System.getenv("GITHUB_RUN_NUMBER") ?: "0")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -16,8 +17,27 @@ android {
             ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    // One fixed key for every build (Android refuses updates whose signature changed). The repo only holds
+    // sekkati.keystore.enc; CI decrypts it with the SEKKATI_KEY_PASS secret. Without the secret the build
+    // falls back to the throwaway debug key.
+    def sekkatiPass = System.getenv("SEKKATI_KEY_PASS")
+    def sekkatiKey = file('sekkati.keystore')
+    signingConfigs {
+        if (sekkatiPass && sekkatiKey.exists()) {
+            sekkati {
+                storeFile sekkatiKey
+                storePassword sekkatiPass
+                keyAlias 'sekkati'
+                keyPassword sekkatiPass
+            }
+        }
+    }
     buildTypes {
+        debug {
+            if (signingConfigs.findByName('sekkati')) signingConfig signingConfigs.sekkati
+        }
         release {
+            if (signingConfigs.findByName('sekkati')) signingConfig signingConfigs.sekkati
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

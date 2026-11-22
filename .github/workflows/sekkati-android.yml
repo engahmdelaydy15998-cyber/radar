@@ -42,7 +42,20 @@ jobs:
       - name: Copy web app into the Android project
         run: npm run sync
 
+      - name: Decrypt signing key
+        env:
+          SEKKATI_KEY_PASS: ${{ secrets.SEKKATI_KEY_PASS }}
+        run: |
+          if [ -n "$SEKKATI_KEY_PASS" ]; then
+            openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -in android/app/sekkati.keystore.enc \
+              -out android/app/sekkati.keystore -pass env:SEKKATI_KEY_PASS
+          else
+            echo "::warning::SEKKATI_KEY_PASS secret is not set; this APK is signed with a throwaway key and won't install over older builds."
+          fi
+
       - name: Build APK
+        env:
+          SEKKATI_KEY_PASS: ${{ secrets.SEKKATI_KEY_PASS }}
         run: |
           chmod +x android/gradlew
           cd android && ./gradlew assembleDebug --no-daemon --stacktrace
