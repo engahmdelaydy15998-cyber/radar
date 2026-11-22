@@ -627,12 +627,21 @@ function toast(msg) {
 }
 
 /* Android share target: Share -> رادار arrives as ?title=&text=&url= */
+/* pre-filled GitHub issues: on Android, force Chrome so the GitHub app doesn't swallow the link and drop
+   the pre-filled title/body; elsewhere a normal new tab */
+function openIssue(url) {
+  if (/Android/i.test(navigator.userAgent)) {
+    location.href = "intent://" + url.replace(/^https:\/\//, "") + "#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=" + encodeURIComponent(url) + ";end";
+  } else {
+    window.open(url, "_blank", "noopener");
+  }
+}
 /* sends a shared link to the shared feed: a pre-filled GitHub issue that the add-post workflow
    turns into a feed item, which the collector then gives an AI headline */
 function sendToRadar(it) {
   var body = "url: " + it.url + "\nnote: " + ((it.raw || it.t || "").replace(/\s+/g, " ").slice(0, 500));
   var url = "https://github.com/" + REPO + "/issues/new?title=" + encodeURIComponent("add-post: " + (it.src || "link")) + "&body=" + encodeURIComponent(body);
-  window.open(url, "_blank", "noopener");
+  openIssue(url);
   it.sent = true; persist(); render();
   toast("دوس Submit في GitHub، وهيظهر في الرادار بمنشيت عربي بعد دقايق.");
 }
@@ -674,7 +683,7 @@ document.getElementById("watchGo").onclick = function () {
   if (!desc || !kw) { toast("لازم وصف المشكلة وكلمة مفتاحية واحدة على الأقل."); return; }
   var body = "desc: " + desc + "\nkw: " + kw;
   var url = "https://github.com/" + REPO + "/issues/new?title=" + encodeURIComponent("add-watch: " + desc.slice(0, 60)) + "&body=" + encodeURIComponent(body);
-  window.open(url, "_blank", "noopener");
+  openIssue(url);
   toast("اضغط Submit في صفحة GitHub وهتتابع المشكلة دي");
   document.getElementById("watchDesc").value = ""; document.getElementById("watchKw").value = "";
 };
@@ -704,7 +713,7 @@ function addChannelToRadar(ref, name) {
   var kind = document.getElementById("chanKind").value;
   var body = (ref.charAt(0) === "@" ? "handle: " : "id: ") + ref + "\nname: " + name + "\nkind: " + kind;
   var url = "https://github.com/" + REPO + "/issues/new?title=" + encodeURIComponent("add-channel: " + name) + "&body=" + encodeURIComponent(body);
-  window.open(url, "_blank", "noopener");
+  openIssue(url);
   toast("اضغط Submit في صفحة GitHub وهتتضاف القناة خلال دقايق");
 }
 function rcard(title, sub, openUrl, actions) {
