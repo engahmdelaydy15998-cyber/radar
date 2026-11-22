@@ -1,7 +1,46 @@
 {
- "updated": "2026-11-21T21:58:56Z",
+ "updated": "2026-11-22T01:15:43Z",
  "demo": false,
  "items": [
+  {
+   "id": "af-httpssimonwillisonnet2026Nov21muru",
+   "cat": "agents",
+   "src": "Simon Willison",
+   "ts": "2026-11-21T23:56:28Z",
+   "t": "Muru",
+   "s": "",
+   "tags": [
+    "مدونة"
+   ],
+   "url": "https://simonwillison.net/2026/Nov/21/muru/",
+   "h": "أداة Muru لتعزيز تجربة الـ AI",
+   "x": "استكشف كيف تفيدك أداة Muru في مشاريع الـ coding والذكاء الاصطناعي.",
+   "tg": [
+    "AI",
+    "Tools"
+   ],
+   "tp": "agents"
+  },
+  {
+   "id": "gn-autodeskandneilsofttoestablishbimanddigitaltwincentreinpune",
+   "cat": "arch",
+   "src": "The Realty Today",
+   "ts": "2026-11-21T23:00:06Z",
+   "t": "Autodesk and Neilsoft to Establish BIM and Digital Twin Centre in Pune",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOW1ZOV9mWjVCTXdXTDdOemc1Q2dEYmZkUXlsMFUwSW5KTUJrYjMwTk5BWmtfd0pYLWh3N3JCTHFPTWJGVTR5WlFzVUFPTTlrc3hfQlI0X3J6M2ZuNElEcFA2LVFKZFRTS2tRR0lSaFJHaGpWRnFGWWZEdTR5dEpWVVh4QTMwWFR6U2ZObk5Ldm1wUk94MEhMb1d6YS12Yjh6YWVlbFJwVndrZXplVlNFWjZkZw?oc=5",
+   "h": "مركز جديد للـ BIM والـ Digital Twin بالهند",
+   "x": "شراكة بين Autodesk وNeilsoft لتأسيس مركز متخصص يهم مهندسي الـ BIM.",
+   "tg": [
+    "BIM",
+    "DigitalTwin",
+    "Autodesk"
+   ],
+   "tp": "arch"
+  },
   {
    "id": "yt-GFxHjrYwoFk",
    "cat": "reels",
@@ -45,6 +84,26 @@
    "tp": "agents"
   },
   {
+   "id": "gh-1466946742",
+   "cat": "arch",
+   "src": "GitHub",
+   "ts": "2026-11-21T20:54:04Z",
+   "t": "roman-chencode1904b4/cad-3d-engineering-suite-autodesk-2026-autocad-revit-porta: CAD, 3D & Engineering Suite Autodesk 2026 (AutoCAD, Revit, 3ds Max, Maya) NLM runtime-upd…",
+   "s": "421 نجمة، لغة Jupyter Notebook",
+   "tags": [
+    "أداة مفتوحة المصدر"
+   ],
+   "url": "https://github.com/roman-chencode1904b4/cad-3d-engineering-suite-autodesk-2026-autocad-revit-porta",
+   "h": "مكتبة هندسية لمنتجات Autodesk 2026",
+   "x": "مستودع على GitHub يضم أدوات لـ AutoCAD وRevit بصيغة Jupyter Notebook.",
+   "tg": [
+    "Revit",
+    "AutoCAD",
+    "GitHub"
+   ],
+   "tp": "oss"
+  },
+  {
    "id": "yt-yq4FctnSglI",
    "cat": "long",
    "src": "YouTube",
@@ -64,6 +123,18 @@
     "Code"
    ],
    "tp": "courses"
+  },
+  {
+   "id": "gn-opencodeandalocalllmhandletheboring80ofmycodingsoclaudeonlyg",
+   "cat": "agents",
+   "src": "XDA",
+   "ts": "2026-11-21T19:00:20Z",
+   "t": "OpenCode and a local LLM handle the boring 80% of my coding, so Claude only gets the hard part",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZmpqNE9ydlRXRVA1TGU5OU9TZmM3UUJHNWVTU2YzbloxWVNYcUpSSnpEOXhoLVV0bVl6VUJPdTFDYnYyVW93LTh1WjJVaVN4Y1dweGVyX3ltem0yWk44TU84dUI5a0xpTndtdXVwT2VJcnZzTEpDXzFyN1o4eUVRWWxSUlI2MXl4U242bWJUNUZ4Z0ZhMGRqbWhxQVFiM21WbDhYYmQxM01BeERqTFg1ZjVoNzFmb1JENTFaQjR0R1pDZw?oc=5"
   },
   {
    "id": "gn-autodeskneilsoftlaunchbimanddigitaltwincentre",
@@ -190,6 +261,25 @@
     "Frontend"
    ],
    "tp": "courses"
+  },
+  {
+   "id": "gh-1466700766",
+   "cat": "arch",
+   "src": "GitHub",
+   "ts": "2026-11-21T15:50:17Z",
+   "t": "jacobyoung21/autodesk-autocad-win: Autodesk AutoCAD - computer-aided design software for 2D drafting, 3D modeling and techni…",
+   "s": "29 نجمة، لغة غير محددة",
+   "tags": [
+    "أداة مفتوحة المصدر"
+   ],
+   "url": "https://github.com/jacobyoung21/autodesk-autocad-win",
+   "h": "مستودع مفتوح لـ Autodesk AutoCAD",
+   "x": "مشروع على GitHub يخص ملفات واستخدامات AutoCAD للرسم والتصميم ثلاثي الأبعاد.",
+   "tg": [
+    "AutoCAD",
+    "CAD"
+   ],
+   "tp": "oss"
   },
   {
    "id": "gn-istoppedhittingclaudesusagelimitsafterchangingonehabitinhowi",
@@ -338,6 +428,32 @@
     "Frontend"
    ],
    "tp": "courses"
+  },
+  {
+   "id": "hn-50588272",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-21T11:51:42Z",
+   "t": "Bitcoin falls to its lowest in two years",
+   "s": "13 نقطة، 4 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.reuters.com/business/bitcoin-falls-357-56814-2026-11-21/",
+   "url2": "https://news.ycombinator.com/item?id=50588272"
+  },
+  {
+   "id": "hn-50587205",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-21T08:32:34Z",
+   "t": "Exascale fusion simulation team named finalist for 2026 Gordon Bell Prize",
+   "s": "14 نقطة، 0 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.alcf.anl.gov/news/exascale-fusion-simulation-team-named-finalist-2026-gordon-bell-prize",
+   "url2": "https://news.ycombinator.com/item?id=50587205"
   },
   {
    "id": "yt-a36atq-Dy8A",
@@ -696,6 +812,26 @@
     "Math"
    ],
    "tp": "news"
+  },
+  {
+   "id": "gh-1465954753",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-20T22:17:50Z",
+   "t": "alesha-pro/inference-optimization-playbook: 97 tested hypotheses on making huge MoE LLMs fast on consumer GPUs (4x RTX 3090 + experts…",
+   "s": "54 نجمة، لغة Python",
+   "tags": [
+    "جديد كلياً"
+   ],
+   "url": "https://github.com/alesha-pro/inference-optimization-playbook",
+   "h": "تسريع نماذج الـ MoE على كروت الشاشة العادية",
+   "x": "دليل عملي بـ 97 فرضية لتحسين سرعة الـ LLMs الكبيرة على كروت RTX.",
+   "tg": [
+    "LLM",
+    "Python",
+    "GPU"
+   ],
+   "tp": "oss"
   },
   {
    "id": "hn-50582069",
@@ -1262,6 +1398,26 @@
    "tg": [
     "AI Agents",
     "Security"
+   ],
+   "tp": "agents"
+  },
+  {
+   "id": "gh-1465531278",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-20T14:32:43Z",
+   "t": "danielwh2/sprite-stacking: Agent skill: turn four pixel art views into fake-3D sprites you can spin. Works with Clau…",
+   "s": "368 نجمة، لغة HTML",
+   "tags": [
+    "جديد كلياً"
+   ],
+   "url": "https://github.com/danielwh2/sprite-stacking",
+   "h": "تحويل الـ Pixel Art إلى سبريتس ثلاثية الأبعاد",
+   "x": "أداة Agent skill جديدة لعمل sprites وهمية ثلاثية الأبعاد وتعمل مع Claude.",
+   "tg": [
+    "Agent",
+    "Claude",
+    "3D"
    ],
    "tp": "agents"
   },
@@ -2737,16 +2893,7 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
-   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري",
-   "h": "Autodesk Forma يحصد جائزة كبرى",
-   "x": "اختيار تصميم Forma Building Design كأفضل فئة من Architectural Record ليعزز أدوات الـ BIM",
-   "tg": [
-    "BIM",
-    "Autodesk Forma",
-    "Architecture"
-   ],
-   "tp": "arch"
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5"
   },
   {
    "id": "hn-50562582",
@@ -5878,130 +6025,6 @@
    "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
    "url2": "https://news.ycombinator.com/item?id=50535885",
    "ta": "كود MAI 2 ورمز 2 فلاش"
-  },
-  {
-   "id": "rss-httpsarchitoshcom202611notchdeliveringmacnativepdfaecmarkup",
-   "cat": "arch",
-   "src": "Architosh",
-   "ts": "2026-11-17T18:17:33Z",
-   "t": "Notch—Delivering Mac native PDF AEC Markup",
-   "s": "Notch is a new PDF markup application focused on the AEC and related CAD industries. It runs on native Mac, web, and Apple's mobile platforms. The post Notch—D…",
-   "tags": [
-    "AEC"
-   ],
-   "url": "https://architosh.com/2026/11/notch-delivering-mac-native-pdf-aec-markup/",
-   "ta": "Notch — توفير ترميز PDF AEC أصلي لنظام Mac",
-   "sa": "Notch هو تطبيق ترميز PDF جديد يركز على AEC وصناعات CAD ذات الصلة. يتم تشغيله على أنظمة Mac الأصلية والويب ومنصات Apple المحمولة. وظيفة الشق-D…"
-  },
-  {
-   "id": "hn-50535740",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-17T18:16:18Z",
-   "t": "Not Everything Needs an LLM",
-   "s": "86 نقطة، 36 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://newsletter.posthog.com/p/decision-models",
-   "url2": "https://news.ycombinator.com/item?id=50535740",
-   "ta": "ليس كل شيء يحتاج إلى LLM"
-  },
-  {
-   "id": "yt-tVH-NPd5U4o",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-17T18:01:37Z",
-   "t": "Don't ask Claude if your idea is good: 5 prompts to test it instead",
-   "s": "Ask Claude if your business idea is good: chances are, it'll say yes. These 5 prompts make it question, critique and run the numbers on your idea, th…",
-   "tags": [
-    "Dr Firas"
-   ],
-   "url": "https://www.youtube.com/shorts/tVH-NPd5U4o",
-   "ta": "لا تسأل كلود إذا كانت فكرتك جيدة: 5 مطالبات باختبارها بدلاً من ذلك",
-   "sa": "اسأل كلود إذا كانت فكرة عملك جيدة: من المحتمل أن تجيب بنعم. هذه المطالبات الخمس تجعل فكرتك تتساءل وتنقد وتجري أرقامًا،..."
-  },
-  {
-   "id": "yt-C1zYX5jwqq4",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-17T17:55:40Z",
-   "t": "GPT-6.2 Astra and GPT-6.2 Sol—Models built for the real world",
-   "s": "We’re introducing GPT‑6.2 Astra, our new frontier model for your hardest projects, and GPT‑6.2 Sol, our efficient, versatile model for everyday work.…",
-   "tags": [
-    "OpenAI"
-   ],
-   "url": "https://www.youtube.com/watch?v=C1zYX5jwqq4",
-   "ta": "GPT-6.2 Astra وGPT-6.2 Sol — نماذج مصممة للعالم الحقيقي",
-   "sa": "نحن نقدم GPT‑6.2 Astra، وهو نموذجنا الحدودي الجديد لأصعب مشاريعك، وGPT‑6.2 Sol، نموذجنا الفعال والمتعدد الاستخدامات للعمل اليومي...."
-  },
-  {
-   "id": "hn-50535230",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-17T17:46:43Z",
-   "t": "GPT‑6.2 Astra and Sol",
-   "s": "1064 نقطة، 676 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
-   "url2": "https://news.ycombinator.com/item?id=50535230",
-   "ta": "GPT-6.2 أسترا وسول"
-  },
-  {
-   "id": "gn-protonslumoaprivacyfocusedalternativetochatgptandclaudearriv",
-   "cat": "agents",
-   "src": "TechCrunch",
-   "ts": "2026-11-17T17:32:25Z",
-   "t": "Proton’s Lumo, a privacy-focused alternative to ChatGPT and Claude, arrives on desktop",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOWFd3bFVLaTEzOVB0WjVjRUlsc0tFdlVZT2x5cms0UEJYM242YmFYVTFEbXk5SUV1ckJ5ZGdMVmc5Q1lZLWV3RnZpYUh2U2w5SEdGSF9QRjhsOVB1T3Jjajg3bDFYNzFsMVVLZmZvemwwU0dEZ0o5eHZWSU1HSXllVm9sTGNBbXVQdzZNdkdGX0g3RzdTU2NMbTB2Sm5hejNRNTFtaTdjR0Y1WEJGdExkTUpwSHNsV2VYaVE?oc=5",
-   "ta": "Proton's Lumo، وهو بديل يركز على الخصوصية لـ ChatGPT وClaude، يصل إلى سطح المكتب"
-  },
-  {
-   "id": "yt-vXL-E4JLPj8",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-17T17:07:39Z",
-   "t": "Learn Reactjs #02 - What You Need to Know Before You Start",
-   "s": "What You Need to Know Before You Start Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
-   "tags": [
-    "Elzero Web School"
-   ],
-   "url": "https://www.youtube.com/watch?v=vXL-E4JLPj8",
-   "ta": "تعلم Reactjs #02 - ما تحتاج إلى معرفته قبل أن تبدأ",
-   "sa": "ما تحتاج إلى معرفته قبل أن تبدأ الدروس والواجبات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov17datasettelite",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-17T16:48:33Z",
-   "t": "Running the full server-side Datasette Python app in the browser with service workers and Pyodide",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/17/datasette-lite/",
-   "ta": "تشغيل تطبيق Datasette Python الكامل من جانب الخادم في المتصفح مع عمال الخدمة وPyodide"
-  },
-  {
-   "id": "hn-50533270",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-17T16:01:04Z",
-   "t": "Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium",
-   "s": "43 نقطة، 5 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://github.com/RunanywhereAI/trnrt",
-   "url2": "https://news.ycombinator.com/item?id=50533270",
-   "ta": "إظهار HN: TrnRT – محرك استدلال LLM مفتوح المصدر لـ AWS Trainium"
   }
  ]
 }
