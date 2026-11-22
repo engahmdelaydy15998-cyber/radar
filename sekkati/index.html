@@ -1187,12 +1187,18 @@ $('nmute').innerHTML = IC_VOL;
 $('nmute').onclick = () => { voiceOn = !voiceOn; $('nmute').innerHTML = voiceOn ? IC_VOL : IC_MUTE; if (!voiceOn){ try { speechSynthesis.cancel(); } catch(e){} } };
 
 /* البلاغات أثناء القيادة */
-const REPORTS = [['toll', '💳 كارتة'], ['jam', '🚗 زحمة'], ['accident', '💥 حادثة'], ['block', '⛔ مقفول'], ['radar', '📷 رادار'], ['checkpoint', '🚓 لجنة'], ['alt', '🔀 طريق تاني']];
+const REPORTS = [['toll', '💳 كارتة'], ['jam', '🚗 زحمة'], ['accident', '💥 حادثة'], ['block', '⛔ مقفول'], ['radar', '📷 رادار'], ['checkpoint', '🚓 لجنة'], ['note', '📝 مكان/ملاحظة'], ['alt', '🔀 طريق تاني']];
 function fillSheet(id, withMic){
   $(id).innerHTML = REPORTS.map(([k, l]) => `<button data-r="${k}">${l}</button>`).join('') + (withMic ? '<button data-r="mic">🎤 قول</button>' : '') + (id === 'askg' ? '<button data-r="none">مفيش حاجة</button>' : '');
   $(id).querySelectorAll('[data-r]').forEach(b => b.onclick = () => {
     const r = b.dataset.r;
     if (r === 'mic') return voiceReport();
+    if (r === 'note'){                             // اسم محطة أو مكان بتقف عنده، بيتحفظ على الخريطة مكانك
+      hideSheets();
+      const t = (prompt('اكتب اسم المكان أو الملاحظة (مثلاً: محطة وطنية)') || '').trim();
+      if (t) saveNote(t);
+      return;
+    }
     if (r === 'alt') { hideSheets(); return suggestAlt(true); }
     handleReport(r);
   });
