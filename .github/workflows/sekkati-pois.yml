@@ -25,4 +25,4 @@ jobs:
           git add sekkati/eg-pois.json
           git diff --cached --quiet && exit 0
           git commit -m "sekkati: refresh Egypt radars/tolls/checkpoints from OSM"
-          git push origin HEAD:${GITHUB_REF_NAME}
+          for i in 1 2 3; do git pull --rebase origin ${GITHUB_REF_NAME} && git push origin HEAD:${GITHUB_REF_NAME} && break; sleep 5; done
