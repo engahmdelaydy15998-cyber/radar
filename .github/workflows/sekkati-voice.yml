@@ -1,0 +1,45 @@
+name: sekkati-voice
+
+# Generates سكّتي's spoken alerts with Gemini's Arabic TTS (GEMINI_API_KEY secret) into sekkati/voice/,
+# bundled in the app so it speaks with that voice offline and with no key on the phone.
+# Resumable: rerun (push a new sekkati/voice/request-N.txt) to finish phrases a quota cut off.
+on:
+  push:
+    paths:
+      - "tools/sekkati_voice.py"
+      - "sekkati/voice/request-*.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sekkati-voice
+  cancel-in-progress: false
+
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 170
+    steps:
+      - uses: actions/checkout@v4
+      - name: ffmpeg
+        run: command -v ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+      - name: Voice samples
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 tools/sekkati_voice.py --samples
+      - name: Generate phrases
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          V=$(cat sekkati/voice/VOICE 2>/dev/null || echo Kore)
+          SEKKATI_VOICE="$V" timeout 9600 python3 tools/sekkati_voice.py || true
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "Claude"; git config user.email "noreply@anthropic.com"
+          git add sekkati/voice
+          git diff --cached --quiet && exit 0
+          git commit -m "sekkati: Gemini voice clips"
+          for i in 1 2 3; do git pull --rebase origin ${GITHUB_REF_NAME} && git push origin HEAD:${GITHUB_REF_NAME} && break; sleep 5; done
