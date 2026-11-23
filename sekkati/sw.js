@@ -1,6 +1,6 @@
 // سكّتي service worker: الصفحة network-first (عشان التحديثات تظهر)، والأصول cache-first.
-var CACHE = "sekkati-v39";
-var SHELL = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "eg-pois.json",
+var CACHE = "sekkati-v40";
+var SHELL = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "eg-pois.json", "rtl-text.js",
   "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css", "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"];
 self.addEventListener("install", function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) {
