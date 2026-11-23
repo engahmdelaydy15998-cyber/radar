@@ -1,0 +1,33 @@
+name: sekkati-gemini
+
+# Sends the newest sekkati/ai-review/ask-N.md (with the summary and the app's code) to Gemini
+# using the GEMINI_API_KEY secret, and commits the reply as answer-N.md on the same branch.
+on:
+  push:
+    paths:
+      - "sekkati/ai-review/ask-*.md"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sekkati-gemini
+  cancel-in-progress: false
+
+jobs:
+  ask:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ask Gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 tools/sekkati_gemini.py
+      - name: Commit the answer
+        if: always()
+        run: |
+          git config user.name "Claude"; git config user.email "noreply@anthropic.com"
+          git add sekkati/ai-review/answer-*.md || true
+          git diff --cached --quiet && exit 0
+          git commit -m "sekkati: Gemini answer"
+          git push origin HEAD:${GITHUB_REF_NAME}

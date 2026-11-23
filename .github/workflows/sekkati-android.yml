@@ -6,6 +6,8 @@ on:
   push:
     paths:
       - "sekkati/**"
+      - "!sekkati/ai-review/**"
+      - "!sekkati/*.md"
       - "sekkati-android/**"
       - ".github/workflows/sekkati-android.yml"
   workflow_dispatch:
