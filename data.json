@@ -1,7 +1,219 @@
 {
- "updated": "2026-11-22T19:34:00Z",
+ "updated": "2026-11-23T01:40:20Z",
  "demo": false,
  "items": [
+  {
+   "id": "gn-slsaconstructionaistartupannouncedonthe23rdthatitwillenterov",
+   "cat": "arch",
+   "src": "매일경제",
+   "ts": "2026-11-23T00:49:16Z",
+   "t": "SLs, a construction AI start-up, announced on the 23rd that it will enter overseas markets such as J..",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBfYTJrY1NKd0tScWg1alQ5R3RXX21BNWxNZ040Ym5ob3hMazZYbmcyX3Z5RFBnYy12OTlFVXVjN1RHRnZtZkFKWUY4aw?oc=5",
+   "h": "شركة SLs للـ Construction AI توسع نشاطها دولياً",
+   "x": "خطوة جديدة لدمج حلول الذكاء الاصطناعي في مشاريع التشييد بالأسواق العالمية.",
+   "tg": [
+    "Construction AI",
+    "BIM"
+   ],
+   "tp": "arch"
+  },
+  {
+   "id": "hn-50605445",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-22T23:53:00Z",
+   "t": "0rwx – A simple model of AI usage, inspired by Unix permissions",
+   "s": "16 نقطة، 6 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://0rwx.com/",
+   "url2": "https://news.ycombinator.com/item?id=50605445",
+   "h": "نموذج 0rwx لإدارة استخدام الـ AI بطريقة Unix",
+   "x": "فكرة مبتكرة لتنظيم صلاحيات استخدام أدوات الذكاء الاصطناعي مستوحاة من نظام Linux.",
+   "tg": [
+    "AI",
+    "Unix"
+   ],
+   "tp": "oss"
+  },
+  {
+   "id": "hn-50605045",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-22T23:12:10Z",
+   "t": "Progress map for the Lean formalization of Alessandro Masullo's manuscript",
+   "s": "148 نقطة، 113 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://claude.ai/artifact/CtQyX8qfYAF822bgHJHHE3",
+   "url2": "https://news.ycombinator.com/item?id=50605045"
+  },
+  {
+   "id": "hn-50604621",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-22T22:27:37Z",
+   "t": "US drivers pay an extra $12B a year for digital car repairs",
+   "s": "13 نقطة، 0 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.theregister.com/personal-tech/2026/11/22/as-cars-go-digital-us-consumers-pay-an-extra-12-billion-a-year-for-repairs/5311412",
+   "url2": "https://news.ycombinator.com/item?id=50604621"
+  },
+  {
+   "id": "hn-50604055",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-22T21:24:55Z",
+   "t": "US judge rejects CFTC emergency bid to block New York from policing Kalshi",
+   "s": "18 نقطة، 3 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.reuters.com/legal/government/us-judge-rejects-cftc-emergency-bid-block-new-york-policing-kalshi-2026-11-20/",
+   "url2": "https://news.ycombinator.com/item?id=50604055"
+  },
+  {
+   "id": "hn-50603845",
+   "cat": "agents",
+   "src": "Hacker News",
+   "ts": "2026-11-22T21:01:16Z",
+   "t": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+   "s": "209 نقطة، 74 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+   "url2": "https://news.ycombinator.com/item?id=50603845",
+   "h": "دليلك لتشغيل Local AI باستخدام Unsloth و Qwen",
+   "x": "شرح عملي لبناء وتشغيل نماذج ذكاء اصطناعي محلية على جهازك بكفاءة عالية.",
+   "tg": [
+    "Local AI",
+    "Agents"
+   ],
+   "tp": "agents"
+  },
+  {
+   "id": "yt-8RNSJ6Ud4nY",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-22T20:58:01Z",
+   "t": "Google Cooked With This New Model!",
+   "s": "Sharing the latest news and advancements in AI Discover More: 🛠️ Explore AI Tools & News: https://futuretools.io/ 📰 Weekly Newsletter: https://future…",
+   "tags": [
+    "Matt Wolfe"
+   ],
+   "url": "https://www.youtube.com/shorts/8RNSJ6Ud4nY"
+  },
+  {
+   "id": "hn-50603219",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-22T19:50:36Z",
+   "t": "What Happened in Fall 2026: AI and P vs. NP",
+   "s": "14 نقطة، 1 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://cacm.acm.org/blogcacm/what-happened-in-fall-2026-ai-and-p-vs-np",
+   "url2": "https://news.ycombinator.com/item?id=50603219"
+  },
+  {
+   "id": "af-httpssimonwillisonnet2026Nov22selectstyling",
+   "cat": "agents",
+   "src": "Simon Willison",
+   "ts": "2026-11-22T19:45:06Z",
+   "t": "Select Styling Specimens",
+   "s": "",
+   "tags": [
+    "مدونة"
+   ],
+   "url": "https://simonwillison.net/2026/Nov/22/select-styling/"
+  },
+  {
+   "id": "yt-7AiSw-hx9ZQ",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-22T19:35:24Z",
+   "t": "Learn Reactjs #22 - Refining Course Cards",
+   "s": "Refining Course Cards Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
+   "tags": [
+    "Elzero Web School"
+   ],
+   "url": "https://www.youtube.com/watch?v=7AiSw-hx9ZQ",
+   "h": "تطوير واجهات React وتحسين كروت الدورات التدريبية",
+   "x": "درس جديد من أكاديمية العزبي لتطوير الـ Web وتصميم مكونات الـ Frontend.",
+   "tg": [
+    "React",
+    "Code"
+   ],
+   "tp": "courses"
+  },
+  {
+   "id": "gh-1467903641",
+   "cat": "arch",
+   "src": "GitHub",
+   "ts": "2026-11-22T19:18:08Z",
+   "t": "25mcmt30/matlab-r2026a-tadarin: Engineered MATLAB R2026A build - streamlined configuration, focused technical workflows.",
+   "s": "224 نجمة، لغة HTML",
+   "tags": [
+    "أداة مفتوحة المصدر"
+   ],
+   "url": "https://github.com/25mcmt30/matlab-r2026a-tadarin",
+   "h": "نسخة معدلة من MATLAB R2026A",
+   "x": "بيئة عمل هندسية مخصصة لتسهيل الـ technical workflows والتحليل.",
+   "tg": [
+    "MATLAB",
+    "Engineering"
+   ],
+   "tp": "arch"
+  },
+  {
+   "id": "gh-1467898682",
+   "cat": "arch",
+   "src": "GitHub",
+   "ts": "2026-11-22T19:12:18Z",
+   "t": "manaswinivinukonda-cmd/ansys-2026-fajalen: Engineering simulation workflows organized through a focused Ansys workspace.",
+   "s": "226 نجمة، لغة HTML",
+   "tags": [
+    "أداة مفتوحة المصدر"
+   ],
+   "url": "https://github.com/manaswinivinukonda-cmd/ansys-2026-fajalen",
+   "h": "workspace هندسي لـ Ansys 2026",
+   "x": "تنظيم وتقسيم الـ engineering simulation workflows بشكل أسرع وأسهل.",
+   "tg": [
+    "Ansys",
+    "Simulation"
+   ],
+   "tp": "arch"
+  },
+  {
+   "id": "hn-50602843",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-22T19:10:34Z",
+   "t": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife",
+   "s": "347 نقطة، 155 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.audubon.org/magazine/birds-of-gta-6-field-guide-vice-city-wildlife",
+   "url2": "https://news.ycombinator.com/item?id=50602843",
+   "h": "دليل الحياة البرية في GTA 6",
+   "x": "نظرة تفصيلية على الطيور والبيئة الطبيعية في Vice City وLeonida.",
+   "tg": [
+    "Gaming",
+    "Design"
+   ],
+   "tp": "arch"
+  },
   {
    "id": "hn-50601525",
    "cat": "code",
@@ -14,7 +226,14 @@
    ],
    "url": "https://openai.com/index/perplexity-and-intelligence/",
    "url2": "https://news.ycombinator.com/item?id=50601525",
-   "ta": "الحيرة والذكاء"
+   "ta": "الحيرة والذكاء",
+   "h": "Perplexity ومستقبل الذكاء الاصطناعي",
+   "x": "نقاش تقني حول تطور الـ LLMs وأدوات البحث الذكية.",
+   "tg": [
+    "AI",
+    "LLM"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-C9XB0IMEX8k",
@@ -28,7 +247,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=C9XB0IMEX8k",
    "ta": "تعلم Reactjs #21 - إظهار المحتوى وإخفائه",
-   "sa": "إظهار وإخفاء محتوى الدروس والواجبات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+   "sa": "إظهار وإخفاء محتوى الدروس والواجبات: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
+   "h": "درس جديد في React.js مع أسامة زغلول",
+   "x": "شرح عملي لإظهار وإخفاء المحتوى ضمن كورس Reactjs.",
+   "tg": [
+    "React",
+    "Frontend"
+   ],
+   "tp": "courses"
   },
   {
    "id": "gn-inkling2minionollama32gbmacfloorpcwaits",
@@ -63,7 +289,14 @@
    ],
    "url": "https://news.ycombinator.com/item?id=50600771",
    "url2": "",
-   "ta": "اسأل HN: هل تعتبر الصفقات بمثابة انتقال وظيفي آمن؟"
+   "ta": "اسأل HN: هل تعتبر الصفقات بمثابة انتقال وظيفي آمن؟",
+   "h": "هل تحول المهندسون للصناعات اليدوية آمن؟",
+   "x": "نقاش مهني عن فرص العمل والاستقرار في الـ trades.",
+   "tg": [
+    "Career",
+    "Engineering"
+   ],
+   "tp": "arch"
   },
   {
    "id": "hn-50600677",
@@ -77,7 +310,14 @@
    ],
    "url": "https://www.lemonde.fr/en/opinion/article/2026/11/22/as-science-increasingly-shows-the-role-chemical-substances-play-in-lifestyle-diseases-europe-weakens-its-regulations_6786595_23.html",
    "url2": "https://news.ycombinator.com/item?id=50600677",
-   "ta": "أوروبا تضعف القواعد الكيميائية حيث يربطها العلم بـ \"أمراض نمط الحياة\""
+   "ta": "أوروبا تضعف القواعد الكيميائية حيث يربطها العلم بـ \"أمراض نمط الحياة\"",
+   "h": "أوروبا تضعف القواعد الكيميائية",
+   "x": "تخفيف القيود وسط تقارير تربط الكيمياء بأمراض العصر الحديث.",
+   "tg": [
+    "Regulations",
+    "Health"
+   ],
+   "tp": "news"
   },
   {
    "id": "gn-useclaudecodeforfreeitestfreebuffwhichpromisesvirtuallyunlim",
@@ -134,7 +374,14 @@
    ],
    "url": "https://www.nytimes.com/2026/11/22/climate/cop31-climate-summit-ends-climate.html",
    "url2": "https://news.ycombinator.com/item?id=50599583",
-   "ta": "محادثات الأمم المتحدة بشأن المناخ تنهار في صراع مرير حول الوقود الأحفوري"
+   "ta": "محادثات الأمم المتحدة بشأن المناخ تنهار في صراع مرير حول الوقود الأحفوري",
+   "h": "انهيار محادثات المناخ للأمم المتحدة",
+   "x": "خلافات حادة حول الوقود الأحفوري تعطل القرارات البيئية الكبرى.",
+   "tg": [
+    "Climate",
+    "Policy"
+   ],
+   "tp": "arch"
   },
   {
    "id": "hn-50597959",
@@ -170,7 +417,14 @@
    ],
    "url": "https://arxiv.org/abs/2606.14068",
    "url2": "https://news.ycombinator.com/item?id=50597743",
-   "ta": "أقسى على الذكر؟ تقييم LLMs حول التأطير الأخلاقي غير المتماثل بين الجنسين في الصراعات"
+   "ta": "أقسى على الذكر؟ تقييم LLMs حول التأطير الأخلاقي غير المتماثل بين الجنسين في الصراعات",
+   "h": "التحيز الجندري في تقييم الـ LLMs",
+   "x": "كيف تقييم نماذج الذكاء الاصطناعي المعضلات الأخلاقية حسب جنس الشخص؟",
+   "tg": [
+    "AI",
+    "Ethics"
+   ],
+   "tp": "news"
   },
   {
    "id": "gn-servingalocalllmtoseveralusersollamalmstudiollamacppandvllmb",
@@ -254,6 +508,26 @@
    ],
    "tp": "agents",
    "ta": "MONAI Label Zero-Day: يستغل وكلاء الذكاء الاصطناعي خوادم أبحاث التصوير الطبي"
+  },
+  {
+   "id": "hn-50595204",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-22T01:03:34Z",
+   "t": "The Biggest Lie in the Jensen Huang Story",
+   "s": "13 نقطة، 1 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.theringer.com/2026/11/18/tech/jensen-huang-nvidia-china-chips-ai-race",
+   "url2": "https://news.ycombinator.com/item?id=50595204",
+   "h": "الحقيقة خلف قصة Jensen Huang",
+   "x": "قراءة نقدية في الروايات المنتشرة عن مؤسس Nvidia.",
+   "tg": [
+    "Nvidia",
+    "Tech"
+   ],
+   "tp": "news"
   },
   {
    "id": "hn-50594937",
@@ -2067,6 +2341,19 @@
    "tp": "arch"
   },
   {
+   "id": "hn-50573839",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-20T12:36:49Z",
+   "t": "Ask HN: Any actual balanced reviews of GTA 6?",
+   "s": "13 نقطة، 24 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50573839",
+   "url2": ""
+  },
+  {
    "id": "hn-50573681",
    "cat": "arch",
    "src": "Hacker News",
@@ -3331,13 +3618,12 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDNpSUhYbDE1OXkybFJ6S25Qa2pyNUdWbzEtbUVjcmhwbnFpSDBxWDZXUVFFN2dVQ1l1YjdKT2gzMFQ0UWU0X2kxQ2E5em9vN1R0Z1hhWU5vdkpvRS0tejdVMkk3Y0phU1p4dEJJdGJhOTctSlg1bEZqbkpnbmIzLXN0dXU4MWY0THpOdVV5Y1JRb3p0TEE?oc=5",
-   "ta": "حازت شركة Forma Building Design على لقب الأفضل في الفئة حسب السجل المعماري",
-   "h": "Autodesk Forma تفوز بجائزة Architectural Record",
-   "x": "برنامج Forma يحقق تميزاً معمارياً جديداً في تحليل التصميم والتخطيط العمراني.",
+   "h": "تتويج برنامج Forma كأفضل تصميم معماري",
+   "x": "خبر يهمك لو مهتم بأحدث أدوات الـ BIM والتصميم التداخلي في السوق.",
    "tg": [
+    "BIM",
     "Forma",
-    "Architecture",
-    "BIM"
+    "Architecture"
    ],
    "tp": "arch"
   },
@@ -4268,7 +4554,27 @@
    ],
    "url": "https://colossus.com/article/ai-will-not-make-you-rich/",
    "url2": "https://news.ycombinator.com/item?id=50555093",
-   "ta": "الذكاء الاصطناعي لن يجعلك ثريًا (2025)"
+   "ta": "الذكاء الاصطناعي لن يجعلك ثريًا (2025)",
+   "h": "الذكاء الاصطناعي لن يجعلك غنياً في 2025",
+   "x": "نظرة واقعية على حدود الـ AI بعيداً عن المبالغة التسويقية وكيف تأثر على شغلك.",
+   "tg": [
+    "AI",
+    "Economy"
+   ],
+   "tp": "news"
+  },
+  {
+   "id": "hn-50555002",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-19T01:37:45Z",
+   "t": "Ask HN: Tips for transitioning from web development to embedded/firmware?",
+   "s": "117 نقطة، 71 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50555002",
+   "url2": ""
   },
   {
    "id": "gn-autodeskformasnovemberupdateletsadminsassignprojectaccessthr",
@@ -4656,7 +4962,14 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9EQzlhLWFrWGdxNHVtSVdFM0NOck4xN3dJUmJYUmVOSERQREc2bWE1Z1J0dF81Y2tYRUFxai10RkxCanBEM2w2bGxGLWRFTHl3MkRLcmFPS3lHUVppWjJGajNn?oc=5",
-   "ta": "Qwen4-Max مقابل Claude Opus 5.5: النموذج الأرخص يكلفك في مكان آخر."
+   "ta": "Qwen4-Max مقابل Claude Opus 5.5: النموذج الأرخص يكلفك في مكان آخر.",
+   "h": "مقارنة Qwen4-Max وClaude Opus",
+   "x": "هل النماذج الرخيصة توفر بجد ولا بتدفع التمن في حتة تانية؟ تحليل مهم لمهندسي الـ AI.",
+   "tg": [
+    "AI",
+    "Agents"
+   ],
+   "tp": "agents"
   },
   {
    "id": "yt-hT0qW_DRFLw",
@@ -5614,7 +5927,15 @@
    ],
    "url": "https://aecmag.com/workstations/renda-and-nexalus-launch-liquid-cooled-ai-server/",
    "ta": "Renda وNexalus يطلقان خادم الذكاء الاصطناعي المبرد بالسوائل",
-   "sa": "تقدم Nova8 ثماني وحدات معالجة رسوميات في 4U إلى منشآت لم يتم تصميمها مطلقًا للتبريد السائل"
+   "sa": "تقدم Nova8 ثماني وحدات معالجة رسوميات في 4U إلى منشآت لم يتم تصميمها مطلقًا للتبريد السائل",
+   "h": "سيرفر AI بالتبريد السائل من Renda و Nexalus",
+   "x": "سيرفر مخصص لتشغيل أحمال الذكاء الاصطناعي وثقوب الـ BIM في مساحات عمل غير مهيأة أصلاً للتشغيل المائي.",
+   "tg": [
+    "AI Server",
+    "Liquid Cooling",
+    "Hardware"
+   ],
+   "tp": "arch"
   },
   {
    "id": "gn-dontwaitnonrevitdeveloperscreateyourownrevitaddinsusingaiand",
@@ -6062,7 +6383,15 @@
     "Agents"
    ],
    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNd19Jc3NucWd0Z0xsU2dIZ1p0MjVoTVJyOXdZNEhreDNTQVNxV0VWVm1ybnF4N0VfTTFkVTRpNXAtSW1xUUdQb19SeGVTMVJPZlQ5VWZvaEptM21YT3d0bXlHRGJ3UnRKc0doSDlpZTJDUllSa01DLXN2dEpXZzVJdXRBT3Iya1Nxd3hCbXIxZkYyQmRXd2kwR2pnVnpzeWg3ajRyTVJXVnFPWUt1cU1qNjlOd08tcjQ5bXM5VDktaW1EZWszT0E?oc=5",
-   "ta": "عاجل: الإصدارات المختطفة من إطار عمل وكيل Microsoft الرسمي تسرق بيانات اعتماد Azure وCI"
+   "ta": "عاجل: الإصدارات المختطفة من إطار عمل وكيل Microsoft الرسمي تسرق بيانات اعتماد Azure وCI",
+   "h": "اختراق إضافات Microsoft لأدوات الـ Agents",
+   "x": "تحذير أمني هام لسرقة بيانات الاعتماد من إطارات عمل الـ agents الرسمية لـ Microsoft.",
+   "tg": [
+    "Security",
+    "Agents",
+    "Azure"
+   ],
+   "tp": "agents"
   },
   {
    "id": "gh-1462394591",
@@ -6075,7 +6404,15 @@
     "Add-in"
    ],
    "url": "https://github.com/yosifkhalifa66/Containment-Length-Calculator-Revit-Plugin",
-   "ta": "yosifkhalifa66/Containment-Length-Calculator-Revit-Plugin: البرنامج المساعد Autodesk Revit pyRevit لحساب إجمالي طول المسار للقنوات وصواني الكابلات..."
+   "ta": "yosifkhalifa66/Containment-Length-Calculator-Revit-Plugin: البرنامج المساعد Autodesk Revit pyRevit لحساب إجمالي طول المسار للقنوات وصواني الكابلات...",
+   "h": "أداة pyRevit لحساب مسارات الـ Conduits",
+   "x": "إضافة جديدة لبرنامج Revit لحساب الطول الإجمالي لمسارات الكابلات والـ conduits بسرعة.",
+   "tg": [
+    "Revit",
+    "Python",
+    "BIM"
+   ],
+   "tp": "addins"
   },
   {
    "id": "hn-50542361",
@@ -6117,228 +6454,6 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBsNkJ4VnZjT1kwY3Z5YnJFek1oSDZ4Umo4UWd5T09FcTNMRkpIZ013MllmR3hBS0tvWXJuSnk2TmpaaXlEbU1TbU5ZZ2FabkVyei1CU2hKMnU5MlBBTHZVMmZNYTllU0ZxZVJETkl2RQ?oc=5",
    "ta": "ميوز سبارك ضد تشات جي بي تي ضد كلود ضد جيميني (2026)"
-  },
-  {
-   "id": "hn-50541790",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-18T04:14:04Z",
-   "t": "Why is Gemini 4 Carbon taking so long?",
-   "s": "110 نقطة، 54 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://kernel.dev/blog/why-is-gemini-4-carbon-taking-so-long/",
-   "url2": "https://news.ycombinator.com/item?id=50541790",
-   "ta": "لماذا يستغرق Gemini 4 Carbon وقتًا طويلاً؟"
-  },
-  {
-   "id": "hn-50541619",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-18T03:47:43Z",
-   "t": "Claude was trained on protein sequences at scale",
-   "s": "124 نقطة، 56 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "http://xinmingtu.cn/blog/2026/claude-opus-5-5-protein-sequences/",
-   "url2": "https://news.ycombinator.com/item?id=50541619",
-   "ta": "تم تدريب كلود على تسلسل البروتين على نطاق واسع"
-  },
-  {
-   "id": "hn-50541568",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-18T03:40:01Z",
-   "t": "Show HN: Tinnitus frequency finder and audio notch tool",
-   "s": "180 نقطة، 116 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://trynotched.com/find",
-   "url2": "https://news.ycombinator.com/item?id=50541568",
-   "ta": "إظهار HN: أداة اكتشاف تردد طنين الأذن وأداة قطع الصوت"
-  },
-  {
-   "id": "gn-autodeskneilsoftlaunchbimanddigitaltwincoeinpune",
-   "cat": "arch",
-   "src": "ET Datacenters",
-   "ts": "2026-11-18T02:48:19Z",
-   "t": "Autodesk, Neilsoft launch BIM and Digital Twin CoE in Pune",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNVDVZeTlkRjZOSmEzMEZEUGhtYWFJVlVycHlmb2c4cDFSbGh3WG9NOHE3WjBpVjN5dGttWTJEek02V1NEdGx0RW1ydEEyOXFOc2xzczg3RDdJMTF6LTZ0ZllvNW5OWEhKS2d1bTlqMllIUzFLWUNIZy1PMEY4SV9CME4xMXJsNTJfRlIwbkZ1SUZKcVpXZjdUaWpKQ2d6bXlXZEw3X0hOb0RMdEFkSW82dTVrMkdSQ1BvSURPZ0V2WlBkOTJwM1c4ZmMyTHJBX3d3amlzeGhuYldWeDByNmE5LUhkTmI1a013dXZHWlNHdHI4SXNpczN5Vl9lUDFDU1JrMFduU2p3WDljbUhsQnBFX3ZB0gHaAUFVX3lxTE15NkNlQ0w2M0J4azlEMy1hYVFSQXVqd25IZjdkYzlrVkNUS09ORVN0NUVPLU80bzhVaWNYWTMySkxybmlsd2RSc0liMFFTbzB5Tk12QWppb2tBQ1YwYmhBT000eDEyeUU1NFVyR2F4am8wZVEtLXQyYjhrd2ZPb2oydTVmOEdERG5FcG5nX3NDeVdNOEQ1TGNXMEYwS0hvV2JyZ3pLS1VqcEJXN2s1YUc3QUNoVWVjM3h1Z01oMlZwVVBBTlBWckZRTUR3akc3R1lJcHpqX0ItaTV3?oc=5",
-   "ta": "أوتوديسك ونيلسوفت تطلقان BIM وDigital Twin CoE في بيون"
-  },
-  {
-   "id": "hn-50541047",
-   "cat": "agents",
-   "src": "Hacker News",
-   "ts": "2026-11-18T02:18:29Z",
-   "t": "Show HN: An ASCII cell aquarium for your terminal",
-   "s": "36 نقطة، 15 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://github.com/kborer/cells/",
-   "url2": "https://news.ycombinator.com/item?id=50541047",
-   "ta": "إظهار HN: حوض أسماك خلية ASCII لجهازك"
-  },
-  {
-   "id": "hn-50541023",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-18T02:14:09Z",
-   "t": "Did IBM originally plan to use the 68000 in the PC? (2020)",
-   "s": "13 نقطة، 5 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://retrocomputing.stackexchange.com/questions/16912",
-   "url2": "https://news.ycombinator.com/item?id=50541023",
-   "ta": "هل خططت شركة IBM في الأصل لاستخدام 68000 في جهاز الكمبيوتر؟ (2020)"
-  },
-  {
-   "id": "yt-JVHkb8PTMvc",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-18T01:43:27Z",
-   "t": "OpenAI GPT-6.2 Astra is Here - It's Not What You Think",
-   "s": "Sharing the latest news and advancements in AI - 🛠️ Explore AI Tools & News: https://futuretools.io/ Discover More: 🛠️ Explore AI Tools & News: https…",
-   "tags": [
-    "Matt Wolfe"
-   ],
-   "url": "https://www.youtube.com/watch?v=JVHkb8PTMvc",
-   "ta": "OpenAI GPT-6.2 Astra موجود هنا - ليس كما تعتقد",
-   "sa": "مشاركة آخر الأخبار والتطورات في مجال الذكاء الاصطناعي - 🛠️ استكشاف أدوات وأخبار الذكاء الاصطناعي: https://futuretools.io/ اكتشف المزيد: 🛠️ استكشاف أدوات وأخبار الذكاء الاصطناعي: https..."
-  },
-  {
-   "id": "yt-lemt3NUBGTg",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-18T01:21:35Z",
-   "t": "Can AssemblyAI TTS Pronounce These? The Pronunciation Challenge",
-   "s": "Can AssemblyAI TTS Pronounce These? The Pronunciation Challenge",
-   "tags": [
-    "AssemblyAI"
-   ],
-   "url": "https://www.youtube.com/shorts/lemt3NUBGTg",
-   "ta": "هل يمكن لـ AssemblyAI TTS نطق هذه؟ تحدي النطق",
-   "sa": "هل يمكن لـ AssemblyAI TTS نطق هذه؟ تحدي النطق"
-  },
-  {
-   "id": "yt-2pdF52EVlbM",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-18T00:06:39Z",
-   "t": "An underrated way to use ChatGPT: Life admin",
-   "s": "Even ChatGPT researchers need a little help with life admin. Isa F. shares an underrated way she uses ChatGPT: keeping track of the details and makin…",
-   "tags": [
-    "OpenAI"
-   ],
-   "url": "https://www.youtube.com/shorts/2pdF52EVlbM",
-   "ta": "طريقة مخففة لاستخدام ChatGPT: Life admin",
-   "sa": "حتى الباحثين في ChatGPT يحتاجون إلى القليل من المساعدة في إدارة الحياة. تشارك Isa F. طريقة مخففة تستخدم بها ChatGPT: تتبع التفاصيل وصنع..."
-  },
-  {
-   "id": "gn-storybuildingadigitaltwinexploringthefutureofpersonalizedcan",
-   "cat": "arch",
-   "src": "Hadassah | The Women's Zionist Organization of America",
-   "ts": "2026-11-17T23:50:40Z",
-   "t": "Story | Building a Digital Twin: Exploring the Future of Personalized Cancer Care",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNOFJVVThoLWhwNU9VbnNrLUNWU2lBMkhCbFp5VFM4bTNEcjhudUh4dU0xb2pTMDJtMzZCM3ZwUGZsaVIzUXdUbUhmb2w0QzhSem8xYU9CNkoycWhDNlFfeVlZZjczNlFuWEdZaEdDR1RnQXNjYXhUUFJuOXNOMUFXdkw1eWxOM2pvYUM0Zy1rUF9GQkU2QUgyUU9MOHlXams5c1UwNzdB?oc=5",
-   "ta": "قصة | بناء توأم رقمي: استكشاف مستقبل الرعاية الشخصية لمرضى السرطان"
-  },
-  {
-   "id": "yt-_5ZDkWP8K0c",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-17T23:48:31Z",
-   "t": "Automating the ADLC with Engine | Introduction to LangSmith (12/12)",
-   "s": "Every step of the loop so far was done by hand, and that gets slower as tens of traces become thousands. LangSmith Engine automates the ADLC. It clus…",
-   "tags": [
-    "LangChain"
-   ],
-   "url": "https://www.youtube.com/watch?v=_5ZDkWP8K0c",
-   "ta": "أتمتة ADLC مع المحرك | مقدمة إلى لانج سميث (12/12)",
-   "sa": "تم تنفيذ كل خطوة في الحلقة حتى الآن يدويًا، ويصبح ذلك أبطأ عندما تصبح عشرات الآثار آلافًا. يقوم محرك LangSmith بأتمتة ADLC. إنه كلوس…"
-  },
-  {
-   "id": "yt-eg5O6q9H84I",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-17T23:48:17Z",
-   "t": "Closing the Loop | Introduction to LangSmith (11/12)",
-   "s": "In the Monitor stage, five LangSmith features worked together to surface the LangSlice agent's second bug. The confirm_order tool checks the delivery…",
-   "tags": [
-    "LangChain"
-   ],
-   "url": "https://www.youtube.com/watch?v=eg5O6q9H84I",
-   "ta": "إغلاق الحلقة | مقدمة إلى لانج سميث (11/12)",
-   "sa": "في مرحلة المراقبة، عملت خمس ميزات LangSmith معًا لكشف الخطأ الثاني لوكيل LangSlice. تقوم أداة تأكيد_الطلب بالتحقق من التسليم..."
-  },
-  {
-   "id": "yt-keMWUys2BMs",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-17T23:48:01Z",
-   "t": "Dashboards and Alerts | Introduction to LangSmith (10/12)",
-   "s": "Everything we found in the Monitor stage so far came from going looking for it. Dashboards chart how the agent behaves over time, and alerts tell you…",
-   "tags": [
-    "LangChain"
-   ],
-   "url": "https://www.youtube.com/watch?v=keMWUys2BMs",
-   "ta": "لوحات المعلومات والتنبيهات | مقدمة إلى لانج سميث (10/12)",
-   "sa": "كل ما وجدناه في مرحلة المراقبة حتى الآن جاء من خلال البحث عنه. ترسم لوحات المعلومات كيفية تصرف الوكيل مع مرور الوقت، وتخبرك التنبيهات..."
-  },
-  {
-   "id": "yt-HVXydoGAWsQ",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-17T23:47:43Z",
-   "t": "Insights | Introduction to LangSmith (9/12)",
-   "s": "An evaluator answers a question you can write down as a score. Insights is for questions about categories you don't know yet, such as what customers…",
-   "tags": [
-    "LangChain"
-   ],
-   "url": "https://www.youtube.com/watch?v=HVXydoGAWsQ",
-   "ta": "رؤى | مقدمة إلى لانج سميث (12/9)",
-   "sa": "يجيب المقيم على سؤال يمكنك تدوينه كنتيجة. الرؤى مخصصة للأسئلة المتعلقة بالفئات التي لا تعرفها بعد، مثل العملاء..."
-  },
-  {
-   "id": "yt-LfdGwdUhGW4",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-17T23:47:25Z",
-   "t": "Annotation Queues | Introduction to LangSmith (8/12)",
-   "s": "An LLM judge that has never been checked against human labels can be confidently wrong at scale. In this lesson we label the LangSlice threads in an…",
-   "tags": [
-    "LangChain"
-   ],
-   "url": "https://www.youtube.com/watch?v=LfdGwdUhGW4",
-   "ta": "قوائم انتظار التعليقات التوضيحية | مقدمة إلى لانج سميث (12/8)",
-   "sa": "من الممكن أن يكون قاضي LLM الذي لم يتم فحصه مطلقًا مقابل التصنيفات البشرية مخطئًا على نطاق واسع. في هذا الدرس قمنا بتسمية سلاسل LangSlice في..."
-  },
-  {
-   "id": "yt-Y6Gi_gYnOAo",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-17T23:47:12Z",
-   "t": "Online Evals and Automations | Introduction to LangSmith (7/12)",
-   "s": "In the Test stage, we only learned customers were upset because the LangSlice staff told us. This lesson starts the Monitor stage by scoring sentimen…",
-   "tags": [
-    "LangChain"
-   ],
-   "url": "https://www.youtube.com/watch?v=Y6Gi_gYnOAo",
-   "ta": "التقييمات والأتمتة عبر الإنترنت | مقدمة إلى لانج سميث (7/12)",
-   "sa": "في مرحلة الاختبار، علمنا فقط أن العملاء كانوا منزعجين لأن موظفي LangSlice أخبرونا بذلك. يبدأ هذا الدرس مرحلة المراقبة بتسجيل المشاعر..."
   }
  ]
 }
