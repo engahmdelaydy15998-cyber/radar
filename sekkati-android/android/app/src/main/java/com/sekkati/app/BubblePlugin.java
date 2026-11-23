@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.PowerManager;
 import android.provider.Settings;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -96,6 +97,39 @@ public class BubblePlugin extends Plugin {
     }
 
     /** Opens Android's text-to-speech settings so the user can pick Google's engine / download a better Arabic voice. */
+    /** True when Android won't put the app to sleep for battery saving (background GPS keeps going). */
+    @PluginMethod
+    public void batteryOk(PluginCall call) {
+        JSObject r = new JSObject();
+        boolean ok = true;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            PowerManager pm = (PowerManager) app().getSystemService(Context.POWER_SERVICE);
+            ok = pm == null || pm.isIgnoringBatteryOptimizations(app().getPackageName());
+        }
+        r.put("value", ok);
+        call.resolve(r);
+    }
+
+    /** Asks the user to exempt the app from battery optimisation; falls back to the settings list. */
+    @SuppressLint("BatteryLife")
+    @PluginMethod
+    public void requestBattery(PluginCall call) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            try {
+                Intent i = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS, Uri.parse("package:" + app().getPackageName()));
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                app().startActivity(i);
+            } catch (Exception e) {
+                try {
+                    Intent i = new Intent(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS);
+                    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    app().startActivity(i);
+                } catch (Exception ignored) { }
+            }
+        }
+        call.resolve();
+    }
+
     @PluginMethod
     public void openTtsSettings(PluginCall call) {
         Intent i = new Intent("com.android.settings.TTS_SETTINGS");

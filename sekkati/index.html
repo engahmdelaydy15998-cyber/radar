@@ -281,6 +281,8 @@ body.mapfull #mapBig,body.nav #mapBack{display:none}
     <h2>🫧 الفقاعة فوق جوجل مابس</h2>
     <div class="note">بتظهر لما تبدأ من سكّتي ("جوجل + سجّل" أو "ابدأ السواقة") وبعدين تروح لجوجل مابس، ومحتاجة إذن "الظهور فوق التطبيقات الأخرى".</div>
     <div style="margin-top:8px"><button class="big sec" id="bubTest">جرّب الفقاعة دلوقتي</button></div>
+    <div class="note" id="battNote" style="margin-top:10px" hidden>🔋 الموبايل ممكن يوقف التسجيل في الخلفية عشان يوفّر بطارية (شاومي وريلمي وأوبو بالذات).</div>
+    <div style="margin-top:6px"><button class="big sec" id="battBtn" hidden>اسمح لسكّتي تشتغل في الخلفية</button></div>
   </div>
 
   <div class="card">
@@ -517,7 +519,7 @@ function overlaySet(text, level){                  // آخر محتوى للفق
 }
 function overlayAction(id){                        // أزرار الفقاعة اللي فوق جوجل مابس
   if (id === 'radar' || id === 'toll' || id === 'checkpoint'){ if (!lastPos) speak('لسه مستني إشارة الـ GPS'); else handleReport(id); }
-  else if (id === 'mute'){ voiceOn = !voiceOn; $('nmute').innerHTML = voiceOn ? IC_VOL : IC_MUTE; if (!voiceOn && NP.TextToSpeech) NP.TextToSpeech.stop().catch(() => {}); else speak('الصوت رجع'); }
+  else if (id === 'mute'){ voiceOn = !voiceOn; $('nmute').innerHTML = voiceOn ? IC_VOL : IC_MUTE; if (!voiceOn){ sayQ.length = 0; if (NP.TextToSpeech) NP.TextToSpeech.stop().catch(() => {}); } else speak('الصوت رجع'); }
   else if (id === 'stop'){ if (navOn) exitNav(); else if (watchId !== null) stopRec(); }   // ملخص الرحلة بيتقال لوحده بعد الحفظ
 }
 function ensureOverlay(){                          // إذن "الظهور فوق التطبيقات" مرة واحدة
@@ -542,7 +544,15 @@ if (NATIVE && NP.Bubble){
     setTimeout(() => { NP.Bubble.hide(); overlayShown = ''; $('bubTest').textContent = 'جرّب الفقاعة دلوقتي'; }, 6000);
   }).catch(e => { $('bubTest').textContent = 'الفقاعة مش شغالة: ' + (e.message || e); });
 }
-if (NATIVE && NP.App) NP.App.addListener('appStateChange', st => { appActive = st.isActive; overlaySet(overlayWant && overlayWant.text, overlayWant && overlayWant.level); });
+function battCheck(){                              // توفير البطارية بيقتل التسجيل وجوجل مابس قدام
+  if (!NATIVE || !NP.Bubble || !NP.Bubble.batteryOk) return Promise.resolve(true);
+  return NP.Bubble.batteryOk().then(r => { $('battNote').hidden = $('battBtn').hidden = !!r.value; return !!r.value; }).catch(() => true);
+}
+if (NATIVE && NP.Bubble){
+  battCheck();
+  $('battBtn').onclick = () => NP.Bubble.requestBattery().catch(() => {});
+}
+if (NATIVE && NP.App) NP.App.addListener('appStateChange', st => { appActive = st.isActive; if (st.isActive) battCheck(); overlaySet(overlayWant && overlayWant.text, overlayWant && overlayWant.level); });
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const arab = n => Math.round(n).toLocaleString('ar-EG');
 const fmtT = s => { s = Math.round(s); const h = Math.floor(s/3600), m = Math.floor(s%3600/60), x = s%60;
@@ -557,8 +567,20 @@ let trips = load('trips'), blocks = load('blocks'), jams = load('jams'), osmPois
 let myPois = load('pois');
 if (!myPois.length) { const old = load('radars'); if (old.length) myPois = old.map(r => ({lat:r.lat, lon:r.lon, kind:'radar'})); }
 function put(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch(e){ return false; } }
-function save(){ if (!put('trips', trips) | !put('blocks', blocks) | !put('pois', myPois) | !put('jams', jams) | !put('notes', notes)) $('msg').textContent = 'تعذّر الحفظ على الجهاز. استخدم التصدير.'; }
+function save(){
+  let ok = put('trips', trips);
+  if (!ok && trips.length > 1){                     // المساحة خلصت: نخفّف الرحلات القديمة بدل ما الجديدة تضيع
+    trips.forEach((t, i) => { if (i) t.pts = pack(thin(unpack(t.pts)).filter((p, j) => j % 2 === 0)); });
+    ok = put('trips', trips);
+  }
+  if (!ok | !put('blocks', blocks) | !put('pois', myPois) | !put('jams', jams) | !put('notes', notes)) $('msg').textContent = 'مساحة التخزين خلصت. اعمل نسخة احتياطية وامسح رحلات قديمة.';
+}
 const pack = pts => pts.map(p => [p.t, +p.lat.toFixed(5), +p.lon.toFixed(5), Math.round(p.acc||0)]);
+function thin(P){                                // للحفظ بس: نقطة كل ٥ م أو ٢٠ ثانية تكفي التحليل وبتوفر مساحة كتير
+  if (P.length < 3) return P; const o = [P[0]];
+  for (let i = 1; i < P.length - 1; i++){ const l = o[o.length - 1]; if (hav(l, P[i]) >= 5 || P[i].t - l.t >= 20000) o.push(P[i]); }
+  o.push(P[P.length - 1]); return o;
+}
 const unpack = a => a.map(r => ({t:r[0], lat:r[1], lon:r[2], acc:r[3]}));
 
 /* الخريطة: MapLibre مع OpenFreeMap (ثلاثية الأبعاد)، وبديل OSM لو حصلت مشكلة */
@@ -676,8 +698,10 @@ function followGoogle(){                           // لحد ما جودة طر�
   window.open(url, '_blank');
   if (watchId === null){ if (!$('name').value.trim()) $('name').value = 'متابعة جوجل إلى ' + (dest.name || 'الوجهة'); startRec(); }
 }
+let favPending = null;                            // البيت/الشغل: أول مكان يتختار بعد "حدّده" بيتحفظ
 function setPlace(which, p, label){
   const o = {lat:p.lat, lon:p.lon, name:label || p.name || 'نقطة على الخريطة'};
+  if (favPending){ put('fav:' + favPending, {lat:o.lat, lon:o.lon, name:o.name}); $('msg').textContent = (favPending === 'home' ? '🏠 البيت' : '💼 الشغل') + ' اتحفظ.'; favPending = null; $('qa').placeholder = 'من: موقعك الحالي'; $('qb').placeholder = 'إلى: ابحث عن وجهة'; }
   if (which === 'a'){ start = o; startCur = false; $('qa').value = o.name;
     if (mStart) mStart.setLngLat([o.lon, o.lat]); else mStart = addMk(mkEl('', 'st'), o.lon, o.lat); }
   else { dest = o; $('qb').value = o.name;
@@ -719,11 +743,22 @@ function showSuggest(which, list, withActions){
   if (withActions){
     if (which === 'a') items.push({act:'gps', html:'<span>📍 موقعي الحالي</span>'});
     items.push({act:'pick', html:'<span>🗺 اختار من الخريطة</span>'});
+    [['home', '🏠', 'البيت'], ['work', '💼', 'الشغل']].forEach(([k, ic, nm]) => {
+      const f = load('fav:' + k, null);
+      items.push(f ? {p:{...f, name:nm}, fav:k, html:`<span>${ic} <b>${nm}</b> <small>${esc(f.name || '')} · دوسة طويلة للتغيير</small></span><small>${ref ? arab(hav(ref, f)/1000) + ' كم' : ''}</small>`}
+                   : {act:'fav', fav:k, html:`<span>${ic} <b>${nm}</b> <small>حدّده مرة واحدة</small></span>`});
+    });
   }
   list.forEach(x => items.push({p:x, html:`<span>${x.icon || '📍'} <b>${esc(x.name)}</b>${x.sub ? ' <small>' + esc(x.sub) + '</small>' : ''}</span><small>${ref ? arab(hav(ref, x)/1000) + ' كم' : ''}</small>`}));
   $('sr').innerHTML = items.map((it, i) => `<div class="sri" data-i="${i}">${it.html}</div>`).join('');
+  $('sr').querySelectorAll('.sri').forEach(d => d.oncontextmenu = e => {   // دوسة طويلة على البيت/الشغل = تغييره
+    const it = items[+d.dataset.i]; if (!it.fav || it.act) return; e.preventDefault();
+    put('fav:' + it.fav, null); favPending = it.fav; showSuggest(which, list, withActions);
+    const el = $(which === 'a' ? 'qa' : 'qb'); el.placeholder = 'اكتب العنوان الجديد أو اختاره من الخريطة'; el.focus();
+  });
   $('sr').querySelectorAll('.sri').forEach(d => d.onclick = () => {
     const it = items[+d.dataset.i];
+    if (it.act === 'fav'){ favPending = it.fav; $('sr').innerHTML = ''; const el = $(which === 'a' ? 'qa' : 'qb'); el.value = ''; el.placeholder = 'اكتب عنوان ' + (it.fav === 'home' ? 'البيت' : 'الشغل') + ' أو اختاره من الخريطة'; el.focus(); return; }
     if (it.act === 'gps'){ $('sr').innerHTML = ''; $('qa').blur(); useMyLocation(); }
     else if (it.act === 'pick'){ $('sr').innerHTML = ''; $('qa').blur(); $('qb').blur(); setMode(which); }
     else { addRecent(it.p); setPlace(which, it.p, it.p.name); }
@@ -952,10 +987,22 @@ function pickArVoice(){
   arVoice = vs.find(v => v.lang === 'ar-EG') || vs.find(v => v.lang && v.lang.toLowerCase().startsWith('ar')) || null;
 }
 if ('speechSynthesis' in window){ pickArVoice(); speechSynthesis.onvoiceschanged = pickArVoice; }
+let sayQ = [], saying = false;                   // طابور الكلام: تنبيه ورا تنبيه بدل ما واحد يقطع التاني
 function speak(t, done){
+  sayQ.push({t, done, at:Date.now()}); if (!saying) sayNext();
+}
+function sayNext(){
+  while (sayQ.length && Date.now() - sayQ[0].at > 12000 && sayQ.length > 1) sayQ.shift();   // القديم اللي فات وقته
+  const it = sayQ.shift(); if (!it){ saying = false; return; }
+  saying = true; let fin = false;
+  const next = () => { if (fin) return; fin = true; clearTimeout(guard); if (it.done) it.done(); sayNext(); };
+  const guard = setTimeout(next, 4000 + it.t.length * 120);   // لو المحرك ما ردّش، الطابور ما يقفش
+  sayRaw(it.t, next);
+}
+function sayRaw(t, done){
   if (voiceOn && NATIVE && NP.TextToSpeech){       // نطق الموبايل نفسه، وبيشتغل والتطبيق في الخلفية
     const end = () => { if (done) done(); };
-    NP.TextToSpeech.stop().catch(() => {})
+    Promise.resolve()
       .then(() => NP.TextToSpeech.speak(voicePick !== null ? {text:t, lang:'ar', voice:voicePick, rate:1, pitch:1, volume:1} : {text:t, lang:'ar-EG', rate:1, pitch:1, volume:1}))
       .catch(() => NP.TextToSpeech.speak({text:t, lang:'ar', rate:1, pitch:1, volume:1})).then(end, end);
     return;
@@ -965,7 +1012,7 @@ function speak(t, done){
     const u = new SpeechSynthesisUtterance(t), chosen = voicePick !== null ? speechSynthesis.getVoices().find(v => v.name === voicePick) : null, vv = chosen || arVoice;
     u.lang = vv ? vv.lang : 'ar-EG';
     if (vv) u.voice = vv;                 // جهاز ما فيهوش صوت ar-EG بالاسم بالظبط بيستخدم أقرب لهجة عربية موجودة
-    if (done){ u.onend = done; u.onerror = done; } speechSynthesis.cancel(); speechSynthesis.speak(u);
+    if (done){ u.onend = done; u.onerror = done; } speechSynthesis.speak(u);
   } catch(e){ if (done) done(); }
 }
 let voiceList = [], voicePick = null;            // التطبيق: رقم الصوت في قايمة المحرك؛ المتصفح: اسمه
@@ -1138,7 +1185,7 @@ function freeUpdate(p){
       const key = id + ':' + th;
       if (dp <= th && !nav.spoken[key]){ nav.spoken[key] = 1; if (dp > th * 0.6) speak(POI_AR[kind] + ' بعد ' + (th === 500 ? 'خمسمية' : 'ميت وخمسين') + ' متر' + (np.max ? '، الحد ' + arab(np.max) : '')); }
     });
-    if (over && dp < 300 && !nav.spoken['o' + id]){ nav.spoken['o' + id] = 1; speak('هدّي السرعة'); }
+    if (over && dp < 300 && !nav.spoken['o' + id]){ nav.spoken['o' + id] = 1; speak('هدّي السرعة، الحد ' + arab(np.max) + ' وانت ' + arab(Math.round(spd))); }
   }
   if (spd < 6){
     if (!nav.slowSince) nav.slowSince = Date.now();
@@ -1189,7 +1236,7 @@ function navRender(speed, off){
     const key = 'p' + Math.round(np.at) + ':' + th;
     if (dp <= th && !n.spoken[key]){ n.spoken[key] = 1; if (dp > th * 0.6) speak(POI_AR[np.kind] + ' بعد ' + (th === 500 ? 'خمسمية' : 'ميت وخمسين') + ' متر' + (np.max ? '، الحد ' + arab(np.max) : '')); }
   });
-  if (over && dp < 300 && !n.spoken['o' + Math.round(np.at)]){ n.spoken['o' + Math.round(np.at)] = 1; speak('هدّي السرعة'); }
+  if (over && dp < 300 && !n.spoken['o' + Math.round(np.at)]){ n.spoken['o' + Math.round(np.at)] = 1; speak('هدّي السرعة، الحد ' + arab(np.max) + ' وانت ' + arab(Math.round(speed))); }
   [500, 100].forEach(th => {
     const key = k + ':' + th;
     if (dNext <= th && !n.spoken[key]){ n.spoken[key] = 1; if (dNext > th * 0.6 && st.type !== 'arrive') speak('بعد ' + (th === 500 ? 'خمسمية' : 'مية') + ' متر ' + instrOf(st)); }
@@ -1224,7 +1271,7 @@ $('freeGo').onclick = startFree;
 const IC_VOL = '<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>';
 const IC_MUTE = '<svg viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>';
 $('nmute').innerHTML = IC_VOL;
-$('nmute').onclick = () => { voiceOn = !voiceOn; $('nmute').innerHTML = voiceOn ? IC_VOL : IC_MUTE; if (!voiceOn){ try { speechSynthesis.cancel(); } catch(e){} } };
+$('nmute').onclick = () => { voiceOn = !voiceOn; $('nmute').innerHTML = voiceOn ? IC_VOL : IC_MUTE; if (!voiceOn){ sayQ.length = 0; try { speechSynthesis.cancel(); } catch(e){} if (NATIVE && NP.TextToSpeech) NP.TextToSpeech.stop().catch(() => {}); } };
 
 /* البلاغات أثناء القيادة */
 const REPORTS = [['toll', '💳 كارتة'], ['jam', '🚗 زحمة'], ['accident', '💥 حادثة'], ['block', '⛔ مقفول'], ['radar', '📷 رادار'], ['checkpoint', '🚓 لجنة'], ['note', '📝 مكان/ملاحظة'], ['alt', '🔀 طريق تاني']];
@@ -1377,6 +1424,10 @@ async function startRec(){
   tick = setInterval(live, 1000); live();
   $('rec').textContent = '■ إيقاف وحفظ'; $('rec').classList.add('red');
   if (!NATIVE && navigator.wakeLock) navigator.wakeLock.request('screen').then(x => { wl = x; }).catch(() => {});
+  if (NATIVE) battCheck().then(ok => {
+    if (!ok && !load('battAsked', false) && confirm('عشان الموبايل ما يوقفش التسجيل وانت على جوجل مابس، اسمح لسكّتي تشتغل في الخلفية (من غير قيود على البطارية). أفتح الإعدادات؟')){ put('battAsked', true); NP.Bubble.requestBattery().catch(() => {}); }
+    else put('battAsked', true);
+  });
   if (NATIVE && NP.BackgroundGeolocation){         // بيكمّل يسجّل والشاشة مقفولة أو جوجل مابس قدام
     watchId = 'bg';
     NP.BackgroundGeolocation.addWatcher({backgroundTitle:'سكّتي شغالة', backgroundMessage:'بتسجّل الطريق وبتنبهك قبل الرادارات والكارتات', requestPermissions:true, stale:false, distanceFilter:0},
@@ -1412,7 +1463,7 @@ function stopRec(){
     $('recNote').textContent = $('msg').textContent; return;
   }
   const name = $('name').value.trim() || 'رحلة ' + new Date().toLocaleDateString('ar-EG');
-  trips.unshift({id:Date.now(), name, start:pts[0].t, pts:pack(pts)});
+  trips.unshift({id:Date.now(), name, start:pts[0].t, pts:pack(thin(pts))});
   save(); $('name').value = ''; renderTrips(); carAddTrip(trips[0]);
   analyzeTrip(trips[0], true);
 }
@@ -1491,13 +1542,14 @@ function renderTrips(){
     trips = trips.filter(t => t.id !== +b.dataset.del); save(); renderTrips();
   });
 }
-const backupData = () => ({trips, blocks, pois:myPois, jams, notes, car:load('car', null), exportedAt:Date.now()});
+const backupData = () => ({trips, blocks, pois:myPois, jams, notes, car:load('car', null), home:load('fav:home', null), work:load('fav:work', null), exportedAt:Date.now()});
 function mergeBackup(d){
   const add = Array.isArray(d) ? d : (d.trips || []), have = new Set(trips.map(t => t.id));
   add.forEach(t => { if (t && t.id && t.pts && !have.has(t.id)) trips.push(t); });
   (d.pois || []).forEach(p => { if (!myPois.some(x => x.kind === p.kind && hav(x, p) < 40)) myPois.push(p); });
   (d.blocks || []).forEach(b => { if (b.until > Date.now() && !blocks.some(x => hav(x, b) < 40)) blocks.push(b); });
   if (d.car && !load('car', null)){ put('car', d.car); renderCar(); }
+  ['home', 'work'].forEach(k => { if (d[k] && !load('fav:' + k, null)) put('fav:' + k, d[k]); });
   (d.notes || []).forEach(n => { if (n && n.t && !notes.some(x => x.t === n.t)) notes.push(n); });
   (d.jams || []).forEach(j => { if (j.until > Date.now() && !jams.some(x => x.kind === j.kind && hav(x, j) < 60)) jams.push(j); });
   trips.sort((a, b) => b.start - a.start); save(); renderTrips(); drawMarks();
@@ -1545,7 +1597,8 @@ const CAR_ITEMS = [                                // متوسطات عامة؛ 
   {id:'belts', name:'سيور المروحة والدينامو', km:40000, mo:36}, {id:'brakes', name:'تيل الفرامل', km:30000, mo:24},
   {id:'rot', name:'ترصيص وتبديل الكاوتش', km:10000, mo:6}, {id:'tires', name:'الكاوتش', km:45000, mo:60},
   {id:'batt', name:'البطارية', km:0, mo:30}, {id:'cool', name:'مية الردياتير', km:40000, mo:24},
-  {id:'gear', name:'زيت الفتيس', km:60000, mo:48}];
+  {id:'gear', name:'زيت الفتيس', km:60000, mo:48},
+  {id:'lic', name:'تجديد رخصة العربية', km:0, mo:36}, {id:'ins', name:'التأمين', km:0, mo:12}];
 function carGet(){ const c = load('car', null) || {}; c.items = CAR_ITEMS.map(d => ({...d, ...((c.items || []).find(x => x.id === d.id) || {})})); return c; }
 function carPut(c){ put('car', c); renderCar(); }
 function carAddTrip(t){                            // العداد بيزيد بمسافة الرحلة
