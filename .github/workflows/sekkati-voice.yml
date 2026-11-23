@@ -28,13 +28,13 @@ jobs:
       - name: Voice samples
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python3 tools/sekkati_voice.py --samples
+        run: SEKKATI_COMMIT=1 python3 tools/sekkati_voice.py --samples
       - name: Generate phrases
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           V=$(cat sekkati/voice/VOICE 2>/dev/null || echo Kore)
-          SEKKATI_VOICE="$V" timeout 9600 python3 tools/sekkati_voice.py || true
+          SEKKATI_COMMIT=1 SEKKATI_VOICE="$V" timeout 9600 python3 tools/sekkati_voice.py || true
       - name: Commit
         if: always()
         run: |

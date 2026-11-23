@@ -64,6 +64,21 @@ def phrases():
     return out
 
 
+def commit(msg):  # push progress as we go (CI only), so a cut-off run keeps what it made
+    if os.environ.get("SEKKATI_COMMIT") != "1":
+        return
+    sh = lambda c: subprocess.run(c, shell=True)
+    sh('git config user.name "Claude"; git config user.email "noreply@anthropic.com"; git add sekkati/voice')
+    if subprocess.run("git diff --cached --quiet", shell=True).returncode == 0:
+        return
+    sh('git commit -q -m "%s"' % msg)
+    b = os.environ.get("GITHUB_REF_NAME", "")
+    for _ in range(3):
+        if sh("git pull -q --rebase origin %s && git push -q origin HEAD:%s" % (b, b)).returncode == 0:
+            break
+        time.sleep(5)
+
+
 def fname(text):
     return hashlib.sha1((VOICE + "|" + text).encode()).hexdigest()[:12] + ".mp3"
 
@@ -124,6 +139,8 @@ def main():
                 idx["model"] = models[mi]
                 made += 1
                 print("ok", made, models[mi], text)
+                if made % 25 == 0:
+                    commit("sekkati: Gemini voice clips (%d)" % len(idx["clips"]))
                 json.dump(idx, open(idx_path, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
                 time.sleep(float(os.environ.get("SEKKATI_VOICE_GAP", "4")))
                 break
@@ -145,6 +162,7 @@ def main():
                     return
                 time.sleep(10)
     print("done; made", made)
+    commit("sekkati: Gemini voice clips (%d)" % len(idx["clips"]))
 
 
 def samples():  # the same sentence in a few voices, so the driver can pick one
@@ -163,6 +181,7 @@ def samples():  # the same sentence in a few voices, so the driver can pick one
             print("sample failed", v, e)
         time.sleep(5)
     VOICE = os.environ.get("SEKKATI_VOICE", "Kore")
+    commit("sekkati: Gemini voice samples")
 
 
 if __name__ == "__main__":
