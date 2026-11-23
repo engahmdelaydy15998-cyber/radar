@@ -47,6 +47,7 @@ public class BubblePlugin extends Plugin {
     private boolean muted;
 
     private static BubblePlugin self;
+    private static int lastX = -1, lastY = -1;
 
     @Override
     public void load() { self = this; }
@@ -265,8 +266,8 @@ public class BubblePlugin extends Plugin {
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 PixelFormat.TRANSLUCENT);
         lp.gravity = Gravity.TOP | Gravity.START;
-        lp.x = dp(10);
-        lp.y = dp(150);
+        lp.x = lastX >= 0 ? lastX : dp(10);   // بيرجع مكان ما السواق ساب الفقاعة
+        lp.y = lastY >= 0 ? lastY : dp(150);
         head.setOnTouchListener(new View.OnTouchListener() {
             private int sx, sy;
             private float tx, ty;
@@ -285,6 +286,7 @@ public class BubblePlugin extends Plugin {
                         wm.updateViewLayout(root, lp);
                         return true;
                     case MotionEvent.ACTION_UP:
+                        lastX = lp.x; lastY = lp.y;
                         if (!moved) menu.setVisibility(menu.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
                         return true;
                 }

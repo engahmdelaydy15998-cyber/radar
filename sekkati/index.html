@@ -158,6 +158,7 @@ body.mapfull #mapBig,body.nav #mapBack{display:none}
 #nside .pill svg{width:17px;height:17px;fill:var(--acc)}
 #nspdc{position:fixed;right:12px;bottom:calc(env(safe-area-inset-bottom) + 80px);z-index:1000;width:56px;height:56px;border-radius:50%;background:var(--card);color:var(--ink);border:3px solid var(--ink);
   display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;box-shadow:0 3px 10px rgba(0,0,0,.5)}
+#nspdc.over{border-color:var(--bad,#e5394f);color:var(--bad,#e5394f)}#nspdc.over span{color:inherit}
 #nspdc b{font-size:20px;font-variant-numeric:tabular-nums}
 #nspdc span{font-size:10px;color:var(--mut);margin-top:2px}
 #nbot{position:fixed;bottom:0;left:0;right:0;z-index:1000;background:var(--card);border-radius:18px 18px 0 0;display:flex;align-items:center;gap:12px;
@@ -828,9 +829,9 @@ map.on('click', e => {
     if (i >= 0) blocks.splice(i, 1); else blocks.push({...p, until:Date.now() + 864e5});
     save(); drawMarks();
   } else if (mode === 'a' || mode === 'b'){
-    const w = mode; setMode(w); setPlace(w, p, 'نقطة على الخريطة'); reverseName(p.lat, p.lon, n => { $(w === 'a' ? 'qa' : 'qb').value = n; (w === 'a' ? start : dest).name = n; });
+    const w = mode; setMode(w); setPlace(w, p, 'نقطة على الخريطة'); reverseName(p.lat, p.lon, n => { const o = w === 'a' ? start : dest; if (!o || o.lat !== p.lat || o.lon !== p.lon) return; $(w === 'a' ? 'qa' : 'qb').value = n; o.name = n; });
   } else {
-    setPlace('b', p, 'نقطة على الخريطة'); reverseName(p.lat, p.lon, n => { $('qb').value = n; if (dest) dest.name = n; });
+    setPlace('b', p, 'نقطة على الخريطة'); reverseName(p.lat, p.lon, n => { if (!dest || dest.lat !== p.lat || dest.lon !== p.lon) return; $('qb').value = n; dest.name = n; });
   }
 });
 
@@ -1187,6 +1188,7 @@ function freeUpdate(p){
     if (Math.cos(a) > 0.5 && Math.abs(d * Math.sin(a)) < 35 && facesMe(q, heading)){ np = q; dp = d; }
   });
   const kind = np ? (np.kind || 'radar') : '', over = np && kind === 'radar' && np.max && spd > np.max + 3;
+  $('nspdc').classList.toggle('over', !!over);
   $('nrad').hidden = !np;
   overlaySet(np ? POI_IC[kind] + ' ' + POI_AR[kind] + ' بعد ' + fmtD(dp) + (np.max ? ' · الحد ' + arab(np.max) : '') : arab(Math.round(spd)) + ' كم/س · سكّتي شغالة',
              np ? (over ? 'danger' : 'warn') : 'info');
@@ -1241,6 +1243,7 @@ function navRender(speed, off){
   $('nrem').textContent = arab(Math.max(1, Math.round(remSec / 60))) + ' د';
   $('nremkm').textContent = fmtD(rem);
   const np = n.pois.find(r => r.at > here), dp = np ? np.at - here : 0, over = np && np.kind === 'radar' && np.max && speed > np.max + 3;
+  $('nspdc').classList.toggle('over', !!over);
   $('nrad').hidden = !(np && dp <= 2000);
   overlaySet(np && dp <= 2000 ? POI_IC[np.kind] + ' ' + POI_AR[np.kind] + ' بعد ' + fmtD(dp) : arrowOf(st) + ' ' + fmtD(dNext) + ' · ' + instrOf(st), np && dp <= 2000 ? (over ? 'danger' : 'warn') : 'info');
   if (np && dp <= 2000){ $('nrad').textContent = POI_IC[np.kind] + ' ' + POI_AR[np.kind] + ' بعد ' + fmtD(dp) + (np.max ? ' · الحد ' + arab(np.max) : ''); $('nrad').classList.toggle('warn', !!over); }
@@ -1254,7 +1257,7 @@ function navRender(speed, off){
     const key = k + ':' + th;
     if (dNext <= th && !n.spoken[key]){ n.spoken[key] = 1; if (dNext > th * 0.6 && st.type !== 'arrive') speak('بعد ' + (th === 500 ? 'خمسمية' : 'مية') + ' متر ' + instrOf(st)); }
   });
-  if (!n.arrived && rem < 30){ n.arrived = true; speak('وصلت لوجهتك'); setTimeout(exitNav, 5000); }
+  if (!n.arrived && (rem < 30 || (rem < 60 && speed < 5))){ n.arrived = true; speak('وصلت، حمد الله على السلامة'); setTimeout(exitNav, 5000); }
 }
 async function reroute(me){
   const old = nav;
@@ -1475,8 +1478,12 @@ function stopRec(){
       : 'ماوصلش ولا موقع من الـ GPS، فمفيش حاجة تتحفظ. اتأكد إن الموقع (GPS) مفتوح في الموبايل وإن سكّتي مسموح لها بالموقع.';
     $('recNote').textContent = $('msg').textContent; return;
   }
-  const name = $('name').value.trim() || 'رحلة ' + new Date().toLocaleDateString('ar-EG');
-  trips.unshift({id:Date.now(), name, start:pts[0].t, pts:pack(thin(pts))});
+  const typed = $('name').value.trim(), name = typed || 'رحلة ' + new Date().toLocaleDateString('ar-EG'), id = Date.now(), end = pts[pts.length - 1];
+  trips.unshift({id, name, start:pts[0].t, pts:pack(thin(pts))});
+  if (!typed) reverseName(end.lat, end.lon, n => {    // "رحلة لـ مدينة نصر" أوضح من التاريخ
+    const t = trips.find(x => x.id === id); if (!t || t.name !== name || !n || /نقطة/.test(n)) return;
+    t.name = 'رحلة لـ ' + n.split('،')[0]; save(); renderTrips();
+  });
   save(); $('name').value = ''; renderTrips(); carAddTrip(trips[0]);
   analyzeTrip(trips[0], true);
 }
