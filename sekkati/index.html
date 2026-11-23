@@ -1162,7 +1162,7 @@ function followCar(p, me, spd){                    // الخريطة بتلف م
   if (mMe) mMe.setLngLat([me.lon, me.lat]); else mMe = addMk(mkEl('', 'car'), me.lon, me.lat);
   try { map.easeTo({center:[me.lon, me.lat], zoom:17, pitch:55, bearing:heading, duration:800, padding:{top:280, bottom:60, left:0, right:0}, essential:true}); } catch(e){}
 }
-async function startFree(){                         // قيادة من غير وجهة: تسجيل + تنبيهات + أرقام الطريق علطول
+async function startFree(quiet){                    // قيادة من غير وجهة: تسجيل + تنبيهات + أرقام الطريق علطول
   if (navOn) return;
   ensureOverlay(); overlaySet('🚗 سكّتي شغالة · هنبّهك هنا', 'info');
   nav = {free:true, spoken:{}, slowSince:0, lastAsk:0}; navOn = true; hdFrom = null; clearBubbles(); $('teach').hidden = true; $('nnext').hidden = true;
@@ -1170,8 +1170,50 @@ async function startFree(){                         // قيادة من غير و
   $('narrow').textContent = '🚗'; $('ndist').textContent = ''; $('ntext').textContent = 'قيادة حرة: بسجّل الطريق وبنبّهك قبل الرادارات والكارتات';
   $('netal').textContent = 'وقفات'; $('nspd').textContent = '٠'; $('neta').textContent = '٠'; $('nrem').textContent = '00:00'; $('nremkm').textContent = '٠ م';
   drawRoutes([]); drawMarks();
-  speak('تمام، بدأت أسجّل الطريق، وهنبّهك قبل الرادارات والكارتات');
+  if (quiet !== true) speak('تمام، بدأت أسجّل الطريق، وهنبّهك قبل الرادارات والكارتات');
   if (watchId === null){ if (!$('name').value.trim()) $('name').value = 'قيادة حرة ' + new Date().toLocaleDateString('ar-EG'); navStartedRec = true; await startRec(); }
+}
+/* 🔁 امشيها تاني: نفس رحلة قديمة، و"شبح" المرة اللي فاتت بيقولك انت متقدم ولا متأخر عنه */
+let ghost = null;
+const minTxt = sec => { const m = Math.max(1, Math.round(sec / 60)); return m === 1 ? 'دقيقة' : m === 2 ? 'دقيقتين' : arab(m) + (m <= 10 ? ' دقايق' : ' دقيقة'); };
+function ghostOf(t){
+  const P = unpack(t.pts).filter(p => !p.acc || p.acc <= 50); if (P.length < 5) return null;
+  const cum = [0]; for (let i = 1; i < P.length; i++) cum.push(cum[i - 1] + hav(P[i - 1], P[i]));
+  return {id:t.id, name:t.name, P, cum, t0:P[0].t, total:cum[cum.length - 1], i:0, off:0, lastSay:Date.now(), lastDelta:0, txt:'', done:false};
+}
+async function rideAgain(t){
+  if (navOn){ $('msg').textContent = 'خلّص السواقة الحالية الأول.'; return; }
+  const g = ghostOf(t); if (!g){ $('msg').textContent = 'الرحلة دي قصيرة أوي عشان نقارن بيها.'; return; }
+  ghost = g; setMapFull(false); scrollTo({top:0, behavior:'smooth'});
+  if (!$('name').value.trim()) $('name').value = t.name.replace(/ \(تاني\)$/, '') + ' (تاني)';
+  await startFree(true);
+  drawRoutes([{coords:g.P.map(p => [p.lon, p.lat]), c:'#f5c451', w:6}]);
+  $('narrow').textContent = '🔁'; $('ntext').textContent = 'امشي على الخط الأصفر: هقولك انت متقدم ولا متأخر عن المرة اللي فاتت';
+  speak('تمام، هنمشي نفس طريق ' + t.name + '، وهقولك انت أسرع ولا أبطأ من المرة اللي فاتت');
+}
+function ghostTick(me, ts){
+  const g = ghost; if (!g) return;
+  let bi = -1, bd = 1e9;
+  const scan = (a, b) => { for (let i = a; i < b; i++){ const d = hav(g.P[i], me); if (d < bd){ bd = d; bi = i; } } };
+  scan(g.i, Math.min(g.P.length, g.i + 300));
+  if (bd > 80) scan(0, g.P.length);
+  if (bd > 80){ if (++g.off === 4){ g.txt = 'خرجت عن طريق المرة اللي فاتت'; $('ntext').textContent = '🔁 ' + g.txt; } return; }
+  if (g.off >= 4) $('narrow').textContent = '🔁';
+  g.off = 0; if (bi >= g.i) g.i = bi;              // بنمشي لقدّام بس على الطريق القديم
+  const delta = (ts - t0) / 1000 - (g.P[g.i].t - g.t0) / 1000, left = g.total - g.cum[g.i];   // موجب = متأخر
+  g.txt = (Math.abs(delta) < 30 ? 'نفس وقت المرة اللي فاتت' : (delta < 0 ? 'متقدم ' : 'متأخر ') + fmtT(Math.abs(delta))) + ' · فاضل ' + fmtD(left);
+  $('ntext').textContent = '🔁 ' + g.txt;
+  $('ntext').style.color = Math.abs(delta) < 30 ? '' : delta < 0 ? 'var(--ok)' : 'var(--bad)';
+  if (!g.done && left < 80){
+    g.done = true;
+    speak(Math.abs(delta) < 30 ? 'وصلت في نفس وقت المرة اللي فاتت تقريباً' : 'وصلت ' + (delta < 0 ? 'أسرع' : 'أبطأ') + ' من المرة اللي فاتت بـ ' + minTxt(Math.abs(delta)));
+    return;
+  }
+  const now = Date.now();
+  if (Math.abs(delta) >= 60 && (now - g.lastSay > 180000 || Math.abs(delta - g.lastDelta) >= 120)){
+    g.lastSay = now; g.lastDelta = delta;
+    speak('انت ' + (delta < 0 ? 'أسرع' : 'أبطأ') + ' من المرة اللي فاتت بـ ' + minTxt(Math.abs(delta)));
+  }
 }
 function freeUpdate(p){
   const me = {lat:p.coords.latitude, lon:p.coords.longitude}, spd = speedOf(p); lastPos = me;
@@ -1181,6 +1223,7 @@ function freeUpdate(p){
   $('nrem').textContent = fmtT((Date.now() - t0) / 1000);
   $('neta').textContent = arab(r.stops);
   $('nremkm').textContent = fmtD(r.dist);
+  ghostTick(me, p.timestamp || Date.now());
   let np = null, dp = 2000;                         // أقرب حاجة قدامك على نفس خط سيرك تقريباً
   if (spd > 5) allPois().forEach(q => {
     const d = hav(me, q); if (d >= dp) return;
@@ -1190,7 +1233,7 @@ function freeUpdate(p){
   const kind = np ? (np.kind || 'radar') : '', over = np && kind === 'radar' && np.max && spd > np.max + 3;
   $('nspdc').classList.toggle('over', !!over);
   $('nrad').hidden = !np;
-  overlaySet(np ? POI_IC[kind] + ' ' + POI_AR[kind] + ' بعد ' + fmtD(dp) + (np.max ? ' · الحد ' + arab(np.max) : '') : arab(Math.round(spd)) + ' كم/س · سكّتي شغالة',
+  overlaySet(np ? POI_IC[kind] + ' ' + POI_AR[kind] + ' بعد ' + fmtD(dp) + (np.max ? ' · الحد ' + arab(np.max) : '') : (ghost && ghost.txt ? '🔁 ' + ghost.txt : arab(Math.round(spd)) + ' كم/س · سكّتي شغالة'),
              np ? (over ? 'danger' : 'warn') : 'info');
   if (np){
     $('nrad').textContent = POI_IC[kind] + ' ' + POI_AR[kind] + ' بعد ' + fmtD(dp) + (np.max ? ' · الحد ' + arab(np.max) : '');
@@ -1272,6 +1315,7 @@ async function reroute(me){
 }
 function exitNav(){
   if (!navOn) return;
+  ghost = null; $('ntext').style.color = '';
   navOn = false; nav = null; lastPos = null; hdFrom = null; $('nnext').hidden = true; overlaySet(null);
   document.body.classList.remove('nav'); $('nav').hidden = true; $('nrad').hidden = true; $('netal').textContent = 'الوصول';
   ['alt', 'ask', 'rpt', 'cl'].forEach(i => $(i).hidden = true);
@@ -1283,7 +1327,7 @@ function exitNav(){
   if (results.length) showRoutes(Math.min(selIdx, results.length - 1));
 }
 $('nexit').onclick = exitNav;
-$('freeGo').onclick = startFree;
+$('freeGo').onclick = () => { ghost = null; startFree(); };
 const IC_VOL = '<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>';
 const IC_MUTE = '<svg viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>';
 $('nmute').innerHTML = IC_VOL;
@@ -1488,6 +1532,15 @@ function stopRec(){
   analyzeTrip(trips[0], true);
 }
 
+/* رحلات قبل كده على نفس الطريق: نفس البداية والنهاية تقريباً (٤٠٠ م)، الأحدث الأول */
+function sameRoute(t){
+  const P = unpack(t.pts); if (P.length < 5) return [];
+  const a = P[0], b = P[P.length - 1];
+  return trips.filter(x => x.id !== t.id && x.start < t.start).map(x => ({t:x, Q:unpack(x.pts)}))
+    .filter(x => x.Q.length >= 5 && hav(x.Q[0], a) < 400 && hav(x.Q[x.Q.length - 1], b) < 400)
+    .map(x => ({t:x.t, r:analyze(x.Q)})).filter(x => x.r.dur > 60).sort((x, y) => y.t.start - x.t.start);
+}
+const hhmm = ms => new Date(ms).toLocaleTimeString('ar-EG', {hour:'numeric', minute:'2-digit'});
 /* تحليل الرحلة بعد ما تخلص: أرقامها، اللي عديت عليه، وهل فيه طريق أقصر أو أسرع بين نفس البداية والنهاية */
 let anAlt = null;
 async function analyzeTrip(t, announce){
@@ -1514,10 +1567,17 @@ async function analyzeTrip(t, announce){
   }
   const car = load('car', null);
   if (car && car.cons){ const l = an.dist / 1000 * car.cons / 100 * (1 + 0.6 * (an.dur ? an.stopTime / an.dur : 0)); an.fuel = {l, cost:car.price ? l * car.price : 0}; }
+  const prev = sameRoute(t);
+  if (prev.length){
+    const last = prev[0], best = prev.slice().sort((x, y) => x.r.dur - y.r.dur)[0];
+    an.cmp = {n:prev.length, lastDur:last.r.dur, lastStops:last.r.stopTime, lastCrawl:last.r.crawl || 0, lastAt:last.t.start,
+              bestDur:best.r.dur, bestAt:best.t.start, bestIsThis:an.dur < best.r.dur};
+  }
   t.an = an; save(); learnFF();
   showAnalysis(t, an, false);
   if (announce){
     let say = 'خلصت الرحلة: ' + km(an.dist) + ' كيلو في ' + arab(Math.max(1, Math.round(an.dur / 60))) + ' دقيقة، ' + (an.stops ? 'ووقفت ' + arab(an.stops) + ' مرة.' : 'ومن غير ولا وقفة.');
+    if (an.cmp){ const d = an.dur - an.cmp.lastDur; say += Math.abs(d) < 30 ? ' في نفس وقت المرة اللي فاتت.' : ' ' + (d < 0 ? 'أسرع' : 'أبطأ') + ' من المرة اللي فاتت بـ ' + minTxt(Math.abs(d)) + '.'; if (an.cmp.bestIsThis) say += ' ودي أسرع مرة ليك على الطريق ده.'; }
     if (an.alt) say += ' وفيه طريق ' + (an.alt.faster ? 'أسرع' : 'أقصر') + (an.alt.via ? ' عن طريق ' + an.alt.via : '') + '، بصّ على التحليل.';
     const due = carDue().filter(x => x.st !== 'ok').slice(0, 2);
     if (due.length) say += ' وتنبيه صيانة: ' + due.map(x => x.it.name + (x.st === 'late' ? ' متأخر' : ' قرب')).join('، و') + '.';
@@ -1536,10 +1596,17 @@ function showAnalysis(t, an, loading){
   $('anBody').innerHTML = `<div class="note" style="margin-bottom:6px">${esc(t.name)}</div><div class="an">`
     + box(km(an.dist) + ' كم', 'المسافة') + box(fmtT(an.dur), 'الوقت') + box(arab(an.stops), 'وقفات')
     + box(fmtT(an.stopTime), 'وقت الوقوف') + box(arab(an.moveAvg), 'متوسط كم/س') + box(arab(an.max), 'أقصى كم/س') + '</div>'
+    + (an.cmp ? (() => { const c = an.cmp, d = an.dur - c.lastDur, sd = an.stopTime - c.lastStops;
+        return `<div class="note" style="margin:6px 0;padding:8px 10px;border:1px solid var(--line);border-radius:10px">🔁 <b>مشيت الطريق ده قبل كده ${c.n === 1 ? 'مرة واحدة' : c.n === 2 ? 'مرتين' : arab(c.n) + ' مرات'}.</b><br>`
+          + (Math.abs(d) < 30 ? 'المرة دي في نفس وقت اللي فاتت تقريباً' : `المرة دي <b style="color:var(${d < 0 ? '--ok' : '--bad'})">${d < 0 ? 'أسرع' : 'أبطأ'} بـ ${minTxt(Math.abs(d))}</b> من اللي فاتت (خدت <bdi>${fmtT(c.lastDur)}</bdi>، طالع الساعة ${hhmm(c.lastAt)})`)
+          + (Math.abs(sd) >= 60 ? `، والوقوف ${sd < 0 ? 'أقل' : 'أكتر'} بـ ${minTxt(Math.abs(sd))}` : '') + '.<br>'
+          + (c.bestIsThis ? '🏆 دي أسرع مرة مشيت فيها الطريق ده!' : `🏆 أحسن مرة: <bdi>${fmtT(c.bestDur)}</bdi> لما طلعت الساعة ${hhmm(c.bestAt)}.`) + '</div>'; })() : '')
     + (an.crawl > 120 ? `<div class="note">🐢 زحمة: ${arab(Math.round(an.crawl / 60))} دقيقة ماشي أقل من ١٠ كم/س${FF > 1.05 ? ` · سرعتك الحقيقية ≈ ${(+FF.toFixed(1)).toLocaleString('ar-EG')}× زمن الطريق الفاضي` : ''}</div>` : '')
     + `<div class="note">عدّيت على: 📷 ${arab(an.radar)} رادار · 💳 ${arab(an.toll)} كارتة · 🚓 ${arab(an.check)} لجنة</div>`
     + (an.fuel ? `<div class="note" style="margin-top:4px">⛽ حوالي ${(+an.fuel.l.toFixed(1)).toLocaleString('ar-EG')} لتر${an.fuel.cost ? ' ≈ ' + arab(an.fuel.cost) + ' جنيه' : ''} (تقدير حسب استهلاك عربيتك والوقفات)</div>` : '')
     + ((an.notes || []).length ? `<div class="note" style="margin-top:4px">📝 ملاحظاتك: ${an.notes.map(esc).join(' · ')}</div>` : '') + alt;
+  $('anBody').insertAdjacentHTML('beforeend', `<div style="margin-top:10px"><button class="big sec" id="anAgain">🔁 امشيها تاني وقارن</button></div>`);
+  $('anAgain').onclick = () => rideAgain(t);
   $('anCard').hidden = false; $('anCard').classList.add('open');
   if ($('anMap')) $('anMap').onclick = () => {
     closeRoutes();
@@ -1557,8 +1624,9 @@ function renderTrips(){
     const r = analyze(unpack(t.pts)), d = new Date(t.start);
     const when = d.toLocaleDateString('ar-EG', {weekday:'short', day:'numeric', month:'short'}) + ' ' + d.toLocaleTimeString('ar-EG', {hour:'2-digit', minute:'2-digit'});
     return `<div class="trip"><div class="t"><b>${esc(t.name)}</b><div>${when} · ${fmtT(r.dur)} · ${km(r.dist)} كم · ${r.stops} وقفات${t.an && t.an.fuel && t.an.fuel.cost ? ' · ⛽ ' + arab(t.an.fuel.cost) + ' ج' : ''}</div></div>
-      <button class="sec" data-an="${t.id}" title="تحليل">📊</button><button class="sec" data-del="${t.id}">حذف</button></div>`;
+      <button class="sec" data-again="${t.id}" title="امشيها تاني">🔁</button><button class="sec" data-an="${t.id}" title="تحليل">📊</button><button class="sec" data-del="${t.id}">حذف</button></div>`;
   }).join('') || '<div class="note">مفيش رحلات لسه. كل ما تسجل أكتر، الاقتراحات بتبقى أدق.</div>';
+  $('list').querySelectorAll('[data-again]').forEach(b => b.onclick = () => { const t = trips.find(x => x.id === +b.dataset.again); if (t) rideAgain(t); });
   $('list').querySelectorAll('[data-an]').forEach(b => b.onclick = () => { const t = trips.find(x => x.id === +b.dataset.an); if (t){ analyzeTrip(t, false); $('anCard').scrollIntoView({behavior:'smooth'}); } });
   $('list').querySelectorAll('[data-del]').forEach(b => b.onclick = () => {
     if (b.dataset.sure !== '1'){ b.dataset.sure = '1'; b.textContent = 'متأكد؟'; return; }
