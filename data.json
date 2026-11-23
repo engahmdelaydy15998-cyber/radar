@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T18:23:57Z",
+ "updated": "2026-11-23T18:34:47Z",
  "demo": false,
  "items": [
   {
@@ -15,6 +15,20 @@
    "url": "https://www.youtube.com/watch?v=emId9_O2sU8",
    "ta": "نحن نفتح المصدر لعقلنا التصميمي",
    "sa": "Content Studio هو وكيل التصميم الذي يديره LangChain في Slack، وهو الآن مفتوح المصدر. لقد صنعت لنا أكثر من 3000 أصل، بما في ذلك العمل لبعض ..."
+  },
+  {
+   "id": "yt-YCvKoOE0X1w",
+   "cat": "agents",
+   "src": "YouTube",
+   "ts": "2026-11-23T18:08:32Z",
+   "t": "Can AI Predict the Unpredictable? (the black swan event)",
+   "s": "Can AI Predict the Unpredictable? (the black swan event) Get early access: https://www.siktintelligence.com/ 🐦‍⬛ Tomorrow’s headlines, before they ha…",
+   "tags": [
+    "All About AI"
+   ],
+   "url": "https://www.youtube.com/watch?v=YCvKoOE0X1w",
+   "ta": "هل يستطيع الذكاء الاصطناعي التنبؤ بما لا يمكن التنبؤ به؟ (حدث البجعة السوداء)",
+   "sa": "هل يستطيع الذكاء الاصطناعي التنبؤ بما لا يمكن التنبؤ به؟ (حدث البجعة السوداء) احصل على وصول مبكر: https://www.siktintelligence.com/ 🐦‍⬛ عناوين الغد، قبل أن تنتهي..."
   },
   {
    "id": "gh-1469122603",
@@ -4802,6 +4816,19 @@
    "tp": "arch"
   },
   {
+   "id": "gn-autodeskneilsoftlaunchbimanddigitaltwincoeinpune",
+   "cat": "arch",
+   "src": "ET Datacenters",
+   "ts": "2026-11-19T09:54:45Z",
+   "t": "Autodesk, Neilsoft launch BIM and Digital Twin CoE in Pune",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPNHJBRnUtZVVLRnd1ZnhnbjBLWkxvZWRrQm1sZ1FhVG1LNlhBVUhWVnBkcVBTQWx6SnlVNHlpSC1ZVGVYSGRLM2xDWVdzQVBYUkRwZTZLWHpBRXJZcnozMUlSanRUUDVYWUg4VHhDd2UtZG1FOWIyTUZyRFNmY29FZE1aWmJEOTY5aTNlbVowRVEwTkhYS1ViaWxZdG5tZU1kdTJNanp5UndOQVBBSC1KVllNWkJJYU1nNmRxZkktTDhsZlVnVGlDcVN3VE5TZmZ3YzROZi130gHaAUFVX3lxTE15NkNlQ0w2M0J4azlEMy1hYVFSQXVqd25IZjdkYzlrVkNUS09ORVN0NUVPLU80bzhVaWNYWTMySkxybmlsd2RSc0liMFFTbzB5Tk12QWppb2tBQ1YwYmhBT000eDEyeUU1NFVyR2F4am8wZVEtLXQyYjhrd2ZPb2oydTVmOEdERG5FcG5nX3NDeVdNOEQ1TGNXMEYwS0hvV2JyZ3pLS1VqcEJXN2s1YUc3QUNoVWVjM3h1Z01oMlZwVVBBTlBWckZRTUR3akc3R1lJcHpqX0ItaTV3?oc=5",
+   "ta": "أوتوديسك ونيلسوفت تطلقان BIM وDigital Twin CoE في بيون"
+  },
+  {
    "id": "yt-p9WsINy2BbE",
    "cat": "reels",
    "src": "YouTube",
@@ -6200,48 +6227,6 @@
     "AI",
     "Code"
    ]
-  },
-  {
-   "id": "yt-fqKYSxqJoN8",
-   "cat": "arch",
-   "src": "YouTube",
-   "ts": "2026-11-18T15:00:08Z",
-   "t": "Is LA's Billion-Dollar Tower Nightmare Finally Ending?",
-   "s": "Is Los Angeles finally about to finish its $1.8BN Graffiti Towers? Rayon is the all-in-one, effortless CAD tool for going from concept to completion.…",
-   "tags": [
-    "The B1M"
-   ],
-   "url": "https://www.youtube.com/watch?v=fqKYSxqJoN8",
-   "ta": "هل انتهى كابوس برج لوس أنجلوس الذي تبلغ تكلفته مليار دولار أخيراً؟",
-   "sa": "هل لوس أنجلوس على وشك الانتهاء من مشروع أبراج الجرافيتي الذي تبلغ تكلفته 1.8 مليار دولار؟ Rayon هي أداة CAD متكاملة وسهلة للانتقال من المفهوم إلى الاكتمال.",
-   "h": "نهاية كابوس الأبراج المليارية في لوس أنجلوس",
-   "x": "تابع كيف تُسهل أدوات الـ CAD الحديثة مثل Rayon رحلة مشاريع الـ Architecture من الفكرة للتنفيذ.",
-   "tg": [
-    "CAD",
-    "Architecture",
-    "Rayon"
-   ],
-   "tp": "arch"
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov18psfendofyearfundraiser",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-18T14:44:48Z",
-   "t": "The PSF end-of-year fundraiser",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/18/psf-end-of-year-fundraiser/",
-   "ta": "حملة جمع التبرعات لنهاية العام لـ PSF",
-   "h": "حملة التبرعات السنوية لـ PSF",
-   "x": "ادعم مؤسسة بايثون لدعم مجتمع الـ Development والـ Open Source.",
-   "tg": [
-    "Python",
-    "OpenSource"
-   ],
-   "tp": "oss"
   }
  ]
 }
