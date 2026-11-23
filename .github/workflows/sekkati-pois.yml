@@ -1,0 +1,28 @@
+name: sekkati-pois
+
+# Downloads Egypt's speed cameras, tolls and checkpoints from OpenStreetMap into sekkati/eg-pois.json,
+# so the app knows them offline without the driver reporting anything. Runs when the script changes or by hand.
+on:
+  push:
+    paths:
+      - "tools/sekkati_pois.py"
+      - ".github/workflows/sekkati-pois.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pois:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download from OpenStreetMap
+        run: python3 tools/sekkati_pois.py
+      - name: Commit
+        run: |
+          git config user.name "Claude"; git config user.email "noreply@anthropic.com"
+          git add sekkati/eg-pois.json
+          git diff --cached --quiet && exit 0
+          git commit -m "sekkati: refresh Egypt radars/tolls/checkpoints from OSM"
+          git push origin HEAD:${GITHUB_REF_NAME}
