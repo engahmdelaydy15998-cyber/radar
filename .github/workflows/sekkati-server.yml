@@ -1,0 +1,59 @@
+name: sekkati-server
+
+# Deploys the shared reports server (sekkati-server/: Cloudflare Worker + D1, free tier) and writes its URL to
+# sekkati/server.json so the app finds it. Needs two repo secrets from the owner's free Cloudflare account:
+# CLOUDFLARE_API_TOKEN (template "Edit Cloudflare Workers" + D1 edit) and CLOUDFLARE_ACCOUNT_ID.
+on:
+  push:
+    paths:
+      - "sekkati-server/**"
+      - ".github/workflows/sekkati-server.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    defaults:
+      run:
+        working-directory: sekkati-server
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check secrets
+        id: s
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::warning::CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID secrets are not set yet; nothing deployed."
+            echo "ok=0" >> $GITHUB_OUTPUT
+          else echo "ok=1" >> $GITHUB_OUTPUT; fi
+      - name: D1 database
+        if: steps.s.outputs.ok == '1'
+        run: |
+          ID=$(npx -y wrangler@3 d1 list --json | python3 -c "import json,sys; d=[x for x in json.load(sys.stdin) if x['name']=='sekkati']; print(d[0]['uuid'] if d else '')")
+          if [ -z "$ID" ]; then npx -y wrangler@3 d1 create sekkati >/dev/null; ID=$(npx -y wrangler@3 d1 list --json | python3 -c "import json,sys; print([x for x in json.load(sys.stdin) if x['name']=='sekkati'][0]['uuid'])"); fi
+          sed -i "s/__D1_ID__/$ID/" wrangler.toml
+          npx -y wrangler@3 d1 execute sekkati --remote --file schema.sql --yes
+      - name: Deploy
+        if: steps.s.outputs.ok == '1'
+        run: |
+          npx -y wrangler@3 deploy | tee deploy.log
+          URL=$(grep -o 'https://[a-z0-9.-]*workers.dev' deploy.log | head -1)
+          echo "{\"url\": \"$URL\"}" > ../sekkati/server.json
+          curl -s "$URL/stats"
+      - name: Commit the server URL
+        if: steps.s.outputs.ok == '1'
+        working-directory: .
+        run: |
+          git config user.name "Claude"; git config user.email "noreply@anthropic.com"
+          git add sekkati/server.json
+          git diff --cached --quiet && exit 0
+          git commit -m "sekkati: shared server URL"
+          for i in 1 2 3; do git pull --rebase origin ${GITHUB_REF_NAME} && git push origin HEAD:${GITHUB_REF_NAME} && break; sleep 5; done

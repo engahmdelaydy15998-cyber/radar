@@ -128,6 +128,18 @@ h2{font-size:15px;margin:0 0 8px;color:var(--mut);font-weight:500}
 #navPill{position:fixed;top:calc(env(safe-area-inset-top) + 8px);left:50%;transform:translateX(-50%);z-index:60;background:var(--ok);color:#06231a;border:0;
   border-radius:24px;padding:10px 18px;font-size:15px;font-weight:800;box-shadow:0 4px 14px rgba(0,0,0,.45);white-space:nowrap}
 #nmenu{flex:0 0 auto}
+#onb[hidden],#onb [hidden]{display:none!important}
+#onb{position:fixed;inset:0;z-index:3000;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:20px}
+#onb .ob{width:100%;max-width:420px;text-align:center}
+#onb .obi{font-size:58px;line-height:1;margin-bottom:10px}
+#onb h3{font-size:24px;margin:6px 0 12px}
+#onb p{font-size:17px;line-height:1.8;color:var(--ink);margin:0 0 10px}
+#onb .obs{font-size:14px;color:var(--mut)}
+#onb .big{margin-top:14px}
+#onb .obr{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:8px 0;text-align:right}
+#onb .obr span{display:flex;flex-direction:column;font-size:16px}
+#onb .obr small{color:var(--mut);font-size:13px}
+#onb .obr button.done{background:var(--ok);color:#06231a;border-color:var(--ok)}
 body.nav{overflow:hidden;padding:0;max-width:none}
 body.nav #stage{position:fixed;inset:0;height:100%;min-height:0;border-radius:0;z-index:1}
 body.nav .top,body.nav #below,body.nav #panel,body.nav #tools,body.nav #hint,body.nav #sheet,body.nav #freeGo{display:none}
@@ -302,6 +314,7 @@ body.mapfull #mapBig,body.nav #mapBack{display:none}
 
   <div class="card">
     <h2>📖 دليل الاستخدام</h2>
+    <button class="sec" id="obAgain" style="margin-bottom:8px">👋 اعرض شاشة البداية تاني</button>
     <div class="note">
       <b>🚗 ابدأ السواقة:</b> الزرار الأخضر تحت على الخريطة. من غير ما تكتب من/إلى، بيفتح شاشة القيادة، ويسجّل الطريق، ويوريك السرعة والوقت والوقفات، وينبّهك قبل أي رادار أو كارتة أو لجنة قدامك.<br><br>
       <b>زرار الطبقات:</b> بيبدّل بين الخريطة العادية والقمر الصناعي. <b>زرار الشمس/القمر:</b> بيبدّل بين الشكل الأسود الفاقع (الأساسي) والفاتح زي جوجل مابس.<br><br>
@@ -317,6 +330,28 @@ body.mapfull #mapBig,body.nav #mapBack{display:none}
   </div>
 </div>
 
+<div id="onb" hidden>
+  <div class="ob" data-s="1">
+    <div class="obi">🛣️</div><h3>أهلاً في سكّتي</h3>
+    <p>بنبهك <b>بالصوت</b> قبل الرادارات والكارتات واللجان والمطبات، وانت سايق على <b>جوجل مابس</b> عادي.</p>
+    <p class="obs">من غير ما تتكلم ولا تلمس الموبايل.</p>
+    <button class="big" data-go="2">يلا نبدأ</button>
+  </div>
+  <div class="ob" data-s="2" hidden>
+    <h3>اسمح بـ ٣ حاجات بس</h3>
+    <div class="obr"><span>📍 <b>الموقع</b><small>عشان نعرف انت فين</small></span><button class="sec" id="obLoc">اسمح</button></div>
+    <div class="obr nat"><span>🫧 <b>الفقاعة</b><small>تظهر فوق جوجل مابس</small></span><button class="sec" id="obDraw">اسمح</button></div>
+    <div class="obr nat"><span>🔋 <b>البطارية</b><small>عشان الموبايل ما يوقفناش</small></span><button class="sec" id="obBatt">اسمح</button></div>
+    <button class="big" data-go="3">التالي</button>
+  </div>
+  <div class="ob" data-s="3" hidden>
+    <div class="obi">✅</div><h3>خلاص كده!</h3>
+    <p><b>١</b> دوس <b>"ابدأ السواقة"</b><br><b>٢</b> افتح <b>جوجل مابس</b> وروح مكان ما انت عايز<br><b>٣</b> سكّتي هتتكلم لوحدها قبل أي رادار أو كارتة</p>
+    <p class="obs">شفت رادار مش متسجل؟ دوسة واحدة على 📷 في الفقاعة، وكل السواقين هيعرفوه.</p>
+    <button class="big" id="obGo">🚗 ابدأ السواقة دلوقتي</button>
+    <button class="sec" id="obLater" style="width:100%;margin-top:8px">بعدين</button>
+  </div>
+</div>
 <button id="navPill" hidden>🚗 الرحلة شغالة · ارجع لها</button>
 <div id="nav" hidden>
   <div id="nbar"><div id="narrow">↑</div><div><div id="ndist">—</div><div id="ntext">—</div></div></div>
@@ -503,6 +538,7 @@ function parseReport(t){
   if (/حاد|تصادم|اتخبط|خبط/.test(t)) return 'accident';
   if (/مقفول|اتقفل|مسدود|قافل/.test(t)) return 'block';
   if (/لجن[هة]|كمين|عسكري|حاجز/.test(t)) return 'checkpoint';
+  if (/(رادار|كاميرا).*(متحرك|عربي|موبايل)|متحرك/.test(t)) return 'mradar';
   if (/رادار|كاميرا/.test(t)) return 'radar';
   if (/زحم|واقف|مش بيتحرك|مرور|ازدحام/.test(t)) return 'jam';
   return null;
@@ -869,7 +905,7 @@ map.on('click', e => {
   const p = {lat:e.lngLat.lat, lon:e.lngLat.lng};
   if (mode === 'radar' || mode === 'toll' || mode === 'uturn' || mode === 'checkpoint'){
     const i = myPois.findIndex(x => x.kind === mode && hav(x, p) < 40);
-    if (i >= 0) myPois.splice(i, 1); else myPois.push({...p, kind:mode});
+    if (i >= 0) myPois.splice(i, 1); else { myPois.push({...p, kind:mode}); shareReport(mode, p.lat, p.lon); }
     save(); drawMarks();
   } else if (mode === 'block'){
     const i = blocks.findIndex(b => hav(b, p) < 40);
@@ -891,7 +927,42 @@ sheetObs.observe($('res'), {childList:true, characterData:true, subtree:true});
 
 /* الاقتراح: رادارات وكارتات OSM + المسارات + التقييم */
 let spots = load('spots');
-const allPois = () => myPois.map(p => ({...p, src:'me'})).concat(osmPois, spots.filter(x => x.n >= 2).map(x => ({lat:x.lat, lon:x.lon, kind:'spot', max:0, src:'learn'})));
+const allPois = () => myPois.map(p => ({...p, src:'me'})).concat(osmPois, sharedPois, spots.filter(x => x.n >= 2).map(x => ({lat:x.lat, lon:x.lon, kind:'spot', max:0, src:'learn'})));
+/* 📡 بلاغات مشتركة بين السواقين (سيرفر سكّتي على Cloudflare): من غير حساب ولا اسم، بس "إيه وفين".
+   أي بلاغ بتعمله بيروح للسيرفر، وكل ٣ دقايق وانت سايق بنجيب اللي بلّغ عنه غيرك حواليك. */
+let SRV = '', sharedPois = load('shared', []), outbox = load('outbox', []), nearAt = null, nearT = 0;
+fetch('server.json').then(r => r.json()).then(j => { SRV = String(j.url || '').replace(/\/$/, ''); flushOutbox(); }).catch(() => {});
+function devKey(){
+  let d = load('dev', null);
+  if (!d){ try { d = Array.from(crypto.getRandomValues(new Uint8Array(16)), b => b.toString(16).padStart(2, '0')).join(''); } catch(e){ d = (Date.now().toString(16) + Math.random().toString(16).slice(2)).slice(0, 32).padEnd(32, '0'); } put('dev', d); }
+  return d;
+}
+const SHARE_KINDS = {radar:1, mradar:1, toll:1, checkpoint:1, jam:1, accident:1, closed:1, bump:1};
+function shareReport(k, lat, lon, extra){
+  if (!SHARE_KINDS[k]) return;
+  outbox.push({k, lat:+lat.toFixed(5), lon:+lon.toFixed(5), ...(extra || {}), at:Date.now()}); outbox = outbox.slice(-200); put('outbox', outbox); flushOutbox();
+}
+let flushing = false;
+async function flushOutbox(){                      // من غير نت بيستنى، وأول ما النت يرجع بيتبعت
+  if (!SRV || flushing || !outbox.length) return; flushing = true;
+  try {
+    while (outbox.length){
+      const o = outbox[0], r = await fetch(SRV + '/report', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({...o, dev:devKey()})});
+      if (r.status === 429 || r.status >= 500) break;
+      outbox.shift(); put('outbox', outbox);
+    }
+  } catch(e){} flushing = false;
+}
+function syncNear(me, force){
+  if (!SRV || (!force && nearAt && hav(nearAt, me) < 5000 && Date.now() - nearT < 180000)) return;
+  nearT = Date.now(); nearAt = me; flushOutbox();
+  fetch(`${SRV}/near?lat=${me.lat.toFixed(4)}&lon=${me.lon.toFixed(4)}&km=15`).then(r => r.json()).then(j => {
+    const mine = myPois.concat(osmPois);
+    sharedPois = (j.items || []).filter(x => POI_AR[x.k]).map(x => ({lat:x.lat, lon:x.lon, kind:x.k, max:x.max || 0, dir:x.dir == null ? null : x.dir, src:'shared', up:x.up}))
+      .filter(x => !mine.some(q => q.kind === x.kind && Math.abs(q.lat - x.lat) < 0.0005 && Math.abs(q.lon - x.lon) < 0.0005));
+    put('shared', sharedPois);
+  }).catch(() => {});
+}
 function fastStops(P){                             // وقفة قصيرة (٨ث-٣د) وانت ماشي سريع قبلها وبعدها = غالباً كارتة أو لجنة
   const T = P.filter(p => !p.acc || p.acc <= 50), out = [];
   const v = i => { const dt = (T[i].t - T[i - 1].t) / 1000; return dt > 0 && dt <= 60 ? hav(T[i - 1], T[i]) / dt : null; };
@@ -1239,7 +1310,7 @@ function instrOf(st){
   if (st.mod.includes('sharp')) return 'لف ' + dir + ' بحدة' + on;
   return 'لف ' + dir + on;
 }
-const POI_AR = {radar:'رادار', toll:'كارتة', uturn:'يوتيرن', checkpoint:'لجنة', spot:'وقفة متكررة', bump:'مطب'}, POI_IC = {radar:'📷', toll:'💳', uturn:'↩️', checkpoint:'🚓', spot:'🛑', bump:'〰️'};
+const POI_AR = {radar:'رادار', toll:'كارتة', uturn:'يوتيرن', checkpoint:'لجنة', spot:'وقفة متكررة', bump:'مطب', mradar:'رادار متحرك', jam:'زحمة', accident:'حادثة', closed:'طريق مقفول'}, POI_IC = {radar:'📷', toll:'💳', uturn:'↩️', checkpoint:'🚓', spot:'🛑', bump:'〰️', mradar:'🚔', jam:'🚗', accident:'💥', closed:'⛔'};
 function setupNavRoute(rt){
   const C = rt.r.coords.map(([lo, la]) => ({lat:la, lon:lo}));
   const D = densify(C, 20), cum = [0];
@@ -1365,7 +1436,7 @@ function freeUpdate(p){
   $('nrem').textContent = fmtT((Date.now() - t0) / 1000);
   $('neta').textContent = arab(r.stops);
   $('nremkm').textContent = fmtD(r.dist);
-  ghostTick(me, p.timestamp || Date.now()); poisAround(me);
+  ghostTick(me, p.timestamp || Date.now()); poisAround(me); syncNear(me);
   let np = null, dp = 2000, nb = null, db = 220;      // أقرب حاجة قدامك على نفس خط سيرك؛ المطبات لوحدها عشان ما تخبّيش رادار بعدها
   if (spd > 5) allPois().forEach(q => {
     const d = hav(me, q), bump = q.kind === 'bump'; if (d >= (bump ? db : dp)) return;
@@ -1396,7 +1467,7 @@ function freeUpdate(p){
 function navUpdate(p){
   if (!nav) return;
   if (nav.free) return freeUpdate(p);
-  const me = {lat:p.coords.latitude, lon:p.coords.longitude}, D = nav.D; lastPos = me;
+  const me = {lat:p.coords.latitude, lon:p.coords.longitude}, D = nav.D; lastPos = me; syncNear(me);
   let bi = -1, bd = 1e12;
   const scan = (a, b) => { for (let i = a; i <= b; i++){ const d = hav(D[i], me); if (d < bd){ bd = d; bi = i; } } };
   scan(Math.max(0, nav.last - 10), Math.min(D.length - 1, nav.last + 150));
@@ -1486,6 +1557,30 @@ function resumeNav(){
   try { map.resize(); } catch(e){} recenter(); scrollTo({top:0});
 }
 $('nmenu').onclick = minimizeNav;
+/* شاشة البداية: ٣ خطوات بكلام قليل (أهلاً ← الأذونات ← ابدأ) أول مرة بس */
+function obStep(n){ document.querySelectorAll('#onb .ob').forEach(d => d.hidden = d.dataset.s !== String(n)); if (n === 2) obCheck(); }
+function obMark(id, ok){ const b = $(id); if (!b) return; b.classList.toggle('done', !!ok); b.textContent = ok ? '✓ تمام' : 'اسمح'; }
+function obCheck(){
+  document.querySelectorAll('#onb .nat').forEach(d => d.hidden = !NATIVE);
+  if (NATIVE && NP.Bubble){ NP.Bubble.canDraw().then(r => obMark('obDraw', r.value)).catch(() => {}); if (NP.Bubble.batteryOk) NP.Bubble.batteryOk().then(r => obMark('obBatt', r.value)).catch(() => {}); }
+  if (navigator.permissions) navigator.permissions.query({name:'geolocation'}).then(r => obMark('obLoc', r.state === 'granted')).catch(() => {});
+}
+function obShow(){ $('onb').hidden = false; obStep(1); }
+function obDone(){ $('onb').hidden = true; put('onboarded', true); }
+document.querySelectorAll('#onb [data-go]').forEach(b => b.onclick = () => obStep(+b.dataset.go));
+$('obLoc').onclick = () => {
+  const ok = () => obMark('obLoc', true);
+  if (NATIVE && NP.BackgroundGeolocation) NP.BackgroundGeolocation.addWatcher({requestPermissions:true, stale:true, backgroundMessage:'', backgroundTitle:''}, (l, e) => { if (l) ok(); })
+    .then(id => setTimeout(() => NP.BackgroundGeolocation.removeWatcher({id}), 1500)).catch(() => {});
+  else if (navigator.geolocation) navigator.geolocation.getCurrentPosition(ok, () => {}, {timeout:15000});
+};
+$('obDraw').onclick = () => { if (NP.Bubble) NP.Bubble.requestDraw().catch(() => {}); };
+$('obBatt').onclick = () => { if (NP.Bubble && NP.Bubble.requestBattery) NP.Bubble.requestBattery().catch(() => {}); put('battAsked', true); };
+$('obGo').onclick = () => { obDone(); ghost = null; startFree(); };
+$('obLater').onclick = obDone;
+$('obAgain').onclick = obShow;
+if (NATIVE && NP.App) NP.App.addListener('appStateChange', st => { if (st.isActive && !$('onb').hidden) obCheck(); });   // راجع من الإعدادات
+if (!load('onboarded', false) && !trips.length) obShow();
 $('navPill').onclick = resumeNav;
 $('recenter').onclick = recenter;
 $('freeGo').onclick = () => { if (navOn){ resumeNav(); return; } ghost = null; startFree(); };
@@ -1495,7 +1590,7 @@ $('nmute').innerHTML = IC_VOL;
 $('nmute').onclick = () => { voiceOn = !voiceOn; $('nmute').innerHTML = voiceOn ? IC_VOL : IC_MUTE; if (!voiceOn){ sayQ.length = 0; try { speechSynthesis.cancel(); } catch(e){} if (NATIVE && NP.TextToSpeech) NP.TextToSpeech.stop().catch(() => {}); } };
 
 /* البلاغات أثناء القيادة */
-const REPORTS = [['toll', '💳 كارتة'], ['jam', '🚗 زحمة'], ['accident', '💥 حادثة'], ['block', '⛔ مقفول'], ['radar', '📷 رادار'], ['checkpoint', '🚓 لجنة'], ['note', '📝 مكان/ملاحظة'], ['alt', '🔀 طريق تاني']];
+const REPORTS = [['radar', '📷 رادار'], ['mradar', '🚔 رادار متحرك'], ['toll', '💳 كارتة'], ['jam', '🚗 زحمة'], ['accident', '💥 حادثة'], ['block', '⛔ مقفول'], ['checkpoint', '🚓 لجنة'], ['note', '📝 مكان/ملاحظة'], ['alt', '🔀 طريق تاني']];
 function fillSheet(id, withMic){
   $(id).innerHTML = REPORTS.map(([k, l]) => `<button data-r="${k}">${l}</button>`).join('') + (withMic ? '<button data-r="mic">🎤 قول</button>' : '') + (id === 'askg' ? '<button data-r="none">مفيش حاجة</button>' : '');
   $(id).querySelectorAll('[data-r]').forEach(b => b.onclick = () => {
@@ -1527,6 +1622,8 @@ function handleReport(kind){
   hideSheets();
   if (kind === 'none' || !lastPos) return;
   const p = {lat:lastPos.lat, lon:lastPos.lon};
+  shareReport(kind === 'block' ? 'closed' : kind, p.lat, p.lon, kind === 'radar' || kind === 'mradar' ? {dir:Math.round(heading)} : null);
+  if (kind === 'mradar'){ speak('تمام، سجلت رادار متحرك هنا'); return; }
   if (kind === 'toll' || kind === 'radar' || kind === 'checkpoint'){ myPois.push({...p, kind}); save(); drawMarks(); speak('تمام، سجلت ' + POI_AR[kind] + ' هنا'); }
   else if (kind === 'jam' || kind === 'accident'){ jams.push({...p, kind, until:Date.now() + 2 * 3600e3}); save(); speak('تمام، سجلت البلاغ'); suggestAlt(false); }
   else if (kind === 'block'){ blocks.push({...p, until:Date.now() + 864e5}); save(); drawMarks(); speak('تمام، سجلت إن الطريق مقفول'); suggestAlt(false); }

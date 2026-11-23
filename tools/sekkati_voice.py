@@ -22,7 +22,7 @@ def min_txt(m):  # same as minTxt() in the app
 
 def phrases():
     P = []
-    POI = {"radar": "رادار", "toll": "كارتة", "uturn": "يوتيرن", "checkpoint": "لجنة", "spot": "وقفة متكررة", "bump": "مطب"}
+    POI = {"radar": "رادار", "toll": "كارتة", "uturn": "يوتيرن", "checkpoint": "لجنة", "spot": "وقفة متكررة", "bump": "مطب", "mradar": "رادار متحرك", "jam": "زحمة", "accident": "حادثة", "closed": "طريق مقفول"}
     LIMITS = [30, 40, 50, 60, 70, 80, 90, 100, 110, 120]
     # 1) the alerts that matter most
     for d in ("خمسمية", "ميت وخمسين"):
