@@ -1,7 +1,21 @@
 {
- "updated": "2026-11-23T18:14:42Z",
+ "updated": "2026-11-23T18:23:57Z",
  "demo": false,
  "items": [
+  {
+   "id": "yt-emId9_O2sU8",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-23T18:17:47Z",
+   "t": "We Open Sourced Our Design Brain",
+   "s": "Content Studio is the design agent LangChain runs in Slack, and it's now open source. It has made over 3,000 assets for us, including work for some o…",
+   "tags": [
+    "LangChain"
+   ],
+   "url": "https://www.youtube.com/watch?v=emId9_O2sU8",
+   "ta": "نحن نفتح المصدر لعقلنا التصميمي",
+   "sa": "Content Studio هو وكيل التصميم الذي يديره LangChain في Slack، وهو الآن مفتوح المصدر. لقد صنعت لنا أكثر من 3000 أصل، بما في ذلك العمل لبعض ..."
+  },
   {
    "id": "gh-1469122603",
    "cat": "arch",
@@ -2860,6 +2874,19 @@
    "url": "https://news.ycombinator.com/item?id=50573839",
    "url2": "",
    "ta": "اسأل HN: هل هناك أي مراجعات متوازنة فعلية للعبة GTA 6؟"
+  },
+  {
+   "id": "gn-nasdaq100insidetheindexautodeskadsk",
+   "cat": "arch",
+   "src": "Nasdaq",
+   "ts": "2026-11-20T12:30:00Z",
+   "t": "Nasdaq-100® Inside the Index: Autodesk (ADSK)",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8xcHF5TDAzdmR1V2xEWUY3enV1V3I2a1JHUGg2V2VBOGowY2pmcUNXMl9Ndjg2SFZoSVlUVkNRUjVLbjhhR3VHbGJjNXhaN2NVQ0dodi1IdDc1TkVEUU9KSVdXSVkxV2JzbTlDYi01QlFxT2F6VHow?oc=5",
+   "ta": "Nasdaq-100® داخل المؤشر: Autodesk (ADSK)"
   },
   {
    "id": "hn-50573681",
@@ -6213,48 +6240,6 @@
    "tg": [
     "Python",
     "OpenSource"
-   ],
-   "tp": "oss"
-  },
-  {
-   "id": "hn-50546900",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-18T14:42:25Z",
-   "t": "Can Universities Survive? AI vs. Higher Education [audio]",
-   "s": "22 نقطة، 18 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.ppfideas.com/episodes/can-universities-survive-ai-vs-higher-education",
-   "url2": "https://news.ycombinator.com/item?id=50546900",
-   "ta": "هل تستطيع الجامعات البقاء على قيد الحياة؟ الذكاء الاصطناعي مقابل التعليم العالي [تسجيل صوتي]",
-   "h": "هل تستطيع الجامعات النجاة من زلزال الـ AI؟",
-   "x": "نقاش تقني حول تأثير الذكاء الاصطناعي على مستقبل التعليم العالي.",
-   "tg": [
-    "AI",
-    "Education"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "gh-1462898291",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-18T14:19:25Z",
-   "t": "senickimoro-art/pinokio-olvara-ai-workspace: A modular desktop workspace for configuring and running local AI models.",
-   "s": "93 نجمة، لغة Dockerfile",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/senickimoro-art/pinokio-olvara-ai-workspace",
-   "ta": "senickimoro-art/pinokio-olvara-ai-workspace: مساحة عمل معيارية لسطح المكتب لتكوين نماذج الذكاء الاصطناعي المحلية وتشغيلها.",
-   "h": "بيئة Pinokio لتشغيل وإدارة الـ Local AI Models",
-   "x": "Workspace مرنة لتشغيل وإدارة نماذج الذكاء الاصطناعي محلياً على جهازك.",
-   "tg": [
-    "AI",
-    "Workspace",
-    "Local"
    ],
    "tp": "oss"
   }
