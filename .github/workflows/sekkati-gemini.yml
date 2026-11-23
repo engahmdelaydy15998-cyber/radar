@@ -30,4 +30,4 @@ jobs:
           git add sekkati/ai-review/answer-*.md || true
           git diff --cached --quiet && exit 0
           git commit -m "sekkati: Gemini answer"
-          git push origin HEAD:${GITHUB_REF_NAME}
+          for i in 1 2 3; do git pull --rebase origin ${GITHUB_REF_NAME} && git push origin HEAD:${GITHUB_REF_NAME} && break; sleep 5; done

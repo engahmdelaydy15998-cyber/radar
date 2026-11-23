@@ -22,7 +22,7 @@ for i in range(1, n):  # earlier rounds, so it sees the conversation
             ctx.append("# Earlier round %d %s\n%s" % (i, kind, read(p)))
 files = ["sekkati/index.html", "sekkati/sw.js", "sekkati/manifest.webmanifest"] + \
     sorted(glob.glob("sekkati-android/android/app/src/main/java/com/sekkati/app/*.java")) + \
-    ["sekkati-android/android/app/src/main/AndroidManifest.xml", "sekkati-android/capacitor.config.json"]
+    ["sekkati-android/android/app/src/main/AndroidManifest.xml", "sekkati-android/capacitor.config.json", "tools/sekkati_pois.py"]
 for f in files:
     if os.path.exists(f):
         ctx.append("# FILE %s\n```\n%s\n```" % (f, read(f)))
