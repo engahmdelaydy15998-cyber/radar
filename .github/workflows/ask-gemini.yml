@@ -1,0 +1,37 @@
+name: ask-gemini
+
+# Run by hand (or from a Claude session): sends a prompt file to Gemini and commits the answer next to it.
+on:
+  workflow_dispatch:
+    inputs:
+      prompt:
+        description: "Prompt file path"
+        required: true
+        default: "reviews/radar-review-prompt.md"
+
+permissions:
+  contents: write
+
+jobs:
+  ask:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Ask Gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PROMPT: ${{ inputs.prompt }}
+        run: python tools/ask_gemini.py "$PROMPT" "${PROMPT%.md}.answer.md"
+      - name: Commit the answer
+        env:
+          PROMPT: ${{ inputs.prompt }}
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "radar-bot@users.noreply.github.com"
+          git add "${PROMPT%.md}.answer.md"
+          git commit -m "Gemini answer: $PROMPT"
+          git pull --rebase -q origin main || true
+          git push
