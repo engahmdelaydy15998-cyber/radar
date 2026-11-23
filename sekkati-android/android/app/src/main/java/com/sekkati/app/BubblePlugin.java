@@ -11,6 +11,11 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.PowerManager;
+import android.content.res.AssetFileDescriptor;
+import android.media.AudioAttributes;
+import android.media.AudioFocusRequest;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.provider.Settings;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -129,6 +134,46 @@ public class BubblePlugin extends Plugin {
             }
         }
         call.resolve();
+    }
+
+    private MediaPlayer player;
+
+    /** Plays a bundled voice clip (e.g. "voice/abc.mp3" from the web assets) over other apps, ducking Google Maps / music,
+     *  and resolves when it finishes, so the web speech queue can play the next one. */
+    @PluginMethod
+    public void play(final PluginCall call) {
+        final String file = call.getString("file", "");
+        main.post(() -> {
+            try {
+                if (player != null) { try { player.release(); } catch (Exception ignored) { } player = null; }
+                final AudioManager am = (AudioManager) app().getSystemService(Context.AUDIO_SERVICE);
+                final AudioAttributes attrs = new AudioAttributes.Builder()
+                        .setUsage(AudioAttributes.USAGE_ASSISTANCE_NAVIGATION_GUIDANCE)
+                        .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH).build();
+                final AudioFocusRequest[] focus = new AudioFocusRequest[1];
+                if (am != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    focus[0] = new AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK).setAudioAttributes(attrs).build();
+                    am.requestAudioFocus(focus[0]);
+                }
+                AssetFileDescriptor fd = app().getAssets().openFd("public/" + file);
+                final MediaPlayer mp = new MediaPlayer();
+                player = mp;
+                mp.setAudioAttributes(attrs);
+                mp.setDataSource(fd.getFileDescriptor(), fd.getStartOffset(), fd.getLength());
+                fd.close();
+                final Runnable done = () -> {
+                    if (am != null && focus[0] != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) am.abandonAudioFocusRequest(focus[0]);
+                    try { mp.release(); } catch (Exception ignored) { }
+                    if (player == mp) player = null;
+                };
+                mp.setOnCompletionListener(p -> { done.run(); call.resolve(); });
+                mp.setOnErrorListener((p, what, extra) -> { done.run(); call.reject("play error " + what); return true; });
+                mp.prepare();
+                mp.start();
+            } catch (Exception e) {
+                call.reject("play failed: " + e.getMessage());
+            }
+        });
     }
 
     @PluginMethod

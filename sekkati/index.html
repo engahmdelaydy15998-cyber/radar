@@ -277,6 +277,8 @@ body.mapfull #mapBig,body.nav #mapBack{display:none}
 
   <div class="card">
     <h2>🔈 صوت التنبيهات</h2>
+    <label style="display:flex;gap:8px;align-items:center;margin-bottom:8px;font-size:15px"><input type="checkbox" id="gemv" style="width:20px;height:20px"> 🎙️ صوت Gemini العربي (أوضح)</label>
+    <div class="note" id="gemvNote" style="margin-bottom:8px"></div>
     <select id="vsel"></select>
     <div class="row"><button class="sec" id="vtest">جرّب الصوت</button><button class="sec" id="vset" hidden>إعدادات محرك الصوت</button></div>
     <div class="note" style="margin-top:6px">لو الصوت وحش: من "إعدادات محرك الصوت" اختار محرك Google ونزّل اللغة العربية، وبعدين اختار هنا الصوت اللي جنبه "أونلاين أوضح" أو ★.</div>
@@ -1108,7 +1110,24 @@ function sayNext(){
   const guard = setTimeout(next, 4000 + it.t.length * 120);   // لو المحرك ما ردّش، الطابور ما يقفش
   sayRaw(it.t, next);
 }
+/* صوت Gemini: جمل التنبيه متسجلة مرة واحدة بصوت Gemini العربي (sekkati/voice) وبتتشغل من جوه التطبيق، من غير نت ولا مفتاح.
+   أي جملة مش متسجلة (أسماء شوارع، ملخص الرحلة…) بتتقال بصوت الموبايل زي الأول. */
+let CLIPS = {}, gemVoice = load('gemvoice', true);
+fetch('voice/index.json').then(r => r.json()).then(j => { CLIPS = (j && j.clips) || {}; voiceInfo(); }).catch(() => {});
+function clipFor(t){
+  t = String(t || '').trim();
+  return CLIPS[t] || CLIPS[t.replace(/ على .+$/, '')] || null;     // في التعليمات: اسم الشارع بيفضل على الشاشة
+}
+function playClip(f, done, fallback){
+  if (NATIVE && NP.Bubble && NP.Bubble.play) { NP.Bubble.play({file:'voice/' + f}).then(done, fallback); return; }
+  try { const a = new Audio('voice/' + f); a.onended = done; a.onerror = fallback; a.play().catch(fallback); } catch(e){ fallback(); }
+}
 function sayRaw(t, done){
+  const clip = voiceOn && gemVoice ? clipFor(t) : null;
+  if (clip){ let fb = false; playClip(clip, done, () => { if (fb) return; fb = true; sayTTS(t, done); }); return; }
+  sayTTS(t, done);
+}
+function sayTTS(t, done){
   if (voiceOn && NATIVE && NP.TextToSpeech){       // نطق الموبايل نفسه، وبيشتغل والتطبيق في الخلفية
     const end = () => { if (done) done(); };
     Promise.resolve()
@@ -1124,6 +1143,13 @@ function sayRaw(t, done){
     if (done){ u.onend = done; u.onerror = done; } speechSynthesis.speak(u);
   } catch(e){ if (done) done(); }
 }
+function voiceInfo(){
+  const n = Object.keys(CLIPS).length;
+  $('gemv').checked = gemVoice;
+  $('gemvNote').textContent = n ? `${arab(n)} جملة متسجلة بصوت Gemini جوه التطبيق. أي حاجة تانية (زي أسماء الشوارع) بتتقال بصوت الموبايل اللي تحت.` : 'صوت Gemini لسه بيتجهز، وهييجي مع التحديث الجاي. لحد كده بنستخدم صوت الموبايل.';
+}
+$('gemv').onchange = () => { gemVoice = $('gemv').checked; put('gemvoice', gemVoice); };
+voiceInfo();
 let voiceList = [], voicePick = null;            // التطبيق: رقم الصوت في قايمة المحرك؛ المتصفح: اسمه
 const voiceScore = v => (/arz|-eg/i.test(v.name + ' ' + v.lang) ? 30 : 0) + (v.net ? 20 : 0) + (/network|neural|wavenet|natural/i.test(v.name) ? 10 : 0);
 function fillVoices(){
@@ -1305,7 +1331,7 @@ async function rideAgain(t){
   await startFree(true);
   drawRoutes([{coords:g.P.map(p => [p.lon, p.lat]), c:'#f5c451', w:6}]);
   $('narrow').textContent = '🔁'; $('ntext').textContent = 'امشي على الخط الأصفر: هقولك انت متقدم ولا متأخر عن المرة اللي فاتت';
-  speak('تمام، هنمشي نفس طريق ' + t.name + '، وهقولك انت أسرع ولا أبطأ من المرة اللي فاتت');
+  speak('تمام، هنمشي نفس الطريق، وهقولك انت أسرع ولا أبطأ من المرة اللي فاتت');
 }
 function ghostTick(me, ts){
   const g = ghost; if (!g) return;
@@ -1359,7 +1385,7 @@ function freeUpdate(p){
       const key = id + ':' + th;
       if (dp <= th && !nav.spoken[key]){ nav.spoken[key] = 1; if (dp > th * 0.6) speak(POI_AR[kind] + ' بعد ' + (th === 500 ? 'خمسمية' : 'ميت وخمسين') + ' متر' + (np.max ? '، الحد ' + arab(np.max) : '')); }
     });
-    if (over && dp < 300 && !nav.spoken['o' + id]){ nav.spoken['o' + id] = 1; speak('هدّي السرعة، الحد ' + arab(np.max) + ' وانت ' + arab(Math.round(spd))); }
+    if (over && dp < 300 && !nav.spoken['o' + id]){ nav.spoken['o' + id] = 1; speak('هدّي السرعة، الحد ' + arab(np.max)); speak('وانت ' + arab(Math.round(spd / 5) * 5)); }
   }
   if (spd < 6){
     if (!nav.slowSince) nav.slowSince = Date.now();
@@ -1411,7 +1437,7 @@ function navRender(speed, off){
     const key = 'p' + Math.round(np.at) + ':' + th;
     if (dp <= th && !n.spoken[key]){ n.spoken[key] = 1; if (dp > th * 0.6) speak(POI_AR[np.kind] + ' بعد ' + (th === 500 ? 'خمسمية' : 'ميت وخمسين') + ' متر' + (np.max ? '، الحد ' + arab(np.max) : '')); }
   });
-  if (over && dp < 300 && !n.spoken['o' + Math.round(np.at)]){ n.spoken['o' + Math.round(np.at)] = 1; speak('هدّي السرعة، الحد ' + arab(np.max) + ' وانت ' + arab(Math.round(speed))); }
+  if (over && dp < 300 && !n.spoken['o' + Math.round(np.at)]){ n.spoken['o' + Math.round(np.at)] = 1; speak('هدّي السرعة، الحد ' + arab(np.max)); speak('وانت ' + arab(Math.round(speed / 5) * 5)); }
   [500, 100].forEach(th => {
     const key = k + ':' + th;
     if (dNext <= th && !n.spoken[key]){ n.spoken[key] = 1; if (dNext > th * 0.6 && st.type !== 'arrive') speak('بعد ' + (th === 500 ? 'خمسمية' : 'مية') + ' متر ' + instrOf(st)); }
