@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "Android shell for سكّتي: background GPS, native speech, floating bubble over Google Maps",
   "scripts": {
-    "web": "rm -rf www && mkdir -p www && cp -r ../sekkati/. www/ && rm -f www/HANDOFF.md www/sw.js",
+    "web": "rm -rf www && mkdir -p www && cp -r ../sekkati/. www/ && rm -rf www/HANDOFF.md www/sw.js www/SUMMARY-FOR-AI.md www/ai-review",
     "sync": "npm run web && npx cap sync android"
   },
   "dependencies": {

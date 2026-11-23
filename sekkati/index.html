@@ -843,7 +843,35 @@ const sheetObs = new MutationObserver(() => {
 sheetObs.observe($('res'), {childList:true, characterData:true, subtree:true});
 
 /* الاقتراح: رادارات وكارتات OSM + المسارات + التقييم */
-const allPois = () => myPois.map(p => ({...p, src:'me'})).concat(osmPois);
+let spots = load('spots');
+const allPois = () => myPois.map(p => ({...p, src:'me'})).concat(osmPois, spots.filter(x => x.n >= 2).map(x => ({lat:x.lat, lon:x.lon, kind:'spot', max:0, src:'learn'})));
+function fastStops(P){                             // وقفة قصيرة (٨ث-٣د) وانت ماشي سريع قبلها وبعدها = غالباً كارتة أو لجنة
+  const T = P.filter(p => !p.acc || p.acc <= 50), out = [];
+  const v = i => { const dt = (T[i].t - T[i - 1].t) / 1000; return dt > 0 && dt <= 60 ? hav(T[i - 1], T[i]) / dt : null; };
+  const avg = (a, b) => { const dt = (T[b].t - T[a].t) / 1000; let d = 0; for (let i = a + 1; i <= b; i++) d += hav(T[i - 1], T[i]); return dt > 0 ? d / dt : 0; };
+  for (let i = 1; i < T.length; i++){
+    const s0 = v(i); if (s0 === null || s0 >= STOP_V) continue;
+    const i0 = i - 1; let j = i; while (j < T.length && v(j) !== null && v(j) < STOP_V) j++;
+    const i1 = j - 1, dur = (T[i1].t - T[i0].t) / 1000;
+    if (dur >= 8 && dur <= 180){
+      let a = i0; while (a > 0 && T[i0].t - T[a].t < 60000) a--;
+      let b = i1; while (b < T.length - 1 && T[b].t - T[i1].t < 60000) b++;
+      if (T[i0].t - T[a].t >= 30000 && T[b].t - T[i1].t >= 30000 && avg(a, i0) > 11 && avg(i1, b) > 11) out.push({lat:T[i0].lat, lon:T[i0].lon, dur});
+    }
+    i = j;
+  }
+  return out;
+}
+function learnSpots(t){
+  const known = allPois().filter(q => q.kind !== 'spot'), news = [], promoted = [];
+  fastStops(unpack(t.pts)).filter(s => !known.some(q => hav(q, s) < 150)).forEach(s => {
+    const h = spots.find(x => hav(x, s) < 80);
+    if (!h){ const x = {lat:s.lat, lon:s.lon, n:1, trips:[t.id]}; spots.push(x); news.push(x); }
+    else if (!h.trips.includes(t.id)){ h.trips.push(t.id); h.n = h.trips.length; if (h.n === 2) promoted.push(h); }
+  });
+  if (news.length || promoted.length) put('spots', spots);
+  return {news:news.length, promoted:promoted.length};
+}
 function camDir(v){                               // OSM direction: درجات أو N/NE/...؛ forward/backward مش مفيدين من غير الطريق
   if (v == null) return null; const n = parseFloat(v); if (isFinite(n)) return ((n % 360) + 360) % 360;
   const c = {N:0, NNE:22, NE:45, ENE:67, E:90, ESE:112, SE:135, SSE:157, S:180, SSW:202, SW:225, WSW:247, W:270, WNW:292, NW:315, NNW:337}[String(v).toUpperCase()];
@@ -851,13 +879,35 @@ function camDir(v){                               // OSM direction: درجات �
 }
 const angDiff = (a, b) => Math.abs((a - b + 540) % 360 - 180);
 const facesMe = (q, hd) => q.dir == null || hd == null || angDiff(q.dir, hd) <= 60;   // رادار الاتجاه التاني من الطريق ما يتقالش
+const POI_KIND = {r:'radar', t:'toll', c:'checkpoint'};
+function addOsmPoi(lat, lon, kind, max, dir){      // من غير تكرار: نفس النوع في نطاق ~٤٠ م
+  if (osmPois.some(q => q.kind === kind && Math.abs(q.lat - lat) < 0.0004 && Math.abs(q.lon - lon) < 0.0004)) return false;
+  osmPois.push({lat, lon, kind, max:max || 0, dir:dir == null ? null : dir, src:'osm'}); return true;
+}
 async function fetchPois(bb){
-  const q = `[out:json][timeout:20];(node["highway"="speed_camera"](${bb.s},${bb.w},${bb.n},${bb.e});node["barrier"="toll_booth"](${bb.s},${bb.w},${bb.n},${bb.e});node["highway"="toll_gantry"](${bb.s},${bb.w},${bb.n},${bb.e}););out;`;
+  const B = `(${bb.s},${bb.w},${bb.n},${bb.e})`;
+  const q = `[out:json][timeout:25];(node["highway"="speed_camera"]${B};nwr["barrier"="toll_booth"]${B};node["highway"="toll_gantry"]${B};nwr["barrier"="checkpoint"]${B};nwr["police"="checkpoint"]${B};nwr["military"="checkpoint"]${B};);out center tags;`;
   const j = await (await fetch('https://overpass-api.de/api/interpreter', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:'data=' + encodeURIComponent(q)})).json();
-  const have = new Set(osmPois.map(c => c.kind + c.lat + ',' + c.lon));
-  (j.elements || []).forEach(e => { const t = e.tags || {}, kind = t.highway === 'speed_camera' ? 'radar' : 'toll';
-    if (!have.has(kind + e.lat + ',' + e.lon)) osmPois.push({lat:e.lat, lon:e.lon, kind, max:parseInt(t.maxspeed) || 0, dir:camDir(t.direction), src:'osm'}); });
+  (j.elements || []).forEach(e => { const t = e.tags || {}, c = e.center || {}, lat = e.lat != null ? e.lat : c.lat, lon = e.lon != null ? e.lon : c.lon; if (lat == null) return;
+    const k = t.barrier === 'toll_booth' || t.highway === 'toll_gantry' ? 't' : (t.barrier === 'checkpoint' || t.police === 'checkpoint' || t.military === 'checkpoint') ? 'c' : 'r';
+    addOsmPoi(lat, lon, POI_KIND[k], parseInt(t.maxspeed) || 0, camDir(t.direction || t['camera:direction'])); });
   put('osmpois', osmPois);
+}
+/* رادارات وكارتات ولجان مصر كلها (من OSM، بتتحدّث من GitHub) جوه التطبيق: شغالة من غير نت ومن غير ما تبلّغ */
+async function loadEgPois(){
+  try {
+    const j = await (await fetch('eg-pois.json', {cache:'no-cache'})).json();
+    if (!j || !Array.isArray(j.p) || load('egAt', 0) === j.at) return;
+    j.p.forEach(([lat, lon, k, max, dir]) => addOsmPoi(lat, lon, POI_KIND[k] || 'radar', max, dir));
+    put('osmpois', osmPois); put('egAt', j.at);
+  } catch(e){}
+}
+/* القيادة الحرة: بنجيب اللي حواليك (~١٣ كم) كل ما تبعد ١٠ كم، عشان التنبيه يشتغل من غير ما تخطط طريق */
+let poiNear = null, poiTry = 0;
+function poisAround(me){
+  if ((poiNear && hav(poiNear, me) < 10000) || Date.now() - poiTry < 60000) return;
+  poiTry = Date.now(); const d = 0.12;
+  fetchPois({s:me.lat - d, n:me.lat + d, w:me.lon - d, e:me.lon + d}).then(() => { poiNear = me; }).catch(() => {});
 }
 function buildCtx(){
   const T = trips.map(t => { const pts = unpack(t.pts); return {id:t.id, start:t.start, pts, res:analyze(pts)}; });
@@ -1118,7 +1168,7 @@ function instrOf(st){
   if (st.mod.includes('sharp')) return 'لف ' + dir + ' بحدة' + on;
   return 'لف ' + dir + on;
 }
-const POI_AR = {radar:'رادار', toll:'كارتة', uturn:'يوتيرن', checkpoint:'لجنة'}, POI_IC = {radar:'📷', toll:'💳', uturn:'↩️', checkpoint:'🚓'};
+const POI_AR = {radar:'رادار', toll:'كارتة', uturn:'يوتيرن', checkpoint:'لجنة', spot:'وقفة متكررة'}, POI_IC = {radar:'📷', toll:'💳', uturn:'↩️', checkpoint:'🚓', spot:'🛑'};
 function setupNavRoute(rt){
   const C = rt.r.coords.map(([lo, la]) => ({lat:la, lon:lo}));
   const D = densify(C, 20), cum = [0];
@@ -1223,7 +1273,7 @@ function freeUpdate(p){
   $('nrem').textContent = fmtT((Date.now() - t0) / 1000);
   $('neta').textContent = arab(r.stops);
   $('nremkm').textContent = fmtD(r.dist);
-  ghostTick(me, p.timestamp || Date.now());
+  ghostTick(me, p.timestamp || Date.now()); poisAround(me);
   let np = null, dp = 2000;                         // أقرب حاجة قدامك على نفس خط سيرك تقريباً
   if (spd > 5) allPois().forEach(q => {
     const d = hav(me, q); if (d >= dp) return;
@@ -1567,6 +1617,7 @@ async function analyzeTrip(t, announce){
   }
   const car = load('car', null);
   if (car && car.cons){ const l = an.dist / 1000 * car.cons / 100 * (1 + 0.6 * (an.dur ? an.stopTime / an.dur : 0)); an.fuel = {l, cost:car.price ? l * car.price : 0}; }
+  an.learn = learnSpots(t);
   const prev = sameRoute(t);
   if (prev.length){
     const last = prev[0], best = prev.slice().sort((x, y) => x.r.dur - y.r.dur)[0];
@@ -1578,6 +1629,7 @@ async function analyzeTrip(t, announce){
   if (announce){
     let say = 'خلصت الرحلة: ' + km(an.dist) + ' كيلو في ' + arab(Math.max(1, Math.round(an.dur / 60))) + ' دقيقة، ' + (an.stops ? 'ووقفت ' + arab(an.stops) + ' مرة.' : 'ومن غير ولا وقفة.');
     if (an.cmp){ const d = an.dur - an.cmp.lastDur; say += Math.abs(d) < 30 ? ' في نفس وقت المرة اللي فاتت.' : ' ' + (d < 0 ? 'أسرع' : 'أبطأ') + ' من المرة اللي فاتت بـ ' + minTxt(Math.abs(d)) + '.'; if (an.cmp.bestIsThis) say += ' ودي أسرع مرة ليك على الطريق ده.'; }
+    if (an.learn && an.learn.promoted) say += ' واتعلمت مكان جديد بتقف فيه كل مرة، هنبّهك عليه.';
     if (an.alt) say += ' وفيه طريق ' + (an.alt.faster ? 'أسرع' : 'أقصر') + (an.alt.via ? ' عن طريق ' + an.alt.via : '') + '، بصّ على التحليل.';
     const due = carDue().filter(x => x.st !== 'ok').slice(0, 2);
     if (due.length) say += ' وتنبيه صيانة: ' + due.map(x => x.it.name + (x.st === 'late' ? ' متأخر' : ' قرب')).join('، و') + '.';
@@ -1601,6 +1653,7 @@ function showAnalysis(t, an, loading){
           + (Math.abs(d) < 30 ? 'المرة دي في نفس وقت اللي فاتت تقريباً' : `المرة دي <b style="color:var(${d < 0 ? '--ok' : '--bad'})">${d < 0 ? 'أسرع' : 'أبطأ'} بـ ${minTxt(Math.abs(d))}</b> من اللي فاتت (خدت <bdi>${fmtT(c.lastDur)}</bdi>، طالع الساعة ${hhmm(c.lastAt)})`)
           + (Math.abs(sd) >= 60 ? `، والوقوف ${sd < 0 ? 'أقل' : 'أكتر'} بـ ${minTxt(Math.abs(sd))}` : '') + '.<br>'
           + (c.bestIsThis ? '🏆 دي أسرع مرة مشيت فيها الطريق ده!' : `🏆 أحسن مرة: <bdi>${fmtT(c.bestDur)}</bdi> لما طلعت الساعة ${hhmm(c.bestAt)}.`) + '</div>'; })() : '')
+    + (an.learn && (an.learn.news || an.learn.promoted) ? `<div class="note" style="margin-top:4px">🧠 ${an.learn.promoted ? `اتعلمت ${arab(an.learn.promoted)} مكان بتقف فيه كل مرة على طريق سريع (كارتة أو لجنة غالباً)، وهنبّهك عليه من دلوقتي.` : `لقيت ${arab(an.learn.news)} وقفة قصيرة على طريق سريع (كارتة أو لجنة غالباً). لو اتكررت في رحلة تانية هنبّهك عليها.`}</div>` : '')
     + (an.crawl > 120 ? `<div class="note">🐢 زحمة: ${arab(Math.round(an.crawl / 60))} دقيقة ماشي أقل من ١٠ كم/س${FF > 1.05 ? ` · سرعتك الحقيقية ≈ ${(+FF.toFixed(1)).toLocaleString('ar-EG')}× زمن الطريق الفاضي` : ''}</div>` : '')
     + `<div class="note">عدّيت على: 📷 ${arab(an.radar)} رادار · 💳 ${arab(an.toll)} كارتة · 🚓 ${arab(an.check)} لجنة</div>`
     + (an.fuel ? `<div class="note" style="margin-top:4px">⛽ حوالي ${(+an.fuel.l.toFixed(1)).toLocaleString('ar-EG')} لتر${an.fuel.cost ? ' ≈ ' + arab(an.fuel.cost) + ' جنيه' : ''} (تقدير حسب استهلاك عربيتك والوقفات)</div>` : '')
@@ -1633,13 +1686,14 @@ function renderTrips(){
     trips = trips.filter(t => t.id !== +b.dataset.del); save(); renderTrips();
   });
 }
-const backupData = () => ({trips, blocks, pois:myPois, jams, notes, car:load('car', null), home:load('fav:home', null), work:load('fav:work', null), exportedAt:Date.now()});
+const backupData = () => ({trips, blocks, pois:myPois, jams, notes, car:load('car', null), home:load('fav:home', null), work:load('fav:work', null), spots, exportedAt:Date.now()});
 function mergeBackup(d){
   const add = Array.isArray(d) ? d : (d.trips || []), have = new Set(trips.map(t => t.id));
   add.forEach(t => { if (t && t.id && t.pts && !have.has(t.id)) trips.push(t); });
   (d.pois || []).forEach(p => { if (!myPois.some(x => x.kind === p.kind && hav(x, p) < 40)) myPois.push(p); });
   (d.blocks || []).forEach(b => { if (b.until > Date.now() && !blocks.some(x => hav(x, b) < 40)) blocks.push(b); });
   if (d.car && !load('car', null)){ put('car', d.car); renderCar(); }
+  (d.spots || []).forEach(x => { if (x && x.lat && !spots.some(y => hav(x, y) < 80)) spots.push(x); }); put('spots', spots);
   ['home', 'work'].forEach(k => { if (d[k] && !load('fav:' + k, null)) put('fav:' + k, d[k]); });
   (d.notes || []).forEach(n => { if (n && n.t && !notes.some(x => x.t === n.t)) notes.push(n); });
   (d.jams || []).forEach(j => { if (j.until > Date.now() && !jams.some(x => x.kind === j.kind && hav(x, j) < 60)) jams.push(j); });
@@ -1679,7 +1733,9 @@ $('imp').onclick = () => {
   try { mergeBackup(JSON.parse(io.value)); io.value = ''; io.hidden = true; }
   catch(e){ $('msg').textContent = 'البيانات مش سليمة.'; }
 };
-renderTrips(); drawMarks();
+renderTrips(); drawMarks(); learnFF();
+loadEgPois();
+if (!load('spotsInit', false)){ trips.slice().reverse().forEach(t => { try { learnSpots(t); } catch(e){} }); put('spotsInit', true); }
 /* عربيتي: العداد، البنزين، ومواعيد الصيانة */
 const CAR_ITEMS = [                                // متوسطات عامة؛ Claude أو كتيّب العربية بيدّوا الأدق
   {id:'oil', name:'زيت الموتور', km:5000, mo:6}, {id:'oilf', name:'فلتر الزيت', km:5000, mo:6},
