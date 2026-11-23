@@ -8,7 +8,7 @@ MODELS = ["gemini-pro-latest", "gemini-3-flash-preview", "gemini-flash-latest", 
 asks = sorted(glob.glob("sekkati/ai-review/ask-*.md"), key=lambda p: int(re.findall(r"\d+", p)[-1]))
 ask = asks[-1]; n = int(re.findall(r"\d+", ask)[-1])
 out = "sekkati/ai-review/answer-%d.md" % n
-if os.path.exists(out):
+if os.path.exists(out) and not open(out, encoding="utf-8").read().startswith("FAILED"):
     print("already answered", out); sys.exit(0)
 
 def read(p):
@@ -28,11 +28,17 @@ for f in files:
         ctx.append("# FILE %s\n```\n%s\n```" % (f, read(f)))
 prompt = "\n\n".join(ctx) + "\n\n# THE REQUEST (round %d)\n%s" % (n, read(ask))
 
-body = json.dumps({"contents": [{"role": "user", "parts": [{"text": prompt}]}],
+parts = [{"text": prompt}]
+ask_text = read(ask)
+for img in sorted(glob.glob("sekkati/ai-review/shots/*.png")) if "SCREENSHOTS" in ask_text else []:
+    import base64
+    parts.append({"text": "Screenshot: " + os.path.basename(img)})
+    parts.append({"inline_data": {"mime_type": "image/png", "data": base64.b64encode(open(img, "rb").read()).decode()}})
+body = json.dumps({"contents": [{"role": "user", "parts": parts}],
                    "generationConfig": {"maxOutputTokens": 32000, "temperature": 0.4}}).encode()
 last = ""
 for model in MODELS:
-    for attempt in range(2):
+    for attempt in range(3):
         req = urllib.request.Request(URL % model, data=body, method="POST",
                                      headers={"Content-Type": "application/json", "x-goog-api-key": KEY})
         try:
@@ -49,6 +55,6 @@ for model in MODELS:
             last = "%s: %s" % (model, e)
         print(last)
         if "429" not in last and "503" not in last: break
-        time.sleep(20)
+        time.sleep(30 * (attempt + 1))
 open(out, "w", encoding="utf-8").write("FAILED: %s\n" % last)
 sys.exit(1)
