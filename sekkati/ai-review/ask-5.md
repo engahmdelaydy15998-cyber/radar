@@ -32,3 +32,4 @@ Please look at the screenshots and:
 2. Judge the driving screen layout: top bar, speed circle, buttons, the car, the bottom bar. Suggest concrete CSS changes.
 3. Review the camera/minimise code for bugs.
 Use exact find→replace blocks against the current files.
+retry (503 before)
