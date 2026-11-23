@@ -3,20 +3,14 @@ into sekkati/eg-pois.json, so the app has them offline without the driver report
 Format: {"at": epoch_ms, "p": [[lat, lon, kind, maxspeed, direction|null], ...]}, kind: r=radar t=toll c=checkpoint."""
 import json, sys, time, urllib.parse, urllib.request
 
-Q = """[out:json][timeout:180];
-area["ISO3166-1"="EG"][admin_level=2]->.eg;
-rel["type"="enforcement"](area.eg)->.enf;
-node(r.enf:"device")->.dev;
-(
-  node["highway"="speed_camera"](area.eg);
-  .dev;
-  nwr["barrier"="toll_booth"](area.eg);
-  node["highway"="toll_gantry"](area.eg);
-  nwr["barrier"="checkpoint"](area.eg);
-  nwr["police"="checkpoint"](area.eg);
-  nwr["military"="checkpoint"](area.eg);
-);
-out center tags;"""
+# Egypt's bounding box. Small per-kind queries: one big area query timed out on every Overpass mirror.
+BB = "(21.9,24.6,31.8,37.0)"
+QUERIES = {
+    "radars": 'node["highway"="speed_camera"]%s;' % BB,
+    "enforcement": 'rel["type"="enforcement"]%s->.e;node(r.e:"device");' % BB,
+    "tolls": 'nwr["barrier"="toll_booth"]%s;node["highway"="toll_gantry"]%s;' % (BB, BB),
+    "checkpoints": 'nwr["barrier"="checkpoint"]%s;nwr["police"="checkpoint"]%s;nwr["military"="checkpoint"]%s;' % (BB, BB, BB),
+}
 MIRRORS = ["https://overpass-api.de/api/interpreter", "https://overpass.kumi.systems/api/interpreter",
            "https://overpass.private.coffee/api/interpreter"]
 CARD = {"N": 0, "NNE": 22, "NE": 45, "ENE": 67, "E": 90, "ESE": 112, "SE": 135, "SSE": 157, "S": 180,
@@ -39,21 +33,32 @@ def maxspeed(v):
         return 0
 
 
-data = None
-for url in MIRRORS:
-    try:
-        req = urllib.request.Request(url, data=urllib.parse.urlencode({"data": Q}).encode(),
-                                     headers={"User-Agent": "sekkati-pois/1.0"})
-        with urllib.request.urlopen(req, timeout=240) as r:
-            data = json.load(r)
-        print("ok from", url)
-        break
-    except Exception as e:
-        print("failed", url, e)
-        time.sleep(5)
-if not data or not data.get("elements"):
+def fetch(body):
+    q = "[out:json][timeout:120];(" + body + ");out center tags;"
+    for url in MIRRORS:
+        try:
+            req = urllib.request.Request(url, data=urllib.parse.urlencode({"data": q}).encode(),
+                                         headers={"User-Agent": "sekkati-pois/1.0"})
+            with urllib.request.urlopen(req, timeout=150) as r:
+                return json.load(r).get("elements", [])
+        except Exception as e:
+            print("  failed", url, e)
+            time.sleep(3)
+    return None
+
+
+elements, failed = [], []
+for name, body in QUERIES.items():
+    got = fetch(body)
+    print(name, "->", "FAILED" if got is None else len(got))
+    if got is None:
+        failed.append(name)
+    else:
+        elements += got
+if not elements:
     print("no data; keeping the old file")
     sys.exit(1)
+data = {"elements": elements}
 
 out, seen, cnt = [], set(), {"r": 0, "t": 0, "c": 0}
 for e in data["elements"]:
