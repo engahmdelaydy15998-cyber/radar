@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T18:12:23Z",
+ "updated": "2026-11-23T18:14:42Z",
  "demo": false,
  "items": [
   {
@@ -40,7 +40,15 @@
    ],
    "url": "https://www.youtube.com/shorts/v69ZjBGDwGQ",
    "ta": "لقد دخل الذكاء الاصطناعي للتو إلى #revit باستخدام SplenditAI",
-   "sa": "جرب Splendit مجانًا لمدة 72 ساعة على: http://splendit.me/ لا توجد بطاقة ولا دفع تلقائي."
+   "sa": "جرب Splendit مجانًا لمدة 72 ساعة على: http://splendit.me/ لا توجد بطاقة ولا دفع تلقائي.",
+   "h": "الذكاء الاصطناعي يدخل Revit مع SplenditAI",
+   "x": "جرب أداة SplenditAI الجديدة وشوف إزاي ممكن تغير شغلك في الـ Revit والـ BIM.",
+   "tg": [
+    "Revit",
+    "AI",
+    "BIM"
+   ],
+   "tp": "addins"
   },
   {
    "id": "yt-0q0UbO4oqgQ",
@@ -54,7 +62,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=0q0UbO4oqgQ",
    "ta": "المتسللون قادمون لوكيل ترميز الذكاء الاصطناعي الخاص بك (أغلقه الآن)",
-   "sa": "يستخدم المهاجمون الذكاء الاصطناعي للعثور على الثغرات الأمنية واستغلالها بشكل أسرع من أي وقت مضى، وتنتقل الكثير من هذه الهجمات الآن مباشرةً عبر وكلاء البرمجة لدينا. في…"
+   "sa": "يستخدم المهاجمون الذكاء الاصطناعي للعثور على الثغرات الأمنية واستغلالها بشكل أسرع من أي وقت مضى، وتنتقل الكثير من هذه الهجمات الآن مباشرةً عبر وكلاء البرمجة لدينا. في…",
+   "h": "تأمين الـ AI Coding Agents ضد الاختراق",
+   "x": "الهاكرز بيستهدفوا الـ coding agents وثغراتهم بتزيد، اعرف إزاي تحمي شغلك وكودك.",
+   "tg": [
+    "Security",
+    "Agents",
+    "Coding"
+   ],
+   "tp": "agents"
   },
   {
    "id": "yt-gAmjBqXNoFI",
@@ -234,6 +250,18 @@
    "url": "https://github.com/mikuta0407/win4wine",
    "url2": "https://news.ycombinator.com/item?id=50610743",
    "ta": "Win4wine – قم بتشغيل Windows Shell كسطح مكتب Linux على Wine"
+  },
+  {
+   "id": "gn-48agentskillsbuildmcpserversclaudecodepluginsandevenmoreagen",
+   "cat": "agents",
+   "src": "HackerNoon",
+   "ts": "2026-11-23T12:20:44Z",
+   "t": "48 Agent Skills Build MCP Servers, Claude Code Plugins and Even More Agent Skills",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZUtMMHhVOWt3blFSX2pXZGlhUUdSQlVrUUZvdElPVE9VRXdDMFlmMXU0V092emRPMmd2N3hRQXZuTGhZcVZfc3pBY2E4SzBFZUthcHdfY1lxQWNJdW1ONHE2czNEM1ZzTllETEdUXzlManZheDM3b0NlNnRlS0R4Z09YcUNKc2RVZ3pMY1h4STlMMzhad1JwVXlkOFgwZEpuSGF5cWpB?oc=5"
   },
   {
    "id": "hn-50609685",
@@ -6227,27 +6255,6 @@
     "AI",
     "Workspace",
     "Local"
-   ],
-   "tp": "oss"
-  },
-  {
-   "id": "gh-1462897554",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-18T14:18:51Z",
-   "t": "kenzz-devv/open-webui-talora-ai-workspace: Streamlined workspace for organizing and running AI workflows in one place.",
-   "s": "94 نجمة، لغة TypeScript",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/kenzz-devv/open-webui-talora-ai-workspace",
-   "ta": "kenzz-devv/open-webui-talora-ai-workspace: مساحة عمل مبسطة لتنظيم سير عمل الذكاء الاصطناعي وتشغيله في مكان واحد.",
-   "h": "منصة Talora لتنظيم وتحغيل الـ AI Workflows",
-   "x": "أداة متميزة لتنظيم مسارات عمل الذكاء الاصطناعي في مكان واحد.",
-   "tg": [
-    "TypeScript",
-    "AI",
-    "Workflow"
    ],
    "tp": "oss"
   }
