@@ -926,7 +926,7 @@ function camDir(v){                               // OSM direction: درجات �
 }
 const angDiff = (a, b) => Math.abs((a - b + 540) % 360 - 180);
 const facesMe = (q, hd) => q.dir == null || hd == null || angDiff(q.dir, hd) <= 60;   // رادار الاتجاه التاني من الطريق ما يتقالش
-const POI_KIND = {r:'radar', t:'toll', c:'checkpoint'};
+const POI_KIND = {r:'radar', t:'toll', c:'checkpoint', b:'bump'};
 function addOsmPoi(lat, lon, kind, max, dir){      // من غير تكرار: نفس النوع في نطاق ~٤٠ م
   if (osmPois.some(q => q.kind === kind && Math.abs(q.lat - lat) < 0.0004 && Math.abs(q.lon - lon) < 0.0004)) return false;
   osmPois.push({lat, lon, kind, max:max || 0, dir:dir == null ? null : dir, src:'osm'}); return true;
@@ -1239,7 +1239,7 @@ function instrOf(st){
   if (st.mod.includes('sharp')) return 'لف ' + dir + ' بحدة' + on;
   return 'لف ' + dir + on;
 }
-const POI_AR = {radar:'رادار', toll:'كارتة', uturn:'يوتيرن', checkpoint:'لجنة', spot:'وقفة متكررة'}, POI_IC = {radar:'📷', toll:'💳', uturn:'↩️', checkpoint:'🚓', spot:'🛑'};
+const POI_AR = {radar:'رادار', toll:'كارتة', uturn:'يوتيرن', checkpoint:'لجنة', spot:'وقفة متكررة', bump:'مطب'}, POI_IC = {radar:'📷', toll:'💳', uturn:'↩️', checkpoint:'🚓', spot:'🛑', bump:'〰️'};
 function setupNavRoute(rt){
   const C = rt.r.coords.map(([lo, la]) => ({lat:la, lon:lo}));
   const D = densify(C, 20), cum = [0];
@@ -1366,12 +1366,13 @@ function freeUpdate(p){
   $('neta').textContent = arab(r.stops);
   $('nremkm').textContent = fmtD(r.dist);
   ghostTick(me, p.timestamp || Date.now()); poisAround(me);
-  let np = null, dp = 2000;                         // أقرب حاجة قدامك على نفس خط سيرك تقريباً
+  let np = null, dp = 2000, nb = null, db = 220;      // أقرب حاجة قدامك على نفس خط سيرك؛ المطبات لوحدها عشان ما تخبّيش رادار بعدها
   if (spd > 5) allPois().forEach(q => {
-    const d = hav(me, q); if (d >= dp) return;
+    const d = hav(me, q), bump = q.kind === 'bump'; if (d >= (bump ? db : dp)) return;
     const a = ((brg(me, q) - heading + 540) % 360 - 180) * Math.PI / 180;
-    if (Math.cos(a) > 0.5 && Math.abs(d * Math.sin(a)) < 35 && facesMe(q, heading)){ np = q; dp = d; }
+    if (Math.cos(a) > 0.5 && Math.abs(d * Math.sin(a)) < (bump ? 20 : 35) && facesMe(q, heading)){ if (bump){ nb = q; db = d; } else { np = q; dp = d; } }
   });
+  if (nb && spd > 25){ const k = 'b' + nb.lat.toFixed(4) + nb.lon.toFixed(4); if (db <= 150 && db > 50 && !nav.spoken[k]){ nav.spoken[k] = 1; speak('مطب بعد ميت وخمسين متر'); } }
   const kind = np ? (np.kind || 'radar') : '', over = np && kind === 'radar' && np.max && spd > np.max + 3;
   $('nspdc').classList.toggle('over', !!over);
   $('nrad').hidden = !np;
@@ -1427,7 +1428,9 @@ function navRender(speed, off){
   $('neta').textContent = eta.toLocaleTimeString('ar-EG', {hour:'2-digit', minute:'2-digit'});
   $('nrem').textContent = arab(Math.max(1, Math.round(remSec / 60))) + ' د';
   $('nremkm').textContent = fmtD(rem);
-  const np = n.pois.find(r => r.at > here), dp = np ? np.at - here : 0, over = np && np.kind === 'radar' && np.max && speed > np.max + 3;
+  const nbp = n.pois.find(r => r.at > here && r.kind === 'bump');
+  if (nbp && speed > 25 && nbp.at - here <= 150 && nbp.at - here > 50 && !n.spoken['b' + Math.round(nbp.at)]){ n.spoken['b' + Math.round(nbp.at)] = 1; speak('مطب بعد ميت وخمسين متر'); }
+  const np = n.pois.find(r => r.at > here && r.kind !== 'bump'), dp = np ? np.at - here : 0, over = np && np.kind === 'radar' && np.max && speed > np.max + 3;
   $('nspdc').classList.toggle('over', !!over);
   $('nrad').hidden = !(np && dp <= 2000);
   overlaySet(np && dp <= 2000 ? POI_IC[np.kind] + ' ' + POI_AR[np.kind] + ' بعد ' + fmtD(dp) : arrowOf(st) + ' ' + fmtD(dNext) + ' · ' + instrOf(st), np && dp <= 2000 ? (over ? 'danger' : 'warn') : 'info');
