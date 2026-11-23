@@ -8,8 +8,7 @@ KEY = os.environ["GEMINI_API_KEY"]
 VOICE = os.environ.get("SEKKATI_VOICE", "Kore")
 OUT = "sekkati/voice"
 API = "https://generativelanguage.googleapis.com/v1beta/"
-STYLE = ("Read the following Arabic sentence aloud in a natural Egyptian Arabic (Cairene) accent, "
-         "clear, warm and calm, like a friendly in-car navigation assistant. Read only the sentence: ")
+STYLE = ""  # an instruction in the prompt got read aloud by the TTS model, so the text goes alone
 DIG = str.maketrans("0123456789", "٠١٢٣٤٥٦٧٨٩")
 
 
@@ -86,7 +85,7 @@ def fname(text):
 def tts_models():
     with urllib.request.urlopen(urllib.request.Request(API + "models?pageSize=200", headers={"x-goog-api-key": KEY}), timeout=60) as r:
         names = [m["name"].split("/")[-1] for m in json.load(r).get("models", []) if "tts" in m["name"]]
-    names.sort(key=lambda n: (("pro" in n), ("preview" in n), n))  # flash first
+    names.sort(key=lambda n: (("lite" in n), ("pro" in n), ("preview" in n), n))  # full flash first, then lite
     print("tts models:", names)
     return names
 
@@ -105,6 +104,11 @@ def speak(model, text):
         if bit.strip().startswith("rate="):
             rate = int(bit.split("=")[1])
     return base64.b64decode(part["data"]), rate
+
+
+def too_long(text, pcm, rate):  # Arabic speech is ~12 chars/s; 3x that means it read something else too
+    sec = len(pcm) / 2.0 / rate
+    return sec > max(4.0, len(text) / 12.0 * 3 + 1.5), sec
 
 
 def to_mp3(pcm, rate, path):
@@ -133,6 +137,12 @@ def main():
         while True:
             try:
                 pcm, rate = speak(models[mi], text)
+                bad, sec = too_long(text, pcm, rate)
+                if bad:
+                    print("too long (%.1fs), skipping model %s for: %s" % (sec, models[mi], text))
+                    if mi + 1 < len(models):
+                        mi += 1; continue
+                    break
                 f = fname(text)
                 to_mp3(pcm, rate, os.path.join(OUT, f))
                 idx["clips"][text] = f
@@ -175,7 +185,8 @@ def samples():  # the same sentence in a few voices, so the driver can pick one
             continue
         VOICE = v
         try:
-            pcm, rate = speak(models[0], "رادار بعد خمسمية متر، الحد ستين. هدّي السرعة. وبعد كده كارتة بعد ميت وخمسين متر.")
+            pcm, rate = speak(models[0], "رادار بعد خمسمية متر، الحد ستين. هدّي السرعة.")
+            print("sample %s %.1fs" % (v, len(pcm) / 2.0 / rate))
             to_mp3(pcm, rate, path); print("sample", v)
         except Exception as e:
             print("sample failed", v, e)
