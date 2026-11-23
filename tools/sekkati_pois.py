@@ -63,6 +63,8 @@ data = {"elements": elements}
 out, seen, cnt = [], set(), {"r": 0, "t": 0, "c": 0}
 for e in data["elements"]:
     t = e.get("tags", {})
+    if t.get("type") == "enforcement":
+        continue  # the relation itself; its device nodes are the cameras
     c = e.get("center") or {}
     lat, lon = (e["lat"], e["lon"]) if "lat" in e else (c.get("lat"), c.get("lon"))
     if lat is None:
