@@ -1,0 +1,41 @@
+name: sekkati-shots
+
+# Takes screenshots of the app with real map tiles and commits them to sekkati/ai-review/shots/,
+# so the map colours, the car and the driving screen can be checked (and shown to Gemini).
+on:
+  push:
+    paths:
+      - "sekkati/ai-review/shoot-*.txt"
+      - "tools/sekkati_shots.js"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sekkati-shots
+  cancel-in-progress: true
+
+jobs:
+  shots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Playwright
+        run: |
+          npm init -y >/dev/null
+          npm i playwright@1.49.1
+          npx playwright install --with-deps chromium
+          fc-list | grep -i -c arab || sudo apt-get install -y fonts-noto-core fonts-noto-ui-core >/dev/null
+      - name: Screenshots
+        run: node tools/sekkati_shots.js
+      - name: Commit
+        run: |
+          git config user.name "Claude"; git config user.email "noreply@anthropic.com"
+          git add sekkati/ai-review/shots
+          git diff --cached --quiet && exit 0
+          git commit -m "sekkati: app screenshots with real map tiles"
+          for i in 1 2 3; do git pull --rebase origin ${GITHUB_REF_NAME} && git push origin HEAD:${GITHUB_REF_NAME} && break; sleep 5; done
