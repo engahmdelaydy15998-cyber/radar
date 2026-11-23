@@ -352,7 +352,11 @@ body.mapfull #mapBig,body.nav #mapBack{display:none}
 /*CORE_START*/
 const STOP_V = 1.5;     // م/ث: أقل من كده = واقف
 const STOP_MIN = 8;     // ثواني لازم تعدي عشان تتحسب وقفة
-const FF = 1.3;         // معامل تقريبي لتحويل زمن OSRM (طريق فاضي) لزمن واقعي
+let FF = 1.3;           // معامل تحويل زمن OSRM (طريق فاضي) لزمن واقعي؛ بيتعلّم من رحلاتك (learnFF)
+function learnFF(){                                // الوسيط لآخر رحلات اتمشت على طريق OSRM نفسه تقريباً
+  const r = (typeof trips !== 'undefined' ? trips : []).filter(t => t.an && t.an.osrm > 300 && t.an.dur > 0).slice(0, 10).map(t => t.an.dur / t.an.osrm).sort((a, b) => a - b);
+  if (r.length >= 3) FF = Math.min(2.5, Math.max(1, r[Math.floor(r.length / 2)]));
+}
 const PRIOR = 0.4;      // وقفات متوقعة لكل كم لو معنديش معلومات عن التقاطعات
 const INT_STOP = 0.03;  // احتمال وقفة عند كل تقاطع في جزء ما مشيتوش
 const CELL = 0.0002;    // حجم خلية الفهرس (~22م)
@@ -368,9 +372,9 @@ function hav(a, b){
 }
 function analyze(all){
   const pts = all.filter(p => !p.acc || p.acc <= 50);
-  const z = {dist:0, dur:0, stops:0, stopTime:0, move:0, avg:0, moveAvg:0, max:0, stopList:[]};
+  const z = {dist:0, dur:0, stops:0, stopTime:0, move:0, crawl:0, avg:0, moveAvg:0, max:0, stopList:[]};
   if (pts.length < 2) return z;
-  let dist = 0, max = 0, stops = 0, stopTime = 0, move = 0, run = 0, runPt = null;
+  let dist = 0, max = 0, stops = 0, stopTime = 0, move = 0, crawl = 0, run = 0, runPt = null;
   const stopList = [];
   const flush = () => {
     if (run >= STOP_MIN){ stops++; stopTime += run; stopList.push({lat:runPt.lat, lon:runPt.lon, dur:run}); }
@@ -384,11 +388,11 @@ function analyze(all){
     const v = d / dt;
     if (v > 70) continue;
     dist += d; if (v > max) max = v;
-    if (v < STOP_V){ if (!run) runPt = a; run += dt; } else { flush(); move += dt; }
+    if (v < STOP_V){ if (!run) runPt = a; run += dt; } else { flush(); move += dt; if (v < 2.8) crawl += dt; }   // زحف أقل من ١٠ كم/س = زحمة
   }
   flush();
   const dur = (pts[pts.length-1].t - pts[0].t) / 1000;
-  return {dist, dur, stops, stopTime, move, max, stopList,
+  return {dist, dur, stops, stopTime, move, crawl, max, stopList,
           avg: dur ? dist / dur * 3.6 : 0, moveAvg: move ? dist / move * 3.6 : 0};
 }
 const cellKey = (la, lo) => Math.round(la/CELL) + ',' + Math.round(lo/CELL);
@@ -463,10 +467,11 @@ function scoreRoute(r, ctx){
   ctx.pois.forEach(p => {
     let bi = -1, bd = 30;
     for (let i = 0; i < D.length; i++){ const d = hav(D[i], p); if (d < bd){ bd = d; bi = i; } }
+    if (bi >= 0 && p.dir != null && D.length > 1){ const j = Math.min(D.length - 1, bi + 1), i0 = j - 1; if (!facesMe(p, brg(D[i0], D[j]))) bi = -1; }
     if (bi >= 0) pois.push({at:cumD[bi], lat:p.lat, lon:p.lon, kind:p.kind || 'radar', max:p.max || 0, src:p.src || ''});
   });
   pois.sort((a, b) => a.at - b.at);
-  pois = pois.filter((p, i) => !pois.slice(0, i).some(q => q.kind === p.kind && Math.abs(p.at - q.at) < 60));
+  pois = pois.filter((p, i) => !pois.slice(0, i).some(q => q.kind === p.kind && Math.abs(p.at - q.at) < 120));
   const tolls = pois.filter(p => p.kind === 'toll').length;
   const myUturns = pois.filter(p => p.kind === 'uturn').length;   // ملفات علّمها السواق بنفسه، فوق اللي OSRM شايفها
   const checks = pois.filter(p => p.kind === 'checkpoint').length;
@@ -838,12 +843,19 @@ sheetObs.observe($('res'), {childList:true, characterData:true, subtree:true});
 
 /* الاقتراح: رادارات وكارتات OSM + المسارات + التقييم */
 const allPois = () => myPois.map(p => ({...p, src:'me'})).concat(osmPois);
+function camDir(v){                               // OSM direction: درجات أو N/NE/...؛ forward/backward مش مفيدين من غير الطريق
+  if (v == null) return null; const n = parseFloat(v); if (isFinite(n)) return ((n % 360) + 360) % 360;
+  const c = {N:0, NNE:22, NE:45, ENE:67, E:90, ESE:112, SE:135, SSE:157, S:180, SSW:202, SW:225, WSW:247, W:270, WNW:292, NW:315, NNW:337}[String(v).toUpperCase()];
+  return c == null ? null : c;
+}
+const angDiff = (a, b) => Math.abs((a - b + 540) % 360 - 180);
+const facesMe = (q, hd) => q.dir == null || hd == null || angDiff(q.dir, hd) <= 60;   // رادار الاتجاه التاني من الطريق ما يتقالش
 async function fetchPois(bb){
   const q = `[out:json][timeout:20];(node["highway"="speed_camera"](${bb.s},${bb.w},${bb.n},${bb.e});node["barrier"="toll_booth"](${bb.s},${bb.w},${bb.n},${bb.e});node["highway"="toll_gantry"](${bb.s},${bb.w},${bb.n},${bb.e}););out;`;
   const j = await (await fetch('https://overpass-api.de/api/interpreter', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:'data=' + encodeURIComponent(q)})).json();
   const have = new Set(osmPois.map(c => c.kind + c.lat + ',' + c.lon));
   (j.elements || []).forEach(e => { const t = e.tags || {}, kind = t.highway === 'speed_camera' ? 'radar' : 'toll';
-    if (!have.has(kind + e.lat + ',' + e.lon)) osmPois.push({lat:e.lat, lon:e.lon, kind, max:parseInt(t.maxspeed) || 0, src:'osm'}); });
+    if (!have.has(kind + e.lat + ',' + e.lon)) osmPois.push({lat:e.lat, lon:e.lon, kind, max:parseInt(t.maxspeed) || 0, dir:camDir(t.direction), src:'osm'}); });
   put('osmpois', osmPois);
 }
 function buildCtx(){
@@ -915,16 +927,17 @@ async function computeRoutes(a, b){
     return {i, r:rr, s:scoreRoute(rr, ctx)};
   }).sort((a, b) => a.s.rank - b.s.rank);
 }
-let results = [], selIdx = 0, planTimer = 0;
+let results = [], selIdx = 0, planTimer = 0, planSeq = 0;
 function autoPlan(){ clearTimeout(planTimer); planTimer = setTimeout(plan, 250); }
 async function plan(){
+  const my = ++planSeq;                            // لو الوجهة اتغيرت قبل ما الرد يرجع، الرد القديم يتجاهل
   $('msg').textContent = '';
   if (!start || !dest){ if (!start) $('msg').textContent = 'محتاج نقطة البداية: اضغط 📍 موقعي أو اكتب في خانة "من".'; return; }
   $('res').innerHTML = '<div class="note" style="padding:14px">...بدور على الطرق</div>';
   try {
-    results = await computeRoutes(start, dest); put('plan', results);
+    const rr = await computeRoutes(start, dest); if (my !== planSeq) return; results = rr; put('plan', results);
     setMapFull(true); showRoutes(0);
-  } catch(e){ $('res').innerHTML = ''; $('msg').textContent = 'مقدرتش أجيب الطرق. اتأكد من الإنترنت وجرّب تاني.'; }
+  } catch(e){ if (my !== planSeq) return; $('res').innerHTML = ''; $('msg').textContent = 'مقدرتش أجيب الطرق. اتأكد من الإنترنت وجرّب تاني.'; }
 }
 function why(x, k){
   const s = x.s, fastest = results.reduce((a, b) => b.s.osrm < a.s.osrm ? b : a), parts = [];
@@ -1171,7 +1184,7 @@ function freeUpdate(p){
   if (spd > 5) allPois().forEach(q => {
     const d = hav(me, q); if (d >= dp) return;
     const a = ((brg(me, q) - heading + 540) % 360 - 180) * Math.PI / 180;
-    if (Math.cos(a) > 0.5 && Math.abs(d * Math.sin(a)) < 45){ np = q; dp = d; }
+    if (Math.cos(a) > 0.5 && Math.abs(d * Math.sin(a)) < 35 && facesMe(q, heading)){ np = q; dp = d; }
   });
   const kind = np ? (np.kind || 'radar') : '', over = np && kind === 'radar' && np.max && spd > np.max + 3;
   $('nrad').hidden = !np;
@@ -1474,7 +1487,7 @@ async function analyzeTrip(t, announce){
   const P = unpack(t.pts), r = analyze(P); if (P.length < 5) return;
   const T = P.filter(p => !p.acc || p.acc <= 50), a = P[0], b = P[P.length - 1];
   const passed = allPois().filter(q => T.some(p => hav(p, q) < 40)), cnt = k => passed.filter(q => (q.kind || 'radar') === k).length;
-  const an = {dist:r.dist, dur:r.dur, stops:r.stops, stopTime:r.stopTime, moveAvg:r.moveAvg, max:r.max * 3.6,
+  const an = {dist:r.dist, dur:r.dur, stops:r.stops, stopTime:r.stopTime, crawl:r.crawl, moveAvg:r.moveAvg, max:r.max * 3.6,
               radar:cnt('radar'), toll:cnt('toll'), check:cnt('checkpoint'), alt:null, onBest:false,
               notes:notes.filter(n => n.t >= P[0].t && n.t <= P[P.length - 1].t + 120000).map(n => n.text)};
   anAlt = null;
@@ -1488,11 +1501,13 @@ async function analyzeTrip(t, announce){
       const pick = faster || shorter;
       if (pick){ an.alt = {via:pick.x.r.via || '', dist:pick.dist, est:pick.est, faster:!!faster}; anAlt = {coords:pick.x.r.coords, track:T.map(p => [p.lon, p.lat])}; }
       else an.onBest = cands.some(c => c.same >= 0.7);
+      const mine = cands.filter(c => c.same >= 0.85).sort((p, q) => q.same - p.same)[0];
+      if (mine && mine.x.r.duration) an.osrm = mine.x.r.duration;   // زمن الطريق الفاضي لنفس مسارك = مقياس سرعتك الحقيقية
     } catch(e){}
   }
   const car = load('car', null);
   if (car && car.cons){ const l = an.dist / 1000 * car.cons / 100 * (1 + 0.6 * (an.dur ? an.stopTime / an.dur : 0)); an.fuel = {l, cost:car.price ? l * car.price : 0}; }
-  t.an = an; save();
+  t.an = an; save(); learnFF();
   showAnalysis(t, an, false);
   if (announce){
     let say = 'خلصت الرحلة: ' + km(an.dist) + ' كيلو في ' + arab(Math.max(1, Math.round(an.dur / 60))) + ' دقيقة، ' + (an.stops ? 'ووقفت ' + arab(an.stops) + ' مرة.' : 'ومن غير ولا وقفة.');
@@ -1514,6 +1529,7 @@ function showAnalysis(t, an, loading){
   $('anBody').innerHTML = `<div class="note" style="margin-bottom:6px">${esc(t.name)}</div><div class="an">`
     + box(km(an.dist) + ' كم', 'المسافة') + box(fmtT(an.dur), 'الوقت') + box(arab(an.stops), 'وقفات')
     + box(fmtT(an.stopTime), 'وقت الوقوف') + box(arab(an.moveAvg), 'متوسط كم/س') + box(arab(an.max), 'أقصى كم/س') + '</div>'
+    + (an.crawl > 120 ? `<div class="note">🐢 زحمة: ${arab(Math.round(an.crawl / 60))} دقيقة ماشي أقل من ١٠ كم/س${FF > 1.05 ? ` · سرعتك الحقيقية ≈ ${(+FF.toFixed(1)).toLocaleString('ar-EG')}× زمن الطريق الفاضي` : ''}</div>` : '')
     + `<div class="note">عدّيت على: 📷 ${arab(an.radar)} رادار · 💳 ${arab(an.toll)} كارتة · 🚓 ${arab(an.check)} لجنة</div>`
     + (an.fuel ? `<div class="note" style="margin-top:4px">⛽ حوالي ${(+an.fuel.l.toFixed(1)).toLocaleString('ar-EG')} لتر${an.fuel.cost ? ' ≈ ' + arab(an.fuel.cost) + ' جنيه' : ''} (تقدير حسب استهلاك عربيتك والوقفات)</div>` : '')
     + ((an.notes || []).length ? `<div class="note" style="margin-top:4px">📝 ملاحظاتك: ${an.notes.map(esc).join(' · ')}</div>` : '') + alt;
@@ -1533,7 +1549,7 @@ function renderTrips(){
   $('list').innerHTML = trips.map(t => {
     const r = analyze(unpack(t.pts)), d = new Date(t.start);
     const when = d.toLocaleDateString('ar-EG', {weekday:'short', day:'numeric', month:'short'}) + ' ' + d.toLocaleTimeString('ar-EG', {hour:'2-digit', minute:'2-digit'});
-    return `<div class="trip"><div class="t"><b>${esc(t.name)}</b><div>${when} · ${fmtT(r.dur)} · ${km(r.dist)} كم · ${r.stops} وقفات</div></div>
+    return `<div class="trip"><div class="t"><b>${esc(t.name)}</b><div>${when} · ${fmtT(r.dur)} · ${km(r.dist)} كم · ${r.stops} وقفات${t.an && t.an.fuel && t.an.fuel.cost ? ' · ⛽ ' + arab(t.an.fuel.cost) + ' ج' : ''}</div></div>
       <button class="sec" data-an="${t.id}" title="تحليل">📊</button><button class="sec" data-del="${t.id}">حذف</button></div>`;
   }).join('') || '<div class="note">مفيش رحلات لسه. كل ما تسجل أكتر، الاقتراحات بتبقى أدق.</div>';
   $('list').querySelectorAll('[data-an]').forEach(b => b.onclick = () => { const t = trips.find(x => x.id === +b.dataset.an); if (t){ analyzeTrip(t, false); $('anCard').scrollIntoView({behavior:'smooth'}); } });
@@ -1552,7 +1568,7 @@ function mergeBackup(d){
   ['home', 'work'].forEach(k => { if (d[k] && !load('fav:' + k, null)) put('fav:' + k, d[k]); });
   (d.notes || []).forEach(n => { if (n && n.t && !notes.some(x => x.t === n.t)) notes.push(n); });
   (d.jams || []).forEach(j => { if (j.until > Date.now() && !jams.some(x => x.kind === j.kind && hav(x, j) < 60)) jams.push(j); });
-  trips.sort((a, b) => b.start - a.start); save(); renderTrips(); drawMarks();
+  trips.sort((a, b) => b.start - a.start); save(); renderTrips(); drawMarks(); learnFF();
 }
 $('exp').onclick = async () => {
   const name = 'sekkati-' + new Date().toISOString().slice(0, 10) + '.json', data = JSON.stringify(backupData());
