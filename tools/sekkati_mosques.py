@@ -6,7 +6,7 @@ Output: {"at": ms, "m": [lat1, lon1, lat2, lon2, ...]} with 5 decimals (~1 m).  
 import json, os, re, subprocess, sys, time
 
 PBF = "egypt.osm.pbf"
-FILTERS = ["nwr/amenity=place_of_worship", "wr/access=private,no,customers,residents", "wr/residential=gated",
+FILTERS = ["nwr/amenity=place_of_worship", "wr/building=mosque", "wr/access=private,no,customers,residents", "wr/residential=gated",
            "wr/gated=yes", "wr/landuse=residential", "wr/barrier=wall,fence"]
 NAME_MOSQUE = re.compile(r"مسجد|جامع|mosque|masjid|musall?a|مصلى|مصلي", re.I)
 NAME_COMPOUND = re.compile(r"كمبوند|كومباوند|compound|residence|heights|hills|gardens|villas|فيلات|ريزيدنس", re.I)
@@ -23,6 +23,8 @@ def center(g):
 
 
 def is_mosque(t):
+    if t.get("building") == "mosque" and t.get("amenity") in (None, "place_of_worship") and t.get("religion") in (None, "muslim"):
+        return True                               # many Egyptian mosques are only mapped as a building
     if t.get("amenity") != "place_of_worship":
         return False
     if t.get("religion") == "muslim":
