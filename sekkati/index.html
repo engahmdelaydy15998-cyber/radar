@@ -1524,6 +1524,7 @@ function freeUpdate(p){
     if (!nav.slowSince) nav.slowSince = Date.now();
     else if (Date.now() - nav.slowSince > 25000 && Date.now() - nav.lastAsk > 180000 && r.dist > 80) askWhy();
   } else nav.slowSince = 0;
+  slowAsk(spd, (np && dp < 400) || (nb && db < 220));
 }
 function navUpdate(p){
   if (!nav) return;
@@ -1670,14 +1671,30 @@ function fillSheet(id, withMic){
 fillSheet('rptg', true); fillSheet('askg', true);
 function hideSheets(){ ['ask', 'rpt', 'cl'].forEach(i => $(i).hidden = true); }
 $('nreport').onclick = () => { const h = $('rpt').hidden; hideSheets(); $('rpt').hidden = !h; };
+/* هدّيت فجأة من سرعة عالية؟ نسألك ونسمعك مرة واحدة، بدل ما المايك يفضل فاتح طول الطريق */
+function slowAsk(spd, expected){
+  const now = Date.now();
+  if (spd > 50){ if (!nav.fastSince) nav.fastSince = now; nav.fastLast = now; return; }
+  if (spd > 30) return;
+  const wasFast = nav.fastSince && nav.fastLast - nav.fastSince > 30000 && now - nav.fastLast < 25000;
+  if (spd < 25 && wasFast){
+    nav.fastSince = 0;                              // سؤال واحد لكل تهدية
+    if (expected || now - nav.lastAsk < 180000) return;   // رادار/كارتة/مطب قدامك = التهدية مفهومة
+    nav.lastAsk = now;
+    speak('هدّيت ليه؟ في حاجة؟', () => voiceReport(true));
+  } else if (now - nav.fastLast > 25000) nav.fastSince = 0;
+}
 function askWhy(){
   nav.lastAsk = Date.now(); hideSheets(); $('ask').hidden = false;
   speak('واقفين ليه؟ قول كارتة أو لجنة أو زحمة أو حادثة', () => voiceReport());
   setTimeout(() => { if (nav) $('ask').hidden = true; }, 20000);
 }
-async function voiceReport(){
-  const t = await listen(7000), r = parseReport(t);
-  if (r) handleReport(r); else if (t) speak('ما فهمتش، اضغط على الزرار اللي يناسب');
+async function voiceReport(free){
+  const t = await listen(7000);
+  if (!t) return;
+  if (free){ voiceFromBubble(t); return; }          // بعد "هدّيت ليه": بلاغ معروف، أو أي كلام تاني بيتحفظ ملاحظة
+  const r = parseReport(t);
+  if (r) handleReport(r); else if (t.trim().split(/\s+/).length > 1) saveNote(t); else speak('ما فهمتش، اضغط على الزرار اللي يناسب');
 }
 function handleReport(kind){
   hideSheets();
