@@ -175,6 +175,7 @@ body.mapfull #mapBig,body.nav #mapBack{display:none}
 #nspdc{position:fixed;right:14px;bottom:calc(env(safe-area-inset-bottom) + 88px);z-index:1000;width:68px;height:68px;border-radius:50%;background:var(--card);color:var(--ink);border:4px solid var(--ink);
   display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;box-shadow:0 3px 10px rgba(0,0,0,.5)}
 #nspdc.over{border-color:var(--bad,#e5394f);color:var(--bad,#e5394f)}#nspdc.over span{color:inherit}
+.mk.mq{font-size:20px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
 #nspdc b{font-size:26px;font-weight:700;font-variant-numeric:tabular-nums}
 #nspdc span{font-size:10px;color:var(--mut);margin-top:2px}
 #nbot{position:fixed;bottom:0;left:0;right:0;z-index:1000;background:var(--card);border-radius:18px 18px 0 0;display:flex;align-items:center;gap:12px;
@@ -290,6 +291,7 @@ body.mapfull #mapBig,body.nav #mapBack{display:none}
   <div class="card">
     <h2>🔈 صوت التنبيهات</h2>
     <label style="display:flex;gap:8px;align-items:center;margin-bottom:8px;font-size:15px"><input type="checkbox" id="gemv" style="width:20px;height:20px"> 🎙️ صوت Gemini العربي (أوضح)</label>
+    <label style="display:flex;gap:8px;align-items:center;margin-bottom:8px;font-size:15px"><input type="checkbox" id="mosqv" style="width:20px;height:20px"> 🕌 قولّي على المساجد اللي قدامي وقت الصلاة</label>
     <div class="note" id="gemvNote" style="margin-bottom:8px"></div>
     <select id="vsel"></select>
     <div class="row"><button class="sec" id="vtest">جرّب الصوت</button><button class="sec" id="vset" hidden>إعدادات محرك الصوت</button></div>
@@ -1501,6 +1503,60 @@ function autoArrive(me, spd, dist){
   setTimeout(exitNav, 4000);
   return true;
 }
+/* 🕌 مساجد وقت الصلاة: من 5 دقايق قبل الأدان لحد 40 دقيقة بعده (العشا ساعة)، بيقولك على المساجد اللي قدامك ويعلّمها على الخريطة.
+   المساجد اللي جوه كمبوند أو مكان خاص متشالة من البيانات (tools/sekkati_mosques.py). المواعيد بطريقة الهيئة المصرية (فجر 19.5°، عشا 17.5°) */
+let MOSQ = null, mosqGrid = new Map(), mosqOn = load('mosqon', true), mosqMk = [], mosqLast = {at:0, mk:0, win:'', said:{}};
+fetch('eg-mosques.json').then(r => r.json()).then(j => {
+  const m = j && j.m; if (!Array.isArray(m)) return; MOSQ = m;
+  for (let i = 0; i < m.length; i += 2){ const k = Math.floor(m[i] * 100) + ',' + Math.floor(m[i + 1] * 100); (mosqGrid.get(k) || mosqGrid.set(k, []).get(k)).push(i); }
+}).catch(() => {});
+function prayerTimes(date, lat, lon){
+  const R = Math.PI / 180, fix = (a, b) => ((a % b) + b) % b;
+  const y = date.getFullYear(), mo = date.getMonth() + 1, d = date.getDate(), tz = -date.getTimezoneOffset() / 60;
+  const Y = mo <= 2 ? y - 1 : y, M = mo <= 2 ? mo + 12 : mo, A = Math.floor(Y / 100), B = 2 - A + Math.floor(A / 4);
+  const jd = Math.floor(365.25 * (Y + 4716)) + Math.floor(30.6001 * (M + 1)) + d + B - 1524.5 - lon / 360;
+  const sun = t => { const D = jd + t - 2451545, g = fix(357.529 + 0.98560028 * D, 360), q = fix(280.459 + 0.98564736 * D, 360);
+    const L = fix(q + 1.915 * Math.sin(g * R) + 0.02 * Math.sin(2 * g * R), 360), e = 23.439 - 0.00000036 * D;
+    const ra = fix(Math.atan2(Math.cos(e * R) * Math.sin(L * R), Math.cos(L * R)) / R / 15, 24);
+    return {decl:Math.asin(Math.sin(e * R) * Math.sin(L * R)) / R, eqt:q / 15 - ra}; };
+  const noon = t => fix(12 - sun(t).eqt, 24);
+  const angT = (ang, t, ccw) => { const s = sun(t), x = (-Math.sin(ang * R) - Math.sin(s.decl * R) * Math.sin(lat * R)) / (Math.cos(s.decl * R) * Math.cos(lat * R));
+    const T = Math.acos(Math.max(-1, Math.min(1, x))) / R / 15; return noon(t) + (ccw ? -T : T); };
+  const asrT = t => { const s = sun(t); return angT(-Math.atan(1 / (1 + Math.tan(Math.abs(lat - s.decl) * R))) / R, t, false); };
+  const loc = h => h + tz - lon / 15;
+  return {fajr:loc(angT(19.5, 5 / 24, true)), dhuhr:loc(noon(0.5)) + 1 / 60, asr:loc(asrT(13 / 24)), maghrib:loc(angT(0.833, 18 / 24, false)) + 1 / 60, isha:loc(angT(17.5, 18 / 24, false))};
+}
+const PRAYER_AR = {fajr:'الفجر', dhuhr:'الضهر', asr:'العصر', maghrib:'المغرب', isha:'العشا'};
+function prayerNow(me){
+  const now = new Date(), h = now.getHours() + now.getMinutes() / 60, T = prayerTimes(now, me.lat, me.lon);
+  for (const k in T) if (h >= T[k] - 5 / 60 && h <= T[k] + (k === 'isha' ? 1 : 40 / 60)) return {k, key:now.toDateString() + k};
+  return null;
+}
+$('mosqv').checked = mosqOn; $('mosqv').onchange = () => { mosqOn = $('mosqv').checked; put('mosqon', mosqOn); if (!mosqOn) mosqClear(); };
+function mosqClear(){ mosqMk.forEach(m => m.remove()); mosqMk = []; }
+function mosqueTick(me, spd){
+  if (!mosqOn || !MOSQ) return;
+  const now = Date.now(), pr = prayerNow(me);
+  if (!pr){ if (mosqMk.length) mosqClear(); return; }
+  if (mosqLast.win !== pr.key){ mosqLast.win = pr.key; mosqLast.said = {}; speak('وقت صلاة ' + PRAYER_AR[pr.k] + '، هقولك على المساجد اللي قدامك'); }
+  const near = [], cy = Math.floor(me.lat * 100), cx = Math.floor(me.lon * 100);
+  for (let a = -1; a <= 1; a++) for (let b = -1; b <= 1; b++) (mosqGrid.get((cy + a) + ',' + (cx + b)) || []).forEach(i => {
+    const q = {lat:MOSQ[i], lon:MOSQ[i + 1], i}, d = hav(me, q); if (d < 1500){ q.d = d; near.push(q); } });
+  if (now - mosqLast.mk > 20000){                 // علامات 🕌 على الخريطة حواليك
+    mosqLast.mk = now; mosqClear();
+    near.sort((x, y) => x.d - y.d).slice(0, 25).forEach(q => mosqMk.push(addMk(mkEl('🕌', 'mq'), q.lon, q.lat)));
+  }
+  if (now - mosqLast.at < 45000) return;
+  let best = null;
+  near.forEach(q => { if (q.d > 600 || mosqLast.said[q.i]) return;
+    const a = ((brg(me, q) - heading + 540) % 360 - 180) * Math.PI / 180;
+    if (spd > 8 && Math.cos(a) < 0.2 && q.d > 60) return;               // ورا ضهرك
+    q.side = Math.sin(a) > 0.35 ? ' على اليمين' : Math.sin(a) < -0.35 ? ' على الشمال' : '';
+    if (!best || q.d < best.d) best = q; });
+  if (!best) return;
+  mosqLast.at = now; mosqLast.said[best.i] = 1;
+  speak(best.d < 120 ? 'في مسجد هنا' + best.side : 'في مسجد بعد ' + Math.round(best.d / 50) * 50 + ' متر' + best.side);
+}
 function freeUpdate(p){
   const me = {lat:p.coords.latitude, lon:p.coords.longitude}, spd = speedOf(p); lastPos = me;
   followCar(p, me, spd);
@@ -1511,6 +1567,7 @@ function freeUpdate(p){
   $('nremkm').textContent = fmtD(r.dist);
   ghostTick(me, p.timestamp || Date.now()); poisAround(me); syncNear(me);
   if (autoArrive(me, spd, r.dist)) return;
+  mosqueTick(me, spd);
   let np = null, dp = 2000, nb = null, db = 220;      // أقرب حاجة قدامك على نفس خط سيرك؛ المطبات لوحدها عشان ما تخبّيش رادار بعدها
   if (spd > 5) allPois().forEach(q => {
     const d = hav(me, q), bump = q.kind === 'bump'; if (d >= (bump ? db : dp)) return;
@@ -1543,6 +1600,7 @@ function navUpdate(p){
   if (!nav) return;
   if (nav.free) return freeUpdate(p);
   const me = {lat:p.coords.latitude, lon:p.coords.longitude}, D = nav.D; lastPos = me; syncNear(me);
+  mosqueTick(me, speedOf(p));
   let bi = -1, bd = 1e12;
   const scan = (a, b) => { for (let i = a; i <= b; i++){ const d = hav(D[i], me); if (d < bd){ bd = d; bi = i; } } };
   scan(Math.max(0, nav.last - 10), Math.min(D.length - 1, nav.last + 150));

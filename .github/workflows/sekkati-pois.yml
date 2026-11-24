@@ -6,6 +6,7 @@ on:
   push:
     paths:
       - "tools/sekkati_pois.py"
+      - "tools/sekkati_mosques.py"
       - ".github/workflows/sekkati-pois.yml"
   workflow_dispatch:
 
@@ -23,10 +24,12 @@ jobs:
         run: curl -4 -fL --retry 5 --retry-delay 10 --retry-all-errors -o egypt.osm.pbf https://download.geofabrik.de/africa/egypt-latest.osm.pbf
       - name: Build from the Geofabrik Egypt extract
         run: python3 tools/sekkati_pois.py
+      - name: Mosques (minus the ones inside compounds)
+        run: python3 tools/sekkati_mosques.py || true
       - name: Commit
         run: |
           git config user.name "Claude"; git config user.email "noreply@anthropic.com"
-          git add sekkati/eg-pois.json
+          git add sekkati/eg-pois.json $(ls sekkati/eg-mosques.json 2>/dev/null)
           git diff --cached --quiet && exit 0
           git commit -m "sekkati: refresh Egypt radars/tolls/checkpoints from OSM"
           for i in 1 2 3; do git pull --rebase origin ${GITHUB_REF_NAME} && git push origin HEAD:${GITHUB_REF_NAME} && break; sleep 5; done
