@@ -9,6 +9,9 @@ import android.os.Bundle;
 import com.getcapacitor.BridgeActivity;
 
 public class MainActivity extends BridgeActivity {
+    /** Set by the "أسجّل؟" drive notification: open and start recording. */
+    static final String EXTRA_REC = "sekkati_rec";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         registerPlugin(BubblePlugin.class);
@@ -24,6 +27,12 @@ public class MainActivity extends BridgeActivity {
     }
 
     @Override
+    public void onRequestPermissionsResult(int code, String[] perms, int[] res) {
+        super.onRequestPermissionsResult(code, perms, res);
+        if (code == DriveReceiver.REQ) DriveReceiver.register(this);
+    }
+
+    @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         takeShare(intent);
@@ -32,6 +41,12 @@ public class MainActivity extends BridgeActivity {
     /** "Share" from Google Maps (text with a maps.app.goo.gl link) or a tapped maps / geo: link → hand it to the web layer. */
     private void takeShare(Intent i) {
         if (i == null) return;
+        if (i.getBooleanExtra(EXTRA_REC, false)) {
+            i.removeExtra(EXTRA_REC);
+            DriveReceiver.cancel(this);
+            BubblePlugin.deliverShared("sekkati:rec");
+            return;
+        }
         if (Intent.ACTION_SEND.equals(i.getAction())) {
             String t = i.getStringExtra(Intent.EXTRA_TEXT);
             String s = i.getStringExtra(Intent.EXTRA_SUBJECT);

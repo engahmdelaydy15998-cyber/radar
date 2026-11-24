@@ -301,6 +301,7 @@ body.mapfull #mapBig,body.nav #mapBack{display:none}
   <div class="card" id="bubCard" hidden>
     <h2>🫧 الفقاعة فوق جوجل مابس</h2>
     <div class="note">بتظهر لما تبدأ من سكّتي ("جوجل + سجّل" أو "ابدأ السواقة") وبعدين تروح لجوجل مابس، ومحتاجة إذن "الظهور فوق التطبيقات الأخرى".</div>
+    <label style="display:flex;gap:8px;align-items:center;margin-top:8px;font-size:15px"><input type="checkbox" id="drivev" style="width:20px;height:20px"> 🚗 اسألني "أسجّل؟" أول ما أبدأ أسوق</label>
     <div style="margin-top:8px"><button class="big sec" id="bubTest">جرّب الفقاعة دلوقتي</button></div>
     <div class="note" id="battNote" style="margin-top:10px" hidden>🔋 الموبايل ممكن يوقف التسجيل في الخلفية عشان يوفّر بطارية (شاومي وريلمي وأوبو بالذات).</div>
     <div style="margin-top:6px"><button class="big sec" id="battBtn" hidden>اسمح لسكّتي تشتغل في الخلفية</button></div>
@@ -563,13 +564,17 @@ const $ = id => document.getElementById(id);
 const NATIVE = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
 const NP = NATIVE ? window.Capacitor.Plugins : {};
 let appActive = true, overlayWant = null, overlayShown = '', overlayAsked = false, voiceWaiter = null;
+function isNight(){                               // ليل = من المغرب لحد الشروق (الشروق ≈ الضهر - (المغرب - الضهر))
+  const p = lastPos || {lat:30.05, lon:31.24}, n = new Date(), h = n.getHours() + n.getMinutes() / 60, T = prayerTimes(n, p.lat, p.lon);
+  return h >= T.maghrib - 1 / 60 || h < 2 * T.dhuhr - T.maghrib;
+}
 function overlaySet(text, level){                  // آخر محتوى للفقاعة؛ بتظهر بس والتطبيق في الخلفية
   overlayWant = text ? {text, level:level || 'info'} : null;
   if (!NATIVE || !NP.Bubble) return;
-  const k = overlayWant && !appActive ? overlayWant.level + overlayWant.text + (voiceOn ? '' : 'm') : '';
+  const night = isNight(), k = overlayWant && !appActive ? overlayWant.level + overlayWant.text + (voiceOn ? '' : 'm') + (night ? 'n' : '') : '';
   if (k === overlayShown) return;
   overlayShown = k;
-  if (k) NP.Bubble.show({...overlayWant, muted:!voiceOn}).catch(() => {}); else NP.Bubble.hide().catch(() => {});
+  if (k) NP.Bubble.show({...overlayWant, muted:!voiceOn, night}).catch(() => {}); else NP.Bubble.hide().catch(() => {});
 }
 function overlayAction(id){                        // أزرار الفقاعة اللي فوق جوجل مابس
   if (id === 'radar' || id === 'toll' || id === 'checkpoint'){ if (!lastPos) speak('لسه مستني الموقع'); else handleReport(id); }
@@ -591,10 +596,14 @@ if (NATIVE && NP.Bubble){
     voiceFromBubble(t, e && e.error);
   });
   $('bubCard').hidden = false;
+  let driveOn = load('driveask', true);
+  const driveSync = () => { if (NP.Bubble.driveAsk) NP.Bubble.driveAsk({on:driveOn}).catch(() => {}); };
+  $('drivev').checked = driveOn; $('drivev').onchange = () => { driveOn = $('drivev').checked; put('driveask', driveOn); driveSync(); };
+  setTimeout(driveSync, 2500);
   $('bubTest').onclick = () => NP.Bubble.canDraw().then(r => {
     if (!r.value){ $('bubTest').textContent = 'فعّل الإذن لسكّتي وارجع اضغط تاني'; NP.Bubble.requestDraw(); return; }
     $('bubTest').textContent = 'بصّ فوق شمال: لازم الفقاعة تظهر ٦ ثواني';
-    NP.Bubble.show({text:'📷 رادار بعد ٥٠٠ م · الحد ٦٠ (تجربة)', level:'warn'});
+    NP.Bubble.show({text:'📷 رادار بعد ٥٠٠ م · الحد ٦٠ (تجربة)', level:'warn', night:isNight()});
     setTimeout(() => { NP.Bubble.hide(); overlayShown = ''; $('bubTest').textContent = 'جرّب الفقاعة دلوقتي'; }, 6000);
   }).catch(e => { $('bubTest').textContent = 'الفقاعة مش شغالة: ' + (e.message || e); });
 }
@@ -820,7 +829,9 @@ async function openShared(text, go){
   if (!g) return;
   setTimeout(() => { if (NATIVE && NP.AppLauncher) NP.AppLauncher.openUrl({url:g}).catch(() => { location.href = g; }); else window.open(g, '_blank'); }, 1200);
 }
-function takeShared(){ if (NATIVE && NP.Bubble && NP.Bubble.takeShared) NP.Bubble.takeShared().then(r => { if (r && r.text) openShared(r.text, true); }).catch(() => {}); }
+function takeShared(){ if (NATIVE && NP.Bubble && NP.Bubble.takeShared) NP.Bubble.takeShared().then(r => {
+  if (r && r.text === 'sekkati:rec'){ if (!navOn) startFree(); return; }       // من إشعار "أسجّل؟"
+  if (r && r.text) openShared(r.text, true); }).catch(() => {}); }
 if (NATIVE && NP.Bubble){ NP.Bubble.addListener('shared', takeShared); setTimeout(takeShared, 1500); }
 function followGoogle(){                           // لحد ما جودة طرقنا تتحسن: جوجل بيدّي الاتجاهات، وإحنا بنسجّل الرحلة بصمت
   if (!start || !dest){ $('msg').textContent = 'محتاج من وإلى الأول عشان أفتحلك جوجل مابس.'; return; }
@@ -1261,8 +1272,9 @@ function sayRaw(t, done){
 }
 function sayTTS(t, done){
   if (voiceOn && NATIVE && NP.TextToSpeech){       // نطق الموبايل نفسه، وبيشتغل والتطبيق في الخلفية
-    const end = () => { if (done) done(); };
-    Promise.resolve()
+    const hold = NP.Bubble && NP.Bubble.focus;    // المزيكا تقف وسكّتي بيتكلم، وترجع بعده
+    const end = () => { if (hold) NP.Bubble.focus({on:false}).catch(() => {}); if (done) done(); };
+    (hold ? NP.Bubble.focus({on:true}).catch(() => {}) : Promise.resolve())
       .then(() => NP.TextToSpeech.speak(voicePick !== null ? {text:t, lang:'ar', voice:voicePick, rate:1, pitch:1, volume:1} : {text:t, lang:'ar-EG', rate:1, pitch:1, volume:1}))
       .catch(() => NP.TextToSpeech.speak({text:t, lang:'ar', rate:1, pitch:1, volume:1})).then(end, end);
     return;
@@ -1884,6 +1896,7 @@ function onFix(p){
   if (navOn) navUpdate(p);
   else { const ll = [p.coords.longitude, p.coords.latitude]; if (mMe) mMe.setLngLat(ll); else mMe = addMk(mkEl('', 'me'), ll[0], ll[1]); try { map.easeTo({center:ll, duration:500}); } catch(e){} }
 }
+function recNative(on){ if (NATIVE && NP.Bubble && NP.Bubble.recState) NP.Bubble.recState({on}).catch(() => {}); }   // ما يسألش "أسجّل؟" وهو بيسجّل
 async function startRec(){
   if (!NATIVE && !('geolocation' in navigator)){ $('msg').textContent = 'المتصفح ده مش بيدعم GPS.'; return; }
   $('msg').textContent = ''; pts = []; t0 = Date.now();
@@ -1896,7 +1909,7 @@ async function startRec(){
     else put('battAsked', true);
   });
   if (NATIVE && NP.BackgroundGeolocation){         // بيكمّل يسجّل والشاشة مقفولة أو جوجل مابس قدام
-    watchId = 'bg';
+    watchId = 'bg'; recNative(true);
     NP.BackgroundGeolocation.addWatcher({backgroundTitle:'سكّتي شغالة', backgroundMessage:'بتسجّل الطريق وبتنبهك قبل الرادارات والكارتات', requestPermissions:true, stale:false, distanceFilter:0},
       (loc, err) => {
         if (err){ $('msg').textContent = err.code === 'NOT_AUTHORIZED' ? 'لازم تسمح لسكّتي بالموقع من إعدادات التطبيق.' : 'مشكلة في الـGPS: ' + err.message; if (err.code === 'NOT_AUTHORIZED') NP.BackgroundGeolocation.openSettings(); return; }
@@ -1921,7 +1934,7 @@ function stopRec(){
   else if (watchId !== 'bg') navigator.geolocation.clearWatch(watchId);
   clearInterval(tick);
   try { wl && wl.release(); } catch(e){}
-  $('rec').textContent = '▶ ابدأ التسجيل'; $('rec').classList.remove('red'); watchId = null;
+  $('rec').textContent = '▶ ابدأ التسجيل'; $('rec').classList.remove('red'); watchId = null; recNative(false);
   $('recNote').textContent = 'اتحفظت. التحليل تحت في "📊 تحليل آخر رحلة".';
   if (!navOn && mMe){ mMe.remove(); mMe = null; }
   if (pts.length < 5){                              // من غير مواقع كفاية مفيش رحلة؛ نقول السبب بدل رسالة عامة

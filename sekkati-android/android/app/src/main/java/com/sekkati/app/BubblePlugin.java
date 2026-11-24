@@ -112,6 +112,30 @@ public class BubblePlugin extends Plugin {
         }).start();
     }
 
+    /** {on}: ask "أسجّل؟" in a notification when Android sees the phone start driving (Activity Recognition). */
+    @PluginMethod
+    public void driveAsk(PluginCall call) {
+        boolean on = Boolean.TRUE.equals(call.getBoolean("on", true));
+        DriveReceiver.prefs(app()).edit().putBoolean("ask", on).apply();
+        JSObject r = new JSObject();
+        if (!on) { DriveReceiver.unregister(app()); r.put("granted", true); call.resolve(r); return; }
+        boolean granted = DriveReceiver.permitted(app());
+        if (!granted && getActivity() != null && Build.VERSION.SDK_INT >= 29)
+            getActivity().requestPermissions(new String[]{android.Manifest.permission.ACTIVITY_RECOGNITION}, DriveReceiver.REQ);
+        if (granted) DriveReceiver.register(app());
+        r.put("granted", granted);
+        call.resolve(r);
+    }
+
+    /** The web layer says whether a trip is being recorded, so the drive notification isn't shown during one. */
+    @PluginMethod
+    public void recState(PluginCall call) {
+        boolean on = Boolean.TRUE.equals(call.getBoolean("on", false));
+        DriveReceiver.prefs(app()).edit().putBoolean("rec", on).apply();
+        if (on) DriveReceiver.cancel(app());
+        call.resolve();
+    }
+
     /** Opens the voice-input dialog over the current screen (works on top of Google Maps). */
     @PluginMethod
     public void voice(PluginCall call) {
@@ -184,6 +208,46 @@ public class BubblePlugin extends Plugin {
 
     private MediaPlayer player;
 
+    /** One audio-focus hold for every spoken alert (clip or phone TTS). GAIN_TRANSIENT: music / YouTube pause while
+     *  Sekkati talks and resume right after, so the alert is never buried under the music. */
+    private AudioFocusRequest navFocus;
+    private int focusHolders;
+    private final Runnable focusRelease = () -> { if (focusHolders == 0) abandonFocus(); };
+
+    private void holdFocus() {
+        focusHolders++;
+        main.removeCallbacks(focusRelease);
+        if (navFocus != null) return;
+        AudioManager am = (AudioManager) app().getSystemService(Context.AUDIO_SERVICE);
+        if (am == null || Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return;
+        navFocus = new AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN_TRANSIENT)
+                .setAudioAttributes(new AudioAttributes.Builder()
+                        .setUsage(AudioAttributes.USAGE_ASSISTANCE_NAVIGATION_GUIDANCE)
+                        .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH).build())
+                .build();
+        am.requestAudioFocus(navFocus);
+    }
+
+    /** Lets go a little later, so back-to-back sentences don't make the music jump in between. */
+    private void dropFocus() {
+        if (focusHolders > 0) focusHolders--;
+        main.removeCallbacks(focusRelease);
+        main.postDelayed(focusRelease, 700);
+    }
+
+    private void abandonFocus() {
+        AudioManager am = (AudioManager) app().getSystemService(Context.AUDIO_SERVICE);
+        if (am != null && navFocus != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) am.abandonAudioFocusRequest(navFocus);
+        navFocus = null;
+    }
+
+    /** {on:true} before phone TTS speaks, {on:false} after it ends. */
+    @PluginMethod
+    public void focus(PluginCall call) {
+        final boolean on = Boolean.TRUE.equals(call.getBoolean("on", false));
+        main.post(() -> { if (on) holdFocus(); else dropFocus(); call.resolve(); });
+    }
+
     /** Plays a bundled voice clip (e.g. "voice/abc.mp3" from the web assets) over other apps, ducking Google Maps / music,
      *  and resolves when it finishes, so the web speech queue can play the next one. */
     @PluginMethod
@@ -192,15 +256,10 @@ public class BubblePlugin extends Plugin {
         main.post(() -> {
             try {
                 if (player != null) { try { player.release(); } catch (Exception ignored) { } player = null; }
-                final AudioManager am = (AudioManager) app().getSystemService(Context.AUDIO_SERVICE);
                 final AudioAttributes attrs = new AudioAttributes.Builder()
                         .setUsage(AudioAttributes.USAGE_ASSISTANCE_NAVIGATION_GUIDANCE)
                         .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH).build();
-                final AudioFocusRequest[] focus = new AudioFocusRequest[1];
-                if (am != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    focus[0] = new AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK).setAudioAttributes(attrs).build();
-                    am.requestAudioFocus(focus[0]);
-                }
+                holdFocus();
                 AssetFileDescriptor fd = app().getAssets().openFd("public/" + file);
                 final MediaPlayer mp = new MediaPlayer();
                 player = mp;
@@ -208,7 +267,7 @@ public class BubblePlugin extends Plugin {
                 mp.setDataSource(fd.getFileDescriptor(), fd.getStartOffset(), fd.getLength());
                 fd.close();
                 final Runnable done = () -> {
-                    if (am != null && focus[0] != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) am.abandonAudioFocusRequest(focus[0]);
+                    dropFocus();
                     try { mp.release(); } catch (Exception ignored) { }
                     if (player == mp) player = null;
                 };
@@ -217,6 +276,7 @@ public class BubblePlugin extends Plugin {
                 mp.prepare();
                 mp.start();
             } catch (Exception e) {
+                dropFocus();
                 call.reject("play failed: " + e.getMessage());
             }
         });
@@ -239,15 +299,18 @@ public class BubblePlugin extends Plugin {
         final String text = call.getString("text", "");
         final String level = call.getString("level", "info");
         final boolean m = Boolean.TRUE.equals(call.getBoolean("muted", false));
+        final Boolean nightArg = call.getBoolean("night");
         main.post(() -> {
             if (!allowed()) return;
             ensure();
+            night = nightArg != null ? nightArg : systemNight();
+            applyTheme();
             boolean alert = "warn".equals(level) || "danger".equals(level);
             pill.setVisibility(alert && !text.isEmpty() ? View.VISIBLE : View.GONE);
             pill.setText(text);
             ((GradientDrawable) pill.getBackground()).setColor("danger".equals(level) ? Color.parseColor("#F2E5394F") : Color.parseColor("#F2F5C451"));
             pill.setTextColor("danger".equals(level) ? Color.WHITE : Color.parseColor("#1a1a1a"));
-            ((GradientDrawable) head.getBackground()).setStroke(dp(3), Color.parseColor("danger".equals(level) ? "#FF5A6E" : alert ? "#F5C451" : "#5FD3A0"));
+            ((GradientDrawable) head.getBackground()).setStroke(dp(3), Color.parseColor("danger".equals(level) ? "#FF5A6E" : alert ? "#F5C451" : night ? "#8AB4F8" : "#1A73E8"));
             setMuted(m);
         });
         call.resolve();
@@ -273,6 +336,25 @@ public class BubblePlugin extends Plugin {
         g.setColor(color);
         g.setCornerRadius(dp((int) radiusDp));
         return g;
+    }
+
+    /** Colors follow Google Maps: white + blue #1a73e8 by day, #202124 + light blue #8ab4f8 at night. */
+    private boolean night;
+    private final java.util.List<TextView> buttons = new java.util.ArrayList<>();
+
+    private boolean systemNight() {
+        return (app().getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK)
+                == android.content.res.Configuration.UI_MODE_NIGHT_YES;
+    }
+
+    private void applyTheme() {
+        if (root == null) return;
+        ((GradientDrawable) head.getBackground()).setColor(Color.parseColor(night ? "#202124" : "#FFFFFF"));
+        ((GradientDrawable) menu.getBackground()).setColor(Color.parseColor(night ? "#F2202124" : "#F7FFFFFF"));
+        for (TextView t : buttons) {
+            ((GradientDrawable) t.getBackground()).setColor(Color.parseColor(night ? "#303134" : "#E8F0FE"));
+            t.setTextColor(Color.parseColor(night ? "#8AB4F8" : "#1A73E8"));
+        }
     }
 
     private void setMuted(boolean m) {
@@ -343,6 +425,7 @@ public class BubblePlugin extends Plugin {
                 if (!"mute".equals(id)) menu.setVisibility(View.GONE);
             });
             if ("mute".equals(id)) muteBtn = t;
+            buttons.add(t);
             menu.addView(t, bl);
         }
         LinearLayout.LayoutParams ml = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -399,5 +482,6 @@ public class BubblePlugin extends Plugin {
             try { wm.removeView(root); } catch (Exception ignored) { }
         }
         root = null; menu = null; head = null; pill = null; muteBtn = null;
+        buttons.clear();
     }
 }
