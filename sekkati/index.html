@@ -570,7 +570,7 @@ function overlaySet(text, level){                  // آخر محتوى للفق
   if (k) NP.Bubble.show({...overlayWant, muted:!voiceOn}).catch(() => {}); else NP.Bubble.hide().catch(() => {});
 }
 function overlayAction(id){                        // أزرار الفقاعة اللي فوق جوجل مابس
-  if (id === 'radar' || id === 'toll' || id === 'checkpoint'){ if (!lastPos) speak('لسه مستني إشارة الـ GPS'); else handleReport(id); }
+  if (id === 'radar' || id === 'toll' || id === 'checkpoint'){ if (!lastPos) speak('لسه مستني الموقع'); else handleReport(id); }
   else if (id === 'mute'){ voiceOn = !voiceOn; $('nmute').innerHTML = voiceOn ? IC_VOL : IC_MUTE; if (!voiceOn){ sayQ.length = 0; if (NP.TextToSpeech) NP.TextToSpeech.stop().catch(() => {}); } else speak('الصوت رجع'); }
   else if (id === 'stop'){ if (navOn) exitNav(); else if (watchId !== null) stopRec(); }   // ملخص الرحلة بيتقال لوحده بعد الحفظ
 }
@@ -1216,7 +1216,20 @@ function pickArVoice(){
 }
 if ('speechSynthesis' in window){ pickArVoice(); speechSynthesis.onvoiceschanged = pickArVoice; }
 let sayQ = [], saying = false;                   // طابور الكلام: تنبيه ورا تنبيه بدل ما واحد يقطع التاني
+/* الأرقام بتتقال بالمصري ("ستين"، "مية وعشرين") بدل "ستون"، والكلام عادي وواضح من غير هزار. لازم تطابق eg_words في tools/sekkati_voice.py */
+const EG1 = ['', 'واحد', 'اتنين', 'تلاتة', 'اربعة', 'خمسة', 'ستة', 'سبعة', 'تمانية', 'تسعة', 'عشرة', 'حداشر', 'اتناشر', 'تلاتاشر', 'اربعتاشر', 'خمستاشر', 'ستاشر', 'سبعتاشر', 'تمنتاشر', 'تسعتاشر'],
+      EG10 = ['', '', 'عشرين', 'تلاتين', 'اربعين', 'خمسين', 'ستين', 'سبعين', 'تمانين', 'تسعين'];
+function egNum(n){
+  if (n === 0) return 'صفر';
+  if (n >= 1000) return String(n);
+  const h = Math.floor(n / 100), r = n % 100;
+  const rest = r < 20 ? EG1[r] : (r % 10 ? EG1[r % 10] + ' و' : '') + EG10[Math.floor(r / 10)];
+  const hw = ['', 'مية', 'ميتين', 'تلتمية', 'ربعمية', 'خمسمية', 'ستمية', 'سبعمية', 'تمنمية', 'تسعمية'][h];
+  return hw && rest ? hw + ' و' + rest : hw || rest;
+}
+const egWords = t => String(t).replace(/[٠-٩0-9]+/g, d => egNum(+d.replace(/[٠-٩]/g, c => c.charCodeAt(0) - 0x660)));
 function speak(t, done){
+  t = egWords(t);
   sayQ.push({t, done, at:Date.now()}); if (!saying) sayNext();
 }
 function sayNext(){
@@ -1301,7 +1314,7 @@ loadVoices();
 if (!NATIVE && 'speechSynthesis' in window) speechSynthesis.addEventListener('voiceschanged', loadVoices);
 if (NATIVE && NP.App) NP.App.addListener('resume', loadVoices);   // بعد ما يرجع من إعدادات المحرك
 function voiceFromBubble(t, err){                 // كلام من زرار 🎤 في الفقاعة وانت سايق
-  if (!t){ speak(err === 'no-recognizer' ? 'الموبايل مفيهوش خدمة التعرف على الصوت' : 'ما سمعتش حاجة'); return; }
+  if (!t){ speak(err === 'no-recognizer' ? 'الموبايل مش بيعرف يسمع الكلام' : 'ما سمعتش حاجة'); return; }
   const k = parseReport(t), short = t.trim().split(/\s+/).length <= 5;   // جملة طويلة = ملاحظة بكلامك، حتى لو فيها "واقف" أو "زحمة"
   if (k === 'none' && short) speak('تمام');
   else if (k && short) handleReport(k);
@@ -1309,7 +1322,7 @@ function voiceFromBubble(t, err){                 // كلام من زرار 🎤
 }
 function saveNote(t){                              // أي كلام مش بلاغ معروف بيتحفظ ملاحظة على المكان
   const p = lastPos || (pts.length ? pts[pts.length - 1] : null);
-  if (!p){ speak('لسه مستني إشارة الـ GPS'); return; }
+  if (!p){ speak('لسه مستني الموقع'); return; }
   notes.push({lat:p.lat, lon:p.lon, t:Date.now(), text:t}); save(); drawMarks();
   speak('تمام، سجلت ملاحظة');
 }
@@ -1587,7 +1600,7 @@ async function reroute(me){
   try {
     const rt = (await computeRoutes(me, dest))[0];
     if (nav !== old) return;
-    nav = setupNavRoute(rt); nav.lastRe = old.lastRe; drawNavLine(rt); speak('تم إعادة حساب الطريق');
+    nav = setupNavRoute(rt); nav.lastRe = old.lastRe; drawNavLine(rt); speak('غيّرت الطريق');
   } catch(e){}
   if (nav === old) old.rerouting = 0;
 }
