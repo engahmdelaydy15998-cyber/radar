@@ -1474,6 +1474,20 @@ function ghostTick(me, ts){
     speak('انت ' + (delta < 0 ? 'أسرع' : 'أبطأ') + ' من المرة اللي فاتت بـ ' + minTxt(Math.abs(delta)));
   }
 }
+/* إنهاء لوحده: وصلت للوجهة (أو البيت/الشغل) ووقفت، أو العربية واقفة في مكانها 12 دقيقة. مش لازم "إنهاء وحفظ" */
+function autoArrive(me, spd, dist){
+  if (!nav || !nav.free || nav.arrived || dist < 1000) return false;
+  const now = Date.now(), tg = [dest, load('fav:home', null), load('fav:work', null)].filter(Boolean);
+  const near = tg.find(q => hav(me, q) < (q === dest ? 90 : 130));
+  if (spd < 5 && near){ if (!nav.nearSince) nav.nearSince = now; } else nav.nearSince = 0;
+  if (!nav.still || hav(me, nav.still) > 60) nav.still = {lat:me.lat, lon:me.lon, t:now};
+  const why = nav.nearSince && now - nav.nearSince > 40000 ? 'arrive' : now - nav.still.t > 12 * 60000 ? 'parked' : '';
+  if (!why) return false;
+  nav.arrived = true;
+  speak(why === 'arrive' ? 'وصلت، حمد الله على السلامة. حفظت الرحلة' : 'شكلك ركنت، فحفظت الرحلة. لو لسه ماشي دوس ابدأ السواقة تاني');
+  setTimeout(exitNav, 4000);
+  return true;
+}
 function freeUpdate(p){
   const me = {lat:p.coords.latitude, lon:p.coords.longitude}, spd = speedOf(p); lastPos = me;
   followCar(p, me, spd);
@@ -1483,6 +1497,7 @@ function freeUpdate(p){
   $('neta').textContent = arab(r.stops);
   $('nremkm').textContent = fmtD(r.dist);
   ghostTick(me, p.timestamp || Date.now()); poisAround(me); syncNear(me);
+  if (autoArrive(me, spd, r.dist)) return;
   let np = null, dp = 2000, nb = null, db = 220;      // أقرب حاجة قدامك على نفس خط سيرك؛ المطبات لوحدها عشان ما تخبّيش رادار بعدها
   if (spd > 5) allPois().forEach(q => {
     const d = hav(me, q), bump = q.kind === 'bump'; if (d >= (bump ? db : dp)) return;
