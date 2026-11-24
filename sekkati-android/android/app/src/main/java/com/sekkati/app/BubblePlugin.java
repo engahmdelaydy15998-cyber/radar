@@ -66,6 +66,52 @@ public class BubblePlugin extends Plugin {
         self.notifyListeners("voice", d);
     }
 
+    /** A Google Maps link (or any text) shared to the app, waiting for the web layer to take it. */
+    private static String shared;
+
+    /** Called by MainActivity when the app is opened by "Share" or by a maps link; tells the web layer if it is running. */
+    static void deliverShared(String text) {
+        if (text == null || text.trim().isEmpty()) return;
+        shared = text;
+        if (self != null) self.notifyListeners("shared", new JSObject());
+    }
+
+    /** Returns the waiting shared text once ({text: ""} when there is none). */
+    @PluginMethod
+    public void takeShared(PluginCall call) {
+        JSObject r = new JSObject();
+        r.put("text", shared == null ? "" : shared);
+        shared = null;
+        call.resolve(r);
+    }
+
+    /** Follows the redirects of a short link (maps.app.goo.gl) to the full Google Maps URL, which has the coordinates.
+     *  Done here because the WebView can't read cross-site redirects. */
+    @PluginMethod
+    public void resolveUrl(PluginCall call) {
+        final String start = call.getString("url", "");
+        new Thread(() -> {
+            String u = start;
+            try {
+                for (int i = 0; i < 6; i++) {
+                    java.net.HttpURLConnection c = (java.net.HttpURLConnection) new java.net.URL(u).openConnection();
+                    c.setInstanceFollowRedirects(false);
+                    c.setConnectTimeout(8000);
+                    c.setReadTimeout(8000);
+                    c.setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 14) Sekkati");
+                    int code = c.getResponseCode();
+                    String loc = c.getHeaderField("Location");
+                    c.disconnect();
+                    if (code < 300 || code >= 400 || loc == null) break;
+                    u = new java.net.URL(new java.net.URL(u), loc).toString();
+                }
+            } catch (Exception ignored) { }
+            JSObject r = new JSObject();
+            r.put("url", u);
+            call.resolve(r);
+        }).start();
+    }
+
     /** Opens the voice-input dialog over the current screen (works on top of Google Maps). */
     @PluginMethod
     public void voice(PluginCall call) {

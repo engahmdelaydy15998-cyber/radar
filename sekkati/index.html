@@ -322,6 +322,7 @@ body.mapfull #mapBig,body.nav #mapBack{display:none}
       <b>من/إلى:</b> اكتب أو اضغط "موقعي"، أو اضغط على الخريطة واختار بداية/وجهة. الطرق بتتحسب تلقائي: وقت كل طريق مكتوب عليه في الخريطة، وتحت ملخص الطريق المختار وزرار ابدأ القيادة. علامة × تقفل الطرق.<br><br>
       <b>كروت الطرق:</b> الدقايق هي التقدير الكلي. "تقدير" يعني محسوب من OSRM + وقفات متوقعة + رادارات/كارتات/لجان؛ لو مكتوب إنه "مشيته قبل كده" فده زمن حقيقي من رحلاتك المسجلة. ★ هو الطريق المرشّح كأفضل اختيار.<br><br>
       <b>⚠ علّم على الخريطة:</b> الزرار الدايري اللي عليه علامة تحذير. بيفتح اختيارات (رادار، كارتة، لجنة، يوتيرن، مقفول): اختار واحدة واضغط مكانها على الخريطة. ضغطة تانية على نفس المكان بتشيله، والضغط على الشريط الأصفر بيلغي.<br><br>
+      <b>📍 لينك من جوجل مابس:</b> في جوجل مابس اضغط "مشاركة" على أي مكان واختار سكّتي، وهو هيبدأ يسجّل ويرجعك لجوجل على الوجهة دي. ولو معاك لينك، الزقه في خانة "إلى".<br><br>
       <b>🧭 جوجل + سجّل:</b> يفتحلك جوجل مابس بنفس من/إلى (اتجاهاته أفضل من اتجاهاتنا دلوقتي)، وفي نفس الوقت يبدأ يسجّل رحلتك بصمت عشان نبني بيانات حقيقية بمرور الوقت.<br><br>
       <b>▶ ابدأ القيادة:</b> شاشة ملء الشاشة فيها كل التعليمات، وتنبيهات صوتية للرادارات والكارتات واللجان قبل ما توصلها، وبيسألك لو وقفت كتير "واقفين ليه؟".<br><br>
       <b>تسجيل رحلة:</b> منفصل عن القيادة، بيسجّل مسارك وبيحسب وقفاتك عشان التطبيق يتعلّم طرقك. كل رحلة بتخلي الاقتراحات أدق.<br><br>
@@ -775,6 +776,50 @@ document.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { setMod
 $('teachBtn').onclick = () => { if (mode && mode !== 'a' && mode !== 'b'){ setMode(mode); return; } $('teach').hidden = !$('teach').hidden; };
 $('teachX').onclick = () => { $('teach').hidden = true; };
 $('hint').onclick = () => { if (mode) setMode(mode); };
+/* لينك جوجل مابس → سكّتي: "مشاركة" من جوجل مابس، أو لينك اتفتح بسكّتي، أو لينك اتلزق في خانة "إلى" */
+const MAPS_RE = /(https?:\/\/(?:maps\.app\.goo\.gl|goo\.gl\/maps|(?:www\.|maps\.)?google\.[a-z.]+\/maps|maps\.google\.[a-z.]+)\S*|geo:\S+)/i;
+function parseMapsLink(u){
+  let x = u; try { x = decodeURIComponent(u.replace(/\+/g, ' ')); } catch(e){}
+  const ll = (a, b) => { const lat = +a, lon = +b; return (isFinite(lat) && isFinite(lon) && Math.abs(lat) <= 90 && Math.abs(lon) <= 180 && (lat || lon)) ? {lat, lon} : null; };
+  let m, p = null, name = '';
+  if ((m = x.match(/^geo:(-?[\d.]+),(-?[\d.]+)/i))) p = ll(m[1], m[2]);
+  if ((m = x.match(/[?&]q=([^&]*)/i))){ const q = m[1].trim(), c = q.match(/^(-?\d+\.\d+)\s*,\s*(-?\d+\.\d+)(?:\s*\((.*)\))?/);
+    if (c){ p = ll(c[1], c[2]) || p; name = c[3] || ''; } else name = q; }
+  if ((m = x.match(/!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/))) p = ll(m[1], m[2]) || p;            // مكان محدد (أدق حاجة)
+  if (!p && (m = x.match(/[?&](?:destination|daddr|query|ll)=(-?\d+\.\d+)\s*,\s*(-?\d+\.\d+)/i))) p = ll(m[1], m[2]);
+  if (!name && (m = x.match(/[?&](?:destination|daddr|query)=([^&]+)/i)) && !/^-?\d+\.\d+,/.test(m[1])) name = m[1];
+  if ((m = x.match(/\/(?:place|search)\/([^/@?]+)/))) name = m[1].trim();
+  const dir = !name && (m = x.match(/\/dir\/(?:[^/]*\/)*?([^/@?]+)\/@/)); if (dir) name = m[1].trim();   // آخر محطة في رابط اتجاهات
+  if (!p && !dir && (m = x.match(/\/@(-?\d+\.\d+),(-?\d+\.\d+)/))) p = ll(m[1], m[2]);               // نص الخريطة (آخر حل)
+  return {lat:p && p.lat, lon:p && p.lon, name:name.replace(/\s+/g, ' ').trim()};
+}
+async function openShared(text, go){
+  text = String(text || '').trim(); if (!text) return;
+  const m = text.match(MAPS_RE); let url = m ? m[1] : '';
+  const label = (url ? text.replace(url, '') : text).split('\n').map(t => t.trim()).filter(t => t && !/^https?:/.test(t))[0] || '';
+  $('msg').textContent = '📍 بفتح اللينك…';
+  if (url && /goo\.gl/i.test(url) && NATIVE && NP.Bubble && NP.Bubble.resolveUrl){       // اللينك القصير: نجيب الرابط الكامل اللي فيه الإحداثيات
+    try { url = (await NP.Bubble.resolveUrl({url})).url || url; } catch(e){}
+  }
+  let p = url ? parseMapsLink(url) : {name:label};
+  const name = (p.name || label || '').slice(0, 80);
+  if (p.lat == null && name){ try { const r = await geocode(name); if (r[0]) p = {...r[0]}; } catch(e){} }
+  const ok = p.lat != null;
+  if (!go){                                        // اتلزق في خانة "إلى": نحطه وجهة بس
+    if (ok) setPlace('b', {lat:p.lat, lon:p.lon}, name || p.name); else $('msg').textContent = 'ما عرفتش أطلّع المكان من اللينك ده. اكتب اسمه.';
+    return;
+  }
+  if (ok){ dest = {lat:p.lat, lon:p.lon, name:name || p.name || 'الوجهة'}; addRecent(dest); }
+  hideSheets(); $('onb').hidden = true;
+  if (!navOn){ $('name').value = 'متابعة جوجل إلى ' + (ok ? dest.name : (name || 'الوجهة')); startFree(true); }
+  speak(ok ? 'تمام، هفتحلك جوجل مابس على ' + dest.name + '، وأنا هسجّل الطريق وأنبّهك قبل الرادارات' : 'تمام، بدأت أسجّل، وهفتحلك اللينك في جوجل مابس');
+  const g = ok ? `https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}&travelmode=driving&dir_action=navigate` : url;
+  $('msg').textContent = ok ? '📍 ' + dest.name : '';
+  if (!g) return;
+  setTimeout(() => { if (NATIVE && NP.AppLauncher) NP.AppLauncher.openUrl({url:g}).catch(() => { location.href = g; }); else window.open(g, '_blank'); }, 1200);
+}
+function takeShared(){ if (NATIVE && NP.Bubble && NP.Bubble.takeShared) NP.Bubble.takeShared().then(r => { if (r && r.text) openShared(r.text, true); }).catch(() => {}); }
+if (NATIVE && NP.Bubble){ NP.Bubble.addListener('shared', takeShared); setTimeout(takeShared, 1500); }
 function followGoogle(){                           // لحد ما جودة طرقنا تتحسن: جوجل بيدّي الاتجاهات، وإحنا بنسجّل الرحلة بصمت
   if (!start || !dest){ $('msg').textContent = 'محتاج من وإلى الأول عشان أفتحلك جوجل مابس.'; return; }
   const url = `https://www.google.com/maps/dir/?api=1&origin=${start.lat},${start.lon}&destination=${dest.lat},${dest.lon}&travelmode=driving&dir_action=navigate`;
@@ -857,6 +902,7 @@ let activeF = 'b', qTimer = 0, qSeq = 0;
 async function doSearch(which){
   const el = $(which === 'a' ? 'qa' : 'qb'), q = el.value.trim(); $('msg').textContent = '';
   if (!q){ showSuggest(which, recents().map(r => ({...r, icon:'🕘'})), true); return; }
+  if (which === 'b' && MAPS_RE.test(q)){ el.value = ''; openShared(q, false); return; }   // لينك جوجل مابس اتلزق
   const my = ++qSeq;
   try {
     const r = await geocode(q); if (my !== qSeq) return;

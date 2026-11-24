@@ -1,6 +1,7 @@
 package com.sekkati.app;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -18,6 +19,25 @@ public class MainActivity extends BridgeActivity {
         if (Build.VERSION.SDK_INT >= 33
                 && checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS}, 1);
+        }
+        takeShare(getIntent());
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        takeShare(intent);
+    }
+
+    /** "Share" from Google Maps (text with a maps.app.goo.gl link) or a tapped maps / geo: link → hand it to the web layer. */
+    private void takeShare(Intent i) {
+        if (i == null) return;
+        if (Intent.ACTION_SEND.equals(i.getAction())) {
+            String t = i.getStringExtra(Intent.EXTRA_TEXT);
+            String s = i.getStringExtra(Intent.EXTRA_SUBJECT);
+            BubblePlugin.deliverShared((s != null && t != null && !t.contains(s) ? s + "\n" : "") + (t == null ? "" : t));
+        } else if (Intent.ACTION_VIEW.equals(i.getAction()) && i.getData() != null) {
+            BubblePlugin.deliverShared(i.getData().toString());
         }
     }
 }
