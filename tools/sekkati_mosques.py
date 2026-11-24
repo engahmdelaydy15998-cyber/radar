@@ -95,12 +95,13 @@ def main():
         for gx in range(int(a[0] / CELL), int(a[2] / CELL) + 1):
             for gy in range(int(a[1] / CELL), int(a[3] / CELL) + 1):
                 grid.setdefault((gx, gy), []).append(a)
-    out, seen, dropped = [], set(), 0
+    out, seen, dropped = [], {}, 0
     for lat, lon in mosques:
-        key = (round(lat, 4), round(lon, 4))
-        if key in seen:
+        key = (round(lat, 3), round(lon, 3))      # one mosque mapped as a node and as a building: keep one (~50 m)
+        if any(any(abs(lat - x) < 0.0005 and abs(lon - y) < 0.0005 for x, y in seen.get((round(key[0] + a, 3), round(key[1] + b, 3)), []))
+               for a in (-0.001, 0, 0.001) for b in (-0.001, 0, 0.001)):
             continue
-        seen.add(key)
+        seen.setdefault(key, []).append((lat, lon))
         if any(a[0] <= lon <= a[2] and a[1] <= lat <= a[3] and inside(lon, lat, a[4])
                for a in grid.get((int(lon / CELL), int(lat / CELL)), [])):
             dropped += 1
