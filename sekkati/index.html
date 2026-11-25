@@ -35,7 +35,8 @@ input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:
 .an{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:8px}
 .an div{background:var(--bg);border-radius:10px;padding:7px 4px;text-align:center}.an b{display:block;font-size:16px}.an span{font-size:11px;color:var(--mut)}
 input:focus{outline:none;border-color:var(--acc)}
-.top{display:flex;align-items:center;justify-content:space-between;padding:6px 4px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:calc(env(safe-area-inset-top) + 6px) 4px 6px}
+body.native .top{padding-top:max(calc(env(safe-area-inset-top) + 6px),34px)}
 .brandwrap{display:flex;flex-direction:column;gap:1px}
 .brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:20px;color:var(--acc);margin:0}
 .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--acc)}
@@ -222,6 +223,8 @@ body.mapfull #mapBig,body.nav #mapBack{display:none}
     <button class="rb" id="mapBig" aria-label="كبّر الخريطة" title="كبّر الخريطة"><svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg></button>
     <button class="rb" id="tiles" aria-label="شكل الخريطة" title="شكل الخريطة"><svg viewBox="0 0 24 24"><path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/></svg></button>
     <button class="rb" id="themeBtn" aria-label="فاتح أو غامق" title="فاتح أو غامق"></button>
+    <button class="rb" id="srchBtn" aria-label="بحث" title="بحث">🔍</button>
+    <button class="rb" id="noteBtn" aria-label="ملاحظة صوتية عن الطريق" title="قول ملاحظة عن الطريق">🎙</button>
     <button class="rb" id="teachBtn" aria-label="علّم على الخريطة" title="علّم رادار أو كارتة أو لجنة"><svg viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg></button>
   </div>
   <div id="teach" hidden>
@@ -411,6 +414,7 @@ const INT_STOP = 0.03;  // احتمال وقفة عند كل تقاطع في ج�
 const CELL = 0.0002;    // حجم خلية الفهرس (~22م)
 const TOLL_SEC = 30;    // وقت تقديري للكارتة
 const CHECK_SEC = 60;   // وقت تقديري للجنة/الكمين
+const EXTRA_SEC = {bump:10, signal:40, badroad:45, ulong:90, longroad:120};   // تقديرات مبدئية تتظبط من مشاويرك
 const JAM_SEC = 420, ACC_SEC = 600;
 
 function hav(a, b){
@@ -524,13 +528,14 @@ function scoreRoute(r, ctx){
   const tolls = pois.filter(p => p.kind === 'toll').length;
   const myUturns = pois.filter(p => p.kind === 'uturn').length;   // ملفات علّمها السواق بنفسه، فوق اللي OSRM شايفها
   const checks = pois.filter(p => p.kind === 'checkpoint').length;
+  const extraSec = pois.reduce((a, p) => a + (EXTRA_SEC[p.kind] || 0), 0);   // مطبات وإشارات وطرق مكسرة من بلاغاتك
   // بلاغات زحمة وحوادث قريبة من الطريق
   const jamHit = ctx.jams.filter(j => D.some(p => hav(p, j) < 60));
   const jamSec = jamHit.reduce((s, j) => s + (j.kind === 'accident' ? ACC_SEC : JAM_SEC), 0);
   let adj, observed = false;
   if (used.length){
     observed = true; adj = mean(t => t.res.dur) + jamSec; expStops = mean(t => t.res.stops);
-  } else adj = r.duration * FF + stopSec + turnSec + myUturns * 30 + tolls * TOLL_SEC + checks * CHECK_SEC + jamSec;
+  } else adj = r.duration * FF + stopSec + turnSec + myUturns * 30 + tolls * TOLL_SEC + checks * CHECK_SEC + extraSec + jamSec;
   return {adj, osrm:r.duration, dist:total, info:info || null, pois, tolls, uturns:myUturns, checks, jams:jamHit.length,
           coverage:total ? covered/total : 0, expStops, observed, nTrips:used.length,
           sameTime:sameTime.length > 0, blocked, rank:adj + (blocked ? 1e6 : 0)};
@@ -540,7 +545,12 @@ function parseReport(t){
   if (/مفيش|ولا حاجه|ولا حاجة|^\s*(لا|لأ)\s*$/.test(t)) return 'none';
   if (/كارت|رسوم|بوابه|بوابة|تحصيل/.test(t)) return 'toll';
   if (/حاد|تصادم|اتخبط|خبط/.test(t)) return 'accident';
-  if (/مقفول|اتقفل|مسدود|قافل/.test(t)) return 'block';
+  if (/يوتيرن|يو تيرن|دوران/.test(t) && /طويل|بعيد|كتير/.test(t)) return 'ulong';
+  if (/مقفول|مقطوع|اتقفل|اتقطع|مسدود|قافل/.test(t)) return 'block';
+  if (/مطب|مطبات|المطب/.test(t)) return 'bump';
+  if (/[اإأ]شار[هة]|اشارات|سيجنال/.test(t)) return 'signal';
+  if (/مكسر|حفر|بايظ|وحش|مش ممهد|كله مطبات/.test(t)) return 'badroad';
+  if (/طريق.*طويل|طويل.*طريق|لف كتير|لفه كبيره|لفة كبيرة/.test(t)) return 'longroad';
   if (/لجن[هة]|كمين|عسكري|حاجز/.test(t)) return 'checkpoint';
   if (/(رادار|كاميرا).*(متحرك|عربي|موبايل)|متحرك/.test(t)) return 'mradar';
   if (/رادار|كاميرا/.test(t)) return 'radar';
@@ -562,6 +572,7 @@ function overlap(Da, Db){                         // نسبة نقاط Da الق
 const $ = id => document.getElementById(id);
 /* تطبيق الأندرويد (Capacitor): GPS في الخلفية، نطق من الموبايل نفسه، وفقاعة فوق جوجل مابس. في المتصفح كل ده بيتجاهل. */
 const NATIVE = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+if (NATIVE) document.body.classList.add('native');
 const NP = NATIVE ? window.Capacitor.Plugins : {};
 let appActive = true, overlayWant = null, overlayShown = '', overlayAsked = false, voiceWaiter = null;
 function isNight(){                               // ليل = من المغرب لحد الشروق (الشروق ≈ الضهر - (المغرب - الضهر))
@@ -786,6 +797,8 @@ function setMode(m){
 document.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { setMode(b.dataset.mode); $('teach').hidden = true; });
 $('teachBtn').onclick = () => { if (mode && mode !== 'a' && mode !== 'b'){ setMode(mode); return; } $('teach').hidden = !$('teach').hidden; };
 $('teachX').onclick = () => { $('teach').hidden = true; };
+$('srchBtn').onclick = () => { try { if (document.body.classList.contains('mapfull')) setMapFull(false); } catch(e){} window.scrollTo({top:0, behavior:'smooth'}); const q = $('qb'); q.focus(); q.select(); };
+$('noteBtn').onclick = async () => { if (!lastPos && !(pts && pts.length)){ $('msg').textContent = 'لسه مستني الموقع'; return; } $('noteBtn').classList.add('on'); try { await voiceReport(true); } finally { $('noteBtn').classList.remove('on'); } };
 $('hint').onclick = () => { if (mode) setMode(mode); };
 /* لينك جوجل مابس → سكّتي: "مشاركة" من جوجل مابس، أو لينك اتفتح بسكّتي، أو لينك اتلزق في خانة "إلى" */
 const MAPS_RE = /(https?:\/\/(?:maps\.app\.goo\.gl|goo\.gl\/maps|(?:www\.|maps\.)?google\.[a-z.]+\/maps|maps\.google\.[a-z.]+)\S*|geo:\S+)/i;
@@ -996,7 +1009,7 @@ function devKey(){
   if (!d){ try { d = Array.from(crypto.getRandomValues(new Uint8Array(16)), b => b.toString(16).padStart(2, '0')).join(''); } catch(e){ d = (Date.now().toString(16) + Math.random().toString(16).slice(2)).slice(0, 32).padEnd(32, '0'); } put('dev', d); }
   return d;
 }
-const SHARE_KINDS = {radar:1, mradar:1, toll:1, checkpoint:1, jam:1, accident:1, closed:1, bump:1};
+const SHARE_KINDS = {radar:1, mradar:1, toll:1, checkpoint:1, jam:1, accident:1, closed:1, bump:1};   // الجديدة (signal/badroad/ulong/longroad) محلية بس لحد ما السيرفر يدعمها
 function shareReport(k, lat, lon, extra){
   if (!SHARE_KINDS[k]) return;
   outbox.push({k, lat:+lat.toFixed(5), lon:+lon.toFixed(5), ...(extra || {}), at:Date.now()}); outbox = outbox.slice(-200); put('outbox', outbox); flushOutbox();
@@ -1383,7 +1396,7 @@ function instrOf(st){
   if (st.mod.includes('sharp')) return 'لف ' + dir + ' بحدة' + on;
   return 'لف ' + dir + on;
 }
-const POI_AR = {radar:'رادار', toll:'كارتة', uturn:'يوتيرن', checkpoint:'لجنة', spot:'وقفة متكررة', bump:'مطب', mradar:'رادار متحرك', jam:'زحمة', accident:'حادثة', closed:'طريق مقفول'}, POI_IC = {radar:'📷', toll:'💳', uturn:'↩️', checkpoint:'🚓', spot:'🛑', bump:'〰️', mradar:'🚔', jam:'🚗', accident:'💥', closed:'⛔'};
+const POI_AR = {radar:'رادار', toll:'كارتة', uturn:'يوتيرن', checkpoint:'لجنة', spot:'وقفة متكررة', bump:'مطب', mradar:'رادار متحرك', signal:'إشارة', badroad:'طريق مكسر', ulong:'يوتيرن طويل', longroad:'طريق طويل', jam:'زحمة', accident:'حادثة', closed:'طريق مقفول'}, POI_IC = {radar:'📷', toll:'💳', uturn:'↩️', checkpoint:'🚓', spot:'🛑', bump:'〰️', mradar:'🚔', jam:'🚗', accident:'💥', closed:'⛔', signal:'🚦', badroad:'🕳️', ulong:'↪️', longroad:'📏'};
 function setupNavRoute(rt){
   const C = rt.r.coords.map(([lo, la]) => ({lat:la, lon:lo}));
   const D = densify(C, 20), cum = [0];
@@ -1785,7 +1798,7 @@ function handleReport(kind){
   const p = {lat:lastPos.lat, lon:lastPos.lon};
   shareReport(kind === 'block' ? 'closed' : kind, p.lat, p.lon, kind === 'radar' || kind === 'mradar' ? {dir:Math.round(heading)} : null);
   if (kind === 'mradar'){ speak('تمام، سجلت رادار متحرك هنا'); return; }
-  if (kind === 'toll' || kind === 'radar' || kind === 'checkpoint'){ myPois.push({...p, kind}); save(); drawMarks(); speak('تمام، سجلت ' + POI_AR[kind] + ' هنا'); }
+  if (kind === 'toll' || kind === 'radar' || kind === 'checkpoint' || EXTRA_SEC[kind]){ myPois.push({...p, kind}); save(); drawMarks(); speak('تمام، سجلت ' + POI_AR[kind] + ' هنا'); }
   else if (kind === 'jam' || kind === 'accident'){ jams.push({...p, kind, until:Date.now() + 2 * 3600e3}); save(); speak('تمام، سجلت البلاغ'); suggestAlt(false); }
   else if (kind === 'block'){ blocks.push({...p, until:Date.now() + 864e5}); save(); drawMarks(); speak('تمام، سجلت إن الطريق مقفول'); suggestAlt(false); }
 }
