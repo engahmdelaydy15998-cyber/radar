@@ -647,7 +647,7 @@ let myPois = load('pois');
 if (!myPois.length) { const old = load('radars'); if (old.length) myPois = old.map(r => ({lat:r.lat, lon:r.lon, kind:'radar'})); }
 function put(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch(e){ return false; } }
 function save(){
-  let ok = put('trips', trips);
+  let ok = put('trips', trips); autoBackup();
   if (!ok && trips.length > 1){                     // المساحة خلصت: نخفّف الرحلات القديمة بدل ما الجديدة تضيع
     trips.forEach((t, i) => { if (i) t.pts = pack(thin(unpack(t.pts)).filter((p, j) => j % 2 === 0)); });
     ok = put('trips', trips);
@@ -2117,6 +2117,30 @@ function renderTrips(){
   });
 }
 const backupData = () => ({trips, blocks, pois:myPois, jams, notes, car:load('car', null), home:load('fav:home', null), work:load('fav:work', null), spots, exportedAt:Date.now()});
+/* نسخة احتياطية تلقائية: بعد كل حفظ بتتكتب في ملف جوه التطبيق وكمان في Documents/Sekkati على الموبايل.
+   لو الرحلات اختفت (تحديث اتعمل بمسح وتثبيت، أو بيانات الـ WebView اتمسحت) بترجع لوحدها أول ما التطبيق يفتح. */
+const BK_FILE = 'sekkati-backup.json', BK_DOCS = 'Sekkati/sekkati-backup.json';
+let bkT = 0;
+function autoBackup(){
+  if (!NATIVE || !NP.Filesystem || !trips.length) return;
+  clearTimeout(bkT);
+  bkT = setTimeout(() => {
+    let data; try { data = JSON.stringify(backupData()); } catch(e){ return; }
+    NP.Filesystem.writeFile({path:BK_FILE, data, directory:'DATA', encoding:'utf8'}).catch(() => {});
+    NP.Filesystem.writeFile({path:BK_DOCS, data, directory:'DOCUMENTS', encoding:'utf8', recursive:true}).catch(() => {});
+  }, 3000);
+}
+async function autoRestore(){
+  if (!NATIVE || !NP.Filesystem || trips.length) return;
+  for (const [path, directory] of [[BK_FILE, 'DATA'], [BK_DOCS, 'DOCUMENTS']]){
+    try {
+      const r = await NP.Filesystem.readFile({path, directory, encoding:'utf8'}), d = JSON.parse(r.data);
+      const n = (Array.isArray(d) ? d : (d.trips || [])).length;
+      if (!n) continue;
+      mergeBackup(d); $('msg').textContent = '✔ رجّعت رحلاتك من النسخة الاحتياطية (' + arab(n) + ' رحلة)'; return;
+    } catch(e){}
+  }
+}
 function mergeBackup(d){
   const add = Array.isArray(d) ? d : (d.trips || []), have = new Set(trips.map(t => t.id));
   add.forEach(t => { if (t && t.id && t.pts && !have.has(t.id)) trips.push(t); });
@@ -2164,6 +2188,7 @@ $('imp').onclick = () => {
   catch(e){ $('msg').textContent = 'البيانات مش سليمة.'; }
 };
 renderTrips(); drawMarks(); learnFF();
+autoRestore();
 loadEgPois();
 if (!load('spotsInit', false)){ trips.slice().reverse().forEach(t => { try { learnSpots(t); } catch(e){} }); put('spotsInit', true); }
 /* عربيتي: العداد، البنزين، ومواعيد الصيانة */
