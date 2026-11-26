@@ -552,9 +552,9 @@ function parseReport(t){
   if (/حاد|تصادم|اتخبط|خبط/.test(t)) return 'accident';
   if (/يوتيرن|يو تيرن|دوران/.test(t) && /طويل|بعيد|كتير/.test(t)) return 'ulong';
   if (/مقفول|مقطوع|اتقفل|اتقطع|مسدود|قافل/.test(t)) return 'block';
+  if (/مكسر|مكسّر|حفر|بايظ|وحش|مش ممهد|(كله|كلها|مليان|مليانه|مليانة|كتير|كثير)\s*(مطبات|حفر)|مطبات\s*(كتير|كثير|ورا بعض)/.test(t)) return 'badroad';
   if (/مطب|مطبات|المطب/.test(t)) return 'bump';
   if (/[اإأ]شار[هة]|اشارات|سيجنال/.test(t)) return 'signal';
-  if (/مكسر|حفر|بايظ|وحش|مش ممهد|كله مطبات/.test(t)) return 'badroad';
   if (/طريق.*طويل|طويل.*طريق|لف كتير|لفه كبيره|لفة كبيرة/.test(t)) return 'longroad';
   if (/لجن[هة]|كمين|عسكري|حاجز/.test(t)) return 'checkpoint';
   if (/(رادار|كاميرا).*(متحرك|عربي|موبايل)|متحرك/.test(t)) return 'mradar';
@@ -1427,9 +1427,13 @@ function setupNavRoute(rt){
     st.at = cum[best]; from = best;
   });
   return {D, cum, steps, pois:(rt.s.pois || []).map(r => ({...r})), total:cum[cum.length-1], adj:rt.s.adj, osrm:rt.s.osrm, via:rt.r.via,
-          last:0, off:0, spoken:{}, rerouting:0, lastRe:0, arrived:false, slowSince:0, lastAsk:0, coords:rt.r.coords};
+          last:0, off:0, spoken:{}, rerouting:0, lastRe:0, arrived:false, slowSince:0, lastAsk:0, coords:rt.r.coords, rt};
 }
-function drawNavLine(rt){ drawRoutes([{coords:rt.r.coords, c:cssVar('--route'), w:10}]); }
+function drawNavLine(rt, done){                   // done = اللي اتمشى (نقطة في nav.D): رمادي زي جوجل، والباقي أزرق
+  if (!nav || !done || !nav.D) return drawRoutes([{coords:rt.r.coords, c:cssVar('--route'), w:10}]);
+  const P = nav.D.map(q => [q.lon, q.lat]), k = Math.min(done, P.length - 1);
+  drawRoutes([{coords:P.slice(0, k + 1), c:isDark() ? '#6b6f76' : '#a0a4aa', w:9}, {coords:P.slice(k), c:cssVar('--route'), w:10}].filter(x => x.coords.length > 1));
+}
 async function startNav(sel){
   const rt = results[sel];
   if (!rt || !rt.r.steps || !rt.r.steps.length){ $('msg').textContent = 'اطلب الطرق من جديد الأول عشان تبدأ القيادة.'; return; }
@@ -1681,6 +1685,7 @@ function navUpdate(p){
   followCar(p, me, spd);
   if (bd > 50){ nav.off++; if (nav.off >= 3) reroute(me); navRender(spd, true); return; }
   nav.off = 0; nav.last = bi;
+  if (nav.rt && (nav.grey == null || bi - nav.grey >= 3 || bi < nav.grey)){ nav.grey = bi; drawNavLine(nav.rt, bi); }
   navRender(spd);
   // وقوف طويل في نص الطريق: نسأل السواق ليه
   const here = nav.cum[nav.last], rem = nav.total - here;
