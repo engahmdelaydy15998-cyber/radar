@@ -1,7 +1,277 @@
 {
- "updated": "2026-11-25T19:13:21Z",
+ "updated": "2026-11-26T03:32:40Z",
  "demo": false,
  "items": [
+  {
+   "id": "yt-E4787_kbfZw",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-26T01:32:49Z",
+   "t": "No Routers. No Cables. Still Networking.",
+   "s": "Three routers, zero pings, two lines of EIGRP, all done in Boson NetSim right in the browser. A year of NetSim is 30% off through Nov 29: https://ntc…",
+   "tags": [
+    "NetworkChuck"
+   ],
+   "url": "https://www.youtube.com/shorts/E4787_kbfZw"
+  },
+  {
+   "id": "yt-f1gAilgILeI",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-26T01:00:06Z",
+   "t": "The Best Defense Against This Wave of AI Attacks: Hack Yourself First (Try This Now)",
+   "s": "Get started with Eney: https://bit.ly/Eney_ColeMedin Eney is available now for Mac at the website eney.ai and is free to try for your first 14 days w…",
+   "tags": [
+    "Cole Medin"
+   ],
+   "url": "https://www.youtube.com/watch?v=f1gAilgILeI"
+  },
+  {
+   "id": "gn-hobanconstructionwinsministersawardforaipoweredbimtechnology",
+   "cat": "arch",
+   "src": "헤럴드경제",
+   "ts": "2026-11-26T00:43:14Z",
+   "t": "Hoban Construction wins minister's award for AI-powered BIM technology",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5oUG1fbUEyOUpYVE85WVNfakNtSTlLdElteDR5WWNRWmlxNnc3MjFfenRPMmlyNzhsU05hd0hFeVVudkJsWkFNbnZfVGZyZnlfNndMdF9SNA?oc=5",
+   "h": "جائزة وزارية لشركة Hoban بسبب تكنولوجيا الـ AI والـ BIM",
+   "x": "استخدام الذكاء الاصطناعي في الـ BIM بيحقق طفرة في قطاع التشييد والبناء تستحق المتابعة.",
+   "tg": [
+    "BIM",
+    "AI",
+    "Architecture"
+   ],
+   "tp": "arch"
+  },
+  {
+   "id": "yt-AekKS44xBhI",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-26T00:30:09Z",
+   "t": "What Are Subagents? Explained in 4 Minutes",
+   "s": "Jess Weng, Education Engineer at LangChain, explains subagents in Deep Agents, LangChain's open-source agent harness. A subagent takes one task from…",
+   "tags": [
+    "LangChain"
+   ],
+   "url": "https://www.youtube.com/watch?v=AekKS44xBhI",
+   "h": "فهم الـ Subagents في الذكاء الاصطناعي خلال 4 دقائق",
+   "x": "شرح سريع من LangChain لفكرة الـ Subagents وإزاي بتدير المهام المعقدة في الـ Deep Agents.",
+   "tg": [
+    "Agents",
+    "LangChain",
+    "AI"
+   ],
+   "tp": "agents"
+  },
+  {
+   "id": "yt-ngZ1_I_RWS0",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-25T23:56:32Z",
+   "t": "This changed my life...",
+   "s": "Don’t miss this Black Friday Deal! https://eightsleep.com/matthewberman use code MATTHEWBERMAN at checkout",
+   "tags": [
+    "Matthew Berman"
+   ],
+   "url": "https://www.youtube.com/shorts/ngZ1_I_RWS0"
+  },
+  {
+   "id": "yt-C6DENY3rgqg",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-25T23:50:43Z",
+   "t": "You had us at Deployed",
+   "s": "You had us at deployed. ❤️ We’re thankful for our customers and everything we’re building together. Thank you for trusting us and sharing what you’re…",
+   "tags": [
+    "OpenAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=C6DENY3rgqg"
+  },
+  {
+   "id": "af-httpssimonwillisonnet2026Nov25scottaaronson",
+   "cat": "agents",
+   "src": "Simon Willison",
+   "ts": "2026-11-25T23:26:32Z",
+   "t": "Quoting Scott Aaronson",
+   "s": "",
+   "tags": [
+    "مدونة"
+   ],
+   "url": "https://simonwillison.net/2026/Nov/25/scott-aaronson/"
+  },
+  {
+   "id": "hn-50648823",
+   "cat": "agents",
+   "src": "Hacker News",
+   "ts": "2026-11-25T22:57:04Z",
+   "t": "Jev is probably Qwen3.5-35B-A3B",
+   "s": "251 نقطة، 71 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://modaic.dev/blog/latency-doesnt-lie",
+   "url2": "https://news.ycombinator.com/item?id=50648823",
+   "h": "توقعات بأن نموذج Jev هو نفسه Qwen3.5-35B-A3B",
+   "x": "نقاش تقني على Hacker News حول أداء النماذج المفتوحة وتأثيرها على تطوير الـ AI.",
+   "tg": [
+    "AI",
+    "Open Source",
+    "LLM"
+   ],
+   "tp": "oss"
+  },
+  {
+   "id": "hn-50648365",
+   "cat": "agents",
+   "src": "Hacker News",
+   "ts": "2026-11-25T22:15:34Z",
+   "t": "Bare Metal Qwen",
+   "s": "78 نقطة، 16 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/alesha-pro/llm.asm/tree/main/02-baremetal-os",
+   "url2": "https://news.ycombinator.com/item?id=50648365"
+  },
+  {
+   "id": "yt-nMPyC3s4Q-0",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-25T21:42:34Z",
+   "t": "They're doing what in the arctic?!",
+   "s": "Join My Newsletter for Regular AI Updates 👇🏼 https://forwardfuture.com My Links 🔗 👉🏻 X: https://x.com/matthewberman 👉🏻 Forward Future X: https://x.co…",
+   "tags": [
+    "Matthew Berman"
+   ],
+   "url": "https://www.youtube.com/shorts/nMPyC3s4Q-0"
+  },
+  {
+   "id": "hn-50647673",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-25T21:18:02Z",
+   "t": "The New York Times warns photographers not to update Photoshop over AI features",
+   "s": "242 نقطة، 194 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+   "url2": "https://news.ycombinator.com/item?id=50647673"
+  },
+  {
+   "id": "rss-20261125adobescreativeagentnowincreativecloudtoolsandfirefly",
+   "cat": "arch",
+   "src": "Dezeen",
+   "ts": "2026-11-25T21:00:00Z",
+   "t": "Adobe's Creative Agent transforms Creative Cloud tools and Firefly workflows",
+   "s": "Adobe has rolled out its Creative Agent across the Creative Cloud, providing users with agentic workflows across its platforms to give creatives \"more time for…",
+   "tags": [
+    "AEC"
+   ],
+   "url": "https://www.dezeen.com/2026/11/25/adobes-creative-agent-now-in-creative-cloud-tools-and-firefly/"
+  },
+  {
+   "id": "hn-50647219",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-25T20:40:52Z",
+   "t": "Show HN: Openfal, local image and video generation with a fal-style API",
+   "s": "15 نقطة، 5 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://openfal.org",
+   "url2": "https://news.ycombinator.com/item?id=50647219"
+  },
+  {
+   "id": "hn-50647181",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-25T20:38:00Z",
+   "t": "Slow Ubuntu security response times",
+   "s": "169 نقطة، 82 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
+   "url2": "https://news.ycombinator.com/item?id=50647181"
+  },
+  {
+   "id": "hn-50647158",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-25T20:35:39Z",
+   "t": "72-hour fasting can reset your immune system, USC study shows",
+   "s": "191 نقطة، 148 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://scienceinhand.com/72-hour-fasting-can-reset-your-entire-immune-system-usc-study-shows/",
+   "url2": "https://news.ycombinator.com/item?id=50647158"
+  },
+  {
+   "id": "yt-ehRNEYZSbdk",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-25T19:47:17Z",
+   "t": "Learn Reactjs #30 - Passing Arguments To Event Handlers",
+   "s": "Passing Arguments To Event Handlers Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
+   "tags": [
+    "Elzero Web School"
+   ],
+   "url": "https://www.youtube.com/watch?v=ehRNEYZSbdk"
+  },
+  {
+   "id": "yt-PY5d-_fycso",
+   "cat": "co",
+   "src": "YouTube",
+   "ts": "2026-11-25T19:30:32Z",
+   "t": "Deep Agents Tutorial: Learn It by Playing an Escape Room",
+   "s": "Jess Weng from LangChain Academy plays an escape room video game that teaches Deep Agents, LangChain's open-source agent harness, as you go. Polly, a…",
+   "tags": [
+    "LangChain"
+   ],
+   "url": "https://www.youtube.com/watch?v=PY5d-_fycso"
+  },
+  {
+   "id": "yt-iA0ns69dZGM",
+   "cat": "agents",
+   "src": "YouTube",
+   "ts": "2026-11-25T19:28:41Z",
+   "t": "RANKING the BEST AI Models for Coding | TIER LIST",
+   "s": "HUGE Eight Sleep Black Friday Deal $700 OFF! https://www.eightsleep.com/matthewberman Use Code: MATTHEWBERMAN Join My Newsletter for Regular AI Updat…",
+   "tags": [
+    "Matthew Berman"
+   ],
+   "url": "https://www.youtube.com/watch?v=iA0ns69dZGM"
+  },
+  {
+   "id": "rss-architoshcom202611kestrellabsaddsformaintegrationandalotmore",
+   "cat": "arch",
+   "src": "Architosh",
+   "ts": "2026-11-25T19:20:51Z",
+   "t": "Kestrel Labs’ adds Forma integration and a lot more",
+   "s": "Kestrel Labs advances its cloud and native application for code compliance with new Autodesk Forma integration, 3D model and issue view in the Kestrel Portal a…",
+   "tags": [
+    "AEC"
+   ],
+   "url": "https://architosh.com/2026/11/kestrel-labs-adds-forma-integration-and-a-lot-more/"
+  },
+  {
+   "id": "gn-11mythsaboutaiarchitectures",
+   "cat": "arch",
+   "src": "Electronic Design",
+   "ts": "2026-11-25T19:01:23Z",
+   "t": "11 Myths About AI Architectures",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPMDFYa1JJVkpkOGRnTXB2aEdOdmhKMEQ1dlAwbjdUR3pFdlozTkFmMUVWNTRFTXJtRnFoVU9YZHhNXzBmS0k5LUNnUmd0UU52ZHpNOFd3ZjdBajBGcUxTMFAxbDdFRjlSUS1Md3NiZWlKekRGb0E0X2h2RVBxcWVPdnR5ejFBVU5QTUtpS2Z0WlcyaGtTY3FBdTVCamdwSzJhNG93Y2tHcUYxMWhyRkdIeVVvaWZHdlVEWnZhS0lzOW8wOXhq?oc=5"
+  },
   {
    "id": "yt-tf_cT3AvMXw",
    "cat": "long",
@@ -13,6 +283,19 @@
     "Dr Firas"
    ],
    "url": "https://www.youtube.com/watch?v=tf_cT3AvMXw"
+  },
+  {
+   "id": "hn-50645868",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-25T18:47:29Z",
+   "t": "Parents of OpenAI whistleblower intensify dispute over suicide ruling",
+   "s": "17 نقطة، 4 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://abc7news.com/post/parents-openai-whistleblower-suchir-balaji-dispute-suicide-ruling-he-would-not-harm-himself/19170809/",
+   "url2": "https://news.ycombinator.com/item?id=50645868"
   },
   {
    "id": "yt-_1PFnrm2fFI",
@@ -39,6 +322,19 @@
    "url": "https://www.youtube.com/watch?v=A4UNP-axGHU"
   },
   {
+   "id": "hn-50645241",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-25T17:57:46Z",
+   "t": "Ukraine shoots down Russian jet-powered drone with combat laser for first time",
+   "s": "32 نقطة، 1 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/25/8064653/",
+   "url2": "https://news.ycombinator.com/item?id=50645241"
+  },
+  {
    "id": "yt-AZDtlbnkbFI",
    "cat": "long",
    "src": "YouTube",
@@ -49,6 +345,19 @@
     "Elzero Web School"
    ],
    "url": "https://www.youtube.com/watch?v=AZDtlbnkbFI"
+  },
+  {
+   "id": "hn-50644980",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-25T17:34:34Z",
+   "t": "The polynomial Hirsch conjecture is false [pdf]",
+   "s": "133 نقطة، 37 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/openai/math/blob/main/preprints/Superpolynomial-graph-diameter-of-simple-polytopes-November-24-2026/paper.pdf",
+   "url2": "https://news.ycombinator.com/item?id=50644980"
   },
   {
    "id": "gn-acloserlookatclaudesmacapps",
@@ -99,6 +408,18 @@
    "url": "https://aecmag.com/cad/nomic-extends-ai-agents-into-cad-drafting-and-bim/"
   },
   {
+   "id": "gn-connectingaecoworkflowsendtoendwiththeautodeskformaindustryc",
+   "cat": "arch",
+   "src": "Autodesk",
+   "ts": "2026-11-25T17:03:15Z",
+   "t": "Connecting AECO Workflows End-to-End with the Autodesk Forma Industry Cloud",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMimANBVV95cUxOZk9kOWpWZGZzQTJacWoxOEdJTUZVVWpqMTVwYkU1a2t4aEw4WXZ2a0paSndyN1Z4SFR2dUNnU1dyTkRySk95Y1JTdFVWTjR1V0JCYXVYRXgyTmhOS1ZOYlo3ZUNINTRuckt6WW5YLW9Ec3V4b01SZ1JmQTdhbFpEYUR5NUE0SXhYaVJHYm5NaW9MUEJ0d0lMQW15MnVGTlQxV25CNXI4eTNWcFRSNWRPWVViNlU0TkkwYm1qekhlck9obHdEMGQwZDRVb3pVMDhxS08zYnc4MHVWd0FrY2U4VFU3a0xHOU5jTVByX0RXc2RHNVh1eXNUTzF3RXdxbzFMbEFlREtsN19oQ1NHYkNhVEZTcmZVVjN6UFhzMmpySTE4X2pSNDl2Zl9PeFkwbWhIZmtBYmhQWHh2a2o4bkNfWnJRbzZSZ3o1TkotY1k4ZjNxeW4zZGNkMnpqMlJrOEZJYWNkNk9QMDdDMGw0RE5ZOFM2X2tVaWpKdUpwMVY3dmcwMzA0bmtNODhlYkdCNkRYZUpQSHBEa2g?oc=5"
+  },
+  {
    "id": "yt-kfGYU_-SuaE",
    "cat": "co",
    "src": "YouTube",
@@ -147,6 +468,19 @@
    "url": "https://github.com/Glazentri/winmatch-revit"
   },
   {
+   "id": "hn-50643199",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-25T15:20:15Z",
+   "t": "In C++, = default and {} are not the same constructor",
+   "s": "111 نقطة، 168 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://lemire.me/blog/2026/11/02/default-and-braces-are-not-the-same-constructor/",
+   "url2": "https://news.ycombinator.com/item?id=50643199"
+  },
+  {
    "id": "hn-50643129",
    "cat": "agents",
    "src": "Hacker News",
@@ -171,6 +505,19 @@
    ],
    "url": "https://www.reddit.com/r/singularity/comments/1y59ef1/rumor_that_openai_or_anthropic_found_a_way_to/",
    "url2": "https://news.ycombinator.com/item?id=50643065"
+  },
+  {
+   "id": "hn-50643027",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-25T15:04:46Z",
+   "t": "Man Says Doctor Implanted Data-Collecting Smart Knee",
+   "s": "14 نقطة، 7 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.ibtimes.co.uk/california-man-sues-over-smart-knee-implant-1834786",
+   "url2": "https://news.ycombinator.com/item?id=50643027"
   },
   {
    "id": "yt-Z9q4S0Phq_Q",
@@ -293,6 +640,18 @@
    ],
    "url": "https://www.phoronix.com/news/Linus-Torvalds-EXT4-AI-Big",
    "url2": "https://news.ycombinator.com/item?id=50640173"
+  },
+  {
+   "id": "gn-workdayautodesktumbleafterbeatandraisequartersretailturnsbul",
+   "cat": "arch",
+   "src": "TradingView",
+   "ts": "2026-11-25T08:36:50Z",
+   "t": "Workday, Autodesk Tumble After Beat And Raise Quarters — Retail Turns Bullish",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNTGJiN0ZJOTMwWmZCS0VFdC1xcnByd2tZLTJIaVJRb0FuU0pMVzdobU9TZFFnS0pldTBIeEw3bXZPcExkYU1ZcUFzVUttV3dIQlNKbEZoYUZtZktSMFlVWUJER01SVkxBR2szcnF2NWRXbGtueTdaeWtmdTd1eWJUTjVVQmhrR25PSGkxRzE3Q1JfSzJsaDl5UTduTHN5R0h0YVZOU2tMNHBvUmRfTXN3cjRydUxybFFXTFUxbHIwQjZtOFpHbkljZzVKbGZ3a00t?oc=5"
   },
   {
    "id": "yt-IO9ce7ubAJ8",
@@ -890,6 +1249,19 @@
    "sa": "إذا لم تخبر كلود بأي شيء عنك، فإنه يجيبك مثل أي شخص آخر. قبل أن يطالبك عملك بإنشاء مشروع كلود ووضع 4 أشياء فيه:..."
   },
   {
+   "id": "hn-50631791",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-24T17:53:53Z",
+   "t": "Show HN: Keeping faces and features consistent across 24 AI-driven comic pages",
+   "s": "19 نقطة، 22 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://joonoo.art/create-comic",
+   "url2": "https://news.ycombinator.com/item?id=50631791"
+  },
+  {
    "id": "yt-1Gg4ejXFAYw",
    "cat": "reels",
    "src": "YouTube",
@@ -1259,6 +1631,18 @@
    "sa": "تقدم Anthropic خطة لمدة 6 أشهر من Claude Ultra، وهي خطة بقيمة 200 دولار شهريًا. ولكن ليس للجميع: فيما يلي الطرق الخمس الرسمية للوصول إلى Claude for Open..."
   },
   {
+   "id": "gn-zipherraises53mtorebuilddatainfrastructureforagentsbyagents",
+   "cat": "agents",
+   "src": "VentureBeat",
+   "ts": "2026-11-24T13:00:30Z",
+   "t": "Zipher Raises $53M to Rebuild Data Infrastructure for Agents, by Agents",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPaENmdmp2ZS02UjRsczlkM3RrVWFRYXhIZmNNUDRwZWNyWktZODkydGdOYjFwbTduMUFOd0V1RDZyRExfbVlCOS1FZ1lsanFxSE5qSG9ZbnowNk5JMG5fdWRnbThmREZDSHIxMWdEZW5mY1NZVkV5Y3hnWEZ6WVUxSldLeEFUWTJmR1NQajhGRTBfZURMVXBRR1gwdmtpNUpLdXJJSg?oc=5"
+  },
+  {
    "id": "yt-qquIt--ANqI",
    "cat": "co",
    "src": "YouTube",
@@ -1500,6 +1884,31 @@
    ],
    "tp": "news",
    "ta": "لم أعد متحمسًا للتكنولوجيا بعد الآن"
+  },
+  {
+   "id": "gh-1469804419",
+   "cat": "arch",
+   "src": "GitHub",
+   "ts": "2026-11-24T07:29:10Z",
+   "t": "korliolian-crypto/matlab-r2026a-dakalor: MATLAB R2026A environment for numerical computing, matrix operations, and data visualizat…",
+   "s": "88 نجمة، لغة HTML",
+   "tags": [
+    "أداة مفتوحة المصدر"
+   ],
+   "url": "https://github.com/korliolian-crypto/matlab-r2026a-dakalor"
+  },
+  {
+   "id": "hn-50624684",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-24T07:03:33Z",
+   "t": "Show HN: Rchive – Every drive I've owned since the 90s, searchable in one window",
+   "s": "39 نقطة، 25 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.rchive.computer/",
+   "url2": "https://news.ycombinator.com/item?id=50624684"
   },
   {
    "id": "yt-G6PP3P2t3V4",
@@ -1987,6 +2396,19 @@
    "sa": "تم شحن LangChain في أكتوبر 2022 كمشروع مفتوح المصدر لتسلسل المطالبات وملفات PDF، وهو يغطي الآن دورة حياة تطوير الوكيل بالكامل. ل…"
   },
   {
+   "id": "hn-50619073",
+   "cat": "agents",
+   "src": "Hacker News",
+   "ts": "2026-11-23T20:50:20Z",
+   "t": "The undocumented 249-file limit for Googlebot rendering",
+   "s": "40 نقطة، 16 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.fullstackoptimization.com/a/googlebot-249-file-rendering-limit",
+   "url2": "https://news.ycombinator.com/item?id=50619073"
+  },
+  {
    "id": "hn-50618513",
    "cat": "code",
    "src": "Hacker News",
@@ -2425,6 +2847,19 @@
    "ta": "Gnomon: Git لبيانات Postgres"
   },
   {
+   "id": "hn-50611593",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-23T14:02:15Z",
+   "t": "Show HN: An agent skill that optimizes code with falsifiable hypotheses",
+   "s": "87 نقطة، 10 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://chszlab.github.io/AgenticAlgorithmEngineering/",
+   "url2": "https://news.ycombinator.com/item?id=50611593"
+  },
+  {
    "id": "hn-50611427",
    "cat": "arch",
    "src": "Hacker News",
@@ -2673,6 +3108,18 @@
    "tp": "agents"
   },
   {
+   "id": "gh-1468680526",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-23T11:36:39Z",
+   "t": "Powerdaalembic/LocalAI-VRAMReadyCheck: Check if your Windows PC can run Ollama, LM Studio, or ComfyUI locally: audit GPU VRAM, C…",
+   "s": "33 نجمة، لغة غير محددة",
+   "tags": [
+    "جديد كلياً"
+   ],
+   "url": "https://github.com/Powerdaalembic/LocalAI-VRAMReadyCheck"
+  },
+  {
    "id": "gn-constructionsaimomentneedsastrategy",
    "cat": "arch",
    "src": "Planning, Building & Construction Today",
@@ -2776,6 +3223,18 @@
    "tp": "agents"
   },
   {
+   "id": "gh-1468507631",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-23T08:48:17Z",
+   "t": "enwove/flyx: Zero-dependency local LLM inference engine in a ~50 MB binary — native long context, tune…",
+   "s": "41 نجمة، لغة C++",
+   "tags": [
+    "جديد كلياً"
+   ],
+   "url": "https://github.com/enwove/flyx"
+  },
+  {
    "id": "gn-howmuchdoesaicostin2026thecompletepricingcomparison",
    "cat": "agents",
    "src": "Fello AI",
@@ -2795,6 +3254,18 @@
     "Agents"
    ],
    "tp": "agents"
+  },
+  {
+   "id": "gn-howtoinstallollamaonlinux2easymethods",
+   "cat": "agents",
+   "src": "Hostinger",
+   "ts": "2026-11-23T08:00:00Z",
+   "t": "How to install Ollama on Linux (2 easy methods)",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE92RkhyUWtZOVpCZ3l3Ul9VNFNMTWhUSTZ5blFjMUNHY1JnTTBZbUFIUkZUMW1ZT0tSRWM4NzNlRVVfSFloVklTMUhrOTR4RDJya1FCZUZnOWxyVlloTkNHVWIzRzAtTTN5TnZQYl93?oc=5"
   },
   {
    "id": "hn-50608604",
@@ -2839,6 +3310,18 @@
     "Research"
    ],
    "tp": "news"
+  },
+  {
+   "id": "gn-claudesonnet55pricebenchmarksandwhogetsit",
+   "cat": "agents",
+   "src": "Fello AI",
+   "ts": "2026-11-23T07:36:53Z",
+   "t": "Claude Sonnet 5.5: Price, Benchmarks and Who Gets It",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1ldU84YncyWEp0dDVCRmR3Z0JkNnE1MFJmZEtNZ29GYWVMOVZSdmN6Q1hmZFhzQU41bE1UckxaV1I2VG9WVlFpWDBXQTdnaDg?oc=5"
   },
   {
    "id": "gh-1468410832",
@@ -3356,6 +3839,19 @@
     "Frontend"
    ],
    "tp": "courses"
+  },
+  {
+   "id": "hn-50601280",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-22T16:44:48Z",
+   "t": "GPT-6.2 Astra is the first model to beat Googlers' code golf records",
+   "s": "274 نقطة، 80 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://bjin.github.io/go-codegolf-benchmark/#leaderboard",
+   "url2": "https://news.ycombinator.com/item?id=50601280"
   },
   {
    "id": "gh-1467769720",
@@ -5176,6 +5672,18 @@
    "tp": "mcp"
   },
   {
+   "id": "gn-chinesenexusactorscairnaiagentsfoundazerodayontheirownamazon",
+   "cat": "agents",
+   "src": "Amazon Web Services",
+   "ts": "2026-11-20T17:30:13Z",
+   "t": "Chinese-nexus actor’s Cairn AI agents found a zero-day on their own | Amazon Web Services",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdk1IUkhXZmJzaEtGUEtPM2Z6T0NmaWJfQlF5TnFfaTNhRTNRUDZReGRnSjl1MzUzYU9sN2NZdUdLQjk2RzdVQlgwMG9qUnphVlpJQzhVZml6TjBYNjE1V05qZGM1VGJqYkZyZXM3STdBeGtrdzBjc1lReklEX3lKbU02cmptejg2UW5xSDhyVlhuYkNTVXZZdU80VW81M2FzaV9CV2p1aTA?oc=5"
+  },
+  {
    "id": "yt-mU8WKII1gpk",
    "cat": "agents",
    "src": "YouTube",
@@ -5500,796 +6008,6 @@
    ],
    "tp": "agents",
    "ta": "danielwh2/sprite-stacking: مهارة العميل: قم بتحويل عروض فنية من أربع وحدات بكسل إلى كائنات وهمية ثلاثية الأبعاد يمكنك تدويرها. يعمل مع كلو…"
-  },
-  {
-   "id": "gh-1465526334",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-20T14:28:07Z",
-   "t": "marketzy/codex-cli-repo-workbench: Codex Cli Repo Workbench provides a local workspace for managing and inspecting Codex CLI…",
-   "s": "93 نجمة، لغة HTML",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/marketzy/codex-cli-repo-workbench",
-   "ta": "Marketzy/codex-cli-repo-workbench: يوفر Codex Cli Repo Workbench مساحة عمل محلية لإدارة وفحص Codex CLI...",
-   "h": "أداة Codex CLI Repo Workbench",
-   "x": "مساحة عمل محلية لإدارة وفحص أكواد Codex CLI بسهولة من جهازك.",
-   "tg": [
-    "CLI",
-    "Codex"
-   ],
-   "tp": "oss"
-  },
-  {
-   "id": "gh-1465523535",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-20T14:25:27Z",
-   "t": "han938/open-webui-private-ai-desk: Chat with private AI models locally, powered by Open Webui Private Ai Desk.",
-   "s": "93 نجمة، لغة TypeScript",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/han938/open-webui-private-ai-desk",
-   "ta": "han938/open-webui-private-ai-desk: قم بالدردشة مع نماذج الذكاء الاصطناعي الخاصة محليًا، بدعم من Open Webui Private Ai Desk.",
-   "h": "منصة Open WebUI لإدارة نماذج الذكاء الاصطناعي محلياً",
-   "x": "أداة ممتازة للدردشة مع نماذج AI خاصة بك محلياً لضمان سرية بيانات مشاريعك الهندسية.",
-   "tg": [
-    "Open WebUI",
-    "TypeScript",
-    "OSS"
-   ],
-   "tp": "oss"
-  },
-  {
-   "id": "gh-1465513790",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-20T14:16:24Z",
-   "t": "zavi2997-droid/claude-code-agent-workspace: Orchestrates composable Claude Code agent workflows across isolated workspace contexts.",
-   "s": "152 نجمة، لغة HTML",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/zavi2997-droid/claude-code-agent-workspace",
-   "ta": "zavi2997-droid/clude-code-agent-workspace: ينظم سير عمل وكيل Claude Code القابل للتركيب عبر سياقات مساحة العمل المعزولة.",
-   "h": "تنظيم مهام الـ Claude Code Agents",
-   "x": "مستودع مفتوح المصدر لعمل workflows متقدمة ومنعزلة لـ Claude Code agents.",
-   "tg": [
-    "Claude",
-    "Agents"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gh-1465511622",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-20T14:14:22Z",
-   "t": "wozniakalan323-bit/opencode-project-workbench: Opencode Project Workbench structures opencode project tasks, files, and workflow state.",
-   "s": "93 نجمة، لغة HTML",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/wozniakalan323-bit/opencode-project-workbench",
-   "ta": "wozniakalan323-bit/opencode-project-workbench: يبني Opencode Project Workbench مهام مشروع الكود المفتوح وملفاته وحالة سير العمل.",
-   "h": "إدارة مهام الـ Coding عبر Opencode Project Workbench",
-   "x": "أداة لتنظيم ملفات وحالة مشاريع البرمجة وسير العمل بذكاء.",
-   "tg": [
-    "agents",
-    "workflow",
-    "oss"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "hn-50574412",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-20T13:32:42Z",
-   "t": "Show HN: Drive around my village in 3D",
-   "s": "43 نقطة، 37 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://cherwellvalleymotorclub.app",
-   "url2": "https://news.ycombinator.com/item?id=50574412",
-   "ta": "عرض HN: قم بالقيادة حول قريتي بتقنية ثلاثية الأبعاد"
-  },
-  {
-   "id": "yt-tPszikxVpgE",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-20T13:31:58Z",
-   "t": "Clay's Head of AI on Reading Traces With Hundreds of Tool Calls",
-   "s": "Clay's new agent is broader than its earlier ones, and customers use it in ways the team didn't expect. Jeff Barg, Head of AI at Clay, tells Harrison…",
-   "tags": [
-    "LangChain"
-   ],
-   "url": "https://www.youtube.com/shorts/tPszikxVpgE",
-   "ta": "رئيس قسم الذكاء الاصطناعي كلاي يقرأ الآثار مع مئات من استدعاءات الأدوات",
-   "sa": "يعد وكيل Clay الجديد أوسع من وكيله السابق، ويستخدمه العملاء بطرق لم يتوقعها الفريق. يقول جيف بارج، رئيس قسم الذكاء الاصطناعي في كلاي، لهاريسون...",
-   "h": "كيف يقرأ الـ AI مئات الـ Tool Calls في Traces المعقدة؟",
-   "x": "نظرة متقدمة على كيفية تعامل الـ AI agents مع استدعاءات الأدوات الضخمة.",
-   "tg": [
-    "agents",
-    "AI"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gn-ollamaandllamacppwelcomedecisionmodels",
-   "cat": "agents",
-   "src": "Brief IA",
-   "ts": "2026-11-20T13:31:40Z",
-   "t": "Ollama and llama.cpp Welcome Decision Models",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQdkt2MXF4WWNNdXcyYTk4bl8xVjVpOHFPZHZid19feE1vaFoyLXRkbGM3MU1CcFNiRW5LbGRnX3lrRWQxVU9WWkRLN2ZNbkcyRXpJZUNfZklWRURKNzROSlpzNEd0LVBySWRZQ3JibmR3aklDYmJ3RnFyRkdEZzlEZjFxcVM?oc=5",
-   "ta": "Ollama وllama.cpp يرحبان بنماذج القرار",
-   "h": "دعم نماذج اتخاذ القرار في Ollama",
-   "x": "إضافة قوية لتشغيل نماذج اتخاذ القرار محياً على جهازك باستخدام Ollama وllama.cpp.",
-   "tg": [
-    "Ollama",
-    "LLM"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "hn-50574383",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-20T13:29:59Z",
-   "t": "Global stock markets slump as Anthropic's record IPO fails to stem AI sell-off",
-   "s": "48 نقطة، 21 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
-   "url2": "https://news.ycombinator.com/item?id=50574383",
-   "ta": "تراجعت أسواق الأسهم العالمية مع فشل الاكتتاب العام الأولي القياسي لشركة Anthropic في وقف عمليات بيع الذكاء الاصطناعي",
-   "h": "فقاعة AI تؤثر على أسواق المال",
-   "x": "انهيار أسهم التقنية رغم طرح Anthropic، خبر يهمك كمهندس تتابع استثمارات الـ AI.",
-   "tg": [
-    "AI",
-    "Tech",
-    "Market"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "gn-aicandrawafloorplaninsecondsbutdoesthatmakeitagooddesign",
-   "cat": "arch",
-   "src": "PC Tech Magazine",
-   "ts": "2026-11-20T13:27:21Z",
-   "t": "AI Can Draw a Floor Plan in Seconds. But Does That Make It a Good Design?",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOdU53d3lmMlc2QUdMYWNxMVhINXcxU0ZXeFlXTEZyNkdQMnE2Y2VfSzB4MVpTZmdnMHZ6SDRGQ05ja2JwbFpOeXVxelFOTVhlT09vVDg2ZnJXblNNcDFnMWJoanJQSXhiTUV3dDJqWHhTM0xwRVhLWVYyTjltSXcyaFgwUHJwdXdka2RBcDRHRWdjcHMwbkNLM1FUZFNpVE9PNlNPeg?oc=5",
-   "ta": "يستطيع الذكاء الاصطناعي رسم مخطط للطابق في ثوانٍ. لكن هل هذا يجعله تصميمًا جيدًا؟",
-   "h": "هل تصميم الـ Floor Plan السريع بالـ AI يعني أنه تصميم جيد؟",
-   "x": "السرعة في توليد المساقط الأفقية لا تعني بالضرورة جودة المعمار.",
-   "tg": [
-    "BIM",
-    "GenerativeDesign",
-    "Architecture"
-   ],
-   "tp": "arch"
-  },
-  {
-   "id": "hn-50574264",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-20T13:19:48Z",
-   "t": "Deterministic Simulation Testing Is for Everyone",
-   "s": "51 نقطة، 6 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://outdata.net/blog/261120",
-   "url2": "https://news.ycombinator.com/item?id=50574264",
-   "ta": "اختبار المحاكاة الحتمية متاح للجميع",
-   "h": "اختبارات المحاكاة الحتمية لكل الأنظمة",
-   "x": "تعلم كيف تضمن استقرار الكود والـ simulation بدون أخطاء عشوائية.",
-   "tg": [
-    "Simulation",
-    "Testing"
-   ],
-   "tp": "oss"
-  },
-  {
-   "id": "hn-50573886",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-20T12:41:38Z",
-   "t": "If you stop writing code, you also get worse at reviewing it",
-   "s": "63 نقطة، 12 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://cekrem.github.io/posts/if-you-stop-writing-code-you-also-get-worse-at-reviewing-it/",
-   "url2": "https://news.ycombinator.com/item?id=50573886",
-   "ta": "إذا توقفت عن كتابة التعليمات البرمجية، فإنك ستسوء أيضًا عند مراجعتها",
-   "h": "التوقف عن كتابة الكود يضعف قدرتك على مراجعته",
-   "x": "خطورة الاعتماد الكلي على الـ AI وكيف يفقد المهندس مهارة مراجعة الكود.",
-   "tg": [
-    "Coding",
-    "Skills"
-   ],
-   "tp": "arch"
-  },
-  {
-   "id": "hn-50573839",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-20T12:36:49Z",
-   "t": "Ask HN: Any actual balanced reviews of GTA 6?",
-   "s": "13 نقطة، 24 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://news.ycombinator.com/item?id=50573839",
-   "url2": "",
-   "ta": "اسأل HN: هل هناك أي مراجعات متوازنة فعلية للعبة GTA 6؟"
-  },
-  {
-   "id": "gn-nasdaq100insidetheindexautodeskadsk",
-   "cat": "arch",
-   "src": "Nasdaq",
-   "ts": "2026-11-20T12:30:00Z",
-   "t": "Nasdaq-100® Inside the Index: Autodesk (ADSK)",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8xcHF5TDAzdmR1V2xEWUY3enV1V3I2a1JHUGg2V2VBOGowY2pmcUNXMl9Ndjg2SFZoSVlUVkNRUjVLbjhhR3VHbGJjNXhaN2NVQ0dodi1IdDc1TkVEUU9KSVdXSVkxV2JzbTlDYi01QlFxT2F6VHow?oc=5",
-   "ta": "Nasdaq-100® داخل المؤشر: Autodesk (ADSK)"
-  },
-  {
-   "id": "hn-50573681",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-20T12:16:36Z",
-   "t": "Epic Games Turns to AI Coding for the Unreal Engine",
-   "s": "29 نقطة، 25 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://spectrum.ieee.org/epic-games-unreal-engine-ai",
-   "url2": "https://news.ycombinator.com/item?id=50573681",
-   "ta": "تتحول Epic Games إلى ترميز الذكاء الاصطناعي للمحرك غير الواقعي",
-   "h": "Epic Games تعتمد على الـ AI Coding في Unreal Engine",
-   "x": "كيف تستخدم الشركات الكبرى الذكاء الاصطناعي لتسريع تطوير محركات الألعاب.",
-   "tg": [
-    "AI",
-    "Coding",
-    "UnrealEngine"
-   ],
-   "tp": "arch"
-  },
-  {
-   "id": "yt-AmP65h3quI4",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-20T12:00:31Z",
-   "t": "Learn Reactjs #15 - Default Values For Props",
-   "s": "Default Values For Props Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
-   "tags": [
-    "Elzero Web School"
-   ],
-   "url": "https://www.youtube.com/watch?v=AmP65h3quI4",
-   "ta": "تعلم Reactjs #15 - القيم الافتراضية للدعائم",
-   "sa": "القيم الافتراضية لدروس وواجبات الدعائم: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
-   "h": "تعلم React.js وتحديد القيم الافتراضية للـ Props",
-   "x": "درس عملي لتطوير تطبيقات الويب وربط الواجهات بكفاءة.",
-   "tg": [
-    "React",
-    "Frontend",
-    "Courses"
-   ],
-   "tp": "courses"
-  },
-  {
-   "id": "gn-neoshapesandsphereneusegenerativedesignandmetalbinderjetting",
-   "cat": "arch",
-   "src": "https://3dprinting.com/",
-   "ts": "2026-11-20T12:00:09Z",
-   "t": "Neoshapes and Spherene Use Generative Design and Metal Binder Jetting for Lightweight Jewelry",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOc3BXbzBoVmN2UVhod0h0MWxfNmE3NkNDTDVJeEhtRkVqc2otTW5DdmZYNFNlWld4WTRJV2J0ZVJTeXZpamVPM0tEUHBvLUc0ZjJXWm9DMzZ3QmRMcm9EQkFRU2Z0U21qZlltT1NyWmNnd251UGgtV0Y3ZDJTOG9lNElmTEREWGs3MVNocnFzNFVpLWl5V194QnEyY0tEeDFVYmt0M0R1cFQxLUZxMzBGaDZTYTN1NFZ2Snh0Vk9yaw?oc=5",
-   "ta": "تستخدم Neoshapes وSpherene التصميم المبتكر والنفث المعدني للمجوهرات خفيفة الوزن",
-   "h": "Generative Design لتصميم مجوهرات خفيفة الوزن",
-   "x": "استخدام تقنيات التصميم التوليدي والـ 3D Printing لإنتاج أشكال معمارية ومعدنية مبتكرة.",
-   "tg": [
-    "Generative Design",
-    "3D Printing"
-   ],
-   "tp": "arch"
-  },
-  {
-   "id": "gn-laserscannersmarketto2035bimandinfrastructuredemandfuelexpan",
-   "cat": "arch",
-   "src": "IndexBox",
-   "ts": "2026-11-20T11:11:05Z",
-   "t": "Laser Scanners Market To 2035: BIM and Infrastructure Demand Fuel Expansion - News and Statistics",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPUG9nbE82QkJFY0lVVF9NdHlpY1pHMmhlYU9sY2FNcmFUZ0xyMmdXS0FRUmdmdmNxSF8ycVh2M1lweGpSOTdfRjliRWVUT2RvcGZhb0hMYlVJTUg5NFY2VWZONk1hR3VoT2t0UW9yU0ZjbFBmY2FVb2tkd3NVR0FJUWRjUmZrSklQTjc1eDBhVzZhV05YQWM5QjV5TDJ1VG9lY1BnYVdzdlphZ0YxM1k3bkx6d3llc3EtY3FGNUN0eWF4dw?oc=5",
-   "ta": "سوق ماسحات الليزر الضوئية حتى عام 2035: نمذجة معلومات البناء (BIM) والبنية التحتية تتطلب التوسع في استهلاك الوقود - الأخبار والإحصائيات",
-   "h": "نمو قوي في سوق الـ Laser Scanners بدعم من مشاريع الـ BIM",
-   "x": "طفرة في استخدام مسح الأثر والبناء لتلبية احتياجات البنية التحتية.",
-   "tg": [
-    "BIM",
-    "LaserScanning",
-    "Infrastructure"
-   ],
-   "tp": "arch"
-  },
-  {
-   "id": "hn-50573041",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-20T11:07:58Z",
-   "t": "Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'",
-   "s": "16 نقطة، 0 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib",
-   "url2": "https://news.ycombinator.com/item?id=50573041",
-   "ta": "حبوب منع الحمل لعلاج سرطان البنكرياس تعتبر \"أكبر إنجاز منذ عقود\"",
-   "h": "اختراق طبّي لسرطان البنكرياس",
-   "x": "حبة دواء جديدة تُعد الأكبر منذ عقود في علاج أخطر الأورام.",
-   "tg": [
-    "Health",
-    "Tech"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "gh-1465322684",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-20T11:01:20Z",
-   "t": "sous-labs/songe: A training engine for your local model, using your idle compute",
-   "s": "156 نجمة، لغة Python",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/sous-labs/songe",
-   "ta": "sous-labs/songe: محرك تدريب لنموذجك المحلي، باستخدام حاسوبك الخامل",
-   "h": "درّب Local Model على جهازك بـ Idle Compute",
-   "x": "أداة ذكية للاستفادة من قوة جهازك غير المستغلة في تدريب الـ Local Models.",
-   "tg": [
-    "Python",
-    "Agents"
-   ],
-   "tp": "oss"
-  },
-  {
-   "id": "hn-50572503",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-20T10:01:41Z",
-   "t": "Frostbite: A new CPU architecture discovered, designed and verified by AI",
-   "s": "105 نقطة، 77 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://architectlabs.com/blog/frostbite",
-   "url2": "https://news.ycombinator.com/item?id=50572503",
-   "ta": "Frostbite: تم اكتشاف بنية جديدة لوحدة المعالجة المركزية وتصميمها والتحقق منها بواسطة الذكاء الاصطناعي",
-   "h": "Frostbite: معمارية معالجات جديدة صممها الذكاء الاصطناعي",
-   "x": "استكشاف معمارية CPU جديدة تم تصميمها والتحقق منها بالكامل عبر الـ AI.",
-   "tg": [
-    "Architecture",
-    "AI",
-    "Hardware"
-   ]
-  },
-  {
-   "id": "hn-50572355",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-20T09:43:19Z",
-   "t": "If you can't explain something in simple terms, you don't understand it (2017)",
-   "s": "30 نقطة، 13 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://kottke.org/17/06/if-you-cant-explain-something-in-simple-terms-you-dont-understand-it",
-   "url2": "https://news.ycombinator.com/item?id=50572355",
-   "ta": "إذا لم تتمكن من شرح شيء ما بعبارات بسيطة، فأنت لا تفهمه (2017)",
-   "h": "بساطة الشرح دليل الفهم",
-   "x": "قاعدة ذهبية في البرمجة والهندسة: إن لم تستطع شرحه ببساطة فأنت لا تفهمه.",
-   "tg": [
-    "Coding",
-    "Logic"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "hn-50572348",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-20T09:42:16Z",
-   "t": "Restricting AI agents in mobile operating systems platforms from capturing data",
-   "s": "512 نقطة، 306 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://signal.org/blog/protecting-your-privacy/",
-   "url2": "https://news.ycombinator.com/item?id=50572348",
-   "ta": "تقييد وكلاء الذكاء الاصطناعي في منصات أنظمة التشغيل المحمولة من التقاط البيانات",
-   "h": "تقييد AI agents عن جمع البيانات بالأنظمة",
-   "x": "نقاش تقني مهم حول حماية الخصوصية وتحديد صلاحيات الـ AI agents في الموبايل.",
-   "tg": [
-    "AI agents",
-    "Privacy",
-    "Mobile"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gn-claudecodealternativesin20269optionsandtheplanyoualreadypayf",
-   "cat": "agents",
-   "src": "Fello AI",
-   "ts": "2026-11-20T09:31:59Z",
-   "t": "Claude Code Alternatives in 2026: 9 Options and the Plan You Already Pay For",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1YRi1zbjRteEQ2cV9USklzRFp3bWV3bmZJZTdWYlkxTng4Mk1meVdNZHZWbDhRNHNxZUtwdGUwZV83MmJiYXNCdjA1YmEyakhQUmtEOHFjdDQ?oc=5",
-   "ta": "بدائل كلود كود في عام 2026: 9 خيارات والخطة التي تدفع مقابلها بالفعل",
-   "h": "بدائل Claude Code: 9 خيارات قوية لكود أسرع",
-   "x": "تعرف على أفضل بدائل الـ coding agents المتاحة حالياً لتطوير مشاريعك.",
-   "tg": [
-    "Agents",
-    "Coding",
-    "AI"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "hn-50572176",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-20T09:19:44Z",
-   "t": "We made GTA 6, world's biggest game – we should have working conditions to match",
-   "s": "13 نقطة، 4 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.theguardian.com/commentisfree/2026/nov/18/gta-6-grand-theft-auto-vi-rockstar-employees-union-recognition",
-   "url2": "https://news.ycombinator.com/item?id=50572176",
-   "ta": "لقد صنعنا GTA 6، أكبر لعبة في العالم – يجب أن تكون لدينا ظروف عمل مناسبة",
-   "h": "ظروف عمل مطوري الألعاب",
-   "x": "مطورو GTA 6 يطالبون ببيئة عمل تليق بحجم أكبر لعبة في العالم.",
-   "tg": [
-    "Gaming",
-    "Dev"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "hn-50572116",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-20T09:13:09Z",
-   "t": "Carnival Cruises emits ten times more sulphur oxide than all of Europe's cars",
-   "s": "62 نقطة، 20 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://ecohustler.com/article/one-corporation-to-pollute-them-all/",
-   "url2": "https://news.ycombinator.com/item?id=50572116",
-   "ta": "تنبعث من رحلات الكرنفال من أكسيد الكبريت عشرة أضعاف ما تصدره جميع السيارات الأوروبية",
-   "h": "تلوث السفن السياحية المرعب",
-   "x": "رحلات Carnival Cruises تصدر كبريتًا يفوق سيارات أوروبا كلها بعشرة أضعاف!",
-   "tg": [
-    "Environment",
-    "Data"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "yt-6NT9TsT6iMc",
-   "cat": "agents",
-   "src": "YouTube",
-   "ts": "2026-11-20T08:15:34Z",
-   "t": "Google ACHIEVED RSI?! New Stealth Model BEATS Fable 5.2, Anthropic Post IPO, Genie 4 & MORE! AI NEWS",
-   "s": "Catch the bugs that only show up at the merge. Try TestSprite free: https://www.testsprite.com/?via=mahi-2611a Google may have just achieved Recursiv…",
-   "tags": [
-    "WorldofAI"
-   ],
-   "url": "https://www.youtube.com/watch?v=6NT9TsT6iMc",
-   "ta": "جوجل حققت مؤشر القوة النسبية؟! نموذج التخفي الجديد يتفوق على Fable 5.2 وAnthropic Post IPO وGenie 4 والمزيد! أخبار الذكاء الاصطناعي",
-   "sa": "قبض على الأخطاء التي تظهر فقط عند الدمج. جرب TestSprite مجانًا: https://www.testsprite.com/?via=mahi-2611a ربما يكون Google قد حقق للتو Recursiv...",
-   "h": "تطورات ضخمة في نماذج الذكاء الاصطناعي والـ agents",
-   "x": "نظرة على أحدث إصدارات نماذج الـ AI وقدرات الـ agents الجديدة في السوق.",
-   "tg": [
-    "AI",
-    "Agents",
-    "News"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gn-nemetschekgrouptospotlightaipoweredsolutionsforthemiddleeast",
-   "cat": "arch",
-   "src": "Nemetschek",
-   "ts": "2026-11-20T07:54:02Z",
-   "t": "Nemetschek Group to Spotlight AI-Powered Solutions for the Middle East’s AEC/O Sector at Big 5 Global 2026",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQbldMQ0dfeVRpWG5iV1FLQ01IWDNlZVVxM0doT2poaTF3d0g2dHpST0dFWlItdi1INEkyZS1WWU5kdjZQZ1J0ZmRZazN1WDNhSm45enc0YnFiMFBkUkFwcnRHZXB5ZmFROXRVcG9zR3U5NzZ2aXZuZElpWnVyVmRlSFI5ZnZvaFpLN2JqbVRUSzJ3ZlgtdThoTmtSanpYbHk4UE1WMFRMQTJFOVJvTlJfM1FwelhERFRHUndEU2ZZY0J5TXg5?oc=5",
-   "ta": "مجموعة Nemetschek تسلط الضوء على الحلول المدعومة بالذكاء الاصطناعي لقطاع AEC/O في الشرق الأوسط في Big 5 Global 2026",
-   "h": "Nemetschek تعرض حلول الـ BIM والـ AI في Big 5",
-   "x": "مجموعة Nemetschek تستعرض أحدث حلول الـ AEC المدعومة بالذكاء الاصطناعي بمنطقة الشرق الأوسط.",
-   "tg": [
-    "BIM",
-    "AEC",
-    "AI"
-   ],
-   "tp": "arch"
-  },
-  {
-   "id": "yt-wuCYQ2YSa9c",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-20T07:01:09Z",
-   "t": "Fable 5.2 after the free week: credits, a spending cap and resets before March",
-   "s": "Your free week of Fable 5.2 on Pro is over. On Max and Ultra, you may still have 1 to 3 Fable resets, valid until March 8, 2027. The 4 rules and the…",
-   "tags": [
-    "Dr Firas"
-   ],
-   "url": "https://www.youtube.com/shorts/wuCYQ2YSa9c",
-   "ta": "الخرافة 5.2 بعد الأسبوع المجاني: الاعتمادات والحد الأقصى للإنفاق وإعادة التعيين قبل شهر مارس",
-   "sa": "لقد انتهى أسبوعك المجاني من Fable 5.2 على Pro. في Max وUltra، قد لا يزال لديك 1 إلى 3 عمليات إعادة تعيين Fable، صالحة حتى 8 مارس 2027. القواعد الأربعة و...",
-   "h": "تحديثات Fable 5.2 الجديدة",
-   "x": "تفاصيل انتهاء الأسبوع المجاني وقواعد إعادة التعيين قبل مارس 2027.",
-   "tg": [
-    "Software",
-    "Updates"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "gn-claudevschatgpt5keydifferencesthatcouldchangewhichaiyouuse",
-   "cat": "agents",
-   "src": "Tom's Guide",
-   "ts": "2026-11-20T06:15:58Z",
-   "t": "Claude vs. ChatGPT: 5 key differences that could change which AI you use",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQV1EtRklGVFVxaVdKNkZiLWo4Sk5sVEt6TUZrWXFnTjFQYjBMdWt5bnl2c1hiSGs4QUFSOVpmNmY4UTQ2QWxIcS1ZdFdFalVPaE45QUNBaDUwbTZUUVhYVzhBNGRUUmRDalNheFJsNThBRUJKblJCVWRMbHRtQldFLWRzLXhhTm9fbzM0a1QxU3BPRzVDd1RYMHFpQQ?oc=5",
-   "ta": "Claude vs. ChatGPT: 5 اختلافات رئيسية يمكن أن تغير نوع الذكاء الاصطناعي الذي تستخدمه"
-  },
-  {
-   "id": "yt-OSHSopaYjTw",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-20T06:07:50Z",
-   "t": "Create and Share a Dashboard in ChatGPT",
-   "s": "Turn your analysis into a dashboard your team can use. Building on the fictional Acme sales example, this walkthrough brings quarterly metrics and cu…",
-   "tags": [
-    "OpenAI"
-   ],
-   "url": "https://www.youtube.com/watch?v=OSHSopaYjTw",
-   "ta": "إنشاء ومشاركة لوحة المعلومات في ChatGPT",
-   "sa": "حول تحليلك إلى لوحة معلومات يمكن لفريقك استخدامها. بناءً على مثال مبيعات Acme الخيالي، يقدم هذا الدليل الإرشادي مقاييس ربع سنوية ومقاييس...",
-   "h": "أنشئ وشارك Dashboard احترافي مباشرة من ChatGPT",
-   "x": "خطوات عملية لتحويل تحليلات البيانات والـ metrics لوحة تحكم جاهزة لفريقك.",
-   "tg": [
-    "ChatGPT",
-    "Data",
-    "Productivity"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "yt-JEgTn37Sk50",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-20T06:05:59Z",
-   "t": "Ask Questions About Your Data in ChatGPT",
-   "s": "Prepare for a sales meeting by asking ChatGPT what changed in your data and which customers need attention. Using sample data from the fictional comp…",
-   "tags": [
-    "OpenAI"
-   ],
-   "url": "https://www.youtube.com/watch?v=JEgTn37Sk50",
-   "ta": "اطرح أسئلة حول بياناتك في ChatGPT",
-   "sa": "استعد لاجتماع المبيعات من خلال سؤال ChatGPT عما تغير في بياناتك والعملاء الذين يحتاجون إلى الاهتمام. باستخدام بيانات عينة من الشركات الخيالية ...",
-   "h": "اسأل بياناتك مباشرة باستخدام ChatGPT",
-   "x": "استخدم الذكاء الاصطناعي لتحليل بيانات المبيعات واكتشاف العملاء المستهدفين بسهولة.",
-   "tg": [
-    "ChatGPT",
-    "AI",
-    "Data"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "yt-oJIuz3AFfEQ",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-20T06:02:57Z",
-   "t": "Connect Your Team’s Data to ChatGPT",
-   "s": "Connect the data tools your team already uses to ChatGPT. This walkthrough is for workspace admins: enable the Data plugin, choose how teammates can…",
-   "tags": [
-    "OpenAI"
-   ],
-   "url": "https://www.youtube.com/watch?v=oJIuz3AFfEQ",
-   "ta": "قم بتوصيل بيانات فريقك بـ ChatGPT",
-   "sa": "قم بتوصيل أدوات البيانات التي يستخدمها فريقك بالفعل بـ ChatGPT. هذه الإرشادات مخصصة لمسؤولي مساحة العمل: قم بتمكين المكون الإضافي للبيانات، واختر كيف يمكن لزملائك في الفريق...",
-   "h": "اربط داتا فريقك بـ ChatGPT مباشرة",
-   "x": "دليلك كمسؤول workspace لتفعيل plugins الداتا وتسهيل شغل فريقك.",
-   "tg": [
-    "ChatGPT",
-    "Data"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "yt-KrlfehIapEA",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-20T05:35:32Z",
-   "t": "Meet the Data Agent in ChatGPT",
-   "s": "Get started with the Data plugin in ChatGPT. Take a quick tour of how to ask questions about your data, create visualizations, build dashboards, and…",
-   "tags": [
-    "OpenAI"
-   ],
-   "url": "https://www.youtube.com/watch?v=KrlfehIapEA",
-   "ta": "تعرف على وكيل البيانات في ChatGPT",
-   "sa": "ابدأ باستخدام مكون البيانات الإضافي في ChatGPT. قم بجولة سريعة للتعرف على كيفية طرح أسئلة حول بياناتك، وإنشاء تصورات، وإنشاء لوحات معلومات، و...",
-   "h": "تعرف على Data Agent الجديد في ChatGPT",
-   "x": "اسأل براحتك عن داتا شركتك واعمل visualizations وdashboards بسهولة.",
-   "tg": [
-    "Data Agent",
-    "ChatGPT"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "yt-3_fayTbZrW8",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-20T05:32:52Z",
-   "t": "Create and Share a Report in ChatGPT Space",
-   "s": "Give your team a report they can read, discuss, and work on together. In this walkthrough, turn the fictional Acme sales analysis into a Page in Spac…",
-   "tags": [
-    "OpenAI"
-   ],
-   "url": "https://www.youtube.com/watch?v=3_fayTbZrW8",
-   "ta": "قم بإنشاء تقرير ومشاركته في ChatGPT Space",
-   "sa": "امنح فريقك تقريرًا يمكنهم قراءته ومناقشته والعمل عليه معًا. في هذه الإرشادات التفصيلية، قم بتحويل تحليل مبيعات Acme الخيالي إلى صفحة في Spac...",
-   "h": "اصنع وشير تقاريرك داخل ChatGPT Space",
-   "x": "حول تحليلات الشغل لـ Page يقدر فريقك يقراها ويناقشها معاك.",
-   "tg": [
-    "ChatGPT",
-    "Reports"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "hn-50569985",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-20T04:00:24Z",
-   "t": "GIMP now has UI tests",
-   "s": "19 نقطة، 4 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.gimp.org/news/2026/11/16/gimp-ui-tests/",
-   "url2": "https://news.ycombinator.com/item?id=50569985",
-   "ta": "لدى GIMP الآن اختبارات واجهة المستخدم",
-   "h": "برنامج GIMP يدعم UI tests رسمياً",
-   "x": "خطوة مهمة لتطوير واجهات وبرمجيات أدوات التصميم المفتوحة.",
-   "tg": [
-    "GIMP",
-    "UI"
-   ],
-   "tp": "oss"
-  },
-  {
-   "id": "rss-m1188271whathappenedtoparametricismhowastyleblurredintoalook",
-   "cat": "arch",
-   "src": "ArchDaily",
-   "ts": "2026-11-20T04:00:00Z",
-   "t": "What Happened to Parametricism? How a Style Blurred Into a Look",
-   "s": "In September 2008, at a series of sessions organized alongside the 11th Venice Architecture Biennale under the name of the Dark Side Club , a text was presente…",
-   "tags": [
-    "AEC"
-   ],
-   "url": "https://www.archdaily.com/1188271/what-happened-to-parametricism-how-a-style-blurred-into-a-look",
-   "ta": "ماذا حدث البارامترية؟ كيف نمط غير واضح في نظرة",
-   "sa": "في سبتمبر 2008، في سلسلة من الجلسات التي تم تنظيمها على هامش بينالي البندقية للهندسة المعمارية الحادي عشر تحت اسم Dark Side Club، تم تقديم نص…",
-   "h": "إيه اللي حصل للـ Parametricism في العمارة؟",
-   "x": "مقال بيناقش إزاي الفلسفة البارامترية تحولت لمجرد شكل بصري في التصميم.",
-   "tg": [
-    "Parametricism",
-    "Architecture"
-   ],
-   "tp": "arch"
-  },
-  {
-   "id": "hn-50569783",
-   "cat": "agents",
-   "src": "Hacker News",
-   "ts": "2026-11-20T03:26:51Z",
-   "t": "Mapping every neuron in Qwen3-8B",
-   "s": "26 نقطة، 2 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.fermionresearch.com/research/mapping-every-neuron-in-qwen3-8b/",
-   "url2": "https://news.ycombinator.com/item?id=50569783",
-   "ta": "رسم خرائط لكل خلية عصبية في Qwen3-8B",
-   "h": "خريطة تفصيلية لكل neuron في Qwen3-8B",
-   "x": "تحليل عميق لبنية النماذج الذكية هيساعدك تفهم إزاي الـ LLMs بتفكر.",
-   "tg": [
-    "Qwen",
-    "AI"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gn-mcaaconferenceexploresaiandmepconstructiontechnology",
-   "cat": "arch",
-   "src": "Construction Owners",
-   "ts": "2026-11-20T03:18:47Z",
-   "t": "MCAA Conference Explores AI and MEP Construction Technology",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOOG1MQUdHblBTbVNvc1dwS0lxNk9aaDkxV3pTSTRoaHJJMGdLZklJN0RycVVKNWpBWWtVeFNPa2tsZGd1NXFHR0N4OVp1V2dBRUk4OHRjSGdMc0xCbERBYXE1bHhVbXoyME5xUFYxME1vYVppc0N5aTZyeEJhMHBDQ2ZySXZ6NUxzMjMxTjkwWkd0WnBtWDZhVGNyN1BRNWZjRGYzLWJYaV9VTGRucEExVDZ1eVF1cFRlWlpUVA?oc=5",
-   "ta": "مؤتمر MCAA يستكشف تكنولوجيا البناء بالذكاء الاصطناعي والهندسة الكهربائية والميكانيكية",
-   "h": "مؤتمر MCAA يناقش الـ AI وتكنولوجيا الـ MEP",
-   "x": "استعراض لأحدث تقنيات الذكاء الاصطناعي وأنظمة الكهروميكانيك في التشييد.",
-   "tg": [
-    "MEP",
-    "Construction"
-   ],
-   "tp": "arch"
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov20llmgemini",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-20T03:01:57Z",
-   "t": "llm-gemini 0.38.1",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/20/llm-gemini/",
-   "ta": "الجوزاء 0.38.1",
-   "h": "تحديث جديد لأداة llm-gemini",
-   "x": "تحديث مكتبة llm-gemini النسخة 0.38.1 لتعزيز التعامل مع نماذج الذكاء الاصطناعي عبر الـ CLI.",
-   "tg": [
-    "LLM",
-    "Gemini",
-    "CLI"
-   ],
-   "tp": "agents"
   }
  ]
 }
