@@ -117,12 +117,13 @@ h2{font-size:15px;margin:0 0 8px;color:var(--mut);font-weight:500}
 .mk.poi.toll{border-color:var(--acc)}
 .mk.poi.uturn{border-color:var(--org)}
 .mk.poi.checkpoint{border-color:var(--bad)}
+.mk.poi.signal{border-color:#34a853}
 .mk.poi.osm{opacity:.75}
 .mk.blk{width:30px;height:30px;border-radius:50%;background:rgba(255,107,129,.9);font-size:16px}
 .mk.st{width:18px;height:18px;border-radius:50%;background:var(--ok);border:4px solid #050505;box-shadow:0 0 0 2px var(--ok)}
 .mk.de{font-size:34px;line-height:1;transform:translateY(-14px)}
 .mk.me{width:20px;height:20px;border-radius:50%;background:#4285f4;border:3px solid #fff;box-shadow:0 0 0 6px rgba(66,133,244,.25)}
-.mk.car{width:46px;height:62px;filter:drop-shadow(0 5px 6px rgba(0,0,0,.5))}
+.mk.car{width:44px;height:66px;filter:drop-shadow(0 3px 3px rgba(0,0,0,.35))}
 .mk.car svg{width:100%;height:100%;display:block}
 #recenter{position:fixed;right:12px;bottom:calc(env(safe-area-inset-bottom) + 166px);z-index:1001;background:var(--card);color:var(--ink);border:1px solid var(--line);
   border-radius:22px;padding:9px 14px;font-size:14px;font-weight:700;box-shadow:0 3px 10px rgba(0,0,0,.4)}
@@ -234,6 +235,8 @@ body.mapfull #mapBig,body.nav #mapBack{display:none}
       <button data-mode="toll"><i>💳</i>كارتة</button>
       <button data-mode="checkpoint"><i>🚓</i>لجنة</button>
       <button data-mode="uturn"><i>↩️</i>يوتيرن</button>
+      <button data-mode="signal"><i>🚦</i>إشارة</button>
+      <button data-mode="bump"><i>〰️</i>مطب</button>
       <button data-mode="block"><i>⛔</i>مقفول</button>
     </div>
   </div>
@@ -376,12 +379,14 @@ body.mapfull #mapBig,body.nav #mapBack{display:none}
     <div class="g" id="rptg"></div>
   </div>
   <div id="nside">
+    <button class="rb" id="nback" aria-label="رجوع للخريطة" title="رجوع (الرحلة شغالة)">↩</button>
+    <button class="rb" id="ncomp" aria-label="البوصلة" title="الخريطة على اتجاهك أو الشمال"><svg viewBox="0 0 24 24"><path d="M12 2 7 12h10z" fill="#ea4335"/><path d="M12 22 7 12h10z" fill="#9aa0a6"/></svg></button>
     <button class="rb" id="nmute" aria-label="الصوت"></button>
     <button class="rb" id="nclaude" aria-label="اسأل Claude"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM7 9h10v2H7V9zm6 5H7v-2h6v2zm4-6H7V6h10v2z"/></svg></button>
     <button class="rb pill" id="nreport" aria-label="إبلاغ"><svg viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>إبلاغ</button>
   </div>
   <div id="nspdc"><b id="nspd">٠</b><span>كم/س</span></div>
-  <button id="recenter" hidden>⌖ رجّع على العربية</button>
+  <button id="recenter" hidden>▲ إعادة التوسيط</button>
   <div id="nbot">
     <button class="rb" id="nmenu" aria-label="القايمة"><svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
     <button class="rb" id="nexit" aria-label="إنهاء وحفظ"><svg viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg>إنهاء وحفظ</button>
@@ -767,6 +772,12 @@ function applyTheme(t){                            // فاتح زي جوجل م�
   if (results.length && !navOn) showRoutes(selIdx);
 }
 $('themeBtn').onclick = () => applyTheme(isDark() ? 'light' : 'dark');
+function driveTheme(on){                           // في القيادة: نهار فاتح وليل غامق زي جوجل مابس، من غير ما نغيّر اختيارك
+  let saved = 'dark'; try { saved = localStorage.getItem('theme') || 'dark'; } catch(e){}
+  const want = on ? (isNight() ? 'dark' : 'light') : saved;
+  if (document.documentElement.dataset.theme === want) return;
+  applyTheme(want); try { localStorage.setItem('theme', saved); } catch(e){}
+}
 themeChrome();
 function drawRoutes(list){ routeGeo = {type:'FeatureCollection', features:list.map(r => ({type:'Feature', properties:{c:r.c, w:r.w}, geometry:{type:'LineString', coordinates:r.coords}}))};
   try { const s = map.getSource('routes'); if (s) s.setData(routeGeo); else ensureLayers(); } catch(e){} }
@@ -786,6 +797,7 @@ const poiMarkers = [], blockMarkers = [];
 const hints = {radar:'اضغط على مكان الرادار لتعليمه. اضغط عليه تاني لإلغائه.', toll:'اضغط على مكان الكارتة لتعليمها. اضغط عليها تاني لإلغائها.',
   block:'اضغط على مكان مقفول لتعليمه (24 ساعة). اضغط عليه تاني لإلغائه.', uturn:'اضغط على مكان الملف (يوتيرن) اللي محتاجه فعلياً في الطريق. اضغط عليه تاني لإلغائه.',
   checkpoint:'اضغط على مكان اللجنة/الكمين. اضغط عليه تاني لإلغائه.',
+  signal:'اضغط على مكان إشارة المرور. اضغط عليها تاني لإلغائها.', bump:'اضغط على مكان المطب. اضغط عليه تاني لإلغائه.',
   a:'اضغط على الخريطة لتحديد البداية.', b:'اضغط على الخريطة لتحديد الوجهة.'};
 function setMode(m){
   mode = (mode === m) ? null : m;
@@ -975,7 +987,7 @@ function drawMarks(){
 map.on('click', e => {
   if (!document.body.classList.contains('mapfull') && !navOn && !mode){ setMapFull(true); return; }
   const p = {lat:e.lngLat.lat, lon:e.lngLat.lng};
-  if (mode === 'radar' || mode === 'toll' || mode === 'uturn' || mode === 'checkpoint'){
+  if (mode === 'radar' || mode === 'toll' || mode === 'uturn' || mode === 'checkpoint' || mode === 'signal' || mode === 'bump'){
     const i = myPois.findIndex(x => x.kind === mode && hav(x, p) < 40);
     if (i >= 0) myPois.splice(i, 1); else { myPois.push({...p, kind:mode}); shareReport(mode, p.lat, p.lon); }
     save(); drawMarks();
@@ -1433,9 +1445,20 @@ function speedOf(p){                               // كم/س؛ بعض المت�
   return dt > 0 && dt < 30 ? hav(a, b) / dt * 3.6 : 0;
 }
 let hdFrom = null;
-const CAR_SVG = '<svg viewBox="0 0 44 60"><rect x="5" y="3" width="34" height="54" rx="13" fill="#1a73e8" stroke="#fff" stroke-width="3"/>'
-  + '<path d="M11 19 Q22 12 33 19 L31 27 Q22 24 13 27 Z" fill="#0b1d36"/><rect x="12" y="29" width="20" height="13" rx="3" fill="#3b8bf0"/>'
-  + '<path d="M13 45 Q22 48 31 45 L32 51 Q22 54 12 51 Z" fill="#0b1d36" opacity=".85"/><circle cx="12" cy="7.5" r="2.2" fill="#fff6c4"/><circle cx="32" cy="7.5" r="2.2" fill="#fff6c4"/></svg>';
+const CAR_SVG = '<svg viewBox="0 0 48 72"><defs>'
+  + '<linearGradient id="cb" x1="0" x2="1"><stop offset="0" stop-color="#c9ced6"/><stop offset=".22" stop-color="#ffffff"/><stop offset=".78" stop-color="#ffffff"/><stop offset="1" stop-color="#b9bfc8"/></linearGradient>'
+  + '<linearGradient id="cg" y1="0" y2="1"><stop offset="0" stop-color="#5b8fb9"/><stop offset="1" stop-color="#1f3f5c"/></linearGradient>'
+  + '<radialGradient id="cs"><stop offset=".55" stop-color="#000" stop-opacity=".35"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient></defs>'
+  + '<ellipse cx="24" cy="40" rx="23" ry="31" fill="url(#cs)"/>'
+  + '<rect x="2.5" y="18" width="5" height="9" rx="2" fill="#2b2f36"/><rect x="40.5" y="18" width="5" height="9" rx="2" fill="#2b2f36"/>'
+  + '<rect x="2.5" y="47" width="5" height="10" rx="2" fill="#2b2f36"/><rect x="40.5" y="47" width="5" height="10" rx="2" fill="#2b2f36"/>'
+  + '<path d="M24 3C13 3 7 8 6.5 18L6 56c0 8 6 12 18 12s18-4 18-12l-.5-38C41 8 35 3 24 3Z" fill="url(#cb)" stroke="#9aa1ab" stroke-width="1"/>'
+  + '<path d="M10 23Q24 16 38 23L35.5 33Q24 29.5 12.5 33Z" fill="url(#cg)"/>'
+  + '<path d="M12.5 36Q24 33.5 35.5 36L35 48Q24 46 13 48Z" fill="#eef1f5" stroke="#d3d8df" stroke-width=".8"/>'
+  + '<path d="M13.5 51Q24 53 34.5 51L35.5 59Q24 62 12.5 59Z" fill="url(#cg)" opacity=".9"/>'
+  + '<path d="M4.5 22L1 20.5 1.5 24 6 25Z" fill="#e6e9ee"/><path d="M43.5 22L47 20.5 46.5 24 42 25Z" fill="#e6e9ee"/>'
+  + '<rect x="9" y="5.5" width="8" height="3.2" rx="1.6" fill="#fffbe0"/><rect x="31" y="5.5" width="8" height="3.2" rx="1.6" fill="#fffbe0"/>'
+  + '<rect x="8" y="63" width="9" height="3" rx="1.5" fill="#e53935"/><rect x="31" y="63" width="9" height="3" rx="1.5" fill="#e53935"/></svg>';
 let mCar = null, camFree = 0, camT = 0, carPos = null;
 function carMarker(me){                            // عربية نايمة على الخريطة وبتلف باتجاهك (حتى لو لفّيت الخريطة بإيدك)
   if (!mCar){ const el = mkEl('', 'car'); el.innerHTML = CAR_SVG;
@@ -1444,7 +1467,7 @@ function carMarker(me){                            // عربية نايمة عل
 }
 function camFollow(dur){                           // الكاميرا ورا العربية زي جوجل
   if (!carPos || navMin) return;
-  try { map.easeTo({center:[carPos.lon, carPos.lat], zoom:17, pitch:55, bearing:heading, duration:dur == null ? 800 : dur, padding:{top:280, bottom:60, left:0, right:0}, essential:true}); } catch(e){}
+  try { map.easeTo({center:[carPos.lon, carPos.lat], zoom:17, pitch:northUp ? 0 : 55, bearing:northUp ? 0 : heading, duration:dur == null ? 800 : dur, padding:{top:280, bottom:60, left:0, right:0}, essential:true}); } catch(e){}
 }
 function camUser(){                                // حرّكت الخريطة بإيدك: نسيبها، ونرجع على العربية لوحدنا بعد ٨ ثواني
   if (!navOn || navMin) return;
@@ -1453,12 +1476,30 @@ function camUser(){                                // حرّكت الخريطة 
 function recenter(){ camFree = 0; clearTimeout(camT); $('recenter').hidden = true; camFollow(600); }
 ['dragstart', 'zoomstart', 'rotatestart', 'pitchstart'].forEach(ev => map.on(ev, e => { if (e && e.originalEvent) camUser(); }));
 ['wheel', 'touchstart', 'mousedown'].forEach(ev => map.on(ev, () => camUser()));   // أي لمسة أو زووم بإيدك
+function roadDir(me, h){                           // اتجاه الشارع اللي تحت العربية، لو قريب من اتجاه الـ GPS؛ فالخريطة تبقى على خط الطريق بالظبط
+  try {
+    const c = map.project([me.lon, me.lat]), k = Math.cos(me.lat * Math.PI / 180) * 111320;
+    const fs = map.queryRenderedFeatures([[c.x - 18, c.y - 18], [c.x + 18, c.y + 18]]).filter(f => f.sourceLayer === 'transportation' && f.geometry && /LineString/.test(f.geometry.type));
+    let best = null, bd = 1e9;
+    fs.forEach(f => (f.geometry.type === 'LineString' ? [f.geometry.coordinates] : f.geometry.coordinates).forEach(L => {
+      for (let i = 1; i < L.length; i++){
+        const ax = (L[i-1][0] - me.lon) * k, ay = (L[i-1][1] - me.lat) * 111320, bx = (L[i][0] - me.lon) * k, by = (L[i][1] - me.lat) * 111320;
+        const dx = bx - ax, dy = by - ay, l2 = dx * dx + dy * dy; if (!l2) continue;
+        const t = Math.max(0, Math.min(1, -(ax * dx + ay * dy) / l2)), d = Math.hypot(ax + t * dx, ay + t * dy);
+        if (d < bd){ bd = d; best = (Math.atan2(dx, dy) * 180 / Math.PI + 360) % 360; }
+      }
+    }));
+    if (best == null || bd > 20) return h;
+    const off = x => Math.abs(((x - h + 540) % 360) - 180), r = off(best) <= off(best + 180) ? best : (best + 180) % 360;
+    return off(r) < 30 ? r : h;
+  } catch(e){ return h; }
+}
 function followCar(p, me, spd){                    // الخريطة بتلف مع اتجاه العربية زي جوجل؛ لو المتصفح مش بيبعت heading بنحسبه من الحركة
   let raw = p.coords.heading;
   if (raw == null || isNaN(raw)){ raw = null; if (!hdFrom) hdFrom = me; else if (hav(hdFrom, me) > 12){ raw = brg(hdFrom, me); hdFrom = me; } }
-  if (raw != null && spd > 5){ const d = ((raw - heading + 540) % 360) - 180; heading = (heading + d * 0.6 + 360) % 360; }
+  if (raw != null && spd > 5){ raw = roadDir(me, raw); const d = ((raw - heading + 540) % 360) - 180; heading = (heading + d * 0.6 + 360) % 360; }
   if (mMe){ mMe.remove(); mMe = null; }
-  carPos = me; carMarker(me);
+  carPos = me; carMarker(me); if (!navMin) driveTheme(true);
   if (!camFree) camFollow();
 }
 async function startFree(quiet){                    // قيادة من غير وجهة: تسجيل + تنبيهات + أرقام الطريق علطول
@@ -1694,6 +1735,7 @@ function exitNav(){
   navOn = false; nav = null; lastPos = null; hdFrom = null; $('nnext').hidden = true; overlaySet(null);
   document.body.classList.remove('nav'); $('nav').hidden = true; $('nrad').hidden = true; $('netal').textContent = 'الوصول';
   ['alt', 'ask', 'rpt', 'cl'].forEach(i => $(i).hidden = true);
+  driveTheme(false);
   try { map.resize(); map.easeTo({pitch:0, bearing:0, padding:{top:0, bottom:0, left:0, right:0}, duration:500}); } catch(e){}
   try { speechSynthesis.cancel(); } catch(e){}
   if (mMe){ mMe.remove(); mMe = null; }
@@ -1705,6 +1747,7 @@ $('nexit').onclick = exitNav;
 let navMin = false;                                // شاشة القيادة متخبية والرحلة شغالة (تسجيل وتنبيهات وفقاعة)
 function minimizeNav(){
   if (!navOn || navMin) return;
+  driveTheme(false);
   navMin = true; document.body.classList.remove('nav'); $('nav').hidden = true; $('recenter').hidden = true; $('navPill').hidden = false;
   document.body.classList.remove('mapfull');
   try { map.resize(); map.easeTo({center:carPos ? [carPos.lon, carPos.lat] : map.getCenter(), pitch:0, bearing:0, zoom:15, padding:{top:0, bottom:0, left:0, right:0}, duration:400}); } catch(e){}
@@ -1741,6 +1784,10 @@ if (NATIVE && NP.App) NP.App.addListener('appStateChange', st => { if (st.isActi
 if (!load('onboarded', false) && !trips.length) obShow();
 $('navPill').onclick = resumeNav;
 $('recenter').onclick = recenter;
+$('nback').onclick = minimizeNav;
+let northUp = false;                               // البوصلة: على اتجاهك (زي جوجل) أو الشمال فوق
+$('ncomp').onclick = () => { northUp = !northUp; $('ncomp').classList.toggle('on', northUp); speak(northUp ? 'الشمال فوق' : 'الخريطة على اتجاهك'); recenter(); };
+map.on('rotate', () => { try { $('ncomp').querySelector('svg').style.transform = 'rotate(' + (-map.getBearing()) + 'deg)'; } catch(e){} });
 $('freeGo').onclick = () => { if (navOn){ resumeNav(); return; } ghost = null; startFree(); };
 const IC_VOL = '<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>';
 const IC_MUTE = '<svg viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>';
@@ -1748,7 +1795,7 @@ $('nmute').innerHTML = IC_VOL;
 $('nmute').onclick = () => { voiceOn = !voiceOn; $('nmute').innerHTML = voiceOn ? IC_VOL : IC_MUTE; if (!voiceOn){ sayQ.length = 0; try { speechSynthesis.cancel(); } catch(e){} if (NATIVE && NP.TextToSpeech) NP.TextToSpeech.stop().catch(() => {}); } };
 
 /* البلاغات أثناء القيادة */
-const REPORTS = [['radar', '📷 رادار'], ['mradar', '🚔 رادار متحرك'], ['toll', '💳 كارتة'], ['jam', '🚗 زحمة'], ['accident', '💥 حادثة'], ['block', '⛔ مقفول'], ['checkpoint', '🚓 لجنة'], ['note', '📝 مكان/ملاحظة'], ['alt', '🔀 طريق تاني']];
+const REPORTS = [['radar', '📷 رادار'], ['mradar', '🚔 رادار متحرك'], ['toll', '💳 كارتة'], ['jam', '🚗 زحمة'], ['accident', '💥 حادثة'], ['block', '⛔ مقفول'], ['checkpoint', '🚓 لجنة'], ['signal', '🚦 إشارة'], ['bump', '〰️ مطب'], ['badroad', '🕳️ طريق مكسر'], ['ulong', '↪️ يوتيرن طويل'], ['note', '📝 مكان/ملاحظة'], ['alt', '🔀 طريق تاني']];
 function fillSheet(id, withMic){
   $(id).innerHTML = REPORTS.map(([k, l]) => `<button data-r="${k}">${l}</button>`).join('') + (withMic ? '<button data-r="mic">🎤 قول</button>' : '') + (id === 'askg' ? '<button data-r="none">مفيش حاجة</button>' : '');
   $(id).querySelectorAll('[data-r]').forEach(b => b.onclick = () => {
