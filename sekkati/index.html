@@ -300,7 +300,7 @@ body.mapfull #mapBig,body.nav #mapBack{display:none}
     <label style="display:flex;gap:8px;align-items:center;margin-bottom:8px;font-size:15px"><input type="checkbox" id="mosqv" style="width:20px;height:20px"> 🕌 قولّي على المساجد اللي قدامي وقت الصلاة</label>
     <div class="note" id="gemvNote" style="margin-bottom:8px"></div>
     <select id="vsel"></select>
-    <div class="row"><button class="sec" id="vtest">جرّب الصوت</button><button class="sec" id="vset" hidden>إعدادات محرك الصوت</button></div>
+    <div class="row"><button class="sec" id="vtest">جرّب الصوت</button><button class="sec" id="vall">🔁 اسمع كل الأصوات</button><button class="sec" id="vset" hidden>إعدادات محرك الصوت</button></div>
     <div class="note" style="margin-top:6px">لو الصوت وحش: من "إعدادات محرك الصوت" اختار محرك Google ونزّل اللغة العربية، وبعدين اختار هنا الصوت اللي جنبه "أونلاين أوضح" أو ★.</div>
   </div>
 
@@ -1320,14 +1320,14 @@ function voiceInfo(){
 $('gemv').onchange = () => { gemVoice = $('gemv').checked; put('gemvoice', gemVoice); };
 voiceInfo();
 let voiceList = [], voicePick = null;            // التطبيق: رقم الصوت في قايمة المحرك؛ المتصفح: اسمه
-const voiceScore = v => (/arz|-eg/i.test(v.name + ' ' + v.lang) ? 30 : 0) + (v.net ? 20 : 0) + (/network|neural|wavenet|natural/i.test(v.name) ? 10 : 0);
+const voiceScore = v => (/male|shakir|hamed|naayf|majed/i.test(v.name) && !/female/i.test(v.name) ? 40 : 0) + (/arz|-eg/i.test(v.name + ' ' + v.lang) ? 30 : 0) + (v.net ? 20 : 0) + (/network|neural|wavenet|natural/i.test(v.name) ? 10 : 0);
 function fillVoices(){
   let saved = null; try { saved = localStorage.getItem('voice'); } catch(e){}
   const best = voiceList.slice().sort((a, b) => voiceScore(b) - voiceScore(a))[0];
   const cur = voiceList.find(v => String(v.i) === saved) || best || null;
   voicePick = cur ? cur.i : null;
   $('vsel').innerHTML = voiceList.length
-    ? voiceList.map(v => `<option value="${esc(String(v.i))}"${cur && v.i === cur.i ? ' selected' : ''}>${esc(v.name)} (${esc(v.lang)})${v.net ? ' · أونلاين أوضح' : ''}${best && v.i === best.i ? ' ★' : ''}</option>`).join('')
+    ? voiceList.map((v, n) => `<option value="${esc(String(v.i))}"${cur && v.i === cur.i ? ' selected' : ''}>${arab(n + 1)}. ${esc(v.name)} (${esc(v.lang)})${v.net ? ' · أونلاين أوضح' : ''}${best && v.i === best.i ? ' ★' : ''}</option>`).join('')
     : '<option>مفيش أصوات عربي متسطبة، افتح إعدادات محرك الصوت</option>';
 }
 function loadVoices(){
@@ -1348,6 +1348,12 @@ $('vsel').onchange = () => {
   speak('ده الصوت الجديد. رادار بعد خمسمية متر');
 };
 $('vtest').onclick = () => speak('رادار بعد خمسمية متر، الحد ستين. هدّي السرعة');
+$('vall').onclick = () => {                        // كل صوت بيقول رقمه، فتختار الراجل من القايمة بالرقم
+  if (!voiceList.length){ speak('مفيش أصوات عربي، افتح إعدادات محرك الصوت ونزّل العربي'); return; }
+  const keep = voicePick, g = gemVoice; gemVoice = false;
+  voicePick = voiceList[0].i;
+  voiceList.forEach((v, n) => speak('صوت رقم ' + (n + 1), () => { voicePick = (voiceList[n + 1] || {i:keep}).i; if (n === voiceList.length - 1){ voicePick = keep; gemVoice = g; } }));
+};
 if (NATIVE && NP.Bubble){ $('vset').hidden = false; $('vset').onclick = () => NP.Bubble.openTtsSettings().catch(() => {}); }
 loadVoices();
 if (!NATIVE && 'speechSynthesis' in window) speechSynthesis.addEventListener('voiceschanged', loadVoices);
