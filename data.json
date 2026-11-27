@@ -1,7 +1,157 @@
 {
- "updated": "2026-11-27T01:43:34Z",
+ "updated": "2026-11-27T12:11:14Z",
  "demo": false,
  "items": [
+  {
+   "id": "yt-ZGX2NLLLYkY",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-27T10:57:41Z",
+   "t": "How Tesla Generates Its Third-Person Reality View",
+   "s": "Join My Newsletter for Regular AI Updates 👇🏼 https://forwardfuture.com My Links 🔗 👉🏻 X: https://x.com/matthewberman 👉🏻 Forward Future X: https://x.co…",
+   "tags": [
+    "Matthew Berman"
+   ],
+   "url": "https://www.youtube.com/shorts/ZGX2NLLLYkY",
+   "ta": "كيف تولد تسلا وجهة نظرها الواقعية من منظور الشخص الثالث",
+   "sa": "انضم إلى رسالتي الإخبارية للحصول على تحديثات منتظمة للذكاء الاصطناعي 👇🏼 https://forwardfuture.com روابطي 🔗 👉🏻 X: https://x.com/matthewberman 👉🏻 Forward Future X: https://x.co..."
+  },
+  {
+   "id": "gh-1474237648",
+   "cat": "arch",
+   "src": "GitHub",
+   "ts": "2026-11-27T09:36:24Z",
+   "t": "Nuvits/photo-to-revit: MCP server that turns a single photo, render or screenshot into a Revit 2024 model (Claud…",
+   "s": "0 نجمة، لغة JavaScript",
+   "tags": [
+    "Add-in"
+   ],
+   "url": "https://github.com/Nuvits/photo-to-revit",
+   "ta": "Nuvits/photo-to-revit: خادم MCP الذي يحول صورة واحدة أو عرض أو لقطة شاشة إلى نموذج Revit 2024 (كلود...",
+   "h": "تحويل الصور إلى Revit 2024 عبر MCP",
+   "x": "أداة جديدة تتيح تحويل صور الرندرات أو الاسكرين شوت إلى موديل Revit باستخدام سيرفر MCP.",
+   "tg": [
+    "Revit",
+    "MCP",
+    "BIM"
+   ],
+   "tp": "arch"
+  },
+  {
+   "id": "yt-u6UYsl-KEoc",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-27T08:42:30Z",
+   "t": "DeepMind’s New AI Just Changed The AI Race",
+   "s": "❤️ Check out Lambda here and sign up for their GPU Cloud: https://lambda.com/papers 📝 The security report is available here: https://storage.googleap…",
+   "tags": [
+    "Two Minute Papers"
+   ],
+   "url": "https://www.youtube.com/watch?v=u6UYsl-KEoc"
+  },
+  {
+   "id": "gn-fieldinsight③theevolutionofconstructionaivlmsagentsanddigita",
+   "cat": "arch",
+   "src": "Korea IT Times",
+   "ts": "2026-11-27T08:29:00Z",
+   "t": "Field Insight ③ The Evolution of Construction AI: VLMs, Agents, and Digital Twins",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9LLVc2V2NNUDN0azFreEltcTZZNkpKVXFyeXUzSTlKN2prUWtEVlNOVmdjU21lMGppaHF4VG52a3padUNjNXhuMDhHT1gyTW5OenRIU0N6Wjk2TWxrMXpIejRGaVU4bWVROW1LcHRPYmc?oc=5",
+   "h": "تطور الـ AI في الإنشاءات: VLMs و Agents",
+   "x": "نظرة على مستقبل التشييد مع تكامل الرؤية الحاسوبية والـ Agents والـ Digital Twins.",
+   "tg": [
+    "BIM",
+    "Agents",
+    "Digital Twins"
+   ],
+   "tp": "arch"
+  },
+  {
+   "id": "hn-50664325",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-27T08:28:08Z",
+   "t": "Claude sabotaging SOTA ML research tasks",
+   "s": "131 نقطة، 86 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://twitter.com/RealAstropulse/status/2126119408997466389",
+   "url2": "https://news.ycombinator.com/item?id=50664325"
+  },
+  {
+   "id": "yt-JKmoj3RcnZY",
+   "cat": "agents",
+   "src": "YouTube",
+   "ts": "2026-11-27T07:56:36Z",
+   "t": "It's Happening... AI Could Break the Internet as We Know It",
+   "s": "Black Friday sale, get up to 75% off Higgsfield subscription: https://higgsfield.ai/s/magi-2-intheworldofai-CvDMkX 🚨 Could AI break the encryption pr…",
+   "tags": [
+    "WorldofAI"
+   ],
+   "url": "https://www.youtube.com/watch?v=JKmoj3RcnZY"
+  },
+  {
+   "id": "gn-ollamacloudpricing2026planslimitsandthefreetierthatdisappear",
+   "cat": "agents",
+   "src": "Fello AI",
+   "ts": "2026-11-27T07:06:15Z",
+   "t": "Ollama Cloud Pricing 2026: Plans, Limits and the Free Tier That Disappeared",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlWm5JZE5NNzhab3hJZ3hvN3FiMTFtVW9yOWVQWDFic053TGRMZnhxbUxVMmNBX2R5Y2xRSGJBWTJ2YkZoM0RfMg?oc=5"
+  },
+  {
+   "id": "gn-agenticaigovernanceexposedwhyautonomouscodingagentsneedrunti",
+   "cat": "agents",
+   "src": "Howl.Link",
+   "ts": "2026-11-27T05:51:41Z",
+   "t": "Agentic AI Governance Exposed: Why Autonomous Coding Agents Need Runtime Sandboxes, Strict MCP Permissions, and Quality Engineering + Video",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTFBsemlvXzZHcnJ2SUs3eEgzazhuZG9fWUdVTFVVaUdOVXZjUGpMQUszRnMxMXY3Y00yVldJ?oc=5",
+   "h": "حوكمة الـ Agentic AI وصلاحيات الـ MCP",
+   "x": "لماذا تحتاج وكلاء الكود المستقلين إلى بيئات عزل وسيرفرات MCP بصلاحيات صارمة؟",
+   "tg": [
+    "Agents",
+    "MCP",
+    "Security"
+   ],
+   "tp": "agents"
+  },
+  {
+   "id": "hn-50662933",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-27T04:56:18Z",
+   "t": "\"What's Claude's Fursona?\" and Other Questions",
+   "s": "96 نقطة، 76 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://herecomesthemoon.net/2026/11/whats-claudes-fursona/",
+   "url2": "https://news.ycombinator.com/item?id=50662933"
+  },
+  {
+   "id": "hn-50662164",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-27T02:46:19Z",
+   "t": "Linus Torvalds: \"Tell Your AI Companion to Get Its Act Together\"",
+   "s": "18 نقطة، 0 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.phoronix.com/news/Linus-Torvalds-EXT4-AI-Big",
+   "url2": "https://news.ycombinator.com/item?id=50662164"
+  },
   {
    "id": "yt-4omPdu3mAEE",
    "cat": "reels",
@@ -222,7 +372,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=ywmqJ5QZ5N4",
    "ta": "تعلم Reactjs #33 - ما هي الدولة؟",
-   "sa": "ما هي دروس وواجبات الدولة: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+   "sa": "ما هي دروس وواجبات الدولة: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
+   "h": "فهم الـ State في Reactjs",
+   "x": "درس عملي من الزيرو لفهم إدارة الـ State في تطبيقات الـ Web.",
+   "tg": [
+    "React",
+    "Frontend",
+    "JavaScript"
+   ],
+   "tp": "courses"
   },
   {
    "id": "hn-50658170",
@@ -286,7 +444,15 @@
    ],
    "url": "https://www.baldurbjarnason.com/2026/08-ai-might-be-the-end-of-our-careers/",
    "url2": "https://news.ycombinator.com/item?id=50657452",
-   "ta": "قد يكون \"الذكاء الاصطناعي\" نهاية حياتنا المهنية"
+   "ta": "قد يكون \"الذكاء الاصطناعي\" نهاية حياتنا المهنية",
+   "h": "هل الـ AI يهدد مستقبلنا المهني؟",
+   "x": "نقاش تقني حول تأثير الذكاء الاصطناعي على مستقبل الوظائف وكيف نطور أنفسنا.",
+   "tg": [
+    "AI",
+    "Future",
+    "Career"
+   ],
+   "tp": "news"
   },
   {
    "id": "hn-50657265",
@@ -336,7 +502,15 @@
    ],
    "url": "https://github.com/rxliuli/sim-drop",
    "url2": "https://news.ycombinator.com/item?id=50657070",
-   "ta": "إظهار HN: SimDrop – تشغيل محاكيات iOS في الشريط الجانبي لـ macOS Finder"
+   "ta": "إظهار HN: SimDrop – تشغيل محاكيات iOS في الشريط الجانبي لـ macOS Finder",
+   "h": "تشغيل الـ iOS Simulators من الـ Finder",
+   "x": "أداة خفيفة لتشغيل الـ iOS simulators مباشرة من شريط الـ macOS Finder.",
+   "tg": [
+    "iOS",
+    "macOS",
+    "Productivity"
+   ],
+   "tp": "news"
   },
   {
    "id": "gn-claudecodevscodex840vs210permilliontokens",
@@ -385,7 +559,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=DLN7diHRud0",
    "ta": "تعلم Reactjs #32 - نشر الحدث",
-   "sa": "دروس وواجبات نشر الحدث: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+   "sa": "دروس وواجبات نشر الحدث: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
+   "h": "شرح الـ Event Propagation في Reactjs",
+   "x": "فهم كيفية انتشار الـ Events والتعامل معها بكفاءة في الكود.",
+   "tg": [
+    "React",
+    "JavaScript"
+   ],
+   "tp": "courses"
   },
   {
    "id": "yt-EFwc9fDexLw",
@@ -399,7 +580,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=EFwc9fDexLw",
    "ta": "تعلم Reactjs #31 - فهم كائن الحدث",
-   "sa": "دروس وواجبات فهم كائن الحدث: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+   "sa": "دروس وواجبات فهم كائن الحدث: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
+   "h": "التعامل مع الـ Event Object في Reactjs",
+   "x": "شرح تفصيلي لفهم الـ Event Object واستخدامه في مشاريع الـ Web.",
+   "tg": [
+    "React",
+    "JavaScript"
+   ],
+   "tp": "courses"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov26jackdespainzhou",
@@ -446,6 +634,47 @@
    "tg": [
     "Claude",
     "AI"
+   ],
+   "tp": "agents"
+  },
+  {
+   "id": "hn-50655243",
+   "cat": "agents",
+   "src": "Hacker News",
+   "ts": "2026-11-26T13:43:14Z",
+   "t": "Back up your Claude Code sessions and use them on any machine",
+   "s": "26 نقطة، 6 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://session-vault.dev/",
+   "url2": "https://news.ycombinator.com/item?id=50655243",
+   "h": "انسخ جلسات Claude Code واشتغل بيها في أي مكان",
+   "x": "تقدر دلوقتي تعمل backup لجلسات Claude Code وتستخدمها على أي جهاز بكل سهولة.",
+   "tg": [
+    "Claude Code",
+    "agents",
+    "backup"
+   ],
+   "tp": "agents"
+  },
+  {
+   "id": "gn-anthropicsclaudecannowbuildinstallablewindowsandmacappswitho",
+   "cat": "agents",
+   "src": "Wccftech",
+   "ts": "2026-11-26T13:34:01Z",
+   "t": "Anthropic’s Claude Can Now Build Installable Windows And Mac Apps Without A Single Line Of Code, Even On Its Free Plan",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNc3lpYTI3YlRsMFhoaWNjSlZqa2ZIUnBQZWVZNTZIY2JZR2F3LVJaU19wWGdqdm9NUXBNdGJHSmEtTDU3cDR3akZ2aXVkc3dxSFV1TDkzRndNTFdJVUtsTkItamJyMk1kRHhYdWtJSXBSTEpEbVZ3UUFZS0w5YUFfc2dielZKNGZBcUFSM0pZakxGb2xuV0R1WnFfY0pCN0RZUjFlVmFIUjlGSmxneU15aC1QNmJqZ3lsWTUxV3kxTkFJd0hKZFVIcFczNVk5MnlBeDVYNdIB2gFBVV95cUxQaVNta1lSUTVVTzlxMVEzUDV4Vkx5Z1FuZ3pIU3BObi1pamwwQmJObE1GbVRlc2ZZWWl1OE5IZnZNeUduWUx3NURHRG9qcEg4NUpMMEV5LVY1dGVaOVhlUDZLVDNrcnh3Z1U0ZlBCSVFxSVdzbDV5S210NU1tWVNzdXRteXRqYzdROEtOaWhrX250ZWdyU0FnRGo2aDl3Q2pNT0J5TU5TckF6eTRLd0FudDhvOEtlRDFBSVdFc3VUSW5YR2puRk9fNFZxUDB3bGE1Qy0wcFlPZ3BjQQ?oc=5",
+   "h": "Claude يبني تطبيقات ديسكتاوب بدون كود مجاناً",
+   "x": "أنشئ تطبيقات قابلة للتثبيت على Windows وMac باستخدام Claude حتى على الخطة المجانية.",
+   "tg": [
+    "Claude",
+    "AI",
+    "apps"
    ],
    "tp": "agents"
   },
@@ -541,6 +770,46 @@
     "Agents"
    ],
    "tp": "mcp"
+  },
+  {
+   "id": "gn-randomforestpredictsconstructioncostdeviationswithhighaccura",
+   "cat": "arch",
+   "src": "Bioengineer.org",
+   "ts": "2026-11-26T09:25:42Z",
+   "t": "Random Forest Predicts Construction Cost Deviations With High Accuracy in Digital Twin Framework",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxORUN1Qzc0aUl5eURUNVFCZlpiMC1UcnR3Q3N1RzdoTlZuODFDTGZwX2IybEVxVkQwc2U4STNhdHY2NjBqUldkRWpxQ09OeE1FOWFmbEdIMVJEcURteTZ2UkpJSGxLWGhFZHN2Y3ZrSnRsbnd6QldmSjN1VjJ3Z1puLTloRVcwQ3NsamxxR29uTU11d0VaWHV1S0tfVGhCeTMxQ3FOVktCdVpNaUJhb21ISDhaUENuWFdMRVRZNml3?oc=5",
+   "h": "توقع انحرافات تكلفة البناء بالذكاء الاصطناعي",
+   "x": "استخدام Random Forest وDigital Twin لتوقع انحرافات التكاليف بدقة عالية في مشاريع التشييد.",
+   "tg": [
+    "Digital Twin",
+    "BIM",
+    "AI"
+   ],
+   "tp": "arch"
+  },
+  {
+   "id": "gn-autodeskandneilsoftjoinforcestosetupaecocentreofexcellencein",
+   "cat": "arch",
+   "src": "Indian Chemical News",
+   "ts": "2026-11-26T08:52:50Z",
+   "t": "Autodesk and Neilsoft join forces to set up AECO Centre of Excellence in Pune",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQN2kwUkEwTlZBRENsRElUdlR2dFpPRm05ZS1rOGdlRDZsZzE3VDVFYWJtTmVMYlpQYTlRWGlqVXB0RERicjFRRjhqcV9oSWtPVjlVc0k5cGVxalFwZTVlTTRfa0Z2aDZFNFI5NHVLRE1sZ0NIM05VamJoSlA5MUotZS1fN0JpNFc3MW51eTBFaHd1Y29yOXM0TjFBRHhpaTNndW04S3F1ZzBCM013Yl92NDZ5VF9YenVQejRNZ2NUa3FzWlp20gHLAUFVX3lxTE5haXVIdGlfTl9hWXZJR05aX3hKSUtzRDZKUWpZUUFmUHV0cUNfUVBzc005S1ZPY1pJSmxQSlNrdWFIeXBrS0lxNVpMTEg2d2dNNURMVlBIbzlOaUtmQ2hVU205YlVJT3RQOXdlUGZWdDBjc2FfemtmYUtCWDZrQm5FWXl4eVZrd0lmZHQ3WklCQ2dSNUtZSVFEM3NId2JnazFpV1F6ay1KeTFfb09CampyQkpaNTBON3BpZklmR1Noa1hhT0htWEgzRFhr?oc=5",
+   "h": "مركز تميز جديد لـ AECO من Autodesk وNeilsoft",
+   "x": "شراكة استراتيجية لإنشاء مركز تميز لقطاع الـ AECO في الهند لدعم الابتكار في البناء.",
+   "tg": [
+    "Autodesk",
+    "AECO",
+    "BIM"
+   ],
+   "tp": "arch"
   },
   {
    "id": "gn-aiconstructionprojectchecksthevalueisinfinishingthejob",
@@ -972,7 +1241,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=C6DENY3rgqg",
    "ta": "لقد كان لنا في النشر",
-   "sa": "لقد قمت بنشرنا. ❤️ نحن ممتنون لعملائنا وكل ما نبنيه معًا. شكرا لثقتكم بنا ومشاركتنا ما لديكم..."
+   "sa": "لقد قمت بنشرنا. ❤️ نحن ممتنون لعملائنا وكل ما نبنيه معًا. شكرا لثقتكم بنا ومشاركتنا ما لديكم...",
+   "h": "شكرًا لثقة عملائنا في حلولنا التقنية",
+   "x": "احتفالنا بالعملاء ومشاركتهم رحلة نشر الـ deployed applications بنجاح.",
+   "tg": [
+    "Deployment",
+    "Tech"
+   ],
+   "tp": "news"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov25scottaaronson",
@@ -985,7 +1261,14 @@
     "مدونة"
    ],
    "url": "https://simonwillison.net/2026/Nov/25/scott-aaronson/",
-   "ta": "نقلا عن سكوت آرونسون"
+   "ta": "نقلا عن سكوت آرونسون",
+   "h": "اقتباسات جديدة من Scott Aaronson",
+   "x": "رؤى وتحليلات مفيدة تهم مطوري الـ agents وأنظمة الذكاء الاصطناعي.",
+   "tg": [
+    "AI",
+    "Agents"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50648823",
@@ -1063,7 +1346,14 @@
    ],
    "url": "https://www.youtube.com/shorts/nMPyC3s4Q-0",
    "ta": "ماذا يفعلون في القطب الشمالي؟!",
-   "sa": "انضم إلى رسالتي الإخبارية للحصول على تحديثات منتظمة للذكاء الاصطناعي 👇🏼 https://forwardfuture.com روابطي 🔗 👉🏻 X: https://x.com/matthewberman 👉🏻 Forward Future X: https://x.co..."
+   "sa": "انضم إلى رسالتي الإخبارية للحصول على تحديثات منتظمة للذكاء الاصطناعي 👇🏼 https://forwardfuture.com روابطي 🔗 👉🏻 X: https://x.com/matthewberman 👉🏻 Forward Future X: https://x.co...",
+   "h": "تطورات مثيرة للذكاء الاصطناعي في القطب الشمالي",
+   "x": "نظرة سريعة على أحدث استخدامات الـ AI في بيئات قاسية وغير تقليدية.",
+   "tg": [
+    "AI",
+    "Future"
+   ],
+   "tp": "news"
   },
   {
    "id": "hn-50647712",
@@ -1219,7 +1509,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=ehRNEYZSbdk",
    "ta": "تعلم Reactjs #30 - تمرير الوسيطات إلى معالجات الأحداث",
-   "sa": "تمرير الوسيطات إلى دروس وواجبات معالجات الأحداث: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+   "sa": "تمرير الوسيطات إلى دروس وواجبات معالجات الأحداث: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
+   "h": "درس جديد في React.js لإدارة الأحداث",
+   "x": "شرح عملي لطريقة Passing Arguments To Event Handlers في دورة React.",
+   "tg": [
+    "React",
+    "Code",
+    "Courses"
+   ],
+   "tp": "courses"
   },
   {
    "id": "yt-PY5d-_fycso",
@@ -1297,7 +1595,14 @@
    "tags": [
     "AI + AEC"
    ],
-   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPMDFYa1JJVkpkOGRnTXB2aEdOdmhKMEQ1dlAwbjdUR3pFdlozTkFmMUVWNTRFTXJtRnFoVU9YZHhNXzBmS0k5LUNnUmd0UU52ZHpNOFd3ZjdBajBGcUxTMFAxbDdFRjlSUS1Md3NiZWlKekRGb0E0X2h2RVBxcWVPdnR5ejFBVU5QTUtpS2Z0WlcyaGtTY3FBdTVCamdwSzJhNG93Y2tHcUYxMWhyRkdIeVVvaWZHdlVEWnZhS0lzOW8wOXhq?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPMDFYa1JJVkpkOGRnTXB2aEdOdmhKMEQ1dlAwbjdUR3pFdlozTkFmMUVWNTRFTXJtRnFoVU9YZHhNXzBmS0k5LUNnUmd0UU52ZHpNOFd3ZjdBajBGcUxTMFAxbDdFRjlSUS1Md3NiZWlKekRGb0E0X2h2RVBxcWVPdnR5ejFBVU5QTUtpS2Z0WlcyaGtTY3FBdTVCamdwSzJhNG93Y2tHcUYxMWhyRkdIeVVvaWZHdlVEWnZhS0lzOW8wOXhq?oc=5",
+   "h": "11 خرافة شائعة حول هندسة الـ AI",
+   "x": "تصحيح مفاهيم خاطئة حول تصميم بنيات وأنظمة الذكاء الاصطناعي المختلفة.",
+   "tg": [
+    "AI",
+    "Architecture"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-tf_cT3AvMXw",
@@ -1368,7 +1673,14 @@
    ],
    "url": "https://www.youtube.com/watch?v=A4UNP-axGHU",
    "ta": "كيف يمكن لنقطتك أن تحافظ على تقدم العمل أثناء غيابك",
-   "sa": "حتى عندما تبتعد لقضاء العطلات، فإن العمل لا يتوقف دائمًا. نقطتك يمكن أن تساعد. يشرح ريموند كيف تراقب نقطته المشروع المستمر ..."
+   "sa": "حتى عندما تبتعد لقضاء العطلات، فإن العمل لا يتوقف دائمًا. نقطتك يمكن أن تساعد. يشرح ريموند كيف تراقب نقطته المشروع المستمر ...",
+   "h": "شغل الـ agent وأنت في إجازة",
+   "x": "خليه يتابع مشاريعك الهندسية ويضمن استمرارية الشغل وأنت بعيد عن اللاب.",
+   "tg": [
+    "Agents",
+    "Workflow"
+   ],
+   "tp": "agents"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov25datasettecharts",
@@ -1598,7 +1910,14 @@
    ],
    "url": "https://news.ycombinator.com/item?id=50643767",
    "url2": "",
-   "ta": "اسأل HN: أين توجد كل البرامج الرائعة التي تم إنشاؤها بواسطة الذكاء الاصطناعي؟"
+   "ta": "اسأل HN: أين توجد كل البرامج الرائعة التي تم إنشاؤها بواسطة الذكاء الاصطناعي؟",
+   "h": "فين السوفتوير الخرافي بالـ AI؟",
+   "x": "نقاش تقني ممتع بيدور حوالين المستوى الحقيقي للبرمجيات اللي بيولدها الذكاء الاصطناعي.",
+   "tg": [
+    "AI",
+    "Software"
+   ],
+   "tp": "news"
   },
   {
    "id": "gn-claudecodesettingslocaljsonsecretshitdockerhub",
@@ -1654,7 +1973,13 @@
    ],
    "url": "https://lemire.me/blog/2026/11/02/default-and-braces-are-not-the-same-constructor/",
    "url2": "https://news.ycombinator.com/item?id=50643199",
-   "ta": "في C++، = default و{} ليسا نفس المُنشئ"
+   "ta": "في C++، = default و{} ليسا نفس المُنشئ",
+   "h": "الفرقة بين = default و {} في C++",
+   "x": "تفاصيل برمجية دقيقة في الـ constructors تهم أي مهندس بيطور أدوات أو Addins.",
+   "tg": [
+    "C++",
+    "Code"
+   ]
   },
   {
    "id": "hn-50643129",
@@ -1755,6 +2080,18 @@
    "sa": "يمكن أن تساعدك الشؤون المالية في ChatGPT في الحصول على صورة أوضح لإنفاقك وإيجاد طرق لإحراز تقدم نحو أهدافك المالية. في هذا الفيديو، نحن…"
   },
   {
+   "id": "gn-autodeskq3earningscalldetailshigheroutlookandrenewaltest",
+   "cat": "arch",
+   "src": "TradingView",
+   "ts": "2026-11-25T14:00:00Z",
+   "t": "Autodesk Q3 Earnings Call Details Higher Outlook and Renewal Test",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQUktYZzVncTlOc3NSaWREQk5BUjF2RVlhbldYM2RYVU1aZFdqSFJ6aTBPV3AzMFBOdmJGRl9mMndIa19MNnBQTUdHWndQZnpDSVhZNWxrcFJhemduM25UaGJldXRCb0UzSUc5MFQ0Q1JNNTg5amVoWDQtSmxUU2ZSbFVtNFpSU3hkQjl2UUppNmlLT041cVpQT192TzJVWGg2MG9jQl8tVks2aWhGbi04SGRlTVdMMDlkMkN2dW5B?oc=5"
+  },
+  {
    "id": "yt-pjVTmmIpb_I",
    "cat": "long",
    "src": "YouTube",
@@ -1807,7 +2144,27 @@
    ],
    "url": "https://www.youtube.com/watch?v=HYrV8gKR65c",
    "ta": "تحليل الموقع لتصميم الفرص مع Rhino وRhinoAI | S3 E1 P2 | سلسلة استوديو وحيد القرن",
-   "sa": "S3 E1 P2 | قم بالرد على النقد \"المشروع لا يستجيب للمناطق المحيطة به\": قم بتحويل تحليل الموقع إلى فرص تصميم مع Rhino. موقع…"
+   "sa": "S3 E1 P2 | قم بالرد على النقد \"المشروع لا يستجيب للمناطق المحيطة به\": قم بتحويل تحليل الموقع إلى فرص تصميم مع Rhino. موقع…",
+   "h": "دمج تحليل الموقع مع التصميم عبر RhinoAI",
+   "x": "إزاي تحول Site Analysis لفرص تصميم حقيقية في مشاريعك المعمارية باستخدام Rhino وRhinoAI.",
+   "tg": [
+    "RhinoAI",
+    "SiteAnalysis",
+    "Architecture"
+   ],
+   "tp": "arch"
+  },
+  {
+   "id": "gh-1471735464",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-25T12:17:04Z",
+   "t": "zds-xiaoxin/stardust: 星尘 Agent — 中文 AI Agent 桌面工作台 / Stardust Agent — a desktop workbench for AI coding agents",
+   "s": "38 نجمة، لغة TypeScript",
+   "tags": [
+    "جديد كلياً"
+   ],
+   "url": "https://github.com/zds-xiaoxin/stardust"
   },
   {
    "id": "hn-50641373",
@@ -1911,6 +2268,18 @@
     "Agents"
    ],
    "tp": "agents"
+  },
+  {
+   "id": "gn-robotssoundfirealarmsandairbagspreventfallsphysicalaitransfo",
+   "cat": "arch",
+   "src": "BigGo Finance",
+   "ts": "2026-11-25T08:02:28Z",
+   "t": "Robots Sound Fire Alarms and Airbags Prevent Falls: Physical AI Transforms South Korean Construction Sites",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1mNmRpcHZwUnMyTl8tMnJDV2h5MXU1Y1BzdzVYR0M1am9YNFQ2eEhvcGdNMEpJU0xERnRmSkMtQS10N09FSTBZQ0VWWE5hRG1MRkM5U1BMNGxPRWpsaFlfTEhnbzJvUkVUYmk1YjlmbjYzUDJnU1E?oc=5"
   },
   {
    "id": "hn-50639781",
@@ -2202,6 +2571,18 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxON0FMMTZtT0V1dmZYRGxZcVZvR05jbHpKeW9vQjVoQUE2dFpHT2VDYm5hclRtMFZ0WVRaZTVuU2ZVdWlIM3B3cTlyanllS0JHYkRZQjBQSFRrcHExTVY2bTQ0dkd6cVlrZ01ZOVowWGlHWUl5NFphdWlOME1XSVVNclNURllHbTBIUF9WTTcya1dJTXF1ZWt1WGlyZ3c4T0FTV1ZOZE5RRE93c1h5?oc=5",
    "ta": "ما قالته شركة Autodesk (ADSK) في مكالمة أرباح الربع الثالث"
+  },
+  {
+   "id": "gn-autodeskq32027earningscallautodeskraisesfullyearrevenueoutlo",
+   "cat": "arch",
+   "src": "BigGo Finance",
+   "ts": "2026-11-25T01:04:00Z",
+   "t": "[Autodesk Q3 2027 Earnings Call] Autodesk Raises Full-Year Revenue Outlook to $8.368 Billion After Q3 Beat; MaintainX Contributes $33 Million in First Quarter",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5rcWc3QUpZbi1OR1ZjdVNPT2cxejNSc1dOWGVNcVc0U1ZIeEM0eEhFSlZELVRseXl3cVRueU9yRjB0enFzVmMxZWl2RGhNN2ZVTEZkeW1IUmFiYnpZRkE?oc=5"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov24llminflectionpoints",
@@ -3872,6 +4253,18 @@
    "sa": "السكك الحديدية هي الطريقة الأسهل لنشر البرامج: https://railway.com/?referralCode=fireship قامت Google للتو بإسقاط Gemini 4 Neon، وهو نموذج من الطبقة المتوسطة..."
   },
   {
+   "id": "gh-1469172784",
+   "cat": "agents",
+   "src": "GitHub",
+   "ts": "2026-11-23T18:46:31Z",
+   "t": "duzhenxun/pop-agent: PopAgent local web UI for your coding agents: watch the reasoning stream, cut in with a c…",
+   "s": "146 نجمة، لغة TypeScript",
+   "tags": [
+    "جديد كلياً"
+   ],
+   "url": "https://github.com/duzhenxun/pop-agent"
+  },
+  {
    "id": "yt-fMA3UavzbLo",
    "cat": "reels",
    "src": "YouTube",
@@ -4678,6 +5071,30 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBFdG42U3hhcWw1ZS1yMG1felZHWDlETjhZMjJsNzl6aU9MWS1ST3E1WXBOOERpSHpUeEljbDRDSzNzbjlUX05tWTJpeFhOdVBJMDVKcDltbHRyb1ItWnp3QkRDN29BUEpqQ3hnS0luWHV6TGZl?oc=5",
    "ta": "OpenCode مقابل Claude Code: 10 دولارات Go مقابل 20 دولارًا Pro [2026]"
+  },
+  {
+   "id": "gn-digitaltwindefinitionhistorytypesfacts",
+   "cat": "arch",
+   "src": "Britannica",
+   "ts": "2026-11-23T08:00:00Z",
+   "t": "Digital twin | Definition, History, Types, & Facts",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5LV3hmNV9LTW8taThSajlxNjBmYndZa0FPT2V1d2RhX3plNGpKUmFmRDljaFdaVjhzVmt1R3QtRDRlM0k3Q1RwMVdRWHpDTm03U3ctNWhDMUZSbnA4cVlN?oc=5"
+  },
+  {
+   "id": "gn-ollamaguitutorialhowtosetupanduseollamawithopenwebui",
+   "cat": "agents",
+   "src": "Hostinger",
+   "ts": "2026-11-23T08:00:00Z",
+   "t": "Ollama GUI tutorial: How to set up and use Ollama with Open WebUI",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1QbEM1WXlLX0w0a3hHaEpJVWkyYUc4SGJuM1FfY3F5SEU2dFJDMzFoM2J3Qmg3MGtoVXlqZ1RCRUVNcG9WVU1JcjZMSGhyT01Ma3NhdFJ1ZHhYQ1l1SUsyMVJoUGNTODVRWGNv?oc=5"
   },
   {
    "id": "hn-50608604",
@@ -5595,438 +6012,6 @@
    ],
    "tp": "news",
    "ta": "أكبر كذبة في قصة جنسن هوانغ"
-  },
-  {
-   "id": "hn-50594937",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-22T00:14:05Z",
-   "t": "Tesla launches FSD v15, targets its biggest weaknesses, from signs to potholes",
-   "s": "25 نقطة، 5 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/",
-   "url2": "https://news.ycombinator.com/item?id=50594937",
-   "ta": "تطلق Tesla الإصدار FSD v15، الذي يستهدف أكبر نقاط الضعف فيها، بدءًا من العلامات وحتى الحفر",
-   "h": "تسلا تطلق FSD v15 لتحسين القيادة الذاتية",
-   "x": "تحديثات برمجية قوية في الرؤية الحاسوبية للتعامل مع تحديات الطرق واللافتات.",
-   "tg": [
-    "Tesla",
-    "Computer Vision"
-   ],
-   "tp": "arch"
-  },
-  {
-   "id": "hn-50594911",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-22T00:07:59Z",
-   "t": "Sandwich Simulator",
-   "s": "174 نقطة، 61 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://stulle.app/",
-   "url2": "https://news.ycombinator.com/item?id=50594911",
-   "ta": "محاكي ساندويتش",
-   "h": "محاكي الساندوتش: تجربة برمجية ممتعة",
-   "x": "مشروع بسيط يوضح مفاهيم المحاكاة والمنطق البرمجي بأسلوب غير تقليدي.",
-   "tg": [
-    "Simulation",
-    "Coding"
-   ],
-   "tp": "arch"
-  },
-  {
-   "id": "af-httpssimonwillisonnet2026Nov21muru",
-   "cat": "agents",
-   "src": "Simon Willison",
-   "ts": "2026-11-21T23:56:28Z",
-   "t": "Muru",
-   "s": "",
-   "tags": [
-    "مدونة"
-   ],
-   "url": "https://simonwillison.net/2026/Nov/21/muru/",
-   "h": "أداة Muru لتعزيز تجربة الـ AI",
-   "x": "استكشف كيف تفيدك أداة Muru في مشاريع الـ coding والذكاء الاصطناعي.",
-   "tg": [
-    "AI",
-    "Tools"
-   ],
-   "tp": "agents",
-   "ta": "حائط"
-  },
-  {
-   "id": "gn-autodeskandneilsofttoestablishbimanddigitaltwincentreinpune",
-   "cat": "arch",
-   "src": "The Realty Today",
-   "ts": "2026-11-21T23:00:06Z",
-   "t": "Autodesk and Neilsoft to Establish BIM and Digital Twin Centre in Pune",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOW1ZOV9mWjVCTXdXTDdOemc1Q2dEYmZkUXlsMFUwSW5KTUJrYjMwTk5BWmtfd0pYLWh3N3JCTHFPTWJGVTR5WlFzVUFPTTlrc3hfQlI0X3J6M2ZuNElEcFA2LVFKZFRTS2tRR0lSaFJHaGpWRnFGWWZEdTR5dEpWVVh4QTMwWFR6U2ZObk5Ldm1wUk94MEhMb1d6YS12Yjh6YWVlbFJwVndrZXplVlNFWjZkZw?oc=5",
-   "h": "مركز جديد للـ BIM والـ Digital Twin بالهند",
-   "x": "شراكة بين Autodesk وNeilsoft لتأسيس مركز متخصص يهم مهندسي الـ BIM.",
-   "tg": [
-    "BIM",
-    "DigitalTwin",
-    "Autodesk"
-   ],
-   "tp": "arch",
-   "ta": "أوتوديسك ونيلسوفت تؤسسان BIM ومركز التوأم الرقمي في بيون"
-  },
-  {
-   "id": "yt-GFxHjrYwoFk",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-21T21:25:07Z",
-   "t": "They built cyborg cockroaches with built-in AI...",
-   "s": "Sharing the latest news and advancements in AI Discover More: 🛠️ Explore AI Tools & News: https://futuretools.io/ 📰 Weekly Newsletter: https://future…",
-   "tags": [
-    "Matt Wolfe"
-   ],
-   "url": "https://www.youtube.com/shorts/GFxHjrYwoFk",
-   "ta": "لقد صنعوا صراصير سايبورغ باستخدام الذكاء الاصطناعي المدمج.",
-   "sa": "مشاركة آخر الأخبار والتطورات في مجال الذكاء الاصطناعي اكتشف المزيد: 🛠️ اكتشف أدوات وأخبار الذكاء الاصطناعي: https://futuretools.io/ 📰 النشرة الإخبارية الأسبوعية: https://future…",
-   "h": "روبوتات حشرية بـ AI مدمج",
-   "x": "تقنيات روبوتات دمجت الـ AI مع حشرات حقيقية لتطبيقات المراقبة المتقدمة.",
-   "tg": [
-    "Robotics",
-    "AI"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "yt-I0Fasi1-teQ",
-   "cat": "agents",
-   "src": "YouTube",
-   "ts": "2026-11-21T21:23:31Z",
-   "t": "Anthropic Warned Us About AI. Then It Went Public.",
-   "s": "Try Grok Bot from SpaceXSI, the sponsor of this video: https://tinyurl.com/yc4b4ymz Anthropic is now a public company. I look at how its warnings abo…",
-   "tags": [
-    "Matthew Berman"
-   ],
-   "url": "https://www.youtube.com/watch?v=I0Fasi1-teQ",
-   "ta": "حذرنا الأنثروبيون من الذكاء الاصطناعي. ثم أصبحت علنية.",
-   "sa": "جرب Grok Bot من شركة SpaceXSI، الراعي لهذا الفيديو: https://tinyurl.com/yc4b4ymz أصبحت Anthropic الآن شركة عامة. أنا أنظر إلى كيفية تحذيراته ...",
-   "h": "تحولات Anthropic وعالم الـ Agents",
-   "x": "تحليل لتحركات شركة Anthropic وتأثير تحذيرات الـ AI على مستقبل الـ agents.",
-   "tg": [
-    "Anthropic",
-    "Agents"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gh-1466946742",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2026-11-21T20:54:04Z",
-   "t": "roman-chencode1904b4/cad-3d-engineering-suite-autodesk-2026-autocad-revit-porta: CAD, 3D & Engineering Suite Autodesk 2026 (AutoCAD, Revit, 3ds Max, Maya) NLM runtime-upd…",
-   "s": "421 نجمة، لغة Jupyter Notebook",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/roman-chencode1904b4/cad-3d-engineering-suite-autodesk-2026-autocad-revit-porta",
-   "h": "مكتبة هندسية لمنتجات Autodesk 2026",
-   "x": "مستودع على GitHub يضم أدوات لـ AutoCAD وRevit بصيغة Jupyter Notebook.",
-   "tg": [
-    "Revit",
-    "AutoCAD",
-    "GitHub"
-   ],
-   "tp": "oss",
-   "ta": "roman-chencode1904b4/cad-3d-engineering-suite-autodesk-2026-autocad-revit-porta: CAD، 3D & Engineering Suite Autodesk 2026 (AutoCAD، Revit، 3ds Max، Maya) تحديث وقت تشغيل NLM..."
-  },
-  {
-   "id": "hn-50593481",
-   "cat": "code",
-   "src": "Hacker News",
-   "ts": "2026-11-21T20:47:41Z",
-   "t": "Pandex – Official European Law for AI Agents, over MCP",
-   "s": "98 نقطة، 22 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.pandex.io",
-   "url2": "https://news.ycombinator.com/item?id=50593481",
-   "h": "قوانين أوروبا للـ AI عبر الـ MCP",
-   "x": "تطبيق Pandex يتيح للـ AI agents الوصول للقانون الأوروبي عبر بروتوكول MCP.",
-   "tg": [
-    "MCP",
-    "AI Agents",
-    "Law"
-   ],
-   "tp": "mcp",
-   "ta": "Pandex – القانون الأوروبي الرسمي لوكلاء الذكاء الاصطناعي، عبر MCP"
-  },
-  {
-   "id": "yt-yq4FctnSglI",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-21T20:30:25Z",
-   "t": "Learn Reactjs #20 - Conditional Rendering",
-   "s": "Conditional Rendering Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
-   "tags": [
-    "Elzero Web School"
-   ],
-   "url": "https://www.youtube.com/watch?v=yq4FctnSglI",
-   "ta": "تعلم Reactjs #20 - العرض الشرطي",
-   "sa": "دروس وواجبات التقديم الشرطي: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
-   "h": "دروس Reactjs: الـ Conditional Rendering",
-   "x": "تابع تعلم تطوير واجهات المستخدم لبناء أدوات وتطبيقات ويب لـ BIM وCAD.",
-   "tg": [
-    "React",
-    "Code"
-   ],
-   "tp": "courses"
-  },
-  {
-   "id": "gh-1466927775",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-21T20:26:12Z",
-   "t": "Developing-Gamer/agent-sim: iOS simulators for AI agents, on Linux. The agent layer for x86Sim.",
-   "s": "552 نجمة، لغة Rust",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/Developing-Gamer/agent-sim",
-   "ta": "Development-Gamer/agent-sim: أجهزة محاكاة iOS لوكلاء الذكاء الاصطناعي، على Linux. طبقة الوكيل لـ x86Sim.",
-   "h": "تشغيل محاكيات iOS على Linux للـ AI Agents",
-   "x": "أداة قوية تتيح لـ AI Agents التفاعل مع بيئات iOS مباشرة من بيئة Linux.",
-   "tg": [
-    "Linux",
-    "iOS",
-    "Agents"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "hn-50593091",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-21T20:03:50Z",
-   "t": "Big Data Is Dead",
-   "s": "14 نقطة، 1 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://motherduck.com/blog/big-data-is-dead/",
-   "url2": "https://news.ycombinator.com/item?id=50593091",
-   "ta": "البيانات الضخمة ميتة",
-   "h": "هل انتهى عصر الـ Big Data؟",
-   "x": "نظرة نقدية على كيفية تغير معالجة البيانات الضخمة في ظل ثورة الـ AI.",
-   "tg": [
-    "Big Data",
-    "AI"
-   ],
-   "tp": "arch"
-  },
-  {
-   "id": "gh-1466871441",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-21T19:09:55Z",
-   "t": "deeeeone/Anvil: A native macOS coding agent that works with almost any model: diffs, checkpoints, sub-ses…",
-   "s": "45 نجمة، لغة Swift",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/deeeeone/Anvil",
-   "ta": "deeeeeone/Anvil: وكيل ترميز أصلي لنظام التشغيل macOS يعمل مع أي طراز تقريبًا: الاختلافات ونقاط التفتيش والوحدات الفرعية...",
-   "h": "Anvil: وكيل برمجي ذكي لنظام macOS",
-   "x": "أداة برمجية (Agent) تساعدك في كتابة الكود وإدارة التعديلات بذكاء على الماك.",
-   "tg": [
-    "macOS",
-    "Coding",
-    "Agent"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gn-opencodeandalocalllmhandletheboring80ofmycodingsoclaudeonlyg",
-   "cat": "agents",
-   "src": "XDA",
-   "ts": "2026-11-21T19:00:20Z",
-   "t": "OpenCode and a local LLM handle the boring 80% of my coding, so Claude only gets the hard part",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZmpqNE9ydlRXRVA1TGU5OU9TZmM3UUJHNWVTU2YzbloxWVNYcUpSSnpEOXhoLVV0bVl6VUJPdTFDYnYyVW93LTh1WjJVaVN4Y1dweGVyX3ltem0yWk44TU84dUI5a0xpTndtdXVwT2VJcnZzTEpDXzFyN1o4eUVRWWxSUlI2MXl4U242bWJUNUZ4Z0ZhMGRqbWhxQVFiM21WbDhYYmQxM01BeERqTFg1ZjVoNzFmb1JENTFaQjR0R1pDZw?oc=5",
-   "h": "تسريع كتابة كود بايثون عبر Local LLM",
-   "x": "استخدم Local LLM لإنجاز المهام المتكررة بالكود وتوفير Claude للمهام الصعبة.",
-   "tg": [
-    "Coding",
-    "LLM",
-    "Automation"
-   ],
-   "tp": "agents",
-   "ta": "يتعامل OpenCode وLLM المحلي مع 80% من عملية البرمجة الخاصة بي، لذلك يحصل كلود على الجزء الأصعب فقط"
-  },
-  {
-   "id": "gn-autodeskneilsoftlaunchbimanddigitaltwincentre",
-   "cat": "arch",
-   "src": "The Realty Today",
-   "ts": "2026-11-21T18:02:24Z",
-   "t": "Autodesk, Neilsoft Launch BIM and Digital Twin Centre",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOW1ZOV9mWjVCTXdXTDdOemc1Q2dEYmZkUXlsMFUwSW5KTUJrYjMwTk5BWmtfd0pYLWh3N3JCTHFPTWJGVTR5WlFzVUFPTTlrc3hfQlI0X3J6M2ZuNElEcFA2LVFKZFRTS2tRR0lSaFJHaGpWRnFGWWZEdTR5dEpWVVh4QTMwWFR6U2ZObk5Ldm1wUk94MEhMb1d6YS12Yjh6YWVlbFJwVndrZXplVlNFWjZkZw?oc=5",
-   "ta": "أوتوديسك ونيلسوفت تطلقان BIM ومركز التوأم الرقمي",
-   "h": "مركز جديد للـ BIM و Digital Twin من أوتوديسك",
-   "x": "خطوة جديدة لدمج تقنيات الـ Digital Twin في مشاريع التشييد والـ BIM.",
-   "tg": [
-    "BIM",
-    "DigitalTwin",
-    "Autodesk"
-   ],
-   "tp": "arch"
-  },
-  {
-   "id": "yt-wfEqEu2kfys",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-21T18:01:33Z",
-   "t": "300 Claude plugins? I keep only 3 (and the rule to pick yours)",
-   "s": "More than 300 plugins in Claude's official catalog. On my Mac, I installed 3. Superpowers to code, frontend-design for interfaces, n8n-skills to auto…",
-   "tags": [
-    "Dr Firas"
-   ],
-   "url": "https://www.youtube.com/shorts/wfEqEu2kfys",
-   "sa": "أكثر من 300 مكون إضافي في كتالوج كلود الرسمي. على جهاز Mac الخاص بي، قمت بتثبيت 3. القوى الخارقة للبرمجة، وتصميم الواجهة الأمامية للواجهات، ومهارات n8n للتشغيل التلقائي...",
-   "h": "ازاى تختار ٣ plugins بس لـ Claude",
-   "x": "ازاى تبسط شغلك وتزود كفاءة الكود والـ frontend بأقوى إضافات لـ Claude.",
-   "tg": [
-    "Claude",
-    "Plugins",
-    "AI"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gn-howtorunalocalllmprivatelyonyourowncomputer",
-   "cat": "agents",
-   "src": "ChipIn",
-   "ts": "2026-11-21T17:26:01Z",
-   "t": "How to Run a Local LLM Privately on Your Own Computer",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5mTEFlVVF2c0d3WFgxN3ZBaFhRRUZTdGZGNkVPX3RPS2lvMVMtcEJFWjNkNTNjWTNMNWRVR0JKT0IxSWdXZHktODVmeEhXdw?oc=5",
-   "ta": "كيفية تشغيل LLM محلي بشكل خاص على جهاز الكمبيوتر الخاص بك",
-   "h": "تشغيل Local LLM محلياً وبخصوصية تامة",
-   "x": "شرح عملي لتشغيل نماذج الذكاء الاصطناعي على جهازك الشخصي لتحسين الكود والـ agents.",
-   "tg": [
-    "LLM",
-    "Privacy",
-    "Agents"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gh-1466769482",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2026-11-21T17:05:04Z",
-   "t": "loop-server-12/dynamo-for-revit-win: Autodesk Dynamo For Revit - visual programming environment for parametric design, BIM aut…",
-   "s": "0 نجمة، لغة غير محددة",
-   "tags": [
-    "Add-in"
-   ],
-   "url": "https://github.com/loop-server-12/dynamo-for-revit-win",
-   "ta": "Loop-server-12/dynamo-for-revit-win: Autodesk Dynamo For Revit - بيئة برمجة مرئية للتصميم البارامتري، BIM aut...",
-   "h": "مستودع مفتوح لـ Autodesk Dynamo على Revit",
-   "x": "أدوات البرمجة البصرية والتصميم البارامتربي جاهزة لمشاريع الـ BIM.",
-   "tg": [
-    "Dynamo",
-    "Revit",
-    "BIM"
-   ],
-   "tp": "oss"
-  },
-  {
-   "id": "gn-inkling2minionamacrequirementsollamasetupandqwen3827bcompare",
-   "cat": "agents",
-   "src": "Fello AI",
-   "ts": "2026-11-21T16:28:48Z",
-   "t": "Inkling 2 Mini on a Mac: Requirements, Ollama Setup and Qwen 3.8 27B Compared",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBsRXZqZzk2c21fckphM0NQVlFDa25pUUFTaW5PZkNmbnVVRUdBN3pza25VSTJZY0lfSVg3MEQwN2V1TTdVYUdoTlpuc0tzd1k1?oc=5",
-   "ta": "Inkling 2 Mini على جهاز Mac: مقارنة المتطلبات وإعداد Ollama وQwen 3.8 27B",
-   "h": "تشغيل نماذج الذكاء الاصطناعي محلياً على Mac",
-   "x": "دليل سريع لاعداد Ollama ومقارنة أداء النماذج على جهاز الـ Mac الخاص بك.",
-   "tg": [
-    "Ollama",
-    "Mac",
-    "AI"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gh-1466721855",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-21T16:12:28Z",
-   "t": "invertibleMatrix/filament: Any model. Any agent. One memory. An agent harness for developers: your own agent on any…",
-   "s": "31 نجمة، لغة JavaScript",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/invertibleMatrix/filament",
-   "ta": "مصفوفة/خيط معكوس: أي نموذج. أي وكيل. ذاكرة واحدة. أداة مساعدة للمطورين: وكيلك الخاص في أي..."
-  },
-  {
-   "id": "yt-C5mJgTjA7r4",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-21T16:00:40Z",
-   "t": "Learn Reactjs #19 - The Children Prop",
-   "s": "The Children Prop Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
-   "tags": [
-    "Elzero Web School"
-   ],
-   "url": "https://www.youtube.com/watch?v=C5mJgTjA7r4",
-   "ta": "تعلم Reactjs #19 - دعامة الأطفال",
-   "sa": "دروس وواجبات مستلزمات الأطفال: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
-   "h": "شرح الـ Children Prop في React.js",
-   "x": "فهم عميق لمفاهيم React الأساسية لتطوير واجهات المستخدم بكفاءة.",
-   "tg": [
-    "React",
-    "Frontend"
-   ],
-   "tp": "courses"
-  },
-  {
-   "id": "gn-inkling2miniollamasetupmacrequirementsandpcoptions",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-21T16:00:00Z",
-   "t": "Inkling 2 Mini Ollama Setup: Mac Requirements and PC Options",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5wVy14UUw1RVVadHFrVVhSNHY2Tm1CcHFwU3lFam0zYVM4Z3hJNnRZZ3ZIbFhzZTF5YVBsR0RoLXRMOTBlUTctcF9aTktFeXNCQ21EdWx0UWJUd0ZzQmxKWjhzNWhITW1qRVNzT0o1dw?oc=5",
-   "h": "تشغيل Inkling 2 Mini محلياً",
-   "x": "متطلبات تشغيل الموديل الجديد عبر Ollama على أجهزة Mac وPC.",
-   "tg": [
-    "Ollama",
-    "Local LLM"
-   ],
-   "tp": "agents",
-   "ta": "إعداد Inkling 2 Mini Ollama: متطلبات Mac وخيارات الكمبيوتر الشخصي"
   }
  ]
 }
