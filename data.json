@@ -1,7 +1,364 @@
 {
- "updated": "2026-11-26T16:50:31Z",
+ "updated": "2026-11-27T01:43:34Z",
  "demo": false,
  "items": [
+  {
+   "id": "yt-4omPdu3mAEE",
+   "cat": "reels",
+   "src": "YouTube",
+   "ts": "2026-11-27T01:01:54Z",
+   "t": "Get Your Uber Eats Via Drone",
+   "s": "Sharing the latest news and advancements in AI Discover More: 🛠️ Explore AI Tools & News: https://futuretools.io/ 📰 Weekly Newsletter: https://future…",
+   "tags": [
+    "Matt Wolfe"
+   ],
+   "url": "https://www.youtube.com/shorts/4omPdu3mAEE",
+   "ta": "احصل على Uber Eats عبر الطائرة بدون طيار",
+   "sa": "مشاركة آخر الأخبار والتطورات في مجال الذكاء الاصطناعي اكتشف المزيد: 🛠️ اكتشف أدوات وأخبار الذكاء الاصطناعي: https://futuretools.io/ 📰 النشرة الإخبارية الأسبوعية: https://future…",
+   "h": "توصيل طلبات الأكل بالـ Drone",
+   "x": "تطورات جديدة في تقنيات الذكاء الاصطناعي وتوصيل الطرود.",
+   "tg": [
+    "AI",
+    "Drone"
+   ],
+   "tp": "news"
+  },
+  {
+   "id": "hn-50661218",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-27T00:03:18Z",
+   "t": "AI agents now control part of DeepMind's compute for Gemini experiments",
+   "s": "22 نقطة، 2 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://the-decoder.com/ai-agents-now-control-part-of-deepminds-compute-for-gemini-experiments-but-recursive-self-improvement-remains-distant/",
+   "url2": "https://news.ycombinator.com/item?id=50661218",
+   "ta": "يتحكم عملاء الذكاء الاصطناعي الآن في جزء من حساب DeepMind لتجارب Gemini",
+   "h": "AI agents يديرون موارد DeepMind",
+   "x": "الـ agents بقوا يتحكموا في جزء من قدرات الحوسبة لتجارب Gemini.",
+   "tg": [
+    "AI",
+    "Agents"
+   ],
+   "tp": "agents"
+  },
+  {
+   "id": "gn-isclaudecodefreefreewaystouseitin2026",
+   "cat": "agents",
+   "src": "Fello AI",
+   "ts": "2026-11-26T23:12:20Z",
+   "t": "Is Claude Code Free? Free Ways to Use It in 2026",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFAzejZEZU9tVVVzVjNJdk84VldFTVdpMUpINmVmd0tQTXh5OFphRzdMOHZ6NzJtdE5qWGdnM05pRThFVnBUZ0p4UXg3WHUtNkwxd2c?oc=5",
+   "ta": "هل كلود كود مجاني؟ طرق مجانية لاستخدامه في عام 2026",
+   "h": "ازاي تستخدم Claude Code مجاناً",
+   "x": "طرق مجانية للاستفادة من أداة البرمجة والـ coding في مشاريعك.",
+   "tg": [
+    "Claude",
+    "Coding"
+   ],
+   "tp": "agents"
+  },
+  {
+   "id": "yt-jHnQycWHW-s",
+   "cat": "agents",
+   "src": "YouTube",
+   "ts": "2026-11-26T22:21:04Z",
+   "t": "you need to self-host Github RIGHT NOW!!",
+   "s": "Get your own home lab in the cloud with a Hostinger VPS, and use code NETWORKCHUCK for an extra discount: https://ntck.co/hostinger-gitea When GitHub…",
+   "tags": [
+    "NetworkChuck"
+   ],
+   "url": "https://www.youtube.com/watch?v=jHnQycWHW-s",
+   "ta": "أنت بحاجة إلى استضافة Github ذاتيًا الآن !!",
+   "sa": "احصل على معمل منزلي خاص بك في السحابة باستخدام Hostinger VPS، واستخدم الكود NETWORKCHUCK للحصول على خصم إضافي: https://ntck.co/hostinger-gitea عندما GitHub...",
+   "h": "ليه لازم تعمل Self-host لـ GitHub حالاً",
+   "x": "ابني الـ home lab الخاص بك وتحكم في كودك بعيداً عن المنصات المغلقة.",
+   "tg": [
+    "SelfHosting",
+    "Git"
+   ],
+   "tp": "oss"
+  },
+  {
+   "id": "hn-50660180",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-26T21:47:45Z",
+   "t": "AI made self-hosting fun again",
+   "s": "302 نقطة، 157 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://janlukas.blog/posts/ai-self-hosting",
+   "url2": "https://news.ycombinator.com/item?id=50660180",
+   "ta": "لقد جعل الذكاء الاصطناعي الاستضافة الذاتية ممتعة مرة أخرى",
+   "h": "الذكاء الاصطناعي رجع متعة الـ Self-hosting",
+   "x": "بفضل الـ AI بقت إدارة السيرفرات والمشاريع الذاتية أسهل وأمتع بكتير.",
+   "tg": [
+    "SelfHosting",
+    "AI"
+   ],
+   "tp": "oss"
+  },
+  {
+   "id": "hn-50660004",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-26T21:26:33Z",
+   "t": "The US Government Is Under AI Cyberattack",
+   "s": "19 نقطة، 2 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.forbes.com/sites/the-wiretap/2026/11/25/us-government-under-ai-cyberattack",
+   "url2": "https://news.ycombinator.com/item?id=50660004",
+   "ta": "الحكومة الأمريكية تتعرض لهجوم إلكتروني بواسطة الذكاء الاصطناعي",
+   "h": "هجوم سيبراني بالـ AI على الحكومة الأمريكية",
+   "x": "مخاطر أمنية جديدة تظهر مع تطور الهجمات السيبرانية المدعومة بالذكاء الاصطناعي.",
+   "tg": [
+    "Cybersecurity",
+    "AI"
+   ],
+   "tp": "news"
+  },
+  {
+   "id": "hn-50659841",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-26T21:08:05Z",
+   "t": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad",
+   "s": "231 نقطة، 48 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://worksinprogress.co/issue/the-greatest-architect-youve-never-heard-of-is-in-pakistan/",
+   "url2": "https://news.ycombinator.com/item?id=50659841",
+   "ta": "كامل خان ممتاز: مهندس معماري باكستاني، يحظى بالإعجاب في الداخل، ويكاد يكون غير مرئي في الخارج",
+   "h": "قصة المعمارى الباكستاني Kamil Khan",
+   "x": "نظرة على مسيرة معماري استثنائي اشتهر محلياً وبقي مجهولاً عالمياً.",
+   "tg": [
+    "Architecture"
+   ],
+   "tp": "arch"
+  },
+  {
+   "id": "yt-TtC0m3eL7GY",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-26T20:48:27Z",
+   "t": "Learn Reactjs #34 - Create A Counter With useState Hook",
+   "s": "Create A Counter With useState Hook Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
+   "tags": [
+    "Elzero Web School"
+   ],
+   "url": "https://www.youtube.com/watch?v=TtC0m3eL7GY",
+   "ta": "تعلم Reactjs #34 - إنشاء عداد باستخدام خطاف useState",
+   "sa": "إنشاء عداد باستخدام دروس وواجبات الخطاف useState: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
+   "h": "شرح useState Hook في React",
+   "x": "درس جديد لتعلم تطوير واجهات الويب وبناء Counter بـ Reactjs.",
+   "tg": [
+    "React",
+    "Frontend"
+   ],
+   "tp": "courses"
+  },
+  {
+   "id": "hn-50658963",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-26T19:50:04Z",
+   "t": "DietPi released a new version v10.9",
+   "s": "14 نقطة، 1 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50658963",
+   "url2": "",
+   "ta": "أصدرت DietPi نسخة جديدة v10.9",
+   "h": "إطلاق النسخة الجديدة من DietPi",
+   "x": "تحديث جديد لنظام التشغيل الخفيف المخصص للسيرفرات والـ home labs.",
+   "tg": [
+    "DietPi",
+    "Linux"
+   ],
+   "tp": "oss"
+  },
+  {
+   "id": "yt-WqJ_RNRVxvI",
+   "cat": "agents",
+   "src": "YouTube",
+   "ts": "2026-11-26T19:22:55Z",
+   "t": "AI Is Just Getting Scary Now...",
+   "s": "AI Is Just Getting Scary Now... Get early access: https://www.siktintelligence.com/ 🐦‍⬛ Tomorrow’s headlines, before they happen. Sikt Intelligence i…",
+   "tags": [
+    "All About AI"
+   ],
+   "url": "https://www.youtube.com/watch?v=WqJ_RNRVxvI",
+   "ta": "الذكاء الاصطناعي أصبح مخيفًا الآن...",
+   "sa": "الذكاء الاصطناعي أصبح مخيفًا الآن... احصل على وصول مبكر: https://www.siktintelligence.com/ 🐦‍⬛ عناوين الغد، قبل حدوثها. الاستخبارات سيكت ​​أنا…",
+   "h": "تطورات مرعبة في قدرات الـ AI",
+   "x": "متابعة لأحدث القفزات والتقفيتات في عالم الذكاء الاصطناعي وتأثيرها.",
+   "tg": [
+    "AI",
+    "Future"
+   ],
+   "tp": "news"
+  },
+  {
+   "id": "yt-ywmqJ5QZ5N4",
+   "cat": "long",
+   "src": "YouTube",
+   "ts": "2026-11-26T18:58:38Z",
+   "t": "Learn Reactjs #33 - What Is State ?",
+   "s": "What Is State Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
+   "tags": [
+    "Elzero Web School"
+   ],
+   "url": "https://www.youtube.com/watch?v=ywmqJ5QZ5N4",
+   "ta": "تعلم Reactjs #33 - ما هي الدولة؟",
+   "sa": "ما هي دروس وواجبات الدولة: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs"
+  },
+  {
+   "id": "hn-50658170",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-26T18:35:37Z",
+   "t": "IBM ends immigration sponsorship for most positions in its consulting division",
+   "s": "140 نقطة، 102 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://economictimes.indiatimes.com/nri/work/ibm-gives-h-1b-green-card-holders-3-weeks-to-relocate-from-us-or-leave-company-december-31-deadline-set/articleshow/136180168.cms?from=mdr",
+   "url2": "https://news.ycombinator.com/item?id=50658170",
+   "ta": "IBM تنهي رعاية الهجرة لمعظم المناصب في قسمها الاستشاري"
+  },
+  {
+   "id": "hn-50658093",
+   "cat": "agents",
+   "src": "Hacker News",
+   "ts": "2026-11-26T18:28:30Z",
+   "t": "Notion's official MCP inject hidden upsell instructions into agent context",
+   "s": "46 نقطة، 17 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.reddit.com/r/ClaudeCode/comments/1y4qm5o/heads_up_if_you_wire_notions_official_mcp_into/",
+   "url2": "https://news.ycombinator.com/item?id=50658093",
+   "ta": "يقوم MCP الرسمي الخاص بـ Notion بإدخال تعليمات مخفية لزيادة المبيعات في سياق الوكيل",
+   "h": "تعليمات تسويقية مخفية في Notion MCP",
+   "x": "تحذير للمطورة والمعماريين: Notion MCP تحقن تعليمات تسويقية خفية داخل الـ agent context.",
+   "tg": [
+    "MCP",
+    "Agents",
+    "AI"
+   ],
+   "tp": "mcp"
+  },
+  {
+   "id": "hn-50657957",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-26T18:14:53Z",
+   "t": "Ask HN: How do you find meaning of life at 41?",
+   "s": "50 نقطة، 92 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://news.ycombinator.com/item?id=50657957",
+   "url2": "",
+   "ta": "اسأل HN: كيف تجد معنى الحياة في عمر 41 عامًا؟"
+  },
+  {
+   "id": "hn-50657452",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-26T17:29:28Z",
+   "t": "'AI' might be the end of our careers",
+   "s": "31 نقطة، 38 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.baldurbjarnason.com/2026/08-ai-might-be-the-end-of-our-careers/",
+   "url2": "https://news.ycombinator.com/item?id=50657452",
+   "ta": "قد يكون \"الذكاء الاصطناعي\" نهاية حياتنا المهنية"
+  },
+  {
+   "id": "hn-50657265",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-26T17:11:29Z",
+   "t": "AMD-specific fork of llama.cpp",
+   "s": "284 نقطة، 71 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://devnull.land/amd-specific-llama-cpp",
+   "url2": "https://news.ycombinator.com/item?id=50657265",
+   "ta": "شوكة AMD الخاصة بـ llama.cpp",
+   "h": "إصدار مخصص من llama.cpp لكروت AMD",
+   "x": "لو بتشغل LLMs على كروت AMD، النسخة دي هتحسن أداء الـ local AI workflows عندك.",
+   "tg": [
+    "LLM",
+    "OpenSource",
+    "AMD"
+   ],
+   "tp": "oss"
+  },
+  {
+   "id": "hn-50657110",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-26T16:55:15Z",
+   "t": "One guy is doing a hunger strike outside Anthropic, currently in his 3rd day",
+   "s": "56 نقطة، 47 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://twitter.com/ElliotC1/status/2125689373337489419",
+   "url2": "https://news.ycombinator.com/item?id=50657110",
+   "ta": "أحد الأشخاص يقوم بإضراب عن الطعام خارج الأنثروبيك، حاليًا في يومه الثالث"
+  },
+  {
+   "id": "hn-50657070",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-26T16:51:38Z",
+   "t": "Show HN: SimDrop – Running iOS simulators in the macOS Finder sidebar",
+   "s": "39 نقطة، 8 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/rxliuli/sim-drop",
+   "url2": "https://news.ycombinator.com/item?id=50657070",
+   "ta": "إظهار HN: SimDrop – تشغيل محاكيات iOS في الشريط الجانبي لـ macOS Finder"
+  },
+  {
+   "id": "gn-claudecodevscodex840vs210permilliontokens",
+   "cat": "agents",
+   "src": "shattered.io",
+   "ts": "2026-11-26T16:34:59Z",
+   "t": "Claude Code vs Codex: $8/$40 vs $2/$10 per Million Tokens",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNQUFLZF9VVm9ucjJtVXBmaWgydFZHTFUtN3BBSi1ETDFVa0tCdnM4TWpGa3ZKblp5c0ZxT3JiT3FNZjhwZTZEdEpVMEFiX20yRDVQQzAxT1NmUlByNVR1MVphZ1U1cEdVU3lYWUZWWWcwcVBMdTZEaW9QSXBZVzJmSFZ2WnpWZlE?oc=5",
+   "ta": "Claude Code مقابل Codex: 8 دولارات/40 دولارًا مقابل 2 دولار/10 دولارات لكل مليون رمز",
+   "h": "مقارنة تكلفة Tokens بين Claude Code وCodex",
+   "x": "تحليل لأسعار الـ API والتكلفة لكل مليون Token بين الأدوات المختلفة لكتابة الكود.",
+   "tg": [
+    "AI",
+    "Coding",
+    "APIs"
+   ],
+   "tp": "agents"
+  },
   {
    "id": "hn-50656763",
    "cat": "arch",
@@ -58,6 +415,41 @@
    "ta": "نقلا عن جاك ديسبين تشو"
   },
   {
+   "id": "hn-50655868",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-26T14:44:22Z",
+   "t": "Show HN: I wrote an entire Vim manual over 4 years",
+   "s": "57 نقطة، 20 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "http://themouseless.dev/vim/",
+   "url2": "https://news.ycombinator.com/item?id=50655868",
+   "ta": "إظهار HN: لقد كتبت دليل Vim بالكامل على مدار 4 سنوات"
+  },
+  {
+   "id": "hn-50655639",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-26T14:25:08Z",
+   "t": "Show HN: Silent dictation for Claude Code via on-device lip reading",
+   "s": "15 نقطة، 2 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://github.com/batanus/lip-dictation",
+   "url2": "https://news.ycombinator.com/item?id=50655639",
+   "ta": "إظهار HN: الإملاء الصامت لكلود كود عبر قراءة الشفاه على الجهاز",
+   "h": "إملاء صامت لـ Claude Code بقراءة الشفاه",
+   "x": "تقنية ذكية لربط قراءة الشفاه محلياً مع الـ Claude Code لتسهيل كتابة الكود.",
+   "tg": [
+    "Claude",
+    "AI"
+   ],
+   "tp": "agents"
+  },
+  {
    "id": "gh-1473148150",
    "cat": "arch",
    "src": "GitHub",
@@ -91,6 +483,20 @@
    "url": "https://media.bitbanter.com/pdf/2026-11-25-proving-a-fixed-upper-bound-on-jensens-affairs.pdf",
    "url2": "https://news.ycombinator.com/item?id=50654295",
    "ta": "إثبات الحد الأعلى الثابت لشؤون جنسن [pdf]"
+  },
+  {
+   "id": "hn-50654035",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-26T11:15:03Z",
+   "t": "Robots will have a staggering economic impact",
+   "s": "15 نقطة، 4 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://www.economist.com/leaders/2026/11/26/robots-will-have-a-staggering-economic-impact",
+   "url2": "https://news.ycombinator.com/item?id=50654035",
+   "ta": "سيكون للروبوتات تأثير اقتصادي مذهل"
   },
   {
    "id": "rss-httpswwwdezeencom20261126carlorattiseoulbiennale",
@@ -147,7 +553,14 @@
     "AI + AEC"
    ],
    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOWTFKRl9Tc1l6dXdKZTFfVkdfTkVrTFBBZWxyQV8wN2RFaUxaVk9xYlJRUnk0TzVqdDBUYmZ2d0RpMF9OdU1sbHZXb3llMW9IQ2FYN2tENE1FUHFRWjl4eVgxTGFoRC1PYVM3aXFyMFR2cEhTVFJraU1faThLcFh1TlpJYnRLUmVnOFlZWko2bHZiVm5FaWs3dzg0MTRDUlVEeVlNc28tUDRnaE1tdXVlWHZNZjBJUFhBMG5j?oc=5",
-   "ta": "فحوصات مشروع البناء بالذكاء الاصطناعي: القيمة تكمن في إنهاء المهمة"
+   "ta": "فحوصات مشروع البناء بالذكاء الاصطناعي: القيمة تكمن في إنهاء المهمة",
+   "h": "قيمة الـ AI في مواقع التشييد تظهر عند إنهاء المهام",
+   "x": "كيف يساعد الذكاء الاصطناعي في إتمام مشاريع البناء والمراجعة بكفاءة.",
+   "tg": [
+    "AI",
+    "Construction"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-rsBYH09bR30",
@@ -172,6 +585,47 @@
    "tp": "agents"
   },
   {
+   "id": "hn-50652527",
+   "cat": "code",
+   "src": "Hacker News",
+   "ts": "2026-11-26T07:33:12Z",
+   "t": "OpenAI may be in cost control mode",
+   "s": "274 نقطة، 268 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://micjm.com/blog/openai-is-in-cost-control-mode/",
+   "url2": "https://news.ycombinator.com/item?id=50652527",
+   "ta": "قد يكون OpenAI في وضع التحكم في التكلفة",
+   "h": "OpenAI تتحول نحو وضع التحكم في التكاليف",
+   "x": "مؤشرات على اتجاه OpenAI لضبط النفقات المالية في تطوير نماذج الـ AI.",
+   "tg": [
+    "OpenAI",
+    "AI"
+   ],
+   "tp": "news"
+  },
+  {
+   "id": "gn-hobanconstructionconsortiumwinstopbiminnovationprize",
+   "cat": "arch",
+   "src": "Seoul Economic Daily",
+   "ts": "2026-11-26T06:37:54Z",
+   "t": "Hoban Construction Consortium Wins Top BIM Innovation Prize",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOMEpwajN1TXFpdC11ejVRTHcyN0cxejJjNHVUcXJVUVRwRXpjSUVvN1ZGc0pLNnNQa2xkYTVuX2RKZy1uX3Rvc1dNSHJUdUdFb0pxLWgxSUtITzhaOWJoY3pnM2lmSTk2TVA4OVNjeDZvOFY3ZEx1OTc2dnd1YXZxMS1JN1VxZU5fcl9LZUZCNTI1Rm5IWnBhS0I4WDAtZFN2aTRJVmNjNA?oc=5",
+   "ta": "اتحاد هوبان للبناء يفوز بجائزة BIM للابتكار",
+   "h": "فوز تحالف Hoban بالجائزة الكبرى للابتكار في الـ BIM",
+   "x": "تحالف Hoban يحصد جائزة ريادية في الـ BIM تعزز كفاءة مشاريع التشييد.",
+   "tg": [
+    "BIM",
+    "Construction"
+   ],
+   "tp": "arch"
+  },
+  {
    "id": "af-httpssimonwillisonnet2026Nov26sqlite3rsync",
    "cat": "agents",
    "src": "Simon Willison",
@@ -182,7 +636,34 @@
     "مدونة"
    ],
    "url": "https://simonwillison.net/2026/Nov/26/sqlite3-rsync/",
-   "ta": "sqlite3_rsync: أداة النسخ عن بعد لقاعدة البيانات لـ SQLite"
+   "ta": "sqlite3_rsync: أداة النسخ عن بعد لقاعدة البيانات لـ SQLite",
+   "h": "أداة sqlite3_rsync لنقل قواعد البيانات",
+   "x": "أداة سريعة ومفيدة لعمل remote-copy لقواعد بيانات SQLite في مشاريعك.",
+   "tg": [
+    "SQLite",
+    "Database"
+   ],
+   "tp": "oss"
+  },
+  {
+   "id": "gn-nemetschekgroupsignsfirstacademicpartnershiptopreparefuturee",
+   "cat": "arch",
+   "src": "FutureCIO",
+   "ts": "2026-11-26T06:00:00Z",
+   "t": "Nemetschek Group signs first academic partnership to prepare future engineers for AI-enabled construction",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPMWZMT2x0LXFjZ3RNbmRxYWhBREh1VXZqazhObC1CZXJyWDhUYV93QnIzbWZZSUhUZ2xWSTdoQV9UdDFRMVE0bVN2NTZDZ3FKZ21Ib2R5R1lsQnpLeWNBbFo1dExWMjVZTGwyN3JWZk1xbVNEclliQkNXblk3aVRsVTNfZy04TkZBNExUckRwZ096azgtSVhMWUEtTVZ0OXJaLVJjSWZqS01sMVZyX2tSMExseXgzdUdYQllrRUUxZjFnTTRqZk8zUg?oc=5",
+   "ta": "توقع مجموعة Nemetschek أول شراكة أكاديمية لإعداد مهندسي المستقبل للبناء المعتمد على الذكاء الاصطناعي",
+   "h": "شراكة أكاديمية لتعليم الـ AI في التشييد",
+   "x": "Nemetschek تطلق أول شراكة أكاديمية لتجهيز المهندسين لعصر الـ AI في الـ construction.",
+   "tg": [
+    "BIM",
+    "AI"
+   ],
+   "tp": "arch"
   },
   {
    "id": "hn-50651911",
@@ -196,7 +677,14 @@
    ],
    "url": "https://news.ycombinator.com/item?id=50651911",
    "url2": "",
-   "ta": "كيف يمكن للناس كسب المال بينما يحل الذكاء الاصطناعي محل الوظائف الفكرية؟"
+   "ta": "كيف يمكن للناس كسب المال بينما يحل الذكاء الاصطناعي محل الوظائف الفكرية؟",
+   "h": "كيف تكسب بعد سيطرة الـ AI على الوظائف؟",
+   "x": "نقاش تقني مهم للمهندسين عن مستقبل الدخل مع انتشار الـ AI والـ agents.",
+   "tg": [
+    "AI",
+    "Career"
+   ],
+   "tp": "news"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov26hn50651685",
@@ -209,7 +697,14 @@
     "مدونة"
    ],
    "url": "https://simonwillison.net/2026/Nov/26/hn-50651685/",
-   "ta": "تحذر صحيفة نيويورك تايمز المصورين من تحديث Photoshop عبر ميزات الذكاء الاصطناعي"
+   "ta": "تحذر صحيفة نيويورك تايمز المصورين من تحديث Photoshop عبر ميزات الذكاء الاصطناعي",
+   "h": "تحذير للمصورين من تحديث Photoshop الجديد",
+   "x": "NYT تحذر المصورين من تحديث فوتوشوب بسبب مشاكل في ميزات الـ AI.",
+   "tg": [
+    "Photoshop",
+    "AI"
+   ],
+   "tp": "news"
   },
   {
    "id": "rss-rchdailycom1189033whydoesthesamefloorplangetdrawnsomanytimes",
@@ -280,7 +775,35 @@
    ],
    "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
    "url2": "https://news.ycombinator.com/item?id=50651117",
-   "ta": "OpenAI تخفض استخدام GPT-6.2: تصل Astra إلى الحدود بشكل أسرع بنسبة 40%، وSol أسرع بنسبة 25%"
+   "ta": "OpenAI تخفض استخدام GPT-6.2: تصل Astra إلى الحدود بشكل أسرع بنسبة 40%، وSol أسرع بنسبة 25%",
+   "h": "تخفيض حدود استخدام نماذج OpenAI الجديدة",
+   "x": "مستخدمو Astra وSol يواجهون استهلاكاً أسرع لحدود الاستخدام بنسبة تصل لـ 40%.",
+   "tg": [
+    "OpenAI",
+    "GPT"
+   ],
+   "tp": "news"
+  },
+  {
+   "id": "hn-50651099",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-26T03:33:06Z",
+   "t": "Show HN: Olumino, a Markdown notes and spaced repetition app",
+   "s": "74 نقطة، 36 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://olumino.app",
+   "url2": "https://news.ycombinator.com/item?id=50651099",
+   "ta": "إظهار HN: Olumino، وهو تطبيق ملاحظات Markdown والتكرار المتباعد",
+   "h": "تطبيق Olumino لتدوين الملاحظات",
+   "x": "تطبيق Markdown notes جديد يعتمد على نظام spaced repetition.",
+   "tg": [
+    "Markdown",
+    "Apps"
+   ],
+   "tp": "oss"
   },
   {
    "id": "hn-50650986",
@@ -294,7 +817,14 @@
    ],
    "url": "https://www.bloomberg.com/news/articles/2026-11-25/billions-in-data-center-deals-grind-to-halt-after-ai-chip-curbs",
    "url2": "https://news.ycombinator.com/item?id=50650986",
-   "ta": "المليارات في صفقات مراكز البيانات تتوقف بعد تقليص الرقائق"
+   "ta": "المليارات في صفقات مراكز البيانات تتوقف بعد تقليص الرقائق",
+   "h": "تعطل صفقات داتا سنتر بمليارات الدولارات",
+   "x": "توقف صفقات ضخمة لمراكز البيانات بسبب القيود الجديدة على الشิبكات والرقائق.",
+   "tg": [
+    "DataCenter",
+    "Hardware"
+   ],
+   "tp": "arch"
   },
   {
    "id": "hn-50650842",
@@ -322,7 +852,14 @@
    ],
    "url": "https://www.youtube.com/shorts/E4787_kbfZw",
    "ta": "لا توجد أجهزة التوجيه. لا الكابلات. لا تزال الشبكات.",
-   "sa": "ثلاثة أجهزة توجيه، بدون أي أصوات، وسطرين من EIGRP، كل ذلك يتم في Boson NetSim مباشرة في المتصفح. خصم 30% لمدة عام على NetSim حتى 29 نوفمبر: https://ntc..."
+   "sa": "ثلاثة أجهزة توجيه، بدون أي أصوات، وسطرين من EIGRP، كل ذلك يتم في Boson NetSim مباشرة في المتصفح. خصم 30% لمدة عام على NetSim حتى 29 نوفمبر: https://ntc...",
+   "h": "شبكات بدون راوترات أو كابلات تقليدية",
+   "x": "تجربة شبكات سريعة ومباشرة باستخدام Boson NetSim وبروتوكول EIGRP مباشرة من المتصفح.",
+   "tg": [
+    "Networking",
+    "Tools"
+   ],
+   "tp": "news"
   },
   {
    "id": "yt-f1gAilgILeI",
@@ -387,6 +924,27 @@
    "tp": "agents",
    "ta": "ما هي الوكلاء الفرعيين؟ شرح في 4 دقائق",
    "sa": "تشرح جيس وينغ، مهندسة التعليم في LangChain، الوكلاء الفرعيين في Deep Agents، وهو أداة وكلاء LangChain مفتوحة المصدر. وكيل فرعي يأخذ مهمة واحدة من ..."
+  },
+  {
+   "id": "gn-autodeskearningscallhighlightsgrowthandaimomentum",
+   "cat": "arch",
+   "src": "TipRanks",
+   "ts": "2026-11-26T00:09:16Z",
+   "t": "Autodesk Earnings Call Highlights Growth and AI Momentum",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNVGNxeTBIVjQtU05MUlNqenZkSDRTdk5Vb2pzM2RnTWcwX0hyZjgzTDd6cmZLUmhmc0NlVmFOdUNyRGhlQUgyRVd4M0hJeUt0MlczRDEteW1nN1RIbng2elRucnlGdmVXZ0JPYnNtQUVKMGVFSW1FSG80c1pqSjdWUnJuLUVEbXlBX3NBRnQtV3RvMDVmcVpjWVpUa2tJSVdqY2lidXRwSEJ3c0Vw?oc=5",
+   "ta": "مكالمة أرباح شركة Autodesk تسلط الضوء على النمو وزخم الذكاء الاصطناعي",
+   "h": "نمو أرباح Autodesk ودفع عجلة الـ AI",
+   "x": "تطورات مالية وتركيز أكبر على دمج الـ AI في أدوات الـ BIM والتصميم الهندسي.",
+   "tg": [
+    "Autodesk",
+    "AI",
+    "BIM"
+   ],
+   "tp": "arch"
   },
   {
    "id": "yt-ngZ1_I_RWS0",
@@ -508,6 +1066,20 @@
    "sa": "انضم إلى رسالتي الإخبارية للحصول على تحديثات منتظمة للذكاء الاصطناعي 👇🏼 https://forwardfuture.com روابطي 🔗 👉🏻 X: https://x.com/matthewberman 👉🏻 Forward Future X: https://x.co..."
   },
   {
+   "id": "hn-50647712",
+   "cat": "arch",
+   "src": "Hacker News",
+   "ts": "2026-11-25T21:20:50Z",
+   "t": "Opioid Withdrawal Is a Heartless Bitch",
+   "s": "13 نقطة، 1 تعليق",
+   "tags": [
+    "نقاش"
+   ],
+   "url": "https://psychotechnology.substack.com/p/opioid-withdrawal-is-a-heartless",
+   "url2": "https://news.ycombinator.com/item?id=50647712",
+   "ta": "انسحاب المواد الأفيونية هو العاهرة بلا قلب"
+  },
+  {
    "id": "hn-50647673",
    "cat": "arch",
    "src": "Hacker News",
@@ -583,7 +1155,15 @@
    ],
    "url": "https://openfal.org",
    "url2": "https://news.ycombinator.com/item?id=50647219",
-   "ta": "Show HN: إنشاء Openfal للصور والفيديو المحلي باستخدام واجهة برمجة تطبيقات على طراز fal"
+   "ta": "Show HN: إنشاء Openfal للصور والفيديو المحلي باستخدام واجهة برمجة تطبيقات على طراز fal",
+   "h": "توليد صور وفيديو محلياً بـ API مشابه لـ fal",
+   "x": "أداة open-source جديدة تتيح لك تشغيل توليد الوسائط محلياً بكل سهولة.",
+   "tg": [
+    "Openfal",
+    "API",
+    "OSS"
+   ],
+   "tp": "oss"
   },
   {
    "id": "hn-50647181",
@@ -675,7 +1255,15 @@
    ],
    "url": "https://www.youtube.com/watch?v=iA0ns69dZGM",
    "ta": "تصنيف أفضل نماذج الذكاء الاصطناعي للبرمجة | قائمة الطبقة",
-   "sa": "صفقة ضخمة لـ Eight Sleep Black Friday بخصم 700 دولار! https://www.eightsleep.com/matthewberman استخدم الرمز: MATTHEWBERMAN انضم إلى رسالتي الإخبارية لتحديث الذكاء الاصطناعي المنتظم..."
+   "sa": "صفقة ضخمة لـ Eight Sleep Black Friday بخصم 700 دولار! https://www.eightsleep.com/matthewberman استخدم الرمز: MATTHEWBERMAN انضم إلى رسالتي الإخبارية لتحديث الذكاء الاصطناعي المنتظم...",
+   "h": "تقييم أفضل نماذج الذكاء الاصطناعي للكود",
+   "x": "مقارنة شاملة لأقوى الـ AI models عشان تختار الأنسب لكتابة الـ Code وتطوير الـ Scripts.",
+   "tg": [
+    "AI",
+    "Coding",
+    "Models"
+   ],
+   "tp": "agents"
   },
   {
    "id": "rss-architoshcom202611kestrellabsaddsformaintegrationandalotmore",
@@ -801,6 +1389,27 @@
     "Python"
    ],
    "tp": "oss"
+  },
+  {
+   "id": "gn-whatdefendersneedtoknowaboutartextheagenticaiframeworkthreat",
+   "cat": "agents",
+   "src": "Microsoft",
+   "ts": "2026-11-25T18:09:06Z",
+   "t": "What defenders need to know about ARTEX, the agentic AI framework threat actors abuse",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPVzh4enZzVDh3MXNzbnkzNUxyYWZTUkItNmtxbS0xQlNqNERIYVNvYlU5U2ViSmgza2JIbXJDclBWamczdDVNNnBuc25NMWVhQUNNMUFYbFhNTTFiVy1DcTl4X2M0dnJvbE8xajQ5bld5VjF2UTRqcDZxQUFyWEcyZW9TQmhsSi1naDBlU3doX2l6dEpuSGV1Q0lFSEVucEY2RFlHdVhKcnZsd0NPaWo0S1pBeW5NQk56bFFxWHVGbFU3ZlQ5QWoyLUZjT2I?oc=5",
+   "ta": "ما يحتاج المدافعون إلى معرفته حول ARTEX، إطار عمل الذكاء الاصطناعي الوكيل الذي يسيء استخدام الجهات الفاعلة للتهديد",
+   "h": "مخاطر إطار عمل الـ Agentic AI المسمى ARTEX",
+   "x": "تعرف على التهديدات الأمنية المرتبطة بـ ARTEX وكيفية حماية أنظمة الـ AI وAgents منها.",
+   "tg": [
+    "Security",
+    "Agents",
+    "AI"
+   ],
+   "tp": "agents"
   },
   {
    "id": "hn-50645241",
@@ -1448,6 +2057,19 @@
    "tp": "agents"
   },
   {
+   "id": "gn-lhshowcasesroboticpatrolsandanaimodularhomeatsmartconstructi",
+   "cat": "arch",
+   "src": "파이낸셜뉴스",
+   "ts": "2026-11-25T03:19:32Z",
+   "t": "LH Showcases Robotic Patrols and an 'AI Modular Home' at Smart Construction Expo",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4xd2szajkxY3d2ejR4NXRGSXo2MDhBdWNLY2NKalBSOGVzSzJHaVgtRVpYMHF5VTR1bzVsMzZLd3N4UnJPNnl3WWM3ZElmQ3c2Uy0tdVpzYTQ?oc=5",
+   "ta": "تعرض LH الدوريات الآلية و\"المنزل المعياري القائم على الذكاء الاصطناعي\" في معرض البناء الذكي"
+  },
+  {
    "id": "hn-50637995",
    "cat": "arch",
    "src": "Hacker News",
@@ -1567,6 +2189,19 @@
     "Algorithms",
     "Performance"
    ]
+  },
+  {
+   "id": "gn-whatautodeskadsksaidonitsq3earningscall",
+   "cat": "arch",
+   "src": "TradingView",
+   "ts": "2026-11-25T01:13:15Z",
+   "t": "What Autodesk (ADSK) Said on Its Q3 Earnings Call",
+   "s": "",
+   "tags": [
+    "AI + AEC"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxON0FMMTZtT0V1dmZYRGxZcVZvR05jbHpKeW9vQjVoQUE2dFpHT2VDYm5hclRtMFZ0WVRaZTVuU2ZVdWlIM3B3cTlyanllS0JHYkRZQjBQSFRrcHExTVY2bTQ0dkd6cVlrZ01ZOVowWGlHWUl5NFphdWlOME1XSVVNclNURllHbTBIUF9WTTcya1dJTXF1ZWt1WGlyZ3c4T0FTV1ZOZE5RRE93c1h5?oc=5",
+   "ta": "ما قالته شركة Autodesk (ADSK) في مكالمة أرباح الربع الثالث"
   },
   {
    "id": "af-httpssimonwillisonnet2026Nov24llminflectionpoints",
@@ -2540,6 +3175,19 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1YRi1zbjRteEQ2cV9USklzRFp3bWV3bmZJZTdWYlkxTng4Mk1meVdNZHZWbDhRNHNxZUtwdGUwZV83MmJiYXNCdjA1YmEyakhQUmtEOHFjdDQ?oc=5",
    "ta": "بدائل كلود كود في عام 2026: 9 خيارات والخطة التي تدفع مقابلها بالفعل"
+  },
+  {
+   "id": "gn-gemini4neon315pricingvsclaudegpt2026",
+   "cat": "agents",
+   "src": "shattered.io",
+   "ts": "2026-11-24T08:00:00Z",
+   "t": "Gemini 4 Neon: $3/$15 Pricing vs Claude, GPT [2026]",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPeDNPS0stbU1kWE5FTU0xaEEySDgtSDZfTnF2QWo1WklxTHo2aUFxc3pDM2FlczN6UWtDU2FFdnhRbElaeUtEVDNfdHFHT1cyR3hVaWlCN2w5a3BiZ0xZNFpwRXR3am81U0M1S3ZJWGw5dDNQNFlWSHNIS0VCcnNkVnZPSVVtUQ?oc=5",
+   "ta": "Gemini 4 Neon: التسعير بـ 3 دولارًا أمريكيًا/15 دولارًا أمريكيًا مقابل كلود، GPT [2026]"
   },
   {
    "id": "hn-50625004",
@@ -3959,6 +4607,19 @@
    "ta": "enwove/flyx: محرك استدلال LLM محلي بدون تبعية في سياق ثنائي يصل إلى 50 ميجا بايت تقريبًا - سياق طويل أصلي، ضبط..."
   },
   {
+   "id": "gn-inkling2mini2026slocalaioutperformslastyearsclaude",
+   "cat": "agents",
+   "src": "Techzine Global",
+   "ts": "2026-11-23T08:33:14Z",
+   "t": "Inkling 2 Mini: 2026’s local AI outperforms last year’s Claude",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPZVBnUmFiRUM4aWhrVzFSMzdJTXlBSjZ0eEU2Z0xfWFlkbUJ3ajZwMEVxQkdOQTJXaDB5T3J0M3hpWDVlM201Q1NvNlJ6WERPRmVlajNsOGZ6T2JkUlluTGJvOEtvVDVMRHNhREhkR251OG5KbkUtY0NyeVU0Um1hSWxSVHRrQ3hnWUpTQXBYZDlfR09HVHZlQWZfdG8tMWNJQWJ4aFRLUGRnRkVXN1E?oc=5",
+   "ta": "Inkling 2 Mini: يتفوق الذكاء الاصطناعي المحلي لعام 2026 على كلود العام الماضي"
+  },
+  {
    "id": "gn-howmuchdoesaicostin2026thecompletepricingcomparison",
    "cat": "agents",
    "src": "Fello AI",
@@ -4004,6 +4665,19 @@
    ],
    "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9rWFFmeW5aZ3drSDhVdHM5YkZIRkVTZmo3ZWZBS0tackhuWFMzeEN4MG4tMnhGa1B0eFJpNHhxN1BOS3Zhczhj?oc=5",
    "ta": "تسعير GLM لعام 2026: أسعار API وخطة ترميز بقيمة 18 دولارًا ونماذج مجانية"
+  },
+  {
+   "id": "gn-opencodevsclaudecode10govs20pro2026",
+   "cat": "agents",
+   "src": "shattered.io",
+   "ts": "2026-11-23T08:00:00Z",
+   "t": "OpenCode vs Claude Code: $10 Go vs $20 Pro [2026]",
+   "s": "",
+   "tags": [
+    "Agents"
+   ],
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBFdG42U3hhcWw1ZS1yMG1felZHWDlETjhZMjJsNzl6aU9MWS1ST3E1WXBOOERpSHpUeEljbDRDSzNzbjlUX05tWTJpeFhOdVBJMDVKcDltbHRyb1ItWnp3QkRDN29BUEpqQ3hnS0luWHV6TGZl?oc=5",
+   "ta": "OpenCode مقابل Claude Code: 10 دولارات Go مقابل 20 دولارًا Pro [2026]"
   },
   {
    "id": "hn-50608604",
@@ -5353,686 +6027,6 @@
    ],
    "tp": "agents",
    "ta": "إعداد Inkling 2 Mini Ollama: متطلبات Mac وخيارات الكمبيوتر الشخصي"
-  },
-  {
-   "id": "gh-1466700766",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2026-11-21T15:50:17Z",
-   "t": "jacobyoung21/autodesk-autocad-win: Autodesk AutoCAD - computer-aided design software for 2D drafting, 3D modeling and techni…",
-   "s": "29 نجمة، لغة غير محددة",
-   "tags": [
-    "أداة مفتوحة المصدر"
-   ],
-   "url": "https://github.com/jacobyoung21/autodesk-autocad-win",
-   "h": "مستودع مفتوح لـ Autodesk AutoCAD",
-   "x": "مشروع على GitHub يخص ملفات واستخدامات AutoCAD للرسم والتصميم ثلاثي الأبعاد.",
-   "tg": [
-    "AutoCAD",
-    "CAD"
-   ],
-   "tp": "oss",
-   "ta": "jacobyoung21/autodesk-autocad-win: Autodesk AutoCAD - برنامج تصميم بمساعدة الكمبيوتر للرسم ثنائي الأبعاد والنمذجة ثلاثية الأبعاد والتقنيات..."
-  },
-  {
-   "id": "gh-1466700014",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-21T15:49:31Z",
-   "t": "qianyiai/kurocat: KuroCat — Free open-source desktop typing cat pet & OBS overlay (Bongo Cat alternative, T…",
-   "s": "548 نجمة، لغة TypeScript",
-   "tags": [
-    "MCP"
-   ],
-   "url": "https://github.com/qianyiai/kurocat",
-   "ta": "qianyiai/kurocat: KuroCat — تطبيق مجاني مفتوح المصدر للكتابة على سطح المكتب للقطط الأليفة وتراكب OBS (بديل Bongo Cat، T...",
-   "h": "رفيق مكتب رقمي: KuroCat للعمل والـ Streaming",
-   "x": "أداة مفتوحة المصدر ولطيفة لسطح المكتب، بديلة لـ Bongo Cat، قد تكسر روتين العمل الطويل على Revit.",
-   "tg": [
-    "OSS",
-    "Desktop"
-   ],
-   "tp": "oss"
-  },
-  {
-   "id": "gn-istoppedhittingclaudesusagelimitsafterchangingonehabitinhowi",
-   "cat": "agents",
-   "src": "XDA",
-   "ts": "2026-11-21T15:30:20Z",
-   "t": "I stopped hitting Claude's usage limits after changing one habit in how I start sessions",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOQW4yZEYtalBxUnlUbTM4d19lWHVXOUxBaW00bTZJeEpIUDVXZmtzWGR2RWM4Z0xwZGphSFFvTW1PLWJDdGFOdEpVNHE2N2pLUnVVUUtqZjlWSmw4ZDdIblc5aXEtYTUtZWJIRFoteURoRURzcnVSaGcwUlRYdWNDaHYwM20zVEw4WlhrM3FFT3lXenhucWRQUjlzZHV1WEFiTnMxM0szUmFmWlBSeEp0TEFnQzU3Q3pvUEJ3?oc=5",
-   "ta": "لقد توقفت عن تجاوز حدود استخدام كلود بعد تغيير عادة واحدة في كيفية بدء الجلسات",
-   "h": "ازاى تتخطى حدود الاستخدام في Claude",
-   "x": "تغيير بسيط في طريقة بدء الـ sessions هيحميك من الوصول لحد الاستخدام الأقصى.",
-   "tg": [
-    "Claude",
-    "AI",
-    "Tips"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "yt-oHLQj750M9U",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-21T15:00:16Z",
-   "t": "I Built a Streaming Service Inside the Terminal",
-   "s": "Try ChatGPT + Codex: www.chatgpt.com/download/ I built my own streaming service that runs entirely in the terminal, built by Codex running GPT-6 Astr…",
-   "tags": [
-    "NetworkChuck"
-   ],
-   "url": "https://www.youtube.com/shorts/oHLQj750M9U",
-   "ta": "لقد قمت ببناء خدمة البث داخل المحطة",
-   "sa": "جرب ChatGPT + Codex: www.chatgpt.com/download/ لقد قمت بإنشاء خدمة البث الخاصة بي والتي تعمل بالكامل في المحطة، والتي تم إنشاؤها بواسطة Codex الذي يقوم بتشغيل GPT-6 Astr...",
-   "h": "بناء خدمة بث مباشر داخل الـ Terminal",
-   "x": "تجربة برمجية ممتعة لبناء نظام streaming بالكامل داخل شاشة الأوامر.",
-   "tg": [
-    "Terminal",
-    "Streaming",
-    "Code"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "gn-aiagentsvscheapchineseaimodelswhichisbetterforreadingthewebi",
-   "cat": "agents",
-   "src": "Memeburn",
-   "ts": "2026-11-21T14:59:56Z",
-   "t": "AI Agents vs Cheap Chinese AI Models: Which Is Better for Reading the Web in 2026?",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPLXhrWEpVci1KNWotSzREZU9FYUZsSXk1NUY3enpFdy1DTmVLaWl5MkwwZVVPbE1pU3V0X1BndjVuNTdETEdsYU0xNWJtblY0YmxldmZheXA3X0pTaGd5WmIxeXF1U2JYNl9DSklYVkN6b1I3Tk9zWnl1cXBhUGJuNkFMMTF2MVlGYjZjQURDcGxjUHBYbmc?oc=5",
-   "ta": "وكلاء الذكاء الاصطناعي مقابل نماذج الذكاء الاصطناعي الصينية الرخيصة: أيهما أفضل لقراءة الويب في عام 2026؟",
-   "h": "مستقبل البحث: AI Agents أم النماذج الاقتصادية؟",
-   "x": "مقارنة تهمك لاختيار الأداة الأنسب لجمع وتحليل البيانات المعمارية من الويب في 2026.",
-   "tg": [
-    "AI",
-    "Agents"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gh-1466635339",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-21T14:40:27Z",
-   "t": "EL4CTEO/fast-anything: Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps,…",
-   "s": "371 نجمة، لغة Rust",
-   "tags": [
-    "MCP"
-   ],
-   "url": "https://github.com/EL4CTEO/fast-anything",
-   "h": "أداة fast-anything لتسريع التطبيقات بـ Rust",
-   "x": "بدل من إعادة كتابة المشروع كاملاً، قم بتسريع الـ 5% البطيئة بـ Rust.",
-   "tg": [
-    "Rust",
-    "Performance"
-   ],
-   "tp": "oss",
-   "ta": "EL4CTEO/fast-anything: لا تعيد كتابته في Rust. أعد كتابة الـ 5% البطيئة: ملف تعريف تطبيقات Python أو Node أو Ruby،..."
-  },
-  {
-   "id": "gh-1466630833",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2026-11-21T14:35:13Z",
-   "t": "birdsolutions98/v-ray-for-revit-win: Chaos V-Ray for Revit - photorealistic rendering engine for architectural visualization,…",
-   "s": "0 نجمة، لغة غير محددة",
-   "tags": [
-    "Add-in"
-   ],
-   "url": "https://github.com/birdsolutions98/v-ray-for-revit-win",
-   "ta": "Birdsolutions98/v-ray-for-revit-win: Chaos V-Ray for Revit - محرك عرض واقعي للتصور المعماري،...",
-   "h": "إضافة V-Ray لـ Revit للتصيير الواقعي",
-   "x": "ارفع جودة إخراج مشاريعك المعمارية وعمل الـ renderings بدقة عالية.",
-   "tg": [
-    "VRay",
-    "Revit",
-    "Rendering"
-   ],
-   "tp": "addins"
-  },
-  {
-   "id": "gn-fromrevitstillstostoriesaivideoworkflowsforarchitecturalcomm",
-   "cat": "arch",
-   "src": "Autodesk",
-   "ts": "2026-11-21T14:30:59Z",
-   "t": "From Revit Stills to Stories: AI Video Workflows for Architectural Communication",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMirgNBVV95cUxNbjFwaE1VRzJIVEpPbndOUU10LV95WUVKTDUwdHZObFBJZVZaM2xLRW45OVZ2YUtzUExqZXNnOVN2Ym9XNk5ZbFZ6al9hallPbkZoWG16eW9EeFd0SGlYczd6dzJ3b0tvMGxscDJScTE1RElNTVRlT3QxT0puVVltVS1qSHFOcVJPTVhlSTdOSlRiYV9SSEFYS3U4NTJKRVZyMU53VGhYY3MtQzB2MGdTSEZLZF8tMXRHaDBVWmRrbFcxVVVrUVJmdGk5a3lkZ0phNDZXRUFfNUgwZ05IbzI1NmtWYkVaNzJXd3Q4UXJDU3djYXBKTFFld2hNZW16clB5OUhpcXVEQWN5UHpISHdnTVZqZ0N2TE1nQmJEX2xzM0ZfbGtEaTNfZW56NnJ1eHdCbnljOTkxVlVlV05FaEZLbG9aampvSTdRSktELVMzTkZKd1BPQkM1aHNETGxKNDEyampMeC1HVTRuY1pkTjZnWTU2LUNpVXFZWUVsdG9HMnhaZTMzRnN1RXliY0lobGRrdzNUVTdnUU5wdDBDS3ppVHFVRklSdDVHWlAyMmx3?oc=5",
-   "ta": "من صور Revit الثابتة إلى القصص: سير عمل فيديو الذكاء الاصطناعي للاتصالات المعمارية"
-  },
-  {
-   "id": "hn-50588916",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-21T13:16:12Z",
-   "t": "Astra 6.2 and Sol 6.2 flop at Simple Bench",
-   "s": "136 نقطة، 120 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://simple-bench.com/",
-   "url2": "https://news.ycombinator.com/item?id=50588916",
-   "ta": "Astra 6.2 وSol 6.2 يتخبطان في Simple Bench",
-   "h": "تقييم أداء نماذج Astra و Sol",
-   "x": "نتائج وتقييمات جديدة لأداء النماذج على منصات الاختبار المختلفة.",
-   "tg": [
-    "LLM",
-    "Benchmark"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "gh-1466551152",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2026-11-21T13:04:36Z",
-   "t": "AR-Tokee/autodesk-revit: Autodesk Revit: BIM Desktop Platform for Parametric Design Documentation",
-   "s": "22 نجمة، لغة HTML",
-   "tags": [
-    "Add-in"
-   ],
-   "url": "https://github.com/AR-Tokee/autodesk-revit",
-   "ta": "AR-Tokee/autodesk-revit: Autodesk Revit: منصة BIM لسطح المكتب لتوثيق التصميم البارامتري",
-   "h": "مستودع لـ Autodesk Revit على GitHub",
-   "x": "استكشف منصة الـ BIM المكتبية للتصميم البارامترري وتوثيق المشاريع.",
-   "tg": [
-    "Revit",
-    "BIM",
-    "Parametric"
-   ],
-   "tp": "arch"
-  },
-  {
-   "id": "yt-ugXq5fngjy8",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-21T13:00:49Z",
-   "t": "11 free Claude skills to rebuild the app you pay for, but better",
-   "s": "Paying for an app every month? Replica is 11 free Claude skills that build your own version of it, and a better one. Take apart, rebuild, test, do be…",
-   "tags": [
-    "Dr Firas"
-   ],
-   "url": "https://www.youtube.com/shorts/ugXq5fngjy8",
-   "sa": "هل تدفع مقابل تطبيق كل شهر؟ النسخة المتماثلة هي 11 مهارة مجانية لكلود والتي تبني نسختك الخاصة منها، ونسخة أفضل. تفكيك، إعادة بناء، اختبار، القيام بذلك ...",
-   "h": "ابني تطبيقاتك المدفوعة بنفسك مجاناً مع Claude",
-   "x": "استخدم skills وميزات Claude لتطوير بدائل مجانية وأفضل للتطبيقات المدفوعة.",
-   "tg": [
-    "Claude",
-    "Skills",
-    "Development"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gn-autodeskandneilsoftjoinforcestosetupaecocentreofexcellencein",
-   "cat": "arch",
-   "src": "Indian Chemical News",
-   "ts": "2026-11-21T13:00:00Z",
-   "t": "Autodesk and Neilsoft join forces to set up AECO Centre of Excellence in Pune",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOYWl1SHRpX05fYVl2SUdOWl94SklLc0Q2SlFqWVFBZlB1dHFDX1FQc3NNOUtWT2NaSUpsUEpTa3VhSHlwa0tJcTVaTExINndnTTVETFZQSG85TmlLZkNoVVNtOWJVSU90UDl3ZVBmVnQwY3NhX3prZmFLQlg2a0JuRVl5eHlWa3dJZmR0N1pJQkNnUjVLWUlRRDNzSHdiZ2sxaVdRemstSnkxX29PQmpqckJKWjUwTjdwaWZJZkdTaGtYYU9IbVhIM0RYa9IBywFBVV95cUxOYWl1SHRpX05fYVl2SUdOWl94SklLc0Q2SlFqWVFBZlB1dHFDX1FQc3NNOUtWT2NaSUpsUEpTa3VhSHlwa0tJcTVaTExINndnTTVETFZQSG85TmlLZkNoVVNtOWJVSU90UDl3ZVBmVnQwY3NhX3prZmFLQlg2a0JuRVl5eHlWa3dJZmR0N1pJQkNnUjVLWUlRRDNzSHdiZ2sxaVdRemstSnkxX29PQmpqckJKWjUwTjdwaWZJZkdTaGtYYU9IbVhIM0RYaw?oc=5",
-   "h": "مركز تميز جديد للـ AECO في الهند",
-   "x": "تأسيس مركز تميز لتطوير حلول الـ BIM وخدمات الهندسة المعمارية والإنشائية.",
-   "tg": [
-    "BIM",
-    "AECO",
-    "Autodesk"
-   ],
-   "tp": "arch",
-   "ta": "تتعاون شركتا Autodesk وNeilsoft لإنشاء مركز AECO للتميز في بيون"
-  },
-  {
-   "id": "hn-50588375",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-21T12:09:23Z",
-   "t": "'Legally, they don't exist': the hybrid crabs puzzling biologists and fishers",
-   "s": "43 نقطة، 13 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.theguardian.com/environment/2026/nov/21/alaska-bering-sea-heatwave-snow-tanner-hybrid-crabs-fishing-quotas",
-   "url2": "https://news.ycombinator.com/item?id=50588375",
-   "ta": "\"من الناحية القانونية، لا وجود لها\": السرطانات الهجينة تحير علماء الأحياء والصيادين"
-  },
-  {
-   "id": "gn-unleashingdynamowithautodeskassistantandmcpfromintenttoinspe",
-   "cat": "arch",
-   "src": "Autodesk",
-   "ts": "2026-11-21T12:07:35Z",
-   "t": "Unleashing Dynamo with Autodesk Assistant and MCP: From Intent to Inspectable Graphs",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMilANBVV95cUxQeXl6UEdMTW5UbDhLdGtfNW5SOHVVQ25ON0IwNk9LdmVSazIyblg1aWZPYzJpRjZUYl9remlRbWxkMWxrODAtdk1haGNMYWFOVGR5LWhBVFF0bnN3Q0lWdlVmVTFlWVU3SGNSVFhXNnhtd2Z1ZmluNHBMcVZzVDE4YzJOcDZQWmZEZjJUT1kwNC13VHBCZXhRbzR2X1FoYjE2VEE5YWRoMVFOMDctcGdlb3dXTkFmQk9yTFQ4ajBEWnhXQXFCNzY3T0o5aEdUTEV1dU5QRkdCUnBza253cG9LdGdzRjMwTWUyeEkzQ1RUZGdsQndldWJ6VEg5aGYyQXpGOFg0aEZNdTdZTTgzdG1uemN5LTRSUExRc0djckRUTkh3VHpFMXhTenFfVlZXY08tSzBTY1M3Ql9BdUtQc0hGZndoTnVEMXJ0aUpYSkNMc2M1QUR3MUd6bk45bkMzR2R1Q2dZTFZUbWx1cTNMeUNaVE1Vd2tnUUd2LXh4dmtodjdVMDZucXUtNVIycUVsQl9MamczcA?oc=5",
-   "ta": "إطلاق العنان للدينامو مع مساعد Autodesk وMCP: من النية إلى الرسوم البيانية القابلة للفحص",
-   "h": "ثورة Dynamo: ربط الـ Intent بالـ Graphs عبر MCP",
-   "x": "كيف يغير الـ MCP طريقة تفاعلك مع Autodesk Assistant لبناء الـ Visual Scripts في Dynamo بشكل أسرع.",
-   "tg": [
-    "Dynamo",
-    "MCP",
-    "BIM"
-   ],
-   "tp": "mcp"
-  },
-  {
-   "id": "yt-G2AGx8zzX88",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-21T12:00:21Z",
-   "t": "Learn Reactjs #18 - Spreading Props",
-   "s": "Spreading Props Lessons & Assignments: https://elzero.org/courses/reactjs Text Course: https://elzero.org/text-courses/reactjs",
-   "tags": [
-    "Elzero Web School"
-   ],
-   "url": "https://www.youtube.com/watch?v=G2AGx8zzX88",
-   "ta": "تعلم Reactjs #18 - نشر الدعائم",
-   "sa": "دروس وواجبات في نشر الدعائم: https://elzero.org/courses/reactjs الدورة النصية: https://elzero.org/text-courses/reactjs",
-   "h": "احتراف React و Spreading Props",
-   "x": "درس جديد لتعلم تكتيكات Spreading Props في تطوير الـ Web والـ UI.",
-   "tg": [
-    "React",
-    "Frontend"
-   ],
-   "tp": "courses"
-  },
-  {
-   "id": "hn-50588272",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-21T11:51:42Z",
-   "t": "Bitcoin falls to its lowest in two years",
-   "s": "13 نقطة، 4 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.reuters.com/business/bitcoin-falls-357-56814-2026-11-21/",
-   "url2": "https://news.ycombinator.com/item?id=50588272",
-   "ta": "البيتكوين يهبط لأدنى مستوياته في عامين"
-  },
-  {
-   "id": "hn-50587205",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-21T08:32:34Z",
-   "t": "Exascale fusion simulation team named finalist for 2026 Gordon Bell Prize",
-   "s": "14 نقطة، 0 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.alcf.anl.gov/news/exascale-fusion-simulation-team-named-finalist-2026-gordon-bell-prize",
-   "url2": "https://news.ycombinator.com/item?id=50587205",
-   "ta": "تم تعيين فريق محاكاة الاندماج Exascale ضمن المرشحين النهائيين لجائزة Gordon Bell لعام 2026"
-  },
-  {
-   "id": "gn-autodeskadskbringscloudbuildingcodechecksintoformaworkflows",
-   "cat": "arch",
-   "src": "Yahoo Finance",
-   "ts": "2026-11-21T08:14:44Z",
-   "t": "Autodesk (ADSK) Brings Cloud Building Code Checks Into Forma Workflows",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOYmZGOTRrNjJOeV8xaWdza1BRVk5zeG9taFV5LUxFOWRvNVhJNjRYSmZEZDlBelk1VEFLV3ZGRmJJV0RKOXBiZzBDQU5GX1dBOG05aFJGZFh6aGRDUFduc3RmMG5sMjVCaVRTRHR5WGl2cGUtRkFsTmJJMHQ2OFNXQmpoczJXUUpjSUtwbXJkNHlLMExNbmtyTGtFa3o?oc=5",
-   "h": "أكواد البناء السحابية في Forma",
-   "x": "فحص أكواد البناء السحابية أصبح جزءاً من بيئة التصميم لمشاريع الـ BIM.",
-   "tg": [
-    "Forma",
-    "Cloud",
-    "BIM"
-   ],
-   "tp": "arch",
-   "ta": "تقوم Autodesk (ADSK) بإدراج عمليات التحقق من كود البناء السحابي في سير عمل Forma"
-  },
-  {
-   "id": "yt-a36atq-Dy8A",
-   "cat": "agents",
-   "src": "YouTube",
-   "ts": "2026-11-21T08:12:26Z",
-   "t": "GLM 5.5 IS COMING SOON! Claude CRACKS 167-Year-Old Math Problem?! Google Loop & MORE! AI NEWS",
-   "s": "Automate your life without selling it. Try Lumo, the private AI assistant from Proton: https://proton.me/worldofai GLM 5.5 is COMING SOON! Z.ai has o…",
-   "tags": [
-    "WorldofAI"
-   ],
-   "url": "https://www.youtube.com/watch?v=a36atq-Dy8A",
-   "ta": "GLM 5.5 قريبا! كلود يحل مشكلة رياضية عمرها 167 عامًا؟! حلقة جوجل وأكثر! أخبار الذكاء الاصطناعي",
-   "sa": "أتمتة حياتك دون بيعها. جرب Lumo، مساعد الذكاء الاصطناعي الخاص من Proton: https://proton.me/worldofai GLM 5.5 قادم قريبًا! Z.ai لديه س ...",
-   "h": "Claude يحل معضلة رياضية عمرها 167 عاماً",
-   "x": "الذكاء الاصطناعي يتخطى حدود البرمجة ويقتحم الرياضيات المعقدة، مع ترقب إطلاق GLM 5.5.",
-   "tg": [
-    "Claude",
-    "AI",
-    "Math"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gh-1466272233",
-   "cat": "agents",
-   "src": "GitHub",
-   "ts": "2026-11-21T06:54:24Z",
-   "t": "w01fb0ss/PiBot: Open-source, local-first AI agent team for your desktop: multi-agent group chats, compute…",
-   "s": "139 نجمة، لغة TypeScript",
-   "tags": [
-    "جديد كلياً"
-   ],
-   "url": "https://github.com/w01fb0ss/PiBot",
-   "ta": "w01fb0ss/PiBot: فريق وكيل AI مفتوح المصدر ومحلي أولاً لسطح المكتب الخاص بك: محادثات جماعية متعددة الوكلاء، حوسبة...",
-   "h": "فريق AI agents محلي ومفتوح المصدر لسطح المكتب",
-   "x": "أدوات متميزة لعمل multi-agent group chats وتوزيع المهام محلياً.",
-   "tg": [
-    "TypeScript",
-    "AI agents",
-    "Open Source"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gh-1466262028",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2026-11-21T06:39:37Z",
-   "t": "jedbjorn/drive-it: A Model Context Protocol server and add-in for Autodesk Revit.",
-   "s": "0 نجمة، لغة JavaScript",
-   "tags": [
-    "Add-in"
-   ],
-   "url": "https://github.com/jedbjorn/drive-it",
-   "ta": "jedbjorn/drive-it: خادم بروتوكول السياق النموذجي والوظيفة الإضافية لبرنامج Autodesk Revit.",
-   "h": "ربط Autodesk Revit بـ Model Context Protocol",
-   "x": "إضافة جديدة وبرتوكول MCP لربط Revit بـ JavaScript يسهل أتمتة مهام الـ BIM.",
-   "tg": [
-    "Revit",
-    "MCP",
-    "BIM"
-   ],
-   "tp": "addins"
-  },
-  {
-   "id": "hn-50586292",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-21T05:38:01Z",
-   "t": "ClawDOS – An AI coding agent for DOS",
-   "s": "71 نقطة، 21 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "http://ricapar.net/ClawDOS/",
-   "url2": "https://news.ycombinator.com/item?id=50586292",
-   "ta": "ClawDOS – وكيل ترميز الذكاء الاصطناعي لنظام DOS",
-   "h": "ClawDOS: وكيل ذكاء اصطناعي لكتابة الكود على نظام DOS",
-   "x": "تجربة طريفة ومبتكرة لدمج قدرات الـ AI coding agent مع أنظمة التشغيل القديمة جداً.",
-   "tg": [
-    "AI",
-    "DOS",
-    "Agent"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gn-claudefreevsprousagelimitsandplancomparison",
-   "cat": "agents",
-   "src": "Meteora Web",
-   "ts": "2026-11-21T05:13:08Z",
-   "t": "Claude Free vs Pro, usage limits and plan comparison",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZmNadGV2bkxpS2xmNDZjUTFKWTdiMGpHVFA3RFlqUno4WlZEOEo3VnVpc29UX3lSSVVEMGZybW1lV0VnN0JfMHVwUXI3RkMzRFplTmk1LWhMekljVHRMM2ttc3ZWSXNINGFCXzI2Mm5Nb2NhQTNSMGFyd0YxXzJHZy1DZ1RvV28tZUpUNnpVNVk5XzVKTjAwRVNoZjNTSE5MWDhPTGFHUFNjNWgwV24yQ0Y3Z2ppUQ?oc=5",
-   "ta": "Claude Free vs Pro، حدود الاستخدام ومقارنة الخطط",
-   "h": "مقارنة حدود الاستخدام بين Claude Free و Pro",
-   "x": "اعرف الفرق في الاستخدام عشان تختار الخطة المناسبة لشغل الكود والـ agents.",
-   "tg": [
-    "Claude",
-    "AI",
-    "Productivity"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "yt-7_pMINxEEPU",
-   "cat": "reels",
-   "src": "YouTube",
-   "ts": "2026-11-21T03:42:44Z",
-   "t": "What else could you use this for?",
-   "s": "Sharing the latest news and advancements in AI Discover More: 🛠️ Explore AI Tools & News: https://futuretools.io/ 📰 Weekly Newsletter: https://future…",
-   "tags": [
-    "Matt Wolfe"
-   ],
-   "url": "https://www.youtube.com/shorts/7_pMINxEEPU",
-   "ta": "ماذا يمكنك استخدام هذا ل؟",
-   "sa": "مشاركة آخر الأخبار والتطورات في مجال الذكاء الاصطناعي اكتشف المزيد: 🛠️ اكتشف أدوات وأخبار الذكاء الاصطناعي: https://futuretools.io/ 📰 النشرة الإخبارية الأسبوعية: https://future…",
-   "h": "تطبيقات جديدة في عالم الـ AI",
-   "x": "نظرة سريعة على أحدث ابتكارات الـ AI وكيفية توظيفها في مشاريعك.",
-   "tg": [
-    "AI",
-    "Tools"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "yt-GojQtxCT3dg",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-21T02:26:38Z",
-   "t": "The Future of Agents with Harrison Chase",
-   "s": "Organizations are in a very different phase of agent development than they were a year ago. So what does the next chapter look like in 2027? New chal…",
-   "tags": [
-    "LangChain"
-   ],
-   "url": "https://www.youtube.com/watch?v=GojQtxCT3dg",
-   "ta": "مستقبل الوكلاء مع هاريسون تشيس",
-   "sa": "تمر المنظمات بمرحلة مختلفة تمامًا من تطوير الوكلاء عما كانت عليه قبل عام. إذن، كيف سيبدو الفصل التالي في عام 2027؟ تشال جديد…",
-   "h": "مستقبل الـ AI agents مع Harrison Chase",
-   "x": "توقعات جديدة لتطور الـ agents والتحديات القادمة في بناء الأنظمة الذكية.",
-   "tg": [
-    "AI agents",
-    "LangChain",
-    "Future"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gn-206constructionaistudiesshowfarmoreworkonemissionsthanonextr",
-   "cat": "arch",
-   "src": "MarketScale",
-   "ts": "2026-11-21T01:19:09Z",
-   "t": "206 construction AI studies show far more work on emissions than on extreme weather",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOSVJJdVBWYkJJNkhoZVY3TkY1WEdXeUh3dW1wMlVtc1BTVDUyTXlZYi0wcURRbGRHNzFienBsWnhpYjBpcG9jTnduYy1vbVduRU1XWFNCcFNIRjdjNEttNzI0V1l3SWhwUV9IeEx4a3hOWWE2SjlHV0dFYnpVOUw0MkVjcURiVE92T2ZUZE5OUDlQQ3VNME5TMVVDWk1JQ05YSFpWNTFpMy1tLW1mREE0elM1OFZhYm5BbGdtbGNQNjZnNE10d1BpZHJkTmNMaktKUl9kSGdhVzV3QnNYUXZwbzRPQVdNUQ?oc=5",
-   "h": "فجوة في أبحاث الـ AI بقطاع التشييد",
-   "x": "دراسة توضح تركيز الـ AI على الانبعاثات وإهمال التغيرات المناخية المتطرفة، وهو تحدٍ تقني يهم مستقبلك المهني.",
-   "tg": [
-    "AI",
-    "Construction"
-   ],
-   "tp": "arch"
-  },
-  {
-   "id": "hn-50584481",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-21T00:41:53Z",
-   "t": "Twin films are films with the same or similar plots released with a short time",
-   "s": "17 نقطة، 1 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://en.wikipedia.org/wiki/Twin_films",
-   "url2": "https://news.ycombinator.com/item?id=50584481",
-   "ta": "الأفلام المزدوجة هي أفلام لها نفس المؤامرات أو قصص مشابهة تم إصدارها في وقت قصير",
-   "h": "ظاهرة الأفلام المتطابقة Twin Films",
-   "x": "نظرة على الأفلام التي تملك نفس الحبكة وتصدر في نفس التوقيت تقريبا.",
-   "tg": [
-    "Media"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "gn-generativearchitecturalmodelsrequiresymbolicrulestoreproduce",
-   "cat": "arch",
-   "src": "Bioengineer.org",
-   "ts": "2026-11-21T00:36:34Z",
-   "t": "Generative Architectural Models Require Symbolic Rules to Reproduce Historical Classical Orders",
-   "s": "",
-   "tags": [
-    "AI + AEC"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNbWQzWWlxNU5hb0ZFRGp3VDUtbFNWODBOUkVxMGRUYU9ESlU1d3NSWGFFYmtIZXUwOFVuV2pERE0xREU5QUxqWVJoQkZYSmhpT21jTzB1c1RNQ2lPU0F5RXB6T3poVS1pUGRhNlEyc050c2lWMTZMVmxVb3NRTG9PaTZGdktHQnpvTDR0TjY2ZV9Dd2hmOUJGWHprb29PZmlpZEMySG5yTndWRjQtSkhwYzROSDdFNnRGOWFrSg?oc=5",
-   "ta": "تتطلب النماذج المعمارية التوليدية قواعد رمزية لإعادة إنتاج الأنظمة الكلاسيكية التاريخية",
-   "h": "الذكاء الاصطناعي يحتاج قواعد رمزية لتصميم الطراز الكلاسيكي",
-   "x": "فهم ازاي الـ Generative Models بتعتمد على Symbolic Rules لإعادة إنتاج العمارة التاريخية بدقة.",
-   "tg": [
-    "BIM",
-    "AI",
-    "Architecture"
-   ],
-   "tp": "arch"
-  },
-  {
-   "id": "hn-50584198",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-21T00:03:33Z",
-   "t": "How to generate an accessible color palette from a single color",
-   "s": "13 نقطة، 0 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://taisho.design/en/blog/accessible-color-palette-from-one-color",
-   "url2": "https://news.ycombinator.com/item?id=50584198",
-   "ta": "كيفية إنشاء لوحة ألوان يمكن الوصول إليها من لون واحد",
-   "h": "توليد Color Palette متوافقة للـ UI",
-   "x": "طريقة ذكية لإنشاء لوحة ألوان متاحة وسهلة القراءة من لون أساسي واحد.",
-   "tg": [
-    "UI",
-    "Design"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "yt-Yeigx_aVkoM",
-   "cat": "long",
-   "src": "YouTube",
-   "ts": "2026-11-21T00:02:48Z",
-   "t": "Claude Code Creates My GTA 6 Shorts on Autopilot! (HeyGen + Blotato)",
-   "s": "Blotato (unlimited posts): https://blotato.com/?ref=firas Everyone says you can make money by clipping GTA 6 streams and posting them as Shorts. But…",
-   "tags": [
-    "Dr Firas"
-   ],
-   "url": "https://www.youtube.com/watch?v=Yeigx_aVkoM",
-   "ta": "كلود كود يصنع شورتي في GTA 6 على الطيار الآلي! (هاي جين + بلوتاتو)",
-   "sa": "Blotato (مشاركات غير محدودة): https://blotato.com/?ref=firas يقول الجميع أنه يمكنك كسب المال عن طريق قص مقاطع بث GTA 6 ونشرها على شكل فيديوهات قصيرة. لكن…",
-   "h": "شغل أتمتة الفيديوهات والـ Shorts بالكامل عبر Claude Code",
-   "x": "ازاي تستخدم الـ AI agents عشان تعمل automated pipelines لنشر المحتوى من غير تدخل منك.",
-   "tg": [
-    "ClaudeCode",
-    "Agents"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "gn-claudeandchatgptcomparisonforwritingandcodingtasks",
-   "cat": "agents",
-   "src": "TechGig",
-   "ts": "2026-11-20T23:54:43Z",
-   "t": "Claude and ChatGPT comparison for writing and coding tasks",
-   "s": "",
-   "tags": [
-    "Agents"
-   ],
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPblV5U0QtenloWWZUWktkWF94QnpxSEZwbGtUNlRmaWNXSkU3MXBpRHdDWmdiWllyejZXNWxEQnFnNnZadWxwNkZYd0c4NHNDLWVFcjNJTnF1QmYtSGd3N3U0bjByWmRuU09GZ3paRi13WjZaRno3NFFkRGtTNmZ3T1BrMmhsa2NiZWNqdTFoSXVWV2U1czdKZW9fSEY?oc=5",
-   "ta": "مقارنة Claude وChatGPT لمهام الكتابة والترميز",
-   "h": "Claude ضد ChatGPT: أيهما أفضل لكود الـ BIM؟",
-   "x": "مقارنة عملية تساعدك في اختيار الـ LLM الأنسب لكتابة الـ Scripts وتطوير الـ Plugins الخاصة بك.",
-   "tg": [
-    "Coding",
-    "LLM"
-   ],
-   "tp": "agents"
-  },
-  {
-   "id": "yt-3CDTs-0yd1I",
-   "cat": "co",
-   "src": "YouTube",
-   "ts": "2026-11-20T23:50:31Z",
-   "t": "I compared Whisper with AssemblyAI for video editing",
-   "s": "Lots of people run Whisper locally to transcribe their footage before editing with Claude Code. I set up two Claude Code sessions with the same promp…",
-   "tags": [
-    "AssemblyAI"
-   ],
-   "url": "https://www.youtube.com/watch?v=3CDTs-0yd1I",
-   "ta": "لقد قارنت Whisper مع AssemblyAI لتحرير الفيديو",
-   "sa": "يقوم الكثير من الأشخاص بتشغيل Whisper محليًا لنسخ لقطاتهم قبل التحرير باستخدام Claude Code. لقد قمت بإعداد جلستين لـ Claude Code بنفس المطالبة...",
-   "h": "مقارنة بين Whisper و AssemblyAI لتفريغ الصوت",
-   "x": "تجربة عملية لتفريغ الصوت المحلي بالـ AI واستخدام Claude Code في تحرير الفيديو.",
-   "tg": [
-    "AI",
-    "Python"
-   ],
-   "tp": "news"
-  },
-  {
-   "id": "gh-1465996649",
-   "cat": "arch",
-   "src": "GitHub",
-   "ts": "2026-11-20T23:24:17Z",
-   "t": "Arkidev-BIM/copy-cad-layer-settings: Free pyRevit button: copy CAD layer visibility and overrides (Imported Categories) from o…",
-   "s": "0 نجمة، لغة Python",
-   "tags": [
-    "Add-in"
-   ],
-   "url": "https://github.com/Arkidev-BIM/copy-cad-layer-settings",
-   "ta": "إعدادات Arkidev-BIM/copy-cad-layer: زر pyRevit مجاني: نسخ رؤية طبقة CAD وتجاوزاتها (الفئات المستوردة) من...",
-   "h": "زرار pyRevit مجاني لنسخ إعدادات طبقات الـ CAD",
-   "x": "أداة open-source جديدة بلغة Python لتسهيل إدارة الـ CAD layers والإضافات داخل Revit.",
-   "tg": [
-    "Revit",
-    "pyRevit",
-    "Python"
-   ],
-   "tp": "addins"
-  },
-  {
-   "id": "hn-50583768",
-   "cat": "arch",
-   "src": "Hacker News",
-   "ts": "2026-11-20T23:19:44Z",
-   "t": "Sir Brian May adds new dimension to Hera asteroid",
-   "s": "38 نقطة، 8 تعليق",
-   "tags": [
-    "نقاش"
-   ],
-   "url": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/sir-brian-may-adds-new-dimension-to-hera-asteroid",
-   "url2": "https://news.ycombinator.com/item?id=50583768",
-   "ta": "يضيف السير بريان ماي بعدًا جديدًا لكويكب هيرا",
-   "h": "بيانات ثلاثية الأبعاد لكويكب Hera",
-   "x": "مساهمات علمية جديدة لإضافة أبعاد بصرية وتحليلية لمهام استكشاف الفضاء.",
-   "tg": [
-    "Science"
-   ],
-   "tp": "news"
   }
  ]
 }
